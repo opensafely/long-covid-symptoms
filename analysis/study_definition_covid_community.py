@@ -39,28 +39,27 @@ study = StudyDefinition(
     ),
     index_date="2020-02-01",
 
-    has_community_covid=patients.satisfying(
-        # need to edit here in order to return earliest of the dates from 
-        # the two functions below
-        "covid_test OR covid_codelist",
-        covid_test=patients.with_test_result_in_sgss(
-            pathogen="SARS-CoV-2",
-            test_result="positive",
-            find_first_match_in_period=True,
-            returning="date",
-            date_format="YYYY-MM-DD",
-            return_expectations={"date": {"earliest": "patient_index_date"}},
-        ),
-        covid_primarycare=patients.with_these_clinical_events(
-            # the var below is named in codelists.py file (so name appropriately!)
-            snomed_covid,
-            returning="date",
-            date_format="YYYY-MM-DD",
-            find_first_match_in_period=True,
-            return_expectations={"incidence": 0.1, "date": {"earliest": "patient_index_date"}},
-        ),   
-    ),
 
+    sgss_positive=patients.with_test_result_in_sgss(
+        pathogen="SARS-CoV-2",
+        test_result="positive",
+        find_first_match_in_period=True,
+        returning="date",
+        date_format="YYYY-MM-DD",
+        return_expectations={"date": {"earliest": "index_date"}},
+    ),
+    primary_care_covid=patients.with_these_clinical_events(
+        # the var below is named in codelists.py file (so name appropriately!)
+        snomed_covid,
+        returning="date",
+        date_format="YYYY-MM-DD",
+        find_first_match_in_period=True,
+        return_expectations={"incidence": 0.1, "date": {"earliest": "index_date"}},
+    ),   
+
+    patient_index_date=patients.minimum_of(
+        "sgss_positive", "primary_care_covid"
+    ),
 
     
     covid_hospital=patients.admitted_to_hospital(
