@@ -6,10 +6,12 @@ from cohortextractor import (
     filter_codes_by_category
     combine_codelists,
 )
-from common_variables import generate_common_variables
+from common_variables_short import generate_common_variables_short
 from codelists import *
 
-common_variables = generate_common_variables(index_date_variable="index_date")
+# need shortened version of common vars with just matching vars
+# i.e., age +/- whatever I use for matching
+common_variables_short = generate_common_variables_short(index_date_variable="index_date")
 
 study = StudyDefinition(
     default_expectations={
@@ -37,7 +39,7 @@ study = StudyDefinition(
     # and 2021 covid people to 2019 gen pop, do I need a separate study def file for 2018
     # and 2019?
     index_date="2019-02-01",
-    **common_variables
+    **common_variables_short
 )
 
 

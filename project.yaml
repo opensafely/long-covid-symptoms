@@ -13,7 +13,7 @@ extract_cases_covid_community_cohort:
         cohort: output/input_covid_community.csv
 
 
-# 2. EXTRACT DATA FOR COMPARATORS
+# 2. EXTRACT DATA FOR POTENTIAL COMPARATORS
 # new extract potential comparators code... I guess I'll have to this twice for each control group
 # or potentially 3 times: 2018 matches, 2019 matches, contemporary matches?
 
@@ -35,7 +35,7 @@ extract_cases_covid_community_cohort:
 # 3. MATCH CASES TO COMPARATORS
   # *** historical potential comparators
   matching:
-    run: python:latest python analysis/match.py
+    run: python:latest python analysis/match_2018to2019.py
     needs: [extract_cases_covid_community_cohort, extract_potential_controls_2018to2019]
     outputs:
       moderately_sensitive:
@@ -45,7 +45,7 @@ extract_cases_covid_community_cohort:
 
   # *** contemporary potential comparators
   matching:
-    run: python:latest python analysis/match.py
+    run: python:latest python analysis/match_contemporary.py
     needs: [extract_cases_covid_community_cohort, extract_potential_controls_contemporary]
     outputs:
       moderately_sensitive:

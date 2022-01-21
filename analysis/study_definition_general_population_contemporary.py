@@ -6,10 +6,11 @@ from cohortextractor import (
     filter_codes_by_category
     combine_codelists,
 )
-from common_variables import generate_common_variables
+from common_variables_short import generate_common_variables_short
+
 from codelists import *
 
-common_variables = generate_common_variables(index_date_variable="patient_index_date")
+common_variables_short = generate_common_variables_short(index_date_variable="patient_index_date")
 
 # study definiton: used to define study pop and variables
 study = StudyDefinition(
@@ -36,23 +37,11 @@ study = StudyDefinition(
         ),
     ),
 
+    # don't think we can exclude person time from covid diagnosis here
+    # so increase matching matching ratio, and explicitly drop people 
+    # in stata code later from when they have a COVID diagnosis
     # define study index date
     index_date="2020-02-01",
-    patient_index_date=patients.with_test_result_in_sgss(
-        pathogen="SARS-CoV-2",
-        test_result="positive",
-        find_first_match_in_period=True,
-        returning="date",
-        date_format="YYYY-MM-DD",
-        return_expectations={"date": {"earliest": "index_date"}},
-    ),
-    covid_hospital=patients.admitted_to_hospital(
-        returning="date_admitted",
-        with_these_diagnoses=covid_codelist,
-        on_or_after="index_date",
-        date_format="YYYY-MM-DD",
-        find_first_match_in_period=True,
-        return_expectations={"date": {"earliest": "index_date"}},
-    ),
+   
     **common_variables
 )
