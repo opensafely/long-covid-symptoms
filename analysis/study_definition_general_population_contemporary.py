@@ -25,15 +25,14 @@ study = StudyDefinition(
         # should I be also excluding people with community covid here?
         """
             has_follow_up
-        AND (age >=18 AND age <= 110)
+        AND (age <= 110)
         AND (sex = "M" OR sex = "F")
         AND imd > 0
         AND patient_index_date
-        AND NOT covid_hospital
         AND NOT stp = ""
         """,
         has_follow_up=patients.registered_with_one_practice_between(
-            "patient_index_date - 1 year", "patient_index_date"
+            "patient_index_date - 3 months", "patient_index_date"
         ),
     ),
 

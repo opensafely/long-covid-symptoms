@@ -22,13 +22,23 @@ study = StudyDefinition(
     population=patients.satisfying(
         """
             has_follow_up
-        AND (age >=18 AND age <= 110)
+        AND (age <= 110)
         AND (sex = "M" OR sex = "F")
         AND imd > 0
         AND NOT stp = ""
         """,
+        # registered between march 2018 and march 2020
+        # and in a later step confirm that comparators have 3 months of registration
+        # before their index date (can't do this now, as we don't know index)
+        # so will need to up matching ratio to account for people who stop being eligible
+        # because they don't have continuous registration
+
+        # drop the above suggestions instead edit in match.py use case index to set control eligibility
+        # see under 'more examples' here: https://github.com/opensafely-core/matching#readme%5C
+
+
         has_follow_up=patients.registered_with_one_practice_between(
-            "index_date - 1 year", "index_date"
+            "index_date - 3 months", "index_date"
         ),
     ),
 

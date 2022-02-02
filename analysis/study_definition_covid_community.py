@@ -26,7 +26,7 @@ study = StudyDefinition(
     # or do we include them up until their covid record?
         """
             has_follow_up
-        AND (age >=18 AND age <= 110)
+        AND (age <= 110)
         AND (sex = "M" OR sex = "F")
         AND imd > 0
         AND patient_index_date
@@ -66,10 +66,11 @@ study = StudyDefinition(
         returning="date_admitted",
         # covid_codelist is a name from the codelists.py file
         with_these_diagnoses=icd_covid,
-        on_or_after="index_date",
+        # check whether the 'on_or_before' syntax works (made this up!)
+        on_or_before="patient_index_date",
         date_format="YYYY-MM-DD",
         find_first_match_in_period=True,
-        return_expectations={"date": {"earliest": "index_date"}},
+        return_expectations={"date": {"earliest": "patient_index_date"}},
     ),
     **common_variables
 )
