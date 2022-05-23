@@ -1,0 +1,10 @@
+code,term
+F370.,Acute infective polyneuritis
+F3700,Guillain-Barre syndrome
+F3701,Post-infectious polyneuritis
+F370z,Acute infective polyneuritis NOS
+F37z.,(Toxic or inflamm neuropathy NOS) or (polyneuropathy unspec)
+Fyu7B,"[X]Inflammatory polyneuropathy, unspecified"
+X00AV,Miller-Fisher variant of Guillain-Barre syndrome
+X00CG,Demyelinating sensorimotor neuropathy
+XE18N,Acute infective polyneuritis (& [Guillain-Barre syndrome])

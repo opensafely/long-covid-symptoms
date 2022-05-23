@@ -1,12 +1,12 @@
 version: '3.0'
 
 expectations:
-  population_size: 1000
+  population_size: 10000
 
 actions:
 
-# 1. EXTRACT DATA FOR CASES
-extract_cases_covid_community_cohort:
+# 1. EXTRACT DATA FOR EXPOSED AND POTENTIAL CONTROLS 
+  generate_community_cases_cohort:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_covid_community
     outputs:
       highly_sensitive:
@@ -17,52 +17,31 @@ extract_cases_covid_community_cohort:
 # new extract potential comparators code... I guess I'll have to this twice for each control group
 # or potentially 3 times: 2018 matches, 2019 matches, contemporary matches?
 
-  # *** historical potential comparators
-  extract_potential_controls_2018to2019:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_general_population_2018to2019
-    outputs:
-      highly_sensitive:
-        cohort: output/input_potential_controls_2018to2019.csv
-
-  # *** contemporary potential comparators
-  extract_potential_controls_contemporary:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_general_population_contemporary
+ # *** contemporary potential comparators
+  generate_potential_controls_contemporary:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_potential_controls_contemporary
     outputs:
       highly_sensitive:
         cohort: output/input_potential_controls_contemporary.csv
 
 
 # 3. MATCH CASES TO COMPARATORS
-  # *** historical potential comparators
-  matching:
-    run: python:latest python analysis/match_2018to2019.py
-    needs: [extract_cases_covid_community_cohort, extract_potential_controls_2018to2019]
-    outputs:
-      moderately_sensitive:
-        matching_report: output/matching_report_2018to2019.txt
-      highly_sensitive:
-        matched_matches: output/matched_matches_2018to2019.csv
-
   # *** contemporary potential comparators
-  matching:
+  match_contemporary:
     run: python:latest python analysis/match_contemporary.py
-    needs: [extract_cases_covid_community_cohort, extract_potential_controls_contemporary]
+    needs: [generate_community_cases_cohort, generate_potential_controls_contemporary]
     outputs:
       moderately_sensitive:
         matching_report: output/matching_report_contemporary.txt
       highly_sensitive:
+        matched_cases: output/matched_cases_contemporary.csv
         matched_matches: output/matched_matches_contemporary.csv
+        matched_all: output/matched_combined_contemporary.csv
 
 
-# 4. EXTRACT DATA FOR COMPARATORS
-  # *** historical potential comparators
-  extract_controls:
-      run: cohortextractor:latest generate_cohort --study-definition study_definition_controls_2018to2019
-      needs: [matching]
-      outputs:
-        highly_sensitive:
-          cohort: output/input_potential_controls_2018to2019.csv
 
 
-# 5. ANALYSIS
-# code here
+
+
+
+  
