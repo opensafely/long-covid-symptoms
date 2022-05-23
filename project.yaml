@@ -1,12 +1,47 @@
 version: '3.0'
 
 expectations:
-  population_size: 1000
+  population_size: 10000
 
 actions:
 
-  generate_study_population:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition
+# 1. EXTRACT DATA FOR EXPOSED AND POTENTIAL CONTROLS 
+  generate_community_cases_cohort:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_covid_community
     outputs:
       highly_sensitive:
-        cohort: output/input.csv
+        cohort: output/input_covid_community.csv
+
+
+# 2. EXTRACT DATA FOR POTENTIAL COMPARATORS
+# new extract potential comparators code... I guess I'll have to this twice for each control group
+# or potentially 3 times: 2018 matches, 2019 matches, contemporary matches?
+
+ # *** contemporary potential comparators
+  generate_potential_controls_contemporary:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_potential_controls_contemporary
+    outputs:
+      highly_sensitive:
+        cohort: output/input_potential_controls_contemporary.csv
+
+
+# 3. MATCH CASES TO COMPARATORS
+  # *** contemporary potential comparators
+  match_contemporary:
+    run: python:latest python analysis/match_contemporary.py
+    needs: [generate_community_cases_cohort, generate_potential_controls_contemporary]
+    outputs:
+      moderately_sensitive:
+        matching_report: output/matching_report_contemporary.txt
+      highly_sensitive:
+        matched_cases: output/matched_cases_contemporary.csv
+        matched_matches: output/matched_matches_contemporary.csv
+        matched_all: output/matched_combined_contemporary.csv
+
+
+
+
+
+
+
+  
