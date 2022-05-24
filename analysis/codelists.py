@@ -7,7 +7,7 @@ covid_codelist = codelist_from_csv(
     "codelists/opensafely-covid-identification.csv",
     system="icd10",
     column="icd10_code",
-)
+ )
 
 covid_identification_in_primary_care_case_codes_clinical = codelist_from_csv(
     "codelists/opensafely-covid-identification-in-primary-care-probable-covid-clinical-code.csv",

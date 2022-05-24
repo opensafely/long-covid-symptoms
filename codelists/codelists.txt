@@ -17,3 +17,7 @@ opensafely/chronic-inflammatory-demyelinating-polyneuropathy-cidp/38550e49
 opensafely/antiphospholipid-syndrome/3a8c6298
 opensafely/rheumatoid-arthritis/68dc9931
 opensafely/systemic-lupus-erythematosus-sle/36bdb2c7
+opensafely/covid-identification-in-primary-care-probable-covid-clinical-code/2020-07-16
+opensafely/covid-identification-in-primary-care-probable-covid-positive-test/2020-07-16
+opensafely/covid-identification-in-primary-care-probable-covid-sequelae/2020-07-16
+opensafely/covid-identification/2020-06-03
