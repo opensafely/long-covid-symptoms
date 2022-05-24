@@ -31,8 +31,8 @@ study = StudyDefinition(
         "incidence" : 0.2
     },
 
-    # start of observation period i.e. start of wave 2 (note, needs to be called index date)
-    index_date="2020-09-01", 
+    # start of observation period i.e. start of wave 1 (note, needs to be called index date)
+    index_date="2020-02-01", 
 
      # select the study population
      # note that this is the POOL of potential unexposed concurrent controls 
