@@ -1,14 +1,13 @@
 import pandas as pd
 from osmatching import match
 
-# CONCURRENT CONTROLS
+# CONCURRENT CONTROLS - took out stp here while just trying one region at a time
 match(
     case_csv="input_covid_community",
     match_csv="input_potential_controls_contemporary",
     matches_per_case=5,
     match_variables={
         "age": 1,
-        "stp": "category",
         "sex": "category",
     },
     index_date_variable="case_index_date", 
