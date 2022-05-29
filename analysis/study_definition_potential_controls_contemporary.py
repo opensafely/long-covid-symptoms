@@ -37,6 +37,7 @@ study = StudyDefinition(
      # select the study population
      # note that this is the POOL of potential unexposed concurrent controls 
      # criteria relevant to their index dates, is determined in the matching action 
+     # after trying to run matching for all regions in wave 2 and it taking 5 days without finishing, here are trying just 1 region on its own
 
     population=patients.satisfying(
         """
