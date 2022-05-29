@@ -61,7 +61,6 @@ study = StudyDefinition(
         AND NOT covid_hospital
         AND NOT has_died 
         AND NOT stp = ""
-        AND stp = "STP1"
         """,
     ),   
 

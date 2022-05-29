@@ -27,7 +27,7 @@ actions:
 
 # 3. CHECKS ON SEPARATE CASE AND CONTROL FILES
   01_longCovidSymp_check_case_control_source:
-    run: stata-mp:latest analysis/01_longCovidSymp_check_case_control_source.do MAIN
+    run: stata-mp:latest analysis/01_longCovidSymp_check_case_control_source.do
     needs: [generate_community_cases_cohort, generate_potential_controls_contemporary]
     outputs:
       moderately_sensitive:
