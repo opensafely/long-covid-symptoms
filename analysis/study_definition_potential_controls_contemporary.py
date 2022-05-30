@@ -44,7 +44,7 @@ study = StudyDefinition(
         (age >= 18 AND age < 105) 
         AND (sex = "M" OR sex = "F") 
         AND NOT unexposed_has_died
-        AND stp ="E54000043"
+        AND stp ="E54000005"
         """,
     ),
     
