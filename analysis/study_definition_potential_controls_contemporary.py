@@ -38,13 +38,13 @@ study = StudyDefinition(
      # note that this is the POOL of potential unexposed concurrent controls 
      # criteria relevant to their index dates, is determined in the matching action 
      # after trying to run matching for all regions in wave 2 and it taking 5 days without finishing, here are trying just 1 region on its own
-     # AND stp ="E54000044"
 
     population=patients.satisfying(
         """
         (age >= 18 AND age < 105) 
         AND (sex = "M" OR sex = "F") 
         AND NOT unexposed_has_died
+        AND stp ="E54000043"
         """,
     ),
     
