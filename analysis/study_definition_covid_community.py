@@ -50,6 +50,7 @@ study = StudyDefinition(
 
      # select the study population
      # after trying to run matching for all regions in wave 2 and it taking 5 days without finishing, here are trying just 1 region on its own
+     # AND stp ="E54000044"
 
     population=patients.satisfying(
         """
@@ -61,7 +62,6 @@ study = StudyDefinition(
         AND NOT covid_hospital
         AND NOT has_died 
         AND NOT stp = ""
-        AND stp ="E54000044"
         """,
     ),   
 
