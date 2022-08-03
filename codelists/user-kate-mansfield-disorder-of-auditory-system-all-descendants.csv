@@ -1,0 +1,1297 @@
+code,term
+1003423000,Dislocation of incudostapedial articulation
+1004115000,Middle ear effusion
+1010229008,Neural hearing loss of left ear
+1010230003,Neural hearing loss of right ear
+1010236009,Conductive hearing loss of right ear
+1010238005,Conductive hearing loss of left ear
+1010439000,Conductive hearing loss of left ear with normal hearing on right side
+1010440003,Conductive hearing loss of right ear with normal hearing on left side
+1010441004,Sensorineural hearing loss of right ear with normal hearing on left side
+1010442006,Sensorineural hearing loss of left ear with normal hearing on right side
+1010606009,Waardenburg syndrome type 1
+1010610007,Retinitis pigmentosa-deafness syndrome type 3
+1010636000,Waardenburg syndrome type 2
+1010637009,Obstruction of eustachian tube due to inflammation
+1010638004,Waardenburg syndrome type 3
+1010647007,Acute vestibular syndrome due to episodic vestibular disorder
+1010648002,Acute vestibular syndrome due to cerebrovascular disease
+1010649005,Acute vestibular syndrome due to anxiety and fear
+1010651009,Acquired cholesteatoma of middle ear
+1010672007,Benign positional paroxysmal vertigo lateral canal
+1010673002,Benign positional paroxysmal vertigo posterior canal
+10170007,"Black locks, oculocutaneous albinism, AND deafness of the sensorineural type"
+102344001000119102,Superior semicircular canal dehiscence syndrome of right ear
+1052205008,Mixed conductive and sensorineural hearing loss of left ear with normal hearing on right side
+1052206009,Mixed conductive and sensorineural hearing loss of right ear with normal hearing on left side
+1052223000,Hypoactive labyrinthine dysfunction of right inner ear
+1052224006,Hypoactive labyrinthine dysfunction of left inner ear
+1052225007,Hyperactive labyrinthine dysfunction of right inner ear
+1052226008,Hyperactive labyrinthine dysfunction of left inner ear
+10566007,Otosclerosis involving round window
+10624911000119107,Otitis media caused by H1N1 influenza
+10624951000119108,Otitis media caused by influenza
+10674911000119108,Otitis media caused by Influenza A virus
+1079101000119105,Primary basal cell carcinoma of left ear
+1079161000119106,Primary basal cell carcinoma of right ear
+1079841000119100,Dysplastic nevus of skin of left ear
+1079881000119105,Dysplastic nevus of skin of right ear
+1082071000119102,Primary squamous cell carcinoma of left ear
+1082191000119100,Primary squamous cell carcinoma of right ear
+1082561000119104,Recurrent acute suppurative otitis media with spontaneous rupture of ear drum
+1082811000119100,Acquired deformity of bilateral ears
+1082821000119107,Acquired deformity of bilateral pinnas
+1082831000119105,Acquired stenosis of bilateral external auditory canals
+1082841000119101,Acquired deformity of bilateral pierced ear lobes
+1082851000119104,Acquired split lobe of bilateral ears
+1082871000119108,Acute allergic otitis media of bilateral middle ears
+1082951000119107,Acute mucoid otitis media of bilateral middle ears
+1083051000119102,Recurrent acute serous otitis media of bilateral middle ears
+1083061000119100,Spontaneous rupture of tympanic membranes of bilateral ears co-occurrent and due to recurrent acute suppurative otitis media
+1083121000119106,Adhesive otitis media of bilateral middle ears
+1083171000119107,Perforation of pars flaccida of bilateral tympanic membranes
+1083231000119104,Central perforation of bilateral tympanic membranes
+1083251000119105,Chondrodermatitis nodularis helicis of bilateral ears
+1083261000119107,Chronic allergic otitis media of bilateral middle ears
+1083291000119100,Chronic perichondritis of bilateral external ears
+1083331000119106,Chronic mucoid otitis media of bilateral middle ears
+1083341000119102,Chronic otitis externa of bilateral external auditory canals caused by fungus
+1083351000119100,Chronic inflammation of bilateral tympanic membranes
+1083361000119103,Chronic non-infective otitis externa of bilateral external auditory canals
+1083381000119107,Chronic otitis externa of bilateral external auditory canals
+1083401000119107,Chronic otitis media of bilateral ears following insertion of tympanic ventilation tube
+1083421000119103,Chronic serosanguineous otitis media of bilateral middle ears
+1083431000119100,Chronic suppurative otitis media of bilateral middle ears
+1083441000119109,Cochlear hydrops of bilateral inner ears
+1083451000119106,Cochlear otosclerosis of bilateral ears
+1083521000119104,Dermatitis of bilateral external auditory canals
+1083541000119105,Disorder of bilateral ears
+1083561000119109,Lesion of bilateral ears
+1083581000119100,Disorder of bilateral tympanic membranes
+1083611000119107,Disorder of bilateral Eustachian tubes
+1083631000119102,Obstruction of bilateral Eustachian tubes
+1083651000119108,Exostosis of bilateral external auditory canals
+1083711000119100,Chondritis of bilateral external ears
+1083731000119105,Perichondritis of bilateral external ears
+1083811000119108,High frequency sensorineural hearing loss of bilateral ears
+1083821000119101,Hyperacusis of bilateral ears
+1083911000119102,Keratosis obturans of bilateral external auditory canals
+1083921000119109,Dysfunction of bilateral labyrinth structures
+1083951000119101,Inflammation of bilateral labyrinth structures
+1084021000119107,Meniere's disease of bilateral inner ears
+1084051000119104,Conductive hearing loss of bilateral middle ears
+1084121000119108,Otitis externa of bilateral external auditory canals caused by fungus
+1084151000119100,Hearing loss of bilateral ears caused by noise
+1084191000119105,Objective pulsatile tinnitus of bilateral ears
+1084331000119108,Otosclerosis of ossicle of bilateral ears
+1084351000119102,Patulous bilateral Eustachian tubes
+1084361000119100,Perforation of bilateral tympanic membranes
+1084621000119102,Subjective pulsatile tinnitus of bilateral ears
+1084681000119103,Dysfunction of bilateral vestibular systems
+1084691000119100,Vestibular neuronitis of bilateral inner ears
+1084711000119102,Inflammation of bilateral labyrinth structures caused by virus
+1085711000119101,Congenital split ear lobe
+1086621000119109,Cholesteatoma tympanum
+10873531000119101,Open wound of right ear
+10873571000119103,Open wound of left ear
+1087921000119102,Acquired deformity of left ear
+1087931000119104,Acquired deformity of left pinna
+1087941000119108,Acquired stenosis of left external auditory canal
+1087951000119105,Acquired deformity of left pierced ear lobe
+1087961000119107,Acquired split lobe of left ear
+1087981000119103,Acute allergic otitis media of left middle ear
+1088061000119105,Acute mucoid otitis media of left middle ear
+1088181000119100,Spontaneous rupture of tympanic membrane of left ear co-occurrent and due to recurrent acute suppurative otitis media
+1088241000119102,Adhesive otitis media of left middle ear
+1088271000119109,Atrophic nonflaccid left tympanic membrane
+1088281000119107,Cholesteatoma of recessus epitympanicus of left middle ear
+1088321000119102,Autoimmune disorder of left inner ear
+1088361000119107,Central perforation of left tympanic membrane
+1088381000119103,Chondrodermatitis nodularis helicis of left ear
+1088401000119103,Chronic atticoantral suppurative otitis media of left middle ear
+1088421000119107,Chronic perichondritis of left external ear
+1088461000119102,Chronic mucoid otitis media of left middle ear
+1088471000119108,Chronic otitis externa of left external auditory canal caused by fungus
+1088481000119106,Chronic inflammation of left tympanic membrane
+1088491000119109,Chronic non-infective otitis externa of left external auditory canal
+1088511000119104,Chronic otitis externa of left external auditory canal
+1088531000119109,Chronic otitis media of left ear following insertion of tympanic ventilation tube
+1088571000119107,Chronic suppurative otitis media of left middle ear
+1088581000119105,Chronic tubotympanic suppurative otitis media of left middle ear
+1088591000119108,Cochlear hydrops of left inner ear
+1088601000119101,Cochlear otosclerosis of left ear
+1088611000119103,Congenital split left ear lobe
+1088651000119102,Dermatitis of left external auditory canal
+1088671000119106,Disorder of left ear
+1088691000119107,Lesion of left ear
+1088701000119107,Cholesteatoma of left tympanic membrane
+1088711000119105,Disorder of left tympanic membrane
+1088741000119109,Disorder of left Eustachian tube
+1088771000119102,Abscess of left external ear
+1088781000119104,Exostosis of left external auditory canal
+1088831000119107,Cholesteatoma of left external ear
+1088841000119103,Chondritis of left external ear
+1088861000119104,Perichondritis of left external ear
+1088901000119105,Hemorrhagic otitis externa of left external auditory canal
+1088911000119108,Hemotympanum of left tympanic cavity
+1088941000119107,Hyperacusis of left ear
+1088971000119100,Keratosis obturans of left external auditory canal
+1088991000119104,Fistula of left labyrinth structure
+1089011000119101,Inflammation of left labyrinth structure
+1089021000119108,Malignant otitis externa of left external auditory canal
+1089031000119106,Marginal perforation of left tympanic membrane
+1089081000119107,Meniere's disease of left inner ear
+1089101000119100,Cholesteatoma of left middle ear
+1089181000119108,Otitis externa of left external auditory canal caused by fungus
+1089221000119100,Hearing loss of left ear caused by noise
+1089261000119105,Objective pulsatile tinnitus of left ear
+1089381000119105,Otorrhagia of left ear
+1089401000119105,Otosclerosis of ossicle of left ear
+1089421000119101,Patulous left Eustachian tube
+1089501000119106,Stenosis of left external auditory canal due to and following infection
+1089571000119101,Retained foreign body of left middle ear
+1089621000119103,Subjective pulsatile tinnitus of left ear
+1089681000119104,Total perforation of left tympanic membrane
+1089691000119101,Dysfunction of left vestibular system
+1089701000119101,Vestibular neuronitis of left inner ear
+1089891000119102,Misshapen ear
+1090001000119105,Otitis media due to scarlet fever
+1090241000119103,Acquired stenosis of external ear canal secondary to infection
+1090541000119101,Acquired deformity of right ear
+1090551000119104,Acquired deformity of right pinna
+1090561000119102,Acquired stenosis of right external auditory canal
+1090571000119108,Acquired deformity of right pierced ear lobe
+1090581000119106,Acquired split lobe of right ear
+1090601000119102,Acute allergic otitis media of right middle ear
+1090681000119105,Acute mucoid otitis media of right middle ear
+1090791000119102,Spontaneous rupture of tympanic membrane of right ear co-occurrent and due to recurrent acute suppurative otitis media
+1090851000119102,Adhesive otitis media of right middle ear
+1090881000119109,Atrophic nonflaccid right tympanic membrane
+1090891000119107,Cholesteatoma of recessus epitympanicus of right middle ear
+1090931000119104,Autoimmune disorder of right inner ear
+1090971000119101,Central perforation of right tympanic membrane
+1090991000119100,Chondrodermatitis nodularis helicis of right ear
+1091011000119101,Chronic atticoantral suppurative otitis media of right middle ear
+1091031000119106,Chronic perichondritis of right external ear
+1091071000119109,Chronic mucoid otitis media of right middle ear
+1091081000119107,Chronic otitis externa of right external auditory canal caused by fungus
+1091091000119105,Chronic inflammation of right tympanic membrane
+1091101000119100,Chronic non-infective otitis externa of right external auditory canal
+1091121000119109,Chronic otitis externa of right external auditory canal
+1091141000119103,Chronic otitis media of right ear following insertion of tympanic ventilation tube
+1091181000119108,Chronic suppurative otitis media of right middle ear
+1091191000119106,Chronic tubotympanic suppurative otitis media of right middle ear
+1091201000119109,Cochlear hydrops of right inner ear
+1091211000119107,Cochlear otosclerosis of right ear
+1091221000119100,Congenital split right ear lobe
+1091261000119105,Dermatitis of right external auditory canal
+1091281000119101,Disorder of right ear
+1091301000119102,Lesion of right ear
+1091311000119104,Cholesteatoma of right tympanic membrane
+1091321000119106,Disorder of right tympanic membrane
+1091351000119103,Disorder of right Eustachian tube
+1091381000119105,Abscess of right external ear
+1091391000119108,Exostosis of right external auditory canal
+1091441000119107,Cholesteatoma of right external ear
+1091451000119109,Chondritis of right external ear
+1091471000119100,Perichondritis of right external ear
+1091511000119109,Hemorrhagic otitis externa of right external auditory canal
+1091521000119102,Hemotympanum of right tympanic cavity
+1091551000119105,Hyperacusis of right ear
+1091581000119103,Keratosis obturans of right external auditory canal
+1091601000119107,Fistula of right labyrinth structure
+1091621000119103,Inflammation of right labyrinth structure
+1091631000119100,Malignant otitis externa of right external auditory canal
+1091641000119109,Marginal perforation of right tympanic membrane
+1091691000119101,Meniere's disease of right inner ear
+1091711000119103,Cholesteatoma of right middle ear
+1091791000119107,Otitis externa of right external auditory canal caused by fungus
+1091831000119101,Hearing loss of right ear caused by noise
+1091871000119103,Objective pulsatile tinnitus of right ear
+1091991000119109,Otorrhagia of right ear
+1092011000119109,Otosclerosis of ossicle of right ear
+1092031000119104,Patulous right Eustachian tube
+1092111000119108,Stenosis of right external auditory canal due to and following infection
+1092181000119102,Retained foreign body of right middle ear
+1092231000119108,Subjective pulsatile tinnitus of right ear
+1092291000119107,Total perforation of right tympanic membrane
+1092301000119108,Dysfunction of right vestibular system
+1092311000119106,Vestibular neuronitis of right inner ear
+109277000,Melanocytic nevus of ear
+109278005,Melanoma in situ of ear
+109279002,Melanocytic nevus of external auditory canal
+1092791000119103,Temporary auditory threshold shift
+109280004,Melanoma in situ of external auditory canal
+109393007,Otomandibular dysostosis
+109395000,Temporo-auro-mandibular dysostosis
+109397008,Temporo-aural dysostosis
+109907005,Acquired anomaly of ear
+109908000,Acquired anomaly of external ear
+110062004,Simple laceration of auricle of ear
+110063009,Contaminated simple laceration of auricle of ear
+110064003,Complex laceration of auricle of ear
+110065002,Contaminated complex laceration of auricle of ear
+110066001,Avulsion of auricle of ear
+110245004,Contusion of auricle of ear
+111339003,Congenital anomaly of ear with impairment of hearing
+11144004,Congenital stricture of osseous meatus of middle ear
+111535008,Partial necrosis of ear ossicles
+111536009,Hematotympanum
+111539002,Persistent posttraumatic perforation of ear drum
+111541001,Benign paroxysmal positional vertigo
+111856000,Herpes simplex otitis externa
+111898002,Chronic mycotic otitis externa
+1119386008,Sensorineural hearing loss of right ear
+1119387004,Sensorineural hearing loss of left ear
+11386000,Open wound of ear
+11543004,Otosclerosis
+117411000119106,Objective pulsatile tinnitus
+117421000119104,Subjective pulsatile tinnitus
+11766001,Gerlier's disease
+11843551000119104,Wound of right ear due to nonvenomous insect bite
+11843591000119109,Wound of left ear due to nonvenomous insect bite
+11843711000119106,Abrasion of right ear
+11843751000119107,Abrasion of left ear
+11843951000119105,Infected abrasion of skin of right ear
+11843991000119100,Infected abrasion of skin of left ear
+11844031000119101,Contusion of right ear
+11844071000119103,Contusion of left ear
+11997031000119105,Partial thickness burn of right ear
+12065591000119100,Burn of left ear
+12065631000119100,Burn of right ear
+12202581000119103,Partial thickness burn of left ear
+12279008,Open wound of cochlea without complication
+1240521000000100,Otitis media due to disease caused by Severe acute respiratory syndrome coronavirus 2
+12476004,Intrinsic cartilaginous obstruction of eustachian tube
+126501005,Neoplasm of skin of ear
+126502003,Neoplasm of skin of external auditory canal
+126946000,Excessive cerumen in ear canal
+127006003,Neoplasm of middle ear
+1271009,"Knuckle pads, deafness AND leukonychia syndrome"
+127344002,Acute disorder of ear
+128297008,Chronic disease of ear
+128540005,Hearing disorder
+129127001,Infection of ear
+129613007,Tympanic plexus neuralgia syndrome
+129628007,Recurrent labyrinthitis
+129629004,Metabolic presbycusis
+129630009,Mechanical presbycusis
+129631008,Birth trauma deafness
+13158007,Round window fistula
+13159004,Open wound of auditory canal with complication
+133211000119107,Acquired deformity of pierced ear lobe
+13420004,Post measles otitis media
+13445001,Ménière's disease
+1384002,Diffuse cholesteatosis of middle ear
+14763005,Tophus of ear co-occurrent and due to gout
+14852000,Myringitis
+14948001,Acute suppurative otitis media without spontaneous rupture of ear drum
+15123008,Familial amyloid nephropathy with urticaria AND deafness
+15188001,Hearing loss
+15190000,Tympanic membrane conductive hearing loss
+15864091000119105,Congenital malformation of bilateral ears
+15864131000119107,Congenital anomaly of left ear
+15864171000119105,Congenital anomaly of right ear
+15864211000119107,Congenital atresia of bilateral external ears
+15864251000119108,Congenital atresia of left external ear
+15864291000119103,Congenital atresia of right external ear
+15930003,Retained foreign body of middle ear
+15978951000119105,Tympanosclerosis of left middle ear
+15978991000119100,Tympanosclerosis of right middle ear
+15979031000119107,Bilateral tympanosclerosis
+15983231000119107,Congenital malformation of bilateral external ears
+15983431000119106,Accessory auricle of right ear
+15983471000119109,Accessory auricle of left ear
+15984431000119109,Impairment of hearing of right ear co-occurrent and due to congenital ear malformation
+15984471000119107,Impairment of hearing of left ear co-occurrent and due to congenital ear malformation
+15984511000119103,Impairment of hearing of bilateral ears co-occurrent and due to congenital ear malformation
+162344009,Bilateral deafness
+16261006,Collapse of external ear canal
+16512005,Congenital absence of membranous labyrinth
+16664009,Malignant otitis media
+16673001,Acquired stenosis of external ear canal secondary to trauma
+16681000,Candidal otitis externa
+16888881000119105,Congenital stenosis of right external auditory canal
+16889021000119105,Congenital stenosis of left external auditory canal
+16889061000119100,Congenital stenosis of bilateral external auditory canals
+17198008,Nonvenomous insect bite of ear with infection
+17562007,Deep third degree burn of ear
+17866004,Acute allergic sanguinous otitis media
+18070006,Impacted cerumen
+18398001,Effects of high altitude on ears
+186269001,Tuberculosis of ear
+186570004,Rubella deafness
+186738001,Epidemic vertigo
+187223005,Infestation of ear caused by fly larvae
+187698002,Malignant tumor of opening of auditory tube
+187828007,"Malignant neoplasm of nasal cavities, middle ear and accessory sinuses"
+187833006,"Malignant neoplasm of auditory tube, middle ear and mastoid air cells"
+187834000,Malignant tumor of Eustachian tube
+187835004,Malignant tumor of tympanic cavity
+187836003,Malignant tumor of tympanic antrum
+187987001,Malignant neoplasm of cartilage of ear
+188032002,Malignant melanoma of ear and/or external auditory canal
+188033007,Malignant melanoma of auricle (ear)
+188034001,Malignant melanoma of external auditory meatus
+188089003,Malignant neoplasm of skin of ear and external auditory canal
+188090007,Malignant neoplasm of skin of auricle (ear)
+188091006,Malignant neoplasm of skin of external auditory meatus
+188987003,Lipoma of ear
+188988008,Lipoma of external auditory meatus
+189057002,Benign neoplasm of skin of auricle
+189058007,Benign neoplasm of skin of external auditory meatus
+189271002,Carcinoma in situ of tympanic cavity
+189272009,Carcinoma in situ of tympanic antrum
+189279000,Carcinoma in situ of skin of auricle
+189280002,Carcinoma in situ of skin of external auditory canal
+189432002,Neoplasm of uncertain behavior of tympanic cavity
+189433007,Neoplasm of uncertain behavior of tympanic antrum
+18953001,Acute contact otitis externa
+19021002,Haemophilus influenzae otitis media
+19151000119101,Neoplasm of uncertain behavior of ear
+19399000,Acute exudative otitis media
+194202008,Infective otitis externa due to erysipelas
+194203003,Infective otitis externa due to impetigo
+194204009,Furunculosis of external auditory meatus
+194207002,Chronic otitis externa due to aspergillosis
+194208007,Chronic otitis externa due to moniliasis
+194217007,Acute radiation otitis externa
+194225009,Non-infectious pinna disorders
+194237006,Non-suppurative otitis media with eustachian tube disorders
+194240006,Acute non-suppurative otitis media - serous
+194248004,Bilateral chronic serous otitis
+194268005,Acute eustachian tube salpingitis
+194269002,Chronic eustachian tube salpingitis
+194272009,Osseous eustachian tube obstruction
+194273004,Cartilaginous eustachian tube obstruction
+194281003,Acute suppurative otitis media
+194282005,Acute suppurative otitis media due to another disease
+194286008,Bilateral suppurative otitis media
+194287004,Recurrent acute otitis media
+194288009,Acute left otitis media
+194289001,Acute right otitis media
+194290005,Acute bilateral otitis media
+194311006,Acute myringitis without otitis media
+194315002,Perforation of pars flaccida of tympanic membrane
+194318000,Tympanic membrane perforation - less than 50%
+194333008,Malleus ankylosis
+194334002,Ossicle ankylosis (excluding malleus)
+194335001,Partial loss / necrosis of ossicles
+194339007,Cholesteatoma of middle ear and mastoid
+194342001,Old foreign body in middle ear
+194348002,Active cochleovestibular Ménière's disease
+194349005,Active cochlear Ménière's disease
+194350005,Active vestibular Ménière's disease
+194351009,Inactive Ménière's disease
+194355000,Benign paroxysmal positional vertigo or nystagmus
+194360001,Central positional nystagmus
+194361002,Malignant positional vertigo
+194373002,Hyperactive bilateral labyrinthine dysfunction
+194375009,Hypoactive bilateral labyrinthine dysfunction
+194387002,Transient ischemic deafness
+194398001,Impaired auditory discrimination
+194413008,Conductive hearing loss due to disorder of external ear
+194414002,Conductive hearing loss due to disorder of tympanic membrane
+194415001,Conductive hearing loss due to disorder of middle ear
+194416000,Conductive hearing loss due to disorder of inner ear
+194417009,"Conductive hearing loss, bilateral"
+194419007,Combined conductive hearing loss
+194424005,"Sensorineural hearing loss, bilateral"
+194426007,Combined perceptive hearing loss
+194429000,"Mixed conductive and sensorineural hearing loss, bilateral"
+19483007,"Ankylosis of ear ossicles, except malleus"
+19560007,Exostosis of external ear canal
+1980003,Seromucinous otitis media
+20364005,Paracusis
+204223000,"Ear, face and neck congenital anomalies"
+204224006,Ear anomalies with hearing impairment
+204245004,Accessory tragus
+204250005,Congenital abnormality of Eustachian tube
+20425006,Labyrinthine disorder
+204252002,Congenital stenosis of eustachian tube
+204256004,Congenital pointed ear
+204257008,Congenital prominent auricle
+204258003,Congenital ridge ear
+2061000,Conductive hearing loss of combined sites
+20896007,Partial loss of ear ossicles
+20916007,Adhesive middle ear disease with adhesions of drum head to stapes
+210294003,Open wound of external ear
+210297005,Open wound of auditory canal
+210302008,Open wound of ear auricle with complication
+210305005,Traumatic amputation of ear
+210308007,Open wound of ear ossicle
+210309004,Open wound of eustachian tube
+210310009,Open wound of cochlea
+211703005,Deep partial thickness burn of ear
+21186006,Chronic otitis media
+21286004,Blister of ear without infection
+21426000,Disorder of tympanic membrane
+21451000119101,Mild to moderate hearing loss
+21461000119104,Erosion of ossicles
+21461006,Cholesterolosis of middle ear
+21543000,Acute actinic otitis externa
+21905007,Congenital anomaly of middle ear
+21954000,Herpes zoster auricularis
+2204004,Acquired deformity of pinna
+22138001,Congenital absence of ear lobe
+22181003,Diplacusis
+225556000,Pressure ulcer of ear
+23066002,Otosclerosis involving otic capsule
+232057003,Usher syndrome type 1
+232058008,Usher syndrome type 2
+232212002,Abscess of external ear
+232214001,Cellulitis of pinna
+232215000,Abscess of pinna
+232216004,Deformity of pinna
+232217008,Congenital deformity of pinna
+232220000,Split ear lobe
+232221001,Pinnal calcification
+232222008,Acute viral otitis externa
+232223003,Acute fungal otitis externa
+232224009,Chronic infective otitis externa
+232225005,Chronic bacterial otitis externa
+232226006,Chronic viral otitis externa
+232229004,Granulomatous otitis externa
+232230009,Malignant otitis externa caused by Pseudomonas aeruginosa
+232231008,Non-infective otitis externa
+232232001,Acute non-infective otitis externa
+232233006,Acute irritant otitis externa
+232234000,Acute allergic otitis externa
+232235004,Acute traumatic otitis externa
+232236003,Chronic non-infective otitis externa
+232237007,Chronic radiation otitis externa
+232238002,Osteoradionecrosis of external auditory canal
+232239005,Chronic irritant otitis externa
+232240007,Chronic allergic otitis externa
+232241006,Chronic traumatic otitis externa
+232242004,Neurodermatitis of external ear
+232243009,Seborrheic otitis externa
+232245002,Granular myringitis
+232246001,Polyp of tympanic membrane
+232247005,Tympanic membrane - total perforation
+232249008,Traumatic hemotympanum
+232251007,Recurrent acute suppurative otitis media
+232252000,Recurrent acute non-suppurative otitis media
+232254004,Chronic non-suppurative otitis media
+232256002,Otitis media with effusion - sanguinous
+232257006,Chronic non-suppurative otitis media without effusion
+232258001,Tympanic atelectasis
+232259009,Barotraumatic Eustachian tube dysfunction
+232261000,Cholesteatoma with complications
+232262007,Congenital cholesteatoma
+232263002,Acquired abnormality of ear ossicles
+232264008,Ossicular ankylosis
+232265009,Traumatic ossicular dislocation
+232266005,Total loss of ossicle
+232270002,Acute mastoiditis with labyrinthitis
+232276008,Cholesteatoma pearl
+232280003,Post-traumatic cerebrospinal otorrhea
+232281004,Postoperative cerebrospinal otorrhea
+232282006,Cochlear Ménière syndrome
+232283001,Vestibular Ménière syndrome
+232286009,Syncopal vertigo
+232288005,Vertebrobasilar ischemic vertigo
+232289002,Multisensory dizziness
+232291005,Hyperactive labyrinthine dysfunction
+232292003,Hypoactive labyrinthine dysfunction
+232294002,Vestibular trauma
+232295001,Vestibular barotrauma
+232297009,Disorder of inner ear
+232298004,Structural anomaly of the cochlea and vestibular labyrinth
+232299007,Aplasia of the cochlea and vestibular labyrinth
+232300004,Congenital deformity of labyrinth
+232301000,Incomplete formation of the bony cochlea
+232302007,Mondini defect
+232303002,Dilatation of the vestibular aqueduct
+232304008,Absence of semicircular canal
+232305009,Dilatation of semicircular canal
+232306005,Inherited cochlear degeneration
+232308006,Autoimmune disorder of inner ear
+232309003,Ototoxic degeneration of cochlea
+232310008,Infection involving inner ear
+232311007,Endocochlear cytomegalovirus infection
+232312000,Endocochlear rubella
+232313005,Endocochlear syphilis
+232314004,Lyme disease of inner ear
+232315003,Cochlear trauma
+232316002,Concussive cochlear trauma
+232317006,Cochlear barotrauma
+232318001,Noise-induced tinnitus
+232319009,Tinnitus of muscular origin
+232320003,Tinnitus arising from tensor tympani
+232321004,Tinnitus arising from tensor palatini
+232322006,Tinnitus of vascular origin
+232323001,Tinnitus due to spontaneous oto-acoustic emission
+232324007,Obscure auditory dysfunction
+232325008,Chronic deafness
+232326009,High frequency deafness
+232328005,Dominant sensorineural hearing loss
+232329002,X-linked sensorineural hearing loss
+232330007,Recessive sensorineural hearing loss
+232331006,Perinatal sensorineural hearing loss
+232332004,Postnatal acquired sensorineural hearing loss
+232333009,Hearing loss associated with syndrome
+232335002,Earpit syndrome
+232338000,Tumor of middle ear and mastoid
+23606001,Tympanosclerosis
+23632007,Open wound of auricle of ear without complication
+236529001,"Prune belly syndrome with pulmonic stenosis, mental retardation and deafness"
+236532003,Renal tubular acidosis with progressive nerve deafness
+236871000119109,Perichondritis of external ear
+237612000,"Photomyoclonus, diabetes mellitus, deafness, nephropathy and cerebral dysfunction"
+237617006,"Megaloblastic anemia, thiamine-responsive, with diabetes mellitus and sensorineural deafness"
+237619009,Diabetes-deafness syndrome maternally transmitted
+239010003,"Alopecia, onychodysplasia, hypohidrosis, deafness ectodermal dysplasia"
+239059004,Keratitis ichthyosis and deafness syndrome
+23919004,Labyrinthitis
+240554006,Hutchinson's triad
+241979006,Aural barotrauma of descent
+241980009,Barotitis externa
+241982001,Barotitis interna
+241995006,Inner ear decompression injury
+242002003,Aural barotrauma of ascent
+242005001,Blast injury to ears
+24457001,Superficial injury of ear with infection
+247238009,Aural scar
+247244008,Loss of helical fold
+247245009,Notched pinna
+247283005,Binaural diplacusis
+24817009,Suppurative labyrinthitis
+25035006,Semicircular canal fistula
+25289003,Hyperacusis
+253181006,Olive dysplasia
+253183009,Olivary heterotopia
+253204009,"Congenital malformation of eye, ear and neck"
+253251006,Posteriorly rotated ear
+253252004,Vulcan ear
+253253009,Cat ear
+253254003,Aztec ear
+253255002,Simple ear
+254173004,Hystrix ichthyosis with deafness
+254468002,Tumor of Eustachian tube
+254469005,Tumor of tympanic cavity
+254470006,Benign tumor of tympanic cavity
+254471005,Tumor of tympanic antrum
+254472003,Benign tumor of tympanic antrum
+254490002,Tumor of opening of auditory tube
+25471001,Superficial injury of ear without infection
+255139003,Carcinoma in situ of middle ear and mastoid
+255144005,Carcinoma in situ of ear
+255181009,Benign neoplasm of ear
+25906001,Disorder of ear
+25952008,"Impaired mobility of ear ossicles, except malleus"
+26061003,Congenital absence of external auditory canal
+26169004,Allergic otitis media
+2625009,Senter syndrome
+262758007,Injury of external auditory canal
+262760009,Traumatic dislocation of ossicular prosthesis
+262761008,Radiation middle ear effusion
+262762001,Injury of inner ear
+262764000,Noise-induced permanent threshold shift
+262765004,Traumatic perilymph fistula
+26301007,Open wound of ear drum with complication
+26322001,Bleeding from ear
+26718008,Robinson nail dystrophy-deafness syndrome
+267665002,Acute infective otitis externa
+267672001,Tympanic membrane perforation - more than 50%
+267674000,Cholesteatoma and aural polyp
+267675004,Ototoxicity - labyrinthine
+267677007,Ototoxicity - deafness
+267756004,Catarrh - eustachian
+268166000,Ear auricle and external auditory canal absent
+268172000,Congenital malposition of ear
+269165008,Open wound of eardrum
+269233004,Superficial partial thickness burn of ear
+269463006,Malignant tumor of middle ear and mastoid
+270490007,Acute otitis media with effusion
+270491006,Eustachian tube salpingitis
+272033007,Deafness symptom
+2724004,Recruitment
+274094002,Destruction of eardrum
+275259005,Congenital malformation of ear
+275478007,Prominent ear
+275481002,Non-suppurative otitis media
+275482009,Drug ototoxicity - deafness
+27621000119100,Labyrinthine hydrops
+277155005,Tumor of external ear
+277156006,Malignant tumor of external ear
+277157002,Benign tumor of external ear
+277171005,Vesicular eruption in ear canal
+277212004,Endaural scar
+277417007,External auditory canal osteoma
+277419005,Dislocation of ossicular prosthesis
+277421000,Resorption of long process of incus
+277424008,Postoperative profound sensorineural hearing loss
+277431007,Monaural diplacusis
+277432000,Paracusis Willisii
+277490005,Secondary endolymphatic hydrops
+277491009,Peripheral positional vertigo
+277493007,Vascular disorder of inner ear
+277494001,Vascular loops of inner ear
+277495000,Vascular malformation of inner ear
+277663005,Simulated hearing loss
+280221000009107,Otitis externa caused by bacteria
+28072004,Cauliflower ear
+282038006,Congenital abnormality of external ear
+282039003,Disorder of ear ossicles
+282781004,Injury of tympanic membrane
+283026008,Superficial injury of ear region
+283051009,Abrasion of ear region
+283118003,Traumatic blister of ear region
+283144003,Fishing hook in ear region
+283325003,Insect bite of ear region
+283403005,Cut of ear region
+283504002,Puncture wound of ear region
+283552007,Pellet wound of ear region
+283603000,Needle stick injury of ear region
+283691006,Human bite of ear region
+28371001,Cholesterin granuloma of middle ear
+283741004,Dog bite of ear region
+283795009,Animal bite of ear region
+284200001,Superficial corrosion of ear
+284570001,Metal foreign body in ear region
+285059008,Injury of external ear
+285326004,Ear ring embedded in ear lobe
+285327008,Insect in external auditory meatus
+286943000,Deformity/hematoma of pinna
+28795002,Subacute exudative otitis media
+290006,Melnick-Fraser syndrome
+290051000119103,Recurrent acute suppurative otitis media of bilateral middle ears
+29350000,Catarrhal otitis media
+297009,Acute myringitis
+29715005,Darwin's tubercle
+298068009,Foreign body of skin of ear region
+29904009,Lermoyez's syndrome
+2999009,Injury of ear
+300092000,Lesion of external ear
+300096002,Lesion of pinna
+300097006,Blister of pinna
+300099009,Ulcer on pinna
+300100001,Excoriation of pinna
+300130009,Lesion of ear canal
+300131008,Lump in ear canal
+301061006,Stenosis of external auditory canal
+3013004,Open wound of ear drum without complication
+30169000,Psychogenic deafness
+301848005,Viral epidemic vertigo
+30250000,Acute otitis externa
+30280005,Patulous eustachian tube
+302905001,Aspergillus otomycosis
+302906000,Acute hematoma of pinna
+302907009,Foreign body in middle ear
+303571000119103,Acquired cauliflower ear of left pinna
+30358009,Acquired stenosis of external ear canal secondary to surgery
+303581000119100,Acquired cauliflower ear of right pinna
+307497002,Traumatic tympanic membrane perforation
+3110003,Acute otitis media
+312137007,Viral ear infection
+312148000,Fungal ear infection
+312218008,Infective otitis media
+3135009,Otitis externa
+31700001,Adhesive middle ear disease with adhesions of drum head to incus
+3208005,Open wound of ossicles without complication
+32331008,Foreign body in auricle
+32550009,Open wound of external ear with complication
+32760002,Exudative otitis media
+32874004,Foreign body in auditory canal
+33391000119104,Ear lesion
+3344003,Toxic labyrinthitis
+33528003,Bullous myringitis
+33934002,Hemorrhagic otitis externa
+34129005,Perichondritis of pinna
+343087000,Partial deafness
+34723002,Diffuse otitis externa
+34765008,Angiospastic ophthalmoauricular syndrome
+34790005,Chronic tubotympanic disease with anterior perforation of ear drum
+3500002,Open wound of ossicles with complication
+35045004,Microtia
+350456001000119102,Superior semicircular canal dehiscence syndrome of left ear
+35100001,Tympanosclerosis involving tympanic membrane AND ear ossicles
+35141006,Cochlear nerve disorder
+35183001,Acute transudative otitis media
+35247001,Cholesteatoma of external ear
+35522004,Tympanosclerosis involving tympanic membrane only
+35547002,Polyotia
+3561000119106,Severe hearing loss
+35625006,Keratosis of middle ear
+359609001,Acute non-suppurative otitis media
+360595002,Acute necrotizing otitis media
+361265002,Congenital stenosis of external auditory canal
+361271008,Recurrent vestibulopathy
+36292003,Otitis externa caused by Herpes zoster
+362966006,Disorder of auditory system
+362989003,Auditory dysfunction
+362990007,Auditory system complication of procedure
+362991006,Auditory system hereditary disorder
+363131004,Fistula of middle ear
+363228008,Neoplasm of ear
+363251008,Otosclerosis of middle ear
+363359008,Malignant tumor of middle ear
+363668000,Cholesteatoma
+36476005,Extrinsic cartilagenous obstruction of eustachian tube
+36520004,Full thickness burn of ear
+36543008,Echo diplacusis
+371059007,Vertigo due to cervical arthrosis
+373905003,Jervell and Lange-Nielsen syndrome
+37533000,Open wound of cochlea with complication
+37635004,Toxic deafness
+38055001,Open wound of external ear without complication
+3820005,Inner ear conductive hearing loss
+38394007,Chronic purulent otitis media
+38596008,Chronic tubotympanic catarrh
+38645004,Atrophic flaccid tympanic membrane
+38708003,Cholesteatoma of attic
+38919006,Congenital absence of auricle with atresia of auditory canal
+39065001,Burn of ear
+39222009,Adhesive middle ear disease with adhesions of drum head to promontorium
+39288006,Purulent otitis media
+39895008,Marginal perforation of tympanic membrane
+399954008,Basal cell carcinoma of earlobe
+400057007,Basal cell carcinoma of pinnal sulcus
+400174005,Basal cell carcinoma of antihelix of ear
+40071000,Compression of eustachian tube
+402207002,Acute seborrheic otitis externa
+402208007,Chronic seborrheic otitis externa
+402510008,Basal cell carcinoma of helix of ear
+402511007,Basal cell carcinoma of conchal bowl of ear
+402512000,Basal cell carcinoma of antitragus
+402513005,Basal cell carcinoma of tragus
+402514004,Basal cell carcinoma of obverse of pinna
+402696009,Dermatosis of external ear
+402697000,Infection of external ear
+402698005,Dermatitis of external ear
+402699002,Chondrodermatitis nodularis
+402820007,Basal cell carcinoma of ear
+402934006,Streptococcal cellulitis of external ear
+40320008,Double auditory canal
+403384001,Lymphedema of ear
+403412007,Ear-lobe keloid
+403428002,Pseudocyst of ear
+403432008,Chondrodermatitis nodularis of antihelix
+403433003,Chondrodermatitis nodularis of tragus
+403780007,Autosomal recessive keratitis-ichthyosis-deafness syndrome
+403805009,Albinism-deafness syndrome of Tietz
+403876006,Intraepidermal squamous carcinoma of ear
+403894000,Squamous cell carcinoma of skin of ear
+403951006,Ceruminous gland adenocarcinoma of skin
+405810005,Cogan's syndrome
+405821001,Allergic otitis externa
+40723007,Central perforation of tympanic membrane
+40897007,Occupational deafness
+409711008,Viral labyrinthitis
+41663005,Disorder of pinna
+41674001,Serous labyrinthitis
+418472007,Heartbeat nystagmus
+419121001,Allergic contact dermatitis of pinna
+41954005,Chronic atticoantral suppurative otitis media
+419957005,Allergic contact dermatitis of external auditory canal
+42066004,Partial thickness burn of ear
+423325007,Basal cell carcinoma of external auditory canal
+423506005,Squamous cell carcinoma of external auditory canal
+423700001,Squamous cell carcinoma of auricle of ear
+42432003,"Oto-palato-digital syndrome, type II"
+424666005,Basal cell carcinoma of auricle of ear
+42538001,Low frequency deafness
+426187002,Myoclonus of stapedius muscle
+427348001,Chronic eczema of external auditory canal
+427404005,Dermatitis of external auditory canal
+427644005,Bilateral central hearing loss
+427772009,Asymmetrical hearing loss
+427789001,Myoclonus of tensor tympani muscle
+428470000,Autoimmune sensorineural hearing loss
+42853003,Paradoxic hearing loss
+428887009,Asymmetrical sensorineural hearing loss
+429767005,Chronic otitis media after insertion of tympanic ventilation tube
+429967001,Cryptotia
+430977001,Bilateral neural hearing loss
+430985005,Bilateral sensory hearing loss
+431902003,Glomus tumor of ear
+43275000,Otitis
+433147009,Combined visual and hearing impairment
+43353004,Congenital anomaly of inner ear
+43557002,Congenital stricture of external auditory canal
+43561008,Chronic exudative otitis media
+44057004,Conductive hearing loss
+441944007,Oto-onycho-peroneal syndrome
+443137009,Infection of pierced pinna
+44315004,Congenital absence of auricle with stenosis of auditory canal
+443648003,Malignant neoplasm of ear
+443805006,Auditory neuropathy spectrum disorder
+445053006,Dysfunction of vestibular system
+445172009,Cholesterin granuloma of middle ear and mastoid
+445323009,Periauricular abscess
+445331004,Diffuse cholesteatosis of middle ear and mastoid
+445849005,Obstruction of external auditory canal
+446079007,Mal de debarquement syndrome
+446112008,Cyst of pinna
+44621005,Congenital anomaly of organ of Corti
+446434001,Epidermoid cyst of skin of ear
+446563000,Subchondral hematoma of pinna
+446819001,Disorder of both middle ear and mastoid
+446901009,Verruca vulgaris of skin of pinna
+44921007,Nonvenomous insect bite of ear without infection
+44933002,Multiple perforations of tympanic membrane
+44962001,Open wound of Eustachian tube with complication
+449832007,Labyrinthitis ossificans
+449839003,Chronic otitis media with sanguineous effusion
+45431004,Chronic perichondritis of pinna
+45666009,Blister of ear with infection
+45855004,Acute perichondritis of pinna
+46050004,Bone conduction deafness
+47111006,External ear conductive hearing loss
+473421004,Deafness of right ear
+473422006,Deafness of left ear
+473423001,Hearing loss of right ear
+473424007,Hearing loss of left ear
+47434006,Waardenburg's syndrome
+48145001,Obstruction of Eustachian tube
+48523008,Healed perforation of ear drum
+48758008,Upper frequency deafness
+49002004,Open wound of multiple sites of ear without complication
+49130001,Disorder of external ear
+49224008,Supernumerary ear lobule
+49252004,Otitic barotrauma
+49526009,Presbycusis
+50228009,Contusion of ear
+50438001,Peripheral vertigo
+50683006,Open wound of ear with complication
+52353000,Acute mucoid otitis media
+5239005,Labyrinthine dysfunction
+53295002,Chronic otitis externa
+53316003,Otomycosis
+54036001,"Oto-palato-digital syndrome, type I"
+54272002,Acute eczematoid otitis externa
+54386000,Congenital fusion of ossicles of ear
+55647004,Tone deafness
+55664001,Obliterative otosclerosis involving oval window
+55719006,Acquired stenosis of external ear canal secondary to inflammation
+55989009,Acquired stenosis of external ear canal
+56663002,Acute infection of pinna
+56713002,Dysfunction of eustachian tube
+56943007,End organ deafness
+57436000,Congenital absence of external ear
+57838006,Retinitis pigmentosa-deafness syndrome
+58194007,Chronic seromucinous otitis media
+59275002,Acute allergic serous otitis media
+59370009,Keratosis obturans of external ear canal
+60331006,Abnormal auditory perception
+60442001,Perforation of tympanic membrane
+60700002,Sensorineural hearing loss
+609125008,Acquired sensorineural hearing loss
+61383005,Abrasion and/or friction burn of ear with infection
+61444009,Disharmonic diplacusis
+61743004,Middle ear conductive hearing loss
+61794006,Circumscribed labyrinthitis
+61947007,Deaf mutism
+62821000119106,Anomaly of fetal ear
+62856000,Nonobliterative otosclerosis involving oval window
+63024004,Alternobaric vertigo
+63702009,Alstrom syndrome
+63767001,Carbuncle of ear
+6485001,Mucosanguinous chronic otitis media
+65363002,Otitis media
+65668001,Otorrhea
+65680009,Sensorineural hearing loss of combined sites
+66306003,Oval window fistula
+66410001,Labyrinthine fistula of combined sites
+66597000,Congenital cervicoaural fistula
+67070005,Crushing injury of ear
+6733004,Abrasion and/or friction burn of ear without infection
+67817003,Pili torti-deafness syndrome
+67985002,Congenital anomaly of membranous labyrinth
+68382005,Cerebrospinal fluid otorrhea
+68467004,Central hearing loss
+68996008,Disorder of middle ear
+69056000,Macrotia
+69494008,Eustachian tube disorder
+6965008,Subacute nonsuppurative otitis media
+698609007,Drug induced dysfunction of vestibular system
+698614006,Acquired deaf mutism
+698615007,Congenital deaf mutism
+699238006,Congenital prelingual deafness
+699313003,Weissenbacher-Zweymuller syndrome
+699316006,Myhre syndrome
+699817008,Neoplasm of endolymphatic sac
+699866005,Progressive bulbar palsy with sensorineural deafness
+700057001,Emberger syndrome
+700112007,Bartter syndrome type 4
+700220003,Acute bacterial otitis externa
+700453005,Congenital sensorineural hearing loss
+700454004,Profound sensorineural hearing loss
+700489002,Sensorineural deafness and male infertility
+702360007,"Congenital deafness with labyrinthine aplasia, microtia and microdontia"
+702362004,Craniofacial deafness hand syndrome
+702423009,Deafness-dystonia-optic neuronopathy syndrome
+702441001,Fatal X-linked ataxia with deafness and loss of vision
+702443003,Auriculo-condylar syndrome
+703469002,Bacterial otitis media
+70348004,Pendred's syndrome
+70583001,Incomplete development of membranous labyrinth
+70694009,Diabetes mellitus AND insipidus with optic atrophy AND deafness
+70831000119103,Cochlear hydrops
+70967007,Hysterical deafness
+71055004,Mid frequency deafness
+711409002,"3-methylglutaconic aciduria type IV with sensorineural deafness, encephalopathy and Leigh-like syndrome"
+71305001,Benign paroxysmal vertigo of childhood
+715239002,Sudden sensorineural hearing loss
+715415005,Richards-Rundle syndrome
+715483009,Olivopontocerebellar atrophy co-occurrent with sensorineural hearing loss
+715504003,Spastic paraparesis co-occurrent with deafness
+715506001,"Phocomelia, ectrodactyly, deafness and sinus arrhythmia syndrome"
+715527006,Deafness and oligodontia syndrome
+715528001,Cochleosaccular degeneration and cataract syndrome
+715529009,Progressive deafness with stapes fixation
+715666007,Charcot-Marie-Tooth disease type IE
+71591001,Furuncle of ear
+715952000,Waardenburg syndrome co-occurrent with Hirschsprung disease
+716007007,Cleft palate and cleft lip with deafness and sacral lipoma syndrome
+716110002,Upper limb defect with eye and ear abnormalities syndrome
+716112005,Microcephaly with deafness and intellectual disability syndrome
+716170005,Deafness with cataract and skeletal anomaly syndrome
+71619006,Congenital absence of ear
+716192009,Short stature and deafness with neutrophil dysfunction and facial dysmorphism syndrome
+716238003,Deafness with epiphyseal dysplasia and short stature syndrome
+716239006,Hearing loss and salivary gland insensitivity to aldosterone syndrome
+716243005,Deafness with malformation of ear and facial palsy syndrome
+716245003,Deafness craniofacial syndrome
+717761005,Choroideremia with deafness and obesity syndrome
+717766000,Alport syndrome autosomal dominant
+717767009,Alport syndrome autosomal recessive
+717768004,Alport syndrome X-linked
+717791000,Bartter syndrome type 4a
+717799003,Superior semicircular canal dehiscence syndrome
+717826009,Hereditary sensory and autonomic neuropathy with deafness and global delay
+717909004,Bilateral microtia with deafness and cleft palate syndrome
+717918002,Neuroendocrine tumor of middle ear
+717944002,Branchiogenic deafness syndrome
+718574003,Cleft palate with coloboma of eye and deafness syndrome
+718681002,Oro-facial digital syndrome type 11
+718714006,Deafness and hypogonadism syndrome
+718763005,Spondyloepiphyseal dysplasia with myopia and sensorineural deafness syndrome
+719102004,Congenital cataract with ataxia and deafness syndrome
+719272007,Progressive sensorineural hearing loss and hypertrophic cardiomyopathy syndrome
+719305006,Stapes ankylosis with broad thumb and toe syndrome
+719468005,Cleft palate with stapes fixation and oligodontia syndrome
+71958004,Chronic allergic otitis media
+719689005,Multiple epiphyseal dysplasia Beighton type
+71973003,Congenital aplasia of inner ear
+719800009,"Deafness, onychodystrophy, osteodystrophy, intellectual disability syndrome"
+719817002,X-linked spinocerebellar ataxia type 3
+719838008,X-linked hereditary sensory and autonomic neuropathy with deafness
+720506002,Deafness and myopia syndrome
+720515009,Distal arthrogryposis type 6
+720517001,Ataxia with deafness and intellectual disability syndrome
+720518006,Athabaskan brainstem dysgenesis syndrome
+720519003,"Atherosclerosis, deafness, diabetes, epilepsy, nephropathy syndrome"
+72052003,Atrophic nonflaccid tympanic membrane
+720567008,Bosley Salih Alorainy syndrome
+720601000,Camptodactyly and tall stature with scoliosis and hearing loss syndrome
+720612000,Cardiospondylocarpofacial syndrome
+720634003,"Cerebellar ataxia, areflexia, pes cavus, optic atrophy, sensorineural hearing loss syndrome"
+720639008,"Coloboma, congenital heart disease, ichthyosiform dermatosis, intellectual disability ear anomaly syndrome"
+720640005,"Choanal atresia, hearing loss, cardiac defect, craniofacial dysmorphism syndrome"
+720748007,Aural atresia with multiple congenital anomalies and intellectual disability syndrome
+720749004,Congenital hereditary endothelial dystrophy and perceptive deafness syndrome
+720859009,Ehlers-Danlos syndrome kyphoscoliotic and deafness type
+720955004,Fine Lubinsky syndrome
+720957007,Deafness with skeletal dysplasia and lip granuloma syndrome
+721055005,Acute vestibular syndrome
+721084001,Deaf blind hypopigmentation syndrome Yemenite type
+721085000,"Deafness, enamel hypoplasia, nail defect syndrome"
+721086004,"Deafness, genital anomaly, metacarpal and metatarsal synostosis syndrome"
+721087008,Deafness and intellectual disability Martin Probst type syndrome
+721089006,"Dentinogenesis imperfecta, short stature, hearing loss, intellectual disability syndrome"
+721092005,"Developmental malformation, deafness, dystonia syndrome"
+721207002,"Seizure, sensorineural deafness, ataxia, intellectual disability, electrolyte imbalance syndrome"
+721221000,Hirschsprung disease with deafness and polydactyly syndrome
+721292002,Acquired deformity of external auditory canal
+721293007,Diverticulum of Eustachian tube
+721294001,Acquired hearing loss
+721334002,Complete traumatic amputation of external ear
+721335001,Traumatic partial amputation of external ear
+721561003,Primary adenocarcinoma of middle ear
+721584005,Johnson neuroectodermal syndrome
+721742004,Otitis media caused by Streptococcus pneumoniae
+721836009,Hypertelorism with microtia and facial clefting syndrome
+721888002,"Scalp, ear, nipple syndrome"
+721973006,"Lipodystrophy, intellectual disability, deafness syndrome"
+722006004,Isotretinoin embryopathy-like syndrome
+722019000,Oculootoradial syndrome
+722035007,"Intellectual disability, enteropathy, deafness, peripheral neuropathy, ichthyosis, keratoderma syndrome"
+722054007,Ocular albinism with late-onset sensorineural deafness
+722108000,"Osteochondrodysplatic nanism, deafness, retinitis pigmentosa syndrome"
+722111004,"Osteopenia, myopia, hearing loss, intellectual disability, facial dysmorphism syndrome"
+722112006,Primary squamous cell carcinoma of ear
+722203001,Palmoplantar keratoderma with deafness syndrome
+722213009,Severe X-linked intellectual disability Gustavson type
+722285005,Albinism with deafness syndrome
+722293005,"Autosomal dominant cerebellar ataxia, deafness and narcolepsy syndrome"
+722378009,Congenital cataract with deafness and hypogonadism syndrome
+722389002,Congenital hereditary facial paralysis with variable hearing loss syndrome
+722449007,Gingival fibromatosis with progressive deafness syndrome
+722453009,"Cutaneous mastocytosis, short stature, hearing loss syndrome"
+722468005,Distal renal tubular acidosis co-occurrent with sensorineural deafness
+722476007,Thickened earlobe with conductive deafness syndrome
+722676004,Primary squamous cell carcinoma of middle ear
+722949001,Familial Ménière disease
+722952009,Chronic bilateral vestibulopathy
+723442008,"Non-eruption of teeth, maxillary hypoplasia, genu valgum syndrome"
+723452007,"Polyneuropathy, hearing loss, ataxia, retinitis pigmentosa, cataract syndrome"
+723497003,Peripheral neuropathy with sensorineural hearing impairment syndrome
+723504000,Ramos Arroyo syndrome
+723611008,"Split hand, split foot malformation with sensorineural hearing loss syndrome"
+723721007,"Sensorineural hearing loss, early graying, essential tremor syndrome"
+723993005,Sensorineural deafness with dilated cardiomyopathy syndrome
+724001005,"Retinitis pigmentosa, intellectual disability, deafness, hypogenitalism syndrome"
+724092009,"Nephrosis, deafness, urinary tract, digital malformation syndrome"
+724093004,"Nephropathy, deafness, hyperparathyroidism syndrome"
+724139004,"Microtia, eye coloboma, imperforation of nasolacrimal duct syndrome"
+724173009,Maternally inherited cardiomyopathy and hearing loss syndrome
+724282009,"Hypoparathyroidism, deafness, renal disease syndrome"
+724635009,Contact dermatitis of external ear
+724636005,Sudden idiopathic hearing loss
+725096002,Cryptomicrotia brachydactyly syndrome
+725137007,"Neutropenia, monocytopenia, deafness syndrome"
+726106004,X-linked diffuse leiomyomatosis with Alport syndrome
+726621009,Caudal appendage deafness syndrome
+726669007,"Central nervous system calcification, deafness, tubular acidosis, anemia syndrome"
+726672000,"Short stature, unique facies, enamel hypoplasia, progressive joint stiffness, high-pitched voice syndrome"
+726709001,"Intellectual disability, cataract, calcified pinna, myopathy syndrome"
+7271000119107,Acute bilateral otitis media with effusion
+72898003,Elastotic nodules of antihelix
+72964008,"Traumatic deafness, non-occupational"
+73103007,Polyp of middle ear
+73119000,Retinitis pigmentosa-deafness-ataxia syndrome
+732248005,Coxoauricular syndrome
+732951005,"Mitochondrial myopathy, lactic acidosis, deafness syndrome"
+732953008,Ectodermal dysplasia and sensorineural deafness syndrome
+733050004,"Dysmorphism, short stature, deafness, disorder of sex development syndrome"
+733065003,"Myoclonus, cerebellar ataxia, deafness syndrome"
+733069009,"Deafness, vitiligo, achalasia syndrome"
+733071009,"Deafness, small bowel diverticulosis, neuropathy syndrome"
+733089005,"Spastic paraplegia, nephritis, deafness syndrome"
+73310008,Air conduction deafness
+733419006,"Metaphyseal dysostosis, intellectual disability, conductive deafness syndrome"
+73371001,Neural hearing loss
+734022008,Wolfram-like syndrome
+734078009,Adenoma of middle ear
+73415002,Noise-induced hearing loss
+735563002,Cicatrix of middle ear
+735564008,Atrophy of ear
+7361000119105,Perforation of tympanic membrane due to otitis media
+736432009,Degenerative disorder of ear
+737047001,Mild acquired hearing loss
+737048006,Moderate acquired hearing loss
+737049003,Severe acquired hearing loss
+737050003,Profound acquired hearing loss
+737344003,Congenital conductive hearing loss
+737377004,Congenital mixed conductive and sensorineural hearing loss
+737580004,Idiopathic bilateral vestibulopathy
+738164003,Lop ear deformity
+74990005,Distorted hearing
+75231006,Congenital absence of eustachian tube
+75311005,Congenital absence of ossicles of ear
+753248161000119109,Superior semicircular canal dehiscence syndrome of bilateral ears
+75355004,Congenital atresia of external auditory canal
+75441006,Foreign body in ear
+7559009,Open wound of multiple sites of ear with complication
+75922002,Congenital anomaly of ossicles of ear
+76223006,Bat ear
+762307002,Chronic left idiopathic vestibulopathy
+762308007,Chronic right idiopathic vestibulopathy
+762309004,Persistent left vestibulopathy following vestibular neuronitis
+762310009,Persistent right vestibulopathy following vestibular neuronitis
+762311008,Left vestibulopathy due to neurilemmoma
+762312001,Right vestibulopathy due to schwannoma
+762313006,Left vestibulopathy following medical intervention
+762314000,Right vestibulopathy following medical intervention
+762658005,Aplasia of auditory canal
+762662004,Hypoplasia of auditory canal
+763130006,"Cleft palate, large ears, small head syndrome"
+763136000,"Charcot-Marie-Tooth disease, deafness, intellectual disability syndrome"
+763279007,"Facial dysmorphism, conductive hearing loss, heart defect syndrome"
+763688008,"Deafness, encephaloneuropathy, obesity, valvulopathy syndrome"
+763774001,Keipert syndrome
+763815000,Oculoauricular syndrome Schorderet type
+763860004,Otofaciocervical syndrome
+764097002,Postlingual non-syndromic genetic deafness
+764098007,Prelingual non-syndromic genetic deafness
+764642008,Blister of external auditory canal
+764810000,Branchiootic syndrome
+76490001,Otomycosis externa caused by Fusarium
+765152004,Chronic serous otitis media of left ear
+765153009,Chronic serous otitis media of right ear
+765178008,Total visual and total hearing impairment
+765193007,Injury of Eustachian tube
+765194001,Injury of middle ear
+765325002,"Peripheral demyelinating neuropathy, central dysmyelinating leukodystrophy, Waardenburg syndrome, Hirschsprung disease"
+76583009,Chondrodermatitis nodularis helicis
+766249007,"Deafness, nephritis, anorectal malformation syndrome"
+766870005,"Epiphyseal dysplasia, hearing loss, dysmorphism syndrome"
+767264001,Weathering nodule of helix of ear
+768933005,Semicircular canal dehiscence syndrome
+7699004,Adhesive middle ear disease
+770414008,Alport syndrome
+770652001,Stenosis of external auditory canal due to and after radiation therapy
+770653006,Stenosis of external auditory canal caused by ionizing radiation
+770751003,"Severe motor and intellectual disabilities, sensorineural deafness, dystonia syndrome"
+770784003,Sinoatrial node dysfunction and deafness
+770944002,Oculootodental syndrome
+771308008,"Non-acquired combined pituitary hormone deficiency, sensorineural hearing loss, spine abnormalities syndrome"
+773398005,"Congenital cataract, progressive muscular hypotonia, hearing loss, developmental delay syndrome"
+773406003,"Mandibular hypoplasia, deafness, progeroid syndrome"
+773575001,Ocular albinism with congenital sensorineural deafness
+773583007,"Aphonia, deafness, retinal dystrophy, bifid halluces, intellectual disability syndrome"
+773610007,Chudley McCullough syndrome
+773647007,"Nephrotic syndrome, deafness, pretibial epidermolysis bullosa syndrome"
+773648002,"Congenital cataract, hearing loss, severe developmental delay syndrome"
+773665006,"Hypogonadotropic hypogonadism, severe microcephaly, sensorineural hearing loss, dysmorphism syndrome"
+773667003,"Hypertelorism, preauricular sinus, punctual pits, deafness syndrome"
+773735007,Deafness with onychodystrophy syndrome
+773750003,"Flat face, microstomia, ear anomaly syndrome"
+773951007,Necrotizing otitis externa of right external auditory canal
+773955003,Necrotizing otitis externa of left external auditory canal
+774119001,Obstruction of left Eustachian tube
+774120007,Obstruction of right Eustachian tube
+774155009,"Short stature, auditory canal atresia, mandibular hypoplasia, skeletal anomalies syndrome"
+77478005,Acute sanguinous otitis media
+77507001,Mixed conductive AND sensorineural hearing loss
+777998000,Temtamy preaxial brachydactyly syndrome
+778006008,Autosomal dominant aplasia and myelodysplasia
+780818005,Congenital fistula of pinna of ear
+780819002,Congenital cyst of pinna of ear
+782690007,Gemignani syndrome
+782752005,"Peripheral neuropathy, myopathy, hoarseness, hearing loss syndrome"
+782942003,Renal caliceal diverticuli and deafness syndrome
+783097004,Stickler syndrome type 3
+783555001,Hypotrichosis and deafness syndrome
+783614008,Familial steroid-resistant nephrotic syndrome with sensorineural deafness
+783700001,"Syndactyly, polydactyly, ear lobe syndrome"
+783742004,"Conductive hearing loss, malformation of external ear syndrome"
+783774006,"External auditory canal atresia, vertical talus, hypertelorism syndrome"
+78868004,Chronic mucoid otitis media
+788873009,Auditory synaptopathy
+788953003,Hereditary hearing loss
+788971005,Irritant contact dermatitis of external ear
+789056000,Tuberculosis of inner ear
+789057009,Tuberculosis of middle ear
+789721005,Malignant middle ear paraganglioma
+79150005,Acute chemical otitis externa
+79442007,Deafmutism-retinal degeneration syndrome
+79471008,Sudden hearing loss
+79665007,Wildervanck syndrome
+79972006,Circumscribed otitis externa
+80101003,Stenosis of eustachian tube
+80327007,Serous otitis media
+81564005,Chronic serous otitis media
+82143003,Postinflammatory perforation of ear drum
+8304007,Acute seromucinous otitis media
+8326008,Acute allergic mucoid otitis media
+83513002,Open wound of auditory canal without complication
+838378008,Chronic bilateral idiopathic vestibulopathy
+838379000,Chronic bilateral vestibulopathy due to bilateral schwannoma
+838381003,Chronic bilateral vestibulopathy due to and following meningitis
+838382005,Chronic bilateral vestibulopathy caused by ototoxic agent
+840480002,Congenital crumpled ear
+840482005,Congenital anomaly of lobe of ear
+84063009,"Traumatic deafness, occupational"
+84261000119106,Acute persistent otitis media
+8457007,Open wound of Eustachian tube without complication
+85108007,Acute tubotympanic catarrh
+8531006,Complete deafness
+85571008,Sensory hearing loss
+85940005,Tuberculous otitis media
+860801000000109,Moderate sensorineural hearing loss
+860811000000106,Severe sensorineural hearing loss
+860851000000105,Mild sensorineural hearing loss
+86279000,Acute suppurative otitis media with spontaneous rupture of ear drum
+86359006,Subacute transudative otitis media
+865961004,Vestibular system dysfunction following traumatic injury
+86850004,Serosanguineous chronic otitis media
+86981007,Infective otitis externa
+87040007,Dislocation of ear ossicles
+87362004,Open wound of ear without complication
+874840003,Superficial foreign body in ear
+87665008,Chronic tubotympanic suppurative otitis media
+87688009,Cholesteatoma of middle ear
+877191000000104,Bilateral profound sensorineural hearing loss
+877211000000100,Bilateral congenital sensorineural hearing loss
+878795009,Transitory deafness
+878796005,Partial transitory deafness
+878797001,Total transitory deafness
+88050005,Hematoma of pinna
+89000008,Hypertrichosis pinnae auris
+890210008,Acquired structural abnormality of pharyngotympanic tube following procedure
+89058008,"Tympanosclerosis involving tympanic membrane, ear ossicles AND middle ear"
+89097000,Labyrinthine fistula
+89145009,Subacute tubotympanic catarrh
+89496002,Traumatic deafness
+89537006,Diffuse labyrinthitis
+89723004,Chronic tympanitis
+897300000,Superficial foreign body of ear with infection
+897530009,Congenital ankylosis of incudomallear articulation
+897539005,Congenital anomaly of cochlea
+897557006,Congenital shortening of ear
+897572005,Congenital anomaly of semicircular canal
+897574006,Congenital anomaly of vestibule of inner ear
+897591005,Congenital dysplasia of vestibule of ear
+898061000000101,Bilateral severe sensorineural hearing loss
+898071000000108,Bilateral moderate sensorineural hearing loss
+898081000000105,Bilateral mild sensorineural hearing loss
+89821007,Discontinuity of ear ossicles
+9062008,Ototoxicity
+91011001,Active Ménière's disease
+91108004,Cochlear otosclerosis
+92094006,Benign neoplasm of eustachian tube
+92218002,Benign neoplasm of middle ear
+92354001,Benign neoplasm of skin of ear
+92587003,Carcinoma in situ of eustachian tube
+92657003,Carcinoma in situ of middle ear
+9269007,Epidermal burn of ear
+92719006,Carcinoma in situ of skin of ear
+92894005,Congenital abnormal shape of auditory ossicles
+92918008,Congenital abnormal shape of inner ear
+92937004,Congenital abnormal shape of pinna
+93220006,Malignant melanoma of skin of ear
+93222003,Malignant melanoma of skin of external auditory canal
+93345006,Congenital malposition of pinna
+93466004,"Gonadal dysgenesis with auditory dysfunction, autosomal recessive inheritance"
+93623004,Congenital lack of ossification of auditory ossicles
+93788000,Primary malignant neoplasm of eustachian tube
+93894000,Primary malignant neoplasm of middle ear
+94017001,Primary malignant neoplasm of skin of ear
+94019003,Primary malignant neoplasm of skin of external auditory canal
+94146005,Malignant otitis externa
+94289002,Secondary malignant neoplasm of eustachian tube
+94413009,Secondary malignant neoplasm of middle ear
+94549007,Secondary malignant neoplasm of skin of ear
+94551006,Secondary malignant neoplasm of skin of external auditory canal
+94828001,Neoplasm of uncertain behavior of eustachian tube
+94934007,Neoplasm of uncertain behavior of middle ear
+95057005,Neoplasm of uncertain behavior of skin of ear
+95059008,Neoplasm of uncertain behavior of skin of external auditory canal
+95211004,Polyp of external auditory meatus
+95514008,Developmental dysplasia of inner ear
+95515009,Low set ears
+95803004,Serous drainage from external ear canal
+95804005,Purulent drainage from external ear canal
+95805006,Foul odor drainage from external ear canal
+95807003,Swollen pinna
+95808008,Infection of ear lobe
+95809000,Eczema of ear lobe
+95810005,Infection of external auditory canal
+95811009,Abscess of external auditory canal
+95812002,Eczema of external auditory canal
+95813007,Perforation of tympanic membrane with proliferation of keratinized epithelium from middle to external ear
+95814001,Peripheral vestibular disease
+95815000,Central positional vertigo
+95817008,Labyrinthine concussion
+95818003,Otolith disease
+95820000,Bilateral hearing loss
+95821001,Neonatal hearing loss
+95823003,Leudet's tinnitus
+95827002,Congenital hearing disorder
+95828007,Congenital deafness
+95848000,Injury of head with otorrhagia
+95882006,Bacterial ear infection
+9794007,Endolymphatic hydrops

@@ -2,7 +2,7 @@ from cohortextractor import (
     codelist,
     codelist_from_csv,
 )
-# OUTCOMES
+# COVID VARIABLES
 covid_codelist = codelist_from_csv(
     "codelists/opensafely-covid-identification.csv",
     system="icd10",
@@ -27,7 +27,35 @@ covid_identification_in_primary_care_case_codes_seq = codelist_from_csv(
     column="CTV3ID",
 )
 
-#The following is Anna's code for her neurovaccine study, leaving in for the moment so code runs
+# OUTCOME VARIABLES
+auditory_disorder_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-auditory-system-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+compl_pregnancy_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-complication-of-pregnancy-childbirth-andor-the-puerperium-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+disorder_peurperium_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-puerperium-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+disorder_labor_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-labor-delivery-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+
+
+####################################################################################################
+##The following is Anna's code for her neurovaccine study, leaving in for the moment so code runs##
 bells_palsy_primary_care_codes = codelist_from_csv(
     "codelists/opensafely-bells-palsy.csv",
     system="ctv3",
@@ -66,6 +94,14 @@ ethnicity_codes = codelist_from_csv(
     column="Code",
     category_column="Grouping_6",
 )
+
+ethnicity_codes_16 = codelist_from_csv(
+    "codelists/opensafely-ethnicity.csv",
+    system="ctv3",
+    column="Code",
+    category_column="Grouping_16",
+)
+
 diabetes = codelist_from_csv(
     "codelists/opensafely-diabetes.csv",
     system="ctv3",

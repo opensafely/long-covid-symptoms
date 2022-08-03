@@ -21,3 +21,7 @@ opensafely/covid-identification-in-primary-care-probable-covid-clinical-code/202
 opensafely/covid-identification-in-primary-care-probable-covid-positive-test/2020-07-16
 opensafely/covid-identification-in-primary-care-probable-covid-sequelae/2020-07-16
 opensafely/covid-identification/2020-06-03
+user/kate-mansfield/disorder-of-auditory-system-all-descendants/5e67610c
+user/kate-mansfield/complication-of-pregnancy-childbirth-andor-the-puerperium-all-descendants/2995baac
+user/kate-mansfield/disorder-of-puerperium-all-descendants/1339076d
+user/kate-mansfield/disorder-of-labor-delivery-all-descendants/2c487aa2

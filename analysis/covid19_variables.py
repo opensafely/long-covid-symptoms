@@ -160,10 +160,6 @@ def generate_covid19_variables(index_date_variable):
     # this is because I need to know earliest covid-19 to make sure people included in study from beginning of second wave
     # onwards haven't already had covid in the first wave
     first_known_covid19_date=patients.minimum_of("first_positive_test_date", "covid_tpp_probable", "covid_hospital"), 
-
-    # define the case index date - first of positive test or primary care diagnosis after wave 2
-    # to keep this manageable re: matching, I'd like cases to only be selected from within wave 2
-    case_index_date=patients.minimum_of("first_positive_test_dateW2", "covid_tpp_probableW2"),
      
     )
     return covid19_variables

@@ -1,0 +1,327 @@
+code,term
+106007006,Maternal AND/OR fetal condition affecting labor AND/OR delivery
+106008001,Delivery AND/OR maternal condition affecting management
+106009009,Fetal condition affecting obstetrical care of mother
+106010004,Pelvic dystocia AND/OR uterine disorder
+10743831000119100,Neoplasm of uterus affecting pregnancy
+10743881000119104,Suspected fetal abnormality affecting management of mother
+10751511000119105,Obstructed labor due to incomplete rotation of fetal head
+10751581000119104,Obstructed labor due to disproportion between fetus and pelvis
+10751631000119101,Obstructed labor due to abnormality of maternal pelvis
+10808861000119105,Maternal distress during childbirth
+10836111000119108,Dislocation of symphysis pubis in labor and delivery
+111447004,Placental condition affecting management of mother
+1148801000000108,Monochorionic monoamniotic triplet pregnancy
+1148811000000105,Trichorionic triamniotic triplet pregnancy
+1148821000000104,Dichorionic triamniotic triplet pregnancy
+1148841000000106,Dichorionic diamniotic triplet pregnancy
+1149411000000103,Monochorionic diamniotic triplet pregnancy
+1149421000000109,Monochorionic triamniotic triplet pregnancy
+11914001,Transverse OR oblique presentation of fetus
+12275071000119109,Conjoined twin pregnancy
+12867002,Fetal distress affecting management of mother
+1343000,Deep transverse arrest
+13866000,Fetal acidemia affecting management of mother
+14022007,"Fetal death, affecting management of mother"
+1538006,Central nervous system malformation in fetus affecting obstetrical care
+16356006,Multiple pregnancy
+1639007,Abnormality of organs AND/OR soft tissues of pelvis affecting pregnancy
+17382005,Cervical incompetence
+17532001,Breech malpresentation successfully converted to cephalic presentation
+17594002,Fetal bradycardia affecting management of mother
+18606002,Dyscoordinate labor
+19729005,Prolapse of anterior lip of cervix obstructing labor
+19866007,Previous operation to cervix affecting pregnancy
+199306007,Continuing pregnancy after abortion of one fetus or more
+199307003,Continuing pregnancy after intrauterine death of one or more fetuses
+199314001,Normal delivery but ante- or post- natal conditions present
+199318003,Twin pregnancy with antenatal problem
+199322008,Triplet pregnancy with antenatal problem
+199326006,Quadruplet pregnancy with antenatal problem
+199344003,Unstable lie - delivered
+199345002,Unstable lie with antenatal problem
+199358001,Oblique lie - delivered
+199359009,Oblique lie with antenatal problem
+199362007,Transverse lie - delivered
+199363002,Transverse lie with antenatal problem
+199378009,Multiple pregnancy with malpresentation
+199380003,Multiple pregnancy with malpresentation - delivered
+199381004,Multiple pregnancy with malpresentation with antenatal problem
+199384007,Prolapsed arm - delivered
+199385008,Prolapsed arm with antenatal problem
+199397009,Cephalopelvic disproportion
+199405005,Generally contracted pelvis - delivered
+199406006,Generally contracted pelvis with antenatal problem
+199409004,Inlet pelvic contraction - delivered
+199410009,Inlet pelvic contraction with antenatal problem
+199413006,Outlet pelvic contraction - delivered
+199414000,Outlet pelvic contraction with antenatal problem
+199416003,Mixed feto-pelvic disproportion
+199418002,Mixed feto-pelvic disproportion - delivered
+199419005,Mixed feto-pelvic disproportion with antenatal problem
+199422007,Large fetus causing disproportion - delivered
+199423002,Large fetus causing disproportion with antenatal problem
+199425009,Hydrocephalic disproportion
+199427001,Hydrocephalic disproportion - delivered
+199428006,Hydrocephalic disproportion with antenatal problem
+199466009,Retroverted incarcerated gravid uterus
+199468005,Retroverted incarcerated gravid uterus - delivered
+199469002,Retroverted incarcerated gravid uterus - delivered with postnatal complication
+199470001,Retroverted incarcerated gravid uterus with antenatal problem
+199471002,Retroverted incarcerated gravid uterus with postnatal complication
+199482005,Cervical incompetence - delivered
+199483000,Cervical incompetence - delivered with postnatal complication
+199484006,Cervical incompetence with antenatal problem
+199485007,Cervical incompetence with postnatal complication
+199577000,Fetal-maternal hemorrhage - delivered
+199578005,Fetal-maternal hemorrhage with antenatal problem
+199582007,Rhesus isoimmunization - delivered
+199583002,Rhesus isoimmunization with antenatal problem
+199694005,Failed mechanical induction - delivered
+199695006,Failed mechanical induction with antenatal problem
+199746004,Obstructed labor
+199747008,Obstructed labor due to fetal malposition
+199749006,Obstructed labor due to fetal malposition - delivered
+199750006,Obstructed labor due to fetal malposition with antenatal problem
+199751005,Obstructed labor due to breech presentation
+199752003,Obstructed labor due to face presentation
+199753008,Obstructed labor due to brow presentation
+199754002,Obstructed labor due to shoulder presentation
+199755001,Obstructed labor due to compound presentation
+199757009,Obstructed labor caused by bony pelvis
+199759007,Obstructed labor caused by bony pelvis - delivered
+199760002,Obstructed labor caused by bony pelvis with antenatal problem
+199761003,Obstructed labor due to deformed pelvis
+199762005,Obstructed labor due to generally contracted pelvis
+199763000,Obstructed labor due to pelvic inlet contraction
+199764006,Obstructed labor due to pelvic outlet and mid-cavity contraction
+199765007,Obstructed labor due to abnormality of maternal pelvic organs
+199767004,Obstructed labor caused by pelvic soft tissues
+199769001,Obstructed labor caused by pelvic soft tissues - delivered
+199770000,Obstructed labor caused by pelvic soft tissues with antenatal problem
+199774009,Deep transverse arrest - delivered
+199775005,Deep transverse arrest with antenatal problem
+199783004,Shoulder dystocia - delivered
+199784005,Shoulder dystocia with antenatal problem
+199806003,Obstructed labor due to unusually large fetus
+199819004,Primary uterine inertia - delivered
+199821009,Primary uterine inertia with antenatal problem
+199824001,Secondary uterine inertia - delivered
+199825000,Secondary uterine inertia with antenatal problem
+199833004,Precipitate labor - delivered
+199834005,Precipitate labor with antenatal problem
+199838008,Hypertonic uterine inertia - delivered
+199839000,Hypertonic uterine inertia with antenatal problem
+199847000,Prolonged first stage - delivered
+199848005,Prolonged first stage with antenatal problem
+199857004,Prolonged second stage - delivered
+199858009,Prolonged second stage with antenatal problem
+199862003,Delayed delivery second twin - delivered
+199863008,Delayed delivery second twin with antenatal problem
+200030007,Postpartum coagulation defects - delivered with postnatal problem
+200031006,Postpartum coagulation defects with postnatal problem
+200099005,Maternal distress - delivered
+200100002,Maternal distress - delivered with postnatal problem
+200101003,Maternal distress with antenatal problem
+200102005,Maternal distress with postnatal problem
+200105007,Obstetric shock - delivered
+200106008,Obstetric shock - delivered with postnatal problem
+200107004,Obstetric shock with antenatal problem
+200108009,Obstetric shock with postnatal problem
+200111005,Maternal hypotension syndrome - delivered
+200112003,Maternal hypotension syndrome - delivered with postnatal problem
+200113008,Maternal hypotension syndrome with antenatal problem
+200114002,Maternal hypotension syndrome with postnatal problem
+200164009,Exhaustion during labor
+200173001,Intrapartum hemorrhage with coagulation defect
+20625004,Obstruction caused by position of fetus at onset of labor
+20845005,Meconium in amniotic fluid affecting management of mother
+21346009,Double uterus affecting pregnancy
+21882006,Face presentation of fetus
+21987001,Delayed delivery of second of multiple births
+22173004,Excessive fetal growth affecting management of mother
+22288000,Tumor of cervix affecting pregnancy
+223003,Tumor of body of uterus affecting pregnancy
+22753004,Fetal AND/OR placental disorder affecting management of mother
+23001005,Stenosis AND/OR stricture of cervix affecting pregnancy
+234380002,Kell isoimmunization of the newborn
+23508005,"Uterine incoordination, first degree"
+237201006,Rectocele complicating antenatal care - baby not yet delivered
+237205002,Rectocele affecting obstetric care
+237208000,"Rectocele in pregnancy, childbirth and the puerperium"
+237235009,Undiagnosed breech
+237236005,Undiagnosed multiple pregnancy
+237237001,Undiagnosed twin
+237247003,Continuing pregnancy after abortion of sibling fetus
+237256006,Disorder of pelvic size and disproportion
+237257002,Midpelvic contraction
+237302001,Kell isoimmunization in pregnancy
+237303006,Duffy isoimmunization in pregnancy
+237304000,Lewis isoimmunization in pregnancy
+237321009,Delayed delivery of triplet
+237324001,Cervical dystocia
+237325000,Head entrapment during breech delivery
+237336007,Fibrinolysis - postpartum
+237337003,Afibrinogenemia - postpartum
+24699006,Arrested active phase of labor
+248996001,Transversely contracted pelvis
+249064003,"Oblique lie, head in iliac fossa"
+249065002,"Oblique lie, breech in iliac fossa"
+249089009,Fetal mouth presenting
+249090000,Fetal ear presenting
+249091001,Fetal nose presenting
+249093003,Presentation of orbital ridges of fetus
+249098007,Knee presentation
+249099004,Single knee presentation
+249100007,Double knee presentation
+249104003,Dorsoanterior shoulder presentation
+249105002,Dorsoposterior shoulder presentation
+249196008,Distress from pain in labor
+25749005,Disproportion between fetus and pelvis
+26158002,Uterine inertia
+267265005,Hypertonic uterine inertia
+267272006,Postpartum coagulation defects
+267340006,Maternal pyrexia in labor
+26828006,Rectocele affecting pregnancy
+270498000,Malposition and malpresentation of fetus
+275426009,Pelvic disproportion
+275429002,Delayed delivery of second twin
+276580005,Atypical isoimmunization of newborn
+288259000,Born after multiple pregnancy
+288261009,Was malpresentation pre-labor
+289355004,Oblique lie head in right iliac fossa
+289356003,Oblique lie head in left iliac fossa
+289357007,Oblique lie breech in right iliac fossa
+289358002,Oblique lie breech in left iliac fossa
+307337003,Duffy isoimmunization of the newborn
+307338008,Kidd isoimmunization of the newborn
+31041000119106,Obstructed labor due to deep transverse arrest and persistent occipitoposterior position
+31383003,Tumor of vagina affecting pregnancy
+31601007,Combined pregnancy
+31805001,Fetal disproportion
+31821006,Uterine scar from previous surgery affecting pregnancy
+33627001,Prolonged first stage of labor
+34327003,Parturient hemorrhage associated with hyperfibrinolysis
+34981006,Hypertonic uterine dysfunction
+35347003,Delayed delivery after artificial rupture of membranes
+35381000119101,Quadruplet pregnancy with loss of one or more fetuses
+35746009,Uterine fibroids affecting pregnancy
+35882009,Abnormality of forces of labor
+36297009,Septate vagina affecting pregnancy
+362972006,Disorder of labor / delivery
+36801000119105,Continuing triplet pregnancy after spontaneous abortion of one or more fetuses
+36854009,Inlet contraction of pelvis
+38010008,Intrapartum hemorrhage
+38720006,Septuplet pregnancy
+387692004,Hypotonic uterine inertia
+387696001,Primary hypotonic uterine dysfunction
+387699008,Primary uterine inertia
+387700009,Prolonged latent phase of labor
+3885002,ABO isoimmunization affecting pregnancy
+39208009,Fetal hydrops causing disproportion
+397949005,Poor fetal growth affecting management
+399363000,Late fetal death affecting management of mother
+4006006,Fetal tachycardia affecting management of mother
+41215002,"Congenital abnormality of uterus, affecting pregnancy"
+42571002,Failed induction of labor
+42686001,Chromosomal abnormality in fetus affecting obstetrical care
+428511009,Multiple pregnancy with one fetal loss
+429187001,Continuing pregnancy after intrauterine death of twin fetus
+43651009,Acquired stenosis of vagina affecting pregnancy
+43715006,Secondary uterine inertia
+43970002,Congenital stenosis of vagina affecting pregnancy
+43990006,Sextuplet pregnancy
+442478007,Multiple pregnancy involving intrauterine pregnancy and tubal pregnancy
+443006,Cystocele affecting pregnancy
+44795003,Rhesus isoimmunization affecting pregnancy
+45759004,Rigid perineum affecting pregnancy
+459166009,Dichorionic diamniotic twin pregnancy
+459167000,Monochorionic twin pregnancy
+459168005,Monochorionic diamniotic twin pregnancy
+459169002,Monochorionic diamniotic twin pregnancy with similar amniotic fluid volumes
+459170001,Monochorionic diamniotic twin pregnancy with dissimilar amniotic fluid volumes
+459171002,Monochorionic monoamniotic twin pregnancy
+472321009,Continuing pregnancy after intrauterine death of one twin with intrauterine retention of dead twin
+47236005,Third stage hemorrhage
+49177006,Postpartum coagulation defect with hemorrhage
+49279000,Slow slope active phase of labor
+49342001,Stricture of vagina affecting pregnancy
+50557007,Healed pelvic floor repair affecting pregnancy
+51920004,Precipitate labor
+52327008,Fetal myelomeningocele causing disproportion
+53443007,Prolonged labor
+54212005,Irregular uterine contractions
+54844002,Prolapse of gravid uterus
+56313000,Abnormal placenta affecting management of mother
+57296000,Incarcerated gravid uterus
+57576007,Retroverted gravid uterus
+58881007,Polyp of cervix affecting pregnancy
+60755004,Persistent hymen affecting pregnancy
+60810003,Quadruplet pregnancy
+62129004,Contraction ring dystocia
+62410004,Postpartum fibrinolysis with hemorrhage
+62612003,Fibrosis of perineum affecting pregnancy
+63750008,Oblique lie
+64254006,Triplet pregnancy
+65147003,Twin pregnancy
+66294006,Obstruction by abnormal pelvic soft tissues
+66958002,"Isoimmunization from non-ABO, non-Rh blood-group incompatibility affecting pregnancy"
+67480003,Indication for care AND/OR intervention in labor AND/OR delivery
+67802002,"Malpresentation other than breech, successfully converted to cephalic presentation"
+6891008,"Uterine incoordination, second degree"
+69217004,Outlet contraction of pelvis
+69802008,Cervical cerclage suture present
+698702007,Deep transverse arrest with persistent occipitoposterior position
+699240001,Combined intrauterine and ovarian pregnancy
+699950009,Anti-D isoimmunization affecting pregnancy
+70068004,Persistent occipitoposterior position
+71028008,Fetal-maternal hemorrhage
+713232009,Prolonged second stage of labor due to poor maternal effort
+713575004,Dizygotic twin pregnancy
+713576003,Monozygotic twin pregnancy
+715880002,Obstructed labor due to fetal abnormality
+71901000,Congenital contracted pelvis
+724490006,Intrapartum hemorrhage co-occurrent and due to obstructed labor with uterine rupture
+7245003,Fetal dystocia
+73161006,Transverse lie
+735492001,Obstructed labor due to shoulder dystocia
+76037007,Rigid cervix uteri affecting pregnancy
+76771005,Parturient hemorrhage associated with hypofibrinogenemia
+76871004,Previous surgery to vagina affecting pregnancy
+77259008,Prolonged second stage of labor
+77563000,Obstruction by bony pelvis
+77854008,Failed medical induction of labor
+785341006,Intrapartum hemorrhage due to leiomyoma
+79179003,Desultory labor
+79255005,Mentum presentation of fetus
+79414005,Retraction ring dystocia
+79748007,Maternal dystocia
+80002007,Malpresentation of fetus
+8014007,Brow presentation of fetus
+80224003,Multiple gestation with one OR more fetal malpresentations
+80256005,Intervillous thrombosis
+80818002,Previous surgery to perineum AND/OR vulva affecting pregnancy
+80997009,Quintuplet pregnancy
+816148008,Disproportion between fetus and pelvis due to conjoined twins
+816969006,Inefficient uterine activity with oxytocin augmentation
+820947007,Third stage hemorrhage due to retention of placenta
+83243004,Rigid pelvic floor affecting pregnancy
+8393005,Tetanic contractions of uterus
+84007008,Shock during AND/OR following labor AND/OR delivery
+84235001,Cephalic version
+8445003,Tumor of vulva affecting pregnancy
+86356004,Unstable lie
+871005,Contracted pelvis
+87383005,Maternal distress
+87814002,Marginal placenta previa with intrapartum hemorrhage
+879817000,Disproportion between fetus and pelvis due to fetal neoplasm
+879819002,Disproportion between fetus and pelvis due to fetal sacral teratoma
+8884000,Fetal ascites causing disproportion
+88887003,Maternal hypotension syndrome
+89700002,Shoulder girdle dystocia
+90188009,Failed mechanical induction
+91484005,Failure of induction of labor by oxytocic drugs
+9293002,Atony of uterus
+9297001,Uterus bicornis affecting pregnancy
+9720009,Cicatrix of cervix affecting pregnancy
+9780006,Presentation of prolapsed arm of fetus

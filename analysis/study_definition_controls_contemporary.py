@@ -21,6 +21,15 @@ covid19_variables = generate_covid19_variables(index_date_variable="index_date")
 from matching_variables import generate_matching_variables
 matching_variables = generate_matching_variables(index_date_variable="index_date")
 
+## covariates: age, sex, region we already have a matching variables, need IMD, ethnicity, rural/urban, pre-existing comorbidity (although this comes from outcome vars)
+## (note, all above relative to community COVID19 case (index) date)
+from covariates import generate_covariates
+covariates = generate_covariates(index_date_variable="index_date")
+
+## outcome variables (note, relative to community COVID19 case (index) date)
+from outcome_variables import generate_outcome_variables
+outcome_variables = generate_outcome_variables(index_date_variable="index_date")
+
 # Specify study definition
 
 study = StudyDefinition(
@@ -41,8 +50,9 @@ study = StudyDefinition(
 
     population=patients.satisfying(
         """
-        (age >= 18 AND age < 105) 
+        (age <=110) 
         AND (sex = "M" OR sex = "F") 
+        AND imd > 0 
         AND NOT unexposed_has_died
         AND stp ="E54000005"
         """,
@@ -53,6 +63,13 @@ study = StudyDefinition(
 
     # MATCHING VARIABLES  
     **matching_variables, 
+
+    # COVARIATES  
+    **covariates, 
+
+    # Uncomment when have updated our own outcome variables
+    # OUTCOME VARIABLES  
+    **outcome_variables, 
 
     # SELECTION VARIABLES 
     ### sex 
@@ -73,10 +90,10 @@ study = StudyDefinition(
     ## For the controls, the only criteria that can be applied before the assignment of the case index date is age, sex,  death and dereg criteria 
 
     unexposed_has_died=patients.died_from_any_cause(
-        on_or_before="index_date",
-        returning="binary_flag",
-        date_format="YYYY-MM-DD", 
-    ),
+     on_or_before="index_date",
+         returning="binary_flag",
+         date_format="YYYY-MM-DD", 
+     ),
 
     death_date=patients.died_from_any_cause(
         on_or_after="index_date",
