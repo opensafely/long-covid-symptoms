@@ -1,4 +1,4 @@
-# {{Post COVID: symptoms, diagnoses and prescriptions recorded in electronic health records after COVID-19}}
+# Post COVID: symptoms, diagnoses and prescriptions recorded in electronic health records after COVID-19
 
 This is the code and configuration for {{Post COVID: symptoms, diagnoses and prescriptions recorded in electronic health records after COVID-19}}
 
