@@ -5,12 +5,12 @@ expectations:
 
 actions:
 
-# 1. EXTRACT DATA FOR EXPOSED AND POTENTIAL CONTROLS 
+# 1. EXTRACT DATA FOR EXPOSED
   generate_community_cases_cohort:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_covid_community
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_covid_communitycases
     outputs:
       highly_sensitive:
-        cohort: output/input_covid_community.csv
+        cohort: output/input_covid_communitycases.csv
 
 
 # 2. EXTRACT DATA FOR POTENTIAL COMPARATORS
@@ -19,13 +19,13 @@ actions:
 
  # *** contemporary potential comparators
   generate_potential_controls_contemporary:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_potential_controls_contemporary
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_controls_contemporary
     outputs:
       highly_sensitive:
-        cohort: output/input_potential_controls_contemporary.csv
+        cohort: output/input_controls_contemporary.csv
 
 
-# 3. CHECKS ON SEPARATE CASE AND CONTROL FILES
+# 3. CHECKS ON SEPARATE CASE AND CONTROL FILES - this is for looking to see if they contain per region
   01_longCovidSymp_check_case_control_source:
     run: stata-mp:latest analysis/01_longCovidSymp_check_case_control_source.do
     needs: [generate_community_cases_cohort, generate_potential_controls_contemporary]
@@ -47,6 +47,16 @@ actions:
         matched_cases: output/matched_cases_contemporary.csv
         matched_matches: output/matched_matches_contemporary.csv
         matched_all: output/matched_combined_contemporary.csv
+
+
+
+ # 4. ADD FURTHER VARIABLES TO CONTROLS FOLLOWING MATCHING
+  add_covariates_contemporary_controls:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_contemporary 
+    needs: [match_contemporary]
+    outputs:
+      highly_sensitive:
+        cohort: output/input_complete_controls_contemporary.csv
 
 
 

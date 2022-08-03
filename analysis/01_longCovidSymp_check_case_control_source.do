@@ -29,6 +29,8 @@ log using ./logs/01_longCovidSymp_check_case_control_source.log, replace t
 import delimited ./output/input_covid_community.csv, clear
 *check is only one stp
 safetab stp
+*check what variables
+codebook
 
 
 import delimited ./output/input_potential_controls_contemporary.csv, clear

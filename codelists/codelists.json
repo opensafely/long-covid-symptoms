@@ -137,6 +137,30 @@
       "url": "https://codelists.opensafely.org/codelist/opensafely/covid-identification/2020-06-03/",
       "downloaded_at": "2022-05-24 08:54:38.476606Z",
       "sha": "124db6929439379b7dacd55ba26ae4f2ed9370bc"
+    },
+    "user-kate-mansfield-disorder-of-auditory-system-all-descendants.csv": {
+      "id": "user/kate-mansfield/disorder-of-auditory-system-all-descendants/5e67610c",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-auditory-system-all-descendants/5e67610c/",
+      "downloaded_at": "2022-07-22 11:48:16.050890Z",
+      "sha": "8486bd72286a1652389f5c2c82d7f637838388a6"
+    },
+    "user-kate-mansfield-complication-of-pregnancy-childbirth-andor-the-puerperium-all-descendants.csv": {
+      "id": "user/kate-mansfield/complication-of-pregnancy-childbirth-andor-the-puerperium-all-descendants/2995baac",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/complication-of-pregnancy-childbirth-andor-the-puerperium-all-descendants/2995baac/",
+      "downloaded_at": "2022-08-03 17:56:05.599046Z",
+      "sha": "809dc7d6cb3895323e2d3a0e9666aaa932ec5f0c"
+    },
+    "user-kate-mansfield-disorder-of-puerperium-all-descendants.csv": {
+      "id": "user/kate-mansfield/disorder-of-puerperium-all-descendants/1339076d",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-puerperium-all-descendants/1339076d/",
+      "downloaded_at": "2022-08-03 17:56:05.818114Z",
+      "sha": "1700d4be79d2976c98dee833e8ee8df6e5b7e37a"
+    },
+    "user-kate-mansfield-disorder-of-labor-delivery-all-descendants.csv": {
+      "id": "user/kate-mansfield/disorder-of-labor-delivery-all-descendants/2c487aa2",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-labor-delivery-all-descendants/2c487aa2/",
+      "downloaded_at": "2022-08-03 17:56:06.062942Z",
+      "sha": "9b6fd7f8cc8734f9231bbe7a81f26992b77e36fc"
     }
   }
 }
