@@ -1,6 +1,6 @@
-# {{project_name}}
+# {{Post COVID: symptoms, diagnoses and prescriptions recorded in electronic health records after COVID-19}}
 
-This is the code and configuration for {{project_name}}
+This is the code and configuration for {{Post COVID: symptoms, diagnoses and prescriptions recorded in electronic health records after COVID-19}}
 
 * The paper is [here]()
 * Raw model outputs, including charts, crosstabs, etc, are in `released_outputs/`
