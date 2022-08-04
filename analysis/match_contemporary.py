@@ -1,7 +1,7 @@
 import pandas as pd
 from osmatching import match
 
-# CONCURRENT CONTROLS - took out stp here while just trying one region at a time
+## CONCURRENT CONTROLS - took out stp here while just trying one region at a time
 match(
     case_csv="input_covid_communitycases",
     match_csv="input_controls_contemporary",
