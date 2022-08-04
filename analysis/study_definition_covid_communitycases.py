@@ -21,14 +21,14 @@ covid19_variables = generate_covid19_variables(index_date_variable="index_date")
 from matching_variables import generate_matching_variables
 matching_variables = generate_matching_variables(index_date_variable="index_date")
 
-## covariates: age, sex, region we already have a matching variables, need IMD, ethnicity, rural/urban, pre-existing comorbidity (although this comes from outcome vars)
+## covariates: age, sex, region we already have as matching variables, need IMD, ethnicity, rural/urban, pre-existing comorbidity (although this comes from outcome vars)
 ## (note, all above relative to community COVID19 case (index) date)
 from covariates import generate_covariates
 covariates = generate_covariates(index_date_variable="index_date")
 
 ## outcome variables (note, relative to community COVID19 case (index) date)
-from outcome_variables import generate_outcome_variables
-outcome_variables = generate_outcome_variables(index_date_variable="index_date")
+#from outcome_variables import generate_outcome_variables
+#outcome_variables = generate_outcome_variables(index_date_variable="index_date")
 
 # Specify study definition
 
@@ -77,7 +77,7 @@ study = StudyDefinition(
 
     # Uncomment when have updated our own outcome variables
     # OUTCOME VARIABLES  
-    **outcome_variables, 
+    # **outcome_variables, 
 
     # SELECTION VARIABLES 
     ### sex 

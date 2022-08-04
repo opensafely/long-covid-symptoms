@@ -51,12 +51,22 @@ actions:
 
 
  # 4. ADD FURTHER VARIABLES TO CONTROLS FOLLOWING MATCHING
-  add_covariates_contemporary_controls:
+  add_allVars_contemporary_controls:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_contemporary 
     needs: [match_contemporary]
     outputs:
       highly_sensitive:
         cohort: output/input_complete_controls_contemporary.csv
+
+
+
+# 5. ADD FURTHER VARIABLES TO CASES FOLLOWING MATCHING
+  add_allVars_cases:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_covid_communitycases 
+    needs: [match_contemporary]
+    outputs:
+      highly_sensitive:
+        cohort: output/input_complete_covid_communitycases.csv
 
 
 
