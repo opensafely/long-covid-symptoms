@@ -5,7 +5,7 @@ expectations:
 
 actions:
 
-# 1. EXTRACT DATA FOR EXPOSED
+## 1. EXTRACT DATA FOR EXPOSED
   generate_community_cases_cohort:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_covid_communitycases
     outputs:
