@@ -56,7 +56,7 @@ actions:
     needs: [match_contemporary]
     outputs:
       highly_sensitive:
-        cohort: output/input_complete_controls_contemporary.csv
+        matched_controls_contemporary_wVars: output/input_complete_controls_contemporary.csv
 
 
 
@@ -66,7 +66,7 @@ actions:
     needs: [match_contemporary]
     outputs:
       highly_sensitive:
-        cohort: output/input_complete_covid_communitycases.csv
+        matched_cases_contemporary_wVars: output/input_complete_covid_communitycases.csv
 
 
 

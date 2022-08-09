@@ -21,6 +21,10 @@ CONTROLS = "output/matched_matches_contemporary.csv"
 from covid19_variables import generate_covid19_variables
 covid19_variables = generate_covid19_variables(index_date_variable="case_index_date")
 
+## matching variables 
+from matching_variables import generate_matching_variables
+matching_variables = generate_matching_variables(index_date_variable="case_index_date")
+
 ## covariates
 from covariates import generate_covariates
 covariates = generate_covariates(index_date_variable="case_index_date")
@@ -52,11 +56,14 @@ study = StudyDefinition(
         returning="case_index_date", 
         returning_type="date"), 
 
+    # COVID19 VARIABLES
+    **covid19_variables, 
+
+    # MATCHING VARIABLES  
+    **matching_variables,  
+
     # COVARIATES  
     **covariates, 
-
-    # COVID19 VARIABLES
-    **covid19_variables,  
 
     # Uncomment when have updated our own outcome variables
     # OUTCOME VARIABLES  
