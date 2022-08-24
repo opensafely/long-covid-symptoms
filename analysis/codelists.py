@@ -27,9 +27,12 @@ covid_identification_in_primary_care_case_codes_seq = codelist_from_csv(
     column="CTV3ID",
 )
 
+
+
+
 # OUTCOME VARIABLES
-auditory_disorder_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-disorder-of-auditory-system-all-descendants.csv",
+cns_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-central-nervous-system-finding-all-descendants.csv",
     system="ctv3",
     column="code",
 )
@@ -40,8 +43,62 @@ compl_pregnancy_codes = codelist_from_csv(
     column="code",
 )
 
-disorder_peurperium_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-disorder-of-puerperium-all-descendants.csv",
+congential_disease_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-congenital-disease-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+auditory_disorder_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-auditory-system-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+cardiovascular_disease_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-cardiovascular-system-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+blood_cellular_disease_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-cellular-component-of-blood-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+disorder_connective_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-connective-tissue-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+disorder_digestive_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-digestive-system-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+disorder_endocrine_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-endocrine-system-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+disorder_fetus_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-fetus-or-newborn-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+disorder_haematopoietic_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-hematopoietic-structure-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+disorder_immune_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-immune-function-all-descendants.csv",
     system="ctv3",
     column="code",
 )
@@ -51,6 +108,101 @@ disorder_labor_codes = codelist_from_csv(
     system="ctv3",
     column="code",
 )
+
+disorder_musculoskeletal_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-musculoskeletal-system-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+disorder_neurological_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-nervous-system-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+disorder_peurperium_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-puerperium-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+disorder_respiratory_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-respiratory-system-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+disorder_skin_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-skin-andor-subcutaneous-tissue-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+disorder_genitourinary_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-disorder-of-the-genitourinary-system-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+infectious_disease_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-infectious-disease-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+mental_disorder_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-mental-disorder-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+metabolic_disease_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-metabolic-disease-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+neoplastic_disease_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-neoplastic-disease-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+nutritional_disorder_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-nutritional-disorder-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+poisoning_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-poisoning-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+injury_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-traumatic-andor-non-traumatic-injury-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+visual_disorder_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-visual-system-disorder-all-descendants.csv",
+    system="ctv3",
+    column="code",
+)
+
+breathlessness_symptoms_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-symptoms-breathlessness.csv",
+    system="ctv3",
+    column="code",
+)
+
+
+
+
+
 
 
 

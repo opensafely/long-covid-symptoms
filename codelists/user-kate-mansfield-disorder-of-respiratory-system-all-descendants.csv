@@ -1,0 +1,3575 @@
+code,term
+1001000119102,Pulmonary embolism with pulmonary infarction
+1003440009,Laryngeal cleft type 0
+1003468008,Congenital teratoma of nasopharynx
+1003507002,Agenesis of lobe of lung
+1003520004,Agenesis of vomer
+1003555002,Agenesis of trachea
+1003568005,Agenesis of diaphragm
+1003917004,Secondary congenital hyperplasia of lung
+1003936009,Primary congenital hyperplasia of lung
+10041001,Tracheal stenosis following tracheostomy
+1010333003,Emphysema of left lung
+1010334009,Emphysema of right lung
+1010438008,Downward displacement of right half of diaphragm
+1010445008,Downward displacement of left half of diaphragm
+1010603001,Primary mucoepidermoid carcinoma of nasopharynx
+1010607000,Primary lymphoepithelial carcinoma of nasopharynx
+1010615002,Late syphilis of lung
+1010619008,Inflammatory tracheobronchial papilloma
+1010620002,Infection of lung caused by Mycobacterium malmoense
+1010622005,Infection of lung caused by Mycobacterium xenopi
+1010623000,Disorder of lung due to immunoglobulin A vasculitis
+1010624006,Primary salivary gland type neoplasm of nasopharynx
+1010626008,Recurrent peritonsillar abscess
+1010631005,Primary malignant melanoma of overlapping lesion of accessory sinuses
+1010633008,Primary papillary adenocarcinoma of nasopharynx
+1010634002,Pneumonia caused by Acinetobacter
+1010650005,Acute endogenous lipoid pneumonia
+1010656004,Adenoid squamous cell carcinoma of nasopharynx
+1010657008,Secondary hypoplasia of bilateral lungs
+1010660001,Infantile hemangioma of subglottis
+1010662009,Infection of lung caused by Mycobacterium kansasii
+1010669000,Primary squamous cell carcinoma of superior wall of nasopharynx
+1010670004,Chronic endogenous lipoid pneumonia
+1010674008,Basaloid squamous cell carcinoma of nasopharynx
+1010675009,Squamous cell carcinoma of posterior wall of nasopharynx
+1010676005,Benign clear-cell neoplasm of lung
+1010677001,Primary squamous cell carcinomas of anterior wall of nasopharynx
+1010679003,Primary squamous cell carcinoma of lateral wall of nasopharynx
+1010681001,Primary squamous cell carcinoma of overlapping lesion of nasopharynx
+101301000119106,Acute hypercapnic respiratory failure due to obstructive sleep apnea
+101401000119103,Pulmonary granuloma
+1017196003,Interstitial pulmonary fibrosis due to inhalation of substance
+1017197007,Interstitial pulmonary fibrosis due to inhalation of drug
+102361000119104,Chronic pneumonia
+102401000119108,Acquired velopharyngeal incompetence
+102453009,Peritonsillar cellulitis
+1031006,Open wound of trachea without complication
+1033051000000101,Influenza due to zoonotic influenza virus
+1033071000000105,Influenza due to pandemic influenza virus
+1033091000000109,Influenza due to seasonal influenza virus
+1033111000000104,Influenza with pneumonia due to seasonal influenza virus
+10345003,Primary syphilis of tonsils
+10351008,Suppurative tonsillitis
+10375008,Extrapulmonary subpleural pulmonary sequestration
+103781000119103,Allergic bronchopulmonary mycosis
+103851000119100,Restrictive lung disease due to amyotrophic lateral sclerosis
+103871000119109,Restrictive lung disease due to Parkinson disease
+104041000119108,Fungal sinusitis
+10446001,Aspergilloma
+10501004,Pulmonary alveolar proteinosis
+105041000119109,Secondary squamous cell carcinoma of lung
+105051000119106,Secondary undifferentiated large cell carcinoma of lung
+10509002,Acute bronchitis
+1052239007,Paresis of left vocal cord
+1052240009,Paresis of right vocal cord
+10552002,Calcification of lung
+10561000087108,Injury of diaphragm during surgery
+105901000119108,Pleural effusion caused by bacterial infection
+105972009,Disorder of maxillary sinus
+105973004,Disorder of frontal sinus
+105974005,Disorder of ethmoidal sinus
+105975006,Disorder of sphenoidal sinus
+105977003,Non-infectious pneumonia
+106001000119101,Chronic obstructive lung disease co-occurrent with acute bronchitis
+10613001,Acute berylliosis
+10624991000119103,Bronchopneumonia caused by Achromobacter
+10625031000119102,Bronchopneumonia caused by anaerobic bacteria
+10625071000119104,Bronchopneumonia caused by bacteria
+10625111000119106,Bronchopneumonia caused by Escherichia coli
+10625151000119107,Bronchopneumonia caused by Group A Streptococcus
+10625191000119102,Bronchopneumonia caused by Group B Streptococcus
+10625231000119106,Bronchopneumonia caused by Haemophilus influenzae
+10625271000119109,Bronchopneumonia caused by Human metapneumovirus
+10625311000119109,Bronchopneumonia caused by Klebsiella pneumoniae
+10625351000119105,Bronchopneumonia caused by methicillin resistant Staphylococcus aureus
+10625391000119100,Bronchopneumonia caused by methicillin susceptible Staphylococcus aureus
+10625431000119105,Bronchopneumonia caused by Mycoplasma pneumoniae
+10625471000119108,Bronchopneumonia caused by Proteus mirabilis
+10625511000119104,Bronchopneumonia caused by Pseudomonas
+10625551000119103,Bronchopneumonia caused by respiratory syncytial virus
+10625591000119108,Bronchopneumonia caused by Staphylococcus
+10625631000119108,Bronchopneumonia caused by Staphylococcus aureus
+10625671000119106,Bronchopneumonia caused by Streptococcus
+10625711000119105,Bronchopneumonia caused by Streptococcus pneumoniae
+10625751000119106,Bronchopneumonia due to virus
+10625791000119101,Bronchitis caused by chemical
+10625831000119107,Chemical pneumonitis caused by anesthesia
+10629191000119100,Bronchiolitis caused by influenza virus
+10629231000119109,Recurrent acute streptococcal tonsillitis
+10629391000119103,Allergic rhinitis caused by feathers
+10629431000119108,Allergic rhinitis caused by insects
+10629471000119106,Allergic rhinitis caused by mold
+10629511000119102,Rhinitis of pregnancy
+10631000,Trilobed left lung
+10672271000119100,Acute-on-chronic hypoxemic respiratory failure
+10674551000119103,Cyst of ethmoid sinus
+10674591000119108,Cyst of frontal sinus
+10674631000119108,Cyst of sphenoid sinus
+10674711000119105,Acute severe exacerbation of asthma co-occurrent with allergic rhinitis
+10674871000119105,Pulmonary edema caused by chemical fumes
+10674991000119104,Intermittent allergic asthma
+10675391000119101,Severe controlled persistent asthma
+10675431000119106,Severe persistent allergic asthma
+10675471000119109,Acute severe exacerbation of severe persistent allergic asthma
+10675551000119104,Acute severe exacerbation of severe persistent asthma co-occurrent with allergic rhinitis
+10675631000119109,Severe persistent asthma controlled co-occurrent with allergic rhinitis
+10675711000119106,Severe persistent asthma uncontrolled co-occurrent with allergic rhinitis
+10675751000119107,Severe uncontrolled persistent asthma
+10675871000119106,Mild persistent allergic asthma
+10675911000119109,Acute severe exacerbation of mild persistent allergic asthma
+10675991000119100,Acute severe exacerbation of mild persistent allergic asthma co-occurrent with allergic rhinitis
+10676111000119102,Mild persistent asthma controlled co-occurrent with allergic rhinitis
+10676231000119102,Mild persistent asthma uncontrolled co-occurrent with allergic rhinitis
+10676391000119108,Moderate persistent allergic asthma
+10676431000119103,Acute severe exacerbation of moderate persistent allergic asthma
+10676511000119109,Acute severe exacerbation of moderate persistent asthma co-occurrent with allergic rhinitis
+10676591000119100,Moderate persistent controlled asthma co-occurrent with allergic rhinitis
+10676671000119102,Moderate persistent asthma uncontrolled co-occurrent with allergic rhinitis
+10676831000119101,Hypoxemic respiratory failure
+10685111000119102,Upper respiratory tract infection caused by Influenza
+10688091000119100,Postprocedural pulmonary air leak
+10692681000119108,Aspirin exacerbated respiratory disease
+10692721000119102,Chronic obstructive asthma co-occurrent with acute exacerbation of asthma
+10692761000119107,Asthma-chronic obstructive pulmonary disease overlap syndrome
+10713006,Diffuse interstitial rheumatoid disease of lung
+10729003,Smoker's respiratory syndrome
+10742121000119104,Asthma in mother complicating childbirth
+10785007,Vinyard sprayers' lung
+1078881000119102,Primary adenocarcinoma of lower lobe of left lung
+1078901000119100,Primary adenocarcinoma of upper lobe of left lung
+1078931000119107,Primary adenocarcinoma of lower lobe of right lung
+1078961000119104,Primary adenocarcinoma of upper lobe of right lung
+1079251000119102,Benign neoplasm of left lung
+1079311000119106,Benign neoplasm of right lung
+10809006,Parainfluenza virus laryngotracheitis
+1081201000112100,Stenosis of tracheobronchial tree
+1082441000119104,Acquired velopharyngeal dysfunction
+1082721000119101,Pneumonia caused by Ascaris
+1084751000119101,Borderline acquired velopharyngeal dysfunction
+1085671000119100,Congenital malformation of larynx and trachea
+10859002,Fracture of ethmoid sinus
+1086701000000102,Life threatening acute exacerbation of allergic asthma
+1086711000000100,Life threatening acute exacerbation of intrinsic asthma
+1087061000119106,Gonococcal pneumonia
+1090211000119102,Pharyngeal diphtheria
+1090231000000103,Malignant neoplasm of respiratory tract
+1090881000000100,Malignant neoplasm of bronchus or lung
+1091000119108,Obstructive sleep apnea of child
+1092361000119109,Rubella pneumonia
+1092951000119106,Pneumonia caused by Bordetella parapertussis
+109360003,Herniated polyp of maxillary sinus
+109361004,Surgical ciliated cyst
+109363001,Right pneumothorax
+109364007,Left pneumothorax
+109366009,Overlapping malignant neoplasm of accessory sinuses
+109367000,Overlapping malignant neoplasm of nasopharynx
+109368005,Overlapping malignant neoplasm of hypopharynx
+109369002,Overlapping malignant neoplasm of larynx
+109370001,Primary malignant neoplasm of laryngeal cartilage
+109371002,Overlapping malignant neoplasm of bronchus and lung
+109372009,Benign neoplasm of mesothelial tissue of pleura
+109374005,Overlapping malignant neoplasm of mediastinum and pleura
+109384006,"Overlapping malignant neoplasm of heart, mediastinum and pleura"
+109390005,Kaposi's sarcoma of lung
+109406005,Vomero-premaxillary faciosynostosis
+10959001,Crushing injury of larynx
+109675004,Oroantral fistula
+109832008,Overlapping malignant neoplasm of oropharynx
+110013004,Overlapping malignant neoplasm of tonsil
+1101000119103,Obstructive sleep apnea of adult
+110134008,Simple laceration of tonsil
+110135009,Contaminated simple laceration of tonsil
+110136005,Complex laceration of tonsil
+110137001,Contaminated complex laceration of tonsil
+110138006,Avulsion of tonsil
+110139003,Simple laceration of oropharynx
+110140001,Contaminated simple laceration of oropharynx
+110141002,Complex laceration of oropharynx
+110142009,Contaminated complex laceration of oropharynx
+110143004,Avulsion of oropharynx
+110161008,Abrasion of tonsil
+110162001,Abrasion of oropharynx
+110226008,Burn of oropharynx
+110227004,Burn erythema of oropharynx
+110228009,Second degree burn of oropharynx
+110229001,Third degree burn of oropharynx
+110230006,Burn of tonsillar area
+110231005,Burn erythema of tonsillar area
+110232003,Second degree burn of tonsillar area
+110233008,Third degree burn of tonsillar area
+110260001,Contusion of tonsil
+110261002,Contusion of oropharynx
+1103911000000103,Severe asthma with fungal sensitisation
+11051000087106,Injury of airway during surgery
+111026008,Mesothelial hyperplasia of the pleura
+111273006,Acute respiratory disease
+111274000,Acute abscess of nasal sinus
+111275004,Abscess of nasal septum
+111277007,Pharyngeal bursitis
+111278002,Edema of glottis
+111292008,Necrotizing sarcoid granulomatosis
+111318005,Congenital cystic adenomatoid malformation of lung
+111328001,Congenital diverticulum of pharynx
+11134001,Acute suppuration of sphenoidal sinus
+111466004,Perinatal partial atelectasis
+111591002,Hypertrophy of adenoids
+111636004,Open fracture of trachea
+111816002,Pneumococcal tonsillitis
+111849006,Adenoviral bronchitis
+111900000,Pneumonia in aspergillosis
+111901001,Bronchocentric granulomatosis
+11223009,Congenital anomaly of pharynx
+11296007,Stenosis of trachea
+11304481000119100,Open fracture of frontal sinus
+11316005,Granuloma of vocal cords
+11356007,Foreign body in main bronchus
+11366004,Singers' nodes
+11389007,Inhalational anthrax
+11454006,Failed attempted abortion with amniotic fluid embolism
+11461005,Staphylococcal tonsillitis
+11468004,Postoperative pulmonary edema
+115666004,Animal handlers' lung
+11641008,Millers' asthma
+11689004,Linear atelectasis
+11794441000119107,Laceration of diaphragm
+11796981000119102,Contusion of bilateral lungs
+11944003,Feather-pickers' disease
+119981000146107,Dyspnea caused by Severe acute respiratory syndrome coronavirus 2
+120639003,Hantavirus pulmonary syndrome
+12070002,Congenital stenosis of larynx
+12088005,Budgerigar-fanciers' disease
+12108061000119104,Chemical burn of larynx
+121741000119101,Neonatal pneumomediastinum
+12181000119103,Contact granuloma of larynx
+12181002,Tropical pulmonary alveolitis
+12240951000119107,Squamous cell carcinoma of left lung
+12240991000119102,Squamous cell carcinoma of right lung
+12295008,Bronchiectasis
+12310001,Childhood bronchiectasis
+12322003,Congenital eventration of left crus of diaphragm
+123587001,Acute bronchopneumonia
+123588006,Confluent bronchopneumonia with abscess formation
+123589003,Necrotizing bronchopneumonia
+123590007,Focal pneumonia
+123591006,Confluent pneumonia
+123593009,Complete atelectasis of left lung
+123594003,Complete atelectasis of right lung
+123595002,Uremic lung
+123654008,Congenital anomaly of lower respiratory system
+123655009,Accessory structure of lower respiratory tract
+123672002,Pulmonary barotrauma
+123712000,Acute atelectasis
+123713005,Chronic atelectasis
+12381000132107,Idiopathic pneumonia syndrome
+123863008,Disorder of epiglottis
+12394009,Miscarriage with cerebral anoxia
+123952009,Disorder of nasopharynx
+1240541000000107,Infection of upper respiratory tract caused by Severe acute respiratory syndrome coronavirus 2
+12428000,Intrinsic asthma without status asthmaticus
+124691000119101,Pneumonia caused by methicillin resistant Staphylococcus aureus
+124991000119109,Severe persistent asthma co-occurrent with allergic rhinitis
+125001000119103,Moderate persistent asthma co-occurrent with allergic rhinitis
+125011000119100,Mild persistent asthma co-occurrent with allergic rhinitis
+125021000119107,Intermittent asthma co-occurrent with allergic rhinitis
+125588009,Injury of larynx
+125589001,Injury of upper respiratory tract
+125590005,Injury of tracheobronchial tree
+125591009,Injury of pharynx
+12571000132104,Pneumonitis due to Herpes zoster
+1259003,Schistosis
+126549004,Neoplasm of vomer
+126660000,Deviated nasal septum
+126661001,Disorder of oropharynx
+126662008,Red throat
+126663003,Disorder of hypopharynx
+126664009,Exudative pharyngitis
+126665005,Oropharyngeal mucositis
+126666006,Ulcer of pharynx
+126667002,Neoplasm of respiratory tract
+126668007,Neoplasm of upper respiratory tract
+126670003,Neoplasm of nasal cavity
+126672006,Neoplasm of septum of nose
+126674007,Neoplasm of nasal concha
+126675008,Neoplasm of accessory sinus
+126676009,Neoplasm of maxillary sinus
+126677000,Neoplasm of ethmoidal sinus
+126678005,Neoplasm of frontal sinus
+126679002,Neoplasm of sphenoidal sinus
+126680004,Neoplasm of nasopharynx
+126681000,Neoplasm of superior wall of nasopharynx
+126682007,Neoplasm of posterior wall of nasopharynx
+126683002,Neoplasm of lateral wall of nasopharynx
+126684008,Neoplasm of anterior wall of nasopharynx
+126685009,Neoplasm of pharynx
+126686005,Neoplasm of hypopharynx
+126687001,Neoplasm of postcricoid region
+126688006,Neoplasm of pyriform sinus
+126690007,Neoplasm of hypopharyngeal aspect of interarytenoid fold
+126691006,Neoplasm of posterior hypopharyngeal wall
+126692004,Neoplasm of larynx
+126693009,Neoplasm of glottis
+126694003,Neoplasm of laryngeal commissure
+126695002,Neoplasm of vocal cord
+126696001,Neoplasm of subglottis
+126697005,Neoplasm of supraglottis
+126698000,Neoplasm of false vocal cord
+126699008,Neoplasm of epiglottis
+126700009,Neoplasm of laryngeal surface of epiglottis
+126701008,Neoplasm of laryngeal aspect of aryepiglottic fold
+126702001,Neoplasm of laryngeal aspect of interarytenoid fold
+126703006,Neoplasm of trachea
+126704000,Neoplasm of carina
+126705004,Neoplasm of bronchus
+126706003,Neoplasm of main bronchus
+126707007,Neoplasm of hilus of lung
+126708002,Neoplasm of bronchus of right upper lobe
+126709005,Neoplasm of bronchus of left upper lobe
+126710000,Neoplasm of bronchus of right middle lobe
+126711001,Neoplasm of bronchus of right lower lobe
+126712008,Neoplasm of bronchus of left lower lobe
+126713003,Neoplasm of lung
+126714009,Neoplasm of right upper lobe of lung
+126715005,Neoplasm of right middle lobe of lung
+126716006,Neoplasm of right lower lobe of lung
+126717002,Neoplasm of left upper lobe of lung
+126718007,Neoplasm of left lower lobe of lung
+126719004,Neoplasm of pleura
+126720005,Neoplasm of parietal pleura
+126721009,Neoplasm of visceral pleura
+126722002,Neoplasm of mesothelial tissue of pleura
+126728003,Neoplasm of diaphragm
+126779009,Neoplasm of base of tongue
+126786001,Neoplasm of junctional zone of tongue
+126809003,Neoplasm of oropharynx
+126810008,Neoplasm of tonsillar fossa
+126811007,Neoplasm of tonsillar pillar
+126812000,Neoplasm of vallecula
+126813005,Neoplasm of anterior aspect of epiglottis
+126814004,Neoplasm of junctional region of epiglottis
+126815003,Neoplasm of lateral wall of oropharynx
+126816002,Neoplasm of posterior wall of oropharynx
+127101005,Pulmonary lymphadenopathy
+127104002,Superior tracheobronchial lymphadenopathy
+127105001,Inferior tracheobronchial lymphadenopathy
+127226007,Neoplasm of Waldeyer's ring
+127227003,Neoplasm of palatine tonsil
+127228008,Neoplasm of adenoid
+127229000,Neoplasm of lingual tonsil
+127246002,Neoplasm of bronchopulmonary lymph nodes
+127275008,Injury of respiratory system
+127276009,Injury of head with rhinorrhagia
+128125000,Injury of bronchus
+1282001,Perichondritis of larynx
+128232000,Disorder of vomer
+128272009,Disorder of lower respiratory system
+128275006,Congenital anomaly of nasal sinuses
+128345004,Injury of trachea
+128518001,Foreign body in upper respiratory tract
+128584005,Congenital pulmonary artery conduit
+128601007,Infectious disease of lung
+128711000119106,Pneumonia caused by methicillin susceptible Staphylococcus aureus
+128940004,Parasitic infection of lung
+128997002,Inflammatory disorder of lower respiratory tract
+129134004,Inflammatory disorder of upper respiratory tract
+129144002,Crushing injury of pharynx
+129451001,Respiratory bronchiolitis associated interstitial lung disease
+129452008,Nonspecific interstitial pneumonia
+129570009,Non-smoker's second hand smoke syndrome
+130021000119100,Cellulitis of nasal mucous membrane
+13082000,Diaphragmatic pleurisy
+13085003,Burn of larynx
+13087006,Necrosis of larynx
+13089009,Adenoviral bronchiolitis
+13151001,Flax-dressers' disease
+13177009,Cellulitis of nasopharynx
+13206009,Trachea displaced
+13217005,Fusiform bronchiectasis
+13266007,Sphenoidal sinusitis
+13274008,Atrophic fibrosis of lung
+133171000119105,Chronic pharyngolaryngitis
+13394002,Suberosis
+135171000119106,Acute exacerbation of moderate persistent asthma
+135181000119109,Acute exacerbation of mild persistent asthma
+135836000,End stage chronic obstructive airways disease
+13617004,Tracheobronchitis
+13645005,Chronic obstructive lung disease
+138389411000119105,Acute bronchitis caused by Severe acute respiratory syndrome coronavirus 2
+13841000119107,Exudative pleural effusion
+140004,Chronic pharyngitis
+14011008,Tracheal diverticulosis
+14110001000004108,Mucocele of maxillary sinus
+14114003,Pseudochylothorax
+142931000119100,Pneumonia caused by H1N1 influenza
+142941000119109,Upper respiratory tract infection caused by H1N1 influenza
+14457000,Open fracture of larynx
+14465002,Ulcerative tonsillitis
+14527007,Tuberculous empyema
+14532008,Congenital anomaly of trachea
+146081000119104,Lung disease due to connective tissue disorder
+14700006,Bauxite fibrosis of lung
+14969004,Catarrhal laryngitis
+15033003,Peritonsillar abscess
+15199004,Acute bronchiolitis with bronchospasm
+15206007,Open pneumothorax
+1532007,Viral pharyngitis
+154283005,Pulmonary tuberculosis
+155597006,Aspiration pneumonitis
+15582005,Congenital absence of lobe of lung
+15600009,Pneumochylothorax
+156051000119109,Allergic rhinitis caused by animal hair and dander
+15682004,Anterior nasal diphtheria
+156936000,Agenesis of lung
+15708009,Benign pneumoconiosis
+15788006,Congenital cleft thyroid cartilage
+15805002,Acute sinusitis
+15908004,Spelters' fever
+15956181000119102,Secondary adenocarcinoma of bilateral lungs
+15956341000119105,Adenocarcinoma of left lung
+15956381000119100,Adenocarcinoma of right lung
+16003001,Giant bullous emphysema
+16036000,Acute empyema of frontal sinus
+16146001,Viral bronchitis
+16275741000119100,Severe pediatric obstructive sleep apnea
+16311000119108,Pneumonia caused by influenza
+16358007,Chronic disease of tonsils AND/OR adenoids
+1648002,Lymphocytic pseudotumor of lung
+16485001,Ulcer of tonsil
+16537000,Compression atelectasis
+16584951000119101,Oral steroid-dependent asthma
+1661000119106,Metastasis to lung from adenocarcinoma
+16623004,Coffee-workers' lung
+16632002,Hemopneumothorax
+16846004,Obstructive emphysema
+1694004,Accessory lobe of lung
+17082004,Fetal OR intrauterine anoxia AND/OR hypoxia noted before labor in liveborn infant
+17097001,Chronic disease of respiratory system
+17128000,Congenital eventration of diaphragm
+17190001,Congenital diaphragmatic hernia
+1731000119106,Atypical mycobacterial infection of lung
+17357005,Acute suppuration of frontal sinus
+17385007,Graphite fibrosis of lung
+1741000119102,Intermittent asthma uncontrolled
+17467004,Hypertrophy of nasal turbinates
+1751000119100,Acute exacerbation of chronic obstructive airways disease with asthma
+17547005,Thickening of vocal cords
+17668000,Acute pleuropericarditis
+17741008,Acute tonsillitis
+17808001,Azygos lobe of lung
+17849001,Respiratory condition of fetus OR newborn
+17904003,Hypertrophic laryngitis
+17993000,Pulmonary arteritis
+17996008,Pneumoconiosis caused by inorganic dust
+18041002,Printers' asthma
+181007,Hemorrhagic bronchopneumonia
+18121000119104,Primary squamous cell carcinoma of palatine tonsil
+18121009,Chronic berylliosis
+181225007,Bilateral hilar adenopathy syndrome
+181869007,Neonatal cardiorespiratory arrest
+18354001,Chronic induration of lung
+184431000119108,Acute pneumonia due to coccidioidomycosis
+185086009,Chronic obstructive bronchitis
+186172004,Tuberculous pleurisy in primary progressive tuberculosis
+186175002,Infiltrative lung tuberculosis
+186177005,Tuberculosis of lung with cavitation
+186178000,Tuberculosis of bronchus
+186182003,Tuberculosis of pleura
+186192006,"Respiratory tuberculosis, bacteriologically and histologically confirmed"
+186193001,"Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
+186194007,"Tuberculosis of lung, confirmed by culture only"
+186195008,"Tuberculosis of lung, confirmed histologically"
+186200004,"Tuberculous pleurisy, confirmed bacteriologically and histologically"
+18620009,Congenital sequestration of lung
+186201000,"Primary respiratory tuberculosis, confirmed bacteriologically and histologically"
+186202007,"Respiratory tuberculosis, not confirmed bacteriologically or histologically"
+186203002,"Tuberculosis of lung, bacteriologically and histologically negative"
+186204008,"Tuberculosis of lung, bacteriological and histological examination not done"
+186342000,Pulmonary Mycobacterium avium complex infection
+186357007,Streptococcal sore throat with scarlatina
+18643000,Ethmoidal sinusitis
+186659004,Herpangina
+186675001,Viral pharyngoconjunctivitis
+18690003,Farmers' lung
+186963008,Vincent's angina - pharyngitis
+187027001,Acute pulmonary coccidioidomycosis
+187052004,Pulmonary African histoplasmosis
+187054003,Pulmonary histoplasmosis
+187066009,Primary pulmonary blastomycosis
+187069002,Acute pulmonary blastomycosis
+187084006,Tonsillar aspergillosis
+187100003,Rhinocerebral mucormycosis
+187196002,Toxoplasma pneumonitis
+187222000,Infestation of nasopharynx caused by fly larvae
+187233002,Sarcoidosis of lung with sarcoidosis of lymph nodes
+187631006,Malignant neoplasm of base of tongue dorsal surface
+187644001,Malignant tumor of junctional zone of tongue
+187675005,Malignant tumor of tonsillar pillar
+187681002,Malignant neoplasm of anterior epiglottis
+187682009,"Malignant neoplasm of epiglottis, free border"
+187683004,Malignant neoplasm of glossoepiglottic fold
+187685006,Malignant neoplasm of junctional region of epiglottis
+187688008,Malignant tumor of posterior wall of oropharynx
+187692001,Malignant tumor of nasopharynx
+187693006,Malignant tumor of posterior wall of nasopharynx
+187694000,Malignant tumor of adenoid
+187697007,Malignant tumor of pharyngeal recess
+187700006,Malignant tumor of anterior wall of nasopharynx
+187701005,Malignant neoplasm of floor of nasopharynx
+187708004,Malignant tumor aryepiglottic fold - hypopharyngeal aspect
+187709007,Malignant neoplasm of posterior pharynx
+187716008,Malignant tumor of Waldeyer's ring
+187828007,"Malignant neoplasm of nasal cavities, middle ear and accessory sinuses"
+187830009,Malignant neoplasm of nasal conchae
+187831008,Malignant tumor of nasal vestibule
+187841006,Malignant tumor of glottis
+187842004,Malignant tumor of supraglottis
+187843009,Malignant neoplasm of arytenoid cartilage
+187844003,Malignant neoplasm of cricoid cartilage
+187845002,Malignant neoplasm of cuneiform cartilage
+187846001,Malignant neoplasm of thyroid cartilage
+187853005,Malignant neoplasm of cartilage of trachea
+187854004,Malignant neoplasm of mucosa of trachea
+187857006,Malignant neoplasm of carina of bronchus
+187861000,Malignant neoplasm of upper lobe bronchus
+187862007,Malignant neoplasm of upper lobe of lung
+187865009,Malignant neoplasm of middle lobe bronchus
+187866005,Malignant neoplasm of middle lobe of lung
+187869003,Malignant neoplasm of lower lobe bronchus
+187870002,Malignant neoplasm of lower lobe of lung
+18792003,H-type congenital tracheoesophageal fistula
+188795008,Benign neoplasm of anterior tonsillar pillar
+188796009,Benign neoplasm of posterior tonsillar pillar
+188798005,Benign neoplasm of oropharyngeal wall
+188800003,Benign tumor of nasopharynx
+188802006,Benign neoplasm of pharyngeal recess
+188803001,Benign neoplasm of nasopharyngeal floor
+188805008,Benign neoplasm of arytenoid fold
+188877001,Benign neoplasm of thyroid cartilage
+188878006,Benign neoplasm of cricoid cartilage
+188880000,Benign neoplasm of arytenoid cartilage
+188881001,Benign neoplasm of corniculate cartilage
+188882008,Benign neoplasm of cuneiform cartilage
+188883003,Benign neoplasm of aryepiglottic fold
+188887002,Benign neoplasm of carina of bronchus
+188889004,Benign neoplasm of upper lobe bronchus and lung
+188890008,Benign neoplasm of middle lobe bronchus and lung
+188891007,Benign neoplasm of lower lobe bronchus and lung
+18894005,Legal abortion with cerebral anoxia
+189251006,Carcinoma in situ of respiratory system
+189252004,Carcinoma in situ of thyroid cartilage
+189253009,Carcinoma in situ of cricoid cartilage
+189255002,Carcinoma in situ of arytenoid cartilage
+189256001,Carcinoma in situ of corniculate cartilage
+189257005,Carcinoma in situ of cuneiform cartilage
+189258000,Carcinoma in situ of aryepiglottic fold
+189259008,Carcinoma in situ of vestibular fold
+189262006,Carcinoma in situ of bronchus and lung
+189263001,Carcinoma in situ of carina of bronchus
+189265008,Carcinoma in situ of upper lobe bronchus and lung
+189266009,Carcinoma in situ of middle lobe bronchus and lung
+189267000,Carcinoma in situ of lower lobe bronchus and lung
+189361002,Neoplasm of uncertain behavior of digestive and respiratory systems
+189410006,Neoplasm of uncertain behavior of thyroid cartilage
+189412003,Neoplasm of uncertain behavior of cricoid cartilage
+189414002,Neoplasm of uncertain behavior of arytenoid cartilage
+189415001,Neoplasm of uncertain behavior of corniculate cartilage
+189416000,Neoplasm of uncertain behavior of cuneiform cartilage
+189417009,Neoplasm of uncertain behavior of aryepiglottic fold
+189815007,Pulmonary blastoma
+18988001,Septic pleurisy
+19076009,Sick building syndrome
+190905008,Cystic fibrosis
+190966007,Extreme obesity with alveolar hypoventilation
+191727003,Post measles pneumonia
+19242006,Pulmonary edema
+192658007,Giant cell interstitial pneumonitis
+19274004,Grain-handlers' disease
+19325002,Traction bronchiectasis
+19496008,Foreign body in larynx
+195647007,Acute respiratory infection
+195655000,Acute gangrenous pharyngitis
+195656004,Acute phlegmonous pharyngitis
+195657008,Acute ulcerative pharyngitis
+195658003,Acute bacterial pharyngitis
+195659006,Acute pneumococcal pharyngitis
+195660001,Acute staphylococcal pharyngitis
+195662009,Acute viral pharyngitis
+195663004,Allergic pharyngitis
+195666007,Acute erythematous tonsillitis
+195667003,Acute follicular tonsillitis
+195668008,Acute ulcerative tonsillitis
+195669000,Acute catarrhal tonsillitis
+195670004,Acute gangrenous tonsillitis
+195671000,Acute bacterial tonsillitis
+195672007,Acute pneumococcal tonsillitis
+195673002,Acute staphylococcal tonsillitis
+195676005,Acute viral tonsillitis
+195677001,Recurrent acute tonsillitis
+195680000,Acute edematous laryngitis
+195681001,Acute ulcerative laryngitis
+195682008,Acute catarrhal laryngitis
+195683003,Acute phlegmonous laryngitis
+195684009,Acute haemophilus influenzae laryngitis
+195685005,Acute pneumococcal laryngitis
+195686006,Acute suppurative laryngitis
+195708003,Recurrent upper respiratory tract infection
+195709006,Pharyngolaryngitis
+195714005,Acute fibrinous bronchitis
+195717003,Acute purulent bronchitis
+195719000,Acute pneumococcal bronchitis
+195720006,Acute streptococcal bronchitis
+195721005,Acute haemophilus influenzae bronchitis
+195722003,Acute Moraxella catarrhalis bronchitis
+195725001,Acute coxsackievirus bronchitis
+195726000,Acute parainfluenza virus bronchitis
+195727009,Acute respiratory syncytial virus bronchitis
+195728004,Acute bronchitis caused by rhinovirus
+195729007,Acute echovirus bronchitis
+195737004,Acute exudative bronchiolitis
+195739001,Acute bronchiolitis caused by respiratory syncytial virus
+195742007,Acute lower respiratory tract infection
+195756009,Woakes' ethmoiditis
+195759002,Frontal sinus polyp
+195765002,Chronic simple rhinitis
+195768000,Chronic hypertrophic rhinitis
+195769008,Chronic atrophic rhinitis
+195770009,Chronic infective rhinitis
+195771008,Chronic ulcerative rhinitis
+195772001,Chronic membranous rhinitis
+195773006,Chronic fibrinous rhinitis
+195779005,Pharyngitis keratosa
+195780008,Pharyngitis sicca
+195782000,Chronic follicular pharyngitis
+195787006,Fistula of nasal sinus
+195788001,Recurrent sinusitis
+195790000,Pansinusitis
+195797002,Adenoid vegetations
+195798007,Chronic adenotonsillitis
+195803003,Caseous tonsillitis
+195804009,Lingular tonsillitis
+195810009,Chronic laryngitis and laryngotracheitis
+195811008,Chronic simple laryngitis
+195812001,Chronic catarrhal laryngitis
+195813006,Chronic hyperplastic laryngitis
+195825009,Mucous cyst of nasal sinus
+195834004,Pharynx or nasopharynx edema
+195844002,Bilateral partial vocal cord paralysis
+195847009,Polyp of vocal cord or larynx
+195854003,Fibrinous chorditis
+195855002,Chorditis vocalis inferior
+195866009,Laryngeal pachydermia
+195867000,Cyst of larynx
+195878008,Pneumonia and influenza
+195881003,Pneumonia caused by respiratory syncytial virus
+195886008,Group B streptococcal pneumonia
+195888009,Proteus pneumonia
+195889001,Legionella pneumonia
+195896004,Pneumonia caused by pleuropneumonia-like organism
+195900001,Pneumonia co-occurrent and due to measles
+195902009,Anthrax pneumonia
+195904005,Pneumonia with coccidioidomycosis
+195908008,Actinomycotic pneumonia
+195909000,Nocardial pneumonia
+195911009,Chickenpox pneumonia
+195923003,Influenza with laryngitis
+195924009,Influenza with pharyngitis
+195949008,Chronic asthmatic bronchitis
+195951007,Acute exacerbation of chronic obstructive airways disease
+195953005,Mixed simple and mucopurulent chronic bronchitis
+195957006,Chronic bullous emphysema
+195958001,Segmental bullous emphysema
+195959009,Zonal bullous emphysema
+195967001,Asthma
+195977004,Mixed asthma
+195984007,Recurrent bronchiectasis
+195985008,Post-infective bronchiectasis
+195989002,Pituitary snuff-takers' disease
+196001008,Chronic obstructive pulmonary disease with acute lower respiratory infection
+196017002,Pneumoconiosis associated with tuberculosis
+196019004,Bronchitis and pneumonitis caused by chemical fumes
+196020005,Acute bronchitis caused by chemical fumes
+196021009,Acute pneumonitis caused by chemical fumes
+196023007,Upper respiratory inflammation caused by chemical fumes
+196026004,Chronic emphysema caused by chemical fumes
+196027008,Toxic bronchiolitis obliterans
+196028003,Chronic pulmonary fibrosis caused by chemical fumes
+196033004,Pneumonitis caused by inhalation of regurgitated food
+196034005,Pneumonitis caused by inhalation of milk
+196035006,Pneumonitis caused by inhalation of vomitus
+196040003,Aspiration pneumonitis due to anesthesia during labor and delivery
+196046009,Acute pulmonary radiation disease
+196047000,Acute radiation pneumonitis
+196049002,Chronic pulmonary radiation disease
+196051003,Drug-induced interstitial lung disorder
+196052005,Acute drug-induced interstitial lung disorder
+196053000,Chronic drug-induced interstitial lung disorders
+196067009,Loculated empyema
+196075003,Pleurisy
+196076002,Pleurisy without effusion or active tuberculosis
+196077006,Acute dry pleurisy
+196079009,Basal pleurisy
+196080007,Chronic dry pleurisy
+196081006,Sterile pleurisy
+196102003,Spontaneous tension pneumothorax
+196107009,Abscess of lung and mediastinum
+196108004,Single lung abscess
+196109007,Multiple lung abscesses
+196112005,Abscess of lung with pneumonia
+196115007,Pulmonary congestion and hypostasis
+196116008,Pulmonary hypostasis
+196124003,Alveolar capillary block
+196125002,Diffuse interstitial pulmonary fibrosis
+196131004,Lung involvement associated with another disorder
+196133001,Lung disease with systemic sclerosis
+196135008,Pulmonary amyloidosis
+196136009,Lung disease co-occurrent with polymyositis
+196137000,Lung disease with Sjögren's disease
+196138005,Lung disease with systemic lupus erythematosus
+196143003,Postoperative atelectasis
+196151000,Pulmonary insufficiency following shock
+196152007,Pulmonary insufficiency following surgery
+196153002,Pulmonary insufficiency following trauma
+196187007,Postprocedural respiratory disorders
+196188002,Acute pulmonary insufficiency following thoracic surgery
+196189005,Acute pulmonary insufficiency following nonthoracic surgery
+196190001,Chronic pulmonary insufficiency following surgery
+196191002,Postprocedural subglottic stenosis
+196903009,Obstructed diaphragmatic hernia
+196904003,Irreducible diaphragmatic hernia
+197367007,Hepatic granulomas in berylliosis
+19829001,Disorder of lung
+19849005,Meat-wrappers' asthma
+19883003,Atrophy of nasal turbinates
+199293005,"Disease of the respiratory system complicating pregnancy, childbirth and/or the puerperium"
+200049006,Obstetric anesthesia with pulmonary complications - delivered
+200050006,Obstetric anesthesia with pulmonary complications - delivered with postnatal problem
+200051005,Obstetric anesthesia with pulmonary complications with antenatal problem
+200052003,Obstetric anesthesia with pulmonary complications with postnatal problem
+200299000,Obstetric blood-clot pulmonary embolism
+200301007,Obstetric blood-clot pulmonary embolism - delivered
+200303005,Obstetric blood-clot pulmonary embolism with antenatal complication
+200304004,Obstetric blood-clot pulmonary embolism with postnatal complication
+20091000175107,Acute on chronic hypoxemic and hypercapnic respiratory failure
+201060008,Disorder of upper respiratory system
+20322005,Chronic respiratory disease in perinatal period
+203871000000102,Congested larynx
+204508009,Choanal atresia
+204511005,Atresia of the anterior nares
+204512003,Atresia of the posterior nares
+204513008,Congenital stenosis of the anterior nares
+204522009,Deformity of nasal sinus wall
+204524005,Congenital perforation of the nasal sinus wall
+204529000,Congenital glottic web of larynx
+204530005,Congenital subglottic web of larynx
+204533007,"Agenesis of larynx, trachea and bronchus"
+204534001,Agenesis of bronchus
+204535000,Agenesis of larynx
+204537008,Anomaly of laryngeal and/or tracheal cartilage
+204539006,Anomaly of epiglottis
+204544004,Atresia of larynx and trachea
+204550009,"Congenital stenosis of larynx, trachea and bronchus"
+204551008,Congenital bronchial stenosis
+204552001,Congenital subglottic stenosis
+204553006,Congenital supraglottic stenosis
+204557007,Congenital fissure of epiglottis
+204558002,Congenital cleft of posterior cricoid cartilage
+204575008,Congenital absence of lung fissures
+204578005,Fusion of lobes of lung
+204589003,Abnormal pericardiopleural communication
+204642008,Congenital pharyngeal polyp
+204658006,Congenital absence of esophagus with tracheoesophageal fistula
+204659003,Esophageal atresia with tracheoesophageal fistula
+205237003,Pneumonitis
+20580001,Injury of bronchus with open wound into thoracic cavity
+206283000,Congenital staphylococcal pneumonia
+206284006,Congenital group A hemolytic streptococcal pneumonia
+206285007,Congenital group B hemolytic streptococcal pneumonia
+206286008,Congenital Escherichia coli pneumonia
+206287004,Congenital pseudomonal pneumonia
+206289001,Congenital chlamydial pneumonia
+206292002,Meconium aspiration syndrome
+206295000,Aspiration of vomit in newborn
+206296004,Neonatal aspiration of milk and regurgitated food
+206303001,Perinatal lung intra-alveolar hemorrhage
+206305008,Tracheobronchial hemorrhage originating in the perinatal period
+206359006,Neonatal candidiasis of lung
+206421002,Perinatal epistaxis
+208122008,Closed fracture larynx and/or trachea
+208128007,Open fracture larynx and trachea
+208131008,Open fracture of thyroid cartilage
+2087000,Pulmonary nocardiosis
+2091005,Pharyngeal diverticulitis
+209120006,Closed traumatic dislocation laryngeal cartilage
+209130002,Open traumatic dislocation laryngeal cartilage
+209216004,Closed traumatic subluxation laryngeal cartilage
+209226006,Open traumatic subluxation laryngeal cartilage
+20953001,Pulmonary cryptococcosis
+209738003,"Open division, thyroid region ligament"
+209739006,"Open division, cricoarytenoid ligament"
+209740008,"Open division, cricothyroid ligament"
+209741007,"Open division, thyroid cartilage ligament"
+210051003,Injury to heart and lung
+210067009,Closed injury of lung
+210073005,Open injury of lung
+210076002,Lung laceration with open wound into thorax
+210083009,Closed injury of diaphragm
+210084003,Open injury of diaphragm
+210086001,Closed injury of bronchus
+210088000,Closed injury of pleura
+210093002,Open injury of bronchus
+210094008,Open injury of pleura
+210100006,Injury of thoracic trachea
+210327001,Open wound of nasal septum
+210328006,Open wound of nasal cavity
+210329003,Open wound of nasal sinus
+210385007,Open wound of larynx
+210386008,Open wound of trachea
+210395000,Open wound of pharynx
+21060003,Acute bacterial epiglottitis
+21101000119105,Pharyngeal dysphagia
+211626006,Foreign body in pharynx and larynx
+212032004,Burn of mouth and pharynx
+212035002,Corrosion of mouth and pharynx
+212037005,"Burn of larynx, trachea and lung"
+212038000,Corrosion of larynx and/or trachea
+212039008,"Corrosion of larynx, trachea and lung"
+212398005,Closed injury of trachea
+2128005,Disorder of adenoid
+2129002,Edema of pharynx
+213152006,Heart-lung transplant failure and rejection
+213215000,Cardiorespiratory failure as a complication of care
+213222008,Respiratory complications of care
+213223003,Mendelson's syndrome as a complication of care
+21504004,Pressure collapse of lung after anesthesia AND/OR sedation in labor AND/OR delivery
+21524000,Relaxation of diaphragm
+21719001,Allergic rhinitis caused by pollen
+217808004,Respiratory obstruction due to foreign body in esophagus
+217809007,Respiratory compression caused by foreign body in esophagus
+217810002,Interruption of respiration caused by foreign body in esophagus
+21811000119104,Narrow pharyngeal airway
+21846001,Pulmonary actinomycosis
+21942000,Constriction of bronchioles
+22137006,"Hypoxia, in liveborn infant"
+222008,Acute epiglottitis with obstruction
+2245007,Foreign body in nasopharynx
+22482002,Subacute obliterative bronchiolitis
+225057002,Brittle asthma
+22607003,Asbestosis
+226080004,Paralysis of glottis
+22608008,Foreign body in bronchioles
+226521000119108,Primary malignant neoplasm of nasopharynx
+22668006,Subglottic stenosis
+22754005,Staphylococcal pneumonia
+22897006,Traumatic pneumothorax with open wound into thorax
+22951000119104,Spasmodic croup
+229726002,Structural velopharyngeal impairment
+229727006,Velopharyngeal inadequacy
+229728001,Velopharyngeal mislearning
+23022004,Tuberculous bronchiectasis
+23023009,Disorder of palatine tonsil
+230493001,Mixed sleep apnea
+230494007,Alveolar sleep apnea
+230499002,Sleep-related respiratory failure
+230503008,Mucosal anosmia
+23061007,Congenital anomaly of cricoid cartilage
+23166004,Cellulitis of pharynx
+23187009,Aphonia paralytica
+232209000,Nasal obstruction
+232340005,Disorder of nasal cavity
+232343007,Acute irritant rhinitis
+232344001,Rhinitis caseosa
+232345000,Non-infective non-allergic rhinitis
+232353008,Perennial allergic rhinitis with seasonal variation
+232354002,Anterior epistaxis
+232355001,Posterior epistaxis
+232356000,Traumatic epistaxis
+232357009,Post-surgical epistaxis
+232360002,Concha bullosa
+232361003,Adhesions of nasal cavity
+232362005,Cyst of nasal cavity
+232363000,Abscess of nasal cavity
+232364006,Papilloma of nasal vestibule
+232365007,Vestibular stenosis
+232367004,Nasal syphilis
+232371001,Hemorrhage from adenoid bed
+232372008,Nasopharyngeal stenosis
+232373003,Choanal atresia with radial ray hypoplasia
+232374009,"Choanal atresia with coloboma, heart malformation, choanal atresia, retardation of growth and development, genital abnormalities, and ear malformations association"
+232375005,Fractured nasal septum
+232376006,Dislocated nasal septum
+232377002,Nasal septal hematoma
+232378007,Traumatic nasal septal perforation
+232388008,Tumor of nasal cavity and nasopharynx
+232389000,Pott's puffy tumor
+232390009,Suppurative sinusitis with complications
+232391008,Recurrent acute sinusitis
+232393006,Chronic anterior ethmoidal sinusitis
+232394000,Chronic posterior ethmoidal sinusitis
+232395004,Chronic panethmoidal sinusitis
+232396003,Chronic osteomeatal disease
+232397007,Chronic frontoethmoidal sinusitis
+232398002,Nasal sinus osteoma
+232399005,Acute herpes simplex pharyngitis
+232400003,Acute herpes zoster pharyngitis
+232401004,Glandular fever pharyngitis
+232402006,Meningococcal pharyngitis
+232403001,Chlamydial pharyngitis
+232404007,Acute pharyngeal candidiasis
+232405008,Chronic ulcerative pharyngitis
+232406009,Chronic pharyngeal candidiasis
+232407000,Pharyngeal spasm
+232408005,Pharyngeal stenosis
+232409002,Traumatic stenosis of pharynx
+232410007,Vallecular cyst
+232412004,Bifid epiglottis
+232413009,Pharyngocutaneous fistula
+232415002,Palatopharyngeal incoordination
+232416001,Velopharyngeal incompetence
+232417005,Vincent's tonsillitis
+232418000,Acute infection of tonsillar remnant
+232419008,Enlargement of tonsil or adenoid
+232420002,Chronic adenoiditis
+232422005,Cryptic tonsil
+232423000,Tonsillar retention cyst
+232424006,Foreign body in tonsil
+232425007,Tonsillar hemorrhage
+232426008,Acute simple laryngitis
+232428009,Acute membranous laryngitis
+232429001,Acute subglottic laryngitis
+232430006,Recurrent allergic croup
+232432003,Pediatric acute epiglottitis and supraglottitis
+232433008,Adult acute epiglottitis and supraglottitis
+232434002,Chronic fungal laryngitis
+232435001,Polypoid degeneration of vocal cord
+232436000,Reinke's edema
+232437009,Angioneurotic edema of larynx
+232438004,Post-radiotherapy laryngeal edema
+232439007,Relapsing polychondritis of larynx
+232440009,Acquired laryngeal stenosis
+232441008,Congenital vocal cord palsy
+232442001,Congenital laryngeal abductor palsy
+232443006,Congenital laryngeal adductor palsy
+232444000,Acquired vocal cord palsy
+232445004,Pseudocystic change of vocal cord
+232446003,Vocal cord hematoma
+232447007,Acquired laryngeal web
+232448002,Bowing of vocal cord
+232449005,Postmenopausal atrophy of vocal cord
+232450005,Sulcus vocalis of vocal cord
+232451009,Mucosal bridge of vocal cord
+232452002,Epidermoid cyst of vocal cord
+232453007,Mucous cyst of vocal cord
+232454001,Scarred plaque of vocal fold cover
+232455000,Telangiectasis of vocal cord
+232457008,Laryngeal papillomatosis
+232458003,Laryngeal sarcoidosis
+232459006,Laryngeal amyloidosis
+232460001,Granulomatosis with polyangiitis of larynx
+232461002,Congenital cleft larynx
+232805002,Benign neoplasm of nasopharyngeal wall
+23315001,Sequoiosis
+233598009,Acute bacterial bronchitis
+233599001,Acute mycoplasmal bronchitis
+233600003,Acute chlamydial bronchitis
+233601004,Acute viral bronchitis
+233602006,Acute viral bronchiolitis
+233603001,Acute bronchiolitis caused by adenovirus
+233604007,Pneumonia
+233606009,Atypical pneumonia
+233607000,Pneumococcal pneumonia
+233608005,Meningococcal pneumonia
+233609002,Pneumonia caused by Chlamydiaceae
+233610007,Neonatal chlamydial pneumonia
+233613009,Fungal pneumonia
+233614003,Pulmonary mucormycosis
+233615002,Chronic pulmonary coccidioidomycosis
+233616001,Pulmonary blastomycosis
+233617005,Hemorrhagic pneumonia
+233618000,Mycobacterial pneumonia
+233619008,Neonatal pneumonia
+233620002,Pneumonia due to parasitic infestation
+233621003,Rickettsial pneumonia
+233622005,Infectious mononucleosis pneumonia
+233623000,Mononuclear interstitial pneumonia
+233624006,Herpes simplex pneumonia
+233625007,Giant cell pneumonia
+233627004,Congenital cystic bronchiectasis
+233628009,Acquired bronchiectasis
+233629001,Idiopathic bronchiectasis
+233630006,Obstructive bronchiectasis
+233631005,Toxin-induced bronchiectasis
+233632003,Bronchiectasis caused by toxic aspiration
+233633008,Bronchiectasis caused by toxic inhalation
+233634002,Post-lung transplantation bronchiectasis
+233635001,Disorder of pleura AND/OR pleural cavity
+233636000,Asbestos pleurisy
+233637009,Drug-induced pleurisy
+233638004,Dry pleurisy
+233639007,Benign asbestos pleural effusion
+233640009,Drug-induced pleural effusion
+233642001,Catamenial pneumothorax
+233645004,Tension pneumothorax
+233646003,Congenital chylothorax
+233647007,Malignant chylothorax
+233648002,Traumatic chylothorax
+233649005,Tuberculous chylothorax
+233650005,Intralipid pseudochylous effusion
+233651009,Endometriosis of pleura
+233653007,Asbestos-induced pleural fibrosis
+233655000,Asbestos-induced bilateral diffuse pleural thickening
+233656004,Post-infective pleural fibrosis
+233657008,Post-tuberculous pleural fibrosis
+233658003,Pleural plaque
+233659006,Asbestos-induced pleural plaque
+233660001,Mucociliary clearance defect
+233661002,Inherited mucociliary clearance defect
+233663004,Primary ciliary dyskinesia due to transposition of ciliary microtubules
+233664005,Immotile cilia syndrome due to defective radial spokes
+233665006,Immotile cilia syndrome due to excessively long cilia
+233666007,Young's syndrome
+233667003,Rutland ciliary disorientation syndrome
+233668008,Acquired mucociliary clearance defect
+233669000,Secondary ciliary dyskinesia
+233670004,Transient mucociliary clearance defect
+233672007,Byssinosis grade 3
+233673002,Drug-induced bronchiolitis obliterans
+233674008,Pulmonary emphysema in alpha-1 primary immunodeficiency deficiency
+233675009,Toxic emphysema
+233677001,Scar emphysema
+233678006,Childhood asthma
+233679003,Late onset asthma
+233683003,Hay fever with asthma
+233687002,Colophony asthma
+233688007,Sulfite-induced asthma
+233690008,Factitious asthma
+233691007,Asthmatic pulmonary eosinophilia
+233692000,Cryptogenic pulmonary eosinophilia
+233694004,Dog house disease
+233695003,Dry rot lung
+233696002,Lycoperdonosis
+233697006,New Guinea lung
+233698001,Paprika splitters' lung
+233699009,Pyrethrum alveolitis
+233700005,Rodent handlers' lung
+233701009,Sewage workers' lung
+233702002,Summer-type hypersensitivity pneumonitis
+233703007,Interstitial lung disease
+233705000,Neurogenic pulmonary edema
+233706004,Drug-induced acute pulmonary edema
+233707008,High altitude pulmonary edema
+233708003,Post-upper airway obstruction pulmonary edema
+233709006,Toxic pulmonary edema
+233710001,Chemical-induced pulmonary edema
+233711002,Oxygen-induced pulmonary edema
+233712009,Fluid overload pulmonary edema
+233713004,Seasonal cryptogenic organizing pneumonia with biochemical cholestasis
+233715006,Idiopathic diffuse pulmonary ossification
+233716007,Micronodular pulmonary ossification
+233717003,Diffuse pulmonary neurofibromatosis
+233718008,Pulmonary tuberous sclerosis
+233720006,Pulmonary lipid storage disease
+233726000,Localized pulmonary fibrosis
+233728004,Cholesterol pneumonia
+233730002,Lupus pneumonia
+233731003,Traumatic pneumonia
+233733000,Toxic pneumonitis
+233742007,Pulmonary hyalinizing granuloma
+233744008,Hilar lymph node sarcoidosis
+233745009,Defect of diaphragm
+233746005,Traumatic rupture of diaphragm
+233747001,Diaphragmatic trichiniasis
+233748006,Simple pneumoconiosis
+233749003,Complicated pneumoconiosis
+233750003,Erionite pneumoconiosis
+233751004,Metal pneumoconiosis
+233753001,Subacute berylliosis
+233754007,Cerium pneumoconiosis
+233755008,Nickel pneumoconiosis
+233756009,Thorium pneumoconiosis
+233757000,Zirconium pneumoconiosis
+233758005,Mica pneumoconiosis
+233759002,Mixed mineral dust pneumoconiosis
+233760007,Acute silicosis
+233761006,Subacute silicosis
+233762004,Chronic silicosis
+233763009,Silicotuberculosis
+233764003,Wollastonite pneumoconiosis
+233765002,Respiratory failure without hypercapnia
+233766001,Dialysis-associated hypoxia
+233767005,Stage 1 pulmonary sarcoidosis
+233768000,Stage 2 pulmonary sarcoidosis
+233769008,Stage 3 pulmonary sarcoidosis
+233770009,Stage 4 pulmonary sarcoidosis
+233771008,Endobronchial sarcoidosis
+233772001,Sarcoid pulmonary calcification
+233774000,Humidifier fever
+233776003,Tracheobronchial disorder
+233778002,Tracheal fistula
+233779005,Congenital tracheal fistula
+233780008,Acquired tracheal fistula
+233781007,Acquired tracheo-arterial fistula
+233782000,Acquired tracheocutaneous fistula
+233783005,Tracheal hemorrhage
+233784004,Tracheal rupture
+233785003,Infectious disorder of trachea
+233786002,Acquired tracheal stenosis
+233787006,Acquired subglottic stenosis
+233788001,Tracheobronchomalacia
+233791001,Bronchial fistula
+233792008,Bronchocutaneous fistula
+233793003,Bronchopleural fistula
+233794009,Tuberculous bronchopleural fistula
+233795005,Infectious disorder of bronchus
+233796006,Acquired bronchial stenosis
+233797002,Infected bronchogenic cyst
+233798007,Acquired bronchomalacia
+233799004,Acute toxic tracheobronchitis
+233800000,Disorder of bronchial anastomosis
+233801001,Bronchial anastomotic leak
+233802008,Bronchial anastomotic hemorrhage
+233804009,Bronchial anastomotic dehiscence
+233805005,Bronchial anastomotic stricture
+233806006,Bronchial anastomotic necrosis
+233808007,Bronchial anastomotic edema
+233810009,Direct acute lung injury
+233811008,Indirect acute lung injury
+233812001,Sepsis-associated lung injury
+233813006,Ventilator-associated lung injury
+233814000,Neoplasm of lower respiratory tract and mediastinum
+233940007,Pulmonary tumor embolism
+234528007,Nasopharyngeal sarcoidosis
+235631007,Cricopharyngeal disorder
+235632000,Cricopharyngeal incoordination
+235633005,Cricopharyngeal bar
+235640006,Tracheoesophageal fistula without atresia of esophagus
+235641005,Bronchoesophageal fistula
+235978006,Cystic fibrosis of pancreas
+2360001000004109,Steroid dependent asthma
+236058006,Central tendon hernia
+236059003,Traumatic diaphragmatic hernia
+236302005,Acute interstitial pneumonia
+236432001,Pulmonary renal syndrome
+2365002,Chronic granular pharyngitis
+23698009,Staphylococcal pleurisy with effusion
+23714000,Nasal vestibulitis
+238676008,Lofgrens syndrome
+23884004,Acute suppuration of maxillary sinus
+23958009,Vanishing lung
+23966000,Polyp of ethmoidal sinus
+240163000,Malignant neoplasm of nasopharyngeal wall
+240316007,Laryngeal injury due to birth trauma
+240387006,Pulmonary glanders
+240391001,Pulmonary melioidosis
+240422004,Tracheobronchial diphtheria
+240444009,Fusobacterial necrotizing tonsillitis
+240547000,Lymphonodular coxsackie pharyngitis
+240571000000101,Traumatic main airway disruption
+240629003,Malarial shock lung
+240635003,Pneumonia caused by Leishmania
+240704003,Pharyngeal candidiasis
+240705002,Candidiasis of trachea
+240735009,Classical histoplasmosis nasal ulceration
+240741002,Acute pulmonary African histoplasmosis
+240742009,Chronic pulmonary African histoplasmosis
+240747003,Chronic pulmonary blastomycosis
+24078009,Gangosa of yaws
+241331000000102,Foreign body in respiratory tract is blood
+241341000000106,Foreign body in respiratory tract is food
+241351000000109,Foreign body in respiratory tract is tongue
+241361000000107,Foreign body in respiratory tract is vomit
+241861008,Metastatic malignant neoplasm to nasopharynx
+241983006,Descent barotrauma of sinuses
+241997003,Pulmonary decompression injury
+242000006,Pulmonary overpressurization syndrome
+242006000,Blast lung
+24235005,Tuberculous hydrothorax
+242862004,Secondary malignant neoplasm of nasopharyngeal wall
+243001000000106,Chemical inhalation injury
+24302002,Pneumococcal pleurisy with effusion
+24347001,Cellulitis of vocal cords
+24350003,Injury of lung without open wound into thorax
+24369008,Pulmonary sarcoidosis
+24385003,Foreign body in lung
+243981000119109,Pulmonary filariasis
+24417004,Environmental lung disease
+2460001000004103,Lipoma of pleura
+24662006,Influenza caused by Influenza B virus
+24841007,Cardiorespiratory failure during AND/OR resulting from a procedure
+248554005,Partially obstructed airway
+248555006,Totally obstructed airway
+248702003,Clicking pneumothorax
+249346001,Alternate nasal obstruction
+249356002,Posterior end of inferior turbinate hypertrophy
+249358001,Nasal septal caudal dislocation
+249359009,Nasal septal spur
+249360004,Nasal septal granuloma
+249423002,Bleeding from tonsillar bed
+249444002,Vocal cord cyst
+249446000,Interarytenoid leukoplakia
+249457005,Supraglottic ulcer
+249458000,Supraglottic abscess
+249459008,Supraglottic cyst
+249460003,Supraglottic stenosis
+249463001,Subglottic abscess
+249464007,Subglottic ulcer
+249465008,Subglottic necrosis
+249466009,Subglottic cyst
+25050002,"Alpha heavy chain disease, respiratory form"
+2523007,Salmonella pneumonia
+253003009,Carcinoid bronchial adenoma
+253631001,Peripheral pulmonary artery stenosis
+253632008,Abnormal origin of right pulmonary artery
+253633003,Anomalous origin of right pulmonary artery from ductus arteriosus
+253634009,Anomalous origin of right pulmonary artery from ascending aorta
+253635005,Abnormal origin of left pulmonary artery
+253636006,Anomalous origin of left pulmonary artery from ductus arteriosus
+253637002,Anomalous origin of left pulmonary artery from ascending aorta
+253638007,Anomalous origin of left pulmonary artery from right pulmonary artery
+253689007,Major aortopulmonary collateral artery
+253691004,Stenosis of systemic to pulmonary artery collateral artery
+253692006,Bronchopulmonary collateral artery
+253736003,Laryngeal hypoplasia
+253737007,Congenital laryngomalacia
+253740007,Congenital malformation of trachea and bronchus
+253741006,Congenital tracheoesophageal cleft
+253742004,Primary congenital bronchomalacia
+253743009,Secondary congenital bronchomalacia
+253745002,Dysplasia of lung
+253746001,Ectopic bone and cartilage in lung
+253747005,Bronchopulmonary isomerism
+253748000,Anomaly of pleura
+253750008,"Congenital malformation of tongue, mouth and pharynx"
+253758001,Congenital palatoesophageal incoordination
+253809007,Tracheobiliary fistula
+253817004,Congenital absent hemidiaphragm - bilateral
+254421007,Tumor of glossoepiglottic fold
+254423005,Carcinoma of lingual tonsil
+254458007,Tumor of anterior pillar of fauces
+254459004,Malignant tumor of anterior pillar of fauces
+254460009,Carcinoma in situ of anterior pillar of fauces
+254476000,Tumor of lateral nasal wall
+254477009,Tumor of inferior turbinate
+254478004,Malignant tumor of inferior turbinate
+254479007,Benign tumor of inferior turbinate
+254480005,Tumor of middle turbinate
+254481009,Malignant tumor of middle turbinate
+254482002,Benign tumor of middle turbinate
+254483007,Tumor of posterior margin of nasal septum and choanae
+254484001,Malignant tumor of posterior margin of nasal septum and choanae
+254485000,Neoplasm of nasal vestibule
+254486004,Benign neoplasm of nasal vestibule
+254489006,Tumor of pharyngeal recess
+254497004,Tumor of anterior tonsillar pillar
+254498009,Tumor of posterior tonsillar pillar
+254501009,Tumor of inferior surface of soft palate
+254503007,Malignant tumor of inferior surface of soft palate
+254504001,Benign tumor of inferior surface of soft palate
+254505000,Tumor of aryepiglottic fold - hypopharyngeal aspect
+254506004,Benign tumor aryepiglottic fold - hypopharyngeal aspect
+254508003,Tumor of anterior commissure
+254509006,Malignant tumor of anterior commissure
+254510001,Carcinoma in situ of anterior commissure
+254511002,Benign tumor of anterior commissure
+254512009,Tumor of posterior commissure
+254513004,Malignant tumor of posterior commissure
+254514005,Carcinoma in situ of posterior commissure
+254515006,Benign tumor of posterior commissure
+254516007,Tumor of suprahyoid epiglottis
+254517003,Malignant tumor of suprahyoid epiglottis
+254518008,Benign tumor of suprahyoid epiglottis
+254519000,Tumor of infrahyoid epiglottis
+254520006,Malignant tumor of infrahyoid epiglottis
+254521005,Benign tumor of infrahyoid epiglottis
+254522003,Tumor of arytenoid
+254525001,Tumor of laryngeal ventricle
+254526000,Malignant tumor of laryngeal ventricle
+254527009,Benign tumor of laryngeal ventricle
+254528004,Tumor of laryngeal cartilage
+254529007,Benign tumor of laryngeal cartilage
+254618003,Neoplasm of lower respiratory tract
+254619006,Adenoid cystic carcinoma of trachea
+254620000,Squamous cell carcinoma of trachea
+254621001,Laryngotracheal papillomatosis
+254622008,Squamous cell carcinoma of bronchus
+254623003,Papilloma of bronchus
+254624009,Tumor of lung parenchyma
+254625005,Malignant tumor of lung parenchyma
+254626006,Adenocarcinoma of lung
+254627002,Carcinoid tumor of lung
+254629004,Large cell carcinoma of lung
+254631008,Giant cell carcinoma of lung
+254632001,Small cell carcinoma of lung
+254633006,Oat cell carcinoma of lung
+254634000,Squamous cell carcinoma of lung
+254635004,Epithelioid hemangioendothelioma of lung
+254637007,Non-small cell lung cancer
+254638002,Pancoast tumor
+254639005,Carcinoma in situ of lung parenchyma
+254640007,Benign tumor of lung parenchyma
+254641006,Histiocytoma of lung
+254642004,Adenoma of lung
+254643009,Intrapulmonary teratoma
+254644003,Hamartoma of lung
+254645002,Malignant mesothelioma of pleura
+254646001,Pleural fibroma
+25479004,Foreign body in pharynx
+255074000,Malignant tumor of nasal cavity and nasopharynx
+255075004,Malignant tumor of lateral nasal wall
+255140001,Carcinoma in situ of nasal cavity and nasopharynx
+255158007,Benign neoplasm of nasal cavity and nasopharynx
+255159004,Benign tumor of lateral nasal wall
+255163006,Benign papilloma of larynx
+255166003,Benign neoplasm of respiratory system
+25559009,Congenital absence of left pulmonary artery
+25764005,Acute abscess of frontal sinus
+25831001,Tuberculosis of nasal septum
+2585002,Pneumococcal pleurisy
+25897000,Malt-workers' lung
+26068009,Mucoid impaction of bronchi
+262599003,Foreign body in respiratory tract
+262600000,Foreign body in right main bronchus
+262601001,Foreign body in left main bronchus
+262604009,Oropharyngeal foreign body
+262605005,Foreign body in pyriform fossa
+262664007,Injury of oropharynx
+262665008,Laceration of oropharynx
+262668005,Hematoma of oropharynx
+262669002,Penetrating injury of oropharynx
+262670001,Injury of nasal cavity and sinuses
+262673004,Penetrating wound of larynx
+262676007,Contusion of larynx
+262677003,Traumatic hemorrhagic laryngitis
+262678008,Post-radiotherapy laryngitis
+262680002,Fracture of trachea
+262681003,Contusion of trachea
+262783007,"Injury of pleura, lung or bronchus"
+262784001,Contusion of lung
+262785000,Laceration of lung
+262786004,Rupture of bronchus
+262787008,Injury of diaphragm
+26299000,Necrosis of nasal septum
+263148008,Sphenoid sinus fracture
+26408002,Congenital tracheocele
+26427008,Chronic pulmonary histoplasmosis
+264508001,Bilateral hilar adenopathy
+26613009,Bronchocele
+266337001,Acute epiglottitis (non-streptococcal)
+266342009,Chronic catarrhal rhinitis
+266343004,Tonsil and/or adenoid hypertrophy
+266350000,Pneumococcal lobar pneumonia
+266355005,Bullous emphysema with collapse
+266356006,Atrophic (senile) emphysema
+266361008,Non-allergic asthma
+266366003,Lung disease due to external agents
+266368002,Post-inflammatory pulmonary fibrosis
+266370006,Trauma and postoperative pulmonary insufficiency
+266403005,Acute chemical bronchitis
+266404004,Chronic chemical respiratory disease
+26650005,Acute tracheitis
+267276009,Obstetric anesthesia with pulmonary complications
+26808007,Polypoid sinus degeneration
+268195009,Ectopic tissue in lung
+268832006,Aspiration of liquor or mucus in newborn
+269167000,Open wound of larynx and trachea
+269168005,Open wound of larynx and trachea with complication
+269464000,"Malignant neoplasm of upper lobe, bronchus or lung"
+269481009,Benign neoplasm of respiratory system and intrathoracic organ
+270908003,Acquired tracheoesophageal fistula
+2713001,Closed pneumothorax
+271473006,Benign neoplasm of bronchus and lung
+271503005,Pleural empyema with fistula
+271504004,Pleural empyema with no fistula
+271567008,Whooping cough-like syndrome
+271630007,Trachea displaced to left
+271631006,Trachea displaced to right
+271943005,Carcinoma of base of tongue
+271981000,Tonsillar debris
+27278006,Acute empyema of sphenoidal sinus
+27356002,Granulomatous rhinitis
+274085008,Tonsil carcinoma
+27475006,Parainfluenza virus bronchitis
+275260000,Congenital malformation of the respiratory system
+275376007,Congenital syphilitic chronic coryza
+275391009,Effect of high altitude on sinuses
+275470000,Post-cardiorespiratory arrest coma
+275486007,Tonsil disease - chronic
+275487003,Adenoid disease - chronic
+275489000,Wound of oropharynx
+275490009,Carcinoma of tongue base - dorsal surface
+275491008,Benign tumor of tongue base - dorsal surface
+275492001,Carcinoma in situ tongue base - dorsal surface
+275495004,Acute fibrinous laryngotracheobronchitis
+275497007,Infection of lower respiratory tract and mediastinum
+275498002,Respiratory tract infection
+275500001,Exudative pleurisy
+275501002,Serous pleurisy
+275503004,Tension pneumatocele
+275504005,Cyst of lung
+275505006,Multiple cysts of lung
+276191000000107,Viral wheeze
+276231004,Post-perfusion lung
+276259003,Respiratory arrest preceding cardiac arrest
+276443001,Acute laryngitis and/or tracheitis
+276531000,Avery's syndrome type 1
+276532007,Avery's syndrome type 2
+276533002,Neonatal aspiration syndromes
+276534008,Neonatal pulmonary air leak
+276536005,Respiratory insufficiency syndrome of newborn
+276537001,Chronic pulmonary insufficiency of prematurity
+276540001,Neonatal aspiration of amniotic fluid
+276541002,Neonatal aspiration of mucus
+276542009,Neonatal aspiration of milk
+276543004,Tracheobronchial hemorrhage
+276544005,Apnea of prematurity
+276545006,Obstructive apnea of newborn
+276546007,Prolonged apnea of newborn
+276547003,Neonatal tracheal perforation
+276635001,Acquired subglottic stenosis in newborn
+276636000,Post-intubation subglottic stenosis
+276637009,Hemorrhagic pulmonary edema
+276692000,Congenital viral pneumonia
+276693005,Congenital bacterial pneumonia
+276695003,Neonatal aspiration pneumonia
+276700005,Congenital syphilitic rhinitis
+276975007,Carcinoma of larynx
+277436002,Post-radiotherapy telangiectasis of vocal cord
+277485007,Secondary pulmonary hypoplasia
+277486008,Pulmonary hypoplasia associated with short gestation
+27757009,Encysted pleurisy
+277656005,Primary pulmonary hypoplasia
+277844007,Pulmonary lymphangioleiomyomatosis
+277869007,Non-tuberculous mycobacterial pneumonia
+27819004,Pulmonary ossification
+27836007,Pertussis
+278484009,Tropical pulmonary eosinophilia
+278516003,Lobar pneumonia
+278696005,Aspiration of foreign body into lower respiratory tract
+278714002,Velopharyngeal insufficiency
+27878001,Follicular tonsillitis
+278927005,Neonatal aspiration of meconium
+280356005,Tumor of nasopharyngeal floor
+28065000,Intralobar bronchopulmonary sequestration
+28085001,Empyema with bronchopleural fistula
+28111002,Atrophic rhinitis
+28122003,Pulmonary eosinophilic granuloma
+281239006,Exacerbation of asthma
+281509000,Hypoxic-ischemic coma
+281579001,Perinatal hypoxia
+281794004,Viral upper respiratory tract infection
+282446002,Injury of lower respiratory tract
+282447006,Injury of nasal septum
+282448001,Injury of sinus
+282450009,Contusion of nasal septum
+282451008,Burn of nasal cavity
+282452001,Laceration of pharynx
+282453006,Corrosion of pharynx
+282454000,Contusion of pharynx
+282455004,Hematoma of pharynx
+282456003,Hematoma of trachea
+282457007,Transection of trachea
+282458002,Transection of larynx
+282459005,Laceration of trachea
+282460000,Burn of bronchus
+282461001,Foreign body in bronchus
+282463003,Laceration of bronchus
+282723003,Contusion of bronchus
+282724009,Hematoma of bronchus
+282725005,Transection of bronchus
+282726006,Penetrating wound of lung
+2828008,Congenital stenosis of nares
+28295001,Middle lobe syndrome
+284188001,Burn of respiratory tract
+284189009,Burn of larynx and/or trachea
+284572009,Crush injury of respiratory structure
+285338008,Bone in pharynx
+285381006,Acute infective exacerbation of chronic obstructive airways disease
+285598005,Metastasis to trachea of unknown primary
+285603002,Metastasis to bronchus of unknown primary
+285604008,Metastasis to lung of unknown primary
+285605009,Metastasis to pleura of unknown primary
+285668009,Injury of nasal cavity
+285671001,Injury of nasopharynx
+286071000119109,Congenital peripheral pulmonary artery stenosis
+286964001,Radiation respiratory disease
+286972004,Complicated diaphragmatic hernia
+28709001,Cellulitis of larynx
+28791000119105,Chronic coccidioidomycotic pneumonia
+288282003,Fracture of larynx and/or trachea
+29052002,Bilobed right lung
+29074008,Polyp of maxillary sinus
+2912004,Cystic-bullous disease of the lung
+293241000119100,Acute exacerbation of chronic obstructive bronchitis
+293991000000106,Very severe chronic obstructive pulmonary disease
+29422001,Coal workers' pneumoconiosis
+29424000,Bronchiolectasis
+295723007,Fractured laryngeal cartilage
+29591002,Purulent bronchitis
+29608009,Acute epiglottitis
+296241000119107,Disorder of respiratory system due to dermatomyositis
+29632002,Congenital atresia of pharynx
+297159008,Laryngeal web
+297188009,Clotted hemothorax
+29731002,Tuberculous pneumothorax
+29938001,Extralobar bronchopulmonary sequestration
+29951006,Chronic laryngitis
+30042003,Confluent fibrosis of lung
+300922007,Fishbone in pharynx
+300931007,Peritonsillar cyst
+300999006,Basal pneumonia
+301000005,Left lower zone pneumonia
+301001009,Right lower zone pneumonia
+301002002,Left upper zone pneumonia
+301003007,Right middle zone pneumonia
+301004001,Right upper zone pneumonia
+301253007,Inspiratory partial airway obstruction
+301254001,Expiratory partial airway obstruction
+301255000,Inspiratory and expiratory partial airway obstruction
+301824001,Acute viral laryngotracheitis
+30188007,Alpha-1-antitrypsin deficiency
+302306005,Postoperative rupture of the diaphragm
+30239003,Acute abscess of sphenoidal sinus
+30243004,Cerebral anoxia following molar AND/OR ectopic pregnancy
+302911003,Acute lingual tonsillitis
+302912005,Vocal cord palsy
+302913000,Diffuse pulmonary calcinosis
+302949004,Congenital bronchoesophageal fistula without atresia
+303012000,Malignant tumor of posterior wall of hypopharynx
+30437004,Empyema with bronchocutaneous fistula
+304527002,Acute asthma
+30677002,Choanal polyp
+306949002,Laryngeal cleft type I
+306950002,Laryngeal cleft type II
+306951003,Laryngeal cleft type III
+306953000,Laryngeal cleft type IV
+306963008,Choanal stenosis
+307202004,Hemorrhagic pleural effusion
+307232007,Bronchopleural subphrenic fistula
+30736009,Dysphonia of palatopharyngolaryngeal myoclonus
+307499004,Cricoarytenoid joint fixation
+307500008,Cricoarytenoid joint arthritis
+307501007,Transglottic tumor
+308131007,Dysplasia of vocal cord
+308132000,Dysplasia of larynx
+308213003,Bullous eruption of pharynx
+308232009,Laryngotracheomalacia
+30828007,"Anoxia, in liveborn infant"
+308906005,Secondary bacterial pneumonia
+30921002,Perinatal massive pulmonary hemorrhage
+309734000,Cyst of tonsil
+309751007,Hiatus hernia - irreducible
+309775007,Postprocedural respiratory failure
+310607007,Sarcoidosis of inferior turbinates
+311000119101,Non-allergic rhinitis
+311671000119100,Juvenile dermatomyositis co-occurrent with respiratory involvement
+311838003,Closed injury of thoracic trachea
+311839006,Open injury of thoracic trachea
+312117008,Bacterial respiratory infection
+312118003,Bacterial upper respiratory infection
+312119006,Bacterial lower respiratory infection
+312133006,Viral respiratory infection
+312134000,Viral lower respiratory infection
+312149008,Fungal respiratory infection
+312342009,Infective pneumonia
+312371005,Acute infective bronchitis
+312387008,Oroantral fistula - immediate
+312388003,Oroantral fistula - established
+312400008,Acute infective tracheobronchitis
+312422001,Infective pharyngitis
+312423006,Infective laryngitis
+312603000,Lung transplant rejection
+312858004,Neonatal tracheobronchial hemorrhage
+31309002,Respiratory syncytial virus pharyngitis
+313255002,Nasal septal adhesions
+313296004,Mild chronic obstructive pulmonary disease
+313297008,Moderate chronic obstructive pulmonary disease
+313299006,Severe chronic obstructive pulmonary disease
+313353007,Squamous cell carcinoma of bronchus in left lower lobe
+313354001,Squamous cell carcinoma of bronchus in left upper lobe
+313355000,Squamous cell carcinoma of bronchus in right lower lobe
+313356004,Squamous cell carcinoma of bronchus in right middle lobe
+313357008,Squamous cell carcinoma of bronchus in right upper lobe
+31387002,Exercise-induced asthma
+314042000,Infective pleurisy
+314043005,Viral pleurisy
+3144005,Staphylococcal pleurisy
+314954002,Local recurrence of malignant tumor of lung
+314978007,Postoperative pneumonia
+315345002,Acute lung injury
+31561003,Hypostatic bronchopneumonia
+315633001,Acquired laryngocele
+316358009,Injury of lung
+31786009,Ulceration of bronchioles
+317931000119101,Pulmonary disease due to allergic granulomatosis angiitis
+31810002,Pleurisy with effusion
+31892009,Hemothorax
+31898008,Paraseptal emphysema
+31920006,Hemorrhagic varicella pneumonitis
+319841000119107,Rheumatoid lung disease with rheumatoid arthritis
+32139003,Mixed dust pneumoconiosis
+3214003,Invasive pulmonary aspergillosis
+32179007,Furuncle of nasal septum
+32204007,Pulmonary actinobacillosis
+32286006,Pneumonia in Q fever
+3229001,Ulcer of trachea
+32307003,Polyp of nasal sinus
+32398004,Bronchitis
+324618004,Pharyngeal hemorrhage
+32497008,Fracture of larynx
+32643003,Hedblom's syndrome
+326542006,Traumatic atelectasis
+328531000119104,Upper respiratory tract infection caused by Influenza A
+328611000119105,Adult pulmonary Langerhans cell histiocytosis
+328641000119109,Genetic disorder of surfactant dysfunction
+328661000119108,Interstitial lung disease of childhood
+32904004,Pneumococcal laryngitis
+32931001,Calcification of pleura
+3304005,Bronchial compression
+33072005,Traumatic hemothorax with open wound into thorax
+33094002,Tracheocele
+33261009,Abscess of tonsil
+3331000119108,Laryngeal dystonia
+33325001,Compensatory emphysema
+33411000119104,Hypopharyngeal lesion
+33431000119109,Lesion of oropharynx
+33548005,Anthracosilicosis
+33631007,Pyopneumothorax
+33890007,Foreign body in nostril
+33924006,Abscess of larynx
+34004002,Siderosilicosis
+34015007,Bakers' asthma
+34020007,Pneumonia caused by Streptococcus
+34038005,Adhesion of pleura
+34168003,Diaphragmatic eventration
+34286007,Empyema with hepatopleural fistula
+34290009,Pulmonary nematodiasis
+34681009,Perinatal respiratory distress
+34774005,Congenital absence of bronchus
+34821005,Congenital stenosis of choanae
+3487004,Candidiasis of lung
+35031000119100,Acute aspiration pneumonia
+35037009,Primary atypical interstitial pneumonia
+351171000119101,Benign carcinoid of lung
+351191000119100,Benign carcinoid neoplasm of bronchus
+3514002,Peribronchial fibrosis of lung
+35168006,Acute empyema of ethmoidal sinus
+35301006,Acute tracheobronchitis
+35339003,Primary pneumonic plague
+353561000119103,Secondary malignant neoplasm of right lung
+353741000119106,Secondary malignant neoplasm of left lung
+35377009,Parainfluenza virus laryngotracheobronchitis
+35447004,Burn of pharynx
+35491000119107,Restrictive lung mechanics due to neuromuscular disease
+35555009,Accessory trachea
+35893006,Diaphragmatic cyst
+35923002,Chronic maxillary sinusitis
+360371003,Acute cardiac pulmonary edema
+36042005,Parietoalveolar pneumopathy
+36118008,Pneumothorax
+361194002,Perinatal pulmonary fibroplasia
+361195001,Pulmonary fibroplasia
+361196000,Idiopathic hilar fibrosis
+361208003,Primary sleep apnea of newborn
+363180009,Inflammatory disorder of the respiratory tract
+363225006,Neonatal respiratory system disorder
+363358000,Malignant tumor of lung
+363376007,Malignant tumor of base of tongue
+363377003,Malignant tumor of lingual tonsil
+363392002,Malignant tumor of oropharynx
+363393007,Malignant tumor of tonsil
+363394001,Malignant tumor of tonsillar fossa
+363395000,Malignant tumor of vallecula
+363398003,Malignant tumor of lateral wall of nasopharynx
+363399006,Malignant tumor of hypopharynx
+363400004,Malignant tumor of postcricoid region
+363401000,Malignant tumor of pyriform fossa
+363422006,Malignant tumor of nasal cavity
+363423001,Malignant tumor of nasal septum
+363425008,Malignant tumor of maxillary sinus
+363426009,Malignant tumor of ethmoid sinus
+363427000,Malignant tumor of frontal sinus
+363428005,Malignant tumor of sphenoid sinus
+363429002,Malignant tumor of larynx
+363430007,Malignant tumor of subglottis
+363431006,Malignant tumor of laryngeal cartilage
+363432004,Malignant tumor of trachea
+363433009,Malignant tumor of pleura
+363486007,Malignant tumor of vocal cord
+363487003,Malignant tumor of aryepiglottic fold - laryngeal aspect
+363488008,Malignant tumor of false cord
+363493006,Malignant tumor of bronchus
+363506007,Malignant tumor of nasal sinuses
+363507003,Malignant neoplasm of pharynx
+36363000,Mucocele of bronchus
+363746003,Acute pharyngitis
+36426008,Subacute bronchitis
+36485005,Restrictive lung disease
+36491000119101,Laryngeal obstruction due to supraglottitis
+36599006,Chronic fibrosis of lung
+36669007,Ulcerative rhinitis
+36696005,Kaolinosis
+367468008,Congenital atresia of nares
+367498001,Seasonal allergic rhinitis
+367542003,Pulmonary eosinophilia
+36925002,Obstruction of bronchus
+36971009,Sinusitis
+370218001,Mild asthma
+370219009,Moderate asthma
+370220003,Occasional asthma
+370221004,Severe asthma
+370485008,Oronasal fistula
+371035002,Supraglottic airway obstruction
+371043007,Toxic inhalation injury
+371044001,Transient respiratory distress with sepsis
+371072008,Postobstructive pneumonia
+371088008,Reactive airways dysfunction syndrome
+371101003,Gastroesophageal reflux disease with apnea
+371103000,Granulomatous epiglottitis
+371126007,Nasal sinus obstruction
+371127003,Obstructive sinusitis
+371132002,Hiatal hernia with gastroesophageal reflux disease
+37180002,Chronic nonspecific lung disease
+371988005,Primary malignant neoplasm of false vocal cord
+371994002,Primary malignant neoplasm of laryngeal aspect of aryepiglottic fold
+371995001,Primary malignant neoplasm of larynx
+372020000,Primary malignant neoplasm of tonsil
+372030009,Primary malignant neoplasm of vocal cord
+372065009,Malignant neoplasm of main bronchus
+372103002,Carcinoma of glottis
+372104008,Carcinoma of subglottis
+372105009,Carcinoma of supraglottis
+372110008,"Primary malignant neoplasm of lower lobe, bronchus or lung"
+372111007,"Carcinoma of lower lobe, bronchus or lung"
+372120003,Carcinoma of main bronchus
+372141009,Carcinoma of vocal cord
+372146004,Acute chest syndrome
+3733009,Congenital eventration of right crus of diaphragm
+373405005,Inflammatory disorder of the respiratory system
+373435003,Battey disease
+373610002,Polyp in nasopharynx
+37426002,Ulcerative laryngitis
+37471005,Extrinsic allergic alveolitis
+37615000,Tracheobroncheopathia osteoplastica
+37632001,Obliterative pleuritis
+37711000,Cadmium pneumonitis
+37767008,Congenital deformity of wall of nasal sinus
+37948003,Acute laryngotracheitis without obstruction
+37981002,Allergic bronchopulmonary aspergillosis
+38086007,Laryngomalacia
+38264004,Bronchial diverticulum
+38357003,Open wound of larynx without complication
+385093006,Community acquired pneumonia
+38534008,Aspiration of stomach contents after anesthesia AND/OR sedation in labor AND/OR delivery
+385479009,Follicular bronchiolitis
+38632003,Pharyngeal pituitary tissue
+38699009,Pneumonia caused by Histoplasma capsulatum
+38729007,Wheat weevil disease
+389086002,Hypoxia
+389088001,Hypoxia of brain
+389089009,Anoxia of brain
+389145006,Allergic asthma
+38961000,Chronic sphenoidal sinusitis
+38976008,Pneumonic plague
+39172002,Pneumonia caused by Proteus mirabilis
+39271004,Ulcerative pharyngitis
+39323002,Hyperplasia of adenoids
+396285007,Bronchopneumonia
+396286008,Bilateral bronchopneumonia
+39643002,Choking caused by food in larynx
+397433001,Congenital tracheal collapse
+397767007,Acute respiratory failure requiring reintubation
+397813008,Airway trauma
+398076005,Laceration of nasopharynx
+398098001,Laceration of larynx
+398147005,Abnormal communication between pericardial sac and pleura
+398217003,Laceration of airway
+398313001,Vocal cord trauma
+398314007,Laceration of hypopharynx
+39839004,Diaphragmatic hernia
+398447004,Severe acute respiratory syndrome
+398640008,Rheumatoid pneumoconiosis
+3987009,Congenital absence of trachea
+39871006,Chronic respiratory failure
+398726004,Rheumatoid lung disease
+39905002,Scimitar syndrome
+399291005,Pharyngoesophageal diverticulum
+39987008,Congenital absence of right pulmonary artery
+40055000,Chronic sinusitis
+40100001,Obliterative bronchiolitis
+401000119107,Asthma with irreversible airway obstruction
+40122008,Pneumoconiosis
+40218008,Carbon electrode makers' pneumoconiosis
+402503002,Basal cell carcinoma of nasal columella
+403457003,Congestive non-allergic rhinitis
+40405003,Illegal abortion with cerebral anoxia
+40453004,Hyperplasia of both palatine AND pharyngeal tonsils
+404804003,Platinum asthma
+404805002,Platinosis
+404806001,Cheese-makers' asthma
+404807005,Cheese-washers' lung
+404808000,Isocyanate induced asthma
+40527005,Idiopathic pulmonary hemosiderosis
+405276000,Negative pressure pulmonary edema
+40541001,Acute pulmonary edema
+405541003,Bronchial hemorrhage
+405569006,Post-radiotherapy pneumonitis
+405570007,Pulmonary fibrosis due to and following radiotherapy
+405576001,Nontraumatic hemothorax
+405586000,Traumatic bronchopleural fistula
+405720007,Allergic bronchitis
+405737000,Pharyngitis
+405822008,Squamous cell carcinoma of larynx
+405944004,Asthmatic bronchitis
+405951008,Abscess of pleural cavity
+40600002,Pneumococcal bronchitis
+40640008,Massive fibrosis of lung co-occurrent and due to silicosis
+406444002,Laryngeal spasm
+40752005,Ulcer of nasal septum
+40766000,Enteroviral lymphonodular pharyngitis
+407671000,Bilateral pneumonia
+407674008,Aspirin-induced asthma
+40779009,Discoid atelectasis
+40786001,Aspiration pneumonia caused by regurgitated gastric secretions
+408418009,Upper airway resistance syndrome
+408648004,Squamous cell carcinoma of epiglottis
+408649007,Squamous cell carcinoma of pharynx
+408669002,Acute laryngitis with obstruction
+408680002,Healthcare associated bacterial pneumonia
+408681003,Healthcare associated legionnaire's disease
+408682005,Healthcare associated pertussis
+408687004,Healthcare associated influenza disease
+408688009,Healthcare associated severe acute respiratory syndrome
+409609008,Radiologic infiltrate of lung
+409610003,Radiologic increased density of lung
+409622000,Respiratory failure
+409623005,Respiratory insufficiency
+409663006,Cough variant asthma
+409664000,Pneumonia caused by anaerobic bacteria
+409665004,Pneumonia caused by aerobic bacteria
+40988009,Obstructive rhinitis
+410430005,Cardiorespiratory arrest
+410431009,Cardiorespiratory failure
+41048006,Haemophilus influenzae laryngitis
+4120002,Bronchiolitis
+41207000,Adenoviral pneumonia
+41269000,Influenzal bronchopneumonia
+41279003,Congenital esophagobronchial fistula
+41381004,Pneumonia caused by Pseudomonas
+413839001,Chronic lung disease
+41427001,Disorder of bronchus
+414304001,Furuncle of nasal cavity
+414581006,Laryngopharyngeal reflux
+414822009,Neonatal pulmonary hemorrhage
+415125002,Pneumocystosis jirovecii pneumonia
+415126001,Pneumonitis caused by inhaled substance
+41547006,Injury of bronchus without open wound into thoracic cavity
+41553006,Detergent asthma
+415724006,Tonsillitis caused by Gram negative bacteria
+41582007,Streptococcal tonsillitis
+4160001,Congenital anomaly of upper respiratory system
+416764003,Corneal hypoxia
+416916004,Lipoid pneumonitis
+417018008,Pulmonary coccidioidomycosis
+417152008,Langerhans cell histiocytosis of lung
+417688002,Chronic progressive coccidioidal pneumonia
+417850002,Respiratory tract congestion and cough
+418092006,Respiratory tract congestion
+418103007,Hypertrophy of lingual tonsil
+418122003,Bronchomoniliasis
+418395004,Tea-makers' asthma
+418973007,Disorder of lingual tonsil
+41931000119102,Sinusitis co-occurrent with nasal polyps
+41997000,Asthmatic pulmonary alveolitis
+42004004,Aspiration pneumonia caused by inhalation of vomitus
+42019003,Contusion of lung with open wound into thorax
+420544002,Bacterial pneumonia associated with acquired immunodeficiency syndrome
+420706008,Nasopharyngeal fascioliasis
+420787001,Pneumococcal pneumonia associated with acquired immunodeficiency syndrome
+421047005,Candidiasis of lung associated with acquired immunodeficiency syndrome
+421092003,Allergic disorder of respiratory system
+421508002,Viral pneumonia associated with acquired immunodeficiency syndrome
+421671002,Pneumonia associated with acquired immunodeficiency syndrome
+421874007,Respiratory disorder associated with acquired immunodeficiency syndrome
+422177004,Dyspnea associated with acquired immunodeficiency syndrome
+422216007,Dislocation of arytenoid cartilage
+4225003,Tuberculosis of nose
+422541001,Undifferentiated carcinoma of nasopharynx
+422588002,Aspiration pneumonia
+422636004,Hyperemia of vocal cord
+422691006,Squamous cell carcinoma of nasopharynx
+422758009,Carcinoma of nasal meatus
+422886007,Olfactory neuroblastoma
+422968005,"Non-small cell carcinoma of lung, TNM stage 3"
+423050000,"Large cell carcinoma of lung, TNM stage 2"
+423106003,Adenocarcinoma of nasopharynx
+423121009,"Non-small cell carcinoma of lung, TNM stage 4"
+423234004,Injury to respiratory system due to inhaled substance
+423295000,"Squamous cell carcinoma of lung, TNM stage 1"
+423318000,Adenoid cystic carcinoma of oropharynx
+423441007,Particulate matter inhalation injury
+423464009,Squamous cell carcinoma of oropharynx
+423468007,"Squamous cell carcinoma of lung, TNM stage 2"
+423600008,"Large cell carcinoma of lung, TNM stage 4"
+423889005,Non-immunoglobulin E mediated allergic asthma
+42402006,Kartagener syndrome
+424132000,"Non-small cell carcinoma of lung, TNM stage 1"
+424199006,Substance induced asthma
+424327005,Tonsillar actinomycosis
+42434002,Pneumohemothorax due to trauma
+42458003,Hemothorax due to trauma
+424643009,Immunoglobulin E-mediated allergic asthma
+424938000,"Large cell carcinoma of lung, TNM stage 1"
+424970000,"Large cell carcinoma of lung, TNM stage 3"
+425011002,Allergic fungal sinusitis
+425048006,"Non-small cell carcinoma of lung, TNM stage 2"
+425082000,Inhalation burn due to hot gas
+425230006,"Squamous cell carcinoma of lung, TNM stage 3"
+425376008,"Squamous cell carcinoma of lung, TNM stage 4"
+425464007,Nosocomial pneumonia
+425748003,Acute exacerbation of chronic bronchitis
+425802001,Bilateral pleural effusion
+425951002,Shrinking lung syndrome
+425969006,Exacerbation of intermittent asthma
+425996009,Bilateral basal pneumonia
+426069002,Pneumothorax ex vacuo
+426437004,Familial idiopathic pulmonary fibrosis
+426542005,Sleep hypoventilation due to lower airway obstruction
+42655007,Complete bilateral paralysis of vocal cords
+426656000,Severe persistent asthma
+42666000,Congenital anomaly of tracheal cartilage
+426696003,Lingular pneumonia
+426705001,Diabetes mellitus co-occurrent and due to cystic fibrosis
+42680007,Endogenous lipoid pneumonia
+426853005,Pneumoconiosis caused by silicate
+426896000,Chronic hypercapnic respiratory failure
+426936004,Smoke inhalation injury
+426964009,"Non-small cell lung cancer, positive for epidermal growth factor receptor expression"
+426979002,Mild persistent asthma
+427038005,"Non-small cell lung cancer, negative for epidermal growth factor receptor expression"
+427046006,Drug-induced pneumonitis
+427106002,Acquired velopharyngeal insufficiency
+427123006,Interstitial lung disease due to collagen vascular disease
+427286007,Obstruction of lower respiratory tract
+427295004,Moderate persistent asthma
+427603009,Intermittent asthma
+427679007,Mild intermittent asthma
+427743008,Metal foreign body in pharynx
+427777003,Restrictive lung disease due to muscular dystrophy
+427778008,Incompetence of nasal valve
+427780002,Laryngitis due to gastroesophageal reflux
+427791009,Congenital velopharyngeal incompetence
+427827009,Aspiration into main bronchus
+427828004,Burn of nasal septum
+427895005,Loculated pleural effusion
+427896006,Chronic respiratory insufficiency
+427897002,Rhinitis caused by alpha-adrenergic blocking agent
+427907007,Atrophy of vocal cord
+427908002,Restrictive lung disease due to kyphoscoliosis
+427909005,Chronic recurrent sinusitis
+428032009,Acquired nasal septal defect
+428137000,Glass in pharynx
+428173007,Chronic hypoxemic respiratory failure
+428216000,Wood splinter in pharynx
+428240008,Vocal cord strain
+428438000,Inhalation injury due to chemical
+428697002,Inactive tuberculosis of lung
+428743006,Fishing hook in pharynx
+428782008,Postoperative hemothorax
+428866004,Cyst of maxillary sinus
+428868003,Gustatory rhinitis
+428869006,Mixed rhinitis
+42908004,"Primary atelectasis, in perinatal period"
+429195002,Allergic rhinitis caused by animal dander
+429266002,Sleep-related groaning
+429271009,Ventilator-acquired pneumonia
+429427008,Invasive fungal sinusitis
+429456008,Hypoventilation during sleep due to neuromuscular disorder
+430390000,Sleep-related neurogenic tachypnea
+430395005,Pneumonia caused by Gram negative bacteria
+430476004,Diffuse panbronchiolitis
+430621000,Malignant neoplasm of lower respiratory tract
+430969000,Recurrent aspiration pneumonia
+43098002,Copper fever
+431040002,Velopharyngeal incompetence due to cleft palate
+431223003,Acute rejection of lung transplant
+431231008,Acute rhinosinusitis
+431507002,Accelerated rejection of lung transplant
+432066002,Lung disorder due to autoimmune disorder
+432381000,Human papillomavirus infection of vocal cord
+432774005,Hyperacute rejection of lung transplant
+432958009,Chronic rejection of lung transplant
+43383008,Congenital diverticulum of bronchus
+43636000,Cicatrix of trachea
+43692000,Influenzal acute upper respiratory infection
+43842003,Injury of lung with open wound into thorax
+438764004,Postoperative aspiration pneumonia
+43878008,Streptococcal sore throat
+440173001,Nonsquamous nonsmall cell neoplasm of lung
+440310004,Leakage of peritoneal dialysate into pleural cavity
+440527006,Primary squamous cell carcinoma of naris
+441536000,Iatrogenic pneumothorax
+441551009,Inflammation of larynx caused by virus
+441590008,Pneumonia caused by Severe acute respiratory syndrome coronavirus
+44165003,Complication of transplanted lung
+441658007,Pneumonia caused by Staphylococcus aureus
+441724008,Tension hydrothorax
+441746000,Infarction of lung due to iatrogenic pulmonary embolism
+441942006,Pneumonia caused by infection caused by Streptococcus pyogenes
+441978001,Allergic rhinitis due to food
+442025000,Acute exacerbation of chronic asthmatic bronchitis
+442094008,Pneumonia caused by Histoplasma
+442110002,Fibrosis of pleura
+442164004,Organic sleep apnea
+442438000,Influenza caused by Influenza A virus
+442696006,Influenza caused by Influenza A virus subtype H1N1
+44274007,Lymphoid interstitial pneumonia
+443378001,Lady Windermere syndrome
+443760008,Sleep hypoventilation
+444667006,Congenital deformity of pharynx
+444745000,Infection of mucous cyst of nasal sinus
+444814009,Viral sinusitis
+444921008,Subglottic web
+444964001,Lungs in mirror image arrangement
+445058002,Inflammation of bronchus caused by Aspergillus
+445096001,Pneumonia caused by Human metapneumovirus
+445102008,Inflammation of bronchiole caused by Human metapneumovirus
+445130008,Acute infective adenoiditis
+445241004,Persistent cough after viral respiratory infection
+445378003,Acute exacerbation of bronchiectasis
+445427006,Seasonal asthma
+44547005,Chalicosis
+44549008,Aspiration pneumonia resulting from a procedure
+445554007,Congenital asymmetry of tonsils
+44599007,Traumatic hemothorax without open wound into thorax
+446096008,Perennial allergic rhinitis
+446543007,Tuberculous abscess of lung
+446594000,Infection of pharynx caused by Chlamydia trachomatis
+446656007,Mirror image bronchial anatomy
+446753005,Tuberculosis of oropharynx
+446851000,Foreign body in maxillary sinus
+446946005,Reinfection pulmonary tuberculosis
+446986002,Tuberculous pleural effusion
+447006007,Relapse pulmonary tuberculosis
+447085008,Functionally congenital single lung
+447674005,Right bronchial isomerism
+447810006,Congenital stenosis of trachea due to complete rings
+447811005,Congenital stenosis of trachea due to tracheal web
+447821002,Congenital posterolateral diaphragmatic hernia
+447840008,Stenosis of right pulmonary artery
+447851008,Congenital tracheoesophageal fistula with esophageal stenosis
+447903001,Coarctation of right pulmonary artery
+448059006,Pulmonary trunk absent with absent left pulmonary artery
+448060001,Pulmonary trunk absent with absent right pulmonary artery
+448078006,Vascular ring with right aortic arch and right arterial ligament with absent left pulmonary artery
+448079003,Vascular ring with right aortic arch and right patent arterial duct with absent left pulmonary artery
+448086006,Atresia of pulmonary trunk with absent left pulmonary artery
+448087002,Atresia of pulmonary trunk with absent right pulmonary artery
+448202002,Left bronchial isomerism
+448214005,Malignant epithelial neoplasm of oropharynx
+448305002,Vascular ring with malrotation and dextroversion of heart and hypoplasia of right lung and left arterial duct
+448319002,Diffuse non-Hodgkin's lymphoma of nasopharynx
+44833003,Pseudolymphoma of lung in Sjögren's disease
+448370006,Round atelectasis
+448371005,Non-Hodgkin's lymphoma of nasopharynx
+448372003,Non-Hodgkin's lymphoma of lung
+448412007,Tracheal origin of right upper lobe bronchus
+448509007,Transglottic malignant neoplasm of larynx
+448510002,Stenosis of left pulmonary artery
+448595006,Scimitar syndrome with additional anomalous pulmonary venous connection
+448637008,Coarctation of left pulmonary artery
+448647006,Bilateral bilobed lungs due to isomerism of left lung
+448648001,Bilateral trilobed lungs due to isomerism of right lung
+448665005,Malignant epithelial neoplasm of hypopharynx
+448672006,Follicular non-Hodgkin's lymphoma of lung
+448708002,Neoplasm of respiratory system
+448719004,Postoperative lower respiratory tract infection
+448739000,Recurrent lower respiratory tract infection
+448867004,Diffuse non-Hodgkin's lymphoma of lung
+448868009,Malignant neoplasm of lateral wall of oropharynx
+448990005,Malignant epithelial neoplasm of nasal cavity
+448993007,Malignant epithelial neoplasm of lung
+449027007,Distal origin of brachiocephalic artery with tracheal compression
+449058008,Follicular non-Hodgkin's lymphoma of tonsil
+449066004,Malignant neoplasm of upper respiratory tract
+449067008,Malignant neoplasm of parietal pleura
+449096009,Malignant neoplasm of respiratory system
+449173006,Diffuse non-Hodgkin's lymphoma of tonsil
+449219006,Follicular non-Hodgkin's lymphoma of nasopharynx
+449248000,Nasopharyngeal carcinoma
+449254004,Malignant epithelial neoplasm of pharynx
+449292003,Non-Hodgkin's lymphoma of tonsil
+449308006,Malignant neoplasm of visceral pleura
+44939003,Lian-Siguer-Welti syndrome
+449417005,Malignant epithelial neoplasm of nasal septum
+449433008,Diffuse stenosis of left pulmonary artery
+449467003,Diffuse stenosis of right pulmonary artery
+449551006,Single stenosis of left pulmonary artery
+449559008,Multiple stenoses of left pulmonary artery
+449560003,Multiple stenoses of right pulmonary artery
+449589001,Single stenosis of right pulmonary artery
+449729000,Allergic rhinitis caused by house dust mite
+450715004,Influenza caused by Influenza A virus subtype H7
+450716003,Influenza caused by Influenza A virus subtype H9
+450878002,Mass of palatine tonsil
+45263007,Pulmonary sporotrichosis
+45312009,Pneumonia in typhoid fever
+45556008,Pulmonary tularemia
+45616003,Acquired tracheal collapse
+45629003,Abscess of nasopharynx
+458427003,Bridging bronchus
+45865005,Foreign body in tracheobronchial tree
+45913009,Laryngitis
+45983003,Burn of lung
+461882008,Dysplasia of glottis
+46207001,Pneumonitis caused by acquired toxoplasmosis
+462163003,Fetal pleural effusion
+46621007,Atelectasis
+46689006,Hypertrophy of tonsils
+46722007,Congenital anomaly of pleural folds
+46766009,Open wound of nasal septum with complication
+46775006,Respiratory distress syndrome in the newborn
+46802002,Smokers' cough
+46847001,Chronic pulmonary edema
+46860007,Sprain of ligament of cricothyroid joint
+46965001,Agenesis of left lung
+46970008,Pneumonia caused by Mycoplasma pneumoniae
+47070001,Congenital web of larynx
+47082005,Congenital rubella pneumonitis
+47125007,Disorder of trachea
+471272001,Cavitary pneumonia
+471283005,Air leaking from lung
+471402000,Pleuroperitoneal fistula
+47147007,Congenital anomaly of lung
+472827002,Recurrent respiratory papillomatosis
+472857006,Perinatal pulmonary hemorrhage
+473439008,Chondroradionecrosis of larynx
+47386001,Mendelson's syndrome resulting from a procedure
+47515009,Simple silicosis
+47841006,Chronic nasopharyngitis
+47895001,Congenital emphysema
+47938003,Chronic obliterative bronchiolitis
+48274004,Sprain of thyroid cartilage
+48347002,Humidifier lung
+48424004,Contusion of lung without open wound into thorax
+48475001,Disorder of diaphragm
+48763007,Congenital hernia of foramen of Morgagni
+490008,Upper respiratory tract hypersensitivity reaction
+49691004,Occupational bronchitis
+49756002,Perinatal pneumothorax
+4981000,Panacinar emphysema
+49840000,Complicated silicosis
+49885004,Hyperplasia of tonsils
+49908003,Acute epiglottitis without obstruction
+50043002,Disorder of respiratory system
+50076003,Baritosis
+50196008,Perialveolar fibrosis of lung
+50211006,Catarrhal tracheitis
+50215002,Laryngeal diphtheria
+50267003,Congenital enlargement of nasopharynx
+5028002,Acute pansinusitis
+50417007,Lower respiratory tract infection
+50513008,Congenital atresia of bronchus
+50581000,Goodpasture's syndrome
+50589003,Silver polishers' lung disease
+50694005,Empyema with mediastinal fistula
+50804000,Catarrhal pneumonia
+50943000,Congenital anomaly of bronchus
+50993001,Endometriosis of lung
+50997000,Pulmonary dirofilariasis
+51068008,Adult bronchiectasis
+51152000,Abscess of vocal cords
+51154004,Obstetrical pulmonary complication of anesthesia AND/OR sedation
+51209006,Viral tonsillitis
+51277007,Stannosis
+51476001,Nasopharyngitis
+51495008,Cerebral anoxia following anesthesia AND/OR sedation in labor AND/OR delivery
+51499002,Disorder of tonsil AND/OR adenoid
+51523009,Congenital laryngocele
+51530003,Pneumonia caused by Escherichia coli
+51577008,Wilson-Mikity syndrome
+51599000,Edema of larynx
+51615001,Fibrosis of lung
+517007,Foreign body in hypopharynx
+51960003,Secondary syphilis of pharynx
+52083000,Infantile lobar overinflation of lung
+52333004,Mushroom workers' lung
+52379009,Subglottic edema
+52409006,Bronchiolitis exudativa
+52500008,Saccular bronchiectasis
+52571006,Chronic tracheobronchitis
+52579008,Accessory lung
+52721006,Tuberculosis of nasal sinus
+52879001,Congenital atresia of glottis
+53084003,Bacterial pneumonia
+53189005,Congenital atresia of trachea
+53926002,Plastic bronchitis
+54150009,Upper respiratory infection
+54203008,Bronchomalacia
+54287007,Ozena laryngis
+54398005,Acute upper respiratory infection
+54421009,Foreign body in trachea
+54675009,Tracheopathia osteoplastica
+54865008,Folliculitis nares perforans
+54867000,Rheumatoid fibrosing alveolitis
+54959009,Perinatal atelectasis
+5505005,Acute bronchiolitis
+55130001,Laryngotracheitis
+55355000,Acute laryngopharyngitis
+55366007,Tonsillar tag
+55419007,Tuberculosis of glottis
+55448001,Tracheoesophageal fistula following tracheostomy
+55490007,Congenital laryngeal stridor
+55570000,Asthma without status asthmaticus
+5565008,Congenital diverticulum of trachea
+55679008,Peribronchial pneumonia
+56440001,Segmental tracheal stenosis
+5645008,Nasal glial heterotopia
+56472003,Injury of pleura
+56498009,Tuberculosis of nasopharynx
+56676008,Diaphragmatic hernia with gangrene
+56841008,Massive fibrosis of lung
+56937005,Abscess of trachea
+56968009,Asthma caused by wood dust
+57089007,Respiratory syncytial virus bronchiolitis
+57355001,Vocal nodules in adults
+57451009,Congenital tracheobronchomegaly
+57463004,Pneumonitis caused by inhaled liquid
+57607007,Occupational asthma
+57686001,Emphysematous bleb of lung
+57702005,Unresolved pneumonia
+57713008,Inflammation of vocal cord
+57781000,Disorder of vocal cord
+5791006,Cicatrix of adenoid
+58031004,Suppurative pharyngitis
+58524006,Acute pulmonary histoplasmosis
+58525007,Obstructive atelectasis
+58554001,Empyema of pleura
+58576005,Haemophilus influenzae epiglottitis
+58691003,Antimony pneumoconiosis
+5875001,Acute bronchitis with obstruction
+58763001,Acute empyema of nasal sinus
+58890000,Adenoviral bronchopneumonia
+59113005,Perinatal secondary atelectasis
+59128005,Congenital honeycomb lung
+59221008,Parainfluenza virus rhinopharyngitis
+59423009,Congenital atresia of nasopharynx
+59454008,Laryngitis sicca
+59471009,Phlegmonous pharyngitis
+59475000,Pneumonia in pertussis
+59707005,Abscess of pharynx
+59773008,Simple pulmonary alveolitis
+59786004,Weavers' cough
+599006,Chronic pneumothorax
+59903001,Acute obliterating bronchiolitis
+59940009,Hypersensitivity alveolitis in lungworm infection
+59967003,Acute laryngotracheitis with obstruction
+60031001,Serofibrinous pleurisy
+60046008,Pleural effusion
+60100005,Cyst of pharynx
+60118008,Acute respiratory alkalosis
+60125001,Perinatal interstitial emphysema
+60130002,Chronic frontal sinusitis
+60416001,Edema of nasopharynx
+6042001,Pulmonary aspergillosis
+60485005,Pleurobronchopneumonia
+60600009,Disorder of the larynx
+60716000,Open wound of nasal cavity with complication
+60805002,Hemolytic anemia with emphysema AND cutis laxa
+60916008,Cardiopulmonary schistosomiasis
+609461007,Induced termination of pregnancy complicated by cerebral anoxia
+60983006,Congenital esophagotracheal fistula
+61000119108,Irritant rhinitis
+61035004,Burn of trachea
+61169001,Obstruction of larynx
+61233003,Silo-fillers' disease
+6142004,Influenza
+61448007,Focal atelectasis
+61471000119100,Basal cell carcinoma of naris
+61582004,Allergic rhinitis
+61700007,Influenza with non-respiratory manifestation
+61711004,Acute abscess of ethmoidal sinus
+61884008,Achromobacter pneumonia
+61937009,Simple chronic bronchitis
+61958003,Adenoviral respiratory disease
+62371005,Pulmonary siderosis
+62667002,Congenital deviation of nasal septum
+62828005,Downward displacement of diaphragm
+62907002,Respiratory complication
+6296006,Congenital dilatation of trachea
+62994001,Tracheitis
+63064000,Intradiaphragmatic abscess
+63088003,Allergic asthma without status asthmaticus
+63140003,Acute suppuration of ethmoidal sinus
+63402005,Meigs' syndrome
+63480004,Chronic bronchitis
+63741006,Fungal infection of lung
+63841001,Chronic pulmonary congestion
+63866002,Atrophic pharyngitis
+64030005,Pneumonitis caused by solids
+64228003,Paralysis of diaphragm
+64369009,Acute tracheitis without obstruction
+64375000,Acute laryngotracheitis
+64479007,Pneumonia caused by Klebsiella pneumoniae
+6461009,Amygdalolith
+64631008,Fullers' earth disease
+64662007,Pulmonary infarction
+64667001,Interstitial pneumonia
+64703005,Terminal bronchopneumonia
+64880000,Parainfluenza virus bronchopneumonia
+64917006,Parainfluenza virus pneumonia
+64936001,Löffler's syndrome
+64981002,Congenital atresia of larynx
+65034006,Rhinolith
+65095005,Amebic lung abscess
+65102004,Adiaspiromycosis caused by Emmonsia parva
+65141002,Foreign body pneumonia
+652005,Gangrenous tonsillitis
+65710008,Acute respiratory failure
+65878001,Septic bronchitis
+65933003,Hydropneumothorax
+66011008,Viral tracheitis
+66050007,Foreign body in nasal sinus
+66151009,Perinatal complete pulmonary collapse
+66429007,Unresolved lobar pneumonia
+66489009,Congenital absence of lung
+6655004,Acute laryngitis
+66622006,Hypertrophy of both palatine AND pharyngeal tonsils
+66987001,Congenital lobar emphysema
+67242002,Bagassosis
+674814021000119106,Acute respiratory distress syndrome due to disease caused by Severe acute respiratory syndrome coronavirus 2
+67525007,Secondary pneumonic plague
+67529001,Cicatrix of tonsil
+67543006,Open wound of nasal sinus with complication
+67569000,Bronchopulmonary dysplasia of newborn
+67599009,Pulmonary congestion
+67782005,Acute respiratory distress syndrome
+67792002,Acquired bronchoesophageal fistula
+67811000119102,"Primary small cell malignant neoplasm of lung, TNM stage 1"
+67821000119109,"Primary small cell malignant neoplasm of lung, TNM stage 2"
+67831000119107,"Primary small cell malignant neoplasm of lung, TNM stage 3"
+67832005,Acute ethmoidal sinusitis
+67841000119103,"Primary small cell malignant neoplasm of lung, TNM stage 4"
+67905004,Acute-on-chronic respiratory failure
+68272006,Acute maxillary sinusitis
+68279002,Open wound of nasal septum without complication
+68328006,Centriacinar emphysema
+68333005,Furriers' lung
+68372009,Upper respiratory tract obstruction
+683991000119103,Extensive stage primary small cell carcinoma of lung
+68409003,Organized pneumonia
+68489000,Vocal nodules in children
+68539005,Congenital bronchopulmonary foregut malformation
+68917000,Bronchiolar disease
+69061003,Extrinsic obstruction of trachea
+69102005,Closed fracture of trachea
+69339004,Bird-fanciers' lung
+69646003,Ozena
+69729007,Unilobar lung
+697921005,Pulmonary hypertension in sarcoidosis
+697923008,Pulmonary hypertension in lymphangioleiomyomatosis
+697993003,Undifferentiated carcinoma of nasal sinus
+698011002,Keratinizing squamous cell carcinoma of nasopharynx
+698040004,Malignant melanoma of nasal cavity
+698044008,Malignant melanoma of palatine arch
+698048006,Undifferentiated nonkeratinizing squamous cell carcinoma of nasopharynx
+698285005,Malignant melanoma of ethmoid sinus
+698288007,Malignant melanoma of maxillary sinus
+698504006,Postoperative cardiopulmonary failure
+69858000,Perforation of diaphragm
+698638005,Pregnancy induced hypertension with pulmonary edema
+698640000,Hypertension in the puerperium with pulmonary edema
+699014000,Recurrent pneumonia
+699045001,Closed fracture of frontal sinus
+699129001,Borderline velopharyngeal insufficiency
+69921001,Broncholithiasis
+699326004,Accidental puncture of pleura
+699702003,Calcification of laryngeal cartilage
+699748007,Cardiorespiratory arrest with successful resuscitation
+699802009,Silent sinus syndrome
+70020005,Adenoiditis
+700249006,Idiopathic interstitial pneumonia
+700250006,Idiopathic pulmonary fibrosis
+700272008,Tuberculosis of respiratory system
+700273003,Isolated tracheobronchial tuberculosis
+700285006,Congenital velopharyngeal dysfunction
+70036007,Haemophilus influenzae pneumonia
+700458001,Pulmonary edema due to hypoproteinemia
+70076002,Rhinitis
+702373006,Hereditary myopathy with early respiratory failure
+702383005,Distal myopathy 2
+702432006,"Diaphragmatic hernia, abnormal face and distal limb anomalies"
+702612001,Congenital aplasia of lung
+702613006,Aplasia of diaphragm
+702644002,Congenital stenosis of nasal pyriform aperture
+703199001,Laryngotracheal hemangioma
+703228009,Non-small cell lung cancer with mutation in epidermal growth factor receptor
+703230006,Non-small cell lung cancer without mutation in epidermal growth factor receptor
+703244000,Acquired stenosis of left pulmonary artery
+703245004,Acquired stenosis of right pulmonary artery
+70341005,Tuberculous laryngitis
+703468005,Bacterial tonsillitis
+703470001,Bacterial sinusitis
+70385007,Adenoviral pharyngoconjunctivitis
+703903005,Allergic rhinitis caused by Dermatophagoides farinae
+703937002,Allergic rhinitis caused by Dermatophagoides pteronyssinus
+703953004,Allergic asthma caused by Dermatophagoides pteronyssinus
+703954005,Allergic asthma caused by Dermatophagoides farinae
+704345008,Chronic interstitial pneumonia
+7063008,Gangrenous pneumonia
+706969002,Traumatic airway disruption
+707224005,Severe acute respiratory infection
+707337006,Primary adenocarcinoma of accessory sinus
+707339009,Primary adenocarcinoma of maxillary sinus
+707342003,Primary adenocarcinoma of ethmoidal sinus
+707343008,Primary adenocarcinoma of frontal sinus
+707344002,Primary adenocarcinoma of sphenoidal sinus
+707345001,Primary carcinoma of accessory sinus
+707346000,Primary carcinoma of ethmoidal sinus
+707347009,Primary carcinoma of maxillary sinus
+707348004,Primary carcinoma of sphenoidal sinus
+707349007,Primary carcinoma of frontal sinus
+707350007,Malignant melanoma of accessory sinus
+707351006,Institution-acquired respiratory infection
+707353009,Primary squamous cell carcinoma of accessory sinus
+707354003,Primary squamous cell carcinoma of maxillary sinus
+707355002,Primary squamous cell carcinoma of sphenoidal sinus
+707356001,Primary squamous cell carcinoma of frontal sinus
+707357005,Primary squamous cell carcinoma of laryngeal cartilage
+707358000,Primary squamous cell carcinoma of larynx
+707359008,Primary squamous cell carcinoma of ethmoidal sinus
+707360003,Primary lymphoepithelial carcinoma of larynx
+707361004,Malignant melanoma of frontal sinus
+707362006,Malignant melanoma of sphenoidal sinus
+707363001,Benign tumorlet of lung
+707364007,Xanthoma of lung
+707365008,Sclerosing hemangioma of lung
+707366009,Single sclerosing hemangioma of lung
+707367000,Multiple sclerosing hemangioma of lung
+707368005,Lipoma of lung
+707369002,Single hyalinizing granuloma of lung
+707370001,Multiple hyalinizing granuloma of lung
+707371002,Congenital stenosis of left pulmonary artery
+707372009,Congenital stenosis of right pulmonary artery
+707373004,Plasma cell granuloma of lung
+707374005,Leiomyoma of lung
+707375006,Single leiomyoma of lung
+707376007,Multiple leiomyoma of lung
+707377003,Primary signet ring cell carcinoma of trachea
+707378008,Primary myoepithelial carcinoma of trachea
+707379000,Primary mucoepidermoid carcinoma of trachea
+707380002,Primary salivary gland type carcinoma of trachea
+707381003,Solitary hamartoma of lung
+707382005,Multiple hamartoma of lung
+707383000,Primary mucinous cystadenocarcinoma of trachea
+707384006,Primary solid carcinoma of trachea
+707385007,Primary undifferentiated carcinoma of trachea
+707386008,Primary acinar cell carcinoma of trachea
+707387004,Fibroma of lung
+707388009,Primary squamous cell carcinoma of trachea
+707389001,Primary clear cell squamous cell carcinoma of trachea
+707390005,Primary basaloid squamous cell carcinoma of trachea
+707391009,Primary papillary squamous cell carcinoma of trachea
+707392002,Primary giant cell carcinoma of trachea
+707393007,Primary adenosquamous carcinoma of trachea
+707394001,Primary spindle cell carcinoma of trachea
+707395000,Primary adenocarcinoma of hypopharynx
+707396004,Primary oxyphilic adenocarcinoma of oropharynx
+707397008,Primary basal cell adenocarcinoma of oropharynx
+707398003,Primary polymorphous low grade adenocarcinoma of oropharynx
+707399006,Primary papillary adenocarcinoma of oropharynx
+707400004,Primary mucinous adenocarcinoma of oropharynx
+707401000,Primary clear cell adenocarcinoma of oropharynx
+707402007,Primary adenocarcinoma of oropharynx
+707403002,Primary fetal adenocarcinoma of lung
+707404008,Primary mixed subtype adenocarcinoma of lung
+707405009,Primary adenosquamous carcinoma of lung
+707406005,Primary mucoepidermoid carcinoma of hypopharynx
+707407001,Primary signet ring cell carcinoma of lung
+707408006,Primary small cell non-keratinizing squamous cell carcinoma of lung
+707409003,Primary acinar cell carcinoma of lung
+707410008,Primary solid carcinoma of lung
+707411007,Primary papillary adenocarcinoma of lung
+707415003,Tracheobronchial granular cell myoblastoma
+707416002,Solitary tracheobronchial papilloma
+707421004,Primary undifferentiated carcinoma of larynx
+707422006,Primary spindle cell squamous cell carcinoma of larynx
+707423001,Primary basaloid carcinoma of larynx
+707424007,Primary adenosquamous cell carcinoma of larynx
+707425008,Primary adenoid squamous cell carcinoma of larynx
+707426009,Primary papillary squamous cell carcinoma of larynx
+707427000,Primary verrucous carcinoma of larynx
+707429002,Overlapping squamous cell carcinoma of larynx
+707430007,Overlapping squamous cell carcinoma of laryngeal cartilage
+707433009,Lymphangioleiomyomatosis due to tuberous sclerosis syndrome
+707434003,Pulmonary fibrosis due to Hermansky-Pudlak syndrome
+707435002,Neuroendocrine cell hyperplasia of infancy
+707440005,Exercise induced bronchospasm
+707441009,Milk-induced pulmonary disease in infant
+707442002,Congenital pulmonary alveolar proteinosis
+707443007,Autoimmune pulmonary alveolar proteinosis
+707444001,Uncomplicated asthma
+707445000,Exacerbation of mild persistent asthma
+707446004,Exacerbation of moderate persistent asthma
+707447008,Exacerbation of severe persistent asthma
+707448003,Influenza caused by Influenza A virus subtype H7N9
+707449006,Exogenous lipoid pneumonia
+707451005,Primary adenocarcinoma of lung
+707452003,Primary mucinous adenocarcinoma of lung
+707453008,Primary clear cell squamous cell carcinoma of lung
+707454002,Primary basaloid squamous cell carcinoma of lung
+707455001,Primary papillary squamous cell carcinoma of lung
+707456000,Primary undifferentiated carcinoma of lung
+707457009,Primary spindle cell carcinoma of lung
+707458004,Primary pleomorphic carcinoma of lung
+707460002,Primary pseudosarcomatous carcinoma of lung
+707464006,Primary myoepithelial carcinoma of lung
+707465007,Primary mucoepidermoid carcinoma of lung
+707466008,Primary adenoid cystic carcinoma of lung
+707467004,Primary salivary gland type carcinoma of lung
+707468009,Primary mixed mucinous and non-mucinous bronchiolo-alveolar carcinoma of lung
+707469001,Primary non-mucinous bronchiolo-alveolar carcinoma of lung
+707470000,Primary mucinous bronchiolo-alveolar carcinoma of lung
+707471001,Primary clear cell adenocarcinoma of trachea
+707472008,Primary papillary adenocarcinoma of trachea
+707473003,Primary mucinous adenocarcinoma of trachea
+707475005,Primary adenocarcinoma of trachea
+707476006,Stenosis of right pulmonary artery as complication of procedure
+707477002,Stenosis of left pulmonary artery as complication of procedure
+707479004,Primary adenocarcinoma of subglottis
+707481002,Primary basaloid squamous cell carcinoma of hypopharynx
+707482009,Primary papillary squamous cell carcinoma of hypopharynx
+707483004,Primary undifferentiated carcinoma of hypopharynx
+707484005,Primary adenoid squamous cell carcinoma of hypopharynx
+707485006,Primary adenosquamous carcinoma of hypopharynx
+707486007,Primary basaloid carcinoma of hypopharynx
+707487003,Primary giant cell carcinoma of hypopharynx
+707489000,Primary spindle cell squamous cell carcinoma of hypopharynx
+707490009,Primary verrucous carcinoma of hypopharynx
+707491008,Primary lymphoepithelial carcinoma of hypopharynx
+707492001,Primary squamous cell carcinoma of hypopharynx
+707493006,Primary lymphoepithelial carcinoma of trachea
+707494000,Primary verrucous carcinoma of trachea
+707495004,Primary squamous cell adenoid carcinoma of trachea
+707503004,Pneumonia caused by Schistosoma mansoni
+707507003,Pneumonia caused by Schistosoma japonicum
+707508008,Pneumonia caused by Schistosoma haematobium
+707509000,Tracheobronchitis caused by Aspergillus
+707510005,Secondary pulmonary alveolar proteinosis
+707511009,Uncomplicated mild persistent asthma
+707512002,Uncomplicated moderate persistent asthma
+707513007,Uncomplicated severe persistent asthma
+707528007,Primary squamous cell carcinoma of nasopharynx
+707529004,Overlapping squamous cell carcinoma of oropharynx
+707530009,Cystic hamartoma of lung and kidney
+707532001,Primary squamous cell carcinoma of posterior wall of oropharynx
+707534000,Chronic lung disease due to surfactant disorder
+707535004,Primary squamous cell carcinoma of lateral wall of oropharynx
+707537007,Primary squamous cell carcinoma of anterior surface of epiglottis
+707538002,Primary squamous cell carcinoma of vallecula
+707539005,Primary adenoid cystic carcinoma of hypopharynx
+707540007,Acute respiratory distress in newborn
+707541006,Acute respiratory distress in newborn with surfactant disorder
+707551007,Pulmonary interstitial glycogenosis
+707552000,Acute exogenous lipoid pneumonia
+707553005,Chronic exogenous lipoid pneumonia
+70756004,Bronchial atresia with segmental pulmonary emphysema
+707575007,Primary squamous cell carcinoma of supraglottis
+707576008,Primary squamous cell carcinoma of subglottis
+707579001,Primary basaloid squamous cell carcinoma of oropharynx
+707580003,Primary basaloid carcinoma of oropharynx
+707581004,Primary papillary squamous cell carcinoma of oropharynx
+707582006,Primary spindle cell squamous cell carcinoma of oropharynx
+707583001,Primary adenosquamous carcinoma of oropharynx
+707584007,Primary lymphoepithelial carcinoma of oropharynx
+707585008,Primary squamous cell carcinoma of oropharynx
+707586009,Primary myoepithelial carcinoma of oropharynx
+707587000,Primary carcinoma ex pleomorphic adenoma of oropharynx
+707588005,Primary epithelial-myoepithelial carcinoma of oropharynx
+707589002,Primary cystadenocarcinoma of oropharynx
+707590006,Primary acinar cell carcinoma of oropharynx
+707591005,Primary mucoepidermoid carcinoma of oropharynx
+707592003,Primary infiltrating duct carcinoma of oropharynx
+707593008,Primary salivary gland-type tumour of oropharynx
+707594002,Neuroendocrine neoplasm of lung
+707595001,Primary mucinous cystadenocarcinoma of lung
+707596000,Primary carcinosarcoma of lung
+707625001,Neuroendocrine neoplasm of larynx
+707627009,Primary salivary gland type carcinoma of hypopharynx
+707628004,Overlapping squamous cell carcinoma of hypopharynx
+707660007,Primary giant cell carcinoma of larynx
+707662004,Primary basaloid squamous cell carcinoma of larynx
+707664003,Primary squamous cell carcinoma of glottis
+707670009,Pleuropulmonary blastoma
+707671008,Pleuropulmonary blastoma type I
+707672001,Pleuropulmonary blastoma type II
+707673006,Pleuropulmonary blastoma type III
+707674000,Primary malignant epithelial neoplasm of trachea
+707686002,Primary squamous cell carcinoma of posterior wall of hypopharynx
+707697002,Primary squamous cell carcinoma of hypopharyngeal aspect of aryepiglottic fold
+707703001,Primary squamous cell carcinoma of postcricoid region
+707704007,Primary squamous cell carcinoma of pyriform sinus
+707705008,Nonkeratinizing carcinoma of the nasopharynx
+707766007,Exocrine pancreatic manifestation co-occurrent and due to cystic fibrosis
+707772007,Pulmonary nodule following infection by Coccidioides
+707836006,Pulmonary cavity following infection by Coccidioides
+707979007,Acute severe exacerbation of severe persistent asthma
+707980005,Acute severe exacerbation of moderate persistent asthma
+707981009,Acute severe exacerbation of mild persistent asthma
+708022000,Congenital pulmonary lymphatic dysplasia syndrome
+708025003,Pyopneumothorax following infection by Coccidioides
+708026002,Chronic pneumonitis of infancy
+708028001,Congenital pulmonary alveolar capillary dysplasia
+708029009,Congenital pulmonary acinar dysplasia
+708030004,Pulmonary emphysema co-occurrent with fibrosis of lung
+708031000,Idiopathic eosinophilic pneumonia
+708038006,Acute exacerbation of asthma
+708090002,Acute severe exacerbation of asthma
+708093000,Acute exacerbation of immunoglobulin E-mediated allergic asthma
+708094006,Acute exacerbation of intrinsic asthma
+708095007,Acute severe exacerbation of immunoglobin E-mediated allergic asthma
+708096008,Acute severe exacerbation of intrinsic asthma
+709031009,Malignant neoplasm of superior wall of nasopharynx
+709109004,Hypercapnic respiratory failure
+709110009,Acute hypercapnic respiratory failure
+709111008,Acute hypoxemic respiratory failure
+709458007,Laceration of nasal septum with complication
+709459004,Laceration of nasal sinus with complication
+709663002,Supraglottitis
+7097001,Streptococcal pleurisy with effusion
+70976000,Viral epiglottitis
+710727006,Enlargement of root of tongue
+710729009,Woody tongue
+71086005,Leukoplakia of vocal cords
+711379004,Interstitial lung disease due to connective tissue disease
+711414003,Primary clear cell adenocarcinoma of lung
+71186008,Croup
+71193007,Fibrosis of lung caused by radiation
+712493008,Enophthalmos co-occurrent and due to silent sinus syndrome
+71255007,Adenoviral laryngotracheobronchitis
+712648008,Cyst of epiglottis
+712649000,Prolapse of epiglottis
+713083002,Influenza caused by Influenza A virus subtype H5
+713084008,Pneumonia caused by Human coronavirus
+713175006,Postoperative bronchitis
+713244007,Drug induced pulmonary fibrosis
+713419002,Intraoperative cardiorespiratory arrest
+713484001,Disorder of respiratory system co-occurrent with human immunodeficiency virus infection
+713525001,Recurrent bacterial pneumonia
+713526000,Recurrent bacterial pneumonia co-occurrent with human immunodeficiency virus infection
+713544008,Bacterial pneumonia co-occurrent with human immunodeficiency virus infection
+71363005,Spasm of the cricopharyngeus muscle
+713721008,Hydrothorax as complication of peritoneal dialysis
+714084001,Infection of respiratory tract caused by parasite
+71418005,Cyst of nasopharynx
+714203003,Acute bronchitis co-occurrent with bronchiectasis
+71450000,Contact ulcer of vocal folds
+71456006,Closed fracture of larynx
+71457002,Oropharyngeal dysphagia
+715069001,Aspiration pneumonitis of fetus
+715219001,Familial spontaneous pneumothorax
+715593000,Infection of nasal cavity caused by Genus Candida
+715659006,Diphtheria of respiratory system
+715882005,Severe acute respiratory syndrome of upper respiratory tract
+7159003,Pulmonary necrosis
+716088000,Follicular hamartoma with alopecia and cystic fibrosis syndrome
+716166002,Microcornea with glaucoma and absent frontal sinus syndrome
+716198008,Growth delay with hydrocephalus and lung hypoplasia syndrome
+716673006,Infection of upper respiratory tract caused by fungus
+716712004,Secondary pulmonary hemosiderosis
+716771000,Chronic hiccup
+717231003,Periodic fever and aphthous stomatitis with pharyngitis and cervical lymphadenitis syndrome
+71727007,Induration of lung
+717814004,Glossopalatine ankylosis
+717921000000107,Bilateral trilobed lung
+717931000000109,Bilateral bilobed lung
+718004,Acute bronchiolitis with obstruction
+718089001,Acute respiratory failure requiring reintubation following extubation
+718097008,Nodular lymphoid hyperplasia of lung
+718200007,Primary pulmonary lymphoma
+719163006,Accessory anterior naris
+719218000,Cryptogenic organizing pneumonia
+71926009,Infective pneumonia acquired prenatally
+719282008,Primary ciliary dyskinesia and retinitis pigmentosa syndrome
+719379001,Microcephalus with cardiac defect and lung malsegmentation syndrome
+719452004,Congenital bronchobiliary fistula
+719522009,Infection of upper respiratory tract caused by Candida co-occurrent with human immunodeficiency virus infection
+719590007,Influenza caused by seasonal influenza virus
+719865001,Influenza caused by pandemic influenza virus
+719976001,Glaucoma and sleep apnea syndrome
+720009004,Intractable diarrhea with choanal atresia and eye anomaly syndrome
+720394008,Congenital tracheobiliary fistula
+720401009,Cystic fibrosis with gastritis and megaloblastic anemia syndrome
+720511000,Arrhinia with choanal atresia and microphthalmia syndrome
+72061003,Open wound of pharynx with complication
+720640005,"Choanal atresia, hearing loss, cardiac defect, craniofacial dysmorphism syndrome"
+721076000,Siegler Brewer Carey syndrome
+721095007,"Diaphragmatic defect, limb deficiency, skull defect syndrome"
+721560002,Primary adenocarcinoma of nasal cavity
+721586007,Pharyngotonsillitis caused by Human herpes simplex virus
+721605003,Primary squamous cell carcinoma of overlapping lesion of accessory sinuses
+721606002,Primary adenocarcinoma of overlapping lesion of accessory sinuses
+721607006,Primary undifferentiated carcinoma of oropharynx
+721741006,Sinusitis caused by Streptococcus pneumoniae
+721755003,Sinusitis caused by Haemophilus influenzae
+721804002,Infection of lung caused by Pneumocystis
+721976003,Lung agenesis with heart defect and thumb anomaly syndrome
+721977007,"Lung fibrosis, immunodeficiency, 46,XX gonadal dysgenesis syndrome"
+72204002,Respiratory syncytial virus laryngotracheobronchitis
+72211003,Laryngeal granuloma
+722425009,Reactive oxygen species 1 positive non-small cell lung cancer
+722458000,Matthew Wood syndrome
+722461004,Meacham syndrome
+722510006,Primary rhabdomyosarcoma of pharynx
+722511005,Primary rhabdomyosarcoma of respiratory organ
+722527003,Primary malignant neuroendocrine neoplasm of bronchus
+722528008,Primary malignant neuroendocrine neoplasm of lung
+722529000,Primary malignant epithelial neoplasm of nasopharynx
+722530005,Primary squamous cell carcinoma of pharyngeal tonsil
+722579002,Neonatal traumatic hemorrhage of trachea following procedure on lower respiratory tract
+722672002,Primary squamous cell carcinoma of base of tongue
+722673007,Primary squamous cell carcinoma of lingual tonsil
+72270005,Collagenous pneumoconiosis
+722827008,Primary synovial sarcoma of respiratory organ
+722911000,Respiratory instability of prematurity
+722912007,Congenital pulmonary hypoplasia due to prolonged premature rupture of membranes
+722913002,Congenital pulmonary hypoplasia due to lung space occupying lesion
+722914008,Central neonatal apnea
+722915009,Apnea of newborn due to neurological injury
+722916005,Neonatal hypotonia of hypopharynx
+722917001,Congenital cyst of aryepiglottic fold
+722918006,Acquired vocal cord paralysis in newborn
+72292009,Congenital anomaly of larynx
+722922001,Neonatal epistaxis
+72301000119103,Asthma in pregnancy
+723111007,Neonatal mass of hypopharynx
+723182009,Primary squamous cell carcinoma of nasal cavity
+723301009,Squamous non-small cell lung cancer
+723541004,Disease of respiratory system complicating pregnancy
+723720008,"Sex reversion, kidney, adrenal and lung dysgenesis syndrome"
+723829000,"Pulmonary fibrosis, hepatic hyperplasia, bone marrow hypoplasia syndrome"
+723880004,Abscess of upper respiratory tract
+724056005,Malignant neoplasm of lower lobe of right lung
+724058006,Malignant neoplasm of upper lobe of left lung
+724059003,Malignant neoplasm of lower lobe of left lung
+724060008,Malignant neoplasm of right upper lobe of lung
+724068001,Pericardial and diaphragmatic defect syndrome
+72409005,Rhinoscleroma
+724178000,Laryngeal abductor paralysis with intellectual disability syndrome
+724208006,Keutel syndrome
+724229002,Apnea of infancy
+72424001,Congenital absence of diaphragm
+72430001,Gangrenous pharyngitis
+724437007,Compression of trachea and esophagus co-occurrent and due to congenital anomaly of aortic arch
+724498004,Pneumonia caused by Chlamydia pneumoniae
+724499007,Idiopathic acute eosinophilic pneumonia
+724500003,Idiopathic chronic eosinophilic pneumonia
+724502006,Respiratory disorder co-occurrent and due to microscopic polyangiitis
+724506009,Central sleep apnea co-occurrent with Cheyne Stokes respiration
+724509002,Sleep-related hypoventilation caused by substance
+725052002,Fetal cystic fibrosis
+725415009,House allergic alveolitis
+725916003,Acute sinusitis caused by fungus
+725917007,Acute sinusitis caused by virus
+72656004,Granulomatous pneumonia
+726653000,Malignant carcinoid tumor of bronchus
+72735007,Interlobar pleurisy
+72854003,Aspiration pneumonia due to near drowning
+72948000,Congenital anomaly of epiglottis
+73144008,Pneumoconiosis caused by talc
+73160007,Diaphragmitis
+73180008,Sprain of ligament of cricoarytenoid joint
+73198007,Bacterial pleurisy
+73237007,Chronic ethmoidal sinusitis
+733051000,Pneumonia caused by Gram positive bacteria
+733054008,Acute lung injury during and following administration of blood product
+733144006,Malignant epithelial neoplasm of bronchus
+733170007,Chronic aspergillosis of paranasal sinus
+733171006,Chronic pulmonary aspergillosis
+733183008,Acquired neonatal multiple cysts of lung
+733218001,Contusion of thoracic trachea
+733219009,Laceration of pleura
+733345003,Primary squamous cell carcinoma of pharynx
+733358002,Primary squamous cell carcinoma of respiratory system
+73342002,Obstruction of trachea
+733453005,"Congenital nephrotic syndrome, interstitial lung disease, epidermolysis bullosa syndrome"
+733497009,Chronic suppuration of bronchus
+73375005,Ulcer of larynx
+733858005,Acute severe refractory exacerbation of asthma
+73414003,Haemophilus influenzae laryngotracheobronchitis
+73430006,Sleep apnea
+7343008,Liparitosis
+734477008,Congenital hydrothorax
+73448002,Fish-meal workers' lung
+73452002,Abscess of lung
+73477001,Traumatic pneumohemothorax with open wound into thorax
+734839006,Displacement of dental structure into maxillary sinus
+734904007,Life threatening acute exacerbation of asthma
+734905008,Moderate acute exacerbation of asthma
+735386008,Acute hypoxemic respiratory failure co-occurrent with acute hypercapnic respiratory failure
+735445000,Allergic disorder of respiratory tract
+735446004,Hypersensitivity disorder of respiratory tract
+735450006,Primary malignant neuroepitheliomatous neoplasm of nasal cavity
+735454002,Allergic bronchospasm caused by dietary substance
+735461003,Tracheal dyskinesia
+735462005,Ossification of trachea
+735463000,Perichondritis of trachea
+735464006,Acute noninfective bronchitis
+735465007,Protracted bronchitis caused by bacterium
+735466008,Pneumonitis due to aspiration of blood
+735495004,Perinatal hemorrhage of lung due to traumatic injury
+735532001,Infection of lung caused by Echinococcus
+735588005,Uncomplicated allergic asthma
+735589002,Uncomplicated non-allergic asthma
+735740009,Infection causing tracheitis in neonate
+735747007,Tracheo-bronchial malacia in neonate
+735905002,Multiple tracheobronchial mucus plugs
+7361000175106,Acute-on-chronic hypercapnic respiratory failure
+736499003,Polyp of nasal cavity and/or nasal sinus
+736500007,Polyp of nasal cavity
+73651003,Diaphragmatic hernia with gangrene AND obstruction
+73659001,Leukoplakia of larynx
+736591003,Polyp of bilateral nasal cavities
+736635001,Polyp of left nasal cavity
+736636000,Polyp of right nasal cavity
+737179007,Mucocele of nasal cavity
+737180005,Chronic bronchiolitis
+737181009,Interstitial lung disease due to systemic disease
+737182002,Interstitial lung disease due to granulomatous disease
+737183007,Interstitial lung disease due to metabolic disease
+737184001,Interstitial lung disease co-occurrent and due to systemic vasculitis
+737185000,Congenital hyperplasia of lung
+737235001,Crushing injury of trachea
+73725006,Thickening of pleura
+7391000119103,Primary adenoid cystic carcinoma of nasopharynx
+7393007,Disorder of nasal sinus
+73995006,Pulmonary paracoccidioidomycosis
+74015002,Pneumonopathy due to inhalation of dust
+7436001,Alveolar pneumopathy
+74372003,Gonorrhea of pharynx
+74387008,Tuberculosis of hilar lymph nodes
+74417001,Mucopurulent chronic bronchitis
+744853008,Aspiration of foreign body into lung
+7457009,Chronic tracheitis
+74644004,Influenza with encephalopathy
+74808006,Acquired deviated nasal septum
+7481002,Congenital atresia of epiglottis
+750161000000109,Congenital true tracheal bronchus
+75388006,Echinococcus granulosus infection of lung
+75426006,Aspiration pneumonia caused by regurgitated food
+7548000,Rheumatic pneumonia
+75498004,Acute bacterial sinusitis
+7550008,Transitory tachypnea of newborn
+75547007,Stenosis of larynx
+75570004,Viral pneumonia
+75589004,Nasopharyngeal diphtheria
+75689006,Pleural effusion associated with hepatic disorder
+75769002,Open wound of nasal cavity without complication
+75860007,Disorder of pharynx
+76074006,Agenesis of right lung
+76090006,Pittsburgh pneumonia
+76157009,Bituminosis
+762195006,Congenital bronchogenic cyst
+762269004,Classical cystic fibrosis
+762270003,Atypical cystic fibrosis
+762271004,Subclinical cystic fibrosis
+762287001,Mixed neonatal apnea
+762462005,Bronchospasm caused by drug
+762521001,Exacerbation of allergic asthma
+762618008,Bronchiolitis obliterans syndrome due to and after lung transplantation
+76280006,Rudimentary tracheal bronchus
+763532008,Familial nasal acilia
+763617006,Congenital lymphangioma of larynx
+763829004,Oculopharyngodistal myopathy
+763888005,Necrotizing pneumonia caused by Panton-Valentine leukocidin producing Staphylococcus aureus
+764724007,Paralysis of left vocal cord
+764726009,Paralysis of right vocal cord
+764873005,Perioperative pulmonary aspiration
+765151006,Asphyxiophilia
+76542006,Fracture of frontal sinus
+765751002,Autoimmune encephalopathy with parasomnia and obstructive sleep apnea
+765763007,Congenital cyst of larynx
+76630008,Fibrinopurulent pleurisy
+76651006,Pneumococcal pharyngitis
+76653009,Acute empyema of maxillary sinus
+76691000119101,Ulcer of tonsil due to amygdalolith
+767029004,Congenital dysplasia of left lobe of lung co-occurrent with congenital vascular malformation
+767030009,Congenital dysplasia of right lobe of lung co-occurrent with congenital vascular malformation
+767326000,Congenital absence of left hemidiaphragm
+767327009,Congenital absence of right hemidiaphragm
+7678002,Cytomegaloviral pneumonia
+76846002,Pulmonary endarteritis
+76877000,Injury of diaphragm with open wound into cavity
+76889003,Failed attempted abortion with cerebral anoxia
+76890007,Laceration of lung without open wound into thorax
+770674007,Tubercular lesion of lung
+770727008,Spinal muscular atrophy with respiratory distress type 2
+770760006,16q24.1 microdeletion syndrome
+77097004,Oculopharyngeal muscular dystrophy
+771081007,Distal hereditary motor neuropathy type 7
+771185000,"Imperforate oropharynx, costovertebral anomalies syndrome"
+771306007,"Hereditary fibrosing poikiloderma, tendon contractures, myopathy, pulmonary fibrosis syndrome"
+77138008,Fibrinous pleurisy
+772810003,Influenza caused by Influenza A virus subtype H3N2
+772828001,Influenza caused by Influenza A virus subtype H5N1
+772839003,Pneumonia caused by Influenza A virus
+773577009,"Corneal intraepithelial dyskeratosis, palmoplantar hyperkeratosis, laryngeal dyskeratosis syndrome"
+77375009,Adductor spastic dysphonia of conversion reaction
+774068004,"AT-hook DNA binding motif containing 1-related intellectual disability, obstructive sleep apnea, mild dysmorphism syndrome"
+77593006,Congenital bronchiectasis
+77668003,Isolated tracheal tuberculosis
+77690003,Interstitial emphysema of lung
+77716004,Storage disease of the lung
+77753005,Lupus disease of the lung
+77919000,Acute sphenoidal sinusitis
+77920006,Pulmonary gangrene
+78144005,Pulmonary hemorrhage
+782513000,Acute severe exacerbation of allergic asthma
+782520007,Exacerbation of allergic asthma due to infection
+782722002,"Global developmental delay, lung cysts, overgrowth, Wilms tumor syndrome"
+78275009,Obstructive sleep apnea syndrome
+782761005,Subacute invasive pulmonary aspergillosis
+782774004,Atypical Meigs syndrome
+783182004,Chronic respiratory distress with surfactant metabolism deficiency
+78430008,Adenoviral pharyngitis
+784410003,Vocal cord hemorrhage
+785345002,Pneumoconiosis caused by sisal dust
+785728005,Bronchitis co-occurrent with wheeze
+785736001,Chronic bronchitis co-occurrent with wheeze
+785737005,Bronchitis co-occurrent with chronic wheeze
+785744001,Bronchitis co-occurrent with acute wheeze
+785745000,Acute bronchitis co-occurrent with wheeze
+786836003,Near fatal asthma
+78723001,Cannabinosis
+78737005,Frontal sinusitis
+787603009,Complete paralysis of left vocal cord
+787604003,Complete paralysis of right vocal cord
+788869006,Atresia of esophagus co-occurrent with esophagobronchial fistula
+78887005,Seropurulent pleurisy
+78895009,Congenital pneumonia
+788964000,Infestation of larynx caused by larva of order Diptera
+788997004,Obstruction of tracheobronchial tree caused by Aspergillus infection
+789009003,Primary central sleep apnea of prematurity
+78911000,Parainfluenza virus pharyngitis
+789574002,Acute exacerbation of idiopathic pulmonary fibrosis
+789694004,Well-differentiated papillary mesothelioma of pleura
+789695003,Non-mucinous adenocarcinoma in situ of lung
+79231000,Hydrothorax
+79479005,Respiratory syncytial virus bronchitis
+79688008,Respiratory obstruction
+79877004,Stenosis of bronchus
+79958002,Grain fever
+79997005,Calcification of bronchus
+80003002,Tuberculous pneumonia
+80010008,Isolated bronchial tuberculosis
+80126007,Plummer-Vinson syndrome
+80142000,Perforation of nasal septum
+80257001,Acute bronchitis with bronchospasm
+8032007,Congenital anomaly of thyroid cartilage
+80384002,Epiglottitis
+80423007,Spontaneous pneumothorax
+8047003,Open wound of nasal sinus without complication
+805002,Pneumoconiosis caused by silica
+805261000000101,Bronchiolitis obliterans syndrome after lung transplantation
+80600003,Acute suppuration of nasal sinus
+80602006,Nodular tuberculosis of lung
+80614003,Prolonged pulmonary alveolitis
+80825009,Congenital hypoplasia of lung
+81075000,Pleural effusion associated with pulmonary infection
+81089005,Calcification of trachea
+81164001,Ornithosis with pneumonia
+81339006,Secondary syphilis of tonsil
+81423003,Cystic fibrosis without meconium ileus
+81445002,Adhesion of diaphragm
+81524006,Influenza caused by Influenza C virus
+81554001,Tuberculosis of lung with involvement of bronchus
+81566007,Ulcer of bronchus
+81624004,Pharyngeal paralysis
+81771002,Opitz-Frias syndrome
+818951009,Congenital respiratory biliary fistula
+82228008,Staphylococcal pharyngitis
+82272006,Common cold
+8229003,Vasomotor rhinitis
+822969007,Acinar cell cystadenocarcinoma of lung
+82297005,Congestion of nasal sinus
+82428005,Open wound of larynx with trachea without complication
+82454002,Carbuncle of nasal septum
+8247009,Berylliosis
+82690000,Suppurative laryngitis
+82988003,Open wound of trachea with complication
+829972004,Diffuse hemorrhage of pulmonary alveolar
+829976001,Thunderstorm asthma
+830055006,Anaplastic lymphoma kinase fusion oncogene negative non-small cell lung cancer
+830060005,Reactive oxygen species 1 negative non-small cell lung cancer
+830151004,Anaplastic lymphoma kinase fusion oncogene positive non-small cell lung cancer
+830256002,Glomangiopericytoma of nasal sinus
+83031000119105,Congenital malformation of nasal septum
+83035003,Chylothorax
+83271005,Chronic laryngotracheitis
+83336007,Rupture of diaphragm
+83457000,Cylindrical bronchiectasis
+83608006,Aspiration pneumonia caused by inhalation of milk
+836477007,Chronic emphysema caused by vapor
+836478002,Subacute obliterative bronchiolitis caused by chemical fumes
+836479005,Subacute obliterative bronchiolitis caused by vapor
+83727005,Hemorrhagic pulmonary infarction
+838297005,Adenoma of bronchial mucous gland
+838298000,Mucinous cystadenoma of bronchial mucous gland
+838367000,Allergic rhinosinusitis caused by Aspergillus
+838370001,Agenesis of bilateral lungs
+84004001,Radiation pneumonitis
+840350008,Chronic obliterative bronchiolitis caused by chemical fumes
+840351007,Chronic obliterative bronchiolitis caused by vapor
+840426005,Developmental anomaly of bilateral pleurae
+840493007,Congenital lobar emphysema of bilateral lungs
+840510006,Congenital absence of epiglottis
+840521002,Acute pulmonary edema caused by fume
+840522009,Acute pulmonary edema caused by vapor
+840728005,Pneumonitis caused by inhalation of oil
+84160009,Laryngeal hemiplegia
+84353005,Pulmonary disease caused by Mycobacteria
+84409004,Fetid chronic bronchitis
+8442000,Purulent rhinitis
+84437006,Acute pneumothorax
+844575001,Respiratory angioedema
+846605006,Drug-induced pulmonary toxicity
+846626006,Inflammation of upper respiratory tract caused by fumes
+846627002,Inflammation of upper respiratory tract caused by vapors
+846629004,Pneumonitis caused by fumes
+846630009,Pneumonitis caused by vapors
+846634000,Chronic respiratory condition caused by fumes
+846635004,Chronic respiratory condition caused by vapors
+846636003,Chronic respiratory condition caused by chemical fumes
+846637007,Chronic pulmonary fibrosis caused by chemical vapors
+846638002,Bronchitis caused by chemical fumes
+846639005,Bronchitis caused by vapors
+846640007,Respiratory condition caused by chemical fumes
+846641006,Respiratory condition caused by vapors
+846642004,Respiratory condition caused by chemical fumes and vapors
+847091000000104,Acute non-infective exacerbation of chronic obstructive pulmonary disease
+84753008,Pneumonia in systemic mycosis
+849571000000102,Acute bacterial laryngitis
+85083002,Streptococcal laryngitis
+8519009,Acute tracheitis with obstruction
+85225000,Cyst of nasal sinus
+85420008,Streptococcal pleurisy
+85426002,Bacterial pleurisy with effusion
+85438006,Diatomaceous earth disease
+85469005,Hypostatic pneumonia
+8549006,Desquamative interstitial pneumonia
+8550001000004107,Fracture of bone of nasal sinus
+8555001,Syphilis of lung
+85597002,Choking caused by phlegm in larynx
+85721000119105,Central sleep apnea due to periodic breathing
+85761009,Byssinosis
+85832003,Parainfluenza virus laryngitis
+859041000000103,Exacerbation of cystic fibrosis
+85915003,Laryngotracheobronchitis
+860790001,Dehiscence of anastomosis of mucous membrane of bronchus
+860791002,Pleural effusion due to neoplastic disease
+860792009,Pleural effusion due to malignant neoplastic disease
+860890006,Fetal interstitial neoplasm of lung
+86092005,Cystic fibrosis with meconium ileus
+86094006,Chronic rhinitis
+86157004,Occupational lung disease
+86204009,Immotile cilia syndrome
+86263001,Cobaltosis
+86287004,Hypertrophic rhinitis
+86294001,Pneumonitis caused by inhalation of essence
+863977001,Pleural effusion due to disorder of pancreas
+863978006,Pleural effusion due to pancreatitis
+86423004,Polyp of larynx
+86555001,Cystic fibrosis of the lung
+865890009,Obstruction of pharynx caused by food
+865891008,Obstruction of pharynx caused by foreign body
+865892001,Obstruction of respiratory tract due to food lodged in esophagus
+865893006,Compression of trachea due to food lodged in esophagus
+865908007,Interruption of respiration due to food lodged in esophagus
+866103007,Interstitial lung disease due to juvenile polymyositis
+866113004,Lymphangioma of larynx
+86638007,Maple-bark strippers' lung
+86649001,Meconium pneumonitis
+86680006,Ruptured emphysematous bleb of lung
+866881000000101,Chronic asthma with fixed airflow obstruction
+866901000000103,Eosinophilic bronchitis
+86773000,Edematous laryngitis
+8691000175105,Multilobar lung infiltrate
+8701000175105,Single lobe lung infiltrate
+870276004,Plastic bronchitis after cardiac procedure
+870327007,Papillary squamous cell carcinoma of nasopharynx
+87043009,Cerebral anoxia after obstetrical surgery AND/OR other procedure including delivery
+870573008,Interstitial pneumonia with autoimmune features
+870590002,Acute hypoxemic respiratory failure due to disease caused by Severe acute respiratory syndrome coronavirus 2
+87119009,Congenital cystic lung
+87153008,Pulmonary alveolar microlithiasis
+871586006,Pneumothorax due to and following procedure
+871588007,Innominate artery compression syndrome
+871841000,Pulmonary hemorrhage due to leptospirosis
+87317003,Respiratory arrest
+87326000,Hypertrophic pharyngitis
+87433001,Pulmonary emphysema
+87500009,Hilar lymphadenopathy
+87695000,Necrotizing bronchiolitis
+878818001,Pharyngotonsillitis
+878820003,Rhinoconjunctivitis
+878831006,Submucosal hemorrhage of vocal cord
+87909002,Hard metal pneumoconiosis
+87947007,Open wound of larynx with complication
+879963005,Exacerbation of bronchiectasis caused by infection
+88036000,Primary pulmonary coccidioidomycosis
+880529761000119102,Lower respiratory infection caused by Severe acute respiratory syndrome coronavirus 2
+88075009,Disorder of pleura
+88171000119100,Acute adenoiditis
+882784691000119100,Pneumonia caused by Severe acute respiratory syndrome coronavirus 2
+88348008,Maxillary sinusitis
+88386004,Congenital anomaly of diaphragm
+88539002,Cricopharyngeus muscle dysfunction
+88548007,Sinus barotrauma
+88687001,Manganese pneumonitis
+88835002,Closed fracture of thyroid cartilage
+88850006,Chronic pansinusitis
+88936002,Elevated diaphragm
+890216002,Acquired laryngomalacia
+890219009,Congenital anomalous tracheobronchial branching
+890228005,Congenital atresia of bilateral anterior nares
+890346002,Holoprosencephaly co-occurrent with congenital nasal pyriform aperture stenosis
+890354000,Congenital subglottic stenosis Cotton-Meyer grade 3
+890355004,Congenital subglottic stenosis Cotton-Meyer grade 4
+890382007,Choanal atresia of bilateral nasal passages
+890386005,Congenital subglottic stenosis Cotton-Meyer grade 1
+890387001,Congenital subglottic stenosis Cotton-Meyer grade 2
+890388006,Congenital pulmonary airway malformation type 4
+890389003,Congenital stenosis of the tracheobronchial tree
+890390007,Congenital pulmonary airway malformation type 2
+890391006,Congenital pulmonary airway malformation type 3
+890392004,Congenital pulmonary airway malformation type 1
+890394003,Congenital pulmonary airway malformation type 0
+890398000,Congenital bronchocele
+890424009,Secondary congenital hyperplasia of bilateral lungs
+890427002,Primary congenital hyperplasia of bilateral lungs
+890428007,Primary congenital hypoplasia of bilateral lungs
+890528009,Primary malignant neoplasm of left lung
+890529001,Primary malignant neoplasm of right lung
+890534002,Primary malignant neoplasm of bilateral lungs
+89099002,Chronic allergic bronchitis
+89194009,Acute abscess of maxillary sinus
+89397007,Pulmolithiasis
+89549007,Catarrhal bronchitis
+89687005,Postimmersion-submersion syndrome
+897656009,Rhinosinusitis
+897657000,Chronic rhinosinusitis
+89927005,Paralysis of larynx
+90070003,Pneumothorax due to trauma
+90085009,Varicose veins of nasal septum with ulcer
+90117007,Tuberculous fibrosis of lung
+90176007,Tonsillitis
+90610005,Interstitial pulmonary fibrosis of prematurity
+90623003,Aluminosis of lung
+90685008,Polyp of sphenoidal sinus
+90727007,Pleural effusion due to congestive heart failure
+9078005,Polyp of vocal cord
+9095002,Adiaspiromycosis caused by Emmonsia crescens
+90979004,Chronic tonsillitis
+91036007,Complete atelectasis
+91038008,Acute frontal sinusitis
+91443007,Accessory bronchus
+91581004,Perinatal respiratory failure
+91842005,Abnormal lung lobation
+91920008,Congenital absence of vomer
+91925003,Allergic rhinitis caused by animals
+91926002,Allergic rhinitis caused by grass pollen
+91927006,Allergic rhinitis caused by tree pollen
+91928001,Allergic rhinitis caused by weed pollen
+91961008,Benign neoplasm of accessory sinus
+91964000,Benign neoplasm of adenoid
+91972003,Benign neoplasm of anterior aspect of epiglottis
+91976000,Benign neoplasm of anterior wall of nasopharynx
+91990002,Benign neoplasm of base of tongue
+92032007,Benign neoplasm of bronchopulmonary lymph nodes
+92033002,Benign neoplasm of bronchus of left lower lobe
+92034008,Benign neoplasm of bronchus of left upper lobe
+92035009,Benign neoplasm of bronchus of right lower lobe
+92036005,Benign neoplasm of bronchus of right middle lobe
+92037001,Benign neoplasm of bronchus of right upper lobe
+92038006,Benign neoplasm of bronchus
+92077009,Benign neoplasm of diaphragm
+92089006,Benign neoplasm of epiglottis
+92093000,Benign neoplasm of ethmoidal sinus
+92101008,Benign neoplasm of false vocal cord
+92115005,Benign neoplasm of frontal sinus
+92123007,Benign neoplasm of glottis
+92134005,Benign neoplasm of hilus of lung
+92138008,Benign neoplasm of hypopharyngeal aspect of interarytenoid fold
+92139000,Benign neoplasm of hypopharynx
+92163008,Benign neoplasm of junctional region of epiglottis
+92164002,Benign neoplasm of junctional zone of tongue
+92171007,Benign neoplasm of laryngeal aspect of aryepiglottic fold
+92172000,Benign neoplasm of laryngeal aspect of interarytenoid fold
+92173005,Benign neoplasm of laryngeal commissure
+92174004,Benign neoplasm of laryngeal surface of epiglottis
+92175003,Benign neoplasm of larynx
+92177006,Benign neoplasm of lateral wall of nasopharynx
+92178001,Benign neoplasm of lateral wall of oropharynx
+92180007,Benign neoplasm of left lower lobe of lung
+92181006,Benign neoplasm of left upper lobe of lung
+92184003,Benign neoplasm of lingual tonsil
+92196005,Benign neoplasm of lung
+92204009,Benign neoplasm of main bronchus
+92211008,Benign neoplasm of maxillary sinus
+92241005,Benign neoplasm of nasal cavity
+92242003,Benign neoplasm of nasal concha
+92259008,Benign neoplasm of oropharynx
+92263001,Benign neoplasm of tonsil
+92278008,Benign neoplasm of parietal pleura
+9228003,Pulmonary schistosomiasis
+92293007,Benign neoplasm of pharynx
+92298003,Benign neoplasm of pleura
+92300003,Benign neoplasm of postcricoid region
+92301004,Benign neoplasm of posterior hypopharyngeal wall
+92303001,Benign neoplasm of posterior wall of nasopharynx
+92304007,Benign neoplasm of posterior wall of oropharynx
+92312004,Benign neoplasm of pyriform sinus
+92320002,Benign neoplasm of respiratory tract
+92327004,Benign neoplasm of right lower lobe of lung
+92328009,Benign neoplasm of right middle lobe of lung
+92329001,Benign neoplasm of right upper lobe of lung
+92339007,Benign neoplasm of septum of nose
+92404006,Benign neoplasm of sphenoidal sinus
+92412003,Benign neoplasm of subglottis
+92418004,Benign neoplasm of superior wall of nasopharynx
+92421002,Benign neoplasm of supraglottis
+92444004,Benign neoplasm of tonsillar fossa
+92445003,Benign neoplasm of tonsillar pillar
+92446002,Benign neoplasm of trachea
+92461001,Benign neoplasm of upper respiratory tract
+92475008,Benign neoplasm of vallecula
+92483002,Benign neoplasm of visceral pleura
+92484008,Benign neoplasm of vocal cord
+92485009,Benign neoplasm of vomer
+92487001,Benign neoplasm of Waldeyer's ring
+92523001,Carcinoma in situ of accessory sinus
+92524007,Carcinoma in situ of adenoid
+92532004,Carcinoma in situ of anterior aspect of epiglottis
+92535002,Carcinoma in situ of anterior wall of nasopharynx
+92544001,Carcinoma in situ of base of tongue
+92552003,Carcinoma in situ of bronchus of left lower lobe
+92553008,Carcinoma in situ of bronchus of left upper lobe
+92554002,Carcinoma in situ of bronchus of right lower lobe
+92555001,Carcinoma in situ of bronchus of right middle lobe
+92556000,Carcinoma in situ of bronchus of right upper lobe
+92557009,Carcinoma in situ of bronchus
+92584005,Carcinoma in situ of epiglottis
+92586007,Carcinoma in situ of ethmoidal sinus
+92597007,Carcinoma in situ of frontal sinus
+92603005,Carcinoma in situ of glottis
+92609009,Carcinoma in situ of hilus of lung
+92610004,Carcinoma in situ of hypopharyngeal aspect of aryepiglottic fold
+92611000,Carcinoma in situ of hypopharyngeal aspect of interarytenoid fold
+92612007,Carcinoma in situ of hypopharynx
+92622001,Carcinoma in situ of junctional region of epiglottis
+92623006,Carcinoma in situ of junctional zone of tongue
+92630000,Carcinoma in situ of laryngeal aspect of aryepiglottic fold
+92631001,Carcinoma in situ of laryngeal aspect of interarytenoid fold
+92632008,Carcinoma in situ of laryngeal commissure
+92633003,Carcinoma in situ of laryngeal surface of epiglottis
+92634009,Carcinoma in situ of larynx
+92636006,Carcinoma in situ of lateral wall of nasopharynx
+92637002,Carcinoma in situ of lateral wall of oropharynx
+92639004,Carcinoma in situ of left lower lobe of lung
+92640002,Carcinoma in situ of left upper lobe of lung
+92642005,Carcinoma in situ of lingual tonsil
+92649001,Carcinoma in situ of lung
+92650001,Carcinoma in situ of main bronchus
+92655006,Carcinoma in situ of maxillary sinus
+92663007,Carcinoma in situ of nasal cavity
+92664001,Carcinoma in situ of nasopharynx
+92668003,Carcinoma in situ of oropharynx
+92671006,Carcinoma in situ of tonsil
+92677005,Carcinoma in situ of parietal pleura
+92681005,Carcinoma in situ of pharynx
+92685001,Carcinoma in situ of pleura
+92686000,Carcinoma in situ of postcricoid region
+92687009,Carcinoma in situ of posterior hypopharyngeal wall
+92688004,Carcinoma in situ of posterior wall of nasopharynx
+92689007,Carcinoma in situ of posterior wall of oropharynx
+92694007,Carcinoma in situ of pyriform sinus
+92698005,Carcinoma in situ of respiratory tract
+92701002,Carcinoma in situ of right lower lobe of lung
+92702009,Carcinoma in situ of right middle lobe of lung
+92703004,Carcinoma in situ of right upper lobe of lung
+92753005,Carcinoma in situ of sphenoidal sinus
+92757006,Carcinoma in situ of subglottis
+92760004,Carcinoma in situ of superior wall of nasopharynx
+92761000,Carcinoma in situ of supraglottis
+92770002,Carcinoma in situ of tonsillar fossa
+92771003,Carcinoma in situ of tonsillar pillar
+92772005,Carcinoma in situ of trachea
+92779001,Carcinoma in situ of upper respiratory tract
+92792003,Carcinoma in situ of vallecula
+92799007,Carcinoma in situ of vestibule of nose
+92800006,Carcinoma in situ of visceral pleura
+92801005,Carcinoma in situ of vocal cord
+92803008,Carcinoma in situ of Waldeyer's ring
+92807009,Chemical-induced asthma
+92883006,Congenital abnormal fusion of vomer
+92925001,Congenital abnormal shape of lung
+92958005,Congenital abnormal shape of vomer
+92970009,Congenital absence of nasal turbinate
+92971008,Congenital absence of nasal septum
+93012004,Congenital anomaly of nasal turbinate
+93028009,Congenital anomaly of vomer
+93071000,Congenital hypertrophy of lung
+93072007,Congenital hypertrophy of nasal cavity
+9312005,Necrotic rhinitis
+93127002,Lack of ossification of vomer
+93275004,Congenital hypoplasia of nasal cavity
+93276003,Congenital hypoplasia of nasal turbinate
+93277007,Congenital hypoplasia of nasal septum
+93302004,Congenital hypoplasia of vomer
+93334008,Congenital malposition of lung
+93337001,Congenital malposition of nares
+93338006,Congenital malposition of nasal turbinate
+93339003,Congenital malposition of nasal septum
+93363006,Congenital malposition of trachea
+93427007,Discoloration of lung
+93432008,Drug-induced asthma
+93447004,Eosinophilic nonallergic rhinitis
+93560008,Iatrogenic perforation of pharynx
+93561007,Iatrogenic perforation of trachea
+93611005,Incomplete ossification of vomer
+93659005,Primary malignant neoplasm of accessory sinus
+9366002,Palatal myoclonus
+93662008,Primary malignant neoplasm of adenoid
+93670003,Primary malignant neoplasm of anterior aspect of epiglottis
+93674007,Primary malignant neoplasm of anterior wall of nasopharynx
+93687001,Primary malignant neoplasm of base of tongue
+93729006,Primary malignant neoplasm of bronchus of left lower lobe
+93730001,Primary malignant neoplasm of bronchus of left upper lobe
+93731002,Primary malignant neoplasm of bronchus of right lower lobe
+93732009,Primary malignant neoplasm of bronchus of right middle lobe
+93733004,Primary malignant neoplasm of bronchus of right upper lobe
+93734005,Primary malignant neoplasm of bronchus
+93739000,Primary malignant neoplasm of carina
+93772000,Primary malignant neoplasm of diaphragm
+93784003,Primary malignant neoplasm of epiglottis
+93787005,Primary malignant neoplasm of ethmoidal sinus
+93808006,Primary malignant neoplasm of frontal sinus
+93816002,Primary malignant neoplasm of glottis
+93827000,Primary malignant neoplasm of hilus of lung
+93829002,Primary malignant neoplasm of hypopharyngeal aspect of aryepiglottic fold
+93830007,Primary malignant neoplasm of hypopharyngeal aspect of interarytenoid fold
+93831006,Primary malignant neoplasm of hypopharynx
+93848003,Primary malignant neoplasm of junctional zone of tongue
+93857009,Primary malignant neoplasm of laryngeal commissure
+93858004,Primary malignant neoplasm of laryngeal surface of epiglottis
+93861003,Primary malignant neoplasm of lateral wall of nasopharynx
+93862005,Primary malignant neoplasm of lateral wall of oropharynx
+93864006,Primary malignant neoplasm of lower lobe of left lung
+93865007,Primary malignant neoplasm of upper lobe of left lung
+93868009,Primary malignant neoplasm of lingual tonsil
+93880001,Primary malignant neoplasm of lung
+93882009,Primary malignant neoplasm of main bronchus
+93889000,Primary malignant neoplasm of maxillary sinus
+93917007,Primary malignant neoplasm of nasal cavity
+93918002,Primary malignant neoplasm of nasal concha
+93933005,Primary malignant neoplasm of oropharynx
+93948004,Primary malignant neoplasm of parietal pleura
+93961004,Primary malignant neoplasm of pharynx
+93966009,Primary malignant neoplasm of pleura
+93967000,Primary malignant neoplasm of postcricoid region
+93968005,Primary malignant neoplasm of posterior hypopharyngeal wall
+93970001,Primary malignant neoplasm of posterior wall of nasopharynx
+93971002,Primary malignant neoplasm of posterior wall of oropharynx
+93978008,Primary malignant neoplasm of pyriform sinus
+93986008,Primary malignant neoplasm of respiratory tract
+93991009,Primary malignant neoplasm of right lower lobe of lung
+93992002,Primary malignant neoplasm of right middle lobe of lung
+93993007,Primary malignant neoplasm of upper lobe of right lung
+94002000,Primary malignant neoplasm of septum of nose
+94067008,Primary malignant neoplasm of sphenoidal sinus
+94075002,Primary malignant neoplasm of subglottis
+94078000,Primary malignant neoplasm of superior wall of nasopharynx
+94080006,Primary malignant neoplasm of supraglottis
+94102002,Primary malignant neoplasm of tonsillar fossa
+94103007,Primary malignant neoplasm of tonsillar pillar
+94104001,Primary malignant neoplasm of trachea
+94118008,Primary malignant neoplasm of upper respiratory tract
+94132005,Primary malignant neoplasm of vallecula
+94139001,Primary malignant neoplasm of vestibule of nose
+94140004,Primary malignant neoplasm of visceral pleura
+94142007,Primary malignant neoplasm of vomer
+94144008,Primary malignant neoplasm of Waldeyer's ring
+94155008,Secondary malignant neoplasm of accessory sinus
+94158005,Secondary malignant neoplasm of adenoid
+94166001,Secondary malignant neoplasm of anterior aspect of epiglottis
+94170009,Secondary malignant neoplasm of anterior wall of nasopharynx
+94184004,Secondary malignant neoplasm of base of tongue
+94227002,Secondary malignant neoplasm of bronchopulmonary lymph nodes
+94228007,Secondary malignant neoplasm of bronchus of left lower lobe
+94229004,Secondary malignant neoplasm of bronchus of left upper lobe
+94230009,Secondary malignant neoplasm of bronchus of right lower lobe
+94231008,Secondary malignant neoplasm of bronchus of right middle lobe
+94232001,Secondary malignant neoplasm of bronchus of right upper lobe
+94233006,Secondary malignant neoplasm of bronchus
+94238002,Secondary malignant neoplasm of carina
+94272005,Secondary malignant neoplasm of diaphragm
+94284007,Secondary malignant neoplasm of epiglottis
+94288005,Secondary malignant neoplasm of ethmoidal sinus
+94296000,Secondary malignant neoplasm of false vocal cord
+94310008,Secondary malignant neoplasm of frontal sinus
+94318001,Secondary malignant neoplasm of glottis
+94329002,Secondary malignant neoplasm of hilus of lung
+94332004,Secondary malignant neoplasm of hypopharyngeal aspect of aryepiglottic fold
+94333009,Secondary malignant neoplasm of hypopharyngeal aspect of interarytenoid fold
+94334003,Secondary malignant neoplasm of hypopharynx
+94358004,Secondary malignant neoplasm of junctional region of epiglottis
+94359007,Secondary malignant neoplasm of junctional zone of tongue
+94366008,Secondary malignant neoplasm of laryngeal aspect of aryepiglottic fold
+94367004,Secondary malignant neoplasm of laryngeal aspect of interarytenoid fold
+94368009,Secondary malignant neoplasm of laryngeal commissure
+94369001,Secondary malignant neoplasm of laryngeal surface of epiglottis
+94370000,Secondary malignant neoplasm of larynx
+94372008,Secondary malignant neoplasm of lateral wall of nasopharynx
+94373003,Secondary malignant neoplasm of lateral wall of oropharynx
+94375005,Secondary malignant neoplasm of left lower lobe of lung
+94376006,Secondary malignant neoplasm of left upper lobe of lung
+94379004,Secondary malignant neoplasm of lingual tonsil
+94391008,Secondary malignant neoplasm of lung
+94399005,Secondary malignant neoplasm of main bronchus
+94406009,Secondary malignant neoplasm of maxillary sinus
+94436000,Secondary malignant neoplasm of nasal cavity
+94437009,Secondary malignant neoplasm of nasal concha
+94454001,Secondary malignant neoplasm of oropharynx
+94458003,Secondary malignant neoplasm of tonsil
+94473002,Secondary malignant neoplasm of parietal pleura
+94488007,Secondary malignant neoplasm of pharynx
+94493005,Secondary malignant neoplasm of pleura
+94495003,Secondary malignant neoplasm of postcricoid region
+94496002,Secondary malignant neoplasm of posterior hypopharyngeal wall
+94498001,Secondary malignant neoplasm of posterior wall of nasopharynx
+94499009,Secondary malignant neoplasm of posterior wall of oropharynx
+94507002,Secondary malignant neoplasm of pyriform sinus
+94515004,Secondary malignant neoplasm of respiratory tract
+94522007,Secondary malignant neoplasm of right lower lobe of lung
+94523002,Secondary malignant neoplasm of right middle lobe of lung
+94524008,Secondary malignant neoplasm of right upper lobe of lung
+94534004,Secondary malignant neoplasm of septum of nose
+94599006,Secondary malignant neoplasm of sphenoidal sinus
+94607007,Secondary malignant neoplasm of subglottis
+94613003,Secondary malignant neoplasm of superior wall of nasopharynx
+94616006,Secondary malignant neoplasm of supraglottis
+94639000,Secondary malignant neoplasm of tonsillar fossa
+94640003,Secondary malignant neoplasm of tonsillar pillar
+94641004,Secondary malignant neoplasm of trachea
+94656008,Secondary malignant neoplasm of upper respiratory tract
+94670008,Secondary malignant neoplasm of vallecula
+94677006,Secondary malignant neoplasm of vestibule of nose
+94678001,Secondary malignant neoplasm of visceral pleura
+94679009,Secondary malignant neoplasm of vocal cord
+94680007,Secondary malignant neoplasm of vomer
+94682004,Secondary malignant neoplasm of Waldeyer's ring
+94724005,Neoplasm of uncertain behavior of accessory sinus
+94727003,Neoplasm of uncertain behavior of adenoid
+94735000,Neoplasm of uncertain behavior of anterior aspect of epiglottis
+94739006,Neoplasm of uncertain behavior of anterior wall of nasopharynx
+94752001,Neoplasm of uncertain behavior of base of tongue
+94769004,Neoplasm of uncertain behavior of bronchus of left lower lobe
+94770003,Neoplasm of uncertain behavior of bronchus of left upper lobe
+94771004,Neoplasm of uncertain behavior of bronchus of right lower lobe
+94772006,Neoplasm of uncertain behavior of bronchus of right middle lobe
+94773001,Neoplasm of uncertain behavior of bronchus of right upper lobe
+94774007,Neoplasm of uncertain behavior of bronchus
+94778005,Neoplasm of uncertain behavior of carina of trachea
+94812006,Neoplasm of uncertain behavior of diaphragm
+94824004,Neoplasm of uncertain behavior of epiglottis
+94827006,Neoplasm of uncertain behavior of ethmoidal sinus
+94835009,Neoplasm of uncertain behavior of false vocal cord
+94848008,Neoplasm of uncertain behavior of frontal sinus
+94856006,Neoplasm of uncertain behavior of glottis
+94867007,Neoplasm of uncertain behavior of hilus of lung
+94869005,Neoplasm of uncertain behavior of hypopharyngeal aspect of aryepiglottic fold
+94870006,Neoplasm of uncertain behavior of hypopharyngeal aspect of interarytenoid fold
+94871005,Neoplasm of uncertain behavior of hypopharynx
+94887008,Neoplasm of uncertain behavior of junctional region of epiglottis
+94888003,Neoplasm of uncertain behavior of junctional zone of tongue
+94895007,Neoplasm of uncertain behavior of laryngeal aspect of aryepiglottic fold
+94896008,Neoplasm of uncertain behavior of laryngeal aspect of interarytenoid fold
+94897004,Neoplasm of uncertain behavior of laryngeal commissure
+94898009,Neoplasm of uncertain behavior of laryngeal surface of epiglottis
+94899001,Neoplasm of uncertain behavior of larynx
+94901005,Neoplasm of uncertain behavior of lateral wall of nasopharynx
+94902003,Neoplasm of uncertain behavior of lateral wall of oropharynx
+94904002,Neoplasm of uncertain behavior of left lower lobe of lung
+94905001,Neoplasm of uncertain behavior of left upper lobe of lung
+94908004,Neoplasm of uncertain behavior of lingual tonsil
+94920007,Neoplasm of uncertain behavior of lung
+94922004,Neoplasm of uncertain behavior of main bronchus
+94929008,Neoplasm of uncertain behavior of maxillary sinus
+94957001,Neoplasm of uncertain behavior of nasal cavity
+94958006,Neoplasm of uncertain behavior of nasal concha
+94959003,Neoplasm of uncertain behavior of nasopharynx
+94973007,Neoplasm of uncertain behavior of oropharynx
+94977008,Neoplasm of uncertain behavior of tonsil
+94988002,Neoplasm of uncertain behavior of parietal pleura
+95001001,Neoplasm of uncertain behavior of pharynx
+95006006,Neoplasm of uncertain behavior of pleura
+95007002,Neoplasm of uncertain behavior of postcricoid region
+95008007,Neoplasm of uncertain behavior of posterior hypopharyngeal wall
+95010009,Neoplasm of uncertain behavior of posterior wall of nasopharynx
+95011008,Neoplasm of uncertain behavior of posterior wall of oropharynx
+95018002,Neoplasm of uncertain behavior of pyriform sinus
+95026005,Neoplasm of uncertain behavior of respiratory tract
+95031007,Neoplasm of uncertain behavior of right lower lobe of lung
+95032000,Neoplasm of uncertain behavior of right middle lobe of lung
+95033005,Neoplasm of uncertain behavior of right upper lobe of lung
+95042003,Neoplasm of uncertain behavior of septum of nose
+9505000,Infestation caused by Pneumonyssus simicola
+95107000,Neoplasm of uncertain behavior of sphenoidal sinus
+95115002,Neoplasm of uncertain behavior of subglottis
+95118000,Neoplasm of uncertain behavior of superior wall of nasopharynx
+95120002,Neoplasm of uncertain behavior of supraglottis
+95142001,Neoplasm of uncertain behavior of tonsillar fossa
+95143006,Neoplasm of uncertain behavior of tonsillar pillar
+95144000,Neoplasm of uncertain behavior of trachea
+95158003,Neoplasm of uncertain behavior of upper respiratory tract
+95172007,Neoplasm of uncertain behavior of vallecula of epiglottis
+95179003,Neoplasm of uncertain behavior of vestibule of nose
+95180000,Neoplasm of uncertain behavior of visceral pleura
+95181001,Neoplasm of uncertain behavior of vocal cord
+95182008,Neoplasm of uncertain behavior of vomer
+95184009,Neoplasm of uncertain behavior of Waldeyer's ring
+95204003,Perforation of pharyngeal diverticulum
+95205002,Perforation of pharynx
+95206001,Perforation of trachea
+95236005,Retroesophageal pulmonary artery
+95239003,Rhinitis medicamentosa
+95240001,Rhinitis sicca
+95266003,Single naris
+95306003,Traumatic perforation of pharynx
+95307007,Traumatic perforation of trachea
+95430002,Respiratory tract paralysis
+95431003,Respiratory tract hemorrhage
+95432005,Necrosis of nasal turbinates
+95433000,Disorder of nasal septum
+95434006,Tracheomalacia
+95435007,Tracheoesophageal fistula
+95436008,Lung consolidation
+95437004,Non-cardiogenic pulmonary edema
+95466001,Congenital perforation of nasal septum
+95467005,Congenital tracheomalacia
+95468000,Congenital bronchomalacia
+95561009,Bronchobiliary fistula
+95612000,Neonatal respiratory acidosis
+95613005,Neonatal respiratory alkalosis
+95618001,Neonatal respiratory depression
+95619009,Neonatal respiratory failure
+95621004,Respiratory tract hemorrhage of the newborn
+95634003,Neonatal respiratory arrest
+95885008,Mycoplasmal pharyngitis
+95886009,Mycoplasmal tracheobronchitis
+959171000000101,Soft vocal nodules
+959191000000102,Hard vocal nodules
+964004,Open wound of pharynx without complication
+9660004,Congenital stenosis of trachea
+971918681000119107,Chronic respiratory failure due to obstructive sleep apnea
+99031000119107,Acute exacerbation of asthma co-occurrent with allergic rhinitis
+991000119106,Reactive airway disease

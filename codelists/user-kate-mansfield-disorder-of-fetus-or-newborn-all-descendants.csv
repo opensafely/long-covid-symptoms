@@ -1,0 +1,1318 @@
+code,term
+1003466007,Fetal disorder due to maternal autoimmune disease
+1003728008,Fetal disorder due to maternal hypertension
+1003729000,Fetal disorder due to maternal pre-eclampsia
+1003730005,Neonatal disorder due to maternal hypertension
+1004007000,Fetal disorder due to and following fetal blood sampling
+1004011006,Neonatal disorder due to and following fetal blood sampling
+1004012004,Fetal disorder due to and following operative procedure on fetus
+1004013009,Neonatal disorder due to and following operative procedure on fetus
+1004014003,Fetal disorder due to and following sampling of chorionic villus
+1004015002,Neonatal disorder due to and following sampling of chorionic villus
+1004016001,Fetal disorder due to and following amniocentesis
+1004017005,Neonatal disorder due to and following amniocentesis
+1004018000,Neonatal disorder due to and following operative procedure on mother
+1004019008,Fetal disorder due to and following operative procedure on mother
+1004020002,Fetal disorder due to maternal respiratory disease
+1004021003,Neonatal disorder due to maternal respiratory disease
+1004022005,Fetal disorder due to chronic maternal respiratory disease
+1004023000,Neonatal disorder due to chronic maternal respiratory disease
+1004024006,Fetal disorder due to maternal renal disease
+1004025007,Neonatal disorder due to maternal renal disease
+1004026008,Fetal disorder due to maternal disorder of urinary tract
+1004027004,Neonatal disorder due to maternal disorder of urinary tract
+1004081001,Neonatal disorder due to disease in mother
+1004082008,Fetal disorder due to maternal periodontal disease
+1004083003,Neonatal disorder due to maternal periodontal disease
+1010282001,Neonatal disorder due to maternal traumatic injury
+1010283006,Fetal disorder due to maternal traumatic injury
+1010284000,Fetal disorder due to abnormal maternal blood chemistry
+1010285004,Neonatal disorder due to abnormal maternal blood chemistry
+1010286003,Fetal disorder due to chronic maternal cardiovascular disease
+1010287007,Neonatal disorder due to chronic maternal cardiovascular disease
+1010297003,Neonatal vitamin B12 deficiency due to maternal vitamin B12 deficiency
+1010298008,Fetal disorder due to maternal overweight
+1010299000,Neonatal disorder due to maternal overweight
+1010301007,Neonatal disorder due to maternal obesity
+1010302000,Fetal disorder due to maternal obesity
+1010314008,Fetal disorder due to maternal obesity with adult body mass index equal to or greater than 40
+1010315009,Neonatal disorder due to maternal obesity with adult body mass index equal to or greater than 40
+1010316005,Fetal disorder due to maternal obesity with adult body mass index 30 or greater but less than 40
+1010317001,Neonatal disorder due to maternal obesity with adult body mass index 30 or greater but less than 40
+1010319003,Fetal disorder due to maternal nutritional disorder
+1010320009,Neonatal disorder due to maternal nutritional disorder
+1010415005,Fetal disorder due to maternal gestational edema and proteinuria without hypertension
+1010416006,Neonatal disorder due to maternal gestational edema and proteinuria without hypertension
+10269001,Massive aspiration syndrome
+103031000119101,Fetal exposure to teratogenic substance
+106012007,"Hypoxia, asphyxia AND/OR other respiratory condition of fetus AND/OR newborn"
+10742003,Superficial hematoma in fetus OR newborn
+107421000119101,Neonatal acidosis
+10752381000119101,Fetal thrombocytopenia
+1089000,Intrauterine sepsis of fetus
+11047971000119109,Neonatal effect of maternal postpartum depression
+1110661000000101,Fetal skeletal dysplasia
+1110701000000107,Fetal diaphragmatic hernia
+1110721000000103,Fetal umbilical hernia
+1110741000000105,Fetal gastroschisis
+111460005,Fetal or neonatal effect of hallucinogenic agent transmitted via placenta and/or breast milk
+111465000,Erb-Duchenne palsy as birth trauma
+111466004,Perinatal partial atelectasis
+111467008,Fetal OR neonatal hemorrhage
+111469006,"Hemolytic disease of the newborn due to non-ABO, non-Rh isoimmunization"
+111474003,Disorder involving the integument of fetus OR newborn
+111892001,Infectious neonatal hepatitis
+11618000,Intra-amniotic infection of fetus
+119181000119104,Hypothyroxinemia of prematurity
+121741000119101,Neonatal pneumomediastinum
+121791000119109,Fetal genitourinary abnormality
+121801000119105,Fetal gastrointestinal abnormality
+12301009,Neonatal urinary tract infection
+12409007,Fetal or neonatal effect of noxious substance transmitted via placenta
+12546009,Hemorrhagic disease of the newborn due to vitamin K deficiency
+125491000119103,Fetus with Turner syndrome
+125501000119105,Fetus with complete trisomy 21 syndrome
+125511000119108,Fetus with complete trisomy 18 syndrome
+125521000119101,Fetus with complete trisomy 13 syndrome
+126941005,Subdural intracranial hemorrhage due to birth trauma
+126945001,Perinatal anoxic-ischemic brain injury
+127091000119100,Sepsis of newborn caused by group B Streptococcus
+127332000,Fetal neoplasm
+128270001,Infectious disorder of the fetus
+128271002,Neonatal infectious disorder
+12867002,Fetal distress affecting management of mother
+12901004,Transitory neonatal electrolyte disturbance
+129599004,Large baby of diabetic mother
+129631008,Birth trauma deafness
+13404009,Twin-to-twin blood transfer
+134251000119105,Failure to thrive in neonate
+134811000119108,Severe hypoxic ischemic encephalopathy of newborn
+134821000119101,Moderate hypoxic ischemic encephalopathy of newborn
+134831000119103,Mild hypoxic ischemic encephalopathy of newborn
+13629008,Hypothermia of newborn
+13795004,Neonatal thyrotoxicosis
+14333004,Alloimmune neonatal neutropenia
+14394008,Fetal or neonatal effect of acute hydramnios
+144021000000102,Fetal lethal skeletal dysplasia
+144421000000108,Fetal exomphalos
+144581000000105,Fetal open spina bifida
+15539009,Hydrops fetalis due to isoimmunization
+15679841000119107,Neonatal conjunctivitis of bilateral eyes
+15679881000119102,Neonatal conjunctivitis of right eye
+15679921000119109,Neonatal conjunctivitis of left eye
+15749591000119107,Neonatal gastroesophageal reflux
+15984951000119108,Neonatal spontaneous cerebellar hemorrhage
+15985031000119102,Neonatal non-traumatic intraventricular hemorrhage
+16055151000119105,Neonatal gastrointestinal hemorrhage
+16060351000119105,Neonatal exposure to tobacco smoke
+16068331000119102,Neonatal metabolic acidemia
+16716281000119108,Neonatal jaundice due to ABO incompatibility
+16914911000119107,Neonatal transient hypochloremia
+16997008,Neonatal agitation
+17082004,Fetal OR intrauterine anoxia AND/OR hypoxia noted before labor in liveborn infant
+17140000,Neonatal jaundice due to delayed conjugation
+17231009,Fetal valproate syndrome
+17594002,Fetal bradycardia affecting management of mother
+17849001,Respiratory condition of fetus OR newborn
+179924009,Cardiac arrest in fetus OR newborn
+180906006,Neonatal cardiac arrest
+181869007,Neonatal cardiorespiratory arrest
+18241005,Early urethral obstruction sequence
+18442000,Neonatal hypocalcemic tetany
+18503002,Perinatal cutaneous hemorrhage
+18909006,Fetal or neonatal effect of transverse lie
+189445003,Light-for-dates without fetal malnutrition
+191273000,Leukemoid reaction of the newborn
+191345000,Acquired neutropenia in newborn
+193206003,Persistent neonatal myasthenia gravis
+196279002,Neonatal enamel hypoplasia
+198901003,Macerated fetus
+199397009,Cephalopelvic disproportion
+199416003,Mixed feto-pelvic disproportion
+199418002,Mixed feto-pelvic disproportion - delivered
+199419005,Mixed feto-pelvic disproportion with antenatal problem
+199422007,Large fetus causing disproportion - delivered
+199423002,Large fetus causing disproportion with antenatal problem
+199425009,Hydrocephalic disproportion
+199427001,Hydrocephalic disproportion - delivered
+199428006,Hydrocephalic disproportion with antenatal problem
+199526007,Fetus with chromosomal abnormality - delivered
+199527003,Fetus with chromosomal abnormality with antenatal problem
+199531009,Fetus with hereditary disease
+199533007,Fetus with hereditary disease - delivered
+199534001,Fetus with hereditary disease with antenatal problem
+199538003,Fetus with viral damage via mother - delivered
+199539006,Fetus with viral damage via mother with antenatal problem
+199547006,Fetus with drug damage
+199549009,Fetus with drug damage - delivered
+199550009,Fetus with drug damage with antenatal problem
+199553006,Fetus with radiation damage
+199555004,Fetus with radiation damage - delivered
+199556003,Fetus with radiation damage with antenatal problem
+199558002,Fetus with damage due to intrauterine contraceptive device
+199560000,Fetus with damage due to intrauterine contraceptive device - delivered
+199561001,Fetus with damage due to intrauterine contraceptive device with antenatal problem
+199577000,Fetal-maternal hemorrhage - delivered
+199578005,Fetal-maternal hemorrhage with antenatal problem
+199612005,Small-for-dates baby
+199616008,Large-for-dates fetus
+19963000,Disorder relating to long gestation AND/OR high birthweight
+200706004,Impetigo neonatorum
+20322005,Chronic respiratory disease in perinatal period
+205161004,Congenital amputation of upper limb
+205294008,Neonatal hypotonia
+205788004,Fetal alcohol syndrome
+205791004,Fetal or neonatal effect of maternal use of alcohol
+20596003,"Fracture of long bone, as birth trauma"
+206017000,Fetal or neonatal effect of placental or breast transfer of narcotics
+206018005,Fetal or neonatal effect of placental or breast transfer of hallucinogen
+206020008,Fetal or neonatal effect of placental or breast transfer of immune sera
+206021007,Fetal or neonatal effect of placental or breast transfer of anticonvulsant
+206022000,Fetal or neonatal effect of placental or breast transfer of anticoagulant
+206023005,Fetal or neonatal effect of placental or breast transfer of chemotherapeutic agent
+206024004,Fetal or neonatal effect of placental or breast transfer of uterine depressant
+206025003,Fetal or neonatal effect of placental or breast transfer of hypoglycemic agent
+206026002,Fetal or neonatal effect of placental or breast transfer of endocrine agent
+206035009,Fetal or neonatal effect of maternal complication of pregnancy
+206036005,Fetal or neonatal effect of maternal incompetent cervix
+206037001,Fetal or neonatal effect of maternal premature rupture of membrane
+206038006,Fetal or neonatal effect of maternal oligohydramnios
+206040001,Fetal or neonatal effect of ectopic pregnancy
+206042009,Fetal or neonatal effect of abdominal ectopic pregnancy
+206043004,Fetal or neonatal effect of intraperitoneal ectopic pregnancy
+206044005,Fetal or neonatal effect of tubal ectopic pregnancy
+206046007,Fetal or neonatal effect of multiple pregnancy
+206048008,Fetal or neonatal effect of twin pregnancy
+206049000,Fetal or neonatal effect of triplet pregnancy
+206054009,Fetal or neonatal effect of breech presentation before labor
+206055005,Fetal or neonatal effect of external version before labor
+206056006,Fetal or neonatal effect of oblique lie before labor
+206057002,Fetal or neonatal effect of transverse lie before labor
+206058007,Fetal or neonatal effect of unstable lie before labor
+206059004,Fetal or neonatal effect of face presentation before labor
+206065004,Fetal or neonatal effect of placenta previa
+206069005,Fetal or neonatal effect of placental damage caused by amniocentesis
+206070006,Fetal or neonatal effect of placental damage caused by cesarean section
+206071005,Fetal or neonatal effect of placental damage caused by surgical induction
+206073008,Fetal or neonatal effect of marginal sinus rupture
+206077009,Fetal or neonatal effect of placental dysfunction
+206078004,Fetal or neonatal effect of placental infarction
+206079007,Fetal or neonatal effect of placental insufficiency
+206082002,Fetal or neonatal effect of placental transfusion syndrome
+206083007,Fetal or neonatal effect of twin-to-twin transplacental transfusion
+206084001,Fetal or neonatal effect of fetomaternal transplacental transfusion
+206085000,Fetal or neonatal effect of maternofetal transplacental transfusion
+206087008,Fetal or neonatal effect of prolapsed cord
+206089006,Fetal or neonatal effect of umbilical cord around neck
+206090002,Fetal or neonatal effect of entanglement of cord
+206091003,Fetal or neonatal effect of knot in cord
+206092005,Fetal or neonatal effect of torsion of cord
+206095007,Fetal or neonatal effect of short cord
+206096008,Fetal or neonatal effect of thrombosis of umbilical cord
+206097004,Fetal or neonatal effect of varices of cord
+206098009,Fetal or neonatal effect of velamentous insertion of cord
+206099001,Fetal or neonatal effect of vasa previa of cord
+206100009,Fetal or neonatal effect of long cord
+206102001,Fetal or neonatal effect of chorioamnionitis
+206104000,Fetal or neonatal effect of amnionitis
+206105004,Fetal or neonatal effect of membranitis
+206112008,Fetal or neonatal effect of maternal bony pelvis abnormality during labor and delivery
+206113003,Fetal or neonatal effect of maternal contracted pelvis during labor and delivery
+206114009,Fetal or neonatal effect of persistent occipito-posterior malposition during labor and delivery
+206115005,Fetal or neonatal effect of shoulder presentation during labor and delivery
+206116006,Fetal or neonatal effect of transverse lie during labor and delivery
+206117002,Fetal or neonatal effect of face presentation during labor and delivery
+206118007,Fetal or neonatal effect of disproportion during labor and delivery
+206121009,Fetal or neonatal effect of forceps delivery
+206122002,Fetal or neonatal effect of vacuum extraction delivery
+206123007,Fetal or neonatal effect of cesarean section
+206124001,Fetal or neonatal effect of maternal anesthetic and analgesic agents during labor and delivery
+206125000,Fetal or neonatal effect of maternal anesthetic agent during labor and delivery
+206126004,Fetal or neonatal effect of maternal analgesic agent during labor and delivery
+206127008,Fetal or neonatal effect of maternal general anesthesia during labor and delivery
+206128003,Fetal or neonatal effect of maternal epidural anesthesia during labor and delivery
+206129006,Fetal or neonatal effect of maternal tranquilizers during labor and delivery
+206130001,Fetal or neonatal effect of maternal pethidine during labor and delivery
+206134005,Fetal or neonatal effect of precipitate delivery
+206137003,Fetal or neonatal effect of maternal contraction ring
+206138008,Fetal or neonatal effect of hypertonic labor
+206139000,Fetal or neonatal effect of hypertonic uterine dysfunction
+206144007,Fetal or neonatal effect of abnormality of maternal soft tissue
+206146009,Fetal or neonatal effect of induction of labor
+206147000,Fetal or neonatal effect of previous pelvic surgery
+206148005,Fetal or neonatal effect of long labor
+206149002,Fetal or neonatal effect of instrumental delivery
+206153000,Fetal or neonatal effect of noxious influences transmitted via placenta or breast milk
+206154006,Fetal or neonatal effect of maternal use of tobacco
+206155007,Fetal or neonatal effect of maternal use of nutritional chemical substance
+206156008,Fetal or neonatal effect of maternal exposure to environmental chemical substances
+206161005,"Disorder due to slow fetal growth, low and/or high birth weight"
+206164002,Fetus small-for-dates with signs of malnutrition
+206188000,Subdural and cerebral hemorrhage due to birth trauma
+206191000,Local intracranial subdural hematoma due to birth trauma
+206192007,Tentorial tear due to birth trauma
+206194008,Cerebral hematoma in fetus or newborn
+206195009,Extradural intracranial hemorrhage in fetus or newborn
+206196005,Cerebral hemorrhage due to birth injury
+206200000,Cephalhematoma due to birth trauma
+206201001,Vacuum extraction chignon
+206202008,Massive epicranial subaponeurotic hemorrhage due to birth trauma
+206203003,Scalp abrasions due to birth trauma
+206204009,Scalp bruising due to birth trauma
+206209004,Fracture of clavicle due to birth trauma
+206211008,Fracture of humerus due to birth trauma
+206213006,Fracture of femur due to birth trauma
+206214000,Fracture of tibia and/or fibula due to birth trauma
+206215004,Fracture of skull due to birth trauma
+206216003,Birth dislocation of the shoulder
+206221000,Spine dislocation due to birth trauma
+206223002,Spinal cord laceration due to birth trauma
+206224008,Spinal cord rupture due to birth trauma
+206226005,Brachial plexus palsy due to birth trauma
+206228006,Birth plexus injury - whole plexus
+206233005,Birth injury to phrenic nerve
+206234004,Cranial nerve injury due to birth trauma
+206235003,Peripheral nerve injury due to birth trauma
+206238001,Cerebral edema due to birth injury
+206241005,Eye damage due to birth trauma
+206242003,Liver subcapsular hematoma due to birth trauma
+206243008,Testicular hematoma due to birth trauma
+206245001,Liver rupture due to birth trauma
+206248004,Traumatic glaucoma due to birth trauma
+206249007,Subconjunctival hemorrhage due to birth trauma
+206250007,Torticollis due to birth injury
+206252004,Sternomastoid injury due to birth injury
+206253009,Birth injury to face
+206254003,Subcutaneous fat necrosis due to birth injury
+206292002,Meconium aspiration syndrome
+206295000,Aspiration of vomit in newborn
+206296004,Neonatal aspiration of milk and regurgitated food
+206303001,Perinatal lung intra-alveolar hemorrhage
+206305008,Tracheobronchial hemorrhage originating in the perinatal period
+206331005,Infections specific to perinatal period
+206345004,Neonatal dacryocystitis and conjunctivitis
+206356004,Neonatal candidiasis of perineum
+206358003,Neonatal candidiasis of intestine
+206359006,Neonatal candidiasis of lung
+206365006,Clostridial intra-amniotic fetal infection
+206366007,Escherichia coli intra-amniotic fetal infection
+206376005,Sepsis of the newborn
+206378006,Sepsis of newborn caused by Staphylococcus aureus
+206379003,Sepsis of newborn caused by Escherichia coli
+206380000,Sepsis of newborn caused by anaerobes
+206390008,Fetal blood loss
+206395003,"Intraventricular (nontraumatic) hemorrhage, grade 1, of fetus and newborn"
+206396002,"Intraventricular (nontraumatic) hemorrhage, grade 2, of fetus and newborn"
+206397006,"Intraventricular (nontraumatic) hemorrhage, grade 3, of fetus and newborn"
+206398001,Intraventricular hemorrhage due to birth injury
+206399009,Intracranial subarachnoid hemorrhage due to birth injury
+206402005,Newborn slipped umbilical ligature
+206403000,Massive umbilical hemorrhage of newborn
+206406008,Perinatal hematemesis
+206407004,Perinatal melena
+206408009,Perinatal rectal hemorrhage
+206409001,Neonatal vaginal hemorrhage
+206413008,Perinatal superficial hematoma
+206414002,Perinatal purpura
+206417009,Intracranial nontraumatic hemorrhage of fetus and newborn
+206419007,Cerebellar (nontraumatic) and posterior fossa hemorrhage of fetus and newborn
+206421002,Perinatal epistaxis
+206422009,Perinatal transient vaginal bleeding
+206423004,Neonatal hematemesis
+206424005,Neonatal melena
+206425006,Neonatal rectal hemorrhage
+206434001,Late anemia of newborn due to isoimmunization
+206439006,Neonatal jaundice due to glucose-6-phosphate dehydrogenase deficiency
+206442000,Perinatal jaundice from bruising
+206443005,Perinatal jaundice from maternal transmission of drug or toxin
+206444004,Perinatal jaundice from infection
+206446002,Perinatal jaundice from polycythemia
+206447006,Perinatal jaundice from swallowed maternal blood
+206448001,Perinatal jaundice from bleeding
+206453006,Delayed conjugation causing neonatal jaundice associated with another disorder
+206454000,Neonatal jaundice with Crigler-Najjar syndrome
+206455004,Neonatal jaundice with Dubin-Johnson syndrome
+206456003,Neonatal jaundice with Gilbert's syndrome
+206457007,Neonatal jaundice with congenital hypothyroidism
+206458002,Neonatal jaundice with porphyria
+206459005,Neonatal jaundice with Rotor's syndrome
+206469004,Perinatal jaundice due to congenital obstruction of bile duct
+206470003,Perinatal jaundice due to galactosemia
+206471004,Perinatal jaundice due to mucoviscidosis
+206481000,Perinatal endocrine and metabolic disorders
+206489003,Transitory neonatal hypernatremia
+206490007,Transitory neonatal hyponatremia
+206491006,Transitory neonatal hyperkalemia
+206492004,Transitory neonatal hypokalemia
+206493009,Disturbances of sodium balance of newborn
+206494003,Disturbances of potassium balance of newborn
+206506005,Transitory metabolic disturbance in infant of pre-diabetic mother
+206510008,Transient neonatal thrombocytopenia due to exchange transfusion
+206511007,Transient neonatal thrombocytopenia due to idiopathic maternal thrombocytopenia
+206512000,Transient neonatal thrombocytopenia due to isoimmunization
+206523001,Meconium ileus
+206525008,Neonatal necrotizing enterocolitis
+206528005,Meconium plug
+206537005,Perinatal skin and temperature regulation disorders
+206538000,Idiopathic hydrops fetalis
+206539008,Sclerema neonatorum
+206553008,Bronze baby
+206554002,Neonatal skin infection
+206570000,Newborn drug reaction and intoxication
+206576006,Neonatal cerebral ischemia
+206578007,Neonatal cerebral leukomalacia
+206588008,Congenital hypertonia
+206596003,Neonatal hypertension
+20952006,Neonatal effect of noxious substance transmitted via breast milk
+21059008,Fetal or neonatal effect of medical induction of labor
+21202004,Perinatal intracranial subarachnoid hemorrhage
+2132004,Meconium in amniotic fluid noted before labor in liveborn infant
+21404001,Fetal OR neonatal jaundice from polycythemia
+21584002,Syndrome of infant of diabetic mother
+21601000119103,Hypoxic ischemic encephalopathy due to birth trauma
+22033007,Fetal growth retardation
+22067002,Fetal OR neonatal jaundice from drugs AND/OR toxins transmitted from mother
+22137006,"Hypoxia, in liveborn infant"
+22925008,Neonatal disorder
+230410004,Benign neonatal familial convulsions
+230411000,Benign non-familial neonatal convulsions
+230683002,Transient neonatal myasthenia
+230769007,Periventricular leukomalacia
+23205009,Transient neonatal thrombocytopenia
+232331006,Perinatal sensorineural hearing loss
+233610007,Neonatal chlamydial pneumonia
+233619008,Neonatal pneumonia
+233815004,Persistent pulmonary hypertension of the newborn
+234350007,Neonatal anemia
+234380002,Kell isoimmunization of the newborn
+23688003,Hematemesis AND/OR melena due to swallowed maternal blood
+237096004,Neonatal gonococcal vulvovaginitis
+23735003,Neonatal dacryocystitis
+237441000,Neonatal mastitis
+238412006,Perianal streptococcal infection of newborn
+238874008,Neonatal pseudo-hydrocephalic progeroid syndrome
+239092005,Transient neonatal pustulosis
+239093000,Perianal dermatitis of newborn
+239094006,Subcutaneous fat necrosis of newborn
+239096008,Neonatal adnexal polyp
+239097004,Gangrene of newborn
+240298005,Fetal tachycardia
+240299002,Fetal bradycardia
+240302002,Erythroderma neonatorum
+240303007,Panniculitis in newborn
+240305000,Neonatal thrombocytopenia due to platelet alloimmunization
+240306004,Fetal acidosis
+240307008,Late neonatal hypocalcemia
+240312009,Cerebral injury due to birth trauma
+240313004,Intracerebral hemorrhage in fetus or newborn
+240314005,Skeletal injury due to birth trauma
+240315006,Fracture of nose due to birth trauma
+240316007,Laryngeal injury due to birth trauma
+240317003,Kidney injury due to birth trauma
+240322003,Fetal effect of placental insufficiency
+240469009,Perinatal varicella
+240549002,Neonatal coxsackie virus syndrome
+240550002,Neonatal echovirus disease
+240571007,Neonatal gonococcal infection
+240590004,Neonatal chlamydial infection
+240591000,Neonatal chlamydial conjunctivitis
+24149006,Hemorrhagic disease of the newborn due to factor II deficiency
+24911006,Perinatal jaundice from excessive hemolysis
+25004000,Subdural hemorrhage due to intrapartum anoxia AND/OR hypoxia
+254119005,Neonatal hyperparathyroidism
+254247000,Fetal benzodiazepine syndrome
+254249002,Fetal carbamazepine syndrome
+254250002,Fetal cocaine syndrome
+254251003,Fetal minoxidil syndrome
+254252005,Fetal misoprostol syndrome
+254253000,Fetal primidone syndrome
+254254006,Fetal toluene syndrome
+25749005,Disproportion between fetus and pelvis
+25765006,Neonatal iminoglycinuria
+261808007,Neonatal cerebral hemorrhage
+26267006,Isolated persistent neonatal hypoparathyroidism
+26291002,Fetal OR neonatal jaundice from swallowed maternal blood
+267253006,Fetus with chromosomal abnormality
+267254000,Fetus with viral damage via mother
+267258002,Small for gestational age fetus
+26746005,Cold injury syndrome of newborn
+268245001,Harlequin fetus
+268797009,Fetal or neonatal effect of placental or breast transfer of anti-infective
+268798004,Fetal or neonatal effect of maternal polyhydramnios
+268799007,Fetal or neonatal effect of maternal death
+268800006,Fetal or neonatal effect of malpresentation before labor
+268803008,Fetal or neonatal effect of abruptio placentae
+268809007,Fetal or neonatal effect of malposition or disproportion during labor or delivery
+268811003,Fetal or neonatal effect of abnormal uterine contractions
+268812005,Fetal or neonatal effect of uterine inertia or dysfunction
+268813000,Fetal or neonatal effect of destructive operation to aid delivery
+268822004,Fetal monitoring scalp injury
+268824003,Fracture of radius and/or ulna due to birth trauma
+268826001,Spleen rupture due to birth trauma
+268829008,Severe birth asphyxia - apgar score less than 4 at 1 minute
+268830003,Mild to moderate birth asphyxia - apgar score 4-7 at 1 minute
+268832006,Aspiration of liquor or mucus in newborn
+268838005,Neonatal dacryocystitis or conjunctivitis caused by Escherichia coli
+268839002,Neonatal dacryocystitis or conjunctivitis caused by staphylococcus
+268841001,Neonatal dacryocystitis or conjunctivitis caused by virus
+268842008,Neonatal dacryocystitis or conjunctivitis caused by chlamydiae
+268846006,Neonatal hypocalcemia
+268850004,Neonatal diarrhea
+268868001,Born very premature
+2707005,Necrotizing enterocolitis in fetus OR newborn
+273986001,Perinatal thrombocytopenia
+275360003,Neonatal jaundice due to deficiency of enzyme system for bilirubin conjugation
+275364007,Spleen injury due to birth trauma
+275365008,Birth fracture of radius
+275366009,Birth fracture of ulna
+275367000,Intrauterine hypoxia
+275368005,Labor fetal anoxia
+275521001,Blue baby
+276508000,Hydrops fetalis
+276509008,Non-immune hydrops fetalis
+276510003,Perinatal cardiovascular disorders
+276512006,Fetal dysrhythmia
+276513001,Neonatal dysrhythmia
+276514007,Neonatal cardiac failure
+276516009,Myocardial ischemia of newborn
+276517000,Transient myocardial ischemia of newborn
+276518005,Transient tricuspid regurgitation of newborn
+276519002,Neonatal hypotension
+276520008,Transitory ileus of prematurity
+276521007,Perinatal intestinal obstruction
+276522000,Neonatal peritonitis
+276523005,Transient neonatal colitis
+276524004,Neonatal chloridorrhea
+276525003,Peptic ulcer of newborn
+276526002,Chylous ascites of newborn
+276527006,Gastritis of newborn
+276528001,Newborn thermal injury
+276529009,Newborn environmental hypothermia
+276531000,Avery's syndrome type 1
+276532007,Avery's syndrome type 2
+276533002,Neonatal aspiration syndromes
+276534008,Neonatal pulmonary air leak
+276536005,Respiratory insufficiency syndrome of newborn
+276537001,Chronic pulmonary insufficiency of prematurity
+276539003,Newborn ingestion of maternal blood
+276540001,Neonatal aspiration of amniotic fluid
+276541002,Neonatal aspiration of mucus
+276542009,Neonatal aspiration of milk
+276544005,Apnea of prematurity
+276545006,Obstructive apnea of newborn
+276546007,Prolonged apnea of newborn
+276547003,Neonatal tracheal perforation
+276548008,Perinatal disorders of liver and/or biliary system
+276549000,Newborn physiological jaundice
+276550000,Prolonged newborn physiological jaundice
+276551001,Perinatal hepatitis
+276552008,Perinatal hepatocellular damage
+276555005,Perinatal disorders of glucose regulation
+276557002,Neonatal hyperglycemia
+276558007,Transient neonatal hyperglycemia
+276559004,Iatrogenic neonatal hyperglycemia
+276561008,Transitory neonatal hypoglycemia
+276562001,Iatrogenic neonatal hypoglycemia
+276563006,Idiopathic transient neonatal hyperinsulinemia
+276564000,Perinatal thyroid disorder
+276565004,Neonatal goiter
+276566003,Transient neonatal hypothyroidism
+276567007,Antepartum fetal acidosis
+276568002,Intrapartum fetal acidosis
+276569005,Perinatal disorder of electrolytes
+276570006,Perinatal hypoxia and asphyxia
+276573008,Chronic partial asphyxia of newborn
+276575001,Autoimmune neonatal thrombocytopenia
+276576000,Neutropenia of the small for gestational age baby
+276578004,Physiological anemia of infancy
+276579007,Late anemia of newborn
+276580005,Atypical isoimmunization of newborn
+276581009,Newborn drug reaction
+276582002,Newborn drug intoxication
+276583007,Newborn renal dysfunction
+276584001,Neonatal nephrocalcinosis
+276586004,Transient neonatal renal tubular acidosis
+276587008,Perinatal neurological disorder
+276588003,Perinatal intracranial laceration
+276589006,Perinatal tentorial laceration
+276590002,Tentorial laceration - acute syndrome
+276591003,Tentorial laceration - subacute syndrome
+276592005,Perinatal occipital diastasis
+276593000,Perinatal falx laceration
+276594006,Perinatal rupture of superficial cerebral vein
+276595007,Perinatal nonspecific brain dysfunction
+276596008,Cerebral irritation
+276597004,Fifth day fits
+276599001,Cerebral leukomalacia
+276602006,Fetal stress
+276603001,Perinatal disorder of growth and/or development
+276604007,Fetal growth abnormality
+276606009,Asymmetrical growth retardation
+276607000,Symmetrical growth retardation
+276608005,Poor fetal nutrition
+276609002,Birth weight abnormality
+276610007,Low birth weight infant
+276611006,Very low birth weight infant
+276612004,Extremely low birth weight infant
+276613009,High birth weight
+276614003,Gestation abnormality
+276615002,Short fetal gestation
+276616001,Long fetal gestation
+276618000,Umbilical polyp of newborn
+276619008,Neonatal facial petechiae
+276620002,Traumatic neonatal facial cyanosis
+276621003,Neonatal scalp injury
+276623000,Neonatal scalp abrasion
+276624006,Neonatal bruising of scalp
+276627004,Congenital uremia
+276629001,Transient hypothyroxinemia
+276631005,Early neonatal hypocalcemic tetany
+276632003,Hypomagnesemic tetany in newborn
+276635001,Acquired subglottic stenosis in newborn
+276638004,Fetal hypoxia
+276639007,Antepartum fetal hypoxia
+276640009,Intrapartum fetal hypoxia
+276641008,Intrauterine asphyxia
+276642001,Antepartum fetal asphyxia
+276643006,Mild birth asphyxia
+276644000,Neonatal overhydration
+276647007,Perinatal intracranial hemorrhage
+276648002,Intraventricular hemorrhage of prematurity
+276650005,Perinatal subependymal hemorrhage
+276651009,Perinatal subependymal hemorrhage with intraventricular extension
+276652002,Perinatal subependymal hemorrhage with intraventricular and intracerebral extension
+276656004,Fetal postural deformity
+276658003,Extreme immaturity
+276659006,Clinical infection of newborn
+276669000,Bacterial sepsis of newborn
+276674008,Neonatal meningitis
+276675009,Neonatal infection of the eye
+276676005,Perinatal skin and subcutaneous infections
+276679003,Neonatal breast abscess
+276680000,Neonatal bacterial conjunctivitis
+276681001,Neonatal chlamydial dacryocystitis
+276682008,Neonatal viral conjunctivitis
+276684009,Neonatal bacterial dacryocystitis
+276685005,Neonatal viral dacryocystitis
+276688007,Neonatal dacryocystitis caused by Escherichia coli
+276689004,Coliform ophthalmia neonatorum
+276690008,Neonatal dacryocystitis caused by staphylococcus
+276691007,Staphylococcal ophthalmia neonatorum
+276695003,Neonatal aspiration pneumonia
+276697006,Harlequin change
+276698001,Perinatal skull defect
+276699009,Third fontanelle
+276701009,Fetal cytomegalovirus syndrome
+276702002,Neonatal rickets
+276704001,Electrode injury to scalp during birth
+276705000,Sampling injury to scalp during birth
+276706004,Perinatal cerebral ischemia
+2770006,Fetal or neonatal effect of antibiotic transmitted via placenta and/or breast milk
+277475006,Pemphigus neonatorum
+277476007,Cerebral ventricular distension
+277479000,Postnatal hypoxic encephalopathy
+277480002,Neonatal asphyxial encephalopathy
+277488009,Perinatal trauma
+277489001,Fetal trauma
+277636009,Perinatal pneumoperitoneum
+277794000,Neonatal annular erythema
+278927005,Neonatal aspiration of meconium
+278928000,Transient mitral regurgitation of newborn
+278930003,Pseudomonas ophthalmia neonatorum
+278932006,Biochemical rickets
+279953009,Familial neonatal seizures
+281578009,Perinatal asphyxia
+281579001,Perinatal hypoxia
+281581004,Poor condition at birth without known asphyxia
+281610001,Neonatal hyperbilirubinemia
+281611002,Neonatal unconjugated hyperbilirubinemia
+281612009,Neonatal conjugated hyperbilirubinemia
+28314004,"Asphyxia, in liveborn infant"
+28438004,Gonococcal conjunctivitis neonatorum
+28534004,Spastic paralysis due to intracranial birth injury
+28724005,"Cholestasis-edema syndrome, Norwegian type"
+28778005,Phrenic nerve paralysis as birth trauma
+287985008,"Severe birth asphyxia, APGAR 0-3"
+287986009,"Mild birth asphyxia, APGAR 4-7"
+288276001,Fetal cerebral hemorrhage
+30066009,Fetal or neonatal effect of immune serum transmitted via placenta and/or breast milk
+30101004,Neonatal cystine-lysinuria
+30529005,"Citrullinemia, neonatal type"
+30571006,Environmentally-induced pyrexia in newborn
+307333004,Rhesus isoimmunization due to anti-D
+307334005,Rhesus isoimmunization due to anti-c
+307335006,Rhesus isoimmunization due to anti-E
+307336007,Rhesus isoimmunization due to anti-Cw
+307337003,Duffy isoimmunization of the newborn
+307338008,Kidd isoimmunization of the newborn
+30828007,"Anoxia, in liveborn infant"
+30921002,Perinatal massive pulmonary hemorrhage
+309739005,Perinatal coagulase-negative staphylococcus
+312858004,Neonatal tracheobronchial hemorrhage
+313260003,Fetal or neonatal effect of maternal use of antihypertensive drug
+31615009,Transitory neonatal hypoparathyroidism
+31805001,Fetal disproportion
+321411000000108,Fetus with cardiovascular abnormality
+32605001,Transient neonatal disorder of coagulation
+32858009,Hemolytic disease of fetus OR newborn due to ABO immunization
+32984002,Neonatal polycythemia
+332361000119101,Retinopathy of prematurity of right eye stage 4 - subtotal retinal detachment
+332371000119107,Retinopathy of prematurity of right eye stage 3 - ridge with extraretinal fibrovascular proliferation
+332381000119105,Retinopathy of prematurity of right eye stage 2 - intraretinal ridge
+332391000119108,Retinopathy of prematurity of right eye stage 1 - demarcation line
+332411000119108,Retinopathy of prematurity of right eye
+33721007,Fetal OR intrauterine asphyxia noted before labor in liveborn infant
+337971000119105,Retinopathy of prematurity of left eye stage 4 - subtotal retinal detachment
+337981000119108,Retinopathy of prematurity of left eye stage 3 - ridge with extraretinal fibrovascular proliferation
+337991000119106,Retinopathy of prematurity of left eye stage 2 - intraretinal ridge
+338001000119102,Retinopathy of prematurity of left eye stage 1 - demarcation line
+338021000119106,Retinopathy of prematurity of left eye
+34298002,Neonatal conjunctivitis
+343741000119109,Retinopathy of prematurity of bilateral eyes stage 4 - subtotal retinal detachment
+343751000119106,Retinopathy of prematurity of bilateral eyes stage 3 - ridge with extraretinal fibrovascular proliferation
+343761000119108,Retinopathy of prematurity of bilateral eyes stage 2 - intraretinal ridge
+343771000119102,Retinopathy of prematurity of bilateral eyes stage 1 - demarcation line
+343791000119101,Retinopathy of prematurity of bilateral eyes
+34417008,Disseminated intravascular coagulation in newborn
+3468005,Neonatal infective mastitis
+34681009,Perinatal respiratory distress
+34738001,Drug reaction AND/OR intoxication specific to newborn
+34831003,Breast engorgement in newborn
+350601000119109,Hemolytic disease of newborn co-occurrent and due to ABO immunization
+350611000119107,Hemolytic disease of fetus due to ABO immunization
+359007,Kernicterus due to isoimmunization
+359621002,Acquired periventricular cysts of newborn
+359629000,Progressive post hemorrhagic ventricular dilatation
+359634001,Infantile posthemorrhagic hydrocephalus
+359646002,Neonatal disseminated listeriosis
+36078000,Perinatal pneumopericardium
+361194002,Perinatal pulmonary fibroplasia
+361195001,Pulmonary fibroplasia
+361208003,Primary sleep apnea of newborn
+36193003,Thalidomide embryopathy syndrome
+363089008,Disorder of fetal nutrition
+363093002,Disorders of fetal movement
+363125002,Fetal ascites
+363126001,Disorder of fetal abdominal region
+363127005,Fetal disorder caused by chemicals
+363128000,Fetal endocrine disorder
+363204006,Metabolic disorder of fetus
+363219007,Neonatal gastrointestinal disorder
+363222009,Neonatal neuromuscular disorder
+363223004,Neonatal ophthalmologic disorder
+363224005,Neonatal renal disorder
+363225006,Neonatal respiratory system disorder
+363226007,Neonatal traumatic disorder
+363236004,Neurodevelopmental disorder of fetus
+36366008,Fetal or neonatal effect of chronic hydramnios
+363682000,Fetal or neonatal effect of placental disorder
+363696006,Neonatal cardiovascular disorder
+371107004,Seizures complicating intracranial hemorrhage in the newborn
+371109001,Immature autonomic system
+371110006,Immature eyes
+371121002,Neonatal stroke
+371129000,Paralysis from birth trauma
+371323006,Neonatal colibacillosis
+37145001,Central nervous system dysfunction in newborn
+372441001,Seizures complicating infection in the newborn
+37384000,Birth injury to scalp
+37695001,Neonatal hypermethioninemia
+38206000,Exceptionally large at birth
+38281008,Benign neonatal convulsions
+38323006,Fetal warfarin syndrome
+38453000,Cerebral hemorrhage due to intrapartum anoxia or hypoxia
+38593000,Perinatal cyanotic attacks
+38651009,Mummified fetus
+38697006,Polycythemia due to donor twin transfusion
+387702001,Perinatal anemia
+387705004,Hemolytic disease of fetus OR newborn due to isoimmunization
+387712008,Neonatal jaundice
+389201004,Transient neonatal hyperparathyroidism
+39208009,Fetal hydrops causing disproportion
+397401005,Disorder of neonatal umbilicus
+397729009,Perinatal necrotizing enterocolitis
+397949005,Poor fetal growth affecting management
+4006006,Fetal tachycardia affecting management of mother
+402795001,Neonatal dermatosis
+402796000,Neonatal viral infection of skin
+402797009,Neonatal pyogenic infection of skin
+402798004,Neonatal fungal infection of skin
+402801005,Neonatal disorder of subcutaneous fat
+402802003,Physiological anomaly of neonatal skin
+402846006,Neonatal cutis marmorata
+402926000,Neonatal necrotizing fasciitis
+402931003,Neonatal bacterial paronychia
+402967005,Neonatal staphylococcal scalded skin syndrome
+403000003,Neonatal systemic candidosis
+403327006,Telogen effluvium of the newborn
+403421008,Neonatal cold panniculitis
+403525002,Hypermelanosis following phototherapy for neonatal jaundice
+403840005,Neonatal staphylococcal infection of skin
+403841009,Staphylococcal omphalitis of newborn
+403842002,Neonatal streptococcal infection
+403843007,Streptococcal omphalitis of newborn
+403844001,Neonatal pseudomonas infection
+403845000,Neonatal eosinophilic pustular folliculitis
+403846004,Neonatal bullous dermatosis caused by maternal antibodies
+403847008,Perinatal skin trauma due to obstetric injury
+403848003,Perinatal forceps injury
+403849006,Scalp injury due to vacuum extraction
+403850006,Neonatal iatrogenic skin trauma
+403851005,Calcinosis following neonatal heel prick injury
+403852003,Neonatal sebaceous gland hyperplasia
+403853008,Neonatal sucking blisters
+403854002,Neonatal physiological scaling
+404049001,Fetal rhabdomyoma
+404097000,Neonatal milia
+404174000,Neonatal ecthyma gangrenosum
+408847006,Retinopathy of prematurity stage 1 - demarcation line
+408848001,Retinopathy of prematurity stage 2 - intraretinal ridge
+408849009,Retinopathy of prematurity stage 3 - ridge with extraretinal fibrovascular proliferation
+408850009,Retinopathy of prematurity stage 4 - subtotal retinal detachment
+408851008,Retinopathy of prematurity stage 5 - total retinal detachment
+40980002,Spastic paralysis due to birth injury
+410507001,Neonatal herpes simplex virus conjunctivitis
+41168002,Condition in fetus originating in the perinatal period
+413340008,Fetal or neonatal effect of diethylstilbestrol transmitted via placenta and/or breast milk
+413341007,Neonatal bradycardia
+413342000,Neonatal tachycardia
+413638006,Benign neonatal sleep myoclonus
+413654009,Birth asphyxia
+413933004,Coxsackie myocarditis of newborn
+414023003,Disorder of cellular component of blood in newborn
+414025005,Disorder of fetus or newborn
+414028007,Disorder of hematopoietic system in newborn
+414247004,Fetal effects of maternal antepartum hemorrhage
+414248009,Fetal or neonatal effect of maternal transmission of substance
+414819007,Neonatal abstinence syndrome
+414820001,Neonatal botulism
+414821002,Neonatal candidiasis
+414822009,Neonatal pulmonary hemorrhage
+415073005,Perinatal disorder
+415297005,Retinopathy of prematurity
+417006004,Twin reversal arterial perfusion syndrome
+418916008,Intrauterine keratitis
+419743001,Ruptured Descemet membrane due to birth trauma
+42052009,Omphalitis of the newborn
+42357009,Disorder of digestive system specific to fetus OR newborn
+426850008,Complication of prematurity
+428241007,Ventricular hemorrhage of fetus
+42908004,"Primary atelectasis, in perinatal period"
+429211000124107,Fetus affected by placental transfer of anticonvulsant
+430031008,Fetal hydronephrosis
+430035004,Fetal pyelectasis
+430901004,Fetal heart disorder
+431265009,Fetal microcephaly
+431268006,Hemorrhage of skin in newborn
+431335002,Hypoxemia in newborn
+431770003,Fetal macrocephaly
+432995009,Fetal cardiovascular disorder
+433237003,Cholestasis in newborn
+43424001,Tetanus neonatorum
+43602006,Subdural intracranial hemorrhage in fetus or newborn
+44671008,Perinatal adrenal hemorrhage
+450427002,Perinatal cutaneous ecchymoses
+450428007,Perinatal cutaneous petechiae
+450429004,Perinatal hemorrhage
+45549002,Slipped umbilical ligature with hemorrhage
+462159005,Fetal fluid retention
+462160000,Fetal fluid retention restricted to one fetal compartment
+462161001,Fetal fluid retention restricted to two fetal compartments
+462162008,Diffuse fetal skin edema
+462163003,Fetal pleural effusion
+462164009,Fetal pericardial effusion
+462165005,Fetal choroid plexus cyst
+462166006,Fetal anemia
+462167002,Fetal mediastinal shift to right
+462168007,Fetal mediastinal shift to left
+462169004,Fetal supraventricular tachycardia with short ventriculoatrial interval
+462170003,Fetal supraventricular tachycardia with long ventriculoatrial interval
+462171004,Fetal cardiomegaly
+462172006,Fetal heart failure
+462174007,Fetal heart failure with myocardial hypertrophy
+462175008,Fetal heart failure with redistribution of cardiac output
+46775006,Respiratory distress syndrome in the newborn
+470750006,Failure of growth of fetal right cardiac ventricle
+470751005,Failure of growth of fetal left cardiac ventricle
+470752003,Progression of fetal right ventricular outflow tract obstruction
+470753008,Progression of fetal left ventricular outflow tract obstruction
+470754002,Neoplasm of fetal heart
+47100003,Anemia of prematurity
+47134002,Noninfective mastitis of newborn
+472322002,Disorder of fetal myocardium
+472323007,Fetal cardiomyopathy
+472324001,Fetal hypertrophic cardiomyopathy
+472325000,Fetal hypertrophic cardiomyopathy due to twin to twin transfusion syndrome
+472326004,Fetal hypertrophic cardiomyopathy associated with renal disease
+472327008,Fetal dilated cardiomyopathy
+47267007,Fetal or neonatal effect of destructive operation on live fetus to facilitate delivery
+472700006,Fetal right heart dominance
+472701005,Fetal left heart dominance
+472702003,Fetal pulmonary outflow tract obstruction due to twin to twin transfusion syndrome
+472705001,Narrowing of fetal ductus arteriosus
+472706000,Closure of fetal ductus arteriosus
+472707009,Fetal myocarditis
+472772002,Fetal right atrial dilatation
+472773007,Fetal ventricular dysfunction
+472774001,Fetal right ventricular dysfunction
+472775000,Fetal left ventricular dysfunction
+472776004,Fetal biventricular dysfunction
+472840007,Regurgitation of fetal tricuspid valve
+472841006,Stenosis of fetal tricuspid valve
+472842004,Regurgitation of fetal mitral valve
+472843009,Stenosis of fetal mitral valve
+472844003,Regurgitation of fetal pulmonary valve
+472845002,Stenosis of fetal pulmonary valve
+472846001,Regurgitation of fetal aortic valve
+472847005,Stenosis of fetal aortic valve
+472848000,Regurgitation of fetal right atrioventricular (not morphologically tricuspid) valve
+472849008,Stenosis of fetal right atrioventricular (not morphologically tricuspid) valve
+472850008,Regurgitation of fetal left atrioventricular (not morphologically mitral) valve
+472851007,Stenosis of fetal left atrioventricular (not morphologically mitral) valve
+472852000,Regurgitation of fetal common atrioventricular valve
+472853005,Stenosis of fetal common atrioventricular valve
+472854004,Regurgitation of fetal truncal valve
+472855003,Stenosis of fetal truncal valve
+472857006,Perinatal pulmonary hemorrhage
+473383000,Abnormality of fetal heart
+473420003,Twins with discordant fetal growth
+47444008,Lucey-Driscoll syndrome
+4787007,Fetal or neonatal effect of breech delivery and extraction
+48000002,Vomiting in newborn
+48729005,Perinatal gastrointestinal hemorrhage
+49513005,Dehydration fever in newborn
+4952001,Cerebral irritability in newborn
+49706007,Neonatal acne
+49725005,Fetal or neonatal effect of previous surgery to uterus and/or pelvic organs
+49756002,Perinatal pneumothorax
+49964003,Ectopic fetus
+50143004,Kernicterus of newborn
+50258003,Fetal or neonatal effect of hypotonic uterine dysfunction
+50263004,Hematoma of vulva of fetus or newborn as birth trauma
+50544004,Fetal blood loss from vasa previa
+5074003,Fetal or neonatal effect of placentitis
+51097006,Transient neonatal hyperglycinemia
+51496009,Fetal blood loss from ruptured cord
+51577008,Wilson-Mikity syndrome
+51978008,Head lag in the newborn
+52327008,Fetal myelomeningocele causing disproportion
+52767006,Neonatal hypoglycemia
+52977000,Fetal exsanguination
+53785005,Injury to brachial plexus as birth trauma
+53898005,Lithopedion
+54364001,Lethal neonatal spasticity
+54842003,Intestinal obstruction by inspissated milk in newborn
+54959009,Perinatal atelectasis
+55444004,Transient neonatal neutropenia
+55712002,Facial nerve injury as birth trauma
+5604000,Neonatal transient hyperthyroidism
+56110009,Birth trauma of fetus
+56268004,Fetal hemorrhage into co-twin
+56921004,Perinatal jaundice due to hereditary hemolytic anemia
+57284007,Severe birth asphyxia
+57341009,Meconium peritonitis
+58357007,Fetal or neonatal effect of vasa previa
+58748004,Neonatal tooth
+59113005,Perinatal secondary atelectasis
+59491002,Ecchymoses in fetus OR newborn
+59534005,"Meconium in amniotic fluid, not clear if noted before OR after onset of labor in liveborn infant"
+59634004,Postmaturity
+5984000,"Fetal or neonatal effect of malpresentation, malposition and/or disproportion during labor and/or delivery"
+59957008,Neonatal Graves' disease
+60025004,Transitory fever of newborn
+60125001,Perinatal interstitial emphysema
+60822000,Petechiae in fetus OR newborn
+609417004,Fetal anencephaly
+609428000,Fetal damage from maternal infectious disorder
+609429008,Fetal disorder due to disease in mother
+609434007,Fetal damage from maternal rubella
+609435008,Fetal damage from maternal listeriosis
+609436009,Fetal damage from maternal toxoplasmosis
+609437000,Fetal Alcohol Spectrum Disorder
+609438005,Fetal or neonatal effect of maternal alcohol addiction
+609439002,Drug withdrawal syndrome in neonate of dependent mother
+609441001,Fetal or neonatal effect of breech delivery
+609520005,Disorder of fetal structure
+61145000,Tetanus omphalitis
+6160004,Neonatal hemochromatosis
+61744005,Neonatal thrombocytopenia due to idiopathic maternal thrombocytopenia
+62110005,Fetal methyl mercury syndrome
+62621000119107,Fetal hemoglobinopathy
+62714009,Fetal OR intrauterine anoxia AND/OR hypoxia first noted during labor AND/OR delivery in liveborn infant
+62751000119108,Fetal hemophilia
+62821000119106,Anomaly of fetal ear
+62991000119101,Fetal abdominal wall defect
+63051000119101,Fetal clubfoot
+63061000119104,Fetal cleft lip
+63275006,Cow's milk hypocalcemia of newborn
+63607006,Perinatal pneumomediastinum
+63814006,Abnormal cerebral signs in the newborn
+63981007,Neonatal hypoparathyroidism
+64177003,Light-for-dates with signs of fetal malnutrition
+64415008,Fetal or neonatal effect of anti-infective agent transmitted via placenta and/or breast milk
+64728002,Fracture of spine due to birth trauma
+65390006,Perinatal intestinal perforation
+655007,Abnormal fetal heart beat noted before labor in liveborn infant
+65986000,Fetal aminopterin syndrome
+66151009,Perinatal complete pulmonary collapse
+66231000,"Fetal OR intrauterine asphyxia, not clear if noted before OR after onset of labor in liveborn infant"
+66351003,Fetal trimethadione syndrome
+67569000,Bronchopulmonary dysplasia of newborn
+67645006,Disorder relating to short gestation AND/OR low birthweight
+68361004,Late anemia due to isoimmunization
+68550008,Disturbance of temperature regulation of newborn
+68961008,Fetal or neonatal effect of placental separation and/or hemorrhage
+68985000,Benign neonatal hyperaminoaciduria
+69347004,Neonatal jaundice due to delayed conjugation from delayed development of conjugating system
+69800000,Neonatal hepatitis
+698317008,Hematemesis of newborn due to swallowed maternal blood
+698318003,Melena of newborn due to swallowed maternal blood
+698321001,Neonatal effect of alcohol transmitted via breast milk
+698402008,Fetal or neonatal effect of anti-infective agent transmitted via placenta
+698403003,Neonatal effect of anti-infective agent transmitted via breast milk
+698407002,Fetal or neonatal effect of placental separation
+698408007,Fetal or neonatal effect of placental hemorrhage
+698414000,Fetal or neonatal effect of complication of labor
+698415004,Fetal or neonatal effect of complication of delivery
+698480002,Fetal or neonatal effect of maternal anesthesia
+698481003,Fetal or neonatal effect of maternal analgesia
+698492002,Fetal or neonatal effect of hallucinogenic agent transmitted via placenta
+698493007,Fetal or neonatal effect of hallucinogenic agent transmitted via breast milk
+698497008,Fetal or neonatal effect of disproportion during labor
+698498003,Fetal or neonatal effect of disproportion during delivery
+698499006,Spine injury due to birth trauma
+698500002,Spinal cord injury due to birth trauma
+698554000,Fetal or neonatal effect of malposition during labor
+698555004,Fetal or neonatal effect of malposition during delivery
+698582007,Fetal or neonatal effect of diethylstilbestrol transmitted via placenta
+698583002,Fetal or neonatal effect of diethylstilbestrol transmitted via breast milk
+698786007,Fetal or neonatal effect of narcotic transmitted via placenta
+698787003,Fetal or neonatal effect of narcotic transmitted via breast milk
+698791008,Fetal or neonatal effect of malpresentation during labor
+698795004,Fetal or neonatal effect of malpresentation during delivery
+699255005,Left to right flow of foramen ovale of fetal heart
+699257002,Increase in velocity of coronary artery of fetus
+7000009,Fetal demise from miscarriage
+700107006,Bartter syndrome antenatal type 1
+700109009,Bartter syndrome antenatal type 2
+70065001,Fetal hydantoin syndrome
+70073005,Perinatal apneic spells
+702374000,Neonatal noninfectious cerebral venous sinus thrombosis
+704241002,Fetal hypertrophic cardiomyopathy due to maternal diabetes mellitus
+704242009,Fetal heart failure due to extracardiac disease
+705069006,Long axis of fetal heart deviated to left
+705070007,Long axis of fetal heart deviated to right
+70591005,Fetal disorder
+70611002,Perinatal intraventricular hemorrhage
+70612009,Hyperthermia in newborn
+7072000,Fetal or neonatal effect of medicinal agent transmitted via placenta and/or breast milk
+707540007,Acute respiratory distress in newborn
+707541006,Acute respiratory distress in newborn with surfactant disorder
+70898005,Fetal or neonatal effect of incompetent cervix
+71028008,Fetal-maternal hemorrhage
+710571007,Renal dysplasia due to fetal exposure to angiotensin converting enzyme inhibitor
+710944000,Inflammation of fetal umbilical artery
+71119005,Fetal blood loss from cut end of co-twin's cord
+711487002,Methyl-cytosine phosphate guanine binding protein 2 related severe neonatal encephalopathy
+713204000,Non immune hydrops in newborn
+713854001,Perinatal sepsis
+713865006,Perinatal sepsis caused by Streptococcus agalactiae
+713866007,Perinatal sepsis caused by Escherichia coli
+715069001,Aspiration pneumonitis of fetus
+715197005,Fetal parvovirus syndrome
+715218009,Neonatal severe primary hyperparathyroidism
+715223009,Fetal varicella syndrome
+715431002,Embryopathy caused by phenobarbital
+715534008,Infantile convulsion and choreoathetosis syndrome
+715560009,Idiopathic neonatal atrial flutter
+716005004,Fetal diethylstilbestrol syndrome
+716020005,Diabetic embryopathy
+717155003,Neonatal intrahepatic cholestasis due to citrin deficiency
+717276003,Folinic acid responsive seizure syndrome
+717752005,Fetal lower urinary tract obstruction
+717753000,Fetal lower urinary tract obstruction due to atresia of urethra
+717754006,Fetal lower urinary tract obstruction due to posterior urethral valve
+717755007,Fetal lower urinary tract obstruction due to anterior urethral valve
+717902008,Transient neonatal hypoparathyroidism due to maternal hyperparathyroidism
+717935003,Early onset diffuse bleeding diathesis secondary to vitamin K deficient hemorrhagic disease of fetus and newborn
+717936002,Classic onset hemorrhagic disease of newborn due to vitamin K deficiency
+717937006,Late onset diffuse bleeding diathesis secondary to vitamin K deficient hemorrhagic disease of fetus and newborn
+717949007,Neonatal osteopenia
+718212006,Mitochondrial encephalocardiomyopathy due to transmembrane protein 70 mutation
+719164000,Symmetrical thalamic calcification
+721232000,Hydrolethalus syndrome
+721275006,Fetus or newborn infection caused by bacterium
+721276007,Fetus or newborn infection caused by Anaerobic bacterium
+721277003,Fetus or newborn infection caused by fungus
+721278008,Neonatal sepsis caused by Malassezia
+721279000,Neonatal infection caused by Aspergillus
+721280002,Parasitic infection of fetus or newborn
+721281003,Neonatal conjunctivitis and dacrocystitis caused by Neisseria gonorrhoeae
+721611000,Neonatal esophagitis
+721612007,Neonatal eosinophilic esophagitis
+721613002,Fetal intrauterine perforation of intestine
+721614008,Fetal intrauterine perforation of stomach
+721615009,Non-infective neonatal diarrhea
+721727002,Fetus or newborn infection caused by Escherichia coli
+721744003,Fetus or newborn infection caused by Streptococcus group B
+721750008,Fetus or newborn infection caused by Staphylococcus aureus
+721795001,Neonatal mucocutaneous infection caused by Candida
+722525006,Symmetrical small for gestational age fetus
+722531009,Fetal intrauterine intestinal perforation due to in utero volvulus
+722532002,Fetal intrauterine intestinal perforation due to in utero intraluminal obstruction
+722565005,Fetal or neonatal effect of placental edema
+722566006,Fetal or neonatal effect of large placenta
+722568007,Fetal or neonatal effect of small placenta
+722569004,Fetal or neonatal effect of amniotic band syndrome
+722570003,Fetal or neonatal effect of meconium passage during delivery
+722571004,Linear fracture of skull due to birth trauma
+722572006,Injury of facial bone due to birth trauma
+722573001,Fracture of mandible due to birth trauma
+722574007,Injury of central nervous system due to birth trauma
+722575008,Traumatic hemorrhage of cerebellum due to birth trauma
+722576009,Injury of brain stem due to birth trauma
+722577000,Injury of liver due to birth trauma
+722578005,Hemorrhage of adrenal gland due to birth trauma
+722579002,Neonatal traumatic hemorrhage of trachea following procedure on lower respiratory tract
+722580004,Fetal or neonatal intraventricular non-traumatic hemorrhage grade 4
+722581000,Fetal or neonatal non-traumatic intraventricular hemorrhage
+722582007,Fetal or neonatal intracerebral non-traumatic hemorrhage
+722583002,Fetal or neonatal non-traumatic hemorrhage of subarachnoid space of brain
+722584008,Fetal or neonatal non-traumatic hemorrhage of subdural space of brain
+722585009,Polycythemia neonatorum due to inherited disorder of erythropoietin production
+722586005,Polycythemia neonatorum following blood transfusion
+722590007,Skin fragility of prematurity
+722835006,Asymmetrical small for gestational age fetus
+722841004,Perforation of intestine co-occurrent and due to meconium ileus
+722900008,Erb Duchenne palsy with neuropraxis due to traction birth trauma
+722901007,Erb Duchenne palsy with neuroma due to birth trauma
+722903005,Injury to external genitalia due to birth trauma
+722904004,Depressed fracture of skull due to birth trauma
+722905003,Intracranial laceration due to birth trauma
+722906002,Intracranial hemorrhage due to birth trauma
+722907006,Contusion of cerebellum due to birth trauma
+722908001,Contusion of brain due to birth trauma
+722909009,Traumatic hemorrhage of intracranial epidural space due to birth trauma
+722910004,Injury to abdominal organ due to birth trauma
+722911000,Respiratory instability of prematurity
+722914008,Central neonatal apnea
+722915009,Apnea of newborn due to neurological injury
+722916005,Neonatal hypotonia of hypopharynx
+722918006,Acquired vocal cord paralysis in newborn
+722919003,Neonatal cardiac failure due to decreased left ventricular output
+722921008,Neonatal hemorrhage of spleen
+722922001,Neonatal epistaxis
+722923006,Neonatal hyperbilirubinemia following total parenteral nutrition
+722924000,Neonatal hyperbilirubinemia caused by drugs and/or toxins given to the newborn
+722925004,Transient neonatal neutropenia due to congenital viral infection
+722926003,Transient neonatal neutropenia due to neonatal bacterial sepsis
+722927007,Neonatal hyperglycemia due to insulin deficiency
+722928002,Metabolic bone disease of prematurity
+722929005,Perinatal arterial ischemic stroke
+722930000,Neonatal thrombosis of cerebral venous sinus
+722931001,Neonatal compression of brain
+722932008,Neonatal dermatosis caused by maternal antibody
+722933003,Bilious vomiting of newborn
+722936006,Birth asphyxia with Apgar score 5 minute Apgar score 4-6
+722937002,Birth asphyxia co-occurrent with metabolic acidemia of cord blood
+723111007,Neonatal mass of hypopharynx
+723552005,Transient neonatal multiple acyl-coenzyme A dehydrogenase deficiency
+723553000,Transient bullous dermolysis of newborn
+723973002,Sirenomelus
+724550005,Neonatal cardiac failure due to pulmonary overperfusion
+724551009,Neonatal burn due to phototherapy caused by ultraviolet radiation
+724853001,Cystic hygroma in fetus
+725052002,Fetal cystic fibrosis
+725287006,Embryopathy caused by retinoid
+7293009,Heavy-for-dates at birth regardless of gestation period
+733145007,Neonatal obstruction of intestine
+733183008,Acquired neonatal multiple cysts of lung
+733447005,Intestinal obstruction in newborn due to guanylate cyclase 2C deficiency
+735493006,Neonatal perforation of intestine caused by drug
+735494000,Birth injury of thorax
+735495004,Perinatal hemorrhage of lung due to traumatic injury
+735496003,Transient neonatal hypoglycemia due to hyperinsulinemia
+735497007,Transitory iatrogenic neonatal hypoglycemia
+735498002,Perinatal disorder of integument
+735637004,Sepsis of neonate caused by Streptococcus pyogenes
+735638009,Sepsis of fetus caused by Streptococcus pyogenes
+735677007,Neonatal hemorrhage of liver
+735718000,Neonatal malabsorption co-occurrent and due to gastrointestinal hormone-secreting endocrine tumor
+735719008,Neonatal intestinal perforation co-occurrent and due to intestinal atresia
+735720002,Neonatal intestinal perforation co-occurrent and due to congenital intestinal stenosis
+735721003,Neonatal intestinal perforation due to in utero intestinal volvulus
+735722005,Neonatal intestinal perforation co-occurrent and due to in utero intraluminal obstruction
+735723000,Neonatal isolated perforation of ileum
+735737009,Perinatal infection caused by Human herpes simplex virus
+735740009,Infection causing tracheitis in neonate
+735743006,Traumatic subluxation of spine due to birth trauma
+735745004,Birth injury of long bone
+735746003,Metabolic acidemia in newborn
+735747007,Tracheo-bronchial malacia in neonate
+735748002,Neonatal hemolysis co-occurrent and due to systemic bacterial infection
+736652002,Neonatal metabolic disorder
+736653007,Neonatal disorder of endocrine system
+737208005,Perinatal superficial soft tissue trauma due to obstetric injury
+737209002,Neonatal polycythemia due to placental insufficiency
+737210007,Neonatal polycythemia due to intra-uterine growth retardation
+737211006,Neonatal disorder of oral mucosa
+73749009,Neonatal jaundice associated with preterm delivery
+73876000,Perinatal jaundice due to inspissated bile syndrome
+7392002,Dermatitis of the newborn
+746223006,Neonatal infection of mouth caused by Candida
+75205009,Urine ascites of the neonate
+75387001,Transient neonatal hypertyrosinemia
+7550008,Transitory tachypnea of newborn
+75592000,Fetal or neonatal effect of abnormality of chorion
+76012002,Fetal or neonatal effect of complication of labor and/or delivery
+762272006,Fetal intrauterine intestinal perforation co-occurrent and due to congenital stenosis of intestinal tract
+762273001,Fetal intrauterine intestinal perforation co-occurrent and due to congenital atresia of intestinal tract
+762286005,Subgaleal epicranial subaponeurotic hemorrhage due to birth injury
+762287001,Mixed neonatal apnea
+762288006,Neonatal hemorrhage of kidney
+762289003,Neonatal hemorrhage of bladder
+762290007,Neonatal hemorrhage of uterus
+762291006,Syndrome of infant of mother with gestational diabetes
+762292004,Neonatal hyperglycemia due to iatrogenic intravenous therapy
+762293009,Neonatal tetany without calcium deficiency
+762437005,Neonatal tetany without magnesium deficiency
+762465007,Fetal or neonatal effect of injury of umbilical cord
+763717004,Sporadic fetal brain disruption sequence
+763839005,Neonatal Marfan syndrome
+765106006,Early-onset neonatal sepsis
+765107002,Late-onset neonatal sepsis
+765138001,Birth defect due to maternal hyperthermia
+767551003,Scalpel wound of fetal skin due to and during delivery procedure
+76873001,Polycythemia due to maternal-fetal transfusion
+7690000,Gray syndrome from chloramphenicol administration in newborn
+770664009,Neonatal brainstem dysfunction
+771299009,Prematurity of infant
+771303004,Severe neonatal onset encephalopathy with microcephaly
+771507004,Moderate to late prematurity of infant
+772125001,Anomaly of fetal kidney
+773423007,Severe neonatal lactic acidosis due to NFS1-ISD11 complex deficiency
+77362009,Mild to moderate birth asphyxia
+773662009,Neonatal inflammatory skin and bowel disease
+773666007,Hypoinsulinemic hypoglycemia and body hemihypertrophy
+773702002,Sterile multifocal osteomyelitis with periostitis and pustulosis
+773987000,Transient neonatal hypothyroidism due to neonatal iodine exposure
+774080007,Neonatal scleroderma
+774082004,Neonatal dermatomyositis
+774083009,Neonatal autoimmune hemolytic anemia
+774084003,Neonatal antiphospholipid syndrome
+778001003,Potassium voltage-gated channel subfamily Q member 2 related epileptic encephalopathy
+782432008,Acquired hydrocephalus of newborn
+78302009,Fetal or neonatal effect of narcotic transmitted via placenta and/or breast milk
+783724009,Fetal spina bifida
+783726006,Fetal hydrocephalus
+784407005,Massive epicranial subaponeurotic hematoma due to birth trauma
+78812008,Neonatal dehydration
+788929009,Fetal disorder caused by toxic substance
+788986004,Necrotizing enterocolitis of newborn stage 1A Bell's classification
+788987008,Necrotizing enterocolitis of newborn stage 1B Bell's classification
+788988003,Necrotizing enterocolitis of newborn stage 2A Bell's classification
+788989006,Necrotizing enterocolitis of newborn stage 2B Bell's classification
+788990002,Necrotizing enterocolitis of newborn stage 3A Bell's classification
+788991003,Necrotizing enterocolitis of newborn Stage 3B Bell's classification
+789009003,Primary central sleep apnea of prematurity
+78913002,Edema of newborn
+789557002,Multiple anomalies of fetus
+789560009,Fetal anomaly caused by antihypertensive drug
+7933002,Neonatal thrombocytopenia associated with maternal idiopathic thrombocytopenic purpura
+79591004,Spastic paralysis due to spinal birth injury
+79995002,"Post-term infant, not heavy-for-dates"
+80255009,Maternal transfer neutropenia
+80378000,Neonatal hepatosplenomegaly
+80473005,Neonatal hyperhistidinemia
+81402009,Fetal or neonatal effect of condition of umbilical cord
+816148008,Disproportion between fetus and pelvis due to conjoined twins
+816967008,Fetal distress due to augmentation of labor with oxytocin
+81774005,Klumpke-Déjerine paralysis as birth trauma
+82022002,Congenital debility of fetus
+82178003,Neonatal myasthenia gravis
+82368005,Transitory ileus of newborn
+82696006,Neonatal jaundice due to delayed conjugation from breast milk inhibitor
+82719008,Fetal or neonatal effect of maternal anesthesia and/or analgesia
+82729001,Caput succedaneum
+82835005,Neonatal thrombocytopenia
+82986004,Umbilical hemorrhage after birth
+83095000,Fetal cephalhematoma
+83707009,Neonatal osteomyelitis of jaw
+838369002,Adverse reaction to substance applied to neonatal skin
+840448004,Cystic hygroma in fetus co-occurrent with hydrops
+840505007,Down syndrome co-occurrent with leukemoid reaction associated transient neonatal pustulosis
+84087006,Fetal blood loss from placenta
+846602009,Fetal effect of chorangioma of placenta
+84880007,"Fetal or neonatal effect of complication of placenta, cord and/or membranes"
+84947004,Facial palsy as birth trauma
+85425003,Intrauterine hypoxia AND/OR birth asphyxia
+85539001,Hemorrhage of newborn
+860890006,Fetal interstitial neoplasm of lung
+86092005,Cystic fibrosis with meconium ileus
+866076001,Infection of breast in neonate caused by Streptococcus
+866100005,Ischemic alopecia due to birth injury
+86629005,Fetal or neonatal effect of compression of umbilical cord
+86649001,Meconium pneumonitis
+86986002,Hemolytic disease of fetus OR newborn due to RhD isoimmunization
+870310004,Perinatal mucocutaneous infection caused by Human herpesvirus 3
+870313002,Perinatal lethal Gaucher disease
+870324000,Ocular hypertension due to birth injury
+870338007,Neonatal iatrogenic dystrophic calcification
+870353004,Noma neonatorum
+870354005,Neonatal pressure ulcer of skin
+870356007,Neonatal infection of nasolacrimal duct caused by Pseudomonas
+870357003,Neonatal nutritional zinc deficiency
+870358008,Neonatal iatrogenic skin trauma due to and following antenatal intervention
+870359000,Neonatal infection of nasolacrimal duct caused by bacterium
+87045002,Fetal or neonatal effect of morphologic abnormality of placenta
+87227007,Cerebral depression in newborn
+87476004,Convulsions in the newborn
+87898000,Neonatal hypomagnesemia
+879817000,Disproportion between fetus and pelvis due to fetal neoplasm
+879818005,Fetal sacral teratoma
+879819002,Disproportion between fetus and pelvis due to fetal sacral teratoma
+8809007,Fetal or neonatal effect of abnormality of amnion
+888003,Fetal or neonatal effect of maternal blood loss
+8884000,Fetal ascites causing disproportion
+890202007,Embryopathy caused by acitretin
+890431008,Complete spontaneous rupture of fetal umbilical cord
+89062002,Fetal OR neonatal jaundice from infection
+895227002,Fetal hypercapnia
+897013003,Spontaneous rupture of fetal umbilical cord
+897014009,Partial spontaneous rupture of fetal umbilical cord
+897278005,Fetal epignathus
+897279002,Fetal epignathus with conjoined twins
+897505006,Embryofetopathy caused by infection
+89873008,Fetal or neonatal effect of toxic substance transmitted via placenta and/or breast milk
+89962000,Neonatal thrombocytopenia due to exchange transfusion
+90108007,Fetal OR intrauterine anoxia AND/OR hypoxia not clear if noted before OR after onset of labor in liveborn infant
+90127001,Fetus papyraceous
+90224001,Coma in the newborn
+90610005,Interstitial pulmonary fibrosis of prematurity
+91581004,Perinatal respiratory failure
+91849001,Acephalostomia
+935461000000101,Disorder of muscle tone of newborn
+9420008,Neonatal obstruction of nasolacrimal duct
+944051000000105,Skull injury due to birth trauma
+95555006,Neonatal hepatocellular damage
+95609003,Neonatal lupus erythematosus
+95612000,Neonatal respiratory acidosis
+95613005,Neonatal respiratory alkalosis
+95614004,Neonatal circulatory failure
+95617006,Neonatal cyanosis
+95618001,Neonatal respiratory depression
+95619009,Neonatal respiratory failure
+95620003,Thrombophlebitis of the newborn
+95621004,Respiratory tract hemorrhage of the newborn
+95622006,Fetal virilism
+95623001,Neonatal coagulation disorder
+95624007,Neonatal lymphocytopenia
+95625008,Paralytic ileus of the newborn
+95626009,Spastic ileus of the newborn
+95627000,Fever of the newborn
+95628005,Neonatal encephalopathy
+95631006,Drowsiness of the newborn
+95633009,Neonatal hypokinesia
+95634003,Neonatal respiratory arrest
+9635004,Late metabolic acidosis of newborn
+9721000119107,Malformation of central nervous system of fetus

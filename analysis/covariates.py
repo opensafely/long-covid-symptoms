@@ -9,8 +9,7 @@ def generate_covariates(index_date_variable):
 
     # DEMOGRAPHICS AND LIFESTYLE 
 
-
-     # ETHNICITY IN 5 CATEGORIES
+    #ETHNICITY IN 5 CATEGORIES
     ethnicity=patients.with_these_clinical_events(
         ethnicity_codes,
         returning="category",
@@ -83,6 +82,148 @@ def generate_covariates(index_date_variable):
         },
 
     ),
+
+
+    # COMORBIDITIES (PRIOR DIAGNOSES OF BROAD DIAGNOSTIC CATEGORIES)
+    comorb_infection_or_parasite=patients.with_these_clinical_events(
+        infectious_disease_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),   
+
+    comorb_neoplasms=patients.with_these_clinical_events(
+        neoplastic_disease_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ), 
+
+    comorb_blood_diseases=patients.with_these_clinical_events(
+        combine_codelists(
+            blood_cellular_disease_codes,
+            disorder_haematopoietic_codes,
+            disorder_immune_codes,
+        ),
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+    comorb_endocrine_nutr_metab_diseases=patients.with_these_clinical_events(
+        combine_codelists(
+            disorder_endocrine_codes,
+            metabolic_disease_codes,
+            nutritional_disorder_codes,
+        ),
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+    comorb_mental_behav_disorder=patients.with_these_clinical_events(
+        mental_disorder_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+    comorb_nervous_system_diseases=patients.with_these_clinical_events(
+        combine_codelists(
+            disorder_neurological_codes,
+            cns_codes,
+        ),
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+    comorb_ear_mastoid_disease=patients.with_these_clinical_events(
+        auditory_disorder_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+    comorb_circulatory_system_disease=patients.with_these_clinical_events(
+        cardiovascular_disease_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+    comorb_respiratory_system_disease=patients.with_these_clinical_events(
+        disorder_respiratory_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+    comorb_digestive_system_disease=patients.with_these_clinical_events(
+        disorder_digestive_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+    comorb_skin_disease=patients.with_these_clinical_events(
+        disorder_skin_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+    comorb_muscuoloskeletal_connective_diseases=patients.with_these_clinical_events(
+        combine_codelists(
+            disorder_musculoskeletal_codes,
+            disorder_connective_codes,
+        ),
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+    comorb_genitourinary_disease=patients.with_these_clinical_events(
+        disorder_genitourinary_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+    comorb_pregnancy_complications=patients.with_these_clinical_events(
+        combine_codelists(
+            compl_pregnancy_codes,
+            disorder_peurperium_codes,
+            disorder_labor_codes,
+        ),
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+    comorb_perinatal_disease=patients.with_these_clinical_events(
+        disorder_fetus_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+    comorb_congenital_disease=patients.with_these_clinical_events(
+        congential_disease_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+    comorb_injury_poisoning=patients.with_these_clinical_events(
+        combine_codelists(
+            poisoning_codes,
+            injury_codes,
+        ),
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ), 
 
 
     # RURAL OR URBAN LOCATION
