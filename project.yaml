@@ -25,13 +25,76 @@ actions:
         cohort: output/input_controls_contemporary.csv
 
 
-# 3. CHECKS ON SEPARATE CASE AND CONTROL FILES - this is for looking to see if they contain per region
-  01_longCovidSymp_check_case_control_source:
-    run: stata-mp:latest analysis/01_longCovidSymp_check_case_control_source.do
+# 3. SPLIT CASES AND COMPARATORS UP BY STP
+  01_longCovidSymp_split_by_stp:
+    run: stata-mp:latest analysis/01_longCovidSymp_cr_split_by_stp.do
     needs: [generate_community_cases_cohort, generate_potential_controls_contemporary]
     outputs:
+      highly_sensitive:
+        case_stp5: output/input_controls_contemporary_stp5.csv
+        case_stp6: output/input_controls_contemporary_stp6.csv
+        case_stp7: output/input_controls_contemporary_stp7.csv
+        case_stp8: output/input_controls_contemporary_stp8.csv
+        case_stp9: output/input_controls_contemporary_stp9.csv
+        case_stp10: output/input_controls_contemporary_stp10.csv
+        case_stp12: output/input_controls_contemporary_stp12.csv
+        case_stp13: output/input_controls_contemporary_stp13.csv
+        case_stp14: output/input_controls_contemporary_stp14.csv
+        case_stp15: output/input_controls_contemporary_stp15.csv
+        case_stp16: output/input_controls_contemporary_stp16.csv
+        case_stp17: output/input_controls_contemporary_stp17.csv
+        case_stp20: output/input_controls_contemporary_stp20.csv
+        case_stp21: output/input_controls_contemporary_stp21.csv
+        case_stp22: output/input_controls_contemporary_stp22.csv
+        case_stp23: output/input_controls_contemporary_stp23.csv
+        case_stp24: output/input_controls_contemporary_stp24.csv
+        case_stp25: output/input_controls_contemporary_stp25.csv
+        case_stp26: output/input_controls_contemporary_stp26.csv
+        case_stp27: output/input_controls_contemporary_stp27.csv
+        case_stp29: output/input_controls_contemporary_stp29.csv
+        case_stp33: output/input_controls_contemporary_stp33.csv
+        case_stp35: output/input_controls_contemporary_stp35.csv
+        case_stp36: output/input_controls_contemporary_stp36.csv
+        case_stp37: output/input_controls_contemporary_stp37.csv
+        case_stp40: output/input_controls_contemporary_stp40.csv
+        case_stp41: output/input_controls_contemporary_stp41.csv
+        case_stp42: output/input_controls_contemporary_stp42.csv
+        case_stp43: output/input_controls_contemporary_stp43.csv
+        case_stp44: output/input_controls_contemporary_stp44.csv
+        case_stp49: output/input_controls_contemporary_stp49.csv
+        control_stp5: output/input_covid_communitycases_stp5.csv
+        control_stp6: output/input_covid_communitycases_stp6.csv
+        control_stp7: output/input_covid_communitycases_stp7.csv
+        control_stp8: output/input_covid_communitycases_stp8.csv
+        control_stp9: output/input_covid_communitycases_stp9.csv
+        control_stp10: output/input_covid_communitycases_stp10.csv
+        control_stp12: output/input_covid_communitycases_stp12.csv
+        control_stp13: output/input_covid_communitycases_stp13.csv
+        control_stp14: output/input_covid_communitycases_stp14.csv
+        control_stp15: output/input_covid_communitycases_stp15.csv
+        control_stp16: output/input_covid_communitycases_stp16.csv
+        control_stp17: output/input_covid_communitycases_stp17.csv
+        control_stp20: output/input_covid_communitycases_stp20.csv
+        control_stp21: output/input_covid_communitycases_stp21.csv
+        control_stp22: output/input_covid_communitycases_stp22.csv
+        control_stp23: output/input_covid_communitycases_stp23.csv
+        control_stp24: output/input_covid_communitycases_stp24.csv
+        control_stp25: output/input_covid_communitycases_stp25.csv
+        control_stp26: output/input_covid_communitycases_stp26.csv
+        control_stp27: output/input_covid_communitycases_stp27.csv
+        control_stp29: output/input_covid_communitycases_stp29.csv
+        control_stp33: output/input_covid_communitycases_stp33.csv
+        control_stp35: output/input_covid_communitycases_stp35.csv
+        control_stp36: output/input_covid_communitycases_stp36.csv
+        control_stp37: output/input_covid_communitycases_stp37.csv
+        control_stp40: output/input_covid_communitycases_stp40.csv
+        control_stp41: output/input_covid_communitycases_stp41.csv
+        control_stp42: output/input_covid_communitycases_stp42.csv
+        control_stp43: output/input_covid_communitycases_stp43.csv
+        control_stp44: output/input_covid_communitycases_stp44.csv
+        control_stp49: output/input_covid_communitycases_stp49.csv
       moderately_sensitive:
-        log: logs/01_longCovidSymp_check_case_control_source.log
+        log: logs/01_longCovidSymp_split_by_stp.log
 
 
 
@@ -39,14 +102,18 @@ actions:
   # *** contemporary potential comparators
   match_contemporary:
     run: python:latest python analysis/match_contemporary.py
-    needs: [generate_community_cases_cohort, generate_potential_controls_contemporary]
+    needs: [01_longCovidSymp_split_by_stp]
     outputs:
       moderately_sensitive:
-        matching_report: output/matching_report_contemporary.txt
+        matching_report_spt1: output/matching_report_stp1.txt
+        matching_report_spt2: output/matching_report_stp2.txt
       highly_sensitive:
-        matched_cases: output/matched_cases_contemporary.csv
-        matched_matches: output/matched_matches_contemporary.csv
-        matched_all: output/matched_combined_contemporary.csv
+        matched_cases_spt1: output/matched_cases_stp1.csv
+        matched_matches_spt1: output/matched_matches_stp1.csv
+        matched_all_spt1: output/matched_combined_stp1.csv
+        matched_cases_spt2: output/matched_cases_stp2.csv
+        matched_matches_spt2: output/matched_matches_stp2.csv
+        matched_all_spt2: output/matched_combined_stp2.csv
 
 
 
@@ -68,6 +135,19 @@ actions:
       highly_sensitive:
         matched_cases_contemporary_wVars: output/input_complete_covid_communitycases.csv
 
+
+
+# 6. COMBINE_CASES_AND_CONTEMPORARY_CONTROLS
+  combine_cases_and_contemporary_controls:
+    run: stata-mp:latest analysis/02_longCovidSymp_cr_combined_cases_contemporary_controls.do 
+    needs: [add_allVars_contemporary_controls, add_allVars_cases]
+    outputs:
+      highly_sensitive:
+        # casesContemporary: output/cases_contemporary.dta 
+        # controlsContemporary: output/controls_contemporary.dta 
+        combinedCasesControlsContemporary: output/01_combined_cases_controls_contemporary.dta 
+      moderately_sensitive:
+        log: logs/01_longCovidSymp_cr_combined_cases_controls.log
 
 
 

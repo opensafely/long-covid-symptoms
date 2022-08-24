@@ -1,0 +1,3620 @@
+code,term
+10070005,Poisoning caused by quinoline AND/OR hydroxyquinoline derivative
+10186000,Toxic effect of selenium compound
+10221004,Lupinus digitatus poisoning
+10235002,Tetrachloroethylene poisoning
+10363003,Amianthium muscaetoxicum poisoning
+10385009,Poisoning caused by digoxin
+10486009,Poisoning caused by medazepam
+10553007,Poisoning caused by vitamin D
+105624005,"Poisoning caused by analgesic, antipyretic AND/OR antirheumatic"
+105625006,Poisoning caused by anticonvulsant AND/OR anti-Parkinsonism drug
+10571000,Cotyledon species poisoning
+10608000,Polytetrafluoroethylene poisoning
+10613001,Acute berylliosis
+10650000,Poisoning caused by ketamine
+10852006,Poisoning caused by ingestion of insect-infested food
+10916006,Poisoning caused by pyrimethamine
+10984003,Poisoning caused by skeletal muscle relaxant
+11086007,Microcystis species poisoning
+111754006,Poisoning caused by piperazine
+111755007,Poisoning caused by fluorinated corticosteroid
+111756008,Poisoning caused by posterior pituitary hormone
+111758009,Poisoning caused by enzyme
+111760006,Poisoning caused by vitamin
+111762003,Poisoning caused by antirheumatic
+111763008,Poisoning caused by mixed sedative
+111764002,Poisoning caused by local anesthetic
+111765001,Poisoning caused by prochlorperazine
+111766000,Poisoning caused by tranquilizer
+111767009,Poisoning caused by antilipemic AND/OR antiarteriosclerotic drug
+111768004,Poisoning caused by vasodilator
+111769007,Poisoning caused by antihypertensive agent
+111772000,Poisoning caused by diuretic
+111776002,Toxic effect of hydrocarbon gas
+111777006,Cobalt poisoning
+111778001,Ionophore poisoning
+111779009,Nicotine sulfate poisoning
+111780007,Ammonium sulfamate toxicity
+111781006,Monochloromethylphenoxyacetic acid poisoning
+111782004,Trichlorfon poisoning
+111783009,Ochratoxicosis
+111784003,Acer rubrum poisoning
+111785002,Anemone species poisoning
+111786001,Halogeton glomeratus poisoning
+111787005,Hypericum perforatum poisoning
+111788000,Juglans nigra poisoning
+111789008,Mesembryanthemum species poisoning
+111790004,Opuntia species poisoning
+111791000,Polygonum species poisoning
+111792007,Sophora secundiflora poisoning
+111793002,Trifolium pratense poisoning
+111802007,Food poisoning caused by Clostridia
+11196001,Poisoning caused by opiate AND/OR related narcotic
+11268001,Poisoning caused by local anti-infective
+11306002,Poisoning caused by dextrothyroxine
+11593000,Moraea species poisoning
+11632003,Medicago sativa poisoning
+11826005,Toxic effect of chloroacetophenone
+11960004,Helenium microcephalum poisoning
+11974006,Poisoning caused by protectant
+12007003,Halogeton species poisoning
+12293001,Malva species poisoning
+123012009,Poisoning caused by antidote AND/OR chelating agent
+12306004,Osteospermum ecklonis poisoning
+123775005,Carboxyhemoglobinemia
+123873005,Family poaceae poisoning
+123874004,Family fabaceae poisoning
+123875003,Family Aceraceae poisoning
+123876002,Family apocynaceae poisoning
+123877006,Family ranunculaceae poisoning
+123878001,Poisoning caused by family Passifloraceae
+123880007,Family Liliaceae poisoning
+123881006,Family caryophyllaceae poisoning
+123882004,Family euphorbiaceae poisoning
+123883009,Poisoning caused by lower plant
+123884003,Family apiaceae poisoning
+123885002,Family boraginaceae poisoning
+123886001,Family primulaceae poisoning
+123887005,Family papaveraceae poisoning
+123888000,Family araceae poisoning
+123889008,Family asteraceae poisoning
+123890004,Family Asclepiadaceae poisoning
+123891000,Family solanaceae poisoning
+123892007,Family amaranthaceae poisoning
+123893002,Family polygonaceae poisoning
+123894008,Family brassicaceae poisoning
+123895009,Family buxaceae poisoning
+123896005,Family cannabaceae poisoning
+123897001,Family polypodiaceae poisoning
+123898006,Family chenopodiaceae poisoning
+123899003,Family crassulaceae poisoning
+123900008,Family cucurbitaceae poisoning
+123901007,Family cupressaceae poisoning
+123902000,Family cycadaceae poisoning
+123903005,Family thymelaeaceae poisoning
+123904004,Family dichapetalaceae poisoning
+123905003,Family scrophulariaceae poisoning
+123906002,Family Zamiaceae poisoning
+123907006,Family equisetaceae poisoning
+123908001,Family geraniaceae poisoning
+123909009,Family myrtaceae poisoning
+123910004,Family rubiaceae poisoning
+123911000,Family fagaceae poisoning
+123912007,Family portulacaceae poisoning
+123913002,Family aizoaceae poisoning
+123914008,Family loganiaceae poisoning
+123915009,Family malvaceae poisoning
+123916005,Family araliaceae poisoning
+123917001,Family iridaceae poisoning
+123918006,Family clusiaceae poisoning
+123919003,Family convolvulaceae poisoning
+123920009,Family juglandaceae poisoning
+123921008,Family zygophyllaceae poisoning
+123922001,Family ericaceae poisoning
+123923006,Family rhamnaceae poisoning
+123924000,Family verbenaceae poisoning
+123925004,Family linaceae poisoning
+123926003,Family lamiaceae poisoning
+123927007,Family meliaceae poisoning
+123928002,Family melianthaceae poisoning
+123929005,Family gentianaceae poisoning
+123930000,Family myoporaceae poisoning
+123931001,Family cactaceae poisoning
+123932008,Family oxalidaceae poisoning
+123933003,Family phytolaccaceae poisoning
+123934009,Family pinaceae poisoning
+123935005,Family berberidaceae poisoning
+123936006,Family rosaceae poisoning
+123937002,Family taxaceae poisoning
+123938007,Family combretaceae poisoning
+123939004,Family Rutaceae poisoning
+123940002,Family anacardiaceae poisoning
+123941003,Family ulmaceae poisoning
+123942005,Family juncaginaceae poisoning
+123943000,Family urticaceae poisoning
+123944006,Family xanthorrhoeaceae poisoning
+123945007,Family santalaceae poisoning
+12398571000119105,Methamphetamine intoxication
+12401000132107,Poisoning caused by aniline
+12421000132104,Chronic poisoning caused by benzene
+12442008,Poisoning caused by thiourea
+127064002,Chronic carbon monoxide intoxication
+12815001,Poisoning caused by lidocaine
+128301004,Chronic poisoning
+12876009,Poisoning caused by digitalis glycoside
+12898000,Poisoning caused by pentazocine
+12926008,Mercurialis annua poisoning
+129660004,Poisoning caused by L-asparaginase
+129662007,Neurotoxicity caused by procarbazine
+129663002,Neurotoxicity caused by vincristine
+129664008,Neurotoxicity caused by vinblastine
+129665009,Neurotoxicity caused by L-asparaginase
+129666005,Neurotoxicity caused by methotrexate
+13054007,Poisoning caused by atropine
+13187008,Poisoning caused by heroin
+13216001,Poisoning caused by warfarin sodium
+1323006,Poisoning caused by kanamycin
+13379001,Euphorbia mauritanica poisoning
+13497008,Poisoning by Lophyrotoma interrupta
+13503000,Poisoning caused by naloxone
+13547006,Rhododendron species poisoning
+13632006,Poisoning caused by metaraminol
+13751005,Poisoning caused by Mexican beaded lizard bite
+13754002,"2,4-Dichlorophenoxyacetic acid poisoning"
+13857004,Thalidomide poisoning
+1387009,Solanum nigrum poisoning
+13972004,Cupressus species poisoning
+14002008,Poisoning caused by kaolin
+14113009,Oxylobium species poisoning
+14130006,Poisoning caused by ampicillin
+14154001,Poisoning caused by pilocarpine
+14607001,Poisoning caused by ethambutol
+14899007,Cestrum parqui poisoning
+14924005,Agave species poisoning
+15026003,Poisoning caused by testosterone
+15056007,Poisoning caused by arthropod venom
+15233006,Poisoning caused by cannabis derivative
+1531000,Poisoning caused by nitrofuran derivatives
+15382009,Poisoning caused by thiouracil
+15649002,Poisoning caused by anticholinesterase
+15670008,Strobane poisoning
+15975000,Echium lycopis poisoning
+16248006,Poisoning caused by butyrophenone-based tranquilizer
+16259002,Allium cepa poisoning
+16260007,Poisoning caused by azathioprine
+16292008,Cannabis sativa poisoning
+16327006,Fagus sylvatica poisoning
+16332007,Poisoning caused by ethionamide
+16464001,Toxic effect of carbon tetrachloride
+1647007,Poisoning caused by primaquine
+1657008,Mevinphos poisoning
+16686005,Toxic effect of hydrocyanic acid
+16800004,Poisoning caused by magnesium trisilicate
+16884005,Anagallis arvensis poisoning
+16947009,Poisoning caused by puss caterpillar
+16959008,Azinphos-ethyl poisoning
+17040003,Lobelia cardinalis poisoning
+17052005,Abrus precatorius poisoning
+17252001,Datura species poisoning
+17345001,Norbormide toxicity
+17383000,Toxic effect of carbon monoxide
+17570002,Poisoning caused by emetine
+17582006,Medicago denticulatum poisoning
+177007,Poisoning by sawfly larvae
+177569000,Poisoning by eating contaminated shellfish
+17934008,Poisoning caused by African honey bee sting
+17958007,Aleurites fordii poisoning
+17979007,Buxus sempervirens poisoning
+18051001,Toxic effect of dichlorvos
+18052008,Poisoning caused by meperidine
+18108002,Poisoning caused by methohexital
+18121009,Chronic berylliosis
+18256001,Dicentra canadensis poisoning
+18337009,Poisoning caused by insulin
+1837006,Poisoning caused by metaproterenol
+1848004,Poisoning caused by gaseous anesthetic
+18597007,Poisoning caused by eye anti-infective
+18631001,Poisoning caused by heavy metal anti-infective
+18653004,Alcohol intoxication delirium
+186597006,Fish poisoning
+18689007,Inhalant intoxication delirium
+18768006,Phenanthrene derivative poisoning
+18903007,Carcinogen effect
+1897008,Amsinckia species poisoning
+191802004,Acute alcoholic intoxication in alcoholism
+191804003,Continuous acute alcoholic intoxication in alcoholism
+191805002,Episodic acute alcoholic intoxication in alcoholism
+191806001,"Acute alcoholic intoxication in remission, in alcoholism"
+19324003,Methane/propane poisoning
+19466003,Neurotoxicity
+19547001,Food poisoning caused by streptococcus
+1959009,Encephalartos species poisoning
+197301006,Toxic portal cirrhosis
+197354009,Toxic liver disease
+197355005,Toxic liver disease with cholestasis
+197356006,Toxic liver disease with hepatic necrosis
+197358007,Toxic liver disease with acute hepatitis
+197359004,Toxic liver disease with chronic persistent hepatitis
+197360009,Toxic liver disease with chronic lobular hepatitis
+197361008,Toxic liver disease with chronic active hepatitis
+197362001,Toxic liver disease with fibrosis and cirrhosis of liver
+197367007,Hepatic granulomas in berylliosis
+1977004,Poisoning caused by oxymetholone
+19854001,Pavetta species poisoning
+19894004,Food poisoning caused by Bacillus cereus
+19920003,Poisoning caused by busulfan
+20117002,Poisoning caused by mitomycin
+20179009,Poisoning caused by trichomycin
+20184003,Strophanthus species poisoning
+20202008,Coumaphos poisoning
+20215004,Carbophenothion poisoning
+20260003,Poisoning caused by psychostimulant
+20310007,Diphenadione poisoning
+20356004,Sorghum vulgare poisoning
+20731008,Homeria pallida poisoning
+20745002,Zinc phosphide poisoning
+20789002,Equisetum species poisoning
+20871009,Phencyclidine intoxication
+20881008,Poisoning caused by practolol
+2094002,Toxic effect of carbon disulfide
+21002008,Famphur poisoning
+21019005,Ornithogalum thyrosides poisoning
+21197006,Toxic effect of potassium cyanide
+2121004,Poisoning caused by ethopropazine
+212503009,Erythromycin poisoning
+212505002,Tetracycline poisoning
+212509008,Rifampicin poisoning
+212516009,Arsenical anti-infective poisoning
+212517000,Antimony compound poisoning
+212518005,Bismuth compound poisoning
+212523005,Chiniofon poisoning
+212533002,Para-aminosalicylic acid poisoning
+212545006,Poisoning caused by antidiabetic agent
+212551001,Iodide poisoning
+212553003,Poisoning caused by mineralocorticoid or mineralocorticoid antagonist
+212562001,Acidifying agent poisoning
+212563006,Alkalizing agent poisoning
+212596008,Acetanilide poisoning
+212597004,Phenacetin poisoning
+212599001,Pyrazole derivative poisoning
+212600003,Aminophenazone poisoning
+212602006,Ibuprofen poisoning
+212603001,Naproxen poisoning
+212607000,Pyrabital poisoning
+212615002,Oxazolidine derivative poisoning
+212616001,Paramethadione poisoning
+212617005,Trimethadione poisoning
+212619008,Hydantoin derivative poisoning
+212625007,Poisoning caused by iminostilbenes
+212630006,Bromine compound poisoning
+212632003,Bromide poisoning
+212633008,Carbromal poisoning
+212636000,Glutethimide poisoning
+212641008,Central nervous system muscle-tone depressant poisoning
+212642001,Carbamate poisoning
+212643006,Methocarbamol poisoning
+212644000,Mephenesin poisoning
+212658003,Spiperone poisoning
+212664005,Hydroxyzine poisoning
+212674008,Lobeline poisoning
+212691007,Strophanthin poisoning
+212694004,Ganglion-blocker poisoning
+212695003,Pentamethonium bromide poisoning
+212700005,Cyclandelate poisoning
+212701009,Papaverine poisoning
+212704001,Reserpine poisoning
+212706004,Poisoning caused by angiotensin-converting-enzyme inhibitors
+212708003,Antivaricose drug poisoning
+212709006,Sodium morrhuate poisoning
+212710001,Zinc salt poisoning
+212712009,Capillary-active drug poisoning
+212713004,Adrenochrome poisoning
+212715006,Poisoning caused by calcium-channel blockers
+212718008,Poisoning caused by histamine H2-receptor antagonists
+212723008,Poisoning caused by saline and osmotic laxatives
+212725001,Digestant poisoning
+212727009,Papain poisoning
+212728004,Pepsin poisoning
+212736008,Mercurial diuretic poisoning
+212737004,Chlormerodrin poisoning
+212738009,Mercaptomerin poisoning
+212739001,Mersalyl poisoning
+212742007,Purine diuretic poisoning
+212748006,Ethacrynic acid poisoning
+212750003,Electrolyte agent poisoning
+212757000,Smooth muscle relaxant poisoning
+212758005,Adiphenine poisoning
+212761006,Pipazethate poisoning
+212763009,Guaifenesin poisoning
+212771008,Local anti-infective and anti-inflammatory poisoning
+212773006,"Emollients, demulcents and protectant poisoning"
+212778002,Topical dental drug poisoning
+212785003,Lipotropic drug poisoning
+212807002,Grain alcohol causing toxic effect
+212809004,Methyl alcohol causing toxic effect
+212813006,Isopropyl alcohol causing toxic effect
+212821000,Toxic effect of homologues of benzene
+212829003,Toxic effect of dichloromethane
+212832000,"Corrosives, acids and caustic alkalis causing toxic effect"
+212835003,Caustic alkalis causing toxic effect
+212836002,Lye causing toxic effect
+212846000,Toxic effect of tin and its compounds
+212847009,Toxic effect of phosphorus and its compounds
+212857005,Toxic effect of fluorine gas and hydrogen fluoride
+212858000,Toxic effect of hydrogen sulfide
+212859008,Toxic effect of carbon dioxide
+212877003,Organophosphate and carbamate causing toxic effect
+212889001,Toxic effect of herbicides and fungicides
+212892002,Toxic effect of contact with fish
+212894001,Toxic effect of nitroderivatives and aminoderivatives of benzene and its homologues
+212898003,Toxic effect of formaldehyde
+212899006,Toxic effect of tobacco and nicotine
+212953005,Decompression sickness type I
+212954004,Decompression sickness type II
+21401009,Gutierrezia species poisoning
+21413004,Poisoning caused by coronary vasodilator
+21445009,Poisoning caused by oral sulfonylurea derivative
+214503008,Noncollision motor vehicle traffic accident involving accidental poisoning from exhaust gas generated by motor vehicle while in motion
+214504002,"Noncollision motor vehicle traffic accident involving accidental poisoning from exhaust gas generated by motor vehicle while in motion, driver of motor vehicle injured"
+214505001,"Noncollision motor vehicle traffic accident involving accidental poisoning from exhaust gas generated by motor vehicle while in motion, passenger of motor vehicle injured"
+214507009,"Noncollision motor vehicle traffic accident involving accidental poisoning from exhaust gas generated by motor vehicle while in motion, motor cyclist injured"
+214508004,"Noncollision motor vehicle traffic accident involving accidental poisoning from exhaust gas generated by motor vehicle while in motion, passenger on motor cycle injured"
+214509007,"Noncollision motor vehicle traffic accident involving accidental poisoning from exhaust gas generated by motor vehicle while in motion, occupant of tram injured"
+214510002,"Noncollision motor vehicle traffic accident involving accidental poisoning from exhaust gas generated by motor vehicle while in motion, rider of animal or occupant of animal-drawn vehicle injured"
+214511003,"Noncollision motor vehicle traffic accident involving accidental poisoning from exhaust gas generated by motor vehicle while in motion, pedal cyclist injured"
+214512005,"Noncollision motor vehicle traffic accident involving accidental poisoning from exhaust gas generated by motor vehicle while in motion, pedestrian injured"
+21481000119108,Toxic effect of secondary tobacco exposure
+21511000,Crotoxyphos poisoning
+21520009,Toxic effect of soap AND/OR detergent
+215780002,Accidental poisoning by gases or fumes on ship
+215781003,"Accidental poisoning by gases or fumes on ship, occupant of small unpowered boat injured"
+215782005,"Accidental poisoning by gases or fumes on ship, occupant of small powered boat injured"
+215786008,"Accidental poisoning by gases or fumes on ship, swimmer injured"
+215787004,"Accidental poisoning by gases or fumes on ship, docker or stevedore injured"
+216233003,"Poisoning caused by carbon monoxide from aircraft while in transit, without accident to aircraft"
+216236006,"Poisoning caused by carbon monoxide from aircraft while in transit, without accident to aircraft, occupant of military aircraft injured"
+216237002,"Poisoning caused by carbon monoxide from aircraft while in transit, without accident to aircraft, member of crew of commercial aircraft in surface to surface transport injured"
+216239004,"Poisoning caused by carbon monoxide from aircraft while in transit, without accident to aircraft, occupant of commercial aircraft in surface to air transport injured"
+216241003,"Poisoning caused by carbon monoxide from aircraft while in transit, without accident to aircraft, occupant of unpowered aircraft, except parachutist, injured"
+216242005,"Poisoning caused by carbon monoxide from aircraft while in transit, without accident to aircraft, parachutist injured"
+216243000,"Poisoning caused by carbon monoxide from aircraft while in transit, without accident to aircraft, member of ground crew or airline employee injured"
+216463005,Accidental poisoning caused by heroin
+216464004,Accidental poisoning caused by methadone
+216466002,Accidental poisoning caused by codeine
+216467006,Accidental poisoning caused by pethidine
+216468001,Accidental poisoning caused by morphine
+216469009,Accidental poisoning caused by opium
+216471009,Accidental poisoning caused by salicylates
+216472002,Accidental poisoning caused by aspirin
+216475000,Accidental poisoning caused by acetanilide
+216477008,Accidental poisoning caused by phenacetin
+216479006,Accidental poisoning caused by pyrazole derivatives
+216480009,Accidental poisoning caused by aminophenazone
+216481008,Accidental poisoning caused by phenylbutazone
+216483006,Accidental poisoning caused by antirheumatic
+216484000,Accidental poisoning caused by gold salt
+216485004,Accidental poisoning caused by indomethacin
+216486003,Accidental poisoning caused by naproxen
+216487007,Accidental poisoning caused by ibuprofen
+216488002,Accidental poisoning caused by ketoprofen
+216491002,Accidental poisoning caused by pyrabital
+216494005,Accidental poisoning caused by pentazocine
+216497003,Accidental poisoning caused by barbiturates
+216498008,Accidental poisoning caused by amylobarbitone
+216499000,Accidental poisoning caused by barbitone
+216500009,Accidental poisoning caused by butabarbitone
+216501008,Accidental poisoning caused by pentobarbitone
+216502001,Accidental poisoning caused by phenobarbitone
+216503006,Accidental poisoning caused by quinalbarbitone
+216506003,Accidental poisoning caused by chloral hydrate
+216507007,Accidental poisoning caused by paraldehyde
+216508002,Accidental poisoning caused by bromine compounds
+216509005,Accidental poisoning caused by bromide
+216510000,Accidental poisoning caused by cabromal derivative
+216511001,Accidental poisoning caused by carbamic ester
+216514009,Accidental poisoning caused by glutethimide
+216518007,Accidental poisoning caused by tranquilizers
+216519004,Accidental poisoning caused by phenothiazine-based tranquilizer
+216520005,Accidental poisoning caused by chlorpromazine
+216521009,Accidental poisoning caused by fluphenazine
+216522002,Accidental poisoning caused by prochlorperazine
+216523007,Accidental poisoning caused by promazine
+216525000,Accidental poisoning caused by butyrophenone-based tranquilizer
+216526004,Accidental poisoning caused by haloperidol
+216527008,Accidental poisoning caused by spiperone
+216528003,Accidental poisoning caused by trifluperidol
+216530001,Accidental poisoning caused by benzodiazepine-based tranquilizer
+216531002,Accidental poisoning caused by chlordiazepoxide
+216532009,Accidental poisoning caused by diazepam
+216533004,Accidental poisoning caused by flurazepam
+216534005,Accidental poisoning caused by lorazepam
+216535006,Accidental poisoning caused by medazepam
+216536007,Accidental poisoning caused by nitrazepam
+216539000,Accidental poisoning caused by hydroxyzine
+216541004,Accidental poisoning caused by meprobamate
+216545008,Accidental poisoning caused by antidepressants
+216546009,Accidental poisoning caused by amitriptyline
+216547000,Accidental poisoning caused by imipramine
+216548005,Accidental poisoning caused by monoamine oxidase inhibitors
+216550002,Accidental poisoning caused by hallucinogens
+216551003,Accidental poisoning caused by cannabis derivatives
+216554006,Accidental poisoning caused by mescaline
+216555007,Accidental poisoning caused by psilocin
+216556008,Accidental poisoning caused by psilocybin
+216558009,Accidental poisoning caused by psychostimulants
+216559001,Accidental poisoning caused by amphetamine
+216560006,Accidental poisoning caused by caffeine
+216562003,Accidental poisoning caused by central nervous system stimulants
+216564002,Accidental poisoning caused by opiate antagonists
+216569007,Accidental poisoning caused by amantadine
+216570008,Accidental poisoning caused by hydantoin derivative
+21657009,Adenium species poisoning
+216572000,Accidental poisoning caused by oxazolidine derivative
+216573005,Accidental poisoning caused by succinimides
+216576002,Accidental poisoning caused by ether
+216577006,Accidental poisoning caused by gaseous anesthetic
+216578001,Accidental poisoning caused by halogenated hydrocarbon derivative
+216579009,Accidental poisoning caused by intravenous anesthetics
+216580007,Accidental poisoning caused by thiobarbiturate
+216582004,Accidental poisoning caused by local anesthetic
+216583009,Accidental poisoning caused by cocaine
+216584003,Accidental poisoning caused by lignocaine
+216585002,Accidental poisoning caused by procaine
+216586001,Accidental poisoning caused by tetracaine
+216588000,Accidental poisoning caused by cholinergic
+216589008,Accidental poisoning caused by acetylcholine
+216590004,Accidental poisoning caused by anticholinesterase
+216591000,Accidental poisoning caused by pilocarpine
+216593002,Accidental poisoning caused by anticholinergic
+216594008,Accidental poisoning caused by atropine
+216595009,Accidental poisoning caused by homatropine
+216596005,Accidental poisoning caused by hyoscine
+216597001,Accidental poisoning by quaternary ammonium derivatives
+216599003,Accidental poisoning caused by adrenergics
+216600000,Accidental poisoning caused by adrenalin
+216601001,Accidental poisoning caused by norepinephrine
+216603003,Accidental poisoning caused by antiadrenergic
+216604009,Accidental poisoning caused by phenoxybenzamine
+216605005,Accidental poisoning caused by tolazoline hydrochloride
+216609004,Accidental poisoning caused by antibiotic
+216610009,Accidental poisoning caused by anti-infective
+216612001,Accidental poisoning caused by hormones and synthetic substitutes
+216614000,Accidental poisoning caused by drug affecting blood constituent
+216615004,Accidental poisoning caused by drug primarily affecting cardiovascular system
+216616003,Accidental poisoning caused by drug primarily affecting gastrointestinal system
+216618002,Accidental poisoning caused by drug primarily acting on smooth and skeletal muscle and respiratory system
+216619005,"Accidental poisoning caused by drugs primarily affecting skin, mucous membrane, ophthalmological, otorhinolaryngological and dental drugs"
+216620004,Accidental poisoning caused by skin drug
+216621000,Accidental poisoning caused by drug primarily affecting mucous membrane
+216622007,Accidental poisoning caused by ophthalmological drug
+216623002,Accidental poisoning caused by otorhinolaryngological drug
+216624008,Accidental poisoning caused by dental drug
+216627001,Accidental poisoning caused by central appetite depressant
+216633005,Accidental poisoning caused by alcoholic beverage
+216635003,Accidental poisoning caused by denatured alcohol
+216636002,Accidental poisoning caused by methylated spirit
+216640006,Accidental poisoning caused by methyl alcohol
+216645001,Accidental poisoning caused by isopropyl alcohol
+216648004,Accidental poisoning caused by rubbing alcohol substitute
+216651006,Accidental poisoning caused by fusel oil
+216654003,Accidental poisoning by household agents
+216655002,Accidental poisoning by synthetic detergents and shampoos
+216656001,Accidental poisoning by soap products
+216657005,Accidental poisoning by polishes
+216659008,Accidental poisoning by scouring agents
+216661004,Accidental poisoning caused by disinfectant
+216662006,Accidental poisoning by lead paints
+216664007,Accidental poisoning by lacquers
+216665008,Accidental poisoning by oil colors
+216666009,Accidental poisoning by non-lead paints
+216667000,Accidental poisoning by white washes
+216670001,Accidental poisoning caused by petroleum products
+216671002,Accidental poisoning caused by petroleum solvent
+216672009,Accidental poisoning caused by petroleum ether
+216677003,Accidental poisoning caused by antiknock additives to petroleum
+216678008,Accidental poisoning caused by gas oil
+216679000,Accidental poisoning caused by gasoline
+216680002,Accidental poisoning caused by kerosene
+216682005,Accidental poisoning caused by lubricating oil
+216683000,Accidental poisoning caused by petroleum solid
+216684006,Accidental poisoning caused by paraffin wax
+216687004,Accidental poisoning caused by benzene
+216691009,Accidental poisoning caused by insecticides of organochlorine compounds
+216692002,Accidental poisoning caused by benzene hexachlorine
+216694001,Accidental poisoning caused by chlordane
+216695000,Accidental poisoning caused by dichlorodiphenyltrichloroethane
+216696004,Accidental poisoning caused by dieldrin
+216698003,Accidental poisoning caused by toxaphene
+216700007,Accidental poisoning caused by insecticides of organophosphorus compounds
+216701006,Accidental poisoning caused by demeton
+216702004,Accidental poisoning caused by diazinon
+216703009,Accidental poisoning caused by dichlorvos
+216704003,Accidental poisoning caused by malathion
+216705002,Accidental poisoning caused by methyl parathion
+216706001,Accidental poisoning caused by parathion
+216708000,Accidental poisoning caused by phorate
+216709008,Accidental poisoning caused by phosdrin
+216711004,Accidental poisoning caused by carbamates
+216712006,Accidental poisoning caused by aldicarb
+216713001,Accidental poisoning caused by carbaryl
+216714007,Accidental poisoning caused by propoxur
+216716009,Accidental poisoning caused by mixture of insecticide
+216718005,Accidental poisoning caused by insecticide of kerosene compound
+216720008,Accidental poisoning caused by herbicides
+216723005,Accidental poisoning caused by chlorate
+216724004,Accidental poisoning caused by diquat
+216725003,Accidental poisoning by mixtures of herbicides with plant foods and fertilizers
+216726002,Accidental poisoning caused by paraquat
+216728001,Accidental poisoning caused by fungicide
+216729009,Accidental poisoning by organic mercurials
+216730004,Accidental poisoning caused by pentachlorophenol
+21673003,Poisoning caused by saluretic
+216732007,Accidental poisoning caused by rodenticides
+216733002,Accidental poisoning caused by fluoroacetate
+216734008,Accidental poisoning by squill and derivatives
+216735009,Accidental poisoning caused by thallium
+216736005,Accidental poisoning caused by warfarin
+216737001,Accidental poisoning caused by zinc phosphide
+216739003,Accidental poisoning caused by fumigant
+216740001,Accidental poisoning caused by cyanide
+216741002,Accidental poisoning caused by methyl bromide
+216742009,Accidental poisoning caused by phosphine
+216747003,Accidental poisoning caused by corrosive aromatic
+216748008,Accidental poisoning caused by carbolic acid
+216750000,Accidental poisoning caused by acids
+216751001,Accidental poisoning caused by hydrochloric acid
+216752008,Accidental poisoning caused by nitric acid
+216753003,Accidental poisoning caused by sulfuric acid
+216755005,Accidental poisoning caused by caustic alkalis
+216756006,Accidental poisoning caused by sodium hydroxide
+216757002,Accidental poisoning caused by lye
+216761008,Accidental poisoning from foodstuffs and poisonous plants
+216762001,Accidental poisoning from meat
+216763006,Accidental poisoning from shellfish
+216765004,Accidental poisoning from berries and seeds
+216766003,Accidental poisoning from berries
+216767007,Accidental poisoning from seeds
+216770006,Accidental poisoning from mushrooms and other fungi
+216771005,Accidental poisoning from mushrooms
+216777009,Accidental poisoning caused by lead and its compounds and fumes
+216779007,Accidental poisoning caused by lead compound
+216780005,Accidental poisoning caused by lead fumes
+216789006,Accidental poisoning caused by antimony compound
+216790002,Accidental poisoning caused by antimony fumes
+216792005,Accidental poisoning caused by arsenic and its compounds and fumes
+216794006,Accidental poisoning caused by arsenic compound
+216795007,Accidental poisoning caused by arsenic fumes
+216798009,Accidental poisoning caused by beryllium and its compounds
+216799001,Accidental poisoning caused by brass fumes
+216800002,Accidental poisoning caused by cadmium and its compounds
+216801003,Accidental poisoning caused by copper salt
+216802005,Accidental poisoning caused by iron compounds
+216803000,Accidental poisoning caused by manganese and its compounds
+216807004,Accidental poisoning caused by plant food and fertilizer
+216808009,Accidental poisoning caused by plant food
+216809001,Accidental poisoning caused by fertilizers
+216811005,Accidental poisoning by glues and adhesives
+216812003,Accidental poisoning by glues
+216815001,Accidental poisoning by cosmetics
+216818004,Accidental poisoning by gas distributed by pipeline
+216819007,Accidental poisoning by carbon monoxide from incomplete combustion of piped gas
+216821002,Accidental poisoning by liquefied petroleum gas distributed through pipes
+216822009,Accidental poisoning by piped natural gas
+216825006,Accidental poisoning caused by liquefied petroleum gas distributed in mobile containers
+216826007,Accidental poisoning caused by butane
+216827003,Accidental poisoning caused by propane
+216830005,Accidental poisoning caused by acetylene
+216831009,Accidental poisoning by water gas
+216836004,Accidental poisoning by motor vehicle exhaust gas
+216837008,Accidental poisoning by exhaust gas from stationary farm tractor
+216838003,Accidental poisoning by exhaust gas from gas engine
+216839006,Accidental poisoning by exhaust gas from motor pump
+216840008,Accidental poisoning by exhaust gas from stationary motor vehicle
+216843005,Accidental poisoning caused by carbon monoxide from incomplete combustion of coal in domestic stove or fireplace
+216845003,Accidental poisoning caused by carbon monoxide from incomplete combustion of coke in domestic stove or fireplace
+216846002,Accidental poisoning caused by carbon monoxide from incomplete combustion of wood in domestic stove or fireplace
+216847006,Accidental poisoning caused by carbon monoxide from incomplete combustion of kerosene or paraffin in domestic stove or fireplace
+216850009,Accidental poisoning caused by carbon monoxide from blast furnace gas
+216851008,Accidental poisoning caused by carbon monoxide from kiln vapor
+216852001,Accidental poisoning caused by carbon monoxide from incomplete combustion of fuels in industrial use
+216856003,Accidental poisoning caused by nitrogen oxides
+216857007,Accidental poisoning caused by sulfur dioxide
+216858002,Accidental poisoning caused by freon
+216859005,Accidental poisoning caused by tear gas
+216860000,Accidental poisoning caused by bromobenzyl cyanide
+216861001,Accidental poisoning caused by chloroacetophenone
+216862008,Accidental poisoning caused by ethyliodoacetate
+216865005,Accidental poisoning caused by chlorine
+216866006,Accidental poisoning caused by hydrocyanic acid gas
+217651002,Poisoning caused by cobra venom
+217652009,Poisoning caused by copperhead snake venom
+217653004,Poisoning caused by coral snake venom
+217654005,Poisoning caused by fer de lance venom
+217655006,Poisoning caused by gila monster venom
+217656007,Poisoning caused by krait venom
+217657003,Poisoning caused by mamba venom
+217659000,Poisoning caused by rattlesnake venom
+217660005,Poisoning caused by sea snake venom
+217661009,Poisoning caused by viper venom
+217662002,Poisoning caused by water moccasin venom
+217665000,Poisoning caused by venomous spider
+217666004,Poisoning caused by black widow spider venom
+217668003,Poisoning caused by tarantula spider venom
+217670007,Poisoning caused by scorpion venom
+217677005,Poisoning caused by centipede venom
+217678000,Poisoning caused by millipede venom
+217681005,Poisoning caused by sting of ant
+217682003,Poisoning caused by sting of caterpillar
+217684002,Poisoning due to venomous marine animals or plants
+21836003,Poisoning caused by procaine
+21890006,Drymaria pachyphylla poisoning
+219122005,Self poisoning by corrosive or caustic substance
+219123000,Self poisoning caused by arsenic or its compounds
+219125007,Suicide and selfinflicted poisoning by gases in domestic use
+219126008,Suicide and selfinflicted poisoning by gas distributed by pipeline
+219127004,Suicide and selfinflicted poisoning by liquefied petroleum gas distributed in mobile containers
+219131005,Self poisoning caused by motor vehicle exhaust gas
+219324001,"Injury undetermined whether accidentally or purposely inflicted, poisoning by motor vehicle exhaust gas"
+21963003,Poisoning caused by marine animal
+22004006,Threlkeldia proceriflora poisoning
+22130008,Organic mercury poisoning
+22150007,Pithecellobium jiringa poisoning
+2224000,Selenium poisoning
+22279009,Dipcadi glaucum poisoning
+22543002,Tetradymia glabrata poisoning
+22706002,Dioxathion poisoning
+22721008,Toxic effect of aflatoxin
+22915003,Poisoning caused by cardiovascular system drug
+22957009,Brassica oleracea poisoning
+2296009,Iron dextran toxicity
+230355005,Encephalopathy caused by heavy metal
+23142005,Poisoning caused by prostaglandin
+23146008,Poisoning caused by throat anti-infective
+231466009,Acute drug intoxication
+23203002,Vicia villosa poisoning
+23236001,Indigofera dominii poisoning
+23311005,Asaemia axillaris poisoning
+233753001,Subacute berylliosis
+233775004,Pulmonary mycotoxicosis
+234515000,Citrate intoxication
+23471003,Poisoning caused by Colorado river toad
+23527004,Cannabis intoxication
+236546003,Aluminum intoxication
+236547007,Aluminum bone disease
+236548002,Aluminum-related osteomalacia
+236549005,Aluminum-related fracturing osteodystrophy
+23833000,Poisoning caused by antineoplastic AND/OR immunosuppressive drug
+23877007,Poisoning caused by butabarbital
+24000001,Poisoning caused by antiviral drug
+24015000,Tylecodon species poisoning
+240333000,Bacillus licheniformis food poisoning
+240334006,Yersinia enterocolitica food poisoning
+240335007,Escherichia coli food poisoning
+240336008,Enterotoxigenic Escherichia coli food poisoning
+240337004,Verotoxigenic Escherichia coli food poisoning
+240338009,Viral food poisoning
+240339001,Adenovirus food poisoning
+240343002,Small round structured virus food poisoning
+240344008,Parasitic food poisoning
+240345009,Chemical food poisoning
+240348006,Heavy metal food poisoning
+24119009,Phenanthrene poisoning
+241746002,Poisoning caused by glibenclamide
+241747006,Poisoning caused by metformin
+241748001,Poisoning caused by analgesic drug
+241749009,Poisoning caused by opiate analgesic drug
+241750009,Poisoning caused by dihydrocodeine
+241753006,Poisoning caused by carbamazepine
+241754000,Poisoning caused by sodium valproate
+241756003,Poisoning caused by anesthetic agent
+241757007,Poisoning caused by temazepam
+241758002,Poisoning caused by herbal asthma mixture
+241761001,Poisoning caused by crack cocaine
+241762008,Poisoning caused by beta-adrenergic blocking drug
+241763003,Muscle drug poisoning
+241764009,Poisoning caused by bronchodilator drug
+241765005,Chelating agent poisoning
+241767002,Antipyretic poisoning
+241769004,Organic solvents causing toxic effect
+241770003,Trivalent arsenic compound causing toxic effect
+241771004,Pentavalent arsenic compound causing toxic effect
+241774007,Ciguatoxin causing toxic effect
+241777000,Death cap fungus causing toxic effect
+241778005,Fly agaric fungus causing toxic effect
+241779002,Panther mushroom causing toxic effect
+241780004,Liberty cap causing toxic effect
+241781000,Argemone oil causing toxic effect
+241782007,Isocyanate causing toxic effect
+241783002,Agrochemical or pesticide causing toxic effect
+241785009,Non-solvent chlorinated hydrocarbon insecticide causing toxic effect
+241786005,Fungicide causing toxic effect
+241787001,Sheep dip causing toxic effect
+241788006,Phenoxyacid derivative herbicide causing toxic effect
+241789003,"2,4,5-T causing toxic effect"
+241790007,Bipyridinium compound herbicide causing toxic effect
+241791006,Diquat causing toxic effect
+241792004,Urea herbicide causing toxic effect
+241793009,Organophosphorus herbicide causing toxic effect
+241795002,Dinitro compound herbicide causing toxic effect
+241796001,"4,6-dinitro-o-cresol causing toxic effect"
+241797005,Triazine or triazole herbicide causing toxic effect
+241798000,Nitrile herbicide causing toxic effect
+241799008,Non-anticoagulant rodenticide causing toxic effect
+241800007,Alphachloralose causing toxic effect
+2418009,Toxic effect of polyester fumes
+241801006,Zinc sulfide causing toxic effect
+241802004,Molluscicide causing toxic effect
+241804003,Poisoning caused by true viper venom
+241805002,Poisoning caused by European adder venom
+241806001,Poisoning caused by puff adder venom
+241807005,Poisoning caused by pit viper venom
+241808000,Poisoning caused by cobra family snake venom
+241809008,Poisoning caused by venom of back-fanged snake
+241810003,Poisoning caused by boomslang venom
+241816009,Effect of spitting cobra venom on conjunctiva
+241817000,Poisoning caused by funnel web spider venom
+241818005,Poisoning caused by tick bite
+241821007,Poisoning caused by sting of duckbill platypus
+241822000,Poisoning caused by venomous fish
+241823005,Poisoning from weever fish spine
+241824004,Poisoning from lion fish spine
+241825003,Poisoning caused by stone fish spine
+241826002,Poisoning caused by sting ray
+241827006,Poisoning by venomous mollusc
+241828001,Poisoning by cone shell venom
+241829009,Poisoning by venomous octopus
+241830004,Poisoning by blue ring octopus
+241831000,Poisoning from sting of jelly fishes
+241832007,Poisoning due to Portuguese Man-of-war sting
+241833002,Poisoning by box jellyfish sting
+241834008,Poisoning by nematocyst
+241835009,Poisoning caused by sea anemone
+241836005,Poisoning by sea urchin spine
+241837001,Poisoning by sea cucumber
+241839003,Kitchen cleaning material causing toxic effect
+241840001,Scouring product causing toxic effect
+241841002,Dishwashing liquid causing toxic effect
+241842009,Dishwasher product causing toxic effect
+241843004,Descaler causing toxic effect
+241844005,Cleaner for heated surfaces causing toxic effect
+241845006,Oven cleaner causing toxic effect
+241846007,Bathroom cleaning material causing toxic effect
+241847003,Bleach causing toxic effect
+241848008,Toilet cleaner causing toxic effect
+241849000,Disinfectant causing toxic effect
+241850000,Fabric cleaner causing toxic effect
+241851001,Metal polish causing toxic effect
+241852008,Drain cleaner causing toxic effect
+241853003,Brick cleaner causing toxic effect
+241854009,Furniture polish causing toxic effect
+241855005,Stain remover causing toxic effect
+241856006,Dry cleaning fluid causing toxic effect
+241857002,Air freshener causing toxic effect
+241858007,Solid air freshener causing toxic effect
+241859004,Aerosol air freshener causing toxic effect
+241860009,Condensation trap causing toxic effect
+241862001,Insect repellant causing toxic effect
+241863006,Mosquito repellant causing toxic effect
+241864000,Cosmetic product causing toxic effect
+241865004,Ink causing toxic effect
+241866003,Photocopier toner causing toxic effect
+241867007,Correction fluid causing toxic effect
+241869005,Paint causing toxic effect
+241870006,Aerosol paint causing toxic effect
+241871005,Liquid paint causing toxic effect
+241872003,Solid paint causing toxic effect
+241873008,Blacking causing toxic effect
+241874002,Special finish paint causing toxic effect
+241876000,Anticlimbing paint causing toxic effect
+241877009,Antigraffiti paint causing toxic effect
+241878004,Antifouling paint causing toxic effect
+241879007,Paint stripper causing toxic effect
+241880005,Sugar soap causing toxic effect
+241881009,Brush restorer causing toxic effect
+241882002,Wallpaper stripper causing toxic effect
+241883007,Filler causing toxic effect
+241884001,Graffiti remover causing toxic effect
+241885000,Paint thinner causing toxic effect
+241886004,Damp-proof liquid causing toxic effect
+241887008,Sealant causing toxic effect
+241888003,Mold killer causing toxic effect
+241889006,Automotive products causing toxic effect
+241890002,Screenwash causing toxic effect
+241891003,Toxic effect of exhaust repair agent
+241892005,Lubricant causing toxic effect
+241893000,Rust remover causing toxic effect
+241894006,Car shampoo or wax causing toxic effect
+241895007,Brake fluid causing toxic effect
+241896008,Deicer causing toxic effect
+241897004,Gardening product causing toxic effect
+241898009,Plant food causing toxic effect
+241899001,Cut flower food causing toxic effect
+241900006,Leaf shine causing toxic effect
+241901005,Rooting compound causing toxic effect
+241902003,Adhesive causing toxic effect
+241903008,Cyanoacrylate causing toxic effect
+241904002,Polyvinyl acetate adhesive causing toxic effect
+241905001,Wallpaper adhesive causing toxic effect
+241906000,Solid adhesive causing toxic effect
+241907009,Polystyrene cement causing toxic effect
+241908004,Adhesive stick causing toxic effect
+241909007,Shoe care product causing toxic effect
+241910002,Shoe polish causing toxic effect
+241911003,Shoe dye causing toxic effect
+241912005,Canvas shoe whitener causing toxic effect
+241913000,Shoe waterproofer causing toxic effect
+241914006,Photographic material causing toxic effect
+241915007,Battery causing toxic effect
+241916008,Button battery causing toxic effect
+241917004,Dry battery contents causing toxic effect
+241918009,Battery fluid causing toxic effect
+241919001,Firelighter causing toxic effect
+241920007,Fire extinguisher material causing toxic effect
+241921006,Fire retardant causing toxic effect
+241922004,Toy or novelty causing toxic effect
+241923009,Fluorescent ornament causing toxic effect
+241924003,Firework causing toxic effect
+241925002,Crayon causing toxic effect
+241926001,Felt tip pen causing toxic effect
+241927005,Pet animal-care product causing toxic effect
+241928000,Aquarium or pond product causing toxic effect
+241990001,Musculoskeletal decompression sickness
+241991002,Neurological decompression syndrome
+241993004,Cerebral decompression injury
+241994005,Cerebellar decompression injury
+24208001,Lobelia species poisoning
+242187009,Poisoning by exhaust gases on board watercraft
+242188004,Overcome by smoke on board watercraft
+242589004,Spitting cobra venom on conjunctiva
+242836008,Self poisoning by non-drug solid or liquid agents
+242837004,Self poisoning by paraquat
+242838009,Self poisoning by plants or parts of plants
+242839001,Self poisoning by gas
+242840004,Self poisoning caused by carbon monoxide
+242841000,Self poisoning caused by coal gas
+24294007,Sphenosciadium capitellatum poisoning
+242975003,Poisoning of undetermined intent caused by drug
+243001000000106,Chemical inhalation injury
+24310001,Toxic effect of sulfur dioxide
+24313004,Salsola species poisoning
+24354007,Poisoning caused by colchicine
+244183009,Fluorosis
+2443003,Hydrogen sulfide poisoning
+245143005,Chronic fluorine poisoning
+24568004,Prunus caroliniana poisoning
+24669002,Poisoning caused by antithyroid agent
+24692002,Toxic effect of phosgene
+24694001,Acacia nilotica poisoning
+24713001,Swainsona species poisoning
+24880004,2-(2-Methyl-4-chlorophenoxy)propionic acid poisoning
+24984009,Poisoning caused by antimycobacterial drug
+25125002,Erodium species poisoning
+25166002,Plant hormone herbicide toxicity
+25332000,Diplodiosis
+25346000,Solanum tuberosum poisoning
+25440005,Tetrachlorodibenzodioxin poisoning
+25508008,Pathological drug intoxication
+25555003,Chloroform poisoning
+25599007,Poisoning caused by ethosuximide
+2562003,Athanasia trifurcata poisoning
+25702006,Alcohol intoxication
+25973008,Hordeum vulgare poisoning
+25980005,Poisoning caused by secobarbital
+26033009,Toxic effect of mycotoxin
+26116000,Cynanchum species poisoning
+26182007,Lolium species poisoning
+26384002,Chlorobenzoic acid toxicity
+26431002,Brassica napus poisoning
+26543004,Poisoning caused by daunorubicin
+26602006,Ornithogalum species poisoning
+26617005,Poisoning caused by anti-infective compound of lead
+26679003,Poisoning caused by aminocaproic acid
+26767005,Bismuth poisoning
+26768000,Poisoning caused by thyroglobulin
+26820004,Trifolium subterraneum poisoning
+26824008,Mimosa pudica poisoning
+26922008,Cestrum species poisoning
+269265001,Anticonvulsant and antiParkinsonian drug poisoning
+269268004,Central nervous system depressants and anesthetic agent poisoning
+269269007,Parasympatholytic and spasmolytic poisoning
+269270008,Muscle and respiratory system drug poisoning
+269271007,"Eye, otorhinolaryngological, skin and dental drug poisoning"
+269272000,Local astringent and detergent poisoning
+269275003,Seafood causing toxic effect
+269688005,"Accidental poisoning caused by drugs, medicines and biologicals"
+269689002,Accidental poisoning caused by anticonvulsant and antiparkinsonism drugs
+269690006,Accidental poisoning caused by petroleum fuels and cleaners
+269736006,Poisoning of undetermined intent
+269765000,Accidental poisoning caused by alcohol
+26997009,Toxic effect of corrosive aromatic
+27046005,Ruelene poisoning
+27064003,Poisoning caused by emetic
+271982007,Intentional self poisoning
+27331008,Phenothiazine poisoning
+274207006,Solvents -toxic effects
+274217001,Accidental poisoning caused by detergent
+274219003,Accidental poisoning caused by corrosive
+274912004,Self poisoning by agricultural chemical
+274917005,Poisoning by exhaust gas in aircraft
+275385007,Poisoning caused by biological substance
+275387004,Parasympatholytic poisoning
+275388009,Antihistamine poisoning
+275389001,Berries - toxic effect
+275390005,Toxic effect of plant
+276008,Poisoning caused by oxytocin
+27616008,Methoxychlor poisoning
+27677008,Argemone species poisoning
+27725008,Erythrophleum species poisoning
+27759007,Brassica rapa poisoning
+27795004,Poisoning caused by surface (topical) AND/OR infiltration anesthetic
+278023006,Non-steroidal anti-inflammatory poisoning
+27903005,Heliotropium europaeum poisoning
+27956007,Cocaine intoxication
+27992006,Chlorfenvinphos poisoning
+28008001,Toxic effect of copper salt
+2805007,Phosmet poisoning
+281107009,Infective food poisoning
+2819007,Poisoning caused by magnesium sulfate
+28213007,Poisoning caused by nitrous oxide
+28219006,Ranunculus species poisoning
+28224009,Poisoning caused by cloxacillin
+28348003,Poisoning caused by cytarabine
+2836004,Toxic effect of butane
+28389000,Poisoning caused by furosemide
+28458003,Galenia africana poisoning
+28504009,Poisoning caused by meprobamate
+28563001,Poisoning caused by actinomycin
+28711005,Poisoning caused by urokinase
+287165005,Accidental poisoning caused by analgesic
+287166006,Accidental poisoning with ethyl alcohol
+28739006,Lolium temulentum poisoning
+28800007,Poisoning caused by sulfadiazine
+288293001,Poisoning caused by central nervous system drug
+288295008,Accidental poisoning caused by central nervous system drug
+290133008,Poisoning caused by nonopioid analgesic
+290134002,Accidental paracetamol poisoning
+290135001,Intentional paracetamol poisoning
+290136000,Acetaminophen poisoning of undetermined intent
+290137009,Acetaminophen and dextropropoxyphene poisoning
+290138004,Accidental acetaminophen and dextropropoxyphene poisoning
+290139007,Intentional acetaminophen and dextropropoxyphene poisoning
+290140009,Acetaminophen and dextropropoxyphene poisoning of undetermined intent
+290145004,Intentional aspirin poisoning
+290146003,Aspirin poisoning of undetermined intent
+290147007,Accidental salicylic acid salt poisoning
+290148002,Intentional salicylic acid salt poisoning
+290149005,Salicylic acid salt poisoning of undetermined intent
+290151009,Intentional pentazocine poisoning
+290152002,Pentazocine poisoning of undetermined intent
+290153007,Phenazocine poisoning
+290154001,Accidental phenazocine poisoning
+290155000,Intentional phenazocine poisoning
+290156004,Phenazocine poisoning of undetermined intent
+290157008,Methadone analog poisoning
+290158003,Dextromoramide poisoning
+290159006,Accidental dextromoramide poisoning
+290160001,Intentional dextromoramide poisoning
+290161002,Dextromoramide poisoning of undetermined intent
+290162009,Dextropropoxyphene poisoning
+290163004,Accidental dextropropoxyphene poisoning
+290164005,Intentional dextropropoxyphene poisoning
+290165006,Dextropropoxyphene poisoning of undetermined intent
+290166007,Dipipanone poisoning
+290167003,Accidental dipipanone poisoning
+290168008,Intentional dipipanone poisoning
+290169000,Dipipanone poisoning of undetermined intent
+290171000,Intentional methadone poisoning
+290172007,Methadone poisoning of undetermined intent
+290173002,Morphinan opioid poisoning
+290174008,Buprenorphine poisoning
+290175009,Accidental buprenorphine poisoning
+290176005,Intentional buprenorphine poisoning
+290177001,Buprenorphine poisoning of undetermined intent
+290179003,Intentional poisoning caused by codeine
+290180000,Poisoning caused by codeine of undetermined intent
+290182008,Intentional heroin poisoning
+290183003,Heroin poisoning of undetermined intent
+290184009,Accidental poisoning caused by dihydrocodeine
+290185005,Intentional poisoning caused by dihydrocodeine
+290186006,Poisoning caused by dihydrocodeine of undetermined intent
+290188007,Nalbuphine poisoning
+290189004,Accidental nalbuphine poisoning
+290190008,Intentional nalbuphine poisoning
+290191007,Nalbuphine poisoning of undetermined intent
+290193005,Intentional morphine poisoning
+290194004,Morphine poisoning of undetermined intent
+290196002,Pethidine analog poisoning
+290197006,Alfentanil poisoning
+290198001,Accidental alfentanil poisoning
+290199009,Intentional alfentanil poisoning
+290200007,Alfentanil poisoning of undetermined intent
+290201006,Fentanyl poisoning
+290202004,Accidental fentanyl poisoning
+290203009,Intentional fentanyl poisoning
+290204003,Fentanyl poisoning of undetermined intent
+290206001,Intentional pethidine poisoning
+290207005,Pethidine poisoning of undetermined intent
+290208000,Phenoperidine poisoning
+290209008,Accidental phenoperidine poisoning
+290210003,Intentional phenoperidine poisoning
+290211004,Phenoperidine poisoning of undetermined intent
+290212006,Meptazinol poisoning
+290213001,Accidental meptazinol poisoning
+290214007,Intentional meptazinol poisoning
+290215008,Meptazinol poisoning of undetermined intent
+290216009,Levorphanol poisoning
+290217000,Accidental levorphanol poisoning
+290218005,Intentional levorphanol poisoning
+290219002,Levorphanol poisoning of undetermined intent
+290220008,Accidental narcotic poisoning
+290221007,Intentional narcotic poisoning
+290222000,Narcotic poisoning of undetermined intent
+290226002,Acemetacin poisoning
+290227006,Accidental acemetacin poisoning
+290228001,Intentional acemetacin poisoning
+290229009,Acemetacin poisoning of undetermined intent
+290230004,Azapropazone poisoning
+290231000,Accidental azapropazone poisoning
+290232007,Intentional azapropazone poisoning
+290233002,Azapropazone poisoning of undetermined intent
+290234008,Diclofenac poisoning
+290235009,Accidental diclofenac poisoning
+290236005,Intentional diclofenac poisoning
+290237001,Diclofenac poisoning of undetermined intent
+290238006,Etodolac poisoning
+290239003,Accidental etodolac poisoning
+290240001,Intentional etodolac poisoning
+290241002,Etodolac poisoning of undetermined intent
+290242009,Felbinac poisoning
+290243004,Accidental felbinac poisoning
+290244005,Intentional felbinac poisoning
+290245006,Felbinac poisoning of undetermined intent
+290247003,Fenbufen poisoning
+290248008,Accidental fenbufen poisoning
+290249000,Intentional fenbufen poisoning
+290250000,Fenbufen poisoning of undetermined intent
+290251001,Fenoprofen poisoning
+290252008,Accidental fenoprofen poisoning
+290253003,Intentional fenoprofen poisoning
+290254009,Fenoprofen poisoning of undetermined intent
+290255005,Flurbiprofen poisoning
+290256006,Accidental flurbiprofen poisoning
+290257002,Intentional flurbiprofen poisoning
+290258007,Flurbiprofen poisoning of undetermined intent
+290260009,Intentional ibuprofen poisoning
+290261008,Ibuprofen poisoning of undetermined intent
+290263006,Intentional indomethacin poisoning
+290264000,Indomethacin poisoning of undetermined intent
+290265004,Ketoprofen poisoning
+290267007,Intentional ketoprofen poisoning
+290268002,Ketoprofen poisoning of undetermined intent
+290269005,Ketorolac poisoning
+290270006,Accidental ketorolac poisoning
+290271005,Intentional ketorolac poisoning
+290272003,Ketorolac poisoning of undetermined intent
+290273008,Mefenamic acid poisoning
+290274002,Accidental mefenamic acid poisoning
+290275001,Intentional mefenamic acid poisoning
+290276000,Mefenamic acid poisoning of undetermined intent
+290277009,Nabumetone poisoning
+290278004,Accidental nabumetone poisoning
+290279007,Intentional nabumetone poisoning
+290280005,Nabumetone poisoning of undetermined intent
+290282002,Intentional naproxen poisoning
+290283007,Naproxen poisoning of undetermined intent
+290284001,Nefopam poisoning
+290285000,Accidental nefopam poisoning
+290286004,Intentional nefopam poisoning
+290287008,Nefopam poisoning of undetermined intent
+290288003,Oxyphenbutazone poisoning
+290289006,Accidental oxyphenbutazone poisoning
+290290002,Intentional oxyphenbutazone poisoning
+290291003,Oxyphenbutazone poisoning of undetermined intent
+290293000,Intentional phenylbutazone poisoning
+290294006,Phenylbutazone poisoning of undetermined intent
+290295007,Piroxicam poisoning
+290297004,Accidental piroxicam poisoning
+290298009,Intentional piroxicam poisoning
+290299001,Piroxicam poisoning of undetermined intent
+290300009,Sulindac poisoning
+290301008,Accidental sulindac poisoning
+290302001,Intentional sulindac poisoning
+290303006,Sulindac poisoning of undetermined intent
+290304000,Tenoxicam poisoning
+290305004,Accidental tenoxicam poisoning
+290306003,Intentional tenoxicam poisoning
+290307007,Tenoxicam poisoning of undetermined intent
+290308002,Tiaprofenic acid poisoning
+290309005,Accidental tiaprofenic acid poisoning
+290310000,Intentional tiaprofenic acid poisoning
+290311001,Tiaprofenic acid poisoning of undetermined intent
+290312008,Tolmetin poisoning
+290313003,Accidental tolmetin poisoning
+290314009,Intentional tolmetin poisoning
+290315005,Tolmetin poisoning of undetermined intent
+290316006,Diagnostic agent poisoning
+290317002,Radiopharmaceutical poisoning
+290318007,Accidental radiopharmaceutical poisoning
+290319004,Intentional radiopharmaceutical poisoning
+290320005,Radiopharmaceutical poisoning of undetermined intent
+290321009,Contrast media poisoning
+290325000,X-ray contrast media poisoning
+290326004,Accidental X-ray contrast media poisoning
+290328003,X-ray contrast media poisoning of undetermined intent
+290329006,Magnetic resonance imaging contrast media poisoning
+290330001,Accidental magnetic resonance imaging contrast media poisoning
+290331002,Intentional magnetic resonance imaging contrast media poisoning
+290332009,Magnetic resonance imaging contrast media poisoning of undetermined intent
+290337003,Diagnostic dye poisoning
+290338008,Accidental diagnostic dye poisoning
+290339000,Intentional diagnostic dye poisoning
+290340003,Diagnostic dye poisoning of undetermined intent
+290342006,Accidental bismuth compound poisoning
+290343001,Intentional bismuth compound poisoning
+290344007,Bismuth compound poisoning of undetermined intent
+290345008,Sucralfate poisoning
+290346009,Accidental sucralfate poisoning
+290347000,Intentional sucralfate poisoning
+290348005,Sucralfate poisoning of undetermined intent
+290349002,Misoprostol poisoning
+290350002,Accidental misoprostol poisoning
+290351003,Intentional misoprostol poisoning
+290352005,Misoprostol poisoning of undetermined intent
+290353000,Cimetidine poisoning
+290354006,Accidental cimetidine poisoning
+290355007,Intentional cimetidine poisoning
+290356008,Cimetidine poisoning of undetermined intent
+290357004,Famotidine poisoning
+290358009,Accidental famotidine poisoning
+290359001,Intentional famotidine poisoning
+290360006,Famotidine poisoning of undetermined intent
+290361005,Nizatidine poisoning
+290362003,Accidental nizatidine poisoning
+290363008,Intentional nizatidine poisoning
+290364002,Nizatidine poisoning of undetermined intent
+290365001,Ranitidine poisoning
+290366000,Accidental ranitidine poisoning
+290367009,Intentional ranitidine poisoning
+290368004,Ranitidine poisoning of undetermined intent
+290369007,Proton pump inhibitor poisoning
+290370008,Omeprazole poisoning
+290371007,Accidental omeprazole poisoning
+290372000,Intentional omeprazole poisoning
+290373005,Omeprazole poisoning of undetermined intent
+290374004,Lansoprazole poisoning
+290375003,Accidental lansoprazole poisoning
+290376002,Intentional lansoprazole poisoning
+290377006,Lansoprazole poisoning of undetermined intent
+290378001,Carbenoxolone poisoning
+290379009,Accidental carbenoxolone poisoning
+290380007,Intentional carbenoxolone poisoning
+290381006,Carbenoxolone poisoning of undetermined intent
+290382004,Pirenzepine poisoning
+290383009,Accidental pirenzepine poisoning
+290384003,Intentional pirenzepine poisoning
+290385002,Pirenzepine poisoning of undetermined intent
+290386001,5-aminosalicylic acid poisoning
+290387005,Accidental 5-aminosalicylic acid poisoning
+290388000,Intentional 5-aminosalicylic acid poisoning
+290389008,5-aminosalicylic acid poisoning of undetermined intent
+290390004,Accidental aluminum hydroxide poisoning
+290391000,Intentional aluminum hydroxide poisoning
+290392007,Aluminum hydroxide poisoning of undetermined intent
+290393002,Accidental magnesium trisilicate poisoning
+290394008,Intentional magnesium trisilicate poisoning
+290395009,Loperamide poisoning
+290396005,Accidental loperamide poisoning
+290398006,Intentional loperamide poisoning
+290399003,Loperamide poisoning of undetermined intent
+290400005,Accidental kaolin poisoning
+290401009,Intentional kaolin poisoning
+290402002,Kaolin poisoning of undetermined intent
+290403007,Accidental pectin poisoning
+290404001,Intentional pectin poisoning
+290405000,Pectin poisoning of undetermined intent
+290406004,Motility stimulant poisoning
+290407008,Cisapride poisoning
+290408003,Accidental cisapride poisoning
+290409006,Intentional cisapride poisoning
+290410001,Cisapride poisoning of undetermined intent
+290411002,Antiemetic poisoning
+290412009,Nabilone poisoning
+290413004,Accidental nabilone poisoning
+290414005,Intentional nabilone poisoning
+290415006,Nabilone poisoning of undetermined intent
+290416007,Domperidone poisoning
+290417003,Accidental domperidone poisoning
+290418008,Intentional domperidone poisoning
+290419000,Domperidone poisoning of undetermined intent
+290420006,Metoclopramide poisoning
+290421005,Accidental metoclopramide poisoning
+290422003,Intentional metoclopramide poisoning
+290423008,Metoclopramide poisoning of undetermined intent
+290424002,5-Hydroxytryptamine-3-receptor antagonist poisoning
+290425001,Accidental 5-hydroxytryptamine-3-receptor antagonist poisoning
+290426000,Intentional 5-HT3-receptor antagonist poisoning
+290427009,5-Hydroxytryptamine-3-receptor antagonist poisoning of undetermined intent
+290428004,Laxative poisoning
+290429007,Accidental bisacodyl poisoning
+290430002,Intentional bisacodyl poisoning
+290431003,Bisacodyl poisoning of undetermined intent
+290432005,Danthron poisoning
+290433000,Accidental danthron poisoning
+290434006,Intentional danthron poisoning
+290435007,Danthron poisoning of undetermined intent
+290436008,Sodium picosulfate poisoning
+290437004,Accidental sodium picosulfate poisoning
+290438009,Intentional sodium picosulfate poisoning
+290440004,Sodium picosulfate poisoning of undetermined intent
+290441000,Lactulose poisoning
+290442007,Accidental lactulose poisoning
+290443002,Intentional lactulose poisoning
+290444008,Lactulose poisoning of undetermined intent
+290445009,Accidental magnesium sulfate poisoning
+290446005,Intentional magnesium sulfate poisoning
+290447001,Magnesium sulfate poisoning of undetermined intent
+290448006,Bulk-forming laxative poisoning
+290449003,Accidental bulk-forming laxative poisoning
+290450003,Intentional bulk-forming laxative poisoning
+290451004,Bulk-forming laxative poisoning of undetermined intent
+290452006,Anthraquinone laxative poisoning
+290453001,Cascara poisoning
+290454007,Accidental cascara poisoning
+290455008,Intentional cascara poisoning
+290456009,Cascara poisoning of undetermined intent
+290457000,Senna poisoning
+290458005,Accidental senna poisoning
+290459002,Intentional senna poisoning
+290460007,Senna poisoning of undetermined intent
+290461006,Docusate poisoning
+290462004,Accidental docusate poisoning
+290463009,Intentional docusate poisoning
+290464003,Docusate poisoning of undetermined intent
+290465002,Accidental castor oil poisoning
+290466001,Intentional castor oil poisoning
+290467005,Castor oil poisoning of undetermined intent
+290468000,Accidental phenolphthalein poisoning
+290469008,Intentional phenolphthalein poisoning
+290470009,Phenolphthalein poisoning of undetermined intent
+290474000,Antispasmodic poisoning
+290475004,Accidental antispasmodic poisoning
+290476003,Intentional antispasmodic poisoning
+290477007,Antispasmodic poisoning of undetermined intent
+290478002,Bile agent poisoning
+290479005,Accidental bile agent poisoning
+290480008,Intentional bile agent poisoning
+290481007,Bile agent poisoning of undetermined intent
+290483005,Accidental nitrous oxide poisoning
+290484004,Intentional nitrous oxide poisoning
+290485003,Nitrous oxide poisoning of undetermined intent
+290486002,General anesthetic drug poisoning
+290487006,Etomidate poisoning
+290488001,Accidental etomidate poisoning
+290489009,Intentional etomidate poisoning
+290490000,Etomidate poisoning of undetermined intent
+290491001,Accidental ketamine poisoning
+290492008,Intentional ketamine poisoning
+290493003,Ketamine poisoning of undetermined intent
+290494009,Propofol poisoning
+290495005,Accidental propofol poisoning
+290496006,Intentional propofol poisoning
+290497002,Propofol poisoning of undetermined intent
+290498007,Accidental thiopental sodium poisoning
+290500008,Intentional thiopental sodium poisoning
+290501007,Thiopental sodium poisoning of undetermined intent
+290502000,Accidental methohexitone poisoning
+290503005,Intentional methohexitone poisoning
+290504004,Methohexitone poisoning of undetermined intent
+290506002,Enflurane poisoning
+290507006,Accidental enflurane poisoning
+290508001,Intentional enflurane poisoning
+290509009,Enflurane poisoning of undetermined intent
+290511000,Intentional ether poisoning
+290512007,Ether poisoning of undetermined intent
+290513002,Accidental halothane poisoning
+290514008,Intentional halothane poisoning
+290515009,Halothane poisoning of undetermined intent
+290516005,Isoflurane poisoning
+290517001,Accidental isoflurane poisoning
+290518006,Intentional isoflurane poisoning
+290519003,Isoflurane poisoning of undetermined intent
+290520009,Trichloroethylene poisoning
+290521008,Accidental trichloroethylene poisoning
+290522001,Intentional trichloroethylene poisoning
+290523006,Trichloroethylene poisoning of undetermined intent
+290524000,Desflurane poisoning
+290525004,Accidental desflurane poisoning
+290526003,Intentional desflurane poisoning
+290527007,Desflurane poisoning of undetermined intent
+290528002,Bupivacaine poisoning
+290529005,Accidental bupivacaine poisoning
+290530000,Intentional bupivacaine poisoning
+290531001,Bupivacaine poisoning of undetermined intent
+290532008,Cinchocaine poisoning
+290533003,Accidental cinchocaine poisoning
+290534009,Intentional cinchocaine poisoning
+290535005,Cinchocaine poisoning of undetermined intent
+290536006,Prilocaine poisoning
+290537002,Accidental prilocaine poisoning
+290538007,Intentional prilocaine poisoning
+290539004,Prilocaine poisoning of undetermined intent
+290541003,Intentional lignocaine poisoning
+290542005,Lignocaine poisoning of undetermined intent
+290544006,Intentional cocaine poisoning
+290545007,Cocaine poisoning of undetermined intent
+290546008,Benzocaine poisoning
+290547004,Accidental benzocaine poisoning
+290548009,Intentional benzocaine poisoning
+290549001,Benzocaine poisoning of undetermined intent
+290550001,Oxybuprocaine poisoning
+290551002,Accidental oxybuprocaine poisoning
+290552009,Intentional oxybuprocaine poisoning
+290553004,Oxybuprocaine poisoning of undetermined intent
+290555006,Intentional procaine poisoning
+290556007,Procaine poisoning of undetermined intent
+290557003,Proxymetacaine poisoning
+290558008,Accidental proxymetacaine poisoning
+290559000,Intentional proxymetacaine poisoning
+290560005,Proxymetacaine poisoning of undetermined intent
+290561009,Accidental peripheral nerve and plexus-blocking anesthetic poisoning
+290562002,Intentional peripheral nerve and plexus-blocking anesthetic poisoning
+290563007,Peripheral nerve and plexus-blocking anesthetic poisoning of undetermined intent
+290564001,Accidental spinal anesthetic poisoning
+290565000,Intentional spinal anesthetic poisoning
+290566004,Spinal anesthetic poisoning of undetermined intent
+290568003,Intentional tetracaine poisoning
+290569006,Tetracaine poisoning of undetermined intent
+290570007,Accidental poisoning caused by therapeutic gases
+290571006,Intentional poisoning caused by therapeutic gases
+290572004,Poisoning caused by therapeutic gases of undetermined intent
+290574003,Immunostimulant poisoning
+290575002,Accidental immunostimulant poisoning
+290576001,Intentional immunostimulant poisoning
+290577005,Immunostimulant poisoning of undetermined intent
+290578000,Antineoplastic poisoning
+290579008,Alkylating drug poisoning
+290580006,Mitobronitol poisoning
+290581005,Accidental mitobronitol poisoning
+290582003,Intentional mitobronitol poisoning
+290583008,Mitobronitol poisoning of undetermined intent
+290584002,Accidental busulfan poisoning
+290585001,Intentional busulfan poisoning
+290586000,Busulfan poisoning of undetermined intent
+290587009,Treosulfan poisoning
+290588004,Accidental treosulfan poisoning
+290589007,Intentional treosulfan poisoning
+290590003,Treosulfan poisoning of undetermined intent
+290591004,Accidental triethylene thiophosphoramide poisoning
+290592006,Intentional triethylene thiophosphoramide poisoning
+290593001,Triethylene thiophosphoramide poisoning of undetermined intent
+290594007,Nitrogen mustard derivative poisoning
+290595008,Accidental chlorambucil poisoning
+290596009,Intentional chlorambucil poisoning
+290597000,Chlorambucil poisoning of undetermined intent
+290598005,Accidental cyclophosphamide poisoning
+290599002,Intentional cyclophosphamide poisoning
+290601000,Cyclophosphamide poisoning of undetermined intent
+290602007,Ethoglucid poisoning
+290603002,Accidental ethoglucid poisoning
+290604008,Intentional ethoglucid poisoning
+290605009,Ethoglucid poisoning of undetermined intent
+290606005,Ifosfamide poisoning
+290607001,Accidental ifosfamide poisoning
+290608006,Intentional ifosfamide poisoning
+290609003,Ifosfamide poisoning of undetermined intent
+290610008,Melphalan poisoning
+290611007,Accidental melphalan poisoning
+290612000,Intentional melphalan poisoning
+290613005,Melphalan poisoning of undetermined intent
+290614004,Estramustine poisoning
+290615003,Accidental estramustine poisoning
+290616002,Intentional estramustine poisoning
+290617006,Estramustine poisoning of undetermined intent
+290618001,Mustine poisoning
+290619009,Accidental mustine poisoning
+290620003,Intentional mustine poisoning
+290621004,Mustine poisoning of undetermined intent
+290622006,Nitrosurea poisoning
+290623001,Carmustine poisoning
+290624007,Accidental carmustine poisoning
+290625008,Intentional carmustine poisoning
+290626009,Carmustine poisoning of undetermined intent
+290627000,Lomustine poisoning
+290628005,Accidental lomustine poisoning
+290629002,Intentional lomustine poisoning
+290630007,Lomustine poisoning of undetermined intent
+290631006,Triazene antineoplastic poisoning
+290632004,Dacarbazine poisoning
+290633009,Accidental dacarbazine poisoning
+290634003,Intentional dacarbazine poisoning
+290635002,Dacarbazine poisoning of undetermined intent
+290636001,Cytotoxic antibiotic poisoning
+290637005,Accidental dactinomycin poisoning
+290638000,Intentional dactinomycin poisoning
+290639008,Dactinomycin poisoning of undetermined intent
+290640005,Accidental bleomycin poisoning
+290641009,Intentional bleomycin poisoning
+290642002,Bleomycin poisoning of undetermined intent
+290643007,Accidental mitomycin poisoning
+290644001,Intentional mitomycin poisoning
+290645000,Mitomycin poisoning of undetermined intent
+290646004,Plicamycin poisoning
+290647008,Accidental plicamycin poisoning
+290648003,Intentional plicamycin poisoning
+290650006,Plicamycin poisoning of undetermined intent
+290651005,Aclarubicin poisoning
+290652003,Accidental aclarubicin poisoning
+290654002,Intentional aclarubicin poisoning
+290655001,Aclarubicin poisoning of undetermined intent
+290656000,Mitozantrone poisoning
+290657009,Accidental mitozantrone poisoning
+290658004,Intentional mitozantrone poisoning
+290659007,Mitozantrone poisoning of undetermined intent
+290660002,Doxorubicin poisoning
+290661003,Accidental doxorubicin poisoning
+290662005,Intentional doxorubicin poisoning
+290663000,Doxorubicin poisoning of undetermined intent
+290664006,Epirubicin poisoning
+290665007,Accidental epirubicin poisoning
+290666008,Intentional epirubicin poisoning
+290667004,Epirubicin poisoning of undetermined intent
+290668009,Idarubicin poisoning
+290669001,Accidental idarubicin poisoning
+290670000,Intentional idarubicin poisoning
+290671001,Idarubicin poisoning of undetermined intent
+290672008,Accidental daunorubicin poisoning
+290673003,Intentional daunorubicin poisoning
+290674009,Daunorubicin poisoning of undetermined intent
+290675005,Antimetabolite poisoning
+290676006,Mercuric oxide poisoning
+290677002,Accidental mercuric oxide poisoning
+290678007,Intentional mercuric oxide poisoning
+290679004,Mercuric oxide poisoning of undetermined intent
+290680001,Methotrexate poisoning
+290681002,Accidental methotrexate poisoning
+290682009,Intentional methotrexate poisoning
+290683004,Methotrexate poisoning of undetermined intent
+290684005,Accidental mercaptopurine poisoning
+290685006,Intentional mercaptopurine poisoning
+290686007,Mercaptopurine poisoning of undetermined intent
+290687003,Thioguanine poisoning
+290688008,Accidental thioguanine poisoning
+290689000,Intentional thioguanine poisoning
+29069000,Anticoagulant rodenticide toxicity
+290690009,Thioguanine poisoning of undetermined intent
+290692001,Pentostatin poisoning
+290693006,Accidental pentostatin poisoning
+290694000,Intentional pentostatin poisoning
+290695004,Pentostatin poisoning of undetermined intent
+290696003,Accidental cytarabine poisoning
+290697007,Intentional cytarabine poisoning
+290698002,Cytarabine poisoning of undetermined intent
+290699005,Accidental fluorouracil poisoning
+290700006,Intentional fluorouracil poisoning
+290701005,Fluorouracil poisoning of undetermined intent
+290702003,Etoposide poisoning
+290703008,Accidental etoposide poisoning
+290705001,Intentional etoposide poisoning
+290706000,Etoposide poisoning of undetermined intent
+290707009,Amsacrine poisoning
+290708004,Accidental amsacrine poisoning
+290709007,Intentional amsacrine poisoning
+290710002,Amsacrine poisoning of undetermined intent
+290711003,Carboplatin poisoning
+290712005,Accidental carboplatin poisoning
+290713000,Intentional carboplatin poisoning
+290714006,Carboplatin poisoning of undetermined intent
+290715007,Cisplatin poisoning
+290716008,Accidental cisplatin poisoning
+290717004,Intentional cisplatin poisoning
+290718009,Cisplatin poisoning of undetermined intent
+290719001,Hydroxyurea poisoning
+290720007,Accidental hydroxyurea poisoning
+290721006,Intentional hydroxyurea poisoning
+290722004,Hydroxyurea poisoning of undetermined intent
+290723009,Procarbazine poisoning
+290724003,Accidental procarbazine poisoning
+290725002,Intentional procarbazine poisoning
+290726001,Procarbazine poisoning of undetermined intent
+290727005,Razoxane poisoning
+290728000,Accidental razoxane poisoning
+290729008,Intentional razoxane poisoning
+290730003,Razoxane poisoning of undetermined intent
+290731004,Crisantaspase poisoning
+290732006,Accidental crisantaspase poisoning
+290733001,Intentional crisantaspase poisoning
+290734007,Crisantaspase poisoning of undetermined intent
+290735008,Paclitaxel poisoning
+290736009,Accidental paclitaxel poisoning
+290737000,Intentional paclitaxel poisoning
+290738005,Paclitaxel poisoning of undetermined intent
+290739002,Fludarabine poisoning
+290740000,Accidental fludarabine poisoning
+290741001,Intentional fludarabine poisoning
+290742008,Fludarabine poisoning of undetermined intent
+290743003,Aminoglutethimide poisoning
+290744009,Accidental aminoglutethimide poisoning
+290745005,Intentional aminoglutethimide poisoning
+290746006,Aminoglutethimide poisoning of undetermined intent
+290747002,Estrogen antagonist poisoning
+290748007,Trilostane poisoning
+290749004,Accidental trilostane poisoning
+290750004,Intentional trilostane poisoning
+290751000,Trilostane poisoning of undetermined intent
+290752007,Tamoxifen poisoning
+290753002,Accidental tamoxifen poisoning
+290754008,Intentional tamoxifen poisoning
+290755009,Tamoxifen poisoning of undetermined intent
+290756005,Formestane poisoning
+290757001,Accidental formestane poisoning
+290758006,Intentional formestane poisoning
+290759003,Formestane poisoning of undetermined intent
+290760008,Vinca alkaloid poisoning
+290761007,Vinblastine poisoning
+290762000,Accidental vinblastine poisoning
+290763005,Intentional vinblastine poisoning
+290764004,Vinblastine poisoning of undetermined intent
+290765003,Vincristine poisoning
+290766002,Accidental vincristine poisoning
+290767006,Intentional vincristine poisoning
+290768001,Vincristine poisoning of undetermined intent
+290769009,Vindesine poisoning
+290770005,Accidental vindesine poisoning
+290771009,Intentional vindesine poisoning
+290772002,Vindesine poisoning of undetermined intent
+290773007,Immunosuppressant poisoning
+290774001,Cyclosporin poisoning
+290775000,Accidental cyclosporin poisoning
+290776004,Intentional cyclosporin poisoning
+290777008,Cyclosporin poisoning of undetermined intent
+290778003,Accidental azathioprine poisoning
+290779006,Intentional azathioprine poisoning
+290781008,Azathioprine poisoning of undetermined intent
+290783006,Intentional central appetite depressant poisoning
+290784000,Central appetite depressant poisoning of undetermined intent
+290785004,Accidental levodopa poisoning
+290786003,Intentional levodopa poisoning
+290787007,Levodopa poisoning of undetermined intent
+290789005,Intentional amantadine poisoning
+290790001,Amantadine poisoning of undetermined intent
+290791002,Lysuride poisoning
+290792009,Accidental lysuride poisoning
+290793004,Intentional lysuride poisoning
+290794005,Lysuride poisoning of undetermined intent
+290795006,Bromocriptine poisoning
+290796007,Accidental bromocriptine poisoning
+290797003,Intentional bromocriptine poisoning
+290798008,Bromocriptine poisoning of undetermined intent
+290799000,Accidental ethopropazine poisoning
+290800001,Intentional ethopropazine poisoning
+290801002,Ethopropazine poisoning of undetermined intent
+290802009,Lithium poisoning
+290803004,Accidental lithium poisoning
+290804005,Intentional lithium poisoning
+290805006,Lithium poisoning of undetermined intent
+290808008,Intentional amitriptyline poisoning
+290809000,Amitriptyline poisoning of undetermined intent
+290810005,Amoxapine poisoning
+290811009,Accidental amoxapine poisoning
+290812002,Intentional amoxapine poisoning
+290813007,Amoxapine poisoning of undetermined intent
+290814001,Butriptyline poisoning
+290815000,Accidental butriptyline poisoning
+290816004,Intentional butriptyline poisoning
+290817008,Butriptyline poisoning of undetermined intent
+290818003,Clomipramine poisoning
+290819006,Accidental clomipramine poisoning
+290820000,Intentional clomipramine poisoning
+290821001,Clomipramine poisoning of undetermined intent
+290822008,Desipramine poisoning
+290823003,Accidental desipramine poisoning
+290824009,Intentional desipramine poisoning
+290825005,Desipramine poisoning of undetermined intent
+290826006,Dothiepin poisoning
+290827002,Accidental dothiepin poisoning
+290828007,Intentional dothiepin poisoning
+290829004,Dothiepin poisoning of undetermined intent
+290830009,Doxepin poisoning
+290831008,Accidental doxepin poisoning
+290832001,Intentional doxepin poisoning
+290833006,Doxepin poisoning of undetermined intent
+290835004,Intentional imipramine poisoning
+290836003,Imipramine poisoning of undetermined intent
+290837007,Iprindole poisoning
+290838002,Accidental iprindole poisoning
+290839005,Intentional iprindole poisoning
+290840007,Iprindole poisoning of undetermined intent
+290841006,Lofepramine poisoning
+290842004,Accidental lofepramine poisoning
+290843009,Intentional lofepramine poisoning
+290844003,Lofepramine poisoning of undetermined intent
+290845002,Nortriptyline poisoning
+290846001,Accidental nortriptyline poisoning
+290847005,Intentional nortriptyline poisoning
+290848000,Nortriptyline poisoning of undetermined intent
+290849008,Protriptyline poisoning
+290850008,Accidental protriptyline poisoning
+290851007,Intentional protriptyline poisoning
+290852000,Protriptyline poisoning of undetermined intent
+290853005,Trimipramine poisoning
+290854004,Accidental trimipramine poisoning
+290855003,Intentional trimipramine poisoning
+290856002,Trimipramine poisoning of undetermined intent
+290857006,Accidental tricyclic antidepressant poisoning
+290858001,Intentional tricyclic antidepressant poisoning
+290859009,Tricyclic antidepressant poisoning of undetermined intent
+290860004,Phenelzine poisoning
+290861000,Accidental phenelzine poisoning
+290862007,Intentional phenelzine poisoning
+290863002,Phenelzine poisoning of undetermined intent
+290864008,Iproniazid poisoning
+290865009,Accidental iproniazid poisoning
+290866005,Intentional iproniazid poisoning
+290867001,Iproniazid poisoning of undetermined intent
+290868006,Isocarboxazid poisoning
+290869003,Accidental isocarboxazid poisoning
+290870002,Intentional isocarboxazid poisoning
+290871003,Isocarboxazid poisoning of undetermined intent
+290872005,Tranylcypromine poisoning
+290873000,Accidental tranylcypromine poisoning
+290874006,Intentional tranylcypromine poisoning
+290875007,Tranylcypromine poisoning of undetermined intent
+290876008,Moclobemide poisoning
+290877004,Accidental moclobemide poisoning
+290878009,Intentional moclobemide poisoning
+290879001,Moclobemide poisoning of undetermined intent
+290880003,Tryptophan poisoning
+290881004,Accidental tryptophan poisoning
+290882006,Intentional tryptophan poisoning
+290883001,Tryptophan poisoning of undetermined intent
+290884007,Venlafaxine poisoning
+290885008,Accidental venlafaxine poisoning
+290886009,Intentional venlafaxine poisoning
+290887000,Venlafaxine poisoning of undetermined intent
+290888005,Selective serotonin re-uptake inhibitor poisoning
+290889002,Sertraline poisoning
+290890006,Accidental sertraline poisoning
+290891005,Intentional sertraline poisoning
+290892003,Sertraline poisoning of undetermined intent
+290893008,Paroxetine poisoning
+290894002,Accidental paroxetine poisoning
+290895001,Intentional paroxetine poisoning
+290896000,Paroxetine poisoning of undetermined intent
+290897009,Nefazodone poisoning
+290898004,Accidental nefazodone poisoning
+290899007,Intentional nefazodone poisoning
+290900002,Nefazodone poisoning of undetermined intent
+290901003,Citalopram poisoning
+290902005,Accidental citalopram poisoning
+290903000,Intentional citalopram poisoning
+290904006,Citalopram poisoning of undetermined intent
+290905007,Fluoxetine poisoning
+290906008,Accidental fluoxetine poisoning
+290908009,Intentional fluoxetine poisoning
+290909001,Fluoxetine poisoning of undetermined intent
+290910006,Fluvoxamine poisoning
+290911005,Accidental fluvoxamine poisoning
+290912003,Intentional fluvoxamine poisoning
+290913008,Fluvoxamine poisoning of undetermined intent
+290914002,Tetracyclic antidepressant drug poisoning
+290915001,Maprotiline poisoning
+290916000,Accidental maprotiline poisoning
+290917009,Intentional maprotiline poisoning
+290918004,Maprotiline poisoning of undetermined intent
+290919007,Mianserin poisoning
+290920001,Accidental mianserin poisoning
+290921002,Intentional mianserin poisoning
+290922009,Mianserin poisoning of undetermined intent
+290923004,Trazodone poisoning
+290924005,Accidental trazodone poisoning
+290925006,Intentional trazodone poisoning
+290926007,Trazodone poisoning of undetermined intent
+290927003,Viloxazine poisoning
+290928008,Accidental viloxazine poisoning
+290929000,Intentional viloxazine poisoning
+290930005,Viloxazine poisoning of undetermined intent
+290931009,Beclamide poisoning
+290932002,Accidental beclamide poisoning
+290933007,Intentional beclamide poisoning
+290934001,Beclamide poisoning of undetermined intent
+290935000,Lamotrigine poisoning
+290936004,Accidental lamotrigine poisoning
+290937008,Intentional lamotrigine poisoning
+290938003,Lamotrigine poisoning of undetermined intent
+290939006,Piracetam poisoning
+290940008,Accidental piracetam poisoning
+290941007,Intentional piracetam poisoning
+290942000,Piracetam poisoning of undetermined intent
+290943005,Gabapentin poisoning
+290944004,Accidental gabapentin poisoning
+290945003,Intentional gabapentin poisoning
+290946002,Gabapentin poisoning of undetermined intent
+290947006,Accidental poisoning caused by sodium valproate
+290948001,Intentional poisoning caused by sodium valproate
+290949009,Poisoning caused by sodium valproate of undetermined intent
+290950009,Barbiturate antiepileptic poisoning
+290951008,Methylphenobarbitone poisoning
+290952001,Accidental methylphenobarbitone poisoning
+290953006,Intentional methylphenobarbitone poisoning
+290954000,Methylphenobarbitone poisoning of undetermined intent
+290956003,Intentional phenobarbitone poisoning
+290957007,Phenobarbitone poisoning of undetermined intent
+290958002,Accidental primidone poisoning
+290959005,Intentional primidone poisoning
+290960000,Primidone poisoning of undetermined intent
+290961001,Accidental poisoning caused by carbamazepine
+290962008,Intentional poisoning caused by carbamazepine
+290963003,Poisoning caused by carbamazepine of undetermined intent
+290964009,Vigabatrin poisoning
+290965005,Accidental vigabatrin poisoning
+290966006,Intentional vigabatrin poisoning
+290967002,Vigabatrin poisoning of undetermined intent
+290968007,Accidental phenytoin poisoning
+290969004,Intentional phenytoin poisoning
+290970003,Phenytoin poisoning of undetermined intent
+290972006,Intentional succinimide poisoning
+290973001,Succinimide poisoning of undetermined intent
+290974007,Accidental ethosuximide poisoning
+290975008,Intentional ethosuximide poisoning
+290976009,Ethosuximide poisoning of undetermined intent
+290977000,Accidental phensuximide poisoning
+290978005,Intentional phensuximide poisoning
+290979002,Phensuximide poisoning of undetermined intent
+290980004,Clonazepam poisoning
+290981000,Accidental clonazepam poisoning
+290982007,Intentional clonazepam poisoning
+290983002,Clonazepam poisoning of undetermined intent
+290985009,Zopiclone poisoning
+290986005,Accidental zopiclone poisoning
+290987001,Intentional zopiclone poisoning
+290988006,Zopiclone poisoning of undetermined intent
+290989003,Zolpidem poisoning
+290990007,Accidental zolpidem poisoning
+290991006,Intentional zolpidem poisoning
+290992004,Zolpidem poisoning of undetermined intent
+290994003,Chlormezanone poisoning
+290995002,Accidental chlormezanone poisoning
+290996001,Intentional chlormezanone poisoning
+290997005,Chlormezanone poisoning of undetermined intent
+290998000,Methyprylone poisoning
+290999008,Accidental methyprylone poisoning
+291000007,Intentional methyprylone poisoning
+291001006,Methyprylone poisoning of undetermined intent
+291003009,Intentional paraldehyde poisoning
+291004003,Paraldehyde poisoning of undetermined intent
+291006001,Intentional amylobarbitone poisoning
+291007005,Amylobarbitone poisoning of undetermined intent
+291010003,Intentional butabarbitone poisoning
+291011004,Butabarbitone poisoning of undetermined intent
+291015008,Cyclobarbitone poisoning
+291016009,Accidental cyclobarbitone poisoning
+291017000,Intentional cyclobarbitone poisoning
+291018005,Cyclobarbitone poisoning of undetermined intent
+291020008,Intentional quinalbarbitone poisoning
+291021007,Quinalbarbitone poisoning of undetermined intent
+291023005,Intentional barbitone poisoning
+291024004,Barbitone poisoning of undetermined intent
+291026002,Intentional pentobarbitone poisoning
+291027006,Pentobarbitone poisoning of undetermined intent
+291028001,Flunitrazepam poisoning
+291029009,Accidental flunitrazepam poisoning
+291030004,Intentional flunitrazepam poisoning
+291031000,Flunitrazepam poisoning of undetermined intent
+291033002,Intentional flurazepam poisoning
+291034008,Flurazepam poisoning of undetermined intent
+291035009,Loprazolam poisoning
+291036005,Accidental loprazolam poisoning
+291037001,Intentional loprazolam poisoning
+291038006,Loprazolam poisoning of undetermined intent
+291039003,Lormetazepam poisoning
+291040001,Accidental lormetazepam poisoning
+291041002,Intentional lormetazepam poisoning
+291042009,Lormetazepam poisoning of undetermined intent
+291044005,Intentional nitrazepam poisoning
+291045006,Nitrazepam poisoning of undetermined intent
+291046007,Triazolam poisoning
+291047003,Accidental triazolam poisoning
+291048008,Intentional triazolam poisoning
+291049000,Triazolam poisoning of undetermined intent
+291050000,Alprazolam poisoning
+291051001,Accidental alprazolam poisoning
+291052008,Intentional alprazolam poisoning
+291053003,Alprazolam poisoning of undetermined intent
+291054009,Bromazepam poisoning
+291055005,Accidental bromazepam poisoning
+291056006,Intentional bromazepam poisoning
+291057002,Bromazepam poisoning of undetermined intent
+291059004,Intentional chlordiazepoxide poisoning
+291060009,Chlordiazepoxide poisoning of undetermined intent
+291061008,Clobazam poisoning
+291062001,Accidental clobazam poisoning
+291063006,Intentional clobazam poisoning
+291064000,Clobazam poisoning of undetermined intent
+291065004,Potassium clorazepate poisoning
+291066003,Accidental potassium clorazepate poisoning
+291067007,Intentional potassium clorazepate poisoning
+291068002,Potassium clorazepate poisoning of undetermined intent
+291069005,Ketazolam poisoning
+291070006,Accidental ketazolam poisoning
+291071005,Intentional ketazolam poisoning
+291072003,Ketazolam poisoning of undetermined intent
+291074002,Intentional medazepam poisoning
+291075001,Medazepam poisoning of undetermined intent
+291076000,Oxazepam poisoning
+291077009,Accidental oxazepam poisoning
+291078004,Intentional oxazepam poisoning
+291079007,Oxazepam poisoning of undetermined intent
+291080005,Prazepam poisoning
+291081009,Accidental prazepam poisoning
+291082002,Intentional prazepam poisoning
+291083007,Prazepam poisoning of undetermined intent
+291084001,Midazolam poisoning
+291085000,Accidental midazolam poisoning
+291086004,Intentional midazolam poisoning
+291087008,Midazolam poisoning of undetermined intent
+291089006,Intentional diazepam poisoning
+291090002,Diazepam poisoning of undetermined intent
+291092005,Intentional lorazepam poisoning
+291093000,Lorazepam poisoning of undetermined intent
+291094006,Accidental poisoning caused by temazepam
+291095007,Intentional poisoning caused by temazepam
+291096008,Poisoning caused by temazepam of undetermined intent
+291098009,Intentional meprobamate poisoning
+291099001,Meprobamate poisoning of undetermined intent
+291100009,Chloral sedative poisoning
+291102001,Intentional chloral hydrate poisoning
+291103006,Chloral hydrate poisoning of undetermined intent
+291104000,Dichloralphenazone poisoning
+291105004,Accidental dichloralphenazone poisoning
+291106003,Intentional dichloralphenazone poisoning
+291107007,Dichloralphenazone poisoning of undetermined intent
+291108002,Triclofos sodium poisoning
+291110000,Accidental triclofos sodium poisoning
+291111001,Intentional triclofos sodium poisoning
+291112008,Triclofos sodium poisoning of undetermined intent
+291113003,Buspirone poisoning
+291114009,Accidental buspirone poisoning
+291115005,Intentional buspirone poisoning
+291116006,Buspirone poisoning of undetermined intent
+291117002,Chlormethiazole poisoning
+291118007,Accidental chlormethiazole poisoning
+291119004,Intentional chlormethiazole poisoning
+291120005,Chlormethiazole poisoning of undetermined intent
+291121009,Neuroleptic poisoning
+291122002,Sulpiride poisoning
+291123007,Accidental sulpiride poisoning
+291124001,Intentional sulpiride poisoning
+291125000,Sulpiride poisoning of undetermined intent
+291126004,Loxapine poisoning
+291127008,Accidental loxapine poisoning
+291128003,Intentional loxapine poisoning
+291129006,Loxapine poisoning of undetermined intent
+291130001,Clozapine poisoning
+291131002,Accidental clozapine poisoning
+291132009,Intentional clozapine poisoning
+291133004,Clozapine poisoning of undetermined intent
+291134005,Risperidone poisoning
+291135006,Accidental risperidone poisoning
+291136007,Intentional risperidone poisoning
+291137003,Risperidone poisoning of undetermined intent
+291138008,Tetrabenazine poisoning
+291139000,Accidental tetrabenazine poisoning
+291140003,Intentional tetrabenazine poisoning
+291141004,Tetrabenazine poisoning of undetermined intent
+291142006,Benperidol poisoning
+291143001,Accidental benperidol poisoning
+291144007,Intentional benperidol poisoning
+291145008,Benperidol poisoning of undetermined intent
+291147000,Intentional trifluperidol poisoning
+291148005,Trifluperidol poisoning of undetermined intent
+291150002,Intentional haloperidol poisoning
+291151003,Haloperidol poisoning of undetermined intent
+291152005,Droperidol poisoning
+291153000,Accidental droperidol poisoning
+291154006,Intentional droperidol poisoning
+291155007,Droperidol poisoning of undetermined intent
+291156008,Diphenylbutylpiperidine poisoning
+291157004,Pimozide poisoning
+291158009,Accidental pimozide poisoning
+291159001,Intentional pimozide poisoning
+291160006,Pimozide poisoning of undetermined intent
+291161005,Fluspirilene poisoning
+291162003,Accidental fluspirilene poisoning
+291163008,Intentional fluspirilene poisoning
+291164002,Fluspirilene poisoning of undetermined intent
+291165001,Methotrimeprazine poisoning
+291166000,Accidental methotrimeprazine poisoning
+291167009,Intentional methotrimeprazine poisoning
+291168004,Methotrimeprazine poisoning of undetermined intent
+291169007,Pericyazine poisoning
+291170008,Accidental pericyazine poisoning
+291171007,Intentional pericyazine poisoning
+291172000,Pericyazine poisoning of undetermined intent
+291174004,Intentional fluphenazine poisoning
+291175003,Fluphenazine poisoning of undetermined intent
+291176002,Thiethylperazine poisoning
+291177006,Accidental thiethylperazine poisoning
+291178001,Intentional thiethylperazine poisoning
+291179009,Thiethylperazine poisoning of undetermined intent
+291181006,Intentional chlorpromazine poisoning
+291182004,Chlorpromazine poisoning of undetermined intent
+291183009,Pipothiazine poisoning
+291184003,Accidental pipothiazine poisoning
+291185002,Intentional pipothiazine poisoning
+291186001,Pipothiazine poisoning of undetermined intent
+291188000,Intentional promazine poisoning
+291189008,Promazine poisoning of undetermined intent
+291190004,Thioridazine poisoning
+291191000,Accidental thioridazine poisoning
+291192007,Intentional thioridazine poisoning
+291193002,Thioridazine poisoning of undetermined intent
+291194008,Perphenazine poisoning
+291195009,Accidental perphenazine poisoning
+291196005,Intentional perphenazine poisoning
+291197001,Perphenazine poisoning of undetermined intent
+291199003,Intentional prochlorperazine poisoning
+291200000,Prochlorperazine poisoning of undetermined intent
+291201001,Trifluoperazine poisoning
+291202008,Accidental trifluoperazine poisoning
+291203003,Intentional trifluoperazine poisoning
+291204009,Trifluoperazine poisoning of undetermined intent
+291205005,Thioxanthene poisoning
+291206006,Chlorprothixene poisoning
+291207002,Accidental chlorprothixene poisoning
+291208007,Intentional chlorprothixene poisoning
+291209004,Chlorprothixene poisoning of undetermined intent
+291211008,Flupenthixol decanoate poisoning
+291212001,Accidental flupenthixol decanoate poisoning
+291213006,Intentional flupenthixol decanoate poisoning
+291214000,Flupenthixol decanoate poisoning of undetermined intent
+291215004,Zuclopenthixol decanoate poisoning
+291216003,Accidental zuclopenthixol decanoate poisoning
+291217007,Intentional zuclopenthixol decanoate poisoning
+291218002,Zuclopenthixol decanoate poisoning of undetermined intent
+291219005,Zuclopenthixol poisoning
+291220004,Accidental zuclopenthixol poisoning
+291221000,Intentional zuclopenthixol poisoning
+291222007,Zuclopenthixol poisoning of undetermined intent
+291223002,Flupenthixol poisoning
+291224008,Accidental flupenthixol poisoning
+291225009,Intentional flupenthixol poisoning
+291226005,Flupenthixol poisoning of undetermined intent
+291227001,Oxypertine poisoning
+291228006,Accidental oxypertine poisoning
+291229003,Intentional oxypertine poisoning
+291230008,Oxypertine poisoning of undetermined intent
+291231007,Remoxipride poisoning
+291232000,Accidental remoxipride poisoning
+291233005,Intentional remoxipride poisoning
+291234004,Remoxipride poisoning of undetermined intent
+291235003,Decarboxylase inhibitor poisoning
+291236002,Selegiline poisoning
+291237006,Accidental selegiline poisoning
+291238001,Intentional selegiline poisoning
+291239009,Selegiline poisoning of undetermined intent
+291241005,Intentional amphetamine poisoning
+291242003,Amphetamine poisoning of undetermined intent
+291246000,Accidental cannabis poisoning
+291247009,Intentional cannabis poisoning
+291248004,Cannabis poisoning of undetermined intent
+291249007,Accidental poisoning by lysergic acid
+291250007,Intentional poisoning by lysergic acid
+291251006,Poisoning by lysergic acid of undetermined intent
+291253009,Intentional psilocybin poisoning
+291254003,Psilocybin poisoning of undetermined intent
+291256001,Intentional mescaline poisoning
+291257005,Mescaline poisoning of undetermined intent
+291261004,Accidental poisoning caused by crack cocaine
+291263001,Intentional poisoning caused by crack cocaine
+291264007,Poisoning caused by crack cocaine of undetermined intent
+291266009,Intentional caffeine poisoning
+291267000,Caffeine poisoning of undetermined intent
+291268005,Atenolol poisoning
+291269002,Accidental atenolol poisoning
+291270001,Intentional atenolol poisoning
+291271002,Atenolol poisoning of undetermined intent
+291272009,Accidental propranolol poisoning
+291273004,Intentional propranolol poisoning
+291274005,Propranolol poisoning of undetermined intent
+291275006,Accidental practolol poisoning
+291276007,Intentional practolol poisoning
+291277003,Practolol poisoning of undetermined intent
+291279000,Intentional tolazoline hydrochloride poisoning
+291280002,Tolazoline hydrochloride poisoning of undetermined intent
+291282005,Intentional phenoxybenzamine poisoning
+291283000,Phenoxybenzamine poisoning of undetermined intent
+291284006,Accidental nicotine poisoning
+291285007,Intentional nicotine poisoning
+291286008,Nicotine poisoning of undetermined intent
+291287004,Accidental poisoning caused by calcium channel blocker
+291288009,Intentional poisoning caused by calcium-channel blocker
+291289001,Poisoning caused by calcium channel blockers of undetermined intent
+291291009,Intentional pilocarpine poisoning
+291292002,Pilocarpine poisoning of undetermined intent
+291294001,Intentional acetylcholine poisoning
+291295000,Acetylcholine poisoning of undetermined intent
+291297008,Intentional anticholinesterase poisoning
+291298003,Anticholinesterase poisoning of undetermined intent
+291299006,Alpha-adrenoceptor agonist poisoning
+291300003,Accidental metaraminol poisoning
+291301004,Intentional metaraminol poisoning
+291302006,Metaraminol poisoning of undetermined intent
+291303001,Beta-adrenoceptor agonist poisoning
+291304007,Salbutamol poisoning
+291305008,Accidental salbutamol poisoning
+291306009,Intentional salbutamol poisoning
+291307000,Salbutamol poisoning of undetermined intent
+291308005,Accidental orciprenaline poisoning
+291309002,Intentional orciprenaline poisoning
+291310007,Orciprenaline poisoning of undetermined intent
+291313009,Accidental clonidine poisoning
+291314003,Intentional clonidine poisoning
+291315002,Clonidine poisoning of undetermined intent
+291317005,Intentional adrenalin poisoning
+291318000,Adrenalin poisoning of undetermined intent
+291320002,Intentional norepinephrine poisoning
+291321003,Norepinephrine poisoning of undetermined intent
+291323000,Intentional hyoscine poisoning
+291324006,Hyoscine poisoning of undetermined intent
+291326008,Intentional atropine poisoning
+291327004,Atropine poisoning of undetermined intent
+291329001,Intentional homatropine poisoning
+291330006,Homatropine poisoning of undetermined intent
+291331005,Accidental acetylcysteine poisoning
+291332003,Intentional acetylcysteine poisoning
+291333008,Acetylcysteine poisoning of undetermined intent
+291334002,Respiratory stimulant poisoning
+291335001,Accidental nikethamide poisoning
+291336000,Intentional nikethamide poisoning
+291337009,Nikethamide poisoning of undetermined intent
+291338004,Antiallergenic drug poisoning
+291339007,Accidental chlorpheniramine poisoning
+291340009,Intentional chlorpheniramine poisoning
+291341008,Chlorpheniramine poisoning of undetermined intent
+291342001,Accidental diphenhydramine poisoning
+291343006,Intentional diphenhydramine poisoning
+291344000,Diphenhydramine poisoning of undetermined intent
+291345004,Accidental diphenylpyraline poisoning
+291346003,Intentional diphenylpyraline poisoning
+291347007,Diphenylpyraline poisoning of undetermined intent
+291348002,Accidental dextromethorphan poisoning
+291349005,Intentional dextromethorphan poisoning
+291350005,Dextromethorphan poisoning of undetermined intent
+291351009,Accidental guaifenesin poisoning
+291352002,Intentional guaifenesin poisoning
+291353007,Guaifenesin poisoning of undetermined intent
+291354001,Accidental terpin hydrate poisoning
+291355000,Intentional terpin hydrate poisoning
+291356004,Terpin hydrate poisoning of undetermined intent
+291357008,Accidental poisoning caused by bronchodilator drug
+291358003,Intentional poisoning caused by bronchodilator drug
+291359006,Poisoning caused by bronchodilator drug of undetermined intent
+291360001,Accidental aminophylline poisoning
+291361002,Intentional aminophylline poisoning
+291362009,Aminophylline poisoning of undetermined intent
+291363004,Accidental theophylline poisoning
+291364005,Intentional theophylline poisoning
+291365006,Theophylline poisoning of undetermined intent
+291366007,Accidental poisoning caused by herbal asthma mixture
+291367003,Intentional poisoning caused by herbal asthma mixture
+291368008,Poisoning caused by herbal asthma mixture of undetermined intent
+291369000,Accidental anti-common cold drug poisoning
+291370004,Intentional anti-common cold drug poisoning
+291371000,Anti-common cold drug poisoning of undetermined intent
+291372007,Accidental local antipruritic poisoning
+291373002,Intentional local antipruritic poisoning
+291374008,Local antipruritic poisoning of undetermined intent
+291375009,Accidental local astringent and detergent poisoning
+291376005,Intentional local astringent and detergent poisoning
+291377001,Local astringent and detergent poisoning of undetermined intent
+291378006,Accidental hair treatment poisoning
+291379003,Intentional hair treatment poisoning
+291380000,Hair treatment poisoning of undetermined intent
+291381001,Poisoning caused by drug groups primarily affecting the musculoskeletal system
+291382008,Accidental allopurinol poisoning
+291383003,Intentional allopurinol poisoning
+291384009,Allopurinol poisoning of undetermined intent
+291385005,Accidental colchicine poisoning
+291386006,Intentional colchicine poisoning
+291387002,Colchicine poisoning of undetermined intent
+291388007,Accidental probenecid poisoning
+291389004,Intentional probenecid poisoning
+291390008,Probenecid poisoning of undetermined intent
+291392000,Intentional gold salt poisoning
+291393005,Gold salt poisoning of undetermined intent
+291395003,Intentional antirheumatic poisoning
+291396002,Antirheumatic poisoning of undetermined intent
+291398001,Accidental prostaglandin poisoning
+291399009,Intentional prostaglandin poisoning
+291400002,Prostaglandin poisoning of undetermined intent
+291401003,Antidote poisoning
+291402005,Accidental naloxone poisoning
+291403000,Intentional naloxone poisoning
+291404006,Naloxone poisoning of undetermined intent
+291405007,Accidental levallorphan poisoning
+291406008,Intentional levallorphan poisoning
+291407004,Levallorphan poisoning of undetermined intent
+291408009,Accidental nalorphine poisoning
+291409001,Intentional nalorphine poisoning
+291411005,Nalorphine poisoning of undetermined intent
+291412003,Accidental protamine sulfate poisoning
+291413008,Intentional protamine sulfate poisoning
+291414002,Protamine sulfate poisoning of undetermined intent
+291415001,Accidental chelating agent poisoning
+291416000,Intentional chelating agent poisoning
+291417009,Chelating agent poisoning of undetermined intent
+291423004,Accidental flucytosine poisoning
+291424005,Intentional flucytosine poisoning
+291425006,Flucytosine poisoning of undetermined intent
+291426007,Accidental griseofulvin poisoning
+291427003,Intentional griseofulvin poisoning
+291428008,Griseofulvin poisoning of undetermined intent
+291429000,Accidental amphotericin B poisoning
+291430005,Intentional amphotericin B poisoning
+291431009,Amphotericin B poisoning of undetermined intent
+291432002,Accidental nystatin poisoning
+291433007,Intentional nystatin poisoning
+291434001,Nystatin poisoning of undetermined intent
+291435000,Accidental trichomycin poisoning
+291436004,Intentional trichomycin poisoning
+291437008,Trichomycin poisoning of undetermined intent
+291438003,Accidental idoxuridine poisoning
+291439006,Intentional idoxuridine poisoning
+291440008,Idoxuridine poisoning of undetermined intent
+291441007,Accidental pyrimethamine poisoning
+291442000,Intentional pyrimethamine poisoning
+291443005,Pyrimethamine poisoning of undetermined intent
+291444004,Accidental chloroquine poisoning
+291445003,Intentional chloroquine poisoning
+291446002,Chloroquine poisoning of undetermined intent
+291447006,Accidental primaquine poisoning
+291448001,Intentional primaquine poisoning
+291449009,Primaquine poisoning of undetermined intent
+291450009,Accidental quinine poisoning
+291452001,Intentional quinine poisoning
+291453006,Quinine poisoning of undetermined intent
+291454000,Mefloquine poisoning
+291455004,Accidental mefloquine poisoning
+291456003,Intentional mefloquine poisoning
+291457007,Mefloquine poisoning of undetermined intent
+291458002,Accidental proguanil poisoning
+291459005,Intentional proguanil poisoning
+291460000,Proguanil poisoning of undetermined intent
+291461001,Accidental cycloguanil poisoning
+291462008,Intentional cycloguanil poisoning
+291463003,Cycloguanil poisoning of undetermined intent
+291464009,Accidental piperazine poisoning
+291465005,Intentional piperazine poisoning
+291466006,Piperazine poisoning of undetermined intent
+291467002,Accidental thiabendazole poisoning
+291468007,Intentional thiabendazole poisoning
+291469004,Thiabendazole poisoning of undetermined intent
+291470003,Accidental hexylresorcinol poisoning
+291471004,Intentional hexylresorcinol poisoning
+291472006,Hexylresorcinol poisoning of undetermined intent
+291473001,Aminoglycosides poisoning
+291474007,Accidental kanamycin poisoning
+291475008,Intentional kanamycin poisoning
+291476009,Kanamycin poisoning of undetermined intent
+291477000,Accidental streptomycin poisoning
+291478005,Intentional streptomycin poisoning
+291479002,Streptomycin poisoning of undetermined intent
+291480004,Gentamicin poisoning
+291481000,Accidental gentamicin poisoning
+291482007,Intentional gentamicin poisoning
+291483002,Gentamicin poisoning of undetermined intent
+291484008,Tobramycin poisoning
+291485009,Accidental tobramycin poisoning
+291486005,Intentional tobramycin poisoning
+291487001,Tobramycin poisoning of undetermined intent
+291488006,Netilmicin poisoning
+291489003,Accidental netilmicin poisoning
+291490007,Intentional netilmicin poisoning
+291491006,Netilmicin poisoning of undetermined intent
+291492004,Accidental erythromycin poisoning
+291493009,Intentional erythromycin poisoning
+291494003,Erythromycin poisoning of undetermined intent
+291495002,Azithromycin poisoning
+291496001,Accidental azithromycin poisoning
+291497005,Intentional azithromycin poisoning
+291498000,Azithromycin poisoning of undetermined intent
+291499008,Clarithromycin poisoning
+291500004,Accidental clarithromycin poisoning
+291501000,Intentional clarithromycin poisoning
+291502007,Clarithromycin poisoning of undetermined intent
+291503002,Accidental oleandomycin poisoning
+291504008,Intentional oleandomycin poisoning
+291505009,Oleandomycin poisoning of undetermined intent
+291506005,Accidental spiramycin poisoning
+291507001,Intentional spiramycin poisoning
+291508006,Spiramycin poisoning of undetermined intent
+291509003,Sodium fusidate poisoning
+291510008,Accidental sodium fusidate poisoning
+291512000,Intentional sodium fusidate poisoning
+291513005,Sodium fusidate poisoning of undetermined intent
+291514004,Spectinomycin poisoning
+291515003,Accidental spectinomycin poisoning
+291516002,Intentional spectinomycin poisoning
+291517006,Spectinomycin poisoning of undetermined intent
+291518001,Vancomycin poisoning
+291519009,Accidental vancomycin poisoning
+291520003,Intentional vancomycin poisoning
+291521004,Vancomycin poisoning of undetermined intent
+291522006,Trimethoprim poisoning
+291523001,Accidental trimethoprim poisoning
+291524007,Intentional trimethoprim poisoning
+291525008,Trimethoprim poisoning of undetermined intent
+291526009,Accidental nitrofuran derivative poisoning
+291527000,Intentional nitrofuran derivative poisoning
+291528005,Nitrofuran derivative poisoning of undetermined intent
+291529002,Fusidic acid poisoning
+291530007,Accidental fusidic acid poisoning
+291531006,Intentional fusidic acid poisoning
+291532004,Fusidic acid poisoning of undetermined intent
+291533009,4-quinolones poisoning
+291534003,Accidental 4-quinolones poisoning
+291535002,Intentional 4-quinolones poisoning
+291536001,4-quinolones poisoning of undetermined intent
+291537005,Accidental ampicillin poisoning
+291538000,Intentional ampicillin poisoning
+291539008,Ampicillin poisoning of undetermined intent
+291540005,Accidental cloxacillin poisoning
+291541009,Intentional cloxacillin poisoning
+291542002,Cloxacillin poisoning of undetermined intent
+291543007,Accidental carbenicillin poisoning
+291544001,Intentional carbenicillin poisoning
+291545000,Carbenicillin poisoning of undetermined intent
+291546004,Accidental penicillin G poisoning
+291547008,Intentional penicillin G poisoning
+291548003,Penicillin G poisoning of undetermined intent
+291549006,Flucloxacillin poisoning
+291550006,Accidental flucloxacillin poisoning
+291551005,Intentional flucloxacillin poisoning
+291552003,Flucloxacillin poisoning of undetermined intent
+291553008,Piperacillin poisoning
+291554002,Accidental piperacillin poisoning
+291555001,Intentional piperacillin poisoning
+291556000,Piperacillin poisoning of undetermined intent
+291557009,First generation cephalosporin poisoning
+291558004,Cefadroxil poisoning
+291559007,Accidental cefadroxil poisoning
+291560002,Intentional cefadroxil poisoning
+291561003,Cefadroxil poisoning of undetermined intent
+291562005,Accidental cephalexin poisoning
+291563000,Intentional cephalexin poisoning
+291564006,Cephalexin poisoning of undetermined intent
+291565007,Accidental cephalothin poisoning
+291566008,Intentional cephalothin poisoning
+291567004,Cephalothin poisoning of undetermined intent
+291568009,Cephazolin poisoning
+291569001,Accidental cephazolin poisoning
+291570000,Intentional cephazolin poisoning
+291571001,Cephazolin poisoning of undetermined intent
+291572008,Cephradine poisoning
+291573003,Accidental cephradine poisoning
+291574009,Intentional cephradine poisoning
+291575005,Cephradine poisoning of undetermined intent
+291576006,Latamoxef poisoning
+291577002,Accidental latamoxef poisoning
+291578007,Intentional latamoxef poisoning
+291579004,Latamoxef poisoning of undetermined intent
+291580001,Second generation cephalosporin poisoning
+291581002,Cefaclor poisoning
+291582009,Accidental cefaclor poisoning
+291583004,Intentional cefaclor poisoning
+291584005,Cefaclor poisoning of undetermined intent
+291585006,Cefuroxime poisoning
+291586007,Accidental cefuroxime poisoning
+291587003,Intentional cefuroxime poisoning
+291588008,Cefuroxime poisoning of undetermined intent
+291589000,Cephamandole poisoning
+291590009,Accidental cephamandole poisoning
+291591008,Intentional cephamandole poisoning
+291592001,Cephamandole poisoning of undetermined intent
+291593006,Third generation cephalosporin poisoning
+291594000,Cefotaxime poisoning
+291595004,Accidental cefotaxime poisoning
+291596003,Intentional cefotaxime poisoning
+291597007,Cefotaxime poisoning of undetermined intent
+291598002,Ceftazidime poisoning
+291599005,Accidental ceftazidime poisoning
+291600008,Intentional ceftazidime poisoning
+291601007,Ceftazidime poisoning of undetermined intent
+291602000,Ceftizoxime poisoning
+291603005,Accidental ceftizoxime poisoning
+291604004,Intentional ceftizoxime poisoning
+291605003,Ceftizoxime poisoning of undetermined intent
+291606002,Cefixime poisoning
+291607006,Accidental cefixime poisoning
+291608001,Intentional cefixime poisoning
+291609009,Cefixime poisoning of undetermined intent
+291610004,Cefodizime poisoning
+291611000,Accidental cefodizime poisoning
+291613002,Intentional cefodizime poisoning
+291614008,Cefodizime poisoning of undetermined intent
+291615009,Cefpodoxime poisoning
+291616005,Accidental cefpodoxime poisoning
+291617001,Intentional cefpodoxime poisoning
+291618006,Cefpodoxime poisoning of undetermined intent
+291619003,Ceftriaxone poisoning
+291620009,Accidental ceftriaxone poisoning
+291621008,Intentional ceftriaxone poisoning
+291622001,Ceftriaxone poisoning of undetermined intent
+291623006,Ceftibuten poisoning
+291624000,Accidental ceftibuten poisoning
+291625004,Intentional ceftibuten poisoning
+291626003,Ceftibuten poisoning of undetermined intent
+291627007,Cefsulodin poisoning
+291628002,Accidental cefsulodin poisoning
+291629005,Intentional cefsulodin poisoning
+291630000,Cefsulodin poisoning of undetermined intent
+291631001,Fourth generation cephalosporin poisoning
+291632008,Cefpirome poisoning
+291633003,Accidental cefpirome poisoning
+291634009,Intentional cefpirome poisoning
+291635005,Cefpirome poisoning of undetermined intent
+291636006,Accidental cephaloridine poisoning
+291637002,Intentional cephaloridine poisoning
+291638007,Cephaloridine poisoning of undetermined intent
+291639004,Accidental sulfadiazine poisoning
+291640002,Intentional sulfadiazine poisoning
+291641003,Sulfadiazine poisoning of undetermined intent
+291642005,Accidental sulfafurazole poisoning
+291643000,Intentional sulfafurazole poisoning
+291644006,Sulfafurazole poisoning of undetermined intent
+291645007,Accidental sulfamethoxazole poisoning
+291646008,Intentional sulfamethoxazole poisoning
+291647004,Sulfamethoxazole poisoning of undetermined intent
+291648009,Accidental doxycycline poisoning
+291649001,Intentional doxycycline poisoning
+291650001,Doxycycline poisoning of undetermined intent
+291651002,Accidental minocycline poisoning
+291652009,Intentional minocycline poisoning
+291653004,Minocycline poisoning of undetermined intent
+291654005,Accidental oxytetracycline poisoning
+291655006,Intentional oxytetracycline poisoning
+291656007,Oxytetracycline poisoning of undetermined intent
+291657003,Accidental tetracycline poisoning
+291658008,Intentional tetracycline poisoning
+291659000,Tetracycline poisoning of undetermined intent
+291660005,Accidental chloramphenicol poisoning
+291662002,Intentional chloramphenicol poisoning
+291663007,Chloramphenicol poisoning of undetermined intent
+291664001,Sulfamethoxazole and trimethoprim poisoning
+291666004,Accidental sulfamethoxazole and trimethoprim poisoning
+291667008,Intentional sulfamethoxazole and trimethoprim poisoning
+291668003,Sulfamethoxazole and trimethoprim poisoning of undetermined intent
+291669006,Hydroxyquinoline poisoning
+291670007,Accidental hydroxyquinoline poisoning
+291671006,Intentional hydroxyquinoline poisoning
+291672004,Hydroxyquinoline poisoning of undetermined intent
+291673009,Accidental diiodohydroxyquinoline poisoning
+291674003,Intentional diiodohydroxyquinoline poisoning
+291675002,Diiodohydroxyquinoline poisoning of undetermined intent
+291676001,Accidental rifampin poisoning
+291677005,Intentional rifampin poisoning
+291678000,Rifampin poisoning of undetermined intent
+291679008,Accidental isoniazid poisoning
+291680006,Intentional isoniazid poisoning
+291681005,Isoniazid poisoning of undetermined intent
+291682003,Accidental ethambutol poisoning
+291683008,Intentional ethambutol poisoning
+291684002,Ethambutol poisoning of undetermined intent
+291685001,Accidental cycloserine poisoning
+291686000,Intentional cycloserine poisoning
+291687009,Cycloserine poisoning of undetermined intent
+291688004,Antileprotic drug poisoning
+291689007,Accidental antileprotic drug poisoning
+291690003,Intentional antileprotic drug poisoning
+291691004,Antileprotic drug poisoning of undetermined intent
+291692006,Accidental ethionamide poisoning
+291693001,Intentional ethionamide poisoning
+291694007,Ethionamide poisoning of undetermined intent
+291695008,Accidental para-aminosalicylic acid poisoning
+291696009,Intentional para-aminosalicylic acid poisoning
+291697000,Para-aminosalicylic acid poisoning of undetermined intent
+291698005,Accidental sulfone poisoning
+291699002,Intentional sulfone poisoning
+291700001,Sulfone poisoning of undetermined intent
+291701002,Accidental pesticide product poisoning
+291703004,Intentional pesticide product poisoning
+291704005,Pesticide product poisoning of undetermined intent
+291782006,Accidental thiouracil poisoning
+291783001,Intentional thiouracil poisoning
+291784007,Thiouracil poisoning of undetermined intent
+291785008,Carbimazole poisoning
+291786009,Accidental carbimazole poisoning
+291787000,Intentional carbimazole poisoning
+291788005,Carbimazole poisoning of undetermined intent
+291789002,Accidental cortisone derivative poisoning
+291791005,Intentional cortisone derivative poisoning
+291792003,Cortisone derivative poisoning of undetermined intent
+291793008,Accidental desoxycorticosterone derivative poisoning
+291794002,Intentional desoxycorticosterone derivative poisoning
+291795001,Desoxycorticosterone derivative poisoning of undetermined intent
+291796000,Accidental fluorinated corticosteroid poisoning
+291797009,Intentional fluorinated corticosteroid poisoning
+291798004,Fluorinated corticosteroid poisoning of undetermined intent
+291799007,Accidental glucagon poisoning
+291800006,Intentional glucagon poisoning
+291801005,Glucagon poisoning of undetermined intent
+291802003,Accidental insulin poisoning
+291803008,Intentional insulin poisoning
+291804002,Insulin poisoning of undetermined intent
+291805001,Oral hypoglycemic poisoning
+291806000,Accidental acetohexamide poisoning
+291807009,Intentional acetohexamide poisoning
+291808004,Acetohexamide poisoning of undetermined intent
+291809007,Accidental chlorpropamide poisoning
+291810002,Intentional chlorpropamide poisoning
+291811003,Chlorpropamide poisoning of undetermined intent
+291812005,Accidental tolbutamide poisoning
+291813000,Intentional tolbutamide poisoning
+291814006,Tolbutamide poisoning of undetermined intent
+291815007,Accidental poisoning caused by glibenclamide
+291817004,Intentional poisoning caused by glibenclamide
+291818009,Poisoning caused by glibenclamide of undetermined intent
+291819001,Accidental poisoning caused by metformin
+291820007,Intentional poisoning caused by metformin
+291821006,Poisoning caused by metformin of undetermined intent
+291822004,Accidental phenformin poisoning
+291823009,Intentional phenformin poisoning
+291824003,Phenformin poisoning of undetermined intent
+291825002,Sex hormone poisoning
+291826001,Accidental progestogen poisoning
+291827005,Intentional progestogen poisoning
+291828000,Progestogen poisoning of undetermined intent
+291829008,Accidental oral contraceptive poisoning
+291830003,Intentional oral contraceptive poisoning
+291831004,Oral contraceptive poisoning of undetermined intent
+291832006,Accidental estrogen poisoning
+291833001,Intentional estrogen poisoning
+291834007,Estrogen poisoning of undetermined intent
+291835008,Accidental combined estrogen and progesterone poisoning
+291836009,Intentional combined estrogen and progesterone poisoning
+291837000,Combined estrogen and progesterone poisoning of undetermined intent
+291838005,Androgen poisoning
+291839002,Accidental testosterone poisoning
+291840000,Intentional testosterone poisoning
+291841001,Testosterone poisoning of undetermined intent
+291842008,Anabolic steroid poisoning
+291843003,Accidental nandrolone poisoning
+291844009,Intentional nandrolone poisoning
+291845005,Nandrolone poisoning of undetermined intent
+291846006,Accidental oxymetholone poisoning
+291847002,Intentional oxymetholone poisoning
+291848007,Oxymetholone poisoning of undetermined intent
+291849004,Accidental methandriol poisoning
+291850004,Intentional methandriol poisoning
+291851000,Methandriol poisoning of undetermined intent
+291852007,Accidental liothyronine poisoning
+291853002,Intentional liothyronine poisoning
+291854008,Liothyronine poisoning of undetermined intent
+291855009,Accidental thyroxin poisoning
+291856005,Intentional thyroxin poisoning
+291857001,Thyroxin poisoning of undetermined intent
+291858006,Accidental levothyroxine sodium poisoning
+291859003,Intentional levothyroxine sodium poisoning
+291860008,Levothyroxine sodium poisoning of undetermined intent
+291861007,Accidental thyroglobulin poisoning
+291862000,Intentional thyroglobulin poisoning
+291863005,Thyroglobulin poisoning of undetermined intent
+291865003,Accidental corticotrophin poisoning
+291866002,Intentional corticotrophin poisoning
+291867006,Corticotrophin poisoning of undetermined intent
+291868001,Accidental gonadotrophin poisoning
+291869009,Intentional gonadotrophin poisoning
+291870005,Gonadotrophin poisoning of undetermined intent
+291871009,Accidental oxytocin poisoning
+291872002,Intentional oxytocin poisoning
+291873007,Oxytocin poisoning of undetermined intent
+291874001,Accidental somatotrophin poisoning
+291875000,Intentional somatotrophin poisoning
+291876004,Somatotrophin poisoning of undetermined intent
+291877008,Thyrotrophic hormone poisoning
+291878003,Accidental thyrotrophic hormone poisoning
+291879006,Intentional thyrotrophic hormone poisoning
+291880009,Thyrotrophic hormone poisoning of undetermined intent
+291881008,Accidental vasopressin poisoning
+291882001,Intentional vasopressin poisoning
+291883006,Vasopressin poisoning of undetermined intent
+291884000,Accidental parathyroid hormone poisoning
+291885004,Intentional parathyroid hormone poisoning
+291886003,Parathyroid hormone poisoning of undetermined intent
+291887007,Accidental macromolecular blood substitute poisoning
+291888002,Intentional macromolecular blood substitute poisoning
+291889005,Macromolecular blood substitute poisoning of undetermined intent
+291890001,Accidental blood plasma poisoning
+291891002,Intentional blood plasma poisoning
+291892009,Blood plasma poisoning of undetermined intent
+291893004,Accidental human fibrinogen poisoning
+291894005,Intentional human fibrinogen poisoning
+291895006,Human fibrinogen poisoning of undetermined intent
+291896007,Accidental warfarin sodium poisoning
+291897003,Intentional warfarin sodium poisoning
+291898008,Warfarin sodium poisoning of undetermined intent
+291899000,Accidental coumarin poisoning
+291900005,Intentional coumarin poisoning
+291901009,Coumarin poisoning of undetermined intent
+291902002,Accidental heparin poisoning
+291903007,Intentional heparin poisoning
+291904001,Heparin poisoning of undetermined intent
+291905000,Accidental phenindione poisoning
+291906004,Intentional phenindione poisoning
+291907008,Phenindione poisoning of undetermined intent
+291908003,Accidental aminocaproic acid poisoning
+291909006,Intentional aminocaproic acid poisoning
+291910001,Aminocaproic acid poisoning of undetermined intent
+291912009,Accidental ferrous sulfate poisoning
+291913004,Intentional ferrous sulfate poisoning
+291914005,Ferrous sulfate poisoning of undetermined intent
+291915006,Accidental ferric salt poisoning
+291916007,Intentional ferric salt poisoning
+291918008,Ferric salt poisoning of undetermined intent
+291919000,Accidental iodide poisoning
+291920006,Intentional iodide poisoning
+291921005,Iodide poisoning of undetermined intent
+291922003,Accidental vitamin A poisoning
+291923008,Intentional vitamin A poisoning
+291924002,Vitamin A poisoning of undetermined intent
+291925001,Accidental vitamin D poisoning
+291926000,Intentional vitamin D poisoning
+291927009,Vitamin D poisoning of undetermined intent
+291928004,Accidental vitamin K poisoning
+291929007,Intentional vitamin K poisoning
+291930002,Vitamin K poisoning of undetermined intent
+291931003,Vitamin B group poisoning
+291932005,Accidental folic acid poisoning
+291933000,Intentional folic acid poisoning
+291934006,Folic acid poisoning of undetermined intent
+291935007,Accidental nicotinic acid derivative poisoning
+291936008,Intentional nicotinic acid derivative poisoning
+291937004,Nicotinic acid derivative poisoning of undetermined intent
+291938009,Accidental electrolyte agent poisoning
+291939001,Intentional electrolyte agent poisoning
+291940004,Electrolyte agent poisoning of undetermined intent
+291941000,Accidental clofibrate poisoning
+291942007,Intentional clofibrate poisoning
+291943002,Clofibrate poisoning of undetermined intent
+291944008,Disopyramide poisoning
+291945009,Accidental disopyramide poisoning
+291946005,Intentional disopyramide poisoning
+291947001,Disopyramide poisoning of undetermined intent
+291948006,Accidental quinidine poisoning
+291949003,Intentional quinidine poisoning
+291950003,Quinidine poisoning of undetermined intent
+291951004,Accidental procainamide poisoning
+291952006,Intentional procainamide poisoning
+291953001,Procainamide poisoning of undetermined intent
+291954007,Amiodarone poisoning
+291955008,Accidental amiodarone poisoning
+291956009,Intentional amiodarone poisoning
+291957000,Amiodarone poisoning of undetermined intent
+291958005,Thiazide diuretic poisoning
+291959002,Bendrofluazide poisoning
+291960007,Accidental bendrofluazide poisoning
+291961006,Intentional bendrofluazide poisoning
+291962004,Bendrofluazide poisoning of undetermined intent
+291963009,Accidental chlorothiazide poisoning
+291964003,Intentional chlorothiazide poisoning
+291965002,Chlorothiazide poisoning of undetermined intent
+291966001,Accidental saluretic poisoning
+291967005,Intentional saluretic poisoning
+291968000,Saluretic poisoning of undetermined intent
+291969008,Loop diuretic poisoning
+291970009,Accidental furosemide poisoning
+291971008,Intentional furosemide poisoning
+291972001,Frusemide poisoning of undetermined intent
+291973006,Potassium sparing diuretic poisoning
+291974000,Accidental potassium sparing diuretic poisoning
+291975004,Intentional potassium sparing diuretic poisoning
+291976003,Potassium sparing diuretic poisoning of undetermined intent
+291977007,Osmotic diuretic poisoning
+291978002,Accidental osmotic diuretic poisoning
+291979005,Intentional osmotic diuretic poisoning
+291980008,Osmotic diuretic poisoning of undetermined intent
+291981007,Accidental acetazolamide poisoning
+291982000,Intentional acetazolamide poisoning
+291983005,Acetazolamide poisoning of undetermined intent
+291984004,Adrenergic neurone blocking drug poisoning
+291985003,Accidental guanethidine poisoning
+291986002,Intentional guanethidine poisoning
+291987006,Guanethidine poisoning of undetermined intent
+291988001,Accidental poisoning caused by angiotensin-converting enzyme inhibitor
+291989009,Intentional poisoning caused by angiotensin-converting enzyme inhibitor
+291990000,Poisoning caused by angiotensin-converting enzyme inhibitor of undetermined intent
+291991001,Cardiac inotropic agent poisoning
+291992008,Accidental digoxin poisoning
+291993003,Intentional digoxin poisoning
+291994009,Digoxin poisoning of undetermined intent
+291995005,Phosphodiesterase inhibitor poisoning
+291996006,Accidental phosphodiesterase inhibitor poisoning
+291997002,Intentional phosphodiesterase inhibitor poisoning
+291998007,Phosphodiesterase inhibitor poisoning of undetermined intent
+292000005,Accidental ergot alkaloid poisoning
+292001009,Intentional ergot alkaloid poisoning
+292003007,Ergot alkaloid poisoning of undetermined intent
+292004001,Accidental diazoxide poisoning
+292005000,Intentional diazoxide poisoning
+292006004,Diazoxide poisoning of undetermined intent
+292007008,Hydralazine poisoning
+292008003,Accidental hydralazine poisoning
+292009006,Intentional hydralazine poisoning
+292010001,Hydralazine poisoning of undetermined intent
+292011002,Accidental dipyridamole poisoning
+292012009,Intentional dipyridamole poisoning
+292013004,Dipyridamole poisoning of undetermined intent
+292014005,Accidental nitrate poisoning
+292015006,Intentional nitrate poisoning
+292017003,Nitrate poisoning of undetermined intent
+292018008,Peripheral/cerebral vasodilator poisoning
+292019000,Accidental nitrite poisoning
+292020006,Intentional nitrite poisoning
+292021005,Nitrite poisoning of undetermined intent
+292023008,Accidental streptodornase poisoning
+292024002,Intentional streptodornase poisoning
+292025001,Streptodornase poisoning of undetermined intent
+292026000,Accidental streptokinase poisoning
+292027009,Intentional streptokinase poisoning
+292028004,Streptokinase poisoning of undetermined intent
+292029007,Accidental urokinase poisoning
+292030002,Intentional urokinase poisoning
+292031003,Urokinase poisoning of undetermined intent
+292032005,Accidental penicillinase poisoning
+292033000,Intentional penicillinase poisoning
+292034006,Penicillinase poisoning of undetermined intent
+292035007,Accidental spermicide poisoning
+292036008,Intentional spermicide poisoning
+292037004,Spermicide poisoning of undetermined intent
+29219000,Descurainia pinnata poisoning
+29290000,Poisoning caused by sulfonamide
+293287009,Toxic methemoglobinuria
+29329009,Castalis species poisoning
+29341002,Melia azedarach poisoning
+2935001,Poisoning by antiasthmatic
+29394006,Nerium oleander poisoning
+29415009,Lasiospermum bipinnatum poisoning
+29602005,Poisoning caused by thiotepa
+29824007,Atropa belladonna poisoning
+29826009,Diazinon poisoning
+29848003,Taxus cuspidata poisoning
+3009006,Solanum malacoxylon poisoning
+300907002,Inhalation of formalin fumes
+30112004,Melianthus species poisoning
+30138004,Poisoning caused by ether
+30153007,Helenium hoopesii poisoning
+302229004,Salmonella food poisoning
+30312008,Haplopappus heterophyllus poisoning
+30365001,Poisoning caused by rauwolfia alkaloid
+30404001,Kalmia angustifolia poisoning
+3053001,Poisoning caused by nitroglycerin
+30564001,Poisoning caused by natural blood AND/OR blood product
+30638000,Cestrum laevigatum poisoning
+30815000,Leucaena species poisoning
+30844003,Veratrum species poisoning
+30857006,Poisoning caused by barbital
+30887000,Stachybotryotoxicosis
+30897009,Poisoning caused by liothyronine
+30927003,Agave lecheguilla poisoning
+30984008,Poisoning caused by pentobarbital
+31141004,Pyrethrin toxicity
+31148005,Temephos poisoning
+31199003,Cryptostegia grandiflora poisoning
+312089004,Cleaning product causing toxic effect
+31272009,Cynodon species poisoning
+31311006,Linum usitatissium poisoning
+314422000,Caramiphen poisoning
+31715000,Phencyclidine delirium
+31752000,Poisoning caused by allopurinol
+31861007,Toxic effect of chlordane
+31894005,Toxic effect of bromobenzyl cyanide
+31906004,Toxic effect of sulfuric acid
+32046005,Poisoning caused by amantadine
+32125003,Ipomoea species poisoning
+32171005,Phytolacca americana poisoning
+32271000,Arisaema triphyllum poisoning
+32287002,Poisoning caused by reversible anticholinesterase
+323204005,Vicia faba poisoning
+32387000,Acute selenium poisoning
+32393008,Poisoning caused by fluorouracil
+32518004,Poisoning caused by diazoxide
+32521002,Toxicodendron vernix poisoning
+3259006,Homeria species poisoning
+32695006,Arsanilic acid poisoning
+32722006,Poisoning caused by aluminum hydroxide
+3276005,Toad poisoning
+32767004,Aesculus hippocastanum poisoning
+32835006,Poisoning caused by autonomous nervous system drug
+33089002,Poisoning caused by marine toad
+33100004,Beta vulgaris poisoning
+33279008,Poisoning caused by local detergent
+33499000,Oxygen toxicity
+3355003,Poisoning by anti-common cold drug
+3398004,Cadmium poisoning
+33996002,Chlorpyrifos poisoning
+34085004,Poisoning caused by glucagon
+34586006,Crotalaria species poisoning
+34600007,Thallium sulfate toxicity
+34639003,Prunus serotina poisoning
+34668002,Carbofuran poisoning
+34716003,Thevetia peruviana poisoning
+34729003,Poisoning caused by spermicide
+3474005,Glycine max poisoning
+34743008,Poisoning caused by psilocin
+34764007,Poisoning caused by paraldehyde
+34819000,Pinus species poisoning
+34836008,Insect-related poisoning
+34917002,Poisoning caused by halothane
+34958009,Poisoning caused by dipyridamole
+35008005,Terbufos poisoning
+35207008,Panicum coloratum poisoning
+35224002,Poisoning caused by sulfafurazole
+35228004,Poisoning caused by cortisone derivative
+35279005,Poisoning caused by antacid AND/OR antigastric secretion drug
+35528000,Metabolic acidosis caused by salicylate
+35704000,Bowiea species poisoning
+35776002,Poisoning caused by heparin
+35789008,Bulnesia sarmientii poisoning
+35817006,Arum maculatum poisoning
+35942003,Homicidal deliberate poisoning
+359680004,Greasewood poisoning
+359685009,Sarcobatus vermiculatus poisoning
+359706003,Iodine poisoning
+36084002,Gelsemium sempervirens poisoning
+3611003,Demeton poisoning
+361148000,Anxiolytic intoxication
+361149008,Hypnotic intoxication
+36265009,Poisoning caused by local anti-inflammatory drug
+363293009,Self-administered poisoning
+36465006,Toxic effect from eating berries AND/OR other plants
+36533005,Poisoning caused by cardiac rhythm regulator
+36554003,Chronic selenium poisoning
+3657001,Osteospermum species poisoning
+36706008,Poisoning caused by oral biguanide derivative
+36784008,Poisoning caused by flurazepam
+36919001,Anemia caused by lead
+370473000,Congenital arthrogryposis caused by teratogen
+37050009,Congener toxicity
+371043007,Toxic inhalation injury
+37131007,Pesticide poisoning
+37244007,Xanthium species poisoning
+37392009,Azinphos-methyl poisoning
+37445006,Cinchonism
+37712007,Polyurethane poisoning
+37714008,Poisoning caused by keratoplastic drug
+38021004,Hexachlorophene poisoning
+38149009,Poisoning caused by spiramycin
+38342005,Toxic effect of lead compound
+38488000,Poisoning by nicotinic acid derivative
+38509008,Oxalate poisoning
+38704001,Toxic effect of hydrocyanic acid gas
+38751004,Poisoning caused by analgesic AND/OR antipyretic
+38918003,Poisoning by caterpillar
+38968006,Poisoning caused by ergot alkaloid
+39234001,Toxic effect of sodium cyanide
+39248001,Gossypium species poisoning
+39451005,Toxic effect of acid
+39493006,Asclepias fructicosa poisoning
+39521001,Poisoning caused by packed red cells
+396344000,Psychoactive substance-induced organic intoxication
+39640004,Minamata disease
+39652006,Inula graveolens poisoning
+39679005,Coumafuryl poisoning
+39807006,Cannabis intoxication delirium
+398384001,Staphylococcus aureus food poisoning
+398523009,Foodborne botulism
+39865000,Ornithoglossum viride poisoning
+39890003,Herbicide poisoning
+399119000,Toxicity due to radiotherapy
+399213007,Toxicity due to chemotherapy
+399286009,Carbamate insecticide toxicity
+39994006,Poisoning caused by antifungal antibiotic
+40054001,Hymenoxys species poisoning
+40119006,Poisoning caused by brown recluse spider venom
+403734005,Scleroderma-like reaction caused by poison
+403736007,Porphyria-like reaction caused by poison and/or environmental toxin
+403739000,Skin reaction caused by vesicant poison
+403740003,Skin disease caused by arsenic
+403742006,Malignant neoplasm of skin caused by arsenic
+403743001,Arsenic-induced skin pigmentation
+403744007,"Arsenic-induced ""rain-drop"" hypomelanosis"
+4038001,Myrotheciotoxicosis
+40382002,Ascorbic acid toxicity
+40398009,Poisoning caused by somatotropin
+40550004,Poisoning caused by nose anti-infective
+407147006,Hexachlorobenzene poisoning
+40748005,Poisoning caused by intravenous anesthetic
+4075006,Peganum harmala poisoning
+40844001,Poisoning caused by hexylresorcinol
+409562009,Inhalational botulism
+409563004,Intestinal botulism
+409564005,"Foodborne botulism, type A"
+409565006,"Foodborne botulism, type B"
+409566007,"Foodborne botulism, type E"
+409567003,"Foodborne botulism, type F"
+40960003,Trachymene species poisoning
+409616009,Castor bean poisoning
+409617000,Ricin poisoning
+409618005,Inhalational ricin poisoning
+409620008,Parenteral ricin poisoning
+409621007,Gastrointestinal ricin poisoning
+40989001,Propoxur poisoning
+410061008,Intentional poisoning
+410071005,Chronic bromine poisoning
+41047001,Borax toxicity
+41071008,Toxic effect of iron compound
+41136005,Phencyclidine poisoning
+41172003,Nolina texana poisoning
+41221003,Poisoning caused by alkalinizing agent
+41234002,Poisoning caused by anesthetic AND/OR muscle-tone depressant
+41238004,Gold poisoning
+41390006,Poisoning caused by chlorpheniramine
+414286000,Food poisoning caused by Vibrio vulnificus
+41439009,Microcystis flos-aquae poisoning
+414488002,Infantile botulism
+414531002,Intoxication with Clostridium botulinum toxin
+414820001,Neonatal botulism
+415353009,Rotavirus food poisoning
+41599008,Delphinium species poisoning
+41602003,Poisoning caused by thiobarbiturate
+416748006,Hallucinogenic fish poisoning
+418108003,Barbiturate poisoning of undetermined intent
+41839000,Poisoning caused by thiopental sodium
+418409002,"Poisoning of undetermined intent caused by corrosive, acid or caustic alkali"
+418685002,Poisoning caused by arsenic or its compounds of undetermined intent
+41921008,Toxic effect of liquefied petroleum gas
+419347003,Poisoning caused by antibacterial drug
+419639006,Poisoning caused by anti-infective agent
+420057003,Accidental poisoning caused by carbon monoxide
+420775008,Poisoning caused by Centruroides exilicauda
+421240002,Penicillium purpurogenum toxicosis
+42373003,Poisoning caused by hyoscine
+42377002,Poisoning caused by anticonvulsant
+42395004,Poisoning caused by chlorothiazide
+42524008,Poisoning caused by corticotropin
+426112004,Antifreeze poisoning
+426299001,Intentional X-ray contrast media poisoning
+426487006,Toxic effect from eating shellfish
+426672008,Irukandji syndrome
+426692001,Ethylene glycol poisoning
+426790001,Poisoning caused by anticoagulant antagonist
+426950009,Poisoning caused by nitrate vasodilator
+427639003,Azaspiracid poisoning
+428108004,Accidental poisoning caused by metal
+42846007,Sesbania vesicaria poisoning
+42894006,Poisoning caused by chloramphenicol
+42961007,Apocynum species poisoning
+42979006,Amanita species poisoning
+430973002,Poisoning caused by ophthalmic drug
+43098002,Copper fever
+43124005,Poisoning caused by skin AND/OR mucous membrane drug
+43125006,Poisoning caused by carbromal derivative
+431307001,Intentional poisoning caused by drug
+43140008,Pentachlorophenol toxicity
+43166006,Prosopis glandulosa poisoning
+432353006,Accidental poisoning caused by opiate agonist
+43384002,Glyphosate toxicity
+43624006,Poisoning caused by gastrointestinal system drug
+43695003,Poisoning caused by chlorphenesin carbamate
+43881003,Ethyl p-nitrophenyl thionobenzenephosphonate poisoning
+43893007,Poisoning caused by cephalexin
+439011002,Self-administered intentional poisoning caused by analgesic
+439014005,Poisoning caused by propionic acid derivative
+43912002,Equisetum arvense poisoning
+44003006,Poisoning caused by barbiturate
+44094008,Amide compound toxicity
+44137000,Daphne species poisoning
+44173007,Dicentra spectabilis poisoning
+4418008,Gangrenous ergotism
+441952005,Poisoning caused by chemical substance
+442331007,Poisoning caused by phenolic
+442764005,Poisoning caused by benzene
+442784009,Accidental poisoning caused by gaseous substance
+44290007,Taxus species poisoning
+44336002,Toxic effect of aldrin
+44377003,Oenanthe species poisoning
+44400004,Toxic effect of venom
+44559009,Perilla frutescens poisoning
+445870004,Poisoning caused by vapor
+445902007,Poisoning caused by iron
+445931006,Poisoning caused by fumes
+446159001,Poisoning caused by macrolide
+446225009,Poisoning caused by beryllium
+44631003,Methyl parathion poisoning
+446337009,Poisoning caused by hydrogen peroxide
+446338004,Poisoning caused by manganese compound
+446354001,Poisoning caused by asbestos
+446438003,Poisoning by ingestion of fish contaminated by bacteria
+446439006,Poisoning by ingestion of fish contaminated by environmental toxin
+446443005,Poisoning caused by ingestion of fish toxin
+446671006,Poisoning caused by strychnine salt
+446686000,Poisoning caused by ingestion of plant
+44715002,Nicotiana species poisoning
+447287009,Poisoning caused by silicone
+447288004,Poisoning caused by manganese
+447319000,Poisoning caused by beryllium compound
+44838007,Poisoning caused by levallorphan
+44961008,Poisoning caused by antidiarrheal drug
+44969005,Poisoning caused by hair treatment drug AND/OR preparation
+45088005,Poisoning caused by folic acid
+45096000,Panicum species poisoning
+45110008,Poisoning caused by chloroquine
+45133009,Neurotoxic shellfish poisoning
+45185006,Phenylurea compound toxicity
+45252009,Zygadenus species poisoning
+4526003,Poisoning caused by probenecid
+45269006,Alimentary toxic aleukia
+45328004,Digitalis purpurea poisoning
+45416008,Chrysocoma tenuifolia poisoning
+45421006,Amphetamine intoxication
+45472002,Poisoning caused by combined estrogen AND progestogen
+45506003,Lewisite poisoning
+45519004,Toxic effect of strychnine
+45536007,Poisoning caused by sympathomimetic drug
+45567009,Lupinus sericeus poisoning
+45571007,Nicotiana tabacum poisoning
+45638001,Crotalaria spartioides poisoning
+45706001,Cynodon dactylon poisoning
+45747003,Poisoning caused by antineoplastic antibiotic
+45773008,Garbage poisoning
+45775001,Poisoning caused by amphetamine
+46259007,Hedera helix poisoning
+46262005,Poisoning caused by phenol
+46298002,Poisoning caused by hornet sting
+4633009,Hymenoxys richardsonii poisoning
+46334001,Toxic effect of nitrogen oxide
+46571000,Poisoning caused by pharmaceutical adjunct
+46579003,Amaranthus species poisoning
+46604003,Poisoning caused by acetylcholine
+46655005,Copper poisoning
+46673008,Poisoning caused by idoxuridine
+46759008,Poisoning caused by sulfamethoxazole
+46833000,Romulea species poisoning
+46878002,Poisoning caused by antimalarial drug
+4688008,Poisoning caused by griseofulvin
+47191007,Poisoning caused by bleomycin
+47237001,Poisoning caused by vitamin A
+473425008,Fluorinated hydrocarbon poisoning
+47580006,Acaricide poisoning
+4771009,Poisoning caused by cephalosporin group antibiotic
+47836003,Poisoning caused by morphine
+47877004,Saponaria officinalis poisoning
+47884007,Datura stramonium poisoning
+47923004,Poisoning caused by primidone
+47980004,Inorganic mercury poisoning
+48088006,Chlorinated hydrocarbon toxicity
+48152004,Toxic effect of tetraethyl lead
+48177003,Dicentra cucullaria poisoning
+48310002,Poisoning caused by macromolecular blood substitute
+48352007,Diamidine poisoning
+4836003,Poisoning caused by anti-parkinsonism drug
+48445006,Poisoning caused by tolbutamide
+48534006,Poisoning caused by phenothiazine-based tranquilizer
+48620000,Nitrogen narcosis
+48825007,Gnidia species poisoning
+48853007,Brassica species poisoning
+48894004,Senecio species poisoning
+49020008,Poisoning caused by oral contraceptive
+49042009,Myoporum species poisoning
+49132009,Veratrum californicum poisoning
+49141004,Poisoning caused by pituitary hormone
+49223002,Zieria arborescens poisoning
+49301004,Stipa species poisoning
+49424005,Disulfoton poisoning
+49434001,Jamaican vomiting sickness
+49443005,Phytogenous chronic copper poisoning
+49450009,Poisoning caused by antiprotozoal drug
+4953006,Toxic effect of butyl alcohol
+49681005,Hypericum species poisoning
+49929007,Cholecalciferol toxicity
+49941000,Galega species poisoning
+49958005,Aspergillus clavatus tremors
+49968000,Aspergillus versicolor toxicosis
+49981007,Toxic effect of gasoline
+50034006,Solanum incanum poisoning
+50117000,Rheum rhaponicum poisoning
+50180005,Dynamite poisoning
+50288007,Chronic copper poisoning
+50320000,Hallucinogen intoxication
+50393008,Coal-tar-pitch poisoning
+50452004,Poisoning caused by nonantibiotic anti-infective
+50529000,Poisoning caused by acetohexamide
+50561001,Saponaria species poisoning
+50601005,Poisoning caused by heavy metal antagonist
+50649004,Dipyridyl compound toxicity
+51026008,Trianthema species poisoning
+51040009,Thallium poisoning
+51194002,Echium species poisoning
+51228004,Poisoning caused by anterior pituitary hormone
+51246005,Poisoning caused by Epicauta vittata
+51355005,Sarcostemma species poisoning
+51399001,Toxic encephalopathy caused by lead
+51508004,Chenopodium album species poisoning
+51510002,Ergotism
+51580009,Mountain laurel poisoning
+51725000,Poisoning caused by primarily systemic agent
+5174000,Sodium fluoroacetamide toxicity
+51766000,Adenium multiflorum poisoning
+51814004,Poisoning caused by protamine sulfate
+51862005,Poisoning caused by diiodohydroxyquin
+5189009,Poisoning caused by nalorphine
+51912001,Maroek poisoning
+5196006,Hertia pallens poisoning
+51986008,Triglochin species poisoning
+52020004,Poisoning caused by desoxycorticosterone derivative
+5218003,Eupatorium rugosum poisoning
+52219002,Gomphrena celosiodes poisoning
+52335006,Poisoning caused by peripheral nerve AND/OR plexus-blocking anesthetic
+52382004,Poisoning caused by indomethacin
+52671001,Poisoning caused by oxytetracycline
+52703008,Poisoning caused by propranolol
+52866005,Opioid intoxication delirium
+52909001,Poisoning caused by mustard gas
+53001008,Poisoning caused by streptodornase
+53126001,Poisoning caused by adrenal cortical steroid
+53153002,Toxic effect of paraffin wax
+5319009,Poisoning caused by theobromine
+53271004,Tannic acid poisoning
+53275008,Poisoning caused by tolazoline hydrochloride
+53300000,Poisoning caused by ferrous sulfate
+53456000,Pindone poisoning
+53523003,Poisoning caused by cactinomycin
+53702006,Poisoning caused by thiabendazole
+53754001,Self-administered accidental poisoning
+53796002,Poisoning caused by doxycycline
+53819003,Dieffenbachia species poisoning
+53901006,Phalaris species poisoning
+54067004,Ronnel poisoning
+54068009,Trema aspera poisoning
+5417005,Colchicum autumnale poisoning
+54205001,Crotalaria dura poisoning
+54531000,Poisoning caused by penicillin G
+54561008,Poisoning caused by epinephrine
+54594006,Poisoning caused by cycloguanil
+54789009,Brachiaria species poisoning
+54951007,Crotalaria juncea poisoning
+54990006,Solanum species poisoning
+55082002,Poisoning caused by cycloserine
+55308005,Poisoning caused by insect venom
+55381001,Poisoning caused by iron AND/OR its compounds
+55410006,Poisoning caused by homatropine
+555002,Dicentra species poisoning
+55623006,Toxic encephalopathy caused by mercury
+55646008,Kallstroemia hirsutissima poisoning
+55720000,Poisoning caused by plasma expander
+5576007,Toxic effect of nitric acid
+5578008,Poisoning caused by fibrinolysis-affecting drug
+55805001,Chlorate poisoning
+55847002,Rodenticide poisoning
+55942007,Solanum kwebense poisoning
+55970009,Toxicodendron radicans poisoning
+56043005,Poisoning caused by parathyroid hormone AND/OR parathyroid derivative
+56055004,Heptachlor poisoning
+56277006,Naled poisoning
+56319001,Toxic effect of mixtures of insecticides
+56367006,Macrozamia species poisoning
+56488003,Toxic effect of chlorinated hydrocarbon solvent
+56662007,Eucalyptus cladocalyx poisoning
+56686009,Alphanaphthylthiourea toxicity
+56698004,Poisoning caused by local astringent
+56830006,Erythrophleum chlorostachys poisoning
+56864005,Baccharis species poisoning
+56916002,Poisoning caused by acetylcysteine
+56951005,Poisoning caused by cardiotonic glycoside
+57005003,Poisoning caused by caffeine
+57047004,Phaseolus species poisoning
+5724005,Lathyrus species poisoning
+57256002,Acacia berlandieri poisoning
+57305009,Poisoning caused by human fibrinogen
+57310008,Poisoning caused by clonidine
+57319009,Poisoning caused by spinal anesthetic
+57335002,"Toxic effect of gas, fumes AND/OR vapors"
+57346004,Toxic effect of fusel oil
+57431005,Poisoning caused by reptile venom
+57628003,Poisoning caused by chloral hydrate
+57695009,Poisoning caused by clofibrate
+57788006,Sorghum halepense poisoning
+58025002,Poisoning caused by nandrolone
+58055009,Blister beetle poisoning
+58104004,Poisoning caused by expectorant
+58246004,Convallaria majalis poisoning
+58455003,Cycas species poisoning
+5859004,Gastrolobium species poisoning
+58700000,Poisoning caused by levothyroxine sodium
+58744002,Vinca species poisoning
+5877009,Pimelea trichostachya poisoning
+58913003,Cassia species poisoning
+58960006,Poisoning caused by emollient cathartic
+5903008,Pinus ponderosa poisoning
+59116002,Poisoning caused by Epicauta
+59335007,Kalmia species poisoning
+59434007,Asclepias species poisoning
+59538008,Aconitum species poisoning
+59686008,Metabolic acidosis caused by ethylene glycol
+59805007,Ipomoea batatas poisoning
+59826007,Poisoning caused by quinidine
+60042005,Gossypol poisoning
+60067008,Pennisetum clandestinum poisoning
+60179005,Sodium chlorate toxicity
+60199004,Poisoning caused by methadone
+60225005,Agrostemma species poisoning
+6024006,Poisoning caused by nitrazepam
+60622002,Phytolacca species poisoning
+60671007,Paspalum commersonii poisoning
+60857002,Thesium species poisoning
+60901005,Inhalant intoxication
+60950004,Toxic effect of chlorinated hydrocarbon pesticide
+61163000,Melilotus species poisoning
+61232008,Mallow poisoning
+61288004,Poisoning caused by venomous snake
+61312009,Prunus virginiana poisoning
+61351004,Poisoning caused by anti-infective compound of mercury
+61356009,Poisoning caused by parasympathomimetic drug
+61406000,Poisoning caused by diazepam
+61411003,Poisoning caused by cephaloglycin
+61438005,Poisoning caused by psychotropic agent
+61544007,Flunixin poisoning
+61547000,Gutierrezia microcephala poisoning
+61562003,Lolium perenne poisoning
+61767007,Autointoxication
+61780005,Toxic effect of phorate
+61803000,Poisoning caused by central nervous system stimulant
+61806008,Phyllanthus abnormis poisoning
+62041008,Portulacca oleracea poisoning
+62072007,Toxic effect of brass fumes
+62094004,Philodendron species poisoning
+62204001,Crotalaria globifera poisoning
+62208003,Jellyfish poisoning
+62210001,Inorganic arsenic poisoning
+62276003,Poisoning caused by succinimide
+62309008,Helichrysum argyosphaerum poisoning
+62388003,Sodium fluoroacetate toxicity
+62711001,Poisoning caused by vaginal contraceptive
+62942003,Tetraethyl pyrophosphate poisoning
+62943008,Lantana species poisoning
+63139000,Toxic effect of freon
+63160006,Toxic effect of naphthalene
+63163008,Toxic effect of carbaryl
+63344000,Ammi species poisoning
+63535002,Matricaria nigellifolia poisoning
+63620009,Oxytenia acerosa poisoning
+63628002,Poisoning caused by acetazolamide
+63645007,Cacao poisoning
+63806000,Hymenoxys oderata poisoning
+63945009,Melica species poisoning
+63964003,Rhododendron indicum poisoning
+64022009,Dichapetalum cymosum poisoning
+64116003,Borate toxicity
+64136002,Toxic effect of kerosene
+64140006,Toxicodendron diversilobum poisoning
+64189001,Arsine poisoning
+64316008,Baileya multiradiata poisoning
+64399000,Karwinskia humboldtiana poisoning
+64470006,Colocasia antiquorum poisoning
+64536008,Croton species poisoning
+64579005,Carcinogen effect in offspring
+64600001,Turpentine poisoning
+64805008,Xanthorrhoea species poisoning
+64808005,Poisoning caused by theophylline
+64815002,Fugu poisoning
+64921004,Poisoning caused by phenobarbital
+64948003,Fadogia homblei poisoning
+65223000,Niacinamide toxicity
+65425009,Poisoning caused by imipramine
+65435003,Poisoning caused by antiadrenergic drug
+65679006,Poisoning caused by whole blood
+66107000,Bacterial food poisoning
+66207005,Toxic effect of cyanide
+66409006,Poisoning caused by oxytocic agent
+66413004,Poisoning caused by penicillin
+66416007,Dryopteris species poisoning
+66491001,Poisoning caused by flucytosine
+666000,Poisoning caused by antivaricose drug AND/OR sclerosing agent
+66695004,Acrodynia caused by mercury
+66698002,Diethylstilbestrol poisoning
+66774001,Cucumis species poisoning
+66780009,Poisoning caused by cephalothin
+66884007,Nicotine poisoning
+66994003,Silver poisoning
+67074001,Eucalyptus species poisoning
+67121008,Toxic effect of lead dioxide
+67181005,Toxic effect of metal
+67426006,Toxic effect of alcohol
+67438002,Poisoning caused by anticoagulant
+6749002,Toxic effect of propyl alcohol
+67553007,Dimethoate poisoning
+67794001,Poisoning caused by drug acting on respiratory system
+67806004,Fagopyrum esculentum poisoning
+6781006,Allium species poisoning
+67870009,Rumex species poisoning
+67893003,Poisoning caused by lysergide
+67933004,Poisoning caused by isoniazid
+67987005,Toxic effect from eating fish
+68099003,Poisoning caused by codeine
+68102003,Ammi majus poisoning
+68203000,Urginea species poisoning
+68232002,Centaurea species poisoning
+68258002,Kochia scoparia poisoning
+68441009,Poisoning caused by nikethamide
+68476006,Quercus species poisoning
+68554004,Triazine compound toxicity
+68563002,Poisoning caused by carbonic acid anhydrase inhibitor
+68582006,Zinc poisoning
+68629007,Poisoning caused by thiamphenicol
+68709002,Poisoning caused by diphenylpyraline
+68788007,Cicuta maculata poisoning
+68814008,Salsola tuberculatiformis poisoning
+68822001,Poisoning caused by phenindione
+68935009,Conium maculatum poisoning
+6900000,Poisoning caused by phenformin
+69219001,Albizia species poisoning
+69304004,Trifolium species poisoning
+69384002,Avena sativa poisoning
+69398005,Vicia species poisoning
+69434005,Tricyclic antidepressant poisoning
+69460006,Toxaphene poisoning
+69623000,Toxic effect of nitroglycol
+69819005,Poisoning caused by purine derivative diuretic
+698302009,Accidental poisoning caused by anticonvulsant
+69890005,Nitrogen trichloride poisoning
+699011008,Accidental poisoning caused by psychotropic agent
+699012001,Accidental poisoning caused by sedative
+699018002,Poisoning caused by blood product
+699020004,Poisoning caused by natural blood
+699021000,Poisoning caused by coagulant
+699022007,Poisoning caused by anticoagulant antagonist AND/OR coagulant
+699036002,Accidental poisoning caused by central depressant
+699064007,Poisoning caused by antimalarial and drug acting on blood protozoa
+699067000,Poisoning caused by parathyroid derivative
+699068005,Poisoning caused by thyroid hormone
+699071002,Poisoning caused by liver preparation agent
+699072009,Poisoning caused by antianemic agent
+699208000,Thrombocytopenia caused by alcohol
+69929004,Chelidonium majus poisoning
+69956002,Poisoning caused by organophosphorus anticholinesterase
+70014009,Food poisoning caused by Clostridium perfringens
+7005004,Cicuta species poisoning
+70136009,Toxic effect of malathion
+702693007,Cyclosporin A poisoning
+702702004,Calcineurin inhibitor poisoning
+70273001,Poisoning caused by paracetamol
+70330008,Poisoning caused by lorazepam
+70336002,Methomyl poisoning
+70539005,Poisoning caused by hormone AND/OR synthetic substitute
+70735001,Sesbania species poisoning
+70774008,Terminalia oblongata poisoning
+70775009,Ipomoea muelleri poisoning
+70802000,Lippia species poisoning
+70842005,Toxic effect of lead acetate
+70845007,Poisoning caused by ferric salt
+70857003,Toxic effect of parathion
+70885001,Poisoning caused by anti-infective compound of bismuth
+70896009,Sorghum species poisoning
+709119005,Toxic effect of antimony and/or its compounds
+710027002,Cytokine-associated toxicity
+71059005,Poisoning caused by ferrous salt
+712742003,Benzodiazepine intoxication
+71277006,Poisoning caused by phenolphthalein
+71320007,Poisoning caused by erythromycin AND/OR other macrolide
+71480005,Pyrethroid toxicity
+715058004,Poisoning caused by norepinephrine
+715059007,Poisoning caused by norepinephrine bitartrate
+715063000,"Accidental poisoning caused by 2,4,5-Trichlorophenoxyacetic acid"
+715064006,"Accidental poisoning caused by 2,4-Dichlorophenoxyacetic acid"
+715066008,Poisoning caused by benzothiadiazine
+715143005,Accidental poisoning caused by endrin
+715149009,Shellfish poisoning caused by Gonyaulax catenella
+715267006,Disulfiram poisoning
+715268001,Accidental disulfiram poisoning
+715269009,Intentional disulfiram poisoning
+715270005,Disulfiram poisoning of undetermined intent
+71597002,Phosphate salt poisoning
+717125005,Poisoning caused by Notechis scutatus venom
+71806009,Centaurea solstitialis poisoning
+7184000,Poisoning caused by blood plasma
+71841008,Toxic effect of caustic substance
+71883003,Thamnosma texana poisoning
+7201003,Poisoning caused by anthelmintic
+72016002,Melilotus alba poisoning
+72120001,Poisoning caused by methandriol
+721211008,Encephalopathy caused by methylmercury
+72145003,Tricothecium toxicosis
+72161001,Agrostemma githago poisoning
+721657003,Food poisoning caused by Listeria monocytogenes
+72182007,Poisoning caused by nystatin
+7220001,Urginea maritima poisoning
+722535000,Toxic enteritis of small intestine caused by substance
+722536004,Toxic enteritis of small intestine caused by drug
+72338007,Toxic effect of lead salt
+72376001,Toxic effect of dieldrin
+723886005,Poisoning caused by cassava
+72431002,Accidental poisoning
+72446009,Toxic effect of inorganic lead compound
+724710009,Intoxication caused by dissociative drug
+724711008,Intoxication caused by ketamine
+7248001,Poisoning caused by salicylate
+72566003,Poisoning caused by liver preparation AND/OR other antianemic agent
+72610007,Poisoning caused by opiate antagonist
+72661002,Onoclea sensibilis poisoning
+72664005,Lidneria species poisoning
+72669000,Lathyrus sylvestris poisoning
+72676005,Pachystigma species poisoning
+72700005,Poisoning caused by tripelennamine
+72804009,Thiocarbamate compound toxicity
+7287001,Poisoning caused by triorthocresyl phosphate
+73108003,Poisoning caused by trifluperidol
+73177007,Kalanchoe species poisoning
+73340005,Poisoning caused by cyclophosphamide
+73398002,Quercus havardi poisoning
+73475009,Hepatogenous chronic copper poisoning
+73496002,Lupinus species poisoning
+73612008,Setaria lutescens poisoning
+73724005,Phenoxyacetate herbicide toxicity
+737335004,Synthetic cannabinoid intoxication
+73786005,Oxytropis species poisoning
+73853003,Toxic effect of potassium hydroxide
+73989005,Crotalaria spectabilis poisoning
+74119006,Poisoning caused by gold salt
+74132001,Toxic effect of dichlorodiphenyltrichloroethane
+74206004,Sapium sebiferum poisoning
+74225001,Tick paralysis
+74264003,Poisoning caused by opium alkaloid
+74265002,Poisoning caused by anti-infective compound of antimony
+74338006,Poisoning caused by antimuscarinic drug
+74524003,Poisoning caused by quinine
+7456000,Poisoning caused by wasp sting
+7464006,Scilla species poisoning
+74882009,Poisoning caused by phenytoin
+74902008,Poisoning caused by oleandomycin
+74984006,Poisoning caused by phensuximide
+75017004,Paraquat toxicity
+7511009,Poisoning caused by keratolytic agent
+75143000,Toxic encephalitis caused by thallium
+75209003,Dinitro compound toxicity
+75244001,Dichapetalum species poisoning
+75258004,Food poisoning
+75350009,Tribulus terrestris poisoning
+75378005,Manihot species poisoning
+75411009,Wedelia asperrima poisoning
+75433006,Medicago species poisoning
+75478009,Poisoning
+75496000,Poisoning caused by procainamide
+75529001,Phosphorus poisoning
+75683007,Poisoning caused by demulcent
+75708007,Acokanthera species poisoning
+75730008,Lindane poisoning
+75731007,Solvent AND/OR emulsifier toxicity
+75785007,Phalaris minor poisoning
+76182009,Paspalum dilatatum poisoning
+762323002,Intoxication caused by stimulant
+76241003,Jatropha curcas poisoning
+762671008,Intoxication caused by synthetic cathinone
+76346005,Poisoning caused by coumarin
+763740000,Infantile poisoning caused by mercury
+76400006,Poisoning caused by local antipruritic
+765090007,Poisoning caused by monochloroacetic acid
+76547000,Fenthion poisoning
+766219005,Methaqualone poisoning
+766221000,Accidental poisoning caused by methaqualone
+76636002,Poisoning caused by pectin
+7665002,Poisoning caused by amphotericin B
+767146004,Toxic effect of arsenic and its compounds
+767163000,Toxic effect of beryllium and its compounds
+767299002,Toxic effect of mercury and its compounds
+767303007,Toxic effect of manganese and its compounds
+76815001,Toxic effect of acetone
+76941008,Poisoning caused by carbenicillin
+77041002,Molybdenum poisoning
+77131002,Poisoning caused by thonzylamine
+77277003,Poisoning caused by bisacodyl
+772808000,Intoxication caused by recreational drug misuse
+77334002,Sodium chloride poisoning
+77357008,Sesbania punicea poisoning
+77423004,Amsinckia intermedia poisoning
+7743006,Toxic effect of cresol
+77650001,Poisoning caused by phenoxybenzamine
+77718003,Poisoning caused by streptokinase
+77721001,Opioid intoxication
+77857001,Poisoning caused by proguanil
+77889005,Paralytic shellfish poisoning
+781000,Cestrum diurnum poisoning
+781550002,Family Sapindaceae poisoning
+78405005,Toxic effect of organic lead compound
+78438001,Taxus baccata poisoning
+7855006,Toxic effect of hydrochloric acid
+78695006,Poisoning caused by amitriptyline
+78731006,Poisoning caused by vitamin K
+78920009,Poisoning caused by lizard venom
+789271009,Central alpha-2 adrenergic receptor agonist poisoning
+789283006,Neurotoxicity caused by snake venom
+789286003,Shock caused by snake venom
+789289005,Skin and subcutaneous tissue damage caused by snake venom
+789291002,Consumption coagulopathy caused by snake venom
+7895008,Poisoning caused by drug AND/OR medicinal substance
+79001001,Marsilea drummondii poisoning
+79026005,Prunus species poisoning
+79044002,Poisoning caused by hexadimethrine
+79102006,Inula conyza poisoning
+79103001,Paspalum species poisoning
+79156004,Poisoning caused by pancreatin
+7916009,Alcoholic polyneuropathy
+79164005,Poisoning caused by sting of harvester ant
+79262001,Lolium rigidum poisoning
+79302001,Echinopogon ovatus poisoning
+79436008,Nidorella species poisoning
+79669001,Moldy walnut poisoning
+79815000,Poisoning caused by dietetic drug
+79828007,Trisetum flavescens poisoning
+79940008,Melica decumbens poisoning
+79953006,Poisoning caused by guanethidine
+7998009,Poisoning caused by bee sting
+79982007,Poisoning caused by progestogen
+80092001,Poisoning caused by cephaloridine
+8018005,Cheilanthes sieberi poisoning
+80300008,Poisoning caused by streptomycin
+80430001,Zamia species poisoning
+80471007,Digitalis species poisoning
+8049000,Lantana camara poisoning
+80503009,Nitrogen dioxide poisoning
+80611006,Methyluracil compound toxicity
+80701009,Helenium species poisoning
+80702002,Setaria species poisoning
+80915000,Trifolium repens poisoning
+81034007,Algae poisoning
+81258004,Euphorbia species poisoning
+81270000,Poisoning caused by psilocybin
+81459009,Podophyllum peltatum poisoning
+81579003,Acacia georginae poisoning
+81648008,Poisoning caused by castor oil
+81717007,Toxic effect of propane
+8188000,Papaver species poisoning
+81914009,Poisoning caused by benzodiazepine-based tranquilizer
+81967009,Narthecium ossifragum poisoning
+81991000,Poisoning caused by dextromethorphan
+82276009,Poisoning caused by antidepressant
+8247009,Berylliosis
+8260003,Organophosphate poisoning
+82674000,Poisoning caused by penicillinase
+82722005,Oxalis species poisoning
+82768008,Poisoning caused by mescaline
+82782008,Toxic effect of ethyl alcohol
+82827007,Cicuta virosa poisoning
+82913001,Beta species poisoning
+82958007,Lobelia inflata poisoning
+830282006,Poisoning caused by aldehyde dehydrogenase inhibitor
+83086008,Nicotiana glauca poisoning
+83170004,"Poisoning caused by 1,3- indandione"
+83174008,Portulacca species poisoning
+83227006,Scombroid fish poisoning
+8325007,Poisoning caused by mercaptopurine
+83355007,Psilostrophe species poisoning
+83364002,Poisoning by sting AND/OR bite of fire ant
+83681002,Amaranthus retroflexus poisoning
+83709007,Cheilanthes sinnata poisoning
+83756005,Pieris japonica poisoning
+83833006,Crimidine toxicity
+838523003,Poisoning caused by methylenedioxymethamphetamine
+838524009,Accidental poisoning caused by methylenedioxymethamphetamine
+838525005,Poisoning caused by methylenedioxymethamphetamine of undetermined intent
+838526006,Intentional poisoning caused by methylenedioxymethamphetamine
+83870002,Trifolium hybridum poisoning
+84314001,Isotropis species poisoning
+84325005,Tetrachlorvinphos poisoning
+84393008,Poisoning caused by terpin hydrate
+84419005,Toxic effect of lacrimogenic gas
+84469002,Robinia pseudoacacia poisoning
+84483000,Poisoning caused by chlordiazepoxide
+84622004,Food poisoning caused by staphylococcus
+84715003,Crotalaria burkeana poisoning
+8481000,Urea poisoning
+84811001,Poisoning caused by chlorambucil
+84997000,Insecticide poisoning
+85176007,Helichrysum species poisoning
+85209005,Poisoning caused by nitrite
+85278001,Phalaris aquatica poisoning
+85302003,Poisoning caused by diphenhydramine
+85337000,Poisoning caused by sedative AND/OR hypnotic
+8538000,Brassica sinapis poisoning
+85618003,Poisoning caused by methisazone
+85644003,Toxic effect of food contaminant
+8567004,Toxic effect of nickel compound
+85838004,Arisaema species poisoning
+85866007,Toxic effect of heavy metal
+85871000,Creosote poisoning
+85959007,Linum species poisoning
+85975005,Poisoning caused by psychodysleptic
+85979004,Acacia species poisoning
+86037001,Secale cereale poisoning
+86068002,Toxic effect of noxious substance eaten as food
+86199003,Hyoscyamus niger poisoning
+86232000,Pyriminil toxicity
+86321003,Poisoning caused by levodopa
+86473001,Toxic effect of petroleum ether
+86505009,Toxic effect from eating mushrooms
+86624000,Poisoning caused by amobarbital
+86733006,Poisoning caused by antitussive
+86758001,Mercurialis species poisoning
+86772005,Toxic effect of petroleum product
+86799007,Laburnum anagyroides poisoning
+86849004,Suicidal deliberate poisoning
+86932005,Urtica incisa poisoning
+8697000,Fagopyrum species poisoning
+87011009,Eupatorium adenophorum poisoning
+870410000,Vasopressor drug poisoning
+87197007,Endrin poisoning
+8732001,Poisoning caused by tetracycline group antibiotic
+87363009,Poisoning caused by promazine
+87396006,Poisoning caused by chlorpromazine
+87460008,Toxic effect of amyl alcohol
+8747005,Sulfur AND/OR lime-sulfur toxicity
+87570008,Psilocaulon species poisoning
+8779001,Equisetum palustre poisoning
+87816000,Poisoning caused by sulfone
+87841007,Oxydemeton-methyl poisoning
+87904007,Poisoning caused by drug acting on smooth AND/OR skeletal muscle
+87912004,Chlorinated naphthalene poisoning
+88031005,4-aminopyridine poisoning
+88126006,Stypandra species poisoning
+88133006,Robinia viscosa poisoning
+88165009,Poisoning caused by tetracaine
+88246005,Anthoxanthum odoratum poisoning
+88550004,Cymopterus watsonii poisoning
+88603000,Pteronia pallens poisoning
+88627003,Toxic effect of chromium
+88674007,Poisoning caused by vasopressin
+88951006,Cynoglossum officinale poisoning
+88993007,Poisoning caused by haloperidol
+890137002,Jacobaea vulgaris poisoning
+8904001,Toxic effect of nitrous fumes
+89137004,Poisoning caused by ear anti-infective
+89183005,Spasmodic ergotism
+89298004,Pimelea species poisoning
+89502008,Aesculus species poisoning
+89507002,Toxic effect of denatured alcohol
+89535003,Poisoning caused by estrogen
+89594001,Trachyandra species poisoning
+8968000,Geigeria species poisoning
+89715001,Poisoning caused by phenylbutazone
+89738003,Organic arsenic poisoning
+89739006,Poisoning caused by irritant cathartic
+89878004,Poisoning caused by halogenated hydrocarbon derivative
+89894006,Penicillium cyclopium toxicosis
+89910002,Poisoning caused by honey bee sting
+8995005,Poisoning caused by chlorpropamide
+90112001,Adenia species poisoning
+90143008,Astragalus species poisoning
+90186008,Panicum effusum poisoning
+90210000,Poisoning caused by central appetite depressant
+90359003,Shellfish poisoning caused by Gonyaulax tamarensis
+903621000000103,Poisoning due to redback spider venom
+90393004,Sorghum almum poisoning
+90425003,Raphanus raphanistrum poisoning
+90574000,Toxic effect of ethyliodoacetate
+90632001,Acute copper poisoning
+90687000,Poisoning caused by agent primarily affecting blood constituent
+90765000,Toxic effect of chlorine gas
+90794007,Polychlorinated biphenyl poisoning
+91014009,Poisoning caused by aminophylline
+91027008,Poisoning caused by bumble bee sting
+91074004,Poisoning caused by gonadotropin
+91164004,Polybrominated biphenyl poisoning
+91267002,Poisoning caused by fluphenazine
+91433009,Poisoning caused by minocycline
+91450006,Metaldehyde poisoning
+91466008,Potassium intoxication
+91536003,Sorghum bicolor poisoning
+9233004,Pyridoxine toxicity
+9291000,Poisoning caused by monoamine oxidase inhibitor
+9408000,Poisoning caused by thyroid hormone AND/OR thyroid derivative
+943111000000105,Acute stimulant intoxication
+95326004,Toxicoderma
+95327008,Toxicodermatitis
+95872005,Carbon monoxide poisoning from motor vehicle exhaust
+95873000,Carbon monoxide poisoning from faulty furnace AND/OR heater
+95874006,Carbon monoxide poisoning from fire
+95876008,Poisoning caused by synergistic effect of multiple chemicals
+95878009,Amnesic shellfish poisoning
+95879001,Diarrheic shellfish poisoning
+9862009,Toxic effect of sodium hydroxide
+9982009,Poisoning caused by cocaine
