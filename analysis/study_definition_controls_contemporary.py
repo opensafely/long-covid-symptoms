@@ -54,7 +54,7 @@ study = StudyDefinition(
         AND (sex = "M" OR sex = "F") 
         AND imd > 0 
         AND NOT unexposed_has_died
-        AND stp ="E54000005"
+        AND NOT stp = ""
         """,
     ),
     
