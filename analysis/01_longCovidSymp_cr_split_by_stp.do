@@ -42,7 +42,8 @@ forvalues i = 5/9 {
 	preserve
 		capture noisily keep if stp=="E5400000`i'"
 		capture noisily export delimited using "./output/input_covid_communitycases_stp`i'.csv", replace
-		capture safetab stp
+		count
+		capture noisily safetab stp
 	restore
 }
 
@@ -50,7 +51,8 @@ forvalues i = 10/49 {
 	preserve
 		capture noisily keep if stp=="E540000`i'"
 		capture noisily export delimited using "./output/input_covid_communitycases_stp`i'.csv", replace
-		capture safetab stp
+		count
+		capture noisily safetab stp
 	restore
 }
 
@@ -69,15 +71,17 @@ forvalues i = 5/9 {
 	preserve
 		capture noisily keep if stp=="E5400000`i'"
 		capture noisily export delimited using "./output/input_controls_contemporary_stp`i'.csv", replace
-		capture safetab stp
+		count
+		capture noisily safetab stp
 	restore
 }
 
 forvalues i = 10/49 {
 	preserve
-		keep if stp=="E540000`i'"
-		export delimited using "./output/input_controls_contemporary_stp`i'.csv", replace
-		capture safetab stp
+		capture noisily keep if stp=="E5400000`i'"
+		capture noisily export delimited using "./output/input_controls_contemporary_stp`i'.csv", replace
+		count
+		capture noisily safetab stp
 	restore
 }
 
