@@ -2,7 +2,7 @@
 DO FILE NAME:			01_longCovidSymp_check_case_control_source.do
 PROJECT:				Long covid symptoms
 DATE: 					28th May 2022
-AUTHOR:					Kevin Wing adapted from R Mathur H Forbes, A Wong, A Schultze, C Rentsch,K Baskharan, E Williamson 										
+AUTHOR:					Kevin Wing									
 DESCRIPTION OF FILE:	Checks that source case and control files are only specific to one region (can't so this in dummy data as you specify the regions yourself!)
 DATASETS USED:			.csv files from study definitioons
 DATASETS CREATED: 		none
@@ -79,7 +79,7 @@ forvalues i = 5/9 {
 
 forvalues i = 10/49 {
 	preserve
-		capture noisily keep if stp=="E5400000`i'"
+		capture noisily keep if stp=="E540000`i'"
 		capture noisily export delimited using "./output/input_controls_contemporary_stp`i'.csv", replace
 		count
 		capture noisily safetab stp
