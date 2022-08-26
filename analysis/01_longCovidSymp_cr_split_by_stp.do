@@ -33,7 +33,8 @@ safetab stp
 
 *stp is always set to 1 in dummy data so manually splitting up here (just for dummy data)
 *COMMENT OUT THE FOLLOWING WHEN NOT RUNNING ON DUMMY DATA
-*replace stp="STP2" if _n>300
+replace stp="STP2" if _n<300
+
 **END OF COMMENT OUT
 
 *stps are coded E54000005-9, 10, 12-17, 20-27, 29, 33, 35-37, 40-44, 49
