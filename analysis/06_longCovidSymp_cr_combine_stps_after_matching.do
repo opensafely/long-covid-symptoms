@@ -29,13 +29,14 @@ log using ./logs/06_longCovidSymp_cr_combined_cases_contemporary_controls.log, r
 *(1)=========Append separate cases files============
 capture noisily import delimited ./output/matched_cases_stp5.csv, clear
 capture noisily keep case set_id case_index_date stp match_counts
-save ./output/input_covid_matched_cases_allSTPs.dta, replace
+tempfile cases_for_allSTPs
+save `cases_for_allSTPs', replace
 
 forvalues i = 6/49 {
 	capture noisily import delimited ./output/matched_cases_stp`i'.csv, clear
 	capture noisily keep patient_id case set_id case_index_date stp match_counts
-	capture noisily append using ./output/input_covid_matched_cases_allSTPs.dta
-	capture noisily save ./output/input_covid_matched_cases_allSTPs.dta, replace
+	capture noisily append using `cases_for_allSTPs'
+	capture noisily save `cases_for_allSTPs', replace
 	capture noisily safetab stp
 	capture noisily count
 }
@@ -43,20 +44,20 @@ forvalues i = 6/49 {
 count
 *save as .csv file for input into study definitions that add further variables, erase dta version
 capture noisily export delimited using "./output/input_covid_matched_cases_allSTPs.csv"
-capture noisily erase ./output/input_covid_matched_cases_allSTPs.dta
 
 
 
 *(2)=========Append separate control files============
 capture noisily import delimited ./output/matched_matches_stp5.csv, clear
 capture noisily keep case set_id case_index_date stp
-save ./output/input_covid_matched_matches_allSTPs.dta, replace
+tempfile matches_for_allSTPs
+save `matches_for_allSTPs', replace
 
 forvalues i = 6/49 {
 	capture noisily import delimited ./output/matched_matches_stp`i'.csv, clear
 	capture noisily keep patient_id case set_id case_index_date stp
-	capture noisily append using ./output/input_covid_matched_matches_allSTPs.dta
-	capture noisily save output/input_covid_matched_matches_allSTPs.dta, replace
+	capture noisily append using `matches_for_allSTPs'
+	capture noisily save `matches_for_allSTPs', replace
 	capture noisily safetab stp
 	capture noisily count
 }
