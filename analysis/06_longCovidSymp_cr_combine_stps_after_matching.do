@@ -34,9 +34,9 @@ save ./output/input_covid_matched_cases_allSTPs.dta, replace
 forvalues i = 6/49 {
 	capture noisily import delimited ./output/matched_cases_stp`i'.csv, clear
 	capture noisily keep patient_id case set_id case_index_date stp match_counts
-	capture noisily append using ./output/input_covid_matched_cases_allSTPs.dta
-	capture noisily count
+	capture noisily append using ./output/input_covid_matched_cases_allSTPs.dta, replace
 	capture noisily safetab stp
+	capture noisily count
 }
 *count of total cases
 count
@@ -54,9 +54,9 @@ save ./output/input_covid_matched_matches_allSTPs.dta, replace
 forvalues i = 6/49 {
 	capture noisily import delimited ./output/matched_matches_stp`i'.csv, clear
 	capture noisily keep patient_id case set_id case_index_date stp
-	capture noisily append using ./output/input_covid_matched_matches_allSTPs.dta
-	capture noisily count
+	capture noisily append using ./output/input_covid_matched_matches_allSTPs.dta, replace
 	capture noisily safetab stp
+	capture noisily count
 }
 *count of total matches
 count
