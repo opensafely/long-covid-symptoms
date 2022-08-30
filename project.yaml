@@ -442,10 +442,19 @@ actions:
          matching_report_spt49: output/matching_report_stp49.txt
 
 
+# 5. CHECK VARIABLES IN MATCHED FILES
+  # *** contemporary potential comparators for each stp
+ checkVars_inMatchedeFiles:
+    run: stata-mp:latest analysis/05_check_vars_after_matching.do
+    needs: [match_contemporary_spt5]
+    moderately_sensitive:
+        log: logs/05_check_vars_after_matching.log
 
-# 5. COMBINE MATCHED CASES AND COMPARATORS UP BY STP
+
+
+# 6. COMBINE MATCHED CASES AND MATCHED COMPARATORS BY STP
   combine_matched_stps:
-    run: stata-mp:latest analysis/05_longCovidSymp_cr_combined_cases_contemporary_controls.do
+    run: stata-mp:latest analysis/05_longCovidSymp_cr_combine_stps_after_matching.do
     needs: [match_contemporary_spt5, match_contemporary_spt6, match_contemporary_spt7, match_contemporary_spt8, match_contemporary_spt9,
     match_contemporary_spt10, match_contemporary_spt12, match_contemporary_spt13, match_contemporary_spt14, match_contemporary_spt15,
     match_contemporary_spt16, match_contemporary_spt17, match_contemporary_spt20, match_contemporary_spt21, match_contemporary_spt22,
@@ -455,14 +464,14 @@ actions:
     match_contemporary_spt49]
     outputs:
       highly_sensitive:
-        matched_cases_allstps: output/input_covid_matched_cases_allSTPs.dta
-        matched_matches_allstps: input_covid_matched_matches_allSTPs.dta
+        matched_cases_allstps: output/input_covid_matched_cases_allSTPs.csv
+        matched_matches_allstps: output/input_covid_matched_matches_allSTPs.csv
       moderately_sensitive:
         log: logs/05_longCovidSymp_cr_combined_cases_contemporary_controls.log
 
 
 
- # 6. ADD FURTHER VARIABLES TO CONTROLS FOLLOWING MATCHING
+ # 7. ADD FURTHER VARIABLES TO CONTROLS FOLLOWING MATCHING
   add_allVars_contemporary_controls:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_contemporary 
     needs: [combine_matched_stps]
@@ -472,7 +481,7 @@ actions:
 
 
 
-# 7. ADD FURTHER VARIABLES TO CASES FOLLOWING MATCHING
+# 8. ADD FURTHER VARIABLES TO CASES FOLLOWING MATCHING
   add_allVars_cases:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_covid_communitycases 
     needs: [combine_matched_stps]
@@ -482,17 +491,18 @@ actions:
 
 
 
-# 8. COMBINE_CASES_AND_CONTEMPORARY_CONTROLS
-  combine_cases_and_contemporary_controls:
-    run: stata-mp:latest analysis/02_longCovidSymp_cr_combined_cases_contemporary_controls.do 
+# 9. CREATE ANALYSIS FILE (ALSO COMBINES CASES AND CONTROLS)
+  create_analysis_file:
+    run: stata-mp:latest analysis/09_longCovidSymp_cr_combined_cases_contemporary_controls.do 
     needs: [add_allVars_contemporary_controls, add_allVars_cases]
     outputs:
       highly_sensitive:
         # casesContemporary: output/cases_contemporary.dta 
         # controlsContemporary: output/controls_contemporary.dta 
-        combinedCasesControlsContemporary: output/01_combined_cases_controls_contemporary.dta 
+        mainAnalysisFile: output/longCovidSymp_analysis_dataset_contemporary.dta 
+        unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_analysis_dataset.dta
       moderately_sensitive:
-        log: logs/01_longCovidSymp_cr_combined_cases_controls.log
+        log: logs/09_longCovidSymp_cr_combined_cases_controls.log
 
 
 
