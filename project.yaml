@@ -444,17 +444,18 @@ actions:
 
 # 5. CHECK VARIABLES IN MATCHED FILES
   # *** contemporary potential comparators for each stp
- checkVars_inMatchedeFiles:
+  checkVars_inMatchedeFiles:
     run: stata-mp:latest analysis/05_check_vars_after_matching.do
     needs: [match_contemporary_spt5]
-    moderately_sensitive:
+    outputs:
+      moderately_sensitive:
         log: logs/05_check_vars_after_matching.log
 
 
 
 # 6. COMBINE MATCHED CASES AND MATCHED COMPARATORS BY STP
   combine_matched_stps:
-    run: stata-mp:latest analysis/05_longCovidSymp_cr_combine_stps_after_matching.do
+    run: stata-mp:latest analysis/06_longCovidSymp_cr_combine_stps_after_matching.do
     needs: [match_contemporary_spt5, match_contemporary_spt6, match_contemporary_spt7, match_contemporary_spt8, match_contemporary_spt9,
     match_contemporary_spt10, match_contemporary_spt12, match_contemporary_spt13, match_contemporary_spt14, match_contemporary_spt15,
     match_contemporary_spt16, match_contemporary_spt17, match_contemporary_spt20, match_contemporary_spt21, match_contemporary_spt22,
@@ -467,7 +468,7 @@ actions:
         matched_cases_allstps: output/input_covid_matched_cases_allSTPs.csv
         matched_matches_allstps: output/input_covid_matched_matches_allSTPs.csv
       moderately_sensitive:
-        log: logs/05_longCovidSymp_cr_combined_cases_contemporary_controls.log
+        log: logs/06_longCovidSymp_cr_combined_cases_contemporary_controls.log
 
 
 
