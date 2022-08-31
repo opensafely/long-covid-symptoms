@@ -28,11 +28,11 @@ log using ./logs/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching.log,
 *(1)=========Change source files to stata format============
 *change source files to stata format
 forvalues i = 5/49 {
-	import delimited ./output/matched_matches_stp`i'.csv, clear
+	capture noisily import delimited ./output/matched_matches_stp`i'.csv, clear
 	*FOR TESTING ON DUMMY DATA
 	*import delimited ./output/input_covid_communitycases_stp`i'.csv, clear
-	tempfile matched_matches_stp`i'
-	save `matched_matches_stp`i'', replace
+	capture noisily tempfile matched_matches_stp`i'
+	capture noisily save `matched_matches_stp`i'', replace
 }
 
 *(2)=========Append separate cases files==========
