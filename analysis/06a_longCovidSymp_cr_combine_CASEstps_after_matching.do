@@ -1,6 +1,6 @@
 /*==============================================================================
 DO FILE NAME:			05_longCovidSymp_cr_combined_cases_contemporary_controls.do
-PROJECT:				Long covid symptoms
+PROJECT:				Long covid symptom
 DATE: 					26th Aug 2022
 AUTHOR:					Kevin Wing 										
 DESCRIPTION OF FILE:	Combines all stp cases into a single file, and all stp comparators into a single file
@@ -23,7 +23,7 @@ pwd
 
 * Open a log file
 cap log close
-log using ./logs/06_longCovidSymp_cr_combined_cases_contemporary_controls.log, replace t
+log using ./logs/06a_longCovidSymp_cr_combine_CASEstps_after_matching.log, replace t
 
 
 *(1)=========Append separate cases files============
@@ -37,41 +37,19 @@ forvalues i = 6/49 {
 	capture noisily keep patient_id case set_id case_index_date stp match_counts
 	capture noisily append using `cases_for_allSTPs'
 	capture noisily save `cases_for_allSTPs', replace
-	capture noisily safetab stp
-	capture noisily count
 }
-*count of total cases
-count
+*count of total cases and STPs
+capture noisily safetab stp
+capture noisily count
 *save as .csv file for input into study definitions that add further variables, erase dta version
-capture noisily export delimited using "./output/input_covid_matched_cases_allSTPs.csv"
+capture noisily export delimited using "./output/input_covid_matched_cases_allSTPs.csv", replace
 
-
-
-*(2)=========Append separate control files============
-capture noisily import delimited ./output/matched_matches_stp5.csv, clear
-capture noisily keep case set_id case_index_date stp
-tempfile matches_for_allSTPs
-save `matches_for_allSTPs', replace
-
-forvalues i = 6/49 {
-	capture noisily import delimited ./output/matched_matches_stp`i'.csv, clear
-	capture noisily keep patient_id case set_id case_index_date stp
-	capture noisily append using `matches_for_allSTPs'
-	capture noisily save `matches_for_allSTPs', replace
-	capture noisily safetab stp
-	capture noisily count
+*erase separate case files
+foreach num of numlist 5/49 {
+		capture noisily erase ./output/matched_cases_stp`num'.csv
 }
-*count of total matches
-count
-*save as .csv file for input into study definitions that add further variables
-capture noisily export delimited using "./output/input_covid_matched_matches_allSTPs.csv"
-capture noisily erase ./output/input_covid_matched_matches_allSTPs.dta
 
-*erase separate case and files
-*foreach num of numlist 5/49 {
-*		capture noisily erase ./output/matched_cases_stp`num'.csv
-*		capture noisily erase ./output/matched_matches_stp`num'.csv
-*}
+
 
 log close
 
