@@ -48,7 +48,7 @@ forvalues i = 5/9 {
 	restore
 }
 
-forvalues i = 10/49 {
+forvalues i = 10 12/17 20/27 29 33 35/37 40/44 49 {
 	preserve
 		capture noisily keep if stp=="E540000`i'"
 		capture noisily export delimited using "./output/input_covid_communitycases_stp`i'.csv", replace
@@ -77,7 +77,7 @@ forvalues i = 5/9 {
 	restore
 }
 
-forvalues i = 10/49 {
+forvalues i = 10 12/17 20/27 29 33 35/37 40/44 49 {
 	preserve
 		capture noisily keep if stp=="E540000`i'"
 		capture noisily export delimited using "./output/input_controls_contemporary_stp`i'.csv", replace
