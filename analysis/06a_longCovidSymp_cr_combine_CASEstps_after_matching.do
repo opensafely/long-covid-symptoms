@@ -25,29 +25,27 @@ pwd
 cap log close
 log using ./logs/06a_longCovidSymp_cr_combine_CASEstps_after_matching.log, replace t
 
-
-*(1)=========Append separate cases files============
-capture noisily import delimited ./output/matched_cases_stp5.csv, clear
-capture noisily keep case set_id case_index_date stp match_counts
-tempfile cases_for_allSTPs
-save `cases_for_allSTPs', replace
-
-forvalues i = 6/49 {
-	capture noisily import delimited ./output/matched_cases_stp`i'.csv, clear
-	capture noisily keep patient_id case set_id case_index_date stp match_counts
-	capture noisily append using `cases_for_allSTPs'
-	capture noisily save `cases_for_allSTPs', replace
+*(1)=========Change source files to stata format============
+*change source files to stata format
+forvalues i = 5/49 {
+	import delimited ./output/matched_cases_stp`i'.csv, clear
+	*FOR TESTING ON DUMMY DATA
+	*import delimited ./output/input_covid_communitycases_stp`i'.csv, clear
+	tempfile matched_cases_stp`i'
+	save `matched_cases_stp`i'', replace
 }
+
+*(2)=========Append separate cases files==========
+use `matched_cases_stp5', clear
+forvalues i = 6/49 {
+	capture noisily append using `matched_cases_stp`i''
+}
+
 *count of total cases and STPs
 capture noisily safetab stp
 capture noisily count
 *save as .csv file for input into study definitions that add further variables, erase dta version
 capture noisily export delimited using "./output/input_covid_matched_cases_allSTPs.csv", replace
-
-*erase separate case files
-foreach num of numlist 5/49 {
-		capture noisily erase ./output/matched_cases_stp`num'.csv
-}
 
 
 
