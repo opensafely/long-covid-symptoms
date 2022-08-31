@@ -38,7 +38,7 @@ forvalues i = 5/49 {
 *(2)=========Append separate cases files==========
 use `matched_matches_stp5', clear
 forvalues i = 6/49 {
-	capture noisily append using `matched_matches_stp`i''
+	capture noisily append using `matched_matches_stp`i'', force
 }
 
 *count of total cases and STPs
