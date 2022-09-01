@@ -27,7 +27,7 @@ log using ./logs/06a_longCovidSymp_cr_combine_CASEstps_after_matching.log, repla
 
 *(1)=========Change source files to stata format============
 *change source files to stata format
-forvalues i = 5/10 12/17 20/27 29 33 35/37 40/44 49 {
+foreach i of numlist 5/10 12/17 20/27 29 33 35/37 40/44 49 {
 	capture noisily import delimited ./output/matched_cases_stp`i'.csv, clear
 	*FOR TESTING ON DUMMY DATA
 	*import delimited ./output/input_covid_communitycases_stp`i'.csv, clear
@@ -37,7 +37,7 @@ forvalues i = 5/10 12/17 20/27 29 33 35/37 40/44 49 {
 
 *(2)=========Append separate cases files==========
 use `matched_cases_stp5', clear
-forvalues i = 6/10 12/17 20/27 29 33 35/37 40/44 49 {
+foreach i of numlist 6/10 12/17 20/27 29 33 35/37 40/44 49 {
 	capture noisily append using `matched_cases_stp`i'', force
 }
 
