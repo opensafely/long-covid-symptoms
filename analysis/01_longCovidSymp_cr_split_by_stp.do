@@ -79,7 +79,7 @@ foreach i of numlist 5/9  {
 	restore
 }
 
-foreach i of numlist 10 12/17 20/27 29 33 35/37 40/44 49 = 10 12/17 20/27 29 33 35/37 40/44 49 {
+foreach i of numlist 10 12/17 20/27 29 33 35/37 40/44 49 {
 	preserve
 		capture noisily keep if stp=="E540000`i'"
 		capture noisily export delimited using "./output/input_controls_contemporary_stp`i'.csv", replace
