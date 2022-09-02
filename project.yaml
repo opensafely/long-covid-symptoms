@@ -25,6 +25,18 @@ actions:
         cohort: output/input_controls_contemporary.csv
 
 
+# 2b. CHECK NUMBERS IN EACH STP PRIOR TO SPLITTING AND APPENDING STEPS BELOW
+
+ # *** contemporary potential comparators
+  checkSTPs_in_original_extract:
+    run: stata-mp:latest analysis/00_checkSTPs_in_original_extract_an.do
+    needs: [generate_community_cases_cohort, generate_potential_controls_contemporary]
+    outputs:
+      moderately_sensitive:
+        log: logs/00_checkSTPs_in_original_extract_an.log
+
+
+
 # 3. SPLIT CASES AND COMPARATORS UP BY STP
   01_longCovidSymp_split_by_stp:
     run: stata-mp:latest analysis/01_longCovidSymp_cr_split_by_stp.do
