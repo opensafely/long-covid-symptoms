@@ -1,7 +1,7 @@
 version: '3.0'
 
 expectations:
-  population_size: 10000
+  population_size: 50000
 
 actions:
 
@@ -24,6 +24,8 @@ actions:
       highly_sensitive:
         cohort: output/input_controls_contemporary.csv
 
+
+# ****NOTE: FOR DUMMY DATA STATA FILE 00B NEEDS RUN HERE (NOT USING THE COHORT EXTRACTOR) IN ORDER TO CREATE SENSIBLE STPS****
 
 # 2b. CHECK NUMBERS IN EACH STP PRIOR TO SPLITTING AND APPENDING STEPS BELOW
 
@@ -499,23 +501,22 @@ actions:
 
 
 
- # 7. ADD FURTHER VARIABLES TO CONTROLS FOLLOWING MATCHING
-  add_allVars_contemporary_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_contemporary 
+# 7. ADD FURTHER VARIABLES TO CASES FOLLOWING MATCHING
+  add_allVars_cases:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_covid_communitycases 
     needs: [combine_matched_CASESstps]
     outputs:
       highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_complete_controls_contemporary.csv
+        matched_cases_contemporary_wVars: output/input_complete_covid_communitycases.csv
 
 
-
-# 8. ADD FURTHER VARIABLES TO CASES FOLLOWING MATCHING
-  add_allVars_cases:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_covid_communitycases 
+ # 8. ADD FURTHER VARIABLES TO CONTROLS FOLLOWING MATCHING
+  add_allVars_contemporary_controls:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_contemporary 
     needs: [combine_matched_COMPARATORstps]
     outputs:
       highly_sensitive:
-        matched_cases_contemporary_wVars: output/input_complete_covid_communitycases.csv
+        matched_controls_contemporary_wVars: output/input_complete_controls_contemporary.csv
 
 
 

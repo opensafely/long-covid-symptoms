@@ -13,7 +13,7 @@ from codelists import *
 
 # Import the required data 
 
-CASES = "output/matched_cases_contemporary.csv"
+CASES = "output/input_covid_matched_cases_allSTPs.csv"
 
 # Import Variables 
 
