@@ -64,8 +64,8 @@ study = StudyDefinition(
     # COVID19 VARIABLES
     **covid19_variables, 
 
-    # define the case index date - first of positive test or primary care diagnosis after wave 1
-    # to keep this manageable re: matching, I'd like cases to only be selected from within wave 1
+    # define the case index date - first of positive test or primary care diagnosis after wave 2
+    # to keep this manageable re: matching, I'd like cases to only be selected from within wave 2 (INITIALLY)
     case_index_date=patients.minimum_of("first_positive_test_dateW2", "covid_tpp_probableW2"),
 
     # MATCHING VARIABLES  

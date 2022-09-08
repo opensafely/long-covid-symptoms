@@ -5,7 +5,7 @@ expectations:
 
 actions:
 
-## 1. EXTRACT DATA FOR EXPOSED
+## 1. EXTRACT DATA FOR EXPOSED - **NOTE CURRENTLY THIS IS FOR WAVE 2 ONLY (SO WHOLE ANALYSIS IS WAVE 2 ONLY) UNTIL EVERYTHING WORKS**
   generate_community_cases_cohort:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_covid_communitycases
     outputs:
@@ -519,11 +519,10 @@ actions:
         matched_controls_contemporary_wVars: output/input_complete_controls_contemporary.csv
 
 
-
 # 9. CREATE ANALYSIS FILE (ALSO COMBINES CASES AND CONTROLS)
   create_analysis_file:
-    run: stata-mp:latest analysis/09_longCovidSymp_cr_combined_cases_contemporary_controls.do 
-    needs: [add_allVars_contemporary_controls, add_allVars_cases]
+    run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do
+    needs: [add_allVars_contemporary_controls, add_allVars_cases, combine_matched_CASESstps, combine_matched_COMPARATORstps]
     outputs:
       highly_sensitive:
         # casesContemporary: output/cases_contemporary.dta 
@@ -531,7 +530,7 @@ actions:
         mainAnalysisFile: output/longCovidSymp_analysis_dataset_contemporary.dta 
         unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_analysis_dataset.dta
       moderately_sensitive:
-        log: logs/09_longCovidSymp_cr_combined_cases_controls.log
+        log: logs/09_longCovidSymp_cr_analysis_dataset.log
 
 
 
