@@ -7,7 +7,7 @@ def generate_covid19_variables(index_date_variable):
     covid19_variables = dict(
     # COVID19 STATUS VARIABLES  
     # sgss test results
-    first_tested_for_covid=patients.with_test_result_in_sgss(
+    first_test_covid=patients.with_test_result_in_sgss(
         pathogen="SARS-CoV-2",
         test_result="any",
         on_or_after=f"{index_date_variable}",
@@ -21,7 +21,7 @@ def generate_covid19_variables(index_date_variable):
             "rate": "exponential_increase"
         },
     ),
-    first_positive_test_date=patients.with_test_result_in_sgss(
+    first_pos_test=patients.with_test_result_in_sgss(
         pathogen="SARS-CoV-2",
         test_result="positive",
         on_or_after=f"{index_date_variable}",
@@ -36,7 +36,7 @@ def generate_covid19_variables(index_date_variable):
         },
     ),
     # this one is specifically for selecting cases, which I only want to do between the beginning and end of W2
-    first_positive_test_dateW2=patients.with_test_result_in_sgss(
+    first_pos_testW2=patients.with_test_result_in_sgss(
         pathogen="SARS-CoV-2",
         test_result="positive",
         between=("2020-09-01", "2021-01-31"),
@@ -51,7 +51,7 @@ def generate_covid19_variables(index_date_variable):
         },
     ),
     # covid primary and secondary care cases
-    covid_tpp_probable=patients.with_these_clinical_events(
+    covid_tpp_prob=patients.with_these_clinical_events(
         combine_codelists(
             covid_identification_in_primary_care_case_codes_clinical,
             covid_identification_in_primary_care_case_codes_test,
@@ -68,7 +68,7 @@ def generate_covid19_variables(index_date_variable):
         },
     ),
     # this one is specifically for selecting cases, which I only want to do between the beginning and end of W2
-    covid_tpp_probableW2=patients.with_these_clinical_events(
+    covid_tpp_probW2=patients.with_these_clinical_events(
         combine_codelists(
             covid_identification_in_primary_care_case_codes_clinical,
             covid_identification_in_primary_care_case_codes_test,
@@ -84,7 +84,7 @@ def generate_covid19_variables(index_date_variable):
             "rate": "exponential_increase"
         },
     ),
-    covid_tpp_probableCLINDIAG=patients.with_these_clinical_events(
+    covid_tpp_probCLINDIAG=patients.with_these_clinical_events(
         covid_identification_in_primary_care_case_codes_clinical,
         on_or_after=f"{index_date_variable}",
         return_first_date_in_period=True,
@@ -95,7 +95,7 @@ def generate_covid19_variables(index_date_variable):
             }, 
             "rate": "exponential_increase"},
     ),
-    covid_tpp_probableTEST=patients.with_these_clinical_events(
+    covid_tpp_probTEST=patients.with_these_clinical_events(
         covid_identification_in_primary_care_case_codes_test,
         on_or_after=f"{index_date_variable}",
         return_first_date_in_period=True,
@@ -106,7 +106,7 @@ def generate_covid19_variables(index_date_variable):
             }, 
             "rate": "exponential_increase"},
     ),
-    covid_tpp_probableSEQ=patients.with_these_clinical_events(
+    covid_tpp_probSEQ=patients.with_these_clinical_events(
         covid_identification_in_primary_care_case_codes_seq,
         on_or_after=f"{index_date_variable}",
         return_first_date_in_period=True,
@@ -117,7 +117,7 @@ def generate_covid19_variables(index_date_variable):
             }, 
             "rate": "exponential_increase"},
     ),
-    covid_hospital=patients.admitted_to_hospital(
+    covid_hosp=patients.admitted_to_hospital(
         returning="date_admitted",  # defaults to "binary_flag"
         with_these_diagnoses=covid_codelist,  # optional
         on_or_after=f"{index_date_variable}",
@@ -129,7 +129,7 @@ def generate_covid19_variables(index_date_variable):
             }, 
             "rate": "exponential_increase"},
     ),
-    covid_hospital_primary_diagnosis=patients.admitted_to_hospital(
+    covid_hosp_primDiag=patients.admitted_to_hospital(
         returning="primary_diagnosis",
         with_these_diagnoses=covid_codelist,  # optional
         on_or_after=f"{index_date_variable}",
@@ -142,7 +142,7 @@ def generate_covid19_variables(index_date_variable):
             "category": {"ratios": {"U071": 0.5, "U072": 0.5}},
         },
     ),
-    positive_covid_test_ever=patients.with_test_result_in_sgss(
+    pos_covid_test_ever=patients.with_test_result_in_sgss(
         pathogen="SARS-CoV-2",
         test_result="positive",
         on_or_after=f"{index_date_variable}",
@@ -159,7 +159,7 @@ def generate_covid19_variables(index_date_variable):
     # first known covid date - this one I want to look back to the start of the pandemic (i.e. beginning of wave 1)
     # this is because I need to know earliest covid-19 to make sure people included in study from beginning of second wave
     # onwards haven't already had covid in the first wave
-    first_known_covid19_date=patients.minimum_of("first_positive_test_date", "covid_tpp_probable", "covid_hospital"), 
+    first_known_covid19=patients.minimum_of("first_pos_test", "covid_tpp_prob", "covid_hosp"), 
      
     )
     return covid19_variables

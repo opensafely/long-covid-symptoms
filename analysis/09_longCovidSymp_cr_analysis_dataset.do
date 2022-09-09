@@ -272,9 +272,7 @@ la var preExistComorbCat "Number of comorbidities diagnosed in prev yr"
 
 *(f) Recode all dates from the strings 
 *have to rename some variables here as too long
-rename endocrine_nutr_metab_diseases endocr_nutr_met_dis
-rename muscuoloskeletal_connective_dise muscuolosk_connect_dise
-foreach var of varlist case_index_date - positive_covid_test_ever infection_or_parasite - dereg_date first_known_covid19_date {
+foreach var of varlist case_index_date - pos_covid_test_ever infect_parasite - dereg_date first_known_covid19 {
 	confirm string variable `var'
 	rename `var' `var'_dstr
 	gen `var' = date(`var'_dstr, "YMD")

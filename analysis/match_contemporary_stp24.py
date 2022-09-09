@@ -18,7 +18,7 @@ match(
     date_exclusion_variables={
         "death_date": "before",
         "dereg_date": "before",
-        "first_known_covid19_date": "before",
+        "first_known_covid19": "before",
     },
     #  indicator_variable_name="indicatorVariableName", 
     output_suffix="_stp24",
