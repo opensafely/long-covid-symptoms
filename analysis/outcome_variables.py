@@ -14,7 +14,7 @@ def generate_outcome_variables(index_date_variable):
 # TIME PERIOD TWO (T2): 12 WEEKS TO 6 MONTHS (85 days - 180 days)
 # TIME PERIOD THREE (T3): 6 MONTHS ONWARDS (181 days+)
 
-    infection_or_parasite=patients.with_these_clinical_events(
+    infect_parasite=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
@@ -23,21 +23,21 @@ def generate_outcome_variables(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),  
 
-    t1_infection_or_parasite=patients.with_these_clinical_events(
+    t1_infect_parasite=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_infection_or_parasite=patients.with_these_clinical_events(
+    t2_infect_parasite=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_infection_or_parasite=patients.with_these_clinical_events(
+    t3_infect_parasite=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
@@ -114,7 +114,7 @@ def generate_outcome_variables(index_date_variable):
 
 
 
-    endocrine_nutr_metab_diseases=patients.with_these_clinical_events(
+    endocr_nutr_dis=patients.with_these_clinical_events(
         combine_codelists(
             disorder_endocrine_codes,
             metabolic_disease_codes,
@@ -127,21 +127,21 @@ def generate_outcome_variables(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),
 
-    t1_endocrine_nutr_metab_diseases=patients.with_these_clinical_events(
+    t1_endocr_nutr_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_endocrine_nutr_metab_diseases=patients.with_these_clinical_events(
+    t2_endocr_nutr_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_endocrine_nutr_metab_diseases=patients.with_these_clinical_events(
+    t3_endocr_nutr_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
@@ -150,7 +150,7 @@ def generate_outcome_variables(index_date_variable):
 
     
 
-    mental_behav_disorder=patients.with_these_clinical_events(
+    mental_disorder=patients.with_these_clinical_events(
         mental_disorder_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
@@ -159,21 +159,21 @@ def generate_outcome_variables(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),
 
-    t1_mental_behav_disorder=patients.with_these_clinical_events(
+    t1_mental_disorder=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_mental_behav_disorder=patients.with_these_clinical_events(
+    t2_mental_disorder=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_mental_behav_disorder=patients.with_these_clinical_events(
+    t3_mental_disorder=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
@@ -182,7 +182,7 @@ def generate_outcome_variables(index_date_variable):
 
 
 
-    nervous_system_diseases=patients.with_these_clinical_events(
+    nervous_sys_dis=patients.with_these_clinical_events(
         combine_codelists(
             disorder_neurological_codes,
             cns_codes,
@@ -194,21 +194,21 @@ def generate_outcome_variables(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),
 
-    t1_nervous_system_diseases=patients.with_these_clinical_events(
+    t1_nervous_sys_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_nervous_system_diseases=patients.with_these_clinical_events(
+    t2_nervous_sys_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_nervous_system_diseases=patients.with_these_clinical_events(
+    t3_nervous_sys_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
@@ -217,7 +217,7 @@ def generate_outcome_variables(index_date_variable):
 
 
 
-    ear_mastoid_disease=patients.with_these_clinical_events(
+    ear_mastoid_dis=patients.with_these_clinical_events(
         auditory_disorder_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
@@ -226,21 +226,21 @@ def generate_outcome_variables(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),
 
-    t1_ear_mastoid_disease=patients.with_these_clinical_events(
+    t1_ear_mastoid_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_ear_mastoid_disease=patients.with_these_clinical_events(
+    t2_ear_mastoid_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_ear_mastoid_disease=patients.with_these_clinical_events(
+    t3_ear_mastoid_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
@@ -249,7 +249,7 @@ def generate_outcome_variables(index_date_variable):
 
 
 
-    circulatory_system_disease=patients.with_these_clinical_events(
+    circ_sys_dis=patients.with_these_clinical_events(
         cardiovascular_disease_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
@@ -258,21 +258,21 @@ def generate_outcome_variables(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),
 
-    t1_circulatory_system_disease=patients.with_these_clinical_events(
+    t1_circ_sys_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_circulatory_system_disease=patients.with_these_clinical_events(
+    t2_circ_sys_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_circulatory_system_disease=patients.with_these_clinical_events(
+    t3_circ_sys_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
@@ -281,7 +281,7 @@ def generate_outcome_variables(index_date_variable):
 
 
 
-    respiratory_system_disease=patients.with_these_clinical_events(
+    resp_system_dis=patients.with_these_clinical_events(
         disorder_respiratory_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
@@ -290,21 +290,21 @@ def generate_outcome_variables(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),
 
-    t1_respiratory_system_disease=patients.with_these_clinical_events(
+    t1_resp_system_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_respiratory_system_disease=patients.with_these_clinical_events(
+    t2_resp_system_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_respiratory_system_disease=patients.with_these_clinical_events(
+    t3_resp_system_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
@@ -313,7 +313,7 @@ def generate_outcome_variables(index_date_variable):
 
 
 
-    digestive_system_disease=patients.with_these_clinical_events(
+    digest_syst_dis=patients.with_these_clinical_events(
         disorder_digestive_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
@@ -322,21 +322,21 @@ def generate_outcome_variables(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),
 
-    t1_digestive_system_disease=patients.with_these_clinical_events(
+    t1_digest_syst_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_digestive_system_disease=patients.with_these_clinical_events(
+    t2_digest_syst_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_digestive_system_disease=patients.with_these_clinical_events(
+    t3_digest_syst_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
@@ -377,7 +377,7 @@ def generate_outcome_variables(index_date_variable):
 
 
 
-    muscuoloskeletal_connective_diseases=patients.with_these_clinical_events(
+    musculo_dis=patients.with_these_clinical_events(
         combine_codelists(
             disorder_musculoskeletal_codes,
             disorder_connective_codes,
@@ -389,21 +389,21 @@ def generate_outcome_variables(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),
 
-    t1_muscuoloskeletal_connective_diseases=patients.with_these_clinical_events(
+    t1_musculo_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_muscuoloskeletal_connective_diseases=patients.with_these_clinical_events(
+    t2_musculo_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_muscuoloskeletal_connective_diseases=patients.with_these_clinical_events(
+    t3_musculo_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
@@ -412,7 +412,7 @@ def generate_outcome_variables(index_date_variable):
 
 
 
-    genitourinary_disease=patients.with_these_clinical_events(
+    genitourin_dis=patients.with_these_clinical_events(
         disorder_genitourinary_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
@@ -421,21 +421,21 @@ def generate_outcome_variables(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),
 
-    t1_genitourinary_disease=patients.with_these_clinical_events(
+    t1_genitourin_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_genitourinary_disease=patients.with_these_clinical_events(
+    t2_genitourin_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_genitourinary_disease=patients.with_these_clinical_events(
+    t3_genitourin_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
@@ -444,7 +444,7 @@ def generate_outcome_variables(index_date_variable):
 
 
 
-    pregnancy_complications=patients.with_these_clinical_events(
+    pregnancy_compl=patients.with_these_clinical_events(
         combine_codelists(
             compl_pregnancy_codes,
             disorder_peurperium_codes,
@@ -457,21 +457,21 @@ def generate_outcome_variables(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),
 
-    t1_pregnancy_complications=patients.with_these_clinical_events(
+    t1_pregnancy_compl=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_pregnancy_complications=patients.with_these_clinical_events(
+    t2_pregnancy_compl=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_pregnancy_complications=patients.with_these_clinical_events(
+    t3_pregnancy_compl=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
@@ -480,7 +480,7 @@ def generate_outcome_variables(index_date_variable):
 
 
 
-    perinatal_disease=patients.with_these_clinical_events(
+    perinatal_dis=patients.with_these_clinical_events(
         disorder_fetus_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
@@ -489,21 +489,21 @@ def generate_outcome_variables(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),
 
-    t1_perinatal_disease=patients.with_these_clinical_events(
+    t1_perinatal_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_perinatal_disease=patients.with_these_clinical_events(
+    t2_perinatal_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_perinatal_disease=patients.with_these_clinical_events(
+    t3_perinatal_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
@@ -512,7 +512,7 @@ def generate_outcome_variables(index_date_variable):
 
 
 
-    congenital_disease=patients.with_these_clinical_events(
+    congenital_dis=patients.with_these_clinical_events(
         congential_disease_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
@@ -521,21 +521,21 @@ def generate_outcome_variables(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),
 
-    t1_congenital_disease=patients.with_these_clinical_events(
+    t1_congenital_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_congenital_disease=patients.with_these_clinical_events(
+    t2_congenital_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_congenital_disease=patients.with_these_clinical_events(
+    t3_congenital_dis=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
@@ -544,7 +544,7 @@ def generate_outcome_variables(index_date_variable):
 
 
 
-    injury_poisoning=patients.with_these_clinical_events(
+    injury_poison=patients.with_these_clinical_events(
         combine_codelists(
             poisoning_codes,
             injury_codes,
@@ -556,21 +556,21 @@ def generate_outcome_variables(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),
 
-    t1_injury_poisoning=patients.with_these_clinical_events(
+    t1_injury_poison=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_injury_poisoning=patients.with_these_clinical_events(
+    t2_injury_poison=patients.with_these_clinical_events(
         infectious_disease_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_injury_poisoning=patients.with_these_clinical_events(
+    t3_injury_poison=patients.with_these_clinical_events(
         infectious_disease_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
