@@ -522,7 +522,7 @@ actions:
 # 9. CREATE ANALYSIS FILE (ALSO COMBINES CASES AND CONTROLS)
   create_analysis_file:
     run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do
-    needs: [add_allVars_contemporary_controls, add_allVars_cases, combine_matched_CASESstps, combine_matched_COMPARATORstps]
+    needs: [generate_community_cases_cohort, generate_potential_controls_contemporary, add_allVars_contemporary_controls, add_allVars_cases, combine_matched_CASESstps, combine_matched_COMPARATORstps]
     outputs:
       highly_sensitive:
         # casesContemporary: output/cases_contemporary.dta 

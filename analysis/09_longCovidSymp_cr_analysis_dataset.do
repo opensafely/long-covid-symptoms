@@ -92,7 +92,7 @@ safecount
 
 
 *(3)=========Append case and comparator files together and tidy up, then check number as expected============
-append using `cases_with_vars_and_match_info'
+append using `cases_with_vars_and_match_info', force
 tab case
 *count then drop cases with no matches
 count if match_counts==0
