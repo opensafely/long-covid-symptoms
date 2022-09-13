@@ -271,8 +271,10 @@ la var preExistComorbCat "Number of comorbidities diagnosed in prev yr"
 
 
 *(f) Recode all dates from the strings 
+*order variables to make for loop quicker
+order patient_id case_index_date first_test_covid first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_tpp_probclindiag covid_tpp_probtest covid_tpp_probseq covid_hosp pos_covid_test_ever infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_disorder nervous_sys_dis ear_mastoid_dis circ_sys_dis resp_system_dis digest_syst_dis skin_disease musculo_dis genitourin_dis pregnancy_compl perinatal_dis congenital_dis injury_poison death_date dereg_date first_known_covid19
 *have to rename some variables here as too long
-foreach var of varlist case_index_date - pos_covid_test_ever infect_parasite - dereg_date first_known_covid19 {
+foreach var of varlist case_index_date - first_known_covid19 {
 	capture noisily confirm string variable `var'
 	capture noisily rename `var' `var'_dstr
 	capture noisily gen `var' = date(`var'_dstr, "YMD")
