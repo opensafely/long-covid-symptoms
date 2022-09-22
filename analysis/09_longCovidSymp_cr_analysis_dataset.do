@@ -246,12 +246,17 @@ label values imd imd
 
 
 *(d)===Categorical age===
+*age categorised with children split up
 egen ageCat=cut(age), at (0, 5, 18, 40, 50, 60, 70, 80, 200)
 recode ageCat 0=0 5=1 18=2 40=3 50=4 60=5 70=6 80=7
 label define ageCat 0 "0-4" 1 "5-17" 2 "18-39" 3 "40-49" 4 "50-59" 5 "60-79" 6 "70-79" 7 "80+"
 label values ageCat ageCat
 safetab ageCat, miss
 la var ageCat "Age categorised"
+
+
+
+
 
 
 
@@ -295,6 +300,32 @@ label values sex sex
 safetab sex
 safecount
 drop sexOrig
+
+
+*(h)Flag comparators who have a known covid date that is within the follow up period
+generate compBecameCaseDurFUP1=0 if case==0
+replace compBecameCaseDurFUP1=1 if first_known_covid19>(case_index_date + 28) & first_known_covid19<=(case_index_date + 85) & case==0
+la var compBecameCaseDurFUP1 "comparator who had COVID during FUP period 1"
+generate compBecameCaseDurFUP2=0 if case==0
+replace compBecameCaseDurFUP2=1 if first_known_covid19>(case_index_date + 85) & first_known_covid19<=(case_index_date + 180) & case==0
+la var compBecameCaseDurFUP2 "comparator who had COVID during FUP period 2"
+generate compBecameCaseDurFUP3=0 if case==0
+replace  compBecameCaseDurFUP3=1 if first_known_covid19>(case_index_date + 180) & case==0
+la var compBecameCaseDurFUP3 "comparator who had COVID during FUP period 3"
+
+
+
+*(i)Flag cases who are hospitalised with COVID after the start of follow-up, and which period this was in
+generate caseHospForCOVIDDurFUP1=0 if case==1
+replace caseHospForCOVIDDurFUP1=1 if covid_hosp>(case_index_date + 28) & covid_hosp<=(case_index_date + 85) & case==1
+la var caseHospForCOVIDDurFUP1 "case who was hospitalised for COVID during FUP period 1"
+generate caseHospForCOVIDDurFUP2=0 if case==1
+replace caseHospForCOVIDDurFUP2=1 if covid_hosp>(case_index_date + 85) & covid_hosp<=(case_index_date + 180) & case==1
+la var caseHospForCOVIDDurFUP2 "case who was hospitalised for COVID during FUP period 1"
+generate caseHospForCOVIDDurFUP3=0 if case==1
+replace caseHospForCOVIDDurFUP3=1 if covid_hosp>(case_index_date + 180)  & case==1
+la var caseHospForCOVIDDurFUP3 "comparator who had COVID during FUP period 3"
+
 
 *save final file
 save ./output/longCovidSymp_analysis_dataset_contemporary.dta, replace

@@ -50,6 +50,8 @@ def generate_covid19_variables(index_date_variable):
             "rate": "exponential_increase"
         },
     ),
+
+
     # covid primary and secondary care cases
     covid_tpp_prob=patients.with_these_clinical_events(
         combine_codelists(

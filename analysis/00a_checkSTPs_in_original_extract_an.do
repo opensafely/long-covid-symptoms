@@ -1,9 +1,9 @@
 /*==============================================================================
-DO FILE NAME:			00_checkSTPs_in_original_extract_an.do
+DO FILE NAME:			00a_checkSTPs_in_original_extract_an.do
 PROJECT:				Long covid symptoms
 DATE: 					2nd Sep 2022
 AUTHOR:					Kevin Wing									
-DESCRIPTION OF FILE:	Checks numbers in each stp in original extracted files
+DESCRIPTION OF FILE:	Checks numbers in each stp in original extracted files, also checks that case_index_date is setup appropriately
 DATASETS USED:			.csv files from study definitioons
 DATASETS CREATED: 		none
 OTHER OUTPUT: 			logfiles, printed to folder analysis/$logdir
@@ -23,12 +23,13 @@ pwd
 
 * Open a log file
 cap log close
-log using ./logs/00_checkSTPs_in_original_extract_an.log, replace t
+log using ./logs/00a_checkSTPs_in_original_extract_an.log, replace t
 
 
 *(1)=========Cases============
-import delimited ./output/input_covid_communitycases.csv, clear
+import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, clear
 safetab stp
+
 
 
 *(2)=========Controls============

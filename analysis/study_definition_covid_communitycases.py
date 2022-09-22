@@ -66,7 +66,13 @@ study = StudyDefinition(
 
     # define the case index date - first of positive test or primary care diagnosis after wave 2
     # to keep this manageable re: matching, I'd like cases to only be selected from within wave 2 (INITIALLY)
-    case_index_date=patients.minimum_of("first_pos_testW2", "covid_tpp_probW2"),
+    ## Note that TEMP_CASE_INDEX_DATE is defined in the covid19_variables files and is the earliest of first positive test or first probable diagnosis in W2
+    ## But I want THE ACTUAL CASE INDEX DATE to be 28 days after the temp case index date that is defined here. Only way that I can see how to do this 
+    ## is to make the change in STATA after this study_definition_covid_communitycases.py action has been run, then save the output. Then AFTER THIS HELPER STATA
+    ## FILE HAS BEEN RUN, the case index date will be 28 days later and it is the case_index_date (=temp_case_index_date + 28 days) that will be passed to the other
+    ## actions in the pipeline. One caveat is that in this file I need to make sure the time-dependent checks related to the temp_case_index_date variable
+    ## check the data for exclusions up to 28 days after the temp_case_index_date (which is why the commands are + 28 days below)
+    temp_case_index_date=patients.minimum_of("first_pos_testW2", "covid_tpp_probW2"),
 
     # MATCHING VARIABLES  
     **matching_variables, 
@@ -126,23 +132,22 @@ study = StudyDefinition(
     ## It is most efficient to extract these separately for exposed and controls, as they are not needed for the controls yet,
     ## and we don't want to spend time matching ineligble exposed people  
 
-    ### has 3 months of of baseline time
-    ## Note that CASE_INDEX_DATE is defined in the covid19_variables files and is the earliest of first positive test or first probable diagnosis in W2
+    ### See note above related to "temp_case_index_date"
     has_follow_up=patients.registered_with_one_practice_between(
-        start_date="case_index_date - 3 months",
-        end_date="case_index_date",
+        start_date="temp_case_index_date - 3 months",
+        end_date="temp_case_index_date + 28 days",
         return_expectations={"incidence": 0.95},
         ),
 
-    ### died before case index date
+    ### died before case index date (+ 28 days as this is start of follow-up)
     has_died=patients.died_from_any_cause(
-      on_or_before="case_index_date",
+      on_or_before="temp_case_index_date + 28 days",
       returning="binary_flag",
     ),
 
     ### died after case index date (extracted as used as a matching variable, so needs to exist)
     death_date=patients.died_from_any_cause(
-        on_or_after="case_index_date",
+        on_or_after="temp_case_index_date + 28 days",
         returning="date_of_death",
         date_format="YYYY-MM-DD", 
         return_expectations={
@@ -154,7 +159,7 @@ study = StudyDefinition(
 
     ### deregistered after case index date (extracted as used as a matching variable, so needs to exist)
     dereg_date=patients.date_deregistered_from_all_supported_practices(
-        on_or_after="case_index_date", date_format="YYYY-MM",
+        on_or_after="temp_case_index_date + 28 days", date_format="YYYY-MM",
     ),
 
 ) 

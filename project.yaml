@@ -12,6 +12,15 @@ actions:
       highly_sensitive:
         cohort: output/input_covid_communitycases.csv
 
+## 1b CORRECT INDEX DATE (ADD 28 DAYS)
+  set_case_index_date:
+    run: stata-mp:latest analysis/00_set_case_index_date_cr.do
+    needs: [generate_community_cases_cohort]
+    outputs:
+      highly_sensitive:
+        cohort: output/input_covid_communitycases_correctedCaseIndex.csv
+      moderately_sensitive:
+        log: logs/00_set_case_index_date_cr.log
 
 # 2. EXTRACT DATA FOR POTENTIAL COMPARATORS
 # new extract potential comparators code... I guess I'll have to this twice for each control group
@@ -31,18 +40,18 @@ actions:
 
  # *** contemporary potential comparators
   checkSTPs_in_original_extract:
-    run: stata-mp:latest analysis/00_checkSTPs_in_original_extract_an.do
-    needs: [generate_community_cases_cohort, generate_potential_controls_contemporary]
+    run: stata-mp:latest analysis/00a_checkSTPs_in_original_extract_an.do
+    needs: [set_case_index_date, generate_potential_controls_contemporary]
     outputs:
       moderately_sensitive:
-        log: logs/00_checkSTPs_in_original_extract_an.log
+        log: logs/00a_checkSTPs_in_original_extract_an.log
 
 
 
 # 3. SPLIT CASES AND COMPARATORS UP BY STP
   01_longCovidSymp_split_by_stp:
     run: stata-mp:latest analysis/01_longCovidSymp_cr_split_by_stp.do
-    needs: [generate_community_cases_cohort, generate_potential_controls_contemporary]
+    needs: [set_case_index_date, generate_potential_controls_contemporary]
     outputs:
       highly_sensitive:
         case_stp5: output/input_controls_contemporary_stp5.csv
@@ -531,6 +540,15 @@ actions:
         unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_analysis_dataset.dta
       moderately_sensitive:
         log: logs/09_longCovidSymp_cr_analysis_dataset.log
+
+
+# 10. CHECK DATA FOR COMBINED CASE AND CONTROL FILE
+  data_checks:
+    run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do
+    needs: [create_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/10_longCovidSymp_data_checks.log
 
 
 
