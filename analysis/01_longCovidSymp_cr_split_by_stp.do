@@ -26,8 +26,8 @@ cap log close
 log using ./logs/01_longCovidSymp_split_by_stp.log, replace t
 
 
-*(1)=========Split cases into separate stp files============
-import delimited ./output/input_covid_communitycases.csv, clear
+*(1)=========Split cases into separate stp files== ==========
+import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, clear
 *tab just so I can see list of stps
 safetab stp
 
