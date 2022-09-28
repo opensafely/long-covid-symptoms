@@ -54,7 +54,7 @@ end
 
 
 *(1)=========Create separate stps for cases============
-import delimited ./output/input_covid_communitycases.csv, clear
+import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, clear
 *tabulate before changes
 tab stp
 *call program
@@ -62,7 +62,7 @@ replaceSTPs
 *tabulate after changes
 tab stp, miss
 *export output
-export delimited using "./output/input_covid_communitycases.csv", replace
+export delimited using "./output/input_covid_communitycases_correctedCaseIndex.csv", replace
 
 
 

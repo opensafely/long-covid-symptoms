@@ -72,7 +72,7 @@ study = StudyDefinition(
     ## FILE HAS BEEN RUN, the case index date will be 28 days later and it is the case_index_date (=temp_case_index_date + 28 days) that will be passed to the other
     ## actions in the pipeline. One caveat is that in this file I need to make sure the time-dependent checks related to the temp_case_index_date variable
     ## check the data for exclusions up to 28 days after the temp_case_index_date (which is why the commands are + 28 days below)
-    temp_case_index_date=patients.minimum_of("first_pos_testW2", "covid_tpp_probW2"),
+    case_index_date=patients.minimum_of("first_pos_testW2", "covid_tpp_probW2"),
 
     # MATCHING VARIABLES  
     **matching_variables, 
@@ -134,20 +134,33 @@ study = StudyDefinition(
 
     ### See note above related to "temp_case_index_date"
     has_follow_up=patients.registered_with_one_practice_between(
-        start_date="temp_case_index_date - 3 months",
-        end_date="temp_case_index_date + 28 days",
+        start_date="case_index_date - 3 months",
+        end_date="case_index_date",
         return_expectations={"incidence": 0.95},
         ),
 
-    ### died before case index date (+ 28 days as this is start of follow-up)
+    ### See note above related to "temp_case_index_date"
+    has_follow_up_28dys=patients.registered_with_one_practice_between(
+        start_date="case_index_date - 3 months",
+        end_date="case_index_date + 28 days",
+        return_expectations={"incidence": 0.95},
+        ),
+
+    ### died before (temp) case_index_date
     has_died=patients.died_from_any_cause(
-      on_or_before="temp_case_index_date + 28 days",
+      on_or_before="case_index_date",
       returning="binary_flag",
     ),
 
-    ### died after case index date (extracted as used as a matching variable, so needs to exist)
+    ### died between (temp) case_index_date and real case index date
+    has_died_28dys=patients.died_from_any_cause(
+      on_or_before="case_index_date + 28 days",
+      returning="binary_flag",
+    ),
+
+    ### died after temp case index date (extracted as used as a matching variable, so needs to exist)
     death_date=patients.died_from_any_cause(
-        on_or_after="temp_case_index_date + 28 days",
+        on_or_after="case_index_date",
         returning="date_of_death",
         date_format="YYYY-MM-DD", 
         return_expectations={
@@ -159,9 +172,16 @@ study = StudyDefinition(
 
     ### deregistered after case index date (extracted as used as a matching variable, so needs to exist)
     dereg_date=patients.date_deregistered_from_all_supported_practices(
-        on_or_after="temp_case_index_date + 28 days", date_format="YYYY-MM",
+        on_or_after="case_index_date", date_format="YYYY-MM",
     ),
 
+
+   ###THIS FILE SETS UP AN INDEX DATE THAT IS THE EARLIEST DATE OF (COMMUNITY COVID) IN WAVE 2
+   ###THE FOLLOWING STATA FILE THEN TAKES THIS DATE AND ADDS 28 DAYS TO IT
+   ###THE STATA FILE ALSO UPDATES THE has_follow_up, covid_hosp AND has_died VARIABLES SO THEY REFLECT THE 28 DAY PERIOD
+   ###THE STATA FILE ALSO UPDATES THE death_date AND dereg_date VARIABLE SO THEY REFLECT THE 28 DAY PERIOD
+   ###THE STATA FILE ALSO UPDATES THE first_known_covid DATE (FOR CASES) SO THAT IT IS SET TO "" (AND NOT CHECKED BY MATCHING PROGRAM AS OTHERWISE ALL RECORDS DROPPED)
+   ###NOTE I CAN'T JUST CHANGE THE CASE_INDEX_DATE TO BE 28 DAYS LATER, AS IT DOESN'T NEED TO BE 28 DAYS LATER FOR NON-CASES (IT NEEDS TO BE THE DATE OF THE MATCHED CASE)
 ) 
 
 
