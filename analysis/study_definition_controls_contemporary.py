@@ -53,7 +53,7 @@ study = StudyDefinition(
         (age <=110) 
         AND (sex = "M" OR sex = "F") 
         AND imd > 0 
-        AND NOT unexposed_has_died
+        AND NOT has_died
         AND NOT stp = ""
         """,
     ),
@@ -121,7 +121,7 @@ study = StudyDefinition(
 
     ## For the controls, the only criteria that can be applied before the assignment of the case index date is age, sex,  death and dereg criteria 
 
-    unexposed_has_died=patients.died_from_any_cause(
+    has_died=patients.died_from_any_cause(
      on_or_before="index_date",
          returning="binary_flag",
          date_format="YYYY-MM-DD", 
