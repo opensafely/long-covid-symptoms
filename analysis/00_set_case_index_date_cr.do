@@ -73,6 +73,7 @@ drop has_follow_up_28dys
 
 *drop case if covid_hosp is in the 28 day period
 *destring the covid_hosp variable
+codebook covid_hosp
 confirm string variable covid_hosp
 rename covid_hosp covid_hosp_dstr
 gen covid_hosp_date = date(covid_hosp_dstr, "YMD")
