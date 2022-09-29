@@ -77,20 +77,10 @@ replace case_index_date="" if case_index_date=="."
 
 
 
-*(3)=========Updates the has_follow_up, covid_hosp AND has_died variables so that they include having checked the 28 day period============
+*(3)=========Updates the has_follow_up AND has_died variables so that they include having checked the 28 day period============
 *drop case if has_follow_up is zero for the 28 day period
 drop if has_follow_up_28dys==0 
 drop has_follow_up_28dys
-
-*drop case if covid_hosp is in the 28 day period
-confirm string variable covid_hosp
-rename covid_hosp covid_hosp_dstr
-gen covid_hosp_date = date(covid_hosp_dstr, "YMD")
-format covid_hosp_date %td 
-
-*drop if covid hosp date is within 28 day period prior to new index date (this period won't have been checked yet)
-drop if covid_hosp_date>case_index_date_nonString-28 & covid_hosp_date<case_index_date_nonString
-drop covid_hosp_date case_index_date_nonString
 
 *drop if has_died is 1 in the 28 day period
 drop if has_died_28dys==1
