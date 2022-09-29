@@ -5,6 +5,7 @@ DATE: 					22nd Sep 2022
 AUTHOR:					Kevin Wing									
 DESCRIPTION OF FILE:	Corrects case index date (adds 28 days, which wasn't possible to do directly in the study definition), specifcally does the following:
 
+0. Codebook for cases and for controls
 1. Updates the first_known_covid date (cases only in this file) so that it is set to "" and is not checked by matching program as otherwise all cases will be dropped
 2. Takes the case index date and adds 28 days to it
 3. Upates the has_follow_up, covid_hosp AND has_died variables so that they include having checked the 28 day period
@@ -33,10 +34,20 @@ cap log close
 log using ./logs/00_set_case_index_date_cr.log, replace t
 
 
-*(1)=========Import cases============
+
+*(0)=========Check variables in cases and controls============
+*cases
 import delimited ./output/input_covid_communitycases.csv, clear
+codebook
+
+*controls
+import delimited ./output/input_controls_contemporary.csv, clear
+codebook
+
 
 *(1)=============Create a variable that is the same as first_known_covid but has all the dates on or before the temp_index_date dropped (called first_known_covidORIGINAL)============================== 
+*import cases
+import delimited ./output/input_covid_communitycases.csv, clear
 generate first_known_covid19ORIGINAL=first_known_covid19
 la var first_known_covid19 "Original first known covid varialble (for checking code)"
 *for cases, remove all first known covid dates to prevent all the cases being dropped when searching for first known covid prior to the new (28 days later) index date
@@ -72,8 +83,6 @@ drop if has_follow_up_28dys==0
 drop has_follow_up_28dys
 
 *drop case if covid_hosp is in the 28 day period
-*check all variables here
-codebook
 confirm string variable covid_hosp
 rename covid_hosp covid_hosp_dstr
 gen covid_hosp_date = date(covid_hosp_dstr, "YMD")
