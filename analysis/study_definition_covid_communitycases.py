@@ -54,7 +54,7 @@ study = StudyDefinition(
         AND (sex = "M" OR sex = "F") 
         AND imd > 0 
         AND has_follow_up
-        AND NOT covid_hosp
+        AND NOT had_covid_hosp
         AND NOT has_died 
         AND NOT stp = ""
         """,
@@ -157,6 +157,14 @@ study = StudyDefinition(
       on_or_before="case_index_date + 28 days",
       returning="binary_flag",
     ),
+
+    ### was hospitalised before case index date - this one can be 28 days as only applies to cases
+    had_covid_hosp=patients.admitted_to_hospital(
+        returning="binary_flag",  # defaults to "binary_flag"
+        with_these_diagnoses=covid_codelist,  # optional
+        on_or_before="case_index_date + 28 days",
+    ),
+
 
     ### died after temp case index date (extracted as used as a matching variable, so needs to exist)
     death_date=patients.died_from_any_cause(
