@@ -28,7 +28,7 @@ log using ./logs/09_longCovidSymp_cr_analysis_dataset.log, replace t
 
 
 
-*(0)=========Get total cases and potential matches figure for flowchart============
+*(0)=========Get total cases and potential matches figure for flowchart - needs to be the cases after having ============
 *case
 capture noisily import delimited ./output/input_covid_communitycases.csv, clear
 di "***********************FLOWCHART 1. NUMBER OF POTENTIAL CASES AND CONTROLS (WAVE 2)********************:"
@@ -65,7 +65,7 @@ save `comp_match_info', replace
 
 *(2)=========Add case and comparator information to the separate draft analysis files============
 *import (matched) cases with variables and merge with match variables
-capture noisily import delimited ./output/input_complete_covid_communitycases.csv, clear
+capture noisily import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, clear
 drop stp /*this is needed to make sure dummy data still ends up with sensible STP data!*/
 merge 1:1 patient_id using `cases_match_info'
 keep if _merge==3
@@ -88,7 +88,7 @@ di "**Matched comparators:**"
 safecount
 
 
-
+*NOTE: Flowchart re: who was dropped here due date exclusions can be obtained from the STP matching logs (if needed)
 
 
 *(3)=========Append case and comparator files together and tidy up, then check number as expected============
@@ -109,7 +109,7 @@ tab case
 *(4)=========Create a file of unmatched cases for descriptive analysis============
 *import list of all cases (pre-matching)
 preserve
-	capture noisily import delimited ./output/input_covid_communitycases.csv, clear
+	capture noisily import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, clear
 	tempfile allCases
 	*for dummy data, should do nothing in the real data
 	duplicates drop patient_id, force
@@ -245,15 +245,22 @@ label values imd imd
 
 
 
-*(d)===Categorical age===
+*(d)===Categorical age - 2 versions===
 *age categorised with children split up
-egen ageCat=cut(age), at (0, 5, 18, 40, 50, 60, 70, 80, 200)
-recode ageCat 0=0 5=1 18=2 40=3 50=4 60=5 70=6 80=7
-label define ageCat 0 "0-4" 1 "5-17" 2 "18-39" 3 "40-49" 4 "50-59" 5 "60-79" 6 "70-79" 7 "80+"
+egen ageCat=cut(age), at (0, 3, 6, 12, 18, 40, 50, 60, 70, 80, 200)
+recode ageCat 0=0 3=1 6=2 12=3 18=4 40=5 50=6 60=7 70=8 80=9
+label define ageCat 0 "0-2" 1 "3-5" 2 "6-11" 3 "12-17" 4 "18-39" 5 "40-49" 6 "50-59" 7 "60-69" 8 "70-79" 9 "80+"
 label values ageCat ageCat
 safetab ageCat, miss
 la var ageCat "Age categorised"
 
+*age categorised with children combined
+egen ageCatChildCombined=cut(age), at (0, 18, 40, 50, 60, 70, 80, 200)
+recode ageCatChildCombined 0=0 18=1 40=2 50=3 60=4 70=5 80=6
+label define ageCatChildCombined 0 "<18" 1 "18-39" 2 "40-49" 3 "50-59" 4 "60-69" 5 "70-79" 6 "80+"
+label values ageCatChildCombined ageCatChildCombined
+safetab ageCatChildCombined, miss
+la var ageCatChildCombined "Age categorised (children combined)"
 
 
 
@@ -277,9 +284,9 @@ la var preExistComorbCat "Number of comorbidities diagnosed in prev yr"
 
 *(f) Recode all dates from the strings 
 *order variables to make for loop quicker
-order patient_id case_index_date first_test_covid first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_tpp_probclindiag covid_tpp_probtest covid_tpp_probseq covid_hosp pos_covid_test_ever infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_disorder nervous_sys_dis ear_mastoid_dis circ_sys_dis resp_system_dis digest_syst_dis skin_disease musculo_dis genitourin_dis pregnancy_compl perinatal_dis congenital_dis injury_poison death_date dereg_date first_known_covid19
+order patient_id case_index_date case_index_dateorig first_test_covid first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_tpp_probclindiag covid_tpp_probtest covid_tpp_probseq covid_hosp pos_covid_test_ever infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_disorder nervous_sys_dis ear_mastoid_dis circ_sys_dis resp_system_dis digest_syst_dis skin_disease musculo_dis genitourin_dis pregnancy_compl perinatal_dis congenital_dis injury_poison death_date dereg_date first_known_covid19 first_known_covid19original
 *have to rename some variables here as too long
-foreach var of varlist case_index_date - first_known_covid19 {
+foreach var of varlist case_index_date - first_known_covid19original {
 	capture noisily confirm string variable `var'
 	capture noisily rename `var' `var'_dstr
 	capture noisily gen `var' = date(`var'_dstr, "YMD")
