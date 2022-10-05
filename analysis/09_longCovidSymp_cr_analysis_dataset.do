@@ -30,7 +30,7 @@ log using ./logs/09_longCovidSymp_cr_analysis_dataset.log, replace t
 
 *(0)=========Get total cases and potential matches figure for flowchart - needs to be the cases after having ============
 *case
-capture noisily import delimited ./output/input_covid_communitycases.csv, clear
+capture noisily import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, clear
 di "***********************FLOWCHART 1. NUMBER OF POTENTIAL CASES AND CONTROLS (WAVE 2)********************:"
 di "**Potential cases:**"
 safecount

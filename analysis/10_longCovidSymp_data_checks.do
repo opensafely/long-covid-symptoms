@@ -27,8 +27,18 @@ log using ./logs/10_longCovidSymp_data_checks.log, replace t
 
 
 
+
+
+
+
+
 *(0)=========Load file and check total numbers and cases and controls============
 use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
+
+*draft initial checks for stuff that looks odd in lof of 09
+codebook
+
+/*
 *total number in cohort
 safecount
 *total cases and controls
@@ -83,7 +93,7 @@ tab compBecameCaseDurFUP3
 
 
 
-*(2)======================CHECK INCLUSION AND EXCLUSION CRITERIA=====================================*/ 
+/*(2)======================CHECK INCLUSION AND EXCLUSION CRITERIA=====================================*/ 
 
 * INCLUSION 1: >=18 and <=110 at 1 March 2020 
 capture noisly assert age < .
@@ -103,7 +113,7 @@ capture noisily assert stp!=.
 
 
 
-*(3)===============CHECK EXPECTED VALUES============================================================*/ 
+/*(3)===============CHECK EXPECTED VALUES============================================================*/ 
 
 * Age
 datacheck age<., nol
@@ -141,7 +151,7 @@ foreach var of varlist t1_infect_parasite - t3_injury_poison{
 
 
 
-*(4) TESTING LOGICAL RELATIONSHIPS======================================================*/ 
+/*(4) TESTING LOGICAL RELATIONSHIPS======================================================*/ 
 
 *HH variables
 *safetab hhRiskCat hh_total_cat
@@ -267,6 +277,7 @@ safecount if covidHospCase==1 & covidDeathCase==1
 safecount if covidDeathCase==1 & nonCOVIDDeathCase==1
 safecount if covidHospCase==1 & nonCOVIDDeathCase==1
 
+*/
 * Close log file 
 log close
 
