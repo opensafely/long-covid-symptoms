@@ -33,11 +33,33 @@ capture noisily import delimited ./output/matched_cases_stp29.csv, clear
 codebook
 
 
+*convert string dates to dates
+order first_test_covid first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_tpp_probclindiag covid_tpp_probtest covid_tpp_probseq covid_hosp covid_hosp_primdiag pos_covid_test_ever first_known_covid19 death_date dereg_date first_known_covid19original case_index_dateorig case_index_date
+foreach var of varlist first_test_covid - case_index_date {
+	capture noisily confirm string variable `var'
+	capture noisily rename `var' `var'_dstr
+	capture noisily gen `var' = date(`var'_dstr, "YMD")
+	capture noisily drop `var'_dstr
+	capture noisily format `var' %td 
+}
+
+
+*check that case indexdate is 28 days after original case index dates
+capture noisily assert case_index_date==case_index_dateorig+28
+
+*check that there were no hospitalisations, deregistrations or deaths prior to the case index dates
+capture noisily assert covid_hosp>=case_index_date
+capture noisily assert death_date>=case_index_date
+capture noisily assert dereg_date>=case_index_date
+
+*repeat for original case date in case the above didn't work
+capture noisily assert covid_hosp>=case_index_dateorig
+capture noisily assert death_date>=case_index_dateorig
+capture noisily assert dereg_date>=case_index_dateorig
+
 *matched comparators - just doing cases for now so I can check that everything is as expected re: dates
 *capture noisily import delimited ./output/matched_matches_stp29.csv, clear
 *codebook
-
-
 
 
 log close
