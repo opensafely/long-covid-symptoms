@@ -30,7 +30,7 @@ log using ./logs/07a_checkVars_cases_after_adding_furtherVars.log, replace t
 *using stp 29 as this is one of the smaller stps but not too small (has 6,317 cases)
 *cases
 capture noisily import delimited ./output/input_complete_covid_communitycases.csv, clear
-
+codebook
 
 
 *convert string dates to dates
