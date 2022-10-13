@@ -556,6 +556,17 @@ actions:
         log: logs/10_longCovidSymp_data_checks.log
 
 
+# 11. DESCRIPTIVE TABLE
+  table_1_contemporary:
+    run: stata-mp:latest analysis/11_longCovidSymp_table1contemporary.do
+    needs: [create_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/11_longCovidSymp_table1contemporary.log
+        table1contemporary: output/longCovidSymp_table1contemporary.txt
+
+
+
 
 
 
