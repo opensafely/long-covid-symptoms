@@ -144,7 +144,7 @@ def generate_outcome_variables(index_date_variable):
             disorder_endocrine_codes,
             metabolic_disease_codes,
             nutritional_disorder_codes,
-        ),,
+        ),
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
@@ -155,7 +155,7 @@ def generate_outcome_variables(index_date_variable):
             disorder_endocrine_codes,
             metabolic_disease_codes,
             nutritional_disorder_codes,
-        ),,
+        ),
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
@@ -166,7 +166,7 @@ def generate_outcome_variables(index_date_variable):
             disorder_endocrine_codes,
             metabolic_disease_codes,
             nutritional_disorder_codes,
-        ),,
+        ),
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
@@ -423,7 +423,7 @@ def generate_outcome_variables(index_date_variable):
     ),
 
     t1_musculo_dis=patients.with_these_clinical_events(
-        ombine_codelists(
+        combine_codelists(
             disorder_musculoskeletal_codes,
             disorder_connective_codes,
         ),
@@ -433,7 +433,7 @@ def generate_outcome_variables(index_date_variable):
     ),  
 
     t2_musculo_dis=patients.with_these_clinical_events(
-        ombine_codelists(
+        combine_codelists(
             disorder_musculoskeletal_codes,
             disorder_connective_codes,
         ),
@@ -443,7 +443,7 @@ def generate_outcome_variables(index_date_variable):
     ),  
 
     t3_musculo_dis=patients.with_these_clinical_events(
-        ombine_codelists(
+        combine_codelists(
             disorder_musculoskeletal_codes,
             disorder_connective_codes,
         ),
