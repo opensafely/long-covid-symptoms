@@ -520,8 +520,14 @@ actions:
         matched_cases_contemporary_wVars: output/input_complete_covid_communitycases.csv
 
 
-
-# 7b. CHECK KEY VARIABLES IN CASES (t1_circ)
+# 7a. CHECK VARIABLES IN CASES AFTER ADDING FURTHER VARIABLES
+  # *** contemporary potential comparators for each stp
+  checkVars_inCasesAfterAddingFurtherVariables:
+    run: stata-mp:latest analysis/07a_checkVars_cases_after_adding_furtherVars.do
+    needs: [combine_matched_CASESstps]
+    outputs:
+      moderately_sensitive:
+        log: logs/07a_checkVars_cases_after_adding_furtherVars.log
 
 
  # 8. ADD FURTHER VARIABLES TO CONTROLS FOLLOWING MATCHING
