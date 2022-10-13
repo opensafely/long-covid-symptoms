@@ -132,6 +132,12 @@ restore
 
 *(5)=========VARIABLE CLEANING============
 
+*label case variables
+label define case 0 "Case" ///
+				  1 "Comparator (contemporary)"
+label values case case
+safetab case 
+
 *(a)===Ethnicity (5 category)====
 * Ethnicity (5 category)
 replace ethnicity = . if ethnicity==.
