@@ -524,7 +524,7 @@ actions:
   # *** contemporary potential comparators for each stp
   checkVars_inCasesAfterAddingFurtherVariables:
     run: stata-mp:latest analysis/07a_checkVars_cases_after_adding_furtherVars.do
-    needs: [combine_matched_CASESstps]
+    needs: [add_allVars_cases]
     outputs:
       moderately_sensitive:
         log: logs/07a_checkVars_cases_after_adding_furtherVars.log
