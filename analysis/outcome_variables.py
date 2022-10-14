@@ -642,5 +642,40 @@ def generate_outcome_variables(index_date_variable):
 
 
 
+    hypertension_bugTest=patients.with_these_clinical_events(
+        hypertension_from_hhclassifAndAnna,
+        on_or_after=f"{index_date_variable}",
+        find_first_match_in_period=True,
+        returning="date", 
+        date_format="YYYY-MM-DD",
+        return_expectations={"date": {"earliest": "index_date"}},
+    ),
+
+    t1_hypertension_bugTest=patients.with_these_clinical_events(
+        hypertension_from_hhclassifAndAnna,
+        between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t2_hypertension_bugTest=patients.with_these_clinical_events(
+        hypertension_from_hhclassifAndAnna,
+        between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t3_hypertension_bugTest=patients.with_these_clinical_events(
+        hypertension_from_hhclassifAndAnna,
+        on_or_after=f"{index_date_variable} + 181 days",
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+
+
+
+
     )
     return outcome_variables

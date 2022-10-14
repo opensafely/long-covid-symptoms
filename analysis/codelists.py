@@ -199,6 +199,14 @@ breathlessness_symptoms_codes = codelist_from_csv(
     column="code",
 )
 
+hypertension_from_hhclassifAndAnna = codelist_from_csv(
+    "codelists/opensafely-hypertension.csv",
+    system="ctv3",
+    column="CTV3ID",
+)
+
+
+
 
 
 

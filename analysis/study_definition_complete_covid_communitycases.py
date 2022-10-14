@@ -19,11 +19,11 @@ CASES = "output/input_covid_matched_cases_allSTPs.csv"
 
 # Import Variables 
 
-## covid19 variables 
+## covid19 variables - don't think I need this as already added in setup stage
 from covid19_variables import generate_covid19_variables
 covid19_variables = generate_covid19_variables(index_date_variable="case_index_date")
 
-## matching variables 
+## matching variables - as above
 from matching_variables import generate_matching_variables
 matching_variables = generate_matching_variables(index_date_variable="case_index_date")
 
