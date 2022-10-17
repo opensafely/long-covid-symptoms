@@ -63,9 +63,9 @@ save `comp_match_info', replace
 
 
 
-*(2)=========Add case and comparator information to the separate draft analysis files============
+*(2)=========Add case and comparator information to the separate draft (complete) analysis files============
 *import (matched) cases with variables and merge with match variables
-capture noisily import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, clear
+capture noisily import delimited ./output/input_complete_covid_communitycases.csv, clear
 drop stp /*this is needed to make sure dummy data still ends up with sensible STP data!*/
 merge 1:1 patient_id using `cases_match_info'
 keep if _merge==3
