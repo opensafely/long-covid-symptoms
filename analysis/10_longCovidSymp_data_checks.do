@@ -82,6 +82,10 @@ capture noisily assert first_known_covid19>=case_index_date
 *(a)case_index_date should be minimum of first positive test or covid diangosis in primary care
 *THIS CODE WILL NEED UPDATED IF/WHEN THE 4 WEEK WINDOW IS ADDED TO THE CASE INDEX DATE
 capture noisily assert case_index_date==min(first_pos_testw2, covid_tpp_probw2) + 28 if case==1
+*list these variables for the individuals where this didn't hold
+list case_index_date first_pos_testw2 covid_tpp_probw2 if case_index_date!=min(first_pos_testw2, covid_tpp_probw2) + 28 & case==1
+
+
 *(b)check how many cases were hospitalised after the start of follow-up, and when this happened
 tab caseHospForCOVIDDurFUP1
 tab caseHospForCOVIDDurFUP2
@@ -89,8 +93,8 @@ tab caseHospForCOVIDDurFUP3
 
 
 *comparators
-*(a)first_known_covid19 must be after case_index_date
-capture noisily assert first_known_covid19>case_index_date if case==0
+*(a)first_known_covid19 must not be before case_index_date
+capture noisily assert first_known_covid19>=case_index_date if case==0
 *(b)check how many became cases after their start of follow-up and at which section of follow-up
 tab compBecameCaseDurFUP1
 tab compBecameCaseDurFUP2
@@ -181,30 +185,31 @@ safetab sex numPreExistingComorbs, row
 *Ethnicity and pre-existing comorbidities
 safetab ethnicity numPreExistingComorbs, row
 
-                            
+/*                          
 * Relationships of outcomes with age
-foreach var of varlist t1_infect_parasite - t3_hypertension_bugtest {
+foreach var of varlist t1_infect_parasite - t3_injury_poison {
  	safetab ageCat `var', row 
 }
 
 
 *Relationship of outcomes with sex
-foreach var of varlist t1_infect_parasite - t3_hypertension_bugtest {	
+foreach var of varlist t1_infect_parasite - t3_injury_poison {	
  	safetab sex `var', row 
 }
 
 
 *Relationship of outcomes with ethnicity
-foreach var of varlist t1_infect_parasite - t3_hypertension_bugtest {	
+foreach var of varlist t1_infect_parasite - t3_injury_poison {	
  	safetab ethnicity `var', row 
 }
 
 
+
 *Relationship of outcomes with imd
-foreach var of varlist t1_infect_parasite - t3_hypertension_bugtest {	
+foreach var of varlist t1_infect_parasite - t3_injury_poison {	
  	safetab imd `var', row 
 }
-
+*/
 
 
 * Close log file 
