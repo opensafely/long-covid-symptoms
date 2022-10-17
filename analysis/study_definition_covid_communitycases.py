@@ -165,7 +165,6 @@ study = StudyDefinition(
         on_or_before="case_index_date + 28 days",
     ),
 
-
     ### died after temp case index date (extracted as used as a matching variable, so needs to exist)
     death_date=patients.died_from_any_cause(
         on_or_after="case_index_date",

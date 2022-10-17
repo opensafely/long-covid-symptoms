@@ -35,10 +35,10 @@ log using ./logs/10_longCovidSymp_data_checks.log, replace t
 *(0)=========Load file and check total numbers and cases and controls============
 use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
 
-*draft initial checks for stuff that looks odd in lof of 09
+*eyeball all variables
 codebook
 
-/*
+
 *total number in cohort
 safecount
 *total cases and controls
@@ -68,13 +68,20 @@ restore
 
 
 
+*(1)=========CHECK TIME RULES THAT I CHECKED IN 05============
+capture noisily assert covid_hosp>=case_index_date
+capture noisily assert death_date>=case_index_date
+capture noisily assert dereg_date>=case_index_date
+capture noisily assert first_known_covid19>=case_index_date
 
-*(1)=========CHECK TIME RULES FROM PROTOCOL i.e. when index date is in relation to COVID etc============
 
+
+
+*(2)=========CHECK TIME RULES FROM PROTOCOL i.e. when index date is in relation to COVID etc============
 *cases
 *(a)case_index_date should be minimum of first positive test or covid diangosis in primary care
 *THIS CODE WILL NEED UPDATED IF/WHEN THE 4 WEEK WINDOW IS ADDED TO THE CASE INDEX DATE
-capture noisily assert case_index_date==min(first_pos_testw2, covid_tpp_probw2) if case==1
+capture noisily assert case_index_date==min(first_pos_testw2, covid_tpp_probw2) + 28 if case==1
 *(b)check how many cases were hospitalised after the start of follow-up, and when this happened
 tab caseHospForCOVIDDurFUP1
 tab caseHospForCOVIDDurFUP2
@@ -115,10 +122,14 @@ capture noisily assert stp!=.
 
 /*(3)===============CHECK EXPECTED VALUES============================================================*/ 
 
-* Age
+* Age (2 versions)
 datacheck age<., nol
-datacheck inlist(ageCat, 0, 1, 2, 3, 4, 5, 6, 7), nol
+*1*
+datacheck inlist(ageCat, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9), nol
 safetab ageCat, miss
+*2*
+datacheck inlist(ageCatChildCombined, 0, 1, 2, 3, 4, 5, 6), nol
+safetab ageCatChildCombined, miss
 
 * Sex
 datacheck inlist(sex, 0, 1), nol
@@ -133,10 +144,6 @@ datacheck inlist(eth5, 1, 2, 3, 4, 5, .), nol
 *eth16
 datacheck inlist(eth5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, .), nol
 
-* Smoking
-*datacheck inlist(smoke, 1, 2, 3, 4), nol
-*datacheck inlist(smoke, 1, 2, 3), nol 
-
 *comorb
 foreach var of varlist comorb_infection_or_parasite - comorb_injury_poisoning{ 
 	safetab `var', m
@@ -144,7 +151,7 @@ foreach var of varlist comorb_infection_or_parasite - comorb_injury_poisoning{
 
 
 *all outcomes
-foreach var of varlist t1_infect_parasite - t3_injury_poison{ 
+foreach var of varlist t1_infect_parasite - t3_hypertension_bugtest{ 
 	safetab `var', m
 }
 
@@ -153,131 +160,53 @@ foreach var of varlist t1_infect_parasite - t3_injury_poison{
 
 /*(4) TESTING LOGICAL RELATIONSHIPS======================================================*/ 
 
-*HH variables
-*safetab hhRiskCat hh_total_cat
-*safetab hhRiskCatExp_5cats hh_total_cat
-
-
-* BMI
-*bysort bmicat: summ bmi
-*safetab bmicat obese4cat, m
-
 * Age
-*bysort ageCatHHRisk: summ age
-*safetab ageCatHHRisk age66, m
-
-* Smoking
-safetab smoke, m
-
-* Diabetes
-*safetab diabcat diabetes, m
-
-* CKD
-*safetab reduced egfr_cat, m
-* CKD
-*safetab reduced esrd, m
+bysort ageCat: summ age
+bysort ageCatChildCombined: summ age
 
 *comorbidities
-safetab coMorbCat
+safetab numPreExistingComorbs
 
 /* EXPECTED RELATIONSHIPS=====================================================*/ 
 
 /*  Relationships between demographic/lifestyle variables  */
-safetab ageCatHHRisk bmicat, 	row 
-safetab ageCatHHRisk smoke, 	row  
-safetab ageCatHHRisk ethnicity, row 
-safetab ageCatHHRisk imd, 		row 
-*safetab ageCatHHRisk shield,    row 
-
-safetab bmicat smoke, 		 row   
-safetab bmicat ethnicity, 	 row 
-safetab bmicat imd, 	 	 row 
-safetab bmicat hypertension, row 
-*safetab bmicat shield,    row 
+*Age and ethnicity
+safetab ageCat ethnicity, row 
+*Age and IMD
+safetab ageCat imd, row 
+*Age and pre-existing comorbidities
+safetab ageCat numPreExistingComorbs, row
+*Sex and pre-existing comorbidities
+safetab sex numPreExistingComorbs, row
+*Ethnicity and pre-existing comorbidities
+safetab ethnicity numPreExistingComorbs, row
 
                             
-safetab smoke ethnicity, 	row 
-safetab smoke imd, 			row 
-safetab smoke hypertension, row 
-*safetab smoke shield,    row 
-                      
-safetab ethnicity imd, 		row 
-*safetab shield imd, 		row 
-
-*safetab shield ethnicity, 		row 
-
-
-
-* Relationships with age
-foreach var of varlist 								///
-					chronic_respiratory_disease 	///
-					asthma_severe	///
-					chronic_cardiac_disease  		///
-					dm  			///
-					cancer_nonhaemPrevYear ///
-					cancer_haemPrev5Years				///
-					chronic_liver_disease  ///
-					stroke_dementia  ///
-					egfr60  			/// 
-					organ_transplant  			/// 
-					asplenia			 	///
-					other_immuno			 	///	 	
-										{
-
-		
- 	safetab ageCatHHRisk `var', row 
- }
-
-
-*Relationships with sex
-foreach var of varlist 						///
-					chronic_respiratory_disease 	///
-					asthma_severe	///
-					chronic_cardiac_disease  		///
-					dm  			///
-					cancer_nonhaemPrevYear ///
-					cancer_haemPrev5Years				///
-					chronic_liver_disease  ///
-					stroke_dementia  ///
-					egfr60  			/// 
-					organ_transplant  			/// 
-					asplenia			 	///
-					other_immuno			 	///	
-										{
-						
- 	safetab male `var', row 
-}
-
-*Relationships with smoking							
-foreach var of varlist  							///
-					chronic_respiratory_disease 	///
-					asthma_severe	///
-					chronic_cardiac_disease  		///
-					dm  			///
-					cancer_nonhaemPrevYear ///
-					cancer_haemPrev5Years				///
-					chronic_liver_disease  ///
-					stroke_dementia  ///
-					egfr60  			/// 
-					organ_transplant  			/// 
-					asplenia			 	///
-					other_immuno			 	///
-					{
-	
- 	safetab smoke `var', row 
+* Relationships of outcomes with age
+foreach var of varlist t1_infect_parasite - t3_hypertension_bugtest {
+ 	safetab ageCat `var', row 
 }
 
 
-/* SENSE CHECK OUTCOMES=======================================================*/
-safetab covidDeathCase covidHospCase  , row col
-safetab covidDeathCase nonCOVIDDeathCase  , row col
-safetab nonCOVIDDeathCase covidHospCase  , row col
+*Relationship of outcomes with sex
+foreach var of varlist t1_infect_parasite - t3_hypertension_bugtest {	
+ 	safetab sex `var', row 
+}
 
-safecount if covidHospCase==1 & covidDeathCase==1
-safecount if covidDeathCase==1 & nonCOVIDDeathCase==1
-safecount if covidHospCase==1 & nonCOVIDDeathCase==1
 
-*/
+*Relationship of outcomes with ethnicity
+foreach var of varlist t1_infect_parasite - t3_hypertension_bugtest {	
+ 	safetab ethnicity `var', row 
+}
+
+
+*Relationship of outcomes with imd
+foreach var of varlist t1_infect_parasite - t3_hypertension_bugtest {	
+ 	safetab imd `var', row 
+}
+
+
+
 * Close log file 
 log close
 
