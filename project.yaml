@@ -569,7 +569,7 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/11_longCovidSymp_table1contemporary.log
-        table1contemporary: output/longCovidSymp_table1contemporary.txt
+        table1contemporary: output/table1_longCovidSymp_contemporary.txt
 
 
 
