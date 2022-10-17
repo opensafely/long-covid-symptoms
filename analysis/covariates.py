@@ -9,6 +9,14 @@ def generate_covariates(index_date_variable):
 
     # DEMOGRAPHICS AND LIFESTYLE 
 
+    ### sex 
+    sex=patients.sex(
+        return_expectations={
+            "rate": "universal",
+            "category": {"ratios": {"M": 0.49, "F": 0.51}},
+        }
+    ),
+
     #ETHNICITY IN 5 CATEGORIES
     ethnicity=patients.with_these_clinical_events(
         ethnicity_codes,

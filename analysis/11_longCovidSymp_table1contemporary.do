@@ -234,65 +234,33 @@ file write tablecontent _tab ("Total")				  			  _tab ///
 							 
 
 
-**DEMOGRAPHICS (more than one level, potentially missing)**
-
-
-
-*AGE
+**DEMOGRAPHICS AND PREVIOUS COMRBIDITIES (more than one level, potentially missing)**
+*Age
 tabulatevariable, variable(ageCat) min(0) max(9) 
 file write tablecontent _n 
-
+*continous
 qui summarizevariable, variable(age) 
 file write tablecontent _n
 
-*sex
+*Sex
 tabulatevariable, variable(sex) min(0) max(1) 
-file write tablecontent _n 
-
-*ETHNICITY
-*create an ethnicity variable with missing shown as "Unknown" just for this analysis
-replace eth5=6 if eth5==.
-label drop eth5
-label define eth5 			1 "White"  					///
-							2 "South Asian"				///						
-							3 "Black"  					///
-							4 "Mixed"					///
-							5 "Other"					///
-							6 "Unknown"
-					
-label values eth5 eth5
-safetab eth5, m
-
-tabulatevariable, variable(eth5) min(1) max(6) 
 file write tablecontent _n 
 
 *IMD
 tabulatevariable, variable(imd) min(1) max(5) 
 file write tablecontent _n 
 
-
-*SMOKING
-tabulatevariable, variable(smoke) min(1) max(3) 
+*Ethnicity
+tabulatevariable, variable(eth5Table1) min(1) max(6) 
 file write tablecontent _n 
 
-
-
-*REGION
-tabulatevariable, variable(region) min(0) max(8) 
+*Rural urban (binary)
+tabulatevariable, variable(rural_urbanBroad) min(0) max(1) 
 file write tablecontent _n 
 
-*RURAL URBAN (five categories)
-tabulatevariable, variable(rural_urbanFive) min(1) max(5) 
+*Comorbidities (3 categories)
+tabulatevariable, variable(preExistComorbCat) min(0) max(2) 
 file write tablecontent _n 
-
-*HOUSEHOLD SIZE
-tabulatevariable, variable(hh_total_cat) min(1) max(3) 
-file write tablecontent _n 
-
-*COMORBIDITIES (3 CATEGORIES)
-tabulatevariable, variable(coMorbCat) min(0) max(2) 
-file write tablecontent _n 
-
 
 
 file write tablecontent _n _n
