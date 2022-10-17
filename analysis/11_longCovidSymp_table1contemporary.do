@@ -28,30 +28,15 @@ clear all
 sysdir set PLUS ./analysis/adofiles
 sysdir set PERSONAL ./analysis/adofiles
 
-local dataset `1'
-
 
 
 capture log close
-log using ./logs/10_longCovidSymp_data_checks.log, replace t
+log using ./logs/11_longCovidSymp_table1contemporary.log, replace t
 
 
 * Open Stata dataset
 use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
-*update variable with missing so that . is shown as unknown (just for this table)
-*(1) ethnicity
-replace eth5=6 if eth5==.
-label drop eth5
-label define eth5 			1 "White"  					///
-							2 "South Asian"				///						
-							3 "Black"  					///
-							4 "Mixed"					///
-							5 "Other"					///
-							6 "Unknown"
-					
 
-label values eth5 eth5
-safetab eth5, m
 
 
  /* PROGRAMS TO AUTOMATE TABULATIONS===========================================*/ 
@@ -219,7 +204,7 @@ end
 
 *Set up output file
 cap file close tablecontent
-file open tablecontent using ./output/table1_hhClassif`dataset'.txt, write text replace
+file open tablecontent using ./output/table1_longCovidSymp_contemporary.txt, write text replace
 
 file write tablecontent ("Table 1: Demographic and clinical characteristics for cases and contemporary matched comparators") _n
 
