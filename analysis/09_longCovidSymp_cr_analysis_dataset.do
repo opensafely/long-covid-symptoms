@@ -167,6 +167,22 @@ safetab ethnicity
 label values eth5 eth5
 safetab eth5, m
 
+*create an ethnicity for table 1 (includes unknown)
+*ETHNICITY
+*create an ethnicity variable with missing shown as "Unknown" just for this analysis
+generate eth5Table1=eth5
+replace eth5Table1=6 if eth5Table1==.
+label define eth5Table1 			1 "White"  					///
+									2 "South Asian"				///						
+									3 "Black"  					///
+									4 "Mixed"					///
+									5 "Other"					///
+									6 "Unknown"
+					
+label values eth5Table1 eth5Table1
+safetab eth5Table1, m
+
+
 * Ethnicity (16 category)
 replace ethnicity_16 = . if ethnicity==.
 label define ethnicity_16 									///
@@ -269,6 +285,40 @@ safetab ageCatChildCombined, miss
 la var ageCatChildCombined "Age categorised (children combined)"
 
 
+*(e)===Rural-urban===
+*label the urban rural categories
+replace rural_urban=. if rural_urban<1|rural_urban>8
+label define rural_urban 1 "urban major conurbation" ///
+							  2 "urban minor conurbation" ///
+							  3 "urban city and town" ///
+							  4 "urban city and town in a sparse setting" ///
+							  5 "rural town and fringe" ///
+							  6 "rural town and fringe in a sparse setting" ///
+							  7 "rural village and dispersed" ///
+							  8 "rural village and dispersed in a sparse setting"
+label values rural_urban rural_urban
+safetab rural_urban, miss
+
+*create a 4 category rural urban variable based upon meeting with Roz 21st October
+generate rural_urbanFive=.
+la var rural_urbanFive "Rural Urban in five categories"
+replace rural_urbanFive=1 if rural_urban==1
+replace rural_urbanFive=2 if rural_urban==2
+replace rural_urbanFive=3 if rural_urban==3|rural_urban==4
+replace rural_urbanFive=4 if rural_urban==5|rural_urban==6
+replace rural_urbanFive=5 if rural_urban==7|rural_urban==8
+label define rural_urbanFive 1 "Urban major conurbation" 2 "Urban minor conurbation" 3 "Urban city and town" 4 "Rural town and fringe" 5 "Rural village and dispersed"
+label values rural_urbanFive rural_urbanFive
+safetab rural_urbanFive, miss
+
+*generate a binary rural urban (with missing assigned to urban)
+generate rural_urbanBroad=.
+replace rural_urbanBroad=1 if rural_urban<=4|rural_urban==.
+replace rural_urbanBroad=0 if rural_urban>4 & rural_urban!=.
+label define rural_urbanBroad 0 "Rural" 1 "Urban"
+label values rural_urbanBroad rural_urbanBroad
+safetab rural_urbanBroad rural_urban, miss
+label var rural_urbanBroad "Rural-Urban"
 
 
 
@@ -290,9 +340,9 @@ la var preExistComorbCat "Number of comorbidities diagnosed in prev yr"
 
 *(f) Recode all dates from the strings 
 *order variables to make for loop quicker
-order patient_id case_index_date case_index_dateorig first_test_covid first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_tpp_probclindiag covid_tpp_probtest covid_tpp_probseq covid_hosp pos_covid_test_ever infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_disorder nervous_sys_dis ear_mastoid_dis circ_sys_dis resp_system_dis digest_syst_dis skin_disease musculo_dis genitourin_dis pregnancy_compl perinatal_dis congenital_dis injury_poison death_date dereg_date first_known_covid19 first_known_covid19original
+order patient_id case_index_date first_test_covid first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_tpp_probclindiag covid_tpp_probtest covid_tpp_probseq covid_hosp pos_covid_test_ever infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_disorder nervous_sys_dis ear_mastoid_dis circ_sys_dis resp_system_dis digest_syst_dis skin_disease musculo_dis genitourin_dis pregnancy_compl perinatal_dis congenital_dis injury_poison death_date dereg_date first_known_covid19
 *have to rename some variables here as too long
-foreach var of varlist case_index_date - first_known_covid19original {
+foreach var of varlist case_index_date - first_known_covid19 {
 	capture noisily confirm string variable `var'
 	capture noisily rename `var' `var'_dstr
 	capture noisily gen `var' = date(`var'_dstr, "YMD")

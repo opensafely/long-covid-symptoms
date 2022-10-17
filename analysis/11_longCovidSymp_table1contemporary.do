@@ -228,66 +228,54 @@ file write tablecontent ("Table 1: Demographic and clinical characteristics for 
 local lab0: label case 0
 local lab1: label case 1
 
-
-
-
 file write tablecontent _tab ("Total")				  			  _tab ///
 							 ("`lab0'")  						  _tab ///
 							 ("`lab1'")  						  _n							 
 							 
 
 
-* DEMOGRAPHICS (more than one level, potentially missing) 
-
-/*reminder of variables:
-patient_id age ageCat hh_id hh_size hh_composition case_date case eth5 eth16 ethnicity_16 indexdate male bmicat smoke imd region comorb_Neuro comorb_Immunosuppression shielding chronic_respiratory_disease chronic_cardiac_disease diabetes chronic_liver_disease cancer egfr_cat hypertension smoke_nomiss rural_urban
-*/
+**DEMOGRAPHICS (more than one level, potentially missing)**
 
 
-*format hba1c_pct bmi egfr %9.2f
-
-/*
-gen byte cons=1
-tabulatevariable, variable(cons) min(1) max(1) 
-file write tablecontent _n 
-*/
-
-*SIZE OF LINKED DATASETS
-*gen  byte SGSS=1 if tested==1
-
-*file write tablecontent ("SGSS data") _tab
-*generaterow2, variable(SGSS) condition("==1")
-
-*gen  byte ICNARC=1 if tested==1
-*file write tablecontent ("ICNARC data") _tab
-*generaterow2, variable(ICNARC) condition("==1")
-
-*male
-tabulatevariable, variable(male) min(0) max(1) 
-file write tablecontent _n 
 
 *AGE
+tabulatevariable, variable(ageCat) min(0) max(9) 
+file write tablecontent _n 
+
 qui summarizevariable, variable(age) 
 file write tablecontent _n
 
-tabulatevariable, variable(ageCatfor67Plus) min(0) max(4) 
+*sex
+tabulatevariable, variable(sex) min(0) max(1) 
 file write tablecontent _n 
 
 *ETHNICITY
+*create an ethnicity variable with missing shown as "Unknown" just for this analysis
+replace eth5=6 if eth5==.
+label drop eth5
+label define eth5 			1 "White"  					///
+							2 "South Asian"				///						
+							3 "Black"  					///
+							4 "Mixed"					///
+							5 "Other"					///
+							6 "Unknown"
+					
+label values eth5 eth5
+safetab eth5, m
+
 tabulatevariable, variable(eth5) min(1) max(6) 
-file write tablecontent _n 
-
-*BMI
-tabulatevariable, variable(bmicat) min(1) max(6) 
-file write tablecontent _n 
-
-*SMOKING
-tabulatevariable, variable(smoke) min(1) max(3) 
 file write tablecontent _n 
 
 *IMD
 tabulatevariable, variable(imd) min(1) max(5) 
 file write tablecontent _n 
+
+
+*SMOKING
+tabulatevariable, variable(smoke) min(1) max(3) 
+file write tablecontent _n 
+
+
 
 *REGION
 tabulatevariable, variable(region) min(0) max(8) 
