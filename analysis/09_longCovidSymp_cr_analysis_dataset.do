@@ -239,7 +239,7 @@ safetab eth16,m
 
 
 *(b)===STP====
-*For ease of future analysis(?) am going to recode these as numerical ordered at this stage
+*For ease of future analysis(?) am going to recode these as numerical ordered at this stage, also drop if STP is missing
 rename stp stp_old
 bysort stp_old: gen stp = 1 if _n==1
 replace stp = sum(stp)
