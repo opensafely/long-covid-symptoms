@@ -12,6 +12,14 @@ actions:
       highly_sensitive:
         cohort: output/input_covid_communitycases.csv
 
+# 1a. CHECK EXTRACTED CASE RAW DATA
+  check_case_extract:
+    run: stata-mp:latest analysis/1a_longCovidSymp_checkCaseExtract.do
+    needs: [generate_community_cases_cohort]
+    outputs:
+      moderately_sensitive:
+        log: logs/1a_longCovidSymp_checkCaseExtract.log
+
 
 # 2. EXTRACT DATA FOR POTENTIAL COMPARATORS
 # new extract potential comparators code... I guess I'll have to this twice for each control group
