@@ -13,12 +13,12 @@ actions:
         cohort: output/input_covid_communitycases.csv
 
 # 1a. CHECK EXTRACTED CASE RAW DATA
-  check_case_extract:
-    run: stata-mp:latest analysis/1a_longCovidSymp_checkCaseExtract.do
-    needs: [generate_community_cases_cohort]
-    outputs:
-      moderately_sensitive:
-        log: logs/1a_longCovidSymp_checkCaseExtract.log
+#  check_case_extract:
+#    run: stata-mp:latest analysis/1a_longCovidSymp_checkCaseExtract.do
+#    needs: [create_analysis_file]
+#   outputs:
+#     moderately_sensitive:
+#        log: logs/1a_longCovidSymp_checkCaseExtract.log
 
 
 # 2. EXTRACT DATA FOR POTENTIAL COMPARATORS
@@ -517,6 +517,15 @@ actions:
         matched_matches_allstps: output/input_covid_matched_matches_allSTPs.csv
       moderately_sensitive:
         log: logs/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching.log
+
+
+# 6a. CHECK VARIABLES FOR COMBINED CASES AND COMBINED CONTROLS PRIOR TO ADDING MORE VARIABLES
+  check_combinedFiles:
+    run: stata-mp:latest analysis/6a_longCovidSymp_checkCombinedFiles.do
+    needs: [combine_matched_CASESstps, combine_matched_COMPARATORstps]
+    outputs:
+      moderately_sensitive:
+        log: logs/6a_longCovidSymp_checkCombinedFiles.log
 
 
 # 7. ADD FURTHER VARIABLES TO CASES FOLLOWING MATCHING
