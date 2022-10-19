@@ -21,10 +21,10 @@ covid19_variables = generate_covid19_variables(index_date_variable="index_date")
 from matching_variables import generate_matching_variables
 matching_variables = generate_matching_variables(index_date_variable="index_date")
 
-## covariates: age, sex, region we already have as matching variables, need IMD, ethnicity, rural/urban, pre-existing comorbidity (although this comes from outcome vars)
-## (note, all above relative to community COVID19 case (index) date)
-#from covariates import generate_covariates
-#covariates = generate_covariates(index_date_variable="index_date")
+## covariates required for selection: age, imd, sex (and region but data management is stratified on this)
+## all above relative to index date
+from covariates_selection import generate_covariates_selection
+covariates_selection= generate_covariates_selection(index_date_variable="index_date")
 
 ## outcome variables (note, relative to community COVID19 case (index) date)
 #from outcome_variables import generate_outcome_variables
@@ -77,52 +77,12 @@ study = StudyDefinition(
     # MATCHING VARIABLES  
     **matching_variables, 
 
-    # COVARIATES  
-    # **covariates, 
+    # DEMOG COVARIATES  
+    **covariates_selection, 
 
     # Uncomment when have updated our own outcome variables
     # OUTCOME VARIABLES  
     # **outcome_variables, 
-
-    # SELECTION VARIABLES 
-    ### sex 
-    sex=patients.sex(
-        return_expectations={
-            "rate": "universal",
-            "category": {"ratios": {"M": 0.49, "F": 0.51}},
-        }
-    ),
-
-    ## index of multiple deprivation, estimate of SES based on patient post code 
-    imd=patients.categorised_as(
-        {
-            "0": "DEFAULT",
-            "1": """index_of_multiple_deprivation >=1 AND index_of_multiple_deprivation < 32844*1/5""",
-            "2": """index_of_multiple_deprivation >= 32844*1/5 AND index_of_multiple_deprivation < 32844*2/5""",
-            "3": """index_of_multiple_deprivation >= 32844*2/5 AND index_of_multiple_deprivation < 32844*3/5""",
-            "4": """index_of_multiple_deprivation >= 32844*3/5 AND index_of_multiple_deprivation < 32844*4/5""",
-            "5": """index_of_multiple_deprivation >= 32844*4/5 AND index_of_multiple_deprivation < 32844""",
-        },
-        index_of_multiple_deprivation=patients.address_as_of(
-            "index_date",
-            returning="index_of_multiple_deprivation",
-            round_to_nearest=100,
-        ),
-        return_expectations={
-            "rate": "universal",
-            "category": {
-                "ratios": {
-                    "0": 0.05,
-                    "1": 0.19,
-                    "2": 0.19,
-                    "3": 0.19,
-                    "4": 0.19,
-                    "5": 0.19,
-                }
-            },
-        },
-
-    ),
 
 
     # TIME-VARYING SELECTION VARIABLES

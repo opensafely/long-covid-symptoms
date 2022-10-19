@@ -17,17 +17,10 @@ CONTROLS = "output/input_covid_matched_matches_allSTPs.csv"
 
 # Import Variables 
 
-## covid19 variables 
-from covid19_variables import generate_covid19_variables
-covid19_variables = generate_covid19_variables(index_date_variable="case_index_date")
-
-## matching variables 
-from matching_variables import generate_matching_variables
-matching_variables = generate_matching_variables(index_date_variable="case_index_date")
-
-## covariates
-from covariates import generate_covariates
-covariates = generate_covariates(index_date_variable="case_index_date")
+## covariates not yet added i.e.: rural/urban, ethnicity, comorbidities
+## all above relative to index date
+from covariates_complete import generate_covariates_complete
+covariates_complete= generate_covariates_complete(index_date_variable="case_index_date")
 
 ## outcome variables (note, relative to community COVID19 case (index) date)
 from outcome_variables import generate_outcome_variables
@@ -50,24 +43,89 @@ study = StudyDefinition(
     # start of observation period (note, needs to be called index date)
     index_date="2020-02-01", # note should be ignored when using case_index_date 
 
-    # import the case index date 
+    # import the variables I need that already exist in the matched list of cases
+    # doing it this way as am uncomfortable about "reextracting" any variables that I have already extracted ((and performed checks)
+    # for example, when I re-extracted, there there were some missing STPs and some sex categories other than M or F, despite these
+    # being defined as required (for STP) or only M or F (for sex)
+
+    # age
+    age=patients.with_value_from_file(
+        CONTROLS, 
+        returning="age", 
+        returning_type="int"), 
+    # case
+    case=patients.with_value_from_file(
+        CONTROLS, 
+        returning="case", 
+        returning_type="int"), 
+    # case index date
     case_index_date=patients.with_value_from_file(
         CONTROLS, 
         returning="case_index_date", 
         returning_type="date"), 
+    # covid_hosp
+    covid_hosp=patients.with_value_from_file(
+        CONTROLS, 
+        returning="covid_hosp", 
+        returning_type="str"), 
+    # covid_tpp_prob
+    covid_tpp_prob=patients.with_value_from_file(
+        CONTROLS, 
+        returning="covid_tpp_prob", 
+        returning_type="str"),
+    # covid_tpp_probw2
+    covid_tpp_probw2=patients.with_value_from_file(
+        CONTROLS, 
+        returning="covid_tpp_probw2", 
+        returning_type="str"),
+    # first_known_covid19
+    first_known_covid19=patients.with_value_from_file(
+        CONTROLS, 
+        returning="first_known_covid19", 
+        returning_type="str"),
+    # first_pos_test
+    first_pos_test=patients.with_value_from_file(
+        CONTROLS, 
+        returning="first_pos_test", 
+        returning_type="str"),
+    # first_pos_testw2
+    first_pos_testw2=patients.with_value_from_file(
+        CONTROLS, 
+        returning="first_pos_testw2", 
+        returning_type="str"),
+    # imd
+    imd=patients.with_value_from_file(
+        CONTROLS, 
+        returning="imd", 
+        returning_type="int"),
+    # pos_covid_test_ever
+    pos_covid_test_ever=patients.with_value_from_file(
+        CONTROLS, 
+        returning="pos_covid_test_ever", 
+        returning_type="str"),
+    # set_id
+    set_id=patients.with_value_from_file(
+        CONTROLS, 
+        returning="set_id", 
+        returning_type="float"), 
+    # sex
+    sex=patients.with_value_from_file(
+        CONTROLS, 
+        returning="sex", 
+        returning_type="str"), 
+    # stp
+    stp=patients.with_value_from_file(
+        CONTROLS, 
+        returning="stp", 
+        returning_type="str"),
+    
 
-    # COVID19 VARIABLES
-    **covid19_variables, 
-
-    # MATCHING VARIABLES  
-    **matching_variables,  
-
+    # extract the new variables i.e. (1) covariates: ethnicity, rural_urban and comorbidities and (2) outcomes
     # COVARIATES  
-    **covariates, 
+    **covariates_complete, 
 
-    # Uncomment when have updated our own outcome variables
     # OUTCOME VARIABLES  
-    **outcome_variables, 
+    **outcome_variables,  
 
 
 
@@ -80,6 +138,8 @@ study = StudyDefinition(
 
     ### has 3 months of of baseline time
     ## Note that CASE_INDEX_DATE is defined in the covid19_variables files and is the earliest of first positive test or first probable diagnosis in W2
+    ## These next two are variables that I need to check when sorting the variables out i.e. has follow-up in the controls, as can't see how to to handle it in the 
+    ## matching script (and has died needs checked against the case index date)
     has_follow_up=patients.registered_with_one_practice_between(
         start_date="case_index_date - 3 months",
         end_date="case_index_date",
