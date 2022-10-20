@@ -68,7 +68,7 @@ study = StudyDefinition(
     **covariates_selection, 
 
 
-    # TIME-VARYING SELECTION VARIABLES 
+    # TIME-VARYING SELECTION VARIABLES - THESE ARE JUST TO MAKE THE COHORT SMALLER AT THIS STAGE, BUT DEATH AND HOSP IS CHECKED AGAIN AT MATCHING
     ## These variables are EITHER 1) defined within a specific time frame relative to the patient vaccination date 
     ## OR 2) defined as before/after/on the patient vaccination date, but they return something other than a date 
     ## For controls, they need to be extracted and applied after matching as controls are assigned the patient vaccination date 
