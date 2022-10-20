@@ -28,7 +28,7 @@ log using ./logs/09_longCovidSymp_cr_analysis_dataset.log, replace t
 
 
 
-*(0)=========Get total cases and potential matches figure for flowchart - extra bit of work here is to drop comparators without the necessary follow-up or who died before case index date============
+*(0)=========Get total cases and potential matches figure for flowchart - extra bit of work in this file is to drop comparators without the necessary follow-up or who died before case index date============
 /*Has follow-up needs checked as there is nowhere previously where it is checked against the matched cases case index date, plus the death_date variable for controls so far is only related to the
 *index date, not the case_index_date*/
 *case
@@ -44,43 +44,47 @@ safecount
 
 
 
-*(1)=========Get all of the variables from the matched cases and matched controls files============
+*(1)=========Get all the (case and comparator related) variables from the matched cases and matched controls files============
 *case
 /*for cases the variables I want are: age, case, covid_hosp, covid_tpp_prob, covid_tpp_probw2, death_date, dereg_date, first_known_covid19, first_pos_test, first_pos_testw2, had_covid_hosp, has_died, has_follow_up, imd, match_counts, pos_covid_test_ever, set_id, sex, stp*/
-*/
+
 capture noisily import delimited ./output/input_covid_matched_cases_allSTPs.csv, clear
-keep patient_id case match_counts sex set_id stp
+keep patient_id age case covid_hosp covid_tpp_prob covid_tpp_probw2 death_date dereg_date first_known_covid19 first_pos_test first_pos_testw2 had_covid_hosp has_died has_follow_up imd match_counts pos_covid_test_ever  set_id sex stp
 tempfile cases_match_info
 *for dummy data, should do nothing in the real data
 duplicates drop patient_id, force
 save `cases_match_info', replace
+*NUMBER OF MATCHED CASES
+count
+
 
 *comparator
 /*for comparator the variables I want are: age, case, covid_hosp, covid_tpp_prob, covid_tpp_probw2, first_known_covid19, first_pos_test, first_pos_testw2, imd, pos_covid_test_ever, set_id, sex, stp*/
+*DON'T NEED has_follow_up, has_died, death_date or dereg_date from the original file - these are all created new based on case_index_date in the new file
 capture noisily import delimited ./output/input_covid_matched_matches_allSTPs.csv, clear
-keep patient_id case set_id stp
+keep patient_id age case covid_hosp covid_tpp_prob covid_tpp_probw2 first_known_covid19 first_pos_test first_pos_testw2 imd pos_covid_test_ever set_id sex stp
 tempfile comp_match_info
 *for dummy data, should do nothing in the real data
 duplicates drop patient_id, force
 save `comp_match_info', replace
+*NUMBER OF MATCHED CONTROLS BEFORE DROPPING THOSE DUE TO FOLLOW-UP ISSUES RELATED TO CASE_INDEX_DATE (SEE BELOW)
+count
 
 
-*(2)=========Add case and comparator information to the separate draft (complete) analysis files============
+*(2)=========Add the case and comparator information from above to the files with the rest of the information============
 *import (matched) cases with variables and merge with match variables
 capture noisily import delimited ./output/input_complete_covid_communitycases.csv, clear
-drop stp /*this is needed to make sure dummy data still ends up with sensible STP data!*/
 merge 1:1 patient_id using `cases_match_info'
 keep if _merge==3
 drop _merge
 tempfile cases_with_vars_and_match_info
 save `cases_with_vars_and_match_info', replace
-di "***********************FLOWCHART 2. NUMBER OF MATCHED CASES AND MATCHED COMPARATORS********************:"
+di "***********************FLOWCHART 2. NUMBER OF MATCHED CASES AND MATCHED COMPARATORS BEFORE DROPPING CONTROLS INELIGIBLE DUE TO HAS_FOLLOW_UP AND DEATH_DATE VARS********************:"
 di "**Matched cases:**"
 safecount
 
 
 capture noisily import delimited ./output/input_complete_controls_contemporary.csv, clear
-drop stp /*this is needed to make sure dummy data still ends up with sensible STP data!*/
 merge 1:1 patient_id using `comp_match_info'
 keep if _merge==3
 drop _merge
@@ -93,18 +97,40 @@ safecount
 *NOTE: Flowchart re: who was dropped here due date exclusions can be obtained from the STP matching logs (if needed)
 */
 
-*(3)=========Append case and comparator files together, drop controls with required has follow up  and tidy up, then check number as expected============
+*(3)=========Append case and comparator files together, drop controls with required has follow up and tidy up, then check number as expected============
 append using `cases_with_vars_and_match_info', force
-tab case
+order patient_id set_id match_count case
+gsort set_id -case
+*drop any comparators that don't have sufficient follow upon
+count if case==0 & has_follow_up==0
+drop if case==0 & has_follow_up==0
+*drop any comparators who have has_died as 1
+count if case==0 & has_died==1
+drop if case==0 & has_died==1
+
+*redo match_count variable after having done this
+generate match_countsNew=.
+order patient_id set_id match_counts match_countsNew case
+by set_id: replace match_countsNew=_N-1
+replace match_countsNew=. if case==0
+drop match_counts
+rename match_countsNew match_counts
+
 *count then drop cases with no matches
 count if match_counts==0
 drop if match_counts==0
 tab case
 tab match_counts
-di "***********************FLOWCHART 1. NUMBER OF MATCHED CASES AND MATCHED COMPARATORS (COMBINED FILE, AFTER DROPPING THOSE WITH MATCH_COUNTS==0********************:"
+di "***********************FLOWCHART 1. NUMBER OF MATCHED CASES AND MATCHED COMPARATORS: COMBINED FILE, AFTER DROPPING INELGIIBLE CONTROLS (AS ABOVE) AND CASES WITH MATCH_COUNTS==0********************:"
 safecount
 tab case
-
+*save a list of final cases for analysis unmatched cases in next bit
+preserve
+	keep if case==1
+	keep patient_id
+	tempfile final_matchedCases_list
+	save `final_matchedCases_list', replace
+restore
 
 
 
@@ -112,16 +138,15 @@ tab case
 *import list of all cases (pre-matching)
 preserve
 	capture noisily import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, clear
-	tempfile allCases
 	*for dummy data, should do nothing in the real data
 	duplicates drop patient_id, force
-	save `allCases', replace
-	use `cases_match_info', clear
-	keep patient_id
-	merge 1:1 patient_id using `allCases'
+	tempfile origCaseList
+	save `origCaseList', replace
+	use `final_matchedCases_list', clear
+	merge 1:1 patient_id using `origCaseList'
 	*want to keep the ones not matched as they were in the original extract file but not in the list of matches
 	keep if _merge==2
-	count
+	safecount
 	*save file for descriptive analysis
 	save output/longCovidSymp_UnmatchedCases_analysis_dataset.dta, replace
 	di "***********************FLOWCHART 4. NUMBER OF UMATCHED CASES FROM UNMATCHED CASES FILE (TO CONFIRM IT ALIGNS WITH THE ABOVE FLOWCHART POINTS)********************:"
@@ -342,7 +367,7 @@ la var preExistComorbCat "Number of comorbidities diagnosed in prev yr"
 
 *(f) Recode all dates from the strings 
 *order variables to make for loop quicker
-order patient_id case_index_date first_test_covid first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_tpp_probclindiag covid_tpp_probtest covid_tpp_probseq covid_hosp pos_covid_test_ever infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_disorder nervous_sys_dis ear_mastoid_dis circ_sys_dis resp_system_dis digest_syst_dis skin_disease musculo_dis genitourin_dis pregnancy_compl perinatal_dis congenital_dis injury_poison death_date dereg_date first_known_covid19
+order patient_id case_index_date first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_hosp pos_covid_test_ever infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_disorder nervous_sys_dis ear_mastoid_dis circ_sys_dis resp_system_dis digest_syst_dis skin_disease musculo_dis genitourin_dis pregnancy_compl perinatal_dis congenital_dis injury_poison death_date dereg_date first_known_covid19
 *have to rename some variables here as too long
 foreach var of varlist case_index_date - first_known_covid19 {
 	capture noisily confirm string variable `var'
