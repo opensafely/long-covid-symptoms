@@ -43,103 +43,31 @@ study = StudyDefinition(
     # start of observation period (note, needs to be called index date)
     index_date="2020-02-01", # note should be ignored when using case_index_date 
 
-    # import the variables I need that already exist in the matched list of cases
-    # doing it this way as am uncomfortable about "reextracting" any variables that I have already extracted ((and performed checks)
-    # for example, when I re-extracted, there there were some missing STPs and some sex categories other than M or F, despite these
-    # being defined as required (for STP) or only M or F (for sex)
-
-    # age
-    age=patients.with_value_from_file(
-        CONTROLS, 
-        returning="age", 
-        returning_type="int"), 
-    # case
-    case=patients.with_value_from_file(
-        CONTROLS, 
-        returning="case", 
-        returning_type="int"), 
-    # case index date
+    # get case index date from controls file
     case_index_date=patients.with_value_from_file(
         CONTROLS, 
         returning="case_index_date", 
         returning_type="date"), 
-    # covid_hosp
-    covid_hosp=patients.with_value_from_file(
-        CONTROLS, 
-        returning="covid_hosp", 
-        returning_type="str"), 
-    # covid_tpp_prob
-    covid_tpp_prob=patients.with_value_from_file(
-        CONTROLS, 
-        returning="covid_tpp_prob", 
-        returning_type="str"),
-    # covid_tpp_probw2
-    covid_tpp_probw2=patients.with_value_from_file(
-        CONTROLS, 
-        returning="covid_tpp_probw2", 
-        returning_type="str"),
-    # first_known_covid19
-    first_known_covid19=patients.with_value_from_file(
-        CONTROLS, 
-        returning="first_known_covid19", 
-        returning_type="str"),
-    # first_pos_test
-    first_pos_test=patients.with_value_from_file(
-        CONTROLS, 
-        returning="first_pos_test", 
-        returning_type="str"),
-    # first_pos_testw2
-    first_pos_testw2=patients.with_value_from_file(
-        CONTROLS, 
-        returning="first_pos_testw2", 
-        returning_type="str"),
-    # imd
-    imd=patients.with_value_from_file(
-        CONTROLS, 
-        returning="imd", 
-        returning_type="int"),
-    # pos_covid_test_ever
-    pos_covid_test_ever=patients.with_value_from_file(
-        CONTROLS, 
-        returning="pos_covid_test_ever", 
-        returning_type="str"),
-    # set_id
-    set_id=patients.with_value_from_file(
-        CONTROLS, 
-        returning="set_id", 
-        returning_type="float"), 
-    # sex
-    sex=patients.with_value_from_file(
-        CONTROLS, 
-        returning="sex", 
-        returning_type="str"), 
-    # stp
-    stp=patients.with_value_from_file(
-        CONTROLS, 
-        returning="stp", 
-        returning_type="str"),
+
+    # extract the NEW VARIABLES ONLY.
+    # all other variables (that have already been extracted in the first extraction step) I will get by MERGING IN STATA
+    # doing it this way as am uncomfortable about "reextracting" any variables that I have already extracted ((and performed checks)
+    # for example, when I re-extracted, there there were some missing STPs and some sex categories other than M or F, despite these
+    # being defined as required (for STP) or only M or F (for sex)
+
     
 
-    # extract the new variables i.e. (1) covariates: ethnicity, rural_urban and comorbidities and (2) outcomes
+    # extract the new variables i.e. (1) covariates: ethnicity, rural_urban and comorbidities and (2) outcomes based on case index date
     # COVARIATES  
     **covariates_complete, 
 
     # OUTCOME VARIABLES  
     **outcome_variables,  
-
+    
 
 
     # TIME-VARYING SELECTION VARIABLES
-    ## These variables are EITHER 1) defined within a specific time frame relative to the patient case date 
-    ## OR 2) defined as before/after/on the patient case date, but they return something other than a date 
-    ## For controls, they need to be extracted and applied after matching as controls are assigned the patient case date 
-    ## It is most efficient to extract these separately for exposed and controls, as they are not needed for the controls yet,
-    ## and we don't want to spend time matching ineligble exposed people  
-
-    ### has 3 months of of baseline time
-    ## Note that CASE_INDEX_DATE is defined in the covid19_variables files and is the earliest of first positive test or first probable diagnosis in W2
-    ## These next two are variables that I need to check when sorting the variables out i.e. has follow-up in the controls, as can't see how to to handle it in the 
-    ## matching script (and has died needs checked against the case index date)
+    ## Need to redo these as previously they were just assessed based upon 
     has_follow_up=patients.registered_with_one_practice_between(
         start_date="case_index_date - 3 months",
         end_date="case_index_date",

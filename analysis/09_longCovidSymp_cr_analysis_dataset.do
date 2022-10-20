@@ -28,7 +28,9 @@ log using ./logs/09_longCovidSymp_cr_analysis_dataset.log, replace t
 
 
 
-*(0)=========Get total cases and potential matches figure for flowchart - needs to be the cases after having ============
+*(0)=========Get total cases and potential matches figure for flowchart - extra bit of work here is to drop comparators without the necessary follow-up or who died before case index date============
+/*Has follow-up needs checked as there is nowhere previously where it is checked against the matched cases case index date, plus the death_date variable for controls so far is only related to the
+*index date, not the case_index_date*/
 *case
 capture noisily import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, clear
 di "***********************FLOWCHART 1. NUMBER OF POTENTIAL CASES AND CONTROLS (WAVE 2)********************:"
@@ -42,8 +44,10 @@ safecount
 
 
 
-*(1)=========Get case and comparator information from the "matched" files============
+*(1)=========Get all of the variables from the matched cases and matched controls files============
 *case
+/*for cases the variables I want are: age, case, covid_hosp, covid_tpp_prob, covid_tpp_probw2, death_date, dereg_date, first_known_covid19, first_pos_test, first_pos_testw2, had_covid_hosp, has_died, has_follow_up, imd, match_counts, pos_covid_test_ever, set_id, sex, stp*/
+*/
 capture noisily import delimited ./output/input_covid_matched_cases_allSTPs.csv, clear
 keep patient_id case match_counts sex set_id stp
 tempfile cases_match_info
@@ -52,15 +56,13 @@ duplicates drop patient_id, force
 save `cases_match_info', replace
 
 *comparator
+/*for comparator the variables I want are: age, case, covid_hosp, covid_tpp_prob, covid_tpp_probw2, first_known_covid19, first_pos_test, first_pos_testw2, imd, pos_covid_test_ever, set_id, sex, stp*/
 capture noisily import delimited ./output/input_covid_matched_matches_allSTPs.csv, clear
 keep patient_id case set_id stp
 tempfile comp_match_info
 *for dummy data, should do nothing in the real data
 duplicates drop patient_id, force
 save `comp_match_info', replace
-
-
-
 
 
 *(2)=========Add case and comparator information to the separate draft (complete) analysis files============
@@ -89,9 +91,9 @@ safecount
 
 
 *NOTE: Flowchart re: who was dropped here due date exclusions can be obtained from the STP matching logs (if needed)
+*/
 
-
-*(3)=========Append case and comparator files together and tidy up, then check number as expected============
+*(3)=========Append case and comparator files together, drop controls with required has follow up  and tidy up, then check number as expected============
 append using `cases_with_vars_and_match_info', force
 tab case
 *count then drop cases with no matches
@@ -99,7 +101,7 @@ count if match_counts==0
 drop if match_counts==0
 tab case
 tab match_counts
-di "***********************FLOWCHART 3. NUMBER OF MATCHED CASES AND MATCHED COMPARATORS (COMBINED FILE, AFTER DROPPING THOSE WITH MATCH_COUNTS==0********************:"
+di "***********************FLOWCHART 1. NUMBER OF MATCHED CASES AND MATCHED COMPARATORS (COMBINED FILE, AFTER DROPPING THOSE WITH MATCH_COUNTS==0********************:"
 safecount
 tab case
 
