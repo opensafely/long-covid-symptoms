@@ -415,10 +415,11 @@ la var caseHospForCOVIDDurFUP2 "case who was hospitalised for COVID during FUP p
 generate caseHospForCOVIDDurFUP3=0 if case==1
 replace caseHospForCOVIDDurFUP3=1 if covid_hosp>(case_index_date + 180)  & case==1
 la var caseHospForCOVIDDurFUP3 "comparator who had COVID during FUP period 3"
+	
 
-
-*save final file
+*save final file (inc .csv version in case needed)
 save ./output/longCovidSymp_analysis_dataset_contemporary.dta, replace
+capture noisily export delimited using "./output/longCovidSymp_analysis_dataset_contemporary.csv", replace
 
 
 
