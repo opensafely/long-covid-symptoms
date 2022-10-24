@@ -564,9 +564,10 @@ actions:
       highly_sensitive:
         # casesContemporary: output/cases_contemporary.dta 
         # controlsContemporary: output/controls_contemporary.dta 
-        mainAnalysisFile: output/longCovidSymp_analysis_dataset_contemporary.dta 
+        mainAnalysisFile: output/longCovidSymp_analysis_dataset_contemporary.dta
+        mainAnalysisFileCSV: 
         unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_analysis_dataset.dta
-      moderately_sensitive:
+      moderately_sensitive: output/longCovidSymp_analysis_dataset_contemporary.csv
         log: logs/09_longCovidSymp_cr_analysis_dataset.log
 
 
@@ -582,7 +583,7 @@ actions:
 # 10a. IMD CORRECTION (ONLY NEEDED IF ACTION 1 NOT BEING RUN)
   imd_correction:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_imd_correction
-    needs: [create_analysis_file, create_analysis_file]
+    needs: [create_analysis_file]
     outputs:
       highly_sensitive:
         cohort: output/input_imd_correction.csv
