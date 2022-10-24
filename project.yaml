@@ -571,15 +571,6 @@ actions:
         log: logs/09_longCovidSymp_cr_analysis_dataset.log
 
 
-# 10. CHECK DATA FOR COMBINED CASE AND CONTROL FILE
-  data_checks:
-    run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do
-    needs: [create_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/10_longCovidSymp_data_checks.log
-
-
 # 10a. IMD CORRECTION (ONLY NEEDED IF ACTION 1 NOT BEING RUN)
   imd_correction:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_imd_correction
@@ -600,10 +591,19 @@ actions:
         log: logs/10b_longCovidSymp_add_correctIMD.log
 
 
+# 10c. CHECK DATA FOR COMBINED CASE AND CONTROL FILE
+  data_checks:
+    run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do
+    needs: [create_analysis_file, add_corrected_imd]
+    outputs:
+      moderately_sensitive:
+        log: logs/10_longCovidSymp_data_checks.log
+
+
 # 11. DESCRIPTIVE TABLE
   table_1_contemporary:
     run: stata-mp:latest analysis/11_longCovidSymp_table1contemporary.do
-    needs: [create_analysis_file]
+    needs: [create_analysis_file, add_corrected_imd]
     outputs:
       moderately_sensitive:
         log: logs/11_longCovidSymp_table1contemporary.log
