@@ -35,6 +35,7 @@ log using ./logs/10b_longCovidSymp_add_correctIMD.log, replace t
 capture noisily import delimited ./output/input_imd_correction.csv, clear
 duplicates drop patient_id, force
 keep patient_id imd
+tab imd
 
 *(c)===IMD===
 * Group into 5 groups
