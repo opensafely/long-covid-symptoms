@@ -61,8 +61,8 @@ codebook
 use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
 drop imd
 *for dummy data only
-duplicates drop patient_id, force
-merge 1:m patient_id using `imd'
+*duplicates drop patient_id, force
+merge m:1 patient_id using `imd'
 keep if _merge==3
 drop _merge
 
