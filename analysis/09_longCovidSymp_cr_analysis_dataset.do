@@ -417,8 +417,11 @@ replace caseHospForCOVIDDurFUP3=1 if covid_hosp>(case_index_date + 180)  & case=
 la var caseHospForCOVIDDurFUP3 "comparator who had COVID during FUP period 3"
 	
 
-*save final file (inc .csv version in case needed)
+*save final file
 save ./output/longCovidSymp_analysis_dataset_contemporary.dta, replace
+*save a version that contains only the patient_ids and removes duplicates (for correcting imd and any other covariates assessed independent of case index date)
+duplicates drop patient_id, force
+keep patient_id
 capture noisily export delimited using "./output/longCovidSymp_analysis_dataset_contemporary.csv", replace
 
 
