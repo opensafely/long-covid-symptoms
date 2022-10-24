@@ -66,7 +66,7 @@ merge 1:m patient_id using `imd'
 keep if _merge==3
 drop _merge
 
-save longCovidSymp_analysis_dataset_contemp_correctIMD.dta, replace
+save ./output/longCovidSymp_analysis_dataset_contemp_correctIMD.dta, replace
 
 
 log close

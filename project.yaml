@@ -582,7 +582,7 @@ actions:
 # 10a. IMD CORRECTION (ONLY NEEDED IF ACTION 1 NOT BEING RUN)
   imd_correction:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_imd_correction
-    needs: [create_analysis_file]
+    needs: [create_analysis_file, create_analysis_file]
     outputs:
       highly_sensitive:
         cohort: output/input_imd_correction.csv
