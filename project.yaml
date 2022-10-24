@@ -567,7 +567,7 @@ actions:
         mainAnalysisFile: output/longCovidSymp_analysis_dataset_contemporary.dta
         mainAnalysisFileCSV: 
         unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_analysis_dataset.dta
-      moderately_sensitive: output/longCovidSymp_analysis_dataset_contemporary.csv
+        moderately_sensitive: output/longCovidSymp_analysis_dataset_contemporary.csv
         log: logs/09_longCovidSymp_cr_analysis_dataset.log
 
 
