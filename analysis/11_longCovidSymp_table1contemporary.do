@@ -50,7 +50,7 @@ program define generaterow
 syntax, variable(varname) condition(string) 
 	
 	cou
-	local overalldenom=r(N)
+	local overalldenom=round(r(N),5)
 	
 	sum `variable' if `variable' `condition'
 	**K Wing additional code to aoutput variable category labels**
@@ -63,7 +63,7 @@ syntax, variable(varname) condition(string)
 	
 	/*this is the overall column*/
 	cou if `variable' `condition'
-	local rowdenom = r(N)
+	local rowdenom = round(r(N),5)
 	local colpct = 100*(r(N)/`overalldenom')
 	*file write tablecontent %9.0gc (`rowdenom')  (" (") %3.1f (`colpct') (")") _tab
 	file write tablecontent %9.0f (`rowdenom')  (" (") %3.1f (`colpct') (")") _tab
@@ -73,9 +73,9 @@ syntax, variable(varname) condition(string)
 		cou if case == `i'
 		local rowdenom = r(N)
 		cou if case == `i' & `variable' `condition'
-		local pct = 100*(r(N)/`rowdenom') 
+		local pct = 100*(r(N)/`rowdenom')
 		*file write tablecontent %9.0gc (r(N)) (" (") %3.1f (`pct') (")") _tab
-		file write tablecontent %9.0f (r(N)) (" (") %3.1f (`pct') (")") _tab
+		file write tablecontent %9.0f (round(r(N),5)) (" (") %3.1f (`pct') (")") _tab
 	}
 	
 	file write tablecontent _n
@@ -92,7 +92,7 @@ syntax, variable(varname) condition(string)
 	local overalldenom=r(N)5
 	
 	cou if `variable' `condition'
-	local rowdenom = r(N)
+	local rowdenom = round(r(N),5)
 	local colpct = 100*(r(N)/`overalldenom')
 	file write tablecontent %9.0gc (`rowdenom')  (" (") %3.1f (`colpct') (")") _tab
 
@@ -100,8 +100,8 @@ syntax, variable(varname) condition(string)
 		cou if case == `i'
 		local rowdenom = r(N)
 		cou if case == `i' & `variable' `condition'
-		local pct = 100*(r(N)/`rowdenom') 
-		file write tablecontent %9.0gc (r(N)) (" (") %3.1f (`pct') (")") _tab
+		local pct = 100*(r(N)/`rowdenom')
+		file write tablecontent %9.0gc (round(r(N),5)) (" (") %3.1f (`pct') (")") _tab
 	}
 	
 	file write tablecontent _n
@@ -214,11 +214,11 @@ local lab0: label case 0
 local lab1: label case 1 
 *for display n values
 safecount
-local total=`r(N)'
+local total=round(r(N),5)
 safecount if case==1
-local totalCase=`r(N)'
+local totalCase=round(r(N),5)
 safecount if case==0
-local totalComparator=`r(N)'
+local totalComparator=round(r(N),5)
 
 file write tablecontent _tab ("Total")				  			  		_tab ///
 							 ("Unexposed (2020 general population)")  	_tab ///
