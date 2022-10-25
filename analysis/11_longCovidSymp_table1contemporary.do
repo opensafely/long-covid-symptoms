@@ -220,13 +220,13 @@ local totalCase=`r(N)'
 safecount if case==0
 local totalComparator=`r(N)'
 
-file write tablecontent _tab ("Total")				  			  _tab ///
-							 ("`lab1'")  						  _tab ///
-							 ("`lab0'")  						  _n	
+file write tablecontent _tab ("Total")				  			  		_tab ///
+							 ("Unexposed (2020 general population)")  	_tab ///
+							 ("Exposed (Community COVID-19 record)")  	_n	
 							 
 file write tablecontent _tab ("n=`total'")				  		  _tab ///
-							 ("n=`totalCase'")  				  _tab ///
-							 ("n=`totalComparator'")  			  _n	
+							 ("n=`totalComparator'")  			  _tab ///
+							 ("n=`totalCase'")  			  	  _n	
 							 
 
 
