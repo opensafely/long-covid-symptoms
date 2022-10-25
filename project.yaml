@@ -572,29 +572,29 @@ actions:
 
 
 # 10a. IMD CORRECTION (ONLY NEEDED IF ACTION 1 NOT BEING RUN)
-  imd_correction:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_imd_correction
-    needs: [create_analysis_file]
-    outputs:
-      highly_sensitive:
-        cohort: output/input_imd_correction.csv
+#  imd_correction:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_imd_correction
+#    needs: [create_analysis_file]
+#    outputs:
+#      highly_sensitive:
+#        cohort: output/input_imd_correction.csv
 
 
 # 10b. IMD CORRECTION PART 2
-  add_corrected_imd:
-    run: stata-mp:latest analysis/10b_longCovidSymp_add_correctIMD.do
-    needs: [imd_correction, create_analysis_file]
-    outputs:
-      highly_sensitive:
-        mainAnalysisFile: output/longCovidSymp_analysis_dataset_contemp_correctIMD.dta 
-      moderately_sensitive:
-        log: logs/10b_longCovidSymp_add_correctIMD.log
+#  add_corrected_imd:
+#    run: stata-mp:latest analysis/10b_longCovidSymp_add_correctIMD.do
+#    needs: [imd_correction, create_analysis_file]
+#    outputs:
+#      highly_sensitive:
+#        mainAnalysisFile: output/longCovidSymp_analysis_dataset_contemp_correctIMD.dta 
+#      moderately_sensitive:
+#        log: logs/10b_longCovidSymp_add_correctIMD.log
 
 
-# 10c. CHECK DATA FOR COMBINED CASE AND CONTROL FILE
+# 10. CHECK DATA FOR COMBINED CASE AND CONTROL FILE
   data_checks:
     run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do
-    needs: [create_analysis_file, add_corrected_imd]
+    needs: [create_analysis_file]
     outputs:
       moderately_sensitive:
         log: logs/10_longCovidSymp_data_checks.log
@@ -603,7 +603,7 @@ actions:
 # 11. DESCRIPTIVE TABLE
   table_1_contemporary:
     run: stata-mp:latest analysis/11_longCovidSymp_table1contemporary.do
-    needs: [create_analysis_file, add_corrected_imd]
+    needs: [create_analysis_file]
     outputs:
       moderately_sensitive:
         log: logs/11_longCovidSymp_table1contemporary.log
