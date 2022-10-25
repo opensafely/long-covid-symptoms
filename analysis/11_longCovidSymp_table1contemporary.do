@@ -211,11 +211,22 @@ file write tablecontent ("Table 1: Demographic and clinical characteristics for 
 * eth5 labelled columns *THESE WOULD BE HOUSEHOLD LABELS, eth5 is the equivalent of the hh size variable
 
 local lab0: label case 0
-local lab1: label case 1
+local lab1: label case 1 
+*for display n values
+safecount
+local total=`r(N)'
+safecount if case==1
+local totalCase=`r(N)'
+safecount if case==0
+local totalComparator=`r(N)'
 
 file write tablecontent _tab ("Total")				  			  _tab ///
-							 ("`lab0'")  						  _tab ///
-							 ("`lab1'")  						  _n							 
+							 ("`lab1'")  						  _tab ///
+							 ("`lab0'")  						  _n	
+							 
+file write tablecontent _tab ("n=`total'")				  		  _tab ///
+							 ("n=`totalCase'")  				  _tab ///
+							 ("n=`totalComparator'")  			  _n	
 							 
 
 
