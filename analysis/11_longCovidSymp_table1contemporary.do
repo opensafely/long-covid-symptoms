@@ -69,7 +69,7 @@ syntax, variable(varname) condition(string)
 	file write tablecontent %9.0f (`rowdenom')  (" (") %3.1f (`colpct') (")") _tab
 
 	/*this loops through groups*/
-	forvalues i=1/0{
+	forvalues i=0/1{
 		cou if case == `i'
 		local rowdenom = r(N)
 		cou if case == `i' & `variable' `condition'
