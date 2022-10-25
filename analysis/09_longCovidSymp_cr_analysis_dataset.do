@@ -277,15 +277,13 @@ drop stp_old
 *(c)===IMD===
 * Reverse the order (so high is more deprived)
 tab imd
-rename imd imd_o
 recode imd 5 = 1 4 = 2 3 = 3 2 = 4 1 = 5 .u = .u
 
 label define imd 1 "1 least deprived" 2 "2" 3 "3" 4 "4" 5 "5 most deprived" .u "Unknown"
 label values imd imd
 *check after reordering
 tab imd
-tab imd imd_o
-drop imd_o
+
 
 
 
