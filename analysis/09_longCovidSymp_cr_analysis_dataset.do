@@ -160,8 +160,8 @@ restore
 *(5)=========VARIABLE CLEANING============
 
 *label case variables
-label define case 0 "Case" ///
-				  1 "Comparator (contemporary)"
+label define case 0 "Comparator (contemporary)" ///
+				  1 "Case"
 label values case case
 safetab case 
 
