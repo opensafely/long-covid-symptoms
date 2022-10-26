@@ -206,7 +206,7 @@ end
 cap file close tablecontent
 file open tablecontent using ./output/table1_longCovidSymp_contemporary.txt, write text replace
 
-file write tablecontent ("Table 1: Demographic and clinical characteristics for cases and contemporary matched comparators") _n
+file write tablecontent ("Table 1: Demographic and clinical characteristics for exposed to COVID-19 and contemporary matched unexposed") _n
 
 * eth5 labelled columns *THESE WOULD BE HOUSEHOLD LABELS, eth5 is the equivalent of the hh size variable
 
