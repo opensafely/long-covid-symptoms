@@ -393,7 +393,7 @@ generate compBecameCaseDurFUP2=0 if case==0
 replace compBecameCaseDurFUP2=1 if first_known_covid19>(case_index_date + 85) & first_known_covid19<=(case_index_date + 180) & case==0
 la var compBecameCaseDurFUP2 "comparator who had COVID during FUP period 2"
 generate compBecameCaseDurFUP3=0 if case==0
-replace  compBecameCaseDurFUP3=1 if first_known_covid19>(case_index_date + 180) & case==0
+replace  compBecameCaseDurFUP3=1 if first_known_covid19>(case_index_date + 180) & case==0 & first_known_covid19!=.
 la var compBecameCaseDurFUP3 "comparator who had COVID during FUP period 3"
 
 
@@ -404,10 +404,10 @@ replace caseHospForCOVIDDurFUP1=1 if covid_hosp>(case_index_date + 28) & covid_h
 la var caseHospForCOVIDDurFUP1 "case who was hospitalised for COVID during FUP period 1"
 generate caseHospForCOVIDDurFUP2=0 if case==1
 replace caseHospForCOVIDDurFUP2=1 if covid_hosp>(case_index_date + 85) & covid_hosp<=(case_index_date + 180) & case==1
-la var caseHospForCOVIDDurFUP2 "case who was hospitalised for COVID during FUP period 1"
+la var caseHospForCOVIDDurFUP2 "case who was hospitalised for COVID during FUP period 2"
 generate caseHospForCOVIDDurFUP3=0 if case==1
-replace caseHospForCOVIDDurFUP3=1 if covid_hosp>(case_index_date + 180)  & case==1
-la var caseHospForCOVIDDurFUP3 "comparator who had COVID during FUP period 3"
+replace caseHospForCOVIDDurFUP3=1 if covid_hosp>(case_index_date + 180) & case==1 & covid_hosp!=.
+la var caseHospForCOVIDDurFUP3 "case who was hospitalised for COVID during FUP period 3"
 	
 
 *save final file
