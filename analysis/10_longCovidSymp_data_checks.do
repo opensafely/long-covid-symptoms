@@ -79,8 +79,7 @@ capture noisily assert first_known_covid19>=case_index_date
 
 *(2)=========CHECK TIME RULES FROM PROTOCOL i.e. when index date is in relation to COVID etc============
 *cases
-*(a)case_index_date should be minimum of first positive test or covid diangosis in primary care
-*THIS CODE WILL NEED UPDATED IF/WHEN THE 4 WEEK WINDOW IS ADDED TO THE CASE INDEX DATE
+*(a)case_index_date should be minimum of first positive test or covid diangosis in primary care + 28 days
 capture noisily assert case_index_date==min(first_pos_testw2, covid_tpp_probw2) + 28 if case==1
 *list these variables for the individuals where this didn't hold
 list case_index_date first_pos_testw2 covid_tpp_probw2 if case_index_date!=min(first_pos_testw2, covid_tpp_probw2) + 28 & case==1
@@ -106,13 +105,12 @@ tab compBecameCaseDurFUP3
 
 /*(2)======================CHECK INCLUSION AND EXCLUSION CRITERIA=====================================*/ 
 
-* INCLUSION 1: >=18 and <=110 at 1 March 2020 
+* INCLUSION 1: age <=110 at 1 March 2020 
 capture noisly assert age < .
-*assert age >= 18
 capture noisly assert age <= 110
  
 * INCLUSION 2: M or F gender at 1 March 2020 
-capture noisily assert inlist(male, 0, 1)
+capture noisily assert inlist(sex, 0, 1)
 
 * EXCLUDE 1:  MISSING IMD
 capture noisily assert inlist(imd, 1, 2, 3, 4, 5, .u)
@@ -214,6 +212,9 @@ foreach var of varlist t1_infect_parasite - t3_injury_poison {
 
 * Close log file 
 log close
+
+
+
 
 
 

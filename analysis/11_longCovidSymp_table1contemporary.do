@@ -29,10 +29,8 @@ sysdir set PLUS ./analysis/adofiles
 sysdir set PERSONAL ./analysis/adofiles
 
 
-
 capture log close
 log using ./logs/11_longCovidSymp_table1contemporary.log, replace t
-
 
 * Open Stata dataset
 use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
@@ -50,10 +48,10 @@ program define generaterow
 syntax, variable(varname) condition(string) 
 	
 	cou
-	local overalldenom=round(r(N),5)
+	local overalldenom=r(N)
 	
 	sum `variable' if `variable' `condition'
-	**K Wing additional code to aoutput variable category labels**
+	**K Wing additional code to output variable category labels**
 	local level=substr("`condition'",3,.)
 	local lab: label `variable' `level'
 	file write tablecontent (" `lab'") _tab
@@ -61,17 +59,24 @@ syntax, variable(varname) condition(string)
 	*local lab: label hhRiskCatExp_5catsLabel 4
 
 	
-	/*this is the overall column*/
+	/*this is the overall column - had to edit this so that the row totals are the SUM OF THE ROUNDED COUNTS FOR EXPOSED AND UNEXPOSED, not the rounded total (as these may not match)*/
+	/*old code
 	cou if `variable' `condition'
 	local rowdenom = round(r(N),5)
 	local colpct = 100*(r(N)/`overalldenom')
-	*file write tablecontent %9.0gc (`rowdenom')  (" (") %3.1f (`colpct') (")") _tab
+	*/
+	*updated code where the row totals (i.e. the "Total" column) is the sum of the two rounded values for the exposed (COVID case) and unexposed (comparator) columns
+	/*this is the overall column - had to edit this so that the row totals are the SUM OF THE ROUNDED COUNTS FOR EXPOSED AND UNEXPOSED, not the rounded total (as these may not match)*/
+	forvalues i=0/1{
+		cou if case == `i' & `variable' `condition'
+		local subTotal_`i'=round(r(N),5)
+	}
+	local rowdenom = `subTotal_0' + `subTotal_1'
+	local colpct = 100*(`rowdenom'/`overalldenom')
 	file write tablecontent %9.0f (`rowdenom')  (" (") %3.1f (`colpct') (")") _tab
 
 	/*this loops through groups*/
 	forvalues i=0/1{
-		cou if case == `i'
-		local rowdenom = r(N)
 		cou if case == `i' & `variable' `condition'
 		local pct = 100*(r(N)/`rowdenom')
 		*file write tablecontent %9.0gc (r(N)) (" (") %3.1f (`pct') (")") _tab
@@ -83,13 +88,13 @@ end
 
 
 * Output one row of table for co-morbidities and meds
-
+/*
 cap prog drop generaterow2 /*this puts it all on the same row, is rohini's edit*/
 program define generaterow2
 syntax, variable(varname) condition(string) 
 	
 	cou
-	local overalldenom=r(N)5
+	local overalldenom=round(r(N),5)
 	
 	cou if `variable' `condition'
 	local rowdenom = round(r(N),5)
@@ -106,6 +111,7 @@ syntax, variable(varname) condition(string)
 	
 	file write tablecontent _n
 end
+*/
 
 
 
@@ -209,16 +215,17 @@ file open tablecontent using ./output/table1_longCovidSymp_contemporary.txt, wri
 file write tablecontent ("Table 1: Demographic and clinical characteristics for exposed to COVID-19 and contemporary matched unexposed") _n
 
 * eth5 labelled columns *THESE WOULD BE HOUSEHOLD LABELS, eth5 is the equivalent of the hh size variable
+*these are NOT ROUNDED - will do this manually in excel, am keeping them unrounded as a sanity check
 
 local lab0: label case 0
 local lab1: label case 1 
 *for display n values
-safecount
-local total=round(r(N),5)
 safecount if case==1
-local totalCase=round(r(N),5)
+local totalCase=r(N)
 safecount if case==0
-local totalComparator=round(r(N),5)
+local totalComparator=r(N)
+safecount
+local total=r(N)
 
 file write tablecontent _tab ("Total")				  			  		_tab ///
 							 ("Unexposed (2020 general population)")  	_tab ///
