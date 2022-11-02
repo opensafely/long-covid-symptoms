@@ -371,6 +371,12 @@ foreach var of varlist case_index_date - first_known_covid19 {
 
 }
 
+*(f2)Create variables for each outcome that are "EVER HAD"
+foreach var of varlist infect_parasite - injury_poison {
+	generate tEver_`var'=0
+	replace tEver_`var'=1 if `var'==.
+}
+
 
 *(g) Sex
 rename sex sexOrig
