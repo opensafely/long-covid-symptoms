@@ -375,7 +375,13 @@ foreach var of varlist case_index_date - first_known_covid19 {
 foreach var of varlist infect_parasite - injury_poison {
 	generate tEver_`var'=0
 	replace tEver_`var'=1 if `var'==.
-}
+} 
+
+*create variable names
+foreach var of varlist tEver_infect_parasite - tEver_injury_poison {
+	label variable `var' "`var'"
+} 
+
 
 
 *(g) Sex
