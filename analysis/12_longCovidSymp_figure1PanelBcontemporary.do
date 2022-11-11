@@ -14,7 +14,7 @@
 
 *checking tabulations
 capture log close
-log using ./logs/12_longCovidSymp_figure1contemporary.log, replace t
+log using ./logs/12_longCovidSymp_figure1PanelBcontemporary.log, replace t
 
 *list of all outcomes
 global diagnosisOutcomes tEver_infect_parasite tEver_neoplasms tEver_blood_diseases tEver_endocr_nutr_dis tEver_mental_disorder tEver_nervous_sys_dis tEver_ear_mastoid_dis tEver_circ_sys_dis tEver_resp_system_dis tEver_digest_syst_dis tEver_skin_disease tEver_musculo_dis tEver_genitourin_dis tEver_pregnancy_compl tEver_perinatal_dis tEver_congenital_dis tEver_injury_poison
@@ -39,6 +39,9 @@ prog define outputORsforOutcome
 	*get ORs for each regression analysis
 	*crude 
 	display "`outcome' adjusted only for matched"
+	*tabulate values for checking output table against log files
+	safetab expStatus `outcome', row
+	*conditional logistic regressions
 	capture noisily clogit `outcome' i.expStatus, strata(set_id) or
 	*this lincom ensures OR and CI can be stored in the r values, doesn't work straight from clogit
 	capture noisily lincom 1.expStatus, or
