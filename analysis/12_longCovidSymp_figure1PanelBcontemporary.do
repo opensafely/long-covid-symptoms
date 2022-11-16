@@ -6,11 +6,14 @@
 * of interest, across 2 outcomes 
 *
 *Requires: final analysis dataset (analysis_dataset.dta)
+
 *
 *Coding: K Wing, base on file from HFORBES, based on file from Krishnan Bhaskaran
 *
 *Date drafted: 17th June 2021
 *************************************************************************
+sysdir set PLUS ./analysis/adofiles
+sysdir set PERSONAL ./analysis/adofiles
 
 *checking tabulations
 capture log close
@@ -48,16 +51,16 @@ prog define outputORsforOutcome
 	local hr_crude = r(estimate)
 	local lb_crude = r(lb)
 	local ub_crude = r(ub)
-	*depr and ethnicity adjusted
+	*depr, ethnicity and rural/urban adjusted
 	display "`outcome' additionally adjusted for deprivation and ethnicity"
-	capture noisily clogit `outcome' i.expStatus i.imd i.ethnicity, strata(set_id) or
+	capture noisily clogit `outcome' i.expStatus i.imd i.ethnicity i._rural_urban, strata(set_id) or
 	capture noisily lincom 1.expStatus, or
 	local hr_deprEth_adj = r(estimate)
 	local lb_deprEth_adj = r(lb)
 	local ub_deprEth_adj = r(ub)
-	*fully adjusted
+	*fully adjusted (adding comorbs)
 	display "`outcome' additionally adjusted for rural/urban status"
-	capture noisily clogit `outcome' i.expStatus i.imd i.ethnicity i.rural_urban, strata(set_id) or
+	capture noisily clogit `outcome' i.expStatus i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	capture noisily lincom 1.expStatus, or
 	local hr_full_adj = r(estimate)
 	local lb_full_adj = r(lb)
