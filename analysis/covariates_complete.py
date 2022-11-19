@@ -74,6 +74,14 @@ def generate_covariates_complete(index_date_variable):
     ),
 
 
+    #NUMBER OF GP CONSULTATIONS IN THE PREVIOUS YEAR
+    gp_count=patients.with_gp_consultations(
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="number_of_matches_in_period",
+        return_expectations={"int": {"distribution": "normal", "mean": 6, "stddev": 3},"incidence": 0.6,},
+    ),
+
+
 
 
     # COMORBIDITIES (PRIOR DIAGNOSES OF BROAD DIAGNOSTIC CATEGORIES)
