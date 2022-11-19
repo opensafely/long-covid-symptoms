@@ -27,15 +27,19 @@ log using ./logs/08a_checkVars_casesControls_after_adding_furtherVars.log, repla
 
 *(0)========Cases==============
 capture noisily import delimited ./output/input_complete_covid_communitycases.csv, clear
-codebook
- 
+*codebook
+
+*check distribution of gp consultations in previous year in order to plan for caregorical variable
+sum gp_count, detail
+
  
 *(0)========Comparators==============
 capture noisily import delimited ./output/input_complete_controls_contemporary.csv, clear
-codebook
+*codebook
 
 
-
+*check distribution of gp consultations in previous year in order to plan for caregorical variable
+sum gp_count, detail
 
 
 
