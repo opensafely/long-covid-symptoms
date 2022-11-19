@@ -70,11 +70,24 @@ save `comp_match_info', replace
 *NUMBER OF MATCHED CONTROLS BEFORE DROPPING THOSE DUE TO FOLLOW-UP ISSUES RELATED TO CASE_INDEX_DATE (SEE BELOW)
 count
 
+*(1a)========Get the gp conslutation count variable for cases and controls============
+capture noisily import delimited ./output/input_gpconsultations_cases_contemporary.csv, clear
+keep patient_id gp_count
+tempfile case_gp_count
+save `case_gp_count'
+capture noisily import delimited ./output/input_gpconsultations_controls_contemporary.csv
+keep patient_id gp_count
+tempfile control_gp_count
+save `control_gp_count'
 
 *(2)=========Add the case and comparator information from above to the files with the rest of the information============
 *import (matched) cases with variables and merge with match variables
 capture noisily import delimited ./output/input_complete_covid_communitycases.csv, clear
 merge 1:1 patient_id using `cases_match_info'
+keep if _merge==3
+drop _merge
+*add gp_count
+merge 1:1 patient_id using `case_gp_count'
 keep if _merge==3
 drop _merge
 tempfile cases_with_vars_and_match_info
@@ -86,6 +99,10 @@ safecount
 
 capture noisily import delimited ./output/input_complete_controls_contemporary.csv, clear
 merge 1:1 patient_id using `comp_match_info'
+keep if _merge==3
+drop _merge
+*add gp_count
+merge 1:1 patient_id using `control_gp_count'
 keep if _merge==3
 drop _merge
 tempfile comp_with_vars_and_match_info
