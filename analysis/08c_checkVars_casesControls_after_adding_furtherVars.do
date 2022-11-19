@@ -23,22 +23,24 @@ pwd
 
 * Open a log file
 cap log close
-log using ./logs/08a_checkVars_casesControls_after_adding_furtherVars.log, replace t
+log using ./logs/08c_checkVars_casesControls_after_adding_furtherVars.log, replace t
 
 *(0)========Cases==============
-capture noisily import delimited ./output/input_complete_covid_communitycases.csv, clear
+*capture noisily import delimited ./output/input_complete_covid_communitycases.csv, clear
 *codebook
 
 *check distribution of gp consultations in previous year in order to plan for caregorical variable
+capture noisily import delimited ./output/input_gpconsultations_cases_contemporary.csv, clear
 sum gp_count, detail
 
  
 *(0)========Comparators==============
-capture noisily import delimited ./output/input_complete_controls_contemporary.csv, clear
+*capture noisily import delimited ./output/input_complete_controls_contemporary.csv, clear
 *codebook
 
 
 *check distribution of gp consultations in previous year in order to plan for caregorical variable
+capture noisily import delimited ./output/input_gpconsultations_controls_contemporary.csv
 sum gp_count, detail
 
 
