@@ -52,19 +52,26 @@ prog define outputORsforOutcome
 	local lb_crude = r(lb)
 	local ub_crude = r(ub)
 	*depr, ethnicity and rural/urban adjusted
-	display "`outcome' additionally adjusted for deprivation and ethnicity"
+	display "`outcome' additionally adjusted for deprivation, ethnicity and rural/urban"
 	capture noisily clogit `outcome' i.expStatus i.imd i.ethnicity i._rural_urban, strata(set_id) or
 	capture noisily lincom 1.expStatus, or
 	local hr_deprEth_adj = r(estimate)
 	local lb_deprEth_adj = r(lb)
 	local ub_deprEth_adj = r(ub)
-	*fully adjusted (adding comorbs)
-	display "`outcome' additionally adjusted for rural/urban status"
+	*Adding comorbs
+	display "`outcome' additionally adjusted for comorbidities"
 	capture noisily clogit `outcome' i.expStatus i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	capture noisily lincom 1.expStatus, or
 	local hr_full_adj = r(estimate)
 	local lb_full_adj = r(lb)
 	local ub_full_adj = r(ub)
+	*Adding consultation rate
+	display "`outcome' additionally adjusted for number of consultations in previous year"
+	capture noisily clogit `outcome' i.expStatus i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs i.gpCountCat, strata(set_id) or
+	capture noisily lincom 1.expStatus, or
+	local hr_fullwgpCountCat_adj = r(estimate)
+	local lb_fullwgpCountCat_adj = r(lb)
+	local ub_fullwgpCountCat_adj = r(ub)
 					
 	*get variable name
 	local varLab: variable label `outcome'
@@ -77,9 +84,11 @@ prog define outputORsforOutcome
 	*crude 
 	file write tablecontents  ("`varLab'") _tab ("vs 2020 general population") _tab ("Crude") _tab %4.2f (`hr_crude')  " (" %4.2f (`lb_crude') "-" %4.2f (`ub_crude') ")" _tab (`events') _tab %3.1f (`percWEvent') ("%")  _n
 	*depr and ethnicity adjusted
-	file write tablecontents  _tab _tab ("Adjusted for deprivation & ethnicity") _tab %4.2f (`hr_deprEth_adj')  " (" %4.2f (`lb_deprEth_adj') "-" %4.2f (`ub_deprEth_adj ') ")"  _n
+	file write tablecontents  _tab _tab ("Adjusted for deprivation, ethnicity &rural/urban") _tab %4.2f (`hr_deprEth_adj')  " (" %4.2f (`lb_deprEth_adj') "-" %4.2f (`ub_deprEth_adj') ")"  _n
 	*fully adjusted
-	file write tablecontents  _tab _tab ("Additionally adjusted for rural/urban") _tab %4.2f (`hr_full_adj')  " (" %4.2f (`lb_full_adj') "-" %4.2f (`ub_full_adj ') ")"  _n
+	file write tablecontents  _tab _tab ("Additionally adjusted for comorbidities") _tab %4.2f (`hr_full_adj')  " (" %4.2f (`lb_full_adj') "-" %4.2f (`ub_full_adj') ")"  _n
+	*with gp conslutations
+	file write tablecontents  _tab _tab ("Additionally adjusted for gp consultations in previous year") _tab %4.2f (`hr_fullwgpCountCat_adj')  " (" %4.2f (`lb_fullwgpCountCat_adj') "-" %4.2f (`ub_fullwgpCountCat_adj ') ")"  _n
 
 end
 
