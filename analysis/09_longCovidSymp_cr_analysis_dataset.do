@@ -281,6 +281,15 @@ label values eth16 eth16
 safetab eth16,m
 
 
+*(a2)gp_count - create a categorical variable that
+*gp_count categorised as 0, 1-5, 6+
+egen gpCountCat=cut(gp_count), at (0, 1, 6, 100000)
+recode gpCountCat 0=0 1=1 6=2
+label define gpCountCat 0 "0" 1 "1-5" 2 "6+"
+label values gpCountCat gpCountCat
+safetab gpCountCat, miss
+la var gpCountCat "Categorised number of GP appts in previous year"
+
 
 *(b)===STP====
 *For ease of future analysis(?) am going to recode these as numerical ordered at this stage, also drop if STP is missing
