@@ -40,7 +40,7 @@ sum gp_count, detail
 
 
 *check distribution of gp consultations in previous year in order to plan for caregorical variable
-capture noisily import delimited ./output/input_gpconsultations_controls_contemporary.csv
+capture noisily import delimited ./output/input_gpconsultations_controls_contemporary.csv, clear
 sum gp_count, detail
 
 
