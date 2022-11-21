@@ -122,6 +122,12 @@ capture noisily assert stp!=.
 
 
 
+/*(2a)======================CHECK GP_COUNT=====================================*/ 
+safetab gpCountCat
+safetab case gpCountCat
+
+
+
 /*(3)===============CHECK EXPECTED VALUES============================================================*/ 
 
 * Age (2 versions)
