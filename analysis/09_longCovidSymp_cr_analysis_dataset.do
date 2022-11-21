@@ -72,10 +72,12 @@ count
 
 *(1a)========Get the gp conslutation count variable for cases and controls============
 capture noisily import delimited ./output/input_gpconsultations_cases_contemporary.csv, clear
+count
 keep patient_id gp_count
 tempfile case_gp_count
 save `case_gp_count'
-capture noisily import delimited ./output/input_gpconsultations_controls_contemporary.csv
+capture noisily import delimited ./output/input_gpconsultations_controls_contemporary.csv, clear
+count
 keep patient_id gp_count
 tempfile control_gp_count
 save `control_gp_count'
