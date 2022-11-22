@@ -300,11 +300,89 @@
       "downloaded_at": "2022-08-22 13:01:22.464184Z",
       "sha": "2b601916cacaa83467579ac2ed7fc423400b465a"
     },
-    "user-kate-mansfield-symptoms-breathlessness.csv": {
-      "id": "user/kate-mansfield/symptoms-breathlessness/620703ec",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/symptoms-breathlessness/620703ec/",
-      "downloaded_at": "2022-08-22 13:01:22.720013Z",
-      "sha": "fbfafcb1007cdf94670d8db4b132e13c9c9b89c0"
+    "user-kate-mansfield-symptoms-breathlessness-new.csv": {
+      "id": "user/kate-mansfield/symptoms-breathlessness-new/2b952474",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/symptoms-breathlessness-new/2b952474/",
+      "downloaded_at": "2022-11-22 10:05:04.627771Z",
+      "sha": "9824aaf688e7c392fcd0a206455a825b83c02968"
+    },
+    "user-kate-mansfield-draft-symptoms-chest-pain.csv": {
+      "id": "user/kate-mansfield/draft-symptoms-chest-pain/7c28fdff",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/draft-symptoms-chest-pain/7c28fdff/",
+      "downloaded_at": "2022-11-22 10:05:04.888514Z",
+      "sha": "b88af3ec2df01b710399a7f6bbff1f35fe047338"
+    },
+    "user-kate-mansfield-draft-symptoms-chest-tightness.csv": {
+      "id": "user/kate-mansfield/draft-symptoms-chest-tightness/40b9ace1",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/draft-symptoms-chest-tightness/40b9ace1/",
+      "downloaded_at": "2022-11-22 10:05:05.146582Z",
+      "sha": "75d4b41555d8ff127be6e616847664a6cce3899b"
+    },
+    "user-kate-mansfield-draft-symptoms-cough.csv": {
+      "id": "user/kate-mansfield/draft-symptoms-cough/72d8934b",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/draft-symptoms-cough/72d8934b/",
+      "downloaded_at": "2022-11-22 10:05:05.357843Z",
+      "sha": "a01cd677e02b9958eaab59cc6aa02c949d375e04"
+    },
+    "user-kate-mansfield-draft-symptoms-dizzy.csv": {
+      "id": "user/kate-mansfield/draft-symptoms-dizzy/5c7be00c",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/draft-symptoms-dizzy/5c7be00c/",
+      "downloaded_at": "2022-11-22 10:05:05.575543Z",
+      "sha": "de13a43eaf6cb19abbc134fca13f08f776ceeb68"
+    },
+    "user-kate-mansfield-draft-symptoms-fatigue.csv": {
+      "id": "user/kate-mansfield/draft-symptoms-fatigue/0e9ac677",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/draft-symptoms-fatigue/0e9ac677/",
+      "downloaded_at": "2022-11-22 10:05:05.833987Z",
+      "sha": "7b53acb7e3adc3174114853d87a13ff2f65844c2"
+    },
+    "user-kate-mansfield-draft-symptoms-fever.csv": {
+      "id": "user/kate-mansfield/draft-symptoms-fever/758b5341",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/draft-symptoms-fever/758b5341/",
+      "downloaded_at": "2022-11-22 10:05:06.103714Z",
+      "sha": "189b0d500e232993d0cdf89d65a5ab1b3fa4bd99"
+    },
+    "user-kate-mansfield-draft-symptoms-mobility-impairment-v2.csv": {
+      "id": "user/kate-mansfield/draft-symptoms-mobility-impairment-v2/62a81387",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/draft-symptoms-mobility-impairment-v2/62a81387/",
+      "downloaded_at": "2022-11-22 10:05:06.346269Z",
+      "sha": "9025c47838241f7e9c9fea3a6fc78b7d25fe7e68"
+    },
+    "user-kate-mansfield-draft-symptoms-palpitations.csv": {
+      "id": "user/kate-mansfield/draft-symptoms-palpitations/27aa39ac",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/draft-symptoms-palpitations/27aa39ac/",
+      "downloaded_at": "2022-11-22 10:05:06.592895Z",
+      "sha": "89efa42fa550e59c2c5927d4de14f43575a8d023"
+    },
+    "user-kate-mansfield-draft-symptoms-peripheral-neuropathy.csv": {
+      "id": "user/kate-mansfield/draft-symptoms-peripheral-neuropathy/09fbfa1a",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/draft-symptoms-peripheral-neuropathy/09fbfa1a/",
+      "downloaded_at": "2022-11-22 10:05:06.913278Z",
+      "sha": "32d9b317091b10f2759448599376898a8ac587df"
+    },
+    "user-kate-mansfield-draft-symptoms-sleep-disturbance.csv": {
+      "id": "user/kate-mansfield/draft-symptoms-sleep-disturbance/59c92016",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/draft-symptoms-sleep-disturbance/59c92016/",
+      "downloaded_at": "2022-11-22 10:05:07.128508Z",
+      "sha": "cdf977c0493e5d22a414773af7647c33d7024d15"
+    },
+    "user-kate-mansfield-draft-symptoms-delirium.csv": {
+      "id": "user/kate-mansfield/draft-symptoms-delirium/6e39c6ee",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/draft-symptoms-delirium/6e39c6ee/",
+      "downloaded_at": "2022-11-22 10:24:02.352032Z",
+      "sha": "07de589bd96261882aa346a90f47106bcdbc496f"
+    },
+    "user-kate-mansfield-draft-symptoms-hair-loss.csv": {
+      "id": "user/kate-mansfield/draft-symptoms-hair-loss/1da5ed63",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/draft-symptoms-hair-loss/1da5ed63/",
+      "downloaded_at": "2022-11-22 10:24:02.557763Z",
+      "sha": "ce89eea25fae675fd4150e66be6ff41991d423e5"
+    },
+    "user-kate-mansfield-draft-symptoms-headache-v2.csv": {
+      "id": "user/kate-mansfield/draft-symptoms-headache-v2/14c6f9f2",
+      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/draft-symptoms-headache-v2/14c6f9f2/",
+      "downloaded_at": "2022-11-22 10:24:03.588370Z",
+      "sha": "a0110663d2f6fc4f18f3bc98914ebda54b94e531"
     }
   }
 }
