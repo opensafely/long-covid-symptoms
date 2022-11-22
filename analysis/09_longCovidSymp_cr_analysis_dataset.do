@@ -70,7 +70,7 @@ save `comp_match_info', replace
 *NUMBER OF MATCHED CONTROLS BEFORE DROPPING THOSE DUE TO FOLLOW-UP ISSUES RELATED TO CASE_INDEX_DATE (SEE BELOW)
 count
 
-*(1a)========Get the gp conslutation count variable for cases and controls============
+*(1a)========Get the gp consultation count variable for cases and controls============
 capture noisily import delimited ./output/input_gpconsultations_cases_contemporary.csv, clear
 count
 keep patient_id gp_count
@@ -82,6 +82,20 @@ keep patient_id gp_count
 tempfile control_gp_count
 save `control_gp_count'
 
+
+*(1b)========Get the symptom information for cases and controls============
+capture noisily import delimited ./output/input_symptoms_cases_contemporary.csv, clear
+count
+drop case_index_date
+tempfile case_symptoms
+save `case_symptoms'
+capture noisily import delimited ./output/input_symptoms_controls_contemporary.csv, clear
+count
+drop case_index_date
+tempfile control_symptoms
+save `control_symptoms'
+
+
 *(2)=========Add the case and comparator information from above to the files with the rest of the information============
 *import (matched) cases with variables and merge with match variables
 capture noisily import delimited ./output/input_complete_covid_communitycases.csv, clear
@@ -90,6 +104,10 @@ keep if _merge==3
 drop _merge
 *add gp_count
 merge 1:1 patient_id using `case_gp_count'
+keep if _merge==3
+drop _merge
+*add symptoms
+merge 1:1 patient_id using `case_symptoms'
 keep if _merge==3
 drop _merge
 tempfile cases_with_vars_and_match_info
@@ -105,6 +123,10 @@ keep if _merge==3
 drop _merge
 *add gp_count
 merge 1:1 patient_id using `control_gp_count'
+keep if _merge==3
+drop _merge
+*add symptoms
+merge 1:1 patient_id using `control_symptoms'
 keep if _merge==3
 drop _merge
 tempfile comp_with_vars_and_match_info
@@ -388,9 +410,9 @@ la var preExistComorbCat "Number of comorbidities diagnosed in prev yr"
 
 *(f) Recode all dates from the strings 
 *order variables to make for loop quicker
-order patient_id case_index_date first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_hosp pos_covid_test_ever infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_disorder nervous_sys_dis ear_mastoid_dis circ_sys_dis resp_system_dis digest_syst_dis skin_disease musculo_dis genitourin_dis pregnancy_compl perinatal_dis congenital_dis injury_poison death_date dereg_date first_known_covid19
+order patient_id case_index_date first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_hosp pos_covid_test_ever infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_disorder nervous_sys_dis ear_mastoid_dis circ_sys_dis resp_system_dis digest_syst_dis skin_disease musculo_dis genitourin_dis pregnancy_compl perinatal_dis congenital_dis injury_poison death_date dereg_date first_known_covid19 symp_breathless-symp_headache
 *have to rename some variables here as too long
-foreach var of varlist case_index_date - first_known_covid19 {
+foreach var of varlist case_index_date - symp_headache {
 	capture noisily confirm string variable `var'
 	capture noisily rename `var' `var'_dstr
 	capture noisily gen `var' = date(`var'_dstr, "YMD")
@@ -400,13 +422,13 @@ foreach var of varlist case_index_date - first_known_covid19 {
 }
 
 *(f2)Create variables for each outcome that are "EVER HAD"
-foreach var of varlist infect_parasite - injury_poison {
+foreach var of varlist infect_parasite - symp_headache {
 	generate tEver_`var'=0
 	replace tEver_`var'=1 if `var'!=.
 } 
 
 *create variable names
-foreach var of varlist tEver_infect_parasite - tEver_injury_poison {
+foreach var of varlist tEver_infect_parasite - tEver_symp_headache {
 	label variable `var' "`var'"
 } 
 
