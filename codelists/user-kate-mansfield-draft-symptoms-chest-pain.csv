@@ -1,0 +1,160 @@
+code,term
+10000006,Radiating chest pain
+102587001,Acute chest pain
+102588006,Chest wall pain
+102589003,Atypical chest pain
+102591006,Chest wall tenderness
+110742002,Pleura and chest wall (combined site)
+120151002,Chest wall closure
+128256001,Respiratory finding on palpation of chest wall
+13057000,Pleuropericardial chest pain
+139228007,Chest pain
+139230009,Central chest pain
+139231008,Precordial pain
+139232001,Anterior chest wall pain
+139234000,Parasternal pain
+139236003,Atypical chest pain
+139237007,Retrosternal pain
+139238002,Chest pain on exertion
+139239005,Rib pain
+139240007,Chest pain NOS
+139693002,(Symptom: chest wall) or (C/O symptom: [chest wall] or [abdominal wall])
+152096003,Referred to acute chest pain clinic
+152099005,Referral to rapid access chest pain clinic
+153403001,Seen in rapid access chest pain clinic
+156848001,(Bone/cartilage disorder NOS) or (costochrondritis) or (Tietze's syndrome)
+158393008,[D]Chest pain
+158394002,[D]Precordial pain
+158396000,[D]Anterior chest wall pain
+158399007,[D]Chest discomfort
+158402008,Retrosternal pain [D]
+158403003,[D]Musculoskeletal chest pain
+158404009,[D]Chest pain NOS
+16089411000119109,History of chest pain
+161972006,Central chest pain
+161973001,Anterior chest wall pain
+161974007,Parasternal pain
+161976009,Rib pain
+161977000,Costal margin chest pain
+161978005,Chest pain NOS
+162424004,(Symptom: chest wall) or (C/O symptom: [chest wall] or [abdominal wall])
+162425003,Chest wall tenderness
+181608004,Entire chest wall
+181610002,Specified chest wall NEC
+181611003,Chest wall NEC
+183867000,Referred to acute chest pain clinic
+183870001,Referral to rapid access chest pain clinic
+185199005,Seen in rapid access chest pain clinic
+194835008,Ischaemic chest pain
+203323007,(Bone infection NOS of other specified site) or (costochondritis NOS)
+203523006,Costochondritis
+203529005,(Bone or cartilage disorders NOS) or (costochondritis NOS)
+203731000000105,History of chest pain
+204811001,Entire substernal region
+207078009,[D]Chest pain
+207079001,[D](Chest pain: (unspecified) or (retrosternal))
+207080003,[D]Precordial pain
+207081004,[D]Anterior chest wall pain
+207082006,[D]Painful respiration NOS
+207085008,[D]Chest discomfort
+207088005,[D]Parasternal chest pain
+207089002,[D]Musculoskeletal chest pain
+207090006,[D]Non-cardiac chest pain
+207091005,[D]Retrosternal chest pain
+207092003,[D]Central chest pain
+207093008,[D]Chest pain NOS
+207583009,[X]Other chest pain
+2237002,Pleuritic pain
+225566008,Ischemic chest pain
+225708008,Precordial thump
+233845001,Cardiac syndrome X
+23476008,Destruction of lesion of chest wall
+239671000000106,Cardiac chest pain
+240136001,Costochondritis NOS
+244237006,Chest wall artery
+251897005,Chest pain rating
+255568007,Retrosternal
+261149009,Parasternal
+261168007,Posterolateral chest wall
+264076007,Lower left parasternal
+264245006,Upper left parasternal
+267107009,Symptom: chest wall
+268130001,(Bone/cartilage disorder NOS) or (costochrondritis) or (Tietze's syndrome)
+271330001,"[D]Chest pain, unspecified"
+274253004,[D]Retrosternal pain
+274664007,Chest pain on breathing
+274668005,Non-cardiac chest pain
+276501006,Symptom: chest wall
+279019008,Central crushing chest pain
+279084009,Chest discomfort
+279231003,Entire precordium
+279234006,Retrosternal region
+279242007,Parasternal line
+281245003,Musculoskeletal chest pain
+285385002,Left sided chest pain
+285386001,Right sided chest pain
+285389008,Upper chest pain
+297217002,Rib pain
+297791000000102,Central anterior chest wall structure
+29857009,Chest pain
+308150007,[D]Retrosternal chest pain
+309552003,[D]Painful respiration
+313438003,[D]Central chest pain
+315014005,Seen in rapid access chest pain clinic
+315015006,Referral to rapid access chest pain clinic
+33547000,Structure of substernal region
+3368006,Dull chest pain
+34791000119103,Chest pain due to pericarditis
+366958004,Chest wall pain
+367183005,Chest wall pain
+36859004,Esophageal chest pain
+371030007,Squeezing chest pain
+372074006,Skeletal muscle structure of chest wall
+372172008,Chest wall part
+372216005,Part of chest wall
+393606005,Costochondritis
+397721000000106,[D]Chest pain NOS
+420695009,Absence of precordial signs
+421243000,Precordial lift
+421433001,Precordial heave
+422296006,Precordial sign
+425421000000105,[X]Other chest pain
+426396005,Cardiac chest pain
+430894003,Strain of muscle of chest wall
+43470008,Pain in heart
+440571000000100,[D]Painful respiration NOS
+444821009,Assessment of chest pain
+4568003,Retrosternal pain
+46707002,Structure of precordium
+471551000000103,[D]Chest pain NOS
+498151000000109,[D]Chest pain
+498161000000107,[D]Precordial pain
+498171000000100,[D]Anterior chest wall pain
+498201000000104,[D]Chest discomfort
+498231000000105,[D]Parasternal chest pain
+498241000000101,[D]Musculoskeletal chest pain
+498251000000103,[D]Non-cardiac chest pain
+502141000000102,"[D]Chest pain, unspecified"
+502361000000104,[D]Retrosternal pain
+502641000000109,[D]Retrosternal chest pain
+502711000000102,[D]Painful respiration
+502911000000100,[D]Central chest pain
+514831000000109,Chest pain assessment
+556321000000100,Specified chest wall NEC
+556331000000103,Chest wall NEC
+559961000000104,Chest pain NOS
+59021001,Angina decubitus
+59139008,Crushing chest pain
+621811000000103,Costochondritis NOS
+63698005,Anterior chest wall structure
+64109004,Costal chondritis
+71884009,Precordial pain
+721908003,Strain of muscle of anterior chest wall
+75483001,Breathing painful
+76052000,Posterior chest wall structure
+78387000,Asphyxiation by sustained compression of chest
+78904004,Chest wall structure
+80416006,Dissociation of movement of chest wall
+81953000,Chest pain on exertion
+9267009,Chest pain at rest
+97001000119106,Localized chest pain

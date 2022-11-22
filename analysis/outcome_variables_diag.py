@@ -3,8 +3,8 @@ from codelists import *
 from datetime import datetime, timedelta
 
 
-def generate_outcome_variables(index_date_variable):
-    outcome_variables = dict(
+def generate_outcome_variables_diag(index_date_variable):
+    outcome_variables_diag = dict(
 
 
 
@@ -678,4 +678,4 @@ def generate_outcome_variables(index_date_variable):
 
 
     )
-    return outcome_variables
+    return outcome_variables_diag

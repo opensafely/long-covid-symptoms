@@ -23,8 +23,8 @@ from covariates_complete import generate_covariates_complete
 covariates_complete= generate_covariates_complete(index_date_variable="case_index_date")
 
 ## outcome variables (note, relative to community COVID19 case (index) date)
-from outcome_variables import generate_outcome_variables
-outcome_variables = generate_outcome_variables(index_date_variable="case_index_date")
+from outcome_variables_diag import generate_outcome_variables_diag
+outcome_variables_diag = generate_outcome_variables_diag(index_date_variable="case_index_date")
 
 
 # Specify study definition
@@ -62,7 +62,7 @@ study = StudyDefinition(
     **covariates_complete, 
 
     # OUTCOME VARIABLES  
-    **outcome_variables,  
+    **outcome_variables_diag,  
     
 
 

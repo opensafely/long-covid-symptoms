@@ -1,0 +1,210 @@
+code,term
+102579002,Shallow breathing
+1047261000000103,Breathlessness care management
+1049241000000109,Opioid therapy for breathlessness management
+106048009,Respiratory finding
+1060991000000107,Medical Research Council Breathlessness Scale grade 5a
+1061001000000106,Medical Research Council Breathlessness Scale grade 5b
+1089951000000108,Extended Medical Research Council dyspnoea scale
+1089971000000104,Extended Medical Research Council dyspnoea scale grade 1
+1089981000000102,Extended Medical Research Council dyspnoea scale grade 2
+1089991000000100,Extended Medical Research Council dyspnoea scale grade 3
+1090001000000101,Extended Medical Research Council dyspnoea scale grade 5a
+1090011000000104,Extended Medical Research Council dyspnoea scale grade 4
+1090021000000105,Extended Medical Research Council dyspnoea scale grade 5b
+1099341000000108,Modified Medical Research Council dyspnoea scale
+1099371000000102,Modified Medical Research Council dyspnoea scale grade 0
+1099381000000100,Modified Medical Research Council dyspnoea scale grade 1
+1099391000000103,Modified Medical Research Council dyspnoea scale grade 2
+1099401000000100,Modified Medical Research Council dyspnoea scale grade 3
+1099411000000103,Modified Medical Research Council dyspnoea scale grade 4
+111273006,Acute respiratory disease
+111282000,Acute respiratory insufficiency
+11140008,"Respiratory assist, manual"
+11891009,Breath
+119981000146107,Dyspnea caused by Severe acute respiratory syndrome coronavirus 2
+12611000132107,Severe acute respiratory syndrome confirmed
+129893005,Respiratory alteration
+1325181000000106,Ongoing symptomatic disease caused by severe acute respiratory syndrome coronavirus 2
+13474005,"Acute respiratory distress, NEC"
+139175004,Respiratory symptoms
+139192008,(Symptom: [SOB] or [breathlessness] or [dyspnoea]) or (breathlessness)
+139194009,Breathless - moderate exertion
+139195005,Breathless - mild exertion
+139196006,Dyspnoea at rest
+139197002,(Breathless - lying flat) or (orthopnoea symptom)
+139198007,Paroxysmal nocturnal dyspnoea
+139201002,Dyspnoea
+139204005,Dyspnoea on exertion
+139207003,Breathlessness NOS
+139218003,Respiratory symptoms NOS
+139220000,Respiratory symptom NOS
+140107002,O/E - dyspnoea
+140108007,O/E - orthopnoea
+140109004,O/E - respiratory distress
+140131007,O/E - tachypnoea
+154921000,(Pschogenic resp symptoms: [cough] or [hiccough] or [yawn] or [hyperventilation]) or (psychogenic aphonia)
+155627006,(Respiratory disease NOS) or (adult respiratory distress syndrome) or (pneumomediastinum) or (tracheomalacia)
+158369003,[D]Respiratory system and chest symptoms
+158371003,[D]Dyspnoea
+158373000,[D]Orthopnoea
+158374006,[D]Tachypnoea
+158377004,[D]Respiratory distress
+158378009,Respiratory insufficiency [D]
+158379001,[D]Shortness of breath
+158417007,[D]Respiratory system and chest symptoms NOS
+161920001,Respiratory symptom
+161937008,(Symptom: [SOB] or [breathlessness] or [dyspnoea]) or (breathlessness)
+161938003,No breathlessness
+161939006,Breathless - moderate exertion
+161940008,Breathless - mild exertion
+161941007,Dyspnea at rest
+161942000,(Breathless - lying flat) or (orthopnoea symptom)
+161946002,Dyspnoea
+161948001,Dyspnoea on exertion
+161951008,Breathlessness NOS
+161961001,Respiratory symptoms NOS
+161963003,Respiratory symptom NOS
+162890008,On examination - dyspnea
+162891007,On examination - orthopnea
+162892000,On examination - respiratory distress
+162916002,On examination - tachypnea
+162977002,On examination - respiratory examination NOS
+170608002,Initial respiratory assessment
+17216000,"Dyspnea, class I"
+191959003,Psychogenic respiratory symptom NOS
+20112008,Dyspnea leaning over
+20139000,Structure of respiratory system
+20573003,Ineffective breathing pattern
+207047005,[D]Respiratory system and chest symptoms
+207049008,"[D]Respiratory symptom, unspecified"
+207051007,[D]Orthopnea
+207052000,[D]Tachypnea
+207055003,[D]Respiratory distress
+207056002,[D]Respiratory insufficiency
+207057006,[D]Shortness of breath
+207059009,[D]Dyspnea
+207062007,[D]Breathlessness
+207106005,[D]Other respiratory system and chest symptoms
+207108006,[D]Respiratory system and chest symptoms NOS
+23141003,Gasping for breath
+248548009,Nocturnal dyspnea
+248565000,Respiratory effort
+248566004,Visible respiratory effort
+248578000,Sobbing respiration
+24921003,Dyspnea raising arms
+251896001,Breathlessness rating
+251916001,Respiratory dead space
+25209001,Inspiratory dyspnea
+266374002,Respiratory system diseases (& lung diseases)
+266411000,(Respiratory disease NOS) or (adult respiratory distress syndrome) or (pneumomediastinum) or (tracheomalacia)
+267036007,Dyspnea
+268771003,(Pschogenic resp symptoms: [cough] or [hiccough] or [yawn] or [hyperventilation]) or (psychogenic aphonia)
+271822008,Respiratory observation
+271823003,Tachypnea
+271825005,Respiratory distress
+271882006,On examination - respiratory
+271908009,Respiratory examination finding
+276572003,Poor respiratory drive
+278197002,Entire respiratory system
+278907009,Respiratory pattern
+281488008,Entire lower respiratory tract
+28263002,Crying
+297107002,Respiratory insufficiency [D]
+297216006,Increasing breathlessness
+301233008,Functional finding of respiratory tract
+301257008,Respiratory finding of chest
+301820005,Finding of respiratory effort
+308149007,[D]Breathlessness
+308924007,Respiratory symptom findings (context-dependent category)
+321570009,Respiratory system structure -retired- [duplicate]
+34560001,Expiratory dyspnea
+364048003,Respiratory observable
+364055001,Respiratory characteristics of chest
+366129003,Finding of respiratory effort
+366143008,Finding of respiratory pattern
+389324009,Short of breath dressing/undressing
+389325005,Breathless - strenuous exertion
+389326006,MRC Breathlessness Scale: grade 1
+389327002,MRC Breathlessness Scale: grade 2
+389328007,MRC Breathlessness Scale: grade 3
+389329004,MRC Breathlessness Scale: grade 4
+389330009,MRC Breathlessness Scale: grade 5
+390057009,Short of breath dressing/undressing
+390058004,Breathless - strenuous exertion
+390059007,MRC Breathlessness Scale: grade 1
+390060002,MRC Breathlessness Scale: grade 2
+390061003,MRC Breathlessness Scale: grade 3
+390062005,MRC Breathlessness Scale: grade 4
+390063000,MRC Breathlessness Scale: grade 5
+390870001,Short of breath dressing/undressing
+390871002,Breathless - strenuous exertion
+391120009,Medical Research Council Dyspnoea scale grade 1
+391123006,Medical Research Council Dyspnoea scale grade 2
+391124000,Medical Research Council Dyspnoea scale grade 3
+391125004,Medical Research Council Dyspnoea scale grade 4
+391126003,Medical Research Council Dyspnoea scale grade 5
+397702004,Borg Breathlessness Score finding
+397718005,Borg Breathlessness Scale finding
+39950000,"Dyspnea, class III"
+402741000000107,[D]Respiratory system and chest symptoms NOS
+409051000000101,[D]Respiratory system and chest symptoms NOS
+409623005,Respiratory insufficiency
+42002000,Avian infectious bronchitis
+422834003,Respiratory assessment
+430390000,Sleep-related neurogenic tachypnea
+43186005,Tachypnea
+45541000000106,Borg Breathlessness Score: 0 none at all
+45591000000101,Borg Breathlessness Score: 1 very slight
+45601000000107,Borg Breathlessness Score: 2 slight
+45611000000109,Borg Breathlessness Score: 3 moderate
+45651000000108,Borg Breathlessness Score: 5 severe
+45671000000104,Borg Breathlessness Score: 6 severe (+)
+45721000000109,Borg Breathlessness Score: 7 very severe
+45731000000106,Borg Breathlessness Score: 8 very severe (+)
+45741000000102,"Borg Breathlessness Score: 9 very, very severe (almost maximal)"
+45751000000104,Borg Breathlessness Score: 10 maximal
+49233005,Dyspnea
+497901000000105,[D]Respiratory system and chest symptoms
+497921000000101,"[D]Respiratory symptom, unspecified"
+497941000000108,[D]Orthopnoea
+497951000000106,[D]Tachypnoea
+497981000000100,[D]Respiratory distress
+497991000000103,[D]Respiratory insufficiency
+498001000000107,[D]Shortness of breath
+498021000000103,[D]Dyspnoea
+498361000000109,[D]Other respiratory system and chest symptoms
+50043002,Disorder of respiratory system
+502631000000100,[D]Breathlessness
+51395007,Respiratory failure
+540021000000102,Psychogenic respiratory symptom NOS
+549301000000102,Respiratory symptoms NOS
+549311000000100,Respiratory symptom NOS
+55442000,Paroxysmal nocturnal dyspnea
+568981000000105,On examination - respiratory examination NOS
+572661000000100,Breathlessness NOS
+57769004,Dyspnea after eating
+58926004,Medullary gasping center function
+59265000,Paroxysmal dyspnea
+60845006,Dyspnea on exertion
+62744007,Orthopnea
+702535006,Anxiety about breathlessness
+702581006,Difficulty eating due to breathlessness
+719413006,Breathlessness care management
+719415004,Breathlessness care
+719416003,Opioid therapy for breathlessness management
+72365000,"Dyspnea, class II"
+73322006,"Dyspnea, class IV"
+7550008,Transitory tachypnea of newborn
+778791000000103,Respiratory observations of chest
+7808001,"Respiratory depth, function"
+789162008,Borg category ratio 10 scale
+80954004,Decreased respiratory function
+819101000000108,Psychogenic respiratory symptom
+852051000000107,Minimal breathlessness
+859231000000103,Medical Research Council dyspnoea scale
+870179002,modified Medical Research Council Dyspnea Scale
+887741000000102,Anxiety about breathlessness
+887751000000104,Anxiety about breathlessness 
+888131000000106,Breathlessness causing difficulty eating
+888141000000102,Breathlessness causing difficulty eating 

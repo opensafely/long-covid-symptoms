@@ -564,20 +564,40 @@ actions:
         matched_controls_contemporary_wVars: output/input_gpconsultations_controls_contemporary.csv
 
 
-# 8c. CHECK VARIABLES (CURRENTLY CHECKING GPCOUNT VARIABLE)
+# 8c. GET SYMPTOMS FOR CASES
+  get_symptoms_cases:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_cases_contemporary 
+    needs: [combine_matched_CASESstps]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_symptoms_cases_contemporary.csv
+
+
+# 8d. GET SYMPTOMS FOR CONTROLS
+  get_symptoms_controls:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_contemporary 
+    needs: [combine_matched_COMPARATORstps]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_symptoms_controls_contemporary.csv
+
+
+# 8e. CHECK VARIABLES (CURRENTLY CHECKING NEW SYMPTOM VARIABLES)
   # *** contemporary potential comparators for each stp
   checkVars_inCasesAndCOntrolsAfterAddingFurtherVariables:
-    run: stata-mp:latest analysis/08c_checkVars_casesControls_after_adding_furtherVars.do
-    needs: [get_consultationCount_cases, get_consultationCount_controls]
+    run: stata-mp:latest analysis/08e_checkVars_casesControls_after_adding_furtherVars.do
+    needs: [get_symptoms_cases, get_symptoms_controls]
     outputs:
       moderately_sensitive:
-        log: logs/08c_checkVars_casesControls_after_adding_furtherVars.log
+        log: logs/08e_checkVars_casesControls_after_adding_furtherVars.log
 
 
 # 9. CREATE ANALYSIS FILE (ALSO COMBINES CASES AND CONTROLS)
   create_analysis_file:
     run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do
-    needs: [set_case_index_date, generate_potential_controls_contemporary, add_allVars_contemporary_controls, add_allVars_cases, combine_matched_CASESstps, combine_matched_COMPARATORstps, get_consultationCount_cases, get_consultationCount_controls]
+    needs: [set_case_index_date, generate_potential_controls_contemporary, 
+    add_allVars_contemporary_controls, add_allVars_cases, combine_matched_CASESstps, combine_matched_COMPARATORstps, 
+    get_consultationCount_cases, get_consultationCount_controls, get_symptoms_cases, get_symptoms_controls]
     outputs:
       highly_sensitive:
         # casesContemporary: output/cases_contemporary.dta 

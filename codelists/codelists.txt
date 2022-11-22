@@ -48,6 +48,27 @@ user/kate-mansfield/nutritional-disorder-all-descendants/7776d441
 user/kate-mansfield/poisoning-all-descendants/3460ba84
 user/kate-mansfield/traumatic-andor-non-traumatic-injury-all-descendants/7cdc542d
 user/kate-mansfield/visual-system-disorder-all-descendants/42a52de1
-user/kate-mansfield/symptoms-breathlessness/620703ec 
+user/kate-mansfield/symptoms-breathlessness-new/2b952474
+user/kate-mansfield/draft-symptoms-chest-pain/7c28fdff
+user/kate-mansfield/draft-symptoms-chest-tightness/40b9ace1
+user/kate-mansfield/draft-symptoms-cough/72d8934b
+user/kate-mansfield/draft-symptoms-dizzy/5c7be00c
+user/kate-mansfield/draft-symptoms-fatigue/0e9ac677
+user/kate-mansfield/draft-symptoms-fever/758b5341
+user/kate-mansfield/draft-symptoms-mobility-impairment-v2/62a81387
+user/kate-mansfield/draft-symptoms-palpitations/27aa39ac
+user/kate-mansfield/draft-symptoms-peripheral-neuropathy/09fbfa1a
+user/kate-mansfield/draft-symptoms-sleep-disturbance/59c92016
+user/kate-mansfield/draft-symptoms-delirium/6e39c6ee
+user/kate-mansfield/draft-symptoms-hair-loss/1da5ed63
+user/kate-mansfield/draft-symptoms-headache-v2/14c6f9f2
+
+
+
+
+
+
+
+
 
 

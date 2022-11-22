@@ -30,7 +30,7 @@ covid_identification_in_primary_care_case_codes_seq = codelist_from_csv(
 
 
 
-# OUTCOME VARIABLES
+# DIAGNOSES OUTCOME VARIABLES
 cns_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-central-nervous-system-finding-all-descendants.csv",
     system="snomed",
@@ -193,12 +193,6 @@ visual_disorder_codes = codelist_from_csv(
     column="code",
 )
 
-breathlessness_symptoms_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-symptoms-breathlessness.csv",
-    system="snomed",
-    column="code",
-)
-
 hypertension_from_hhclassifAndAnna = codelist_from_csv(
     "codelists/opensafely-hypertension.csv",
     system="ctv3",
@@ -209,129 +203,92 @@ hypertension_from_hhclassifAndAnna = codelist_from_csv(
 
 
 
-
-
-
-
-
-####################################################################################################
-##The following is Anna's code for her neurovaccine study, leaving in for the moment so code runs##
-bells_palsy_primary_care_codes = codelist_from_csv(
-    "codelists/opensafely-bells-palsy.csv",
-    system="ctv3",
-    column="code",
-)
-bells_palsy_secondary_care_codes = codelist_from_csv(
-    "codelists/opensafely-bells-palsy-icd-10.csv",
-    system="icd10",
-    column="code",
-)
-bells_palsy_emergency_care_codes = codelist(["193093009"], system="snomed")
-transverse_myelitis_primary_care_codes = codelist_from_csv(
-    "codelists/opensafely-transverse-myelitis.csv",
-    system="ctv3",
-    column="CTV3Code",
-)
-transverse_myelitis_secondary_care_codes = codelist_from_csv(
-    "codelists/opensafely-acute-transverse-myelitis-icd-10.csv",
-    system="icd10",
-    column="code",
-)
-guillain_barre_primary_care_codes = codelist_from_csv(
-    "codelists/opensafely-guillain-barre.csv",
-    system="ctv3",
-    column="code",
-)
-guillain_barre_secondary_care_codes = codelist_from_csv(
-    "codelists/opensafely-guillain-barre-syndrome-icd10.csv",
-    system="icd10",
-    column="code",
-)
-# COVARIATES
-ethnicity_codes = codelist_from_csv(
-    "codelists/opensafely-ethnicity.csv",
-    system="ctv3",
-    column="Code",
-    category_column="Grouping_6",
-)
-
-ethnicity_codes_16 = codelist_from_csv(
-    "codelists/opensafely-ethnicity.csv",
-    system="ctv3",
-    column="Code",
-    category_column="Grouping_16",
-)
-
-diabetes = codelist_from_csv(
-    "codelists/opensafely-diabetes.csv",
-    system="ctv3",
-    column="CTV3ID",
-)
-hiv = codelist_from_csv(
-    "codelists/opensafely-hiv.csv",
-    system="ctv3",
-    column="CTV3ID",
-)
-cancer_excluding_lung_and_haematological = codelist_from_csv(
-    "codelists/opensafely-cancer-excluding-lung-and-haematological.csv",
-    system="ctv3",
-    column="CTV3ID",
-)
-lung_cancer = codelist_from_csv(
-    "codelists/opensafely-lung-cancer.csv",
-    system="ctv3",
-    column="CTV3ID",
-)
-haematological_cancer = codelist_from_csv(
-    "codelists/opensafely-haematological-cancer.csv",
-    system="ctv3",
-    column="CTV3ID",
-)
-hypertension = codelist_from_csv(
-    "codelists/opensafely-hypertension.csv",
-    system="ctv3",
-    column="CTV3ID",
-)
-preg = codelist_from_csv(
-    "codelists/primis-covid19-vacc-uptake-preg.csv",
+# SYMPTOM OUTCOME VARIABLES
+breathlessness_symptom_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-symptoms-breathlessness-new.csv",
     system="snomed",
     column="code",
 )
-ms_no_primary_care = codelist_from_csv(
-    "codelists/opensafely-multiple-sclerosis-v2.csv",
-    system="ctv3",
-    column="code",
-)
-cidp_primary_care = codelist_from_csv(
-    "codelists/opensafely-chronic-inflammatory-demyelinating-polyneuropathy-cidp.csv",
-    system="ctv3",
+
+chestpain_symptom_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-draft-symptoms-chest-pain.csv",
+    system="snomed",
     column="code",
 )
 
-# Systemic inflammatory or autoimmune disorders combining: 
-## ankylosing spondylitis
-## antiphospholipid syndrome
-antiphospholipid = codelist_from_csv(
-    "codelists/opensafely-antiphospholipid-syndrome.csv",
-    system="ctv3",
+chesttightness_symptom_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-draft-symptoms-chest-tightness.csv",
+    system="snomed",
     column="code",
 )
-## Behçet disease
-## mixed connective tissue disease
-## rheumatoid arthritis a
-rheumatoid_arthritis = codelist_from_csv(
-    "codelists/opensafely-rheumatoid-arthritis.csv",
-    system="ctv3",
-    column="CTV3ID",
+
+cough_symptom_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-draft-symptoms-cough.csv",
+    system="snomed",
+    column="code",
 )
-## SLE 
-lupus = codelist_from_csv(
-    "codelists/opensafely-systemic-lupus-erythematosus-sle.csv",
-    system="ctv3",
-    column="CTV3ID",
+
+dizzy_symptom_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-draft-symptoms-dizzy.csv",
+    system="snomed",
+    column="code",
 )
-## sarcoidosis
-## scleroderma
-## Sjögren syndrome
+
+fatigue_symptom_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-draft-symptoms-fatigue.csv",
+    system="snomed",
+    column="code",
+)
+
+fever_symptom_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-draft-symptoms-fever.csv",
+    system="snomed",
+    column="code",
+)
+
+mobilityimpairment_symptom_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-draft-symptoms-mobility-impairment-v2.csv",
+    system="snomed",
+    column="code",
+)
+
+palpitations_symptom_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-draft-symptoms-palpitations.csv",
+    system="snomed",
+    column="code",
+)
+
+peripheralneuropathy_symptom_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-draft-symptoms-peripheral-neuropathy.csv",
+    system="snomed",
+    column="code",
+)
+
+sleepdisturbance_symptom_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-draft-symptoms-sleep-disturbance.csv",
+    system="snomed",
+    column="code",
+)
+
+delirium_symptom_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-draft-symptoms-delirium.csv",
+    system="snomed",
+    column="code",
+)
+
+hairloss_symptom_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-draft-symptoms-hair-loss.csv",
+    system="snomed",
+    column="code",
+)
+
+headache_symptom_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-draft-symptoms-headache-v2.csv",
+    system="snomed",
+    column="code",
+)
+
+
+
 
 
