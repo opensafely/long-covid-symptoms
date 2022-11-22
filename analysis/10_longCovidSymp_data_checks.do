@@ -36,7 +36,7 @@ log using ./logs/10_longCovidSymp_data_checks.log, replace t
 use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
 
 *eyeball all variables
-codebook
+*codebook
 
 
 *total number in cohort
@@ -159,7 +159,7 @@ foreach var of varlist comorb_infection_or_parasite - comorb_injury_poisoning{
 
 
 *all outcomes
-foreach var of varlist t1_infect_parasite - t3_hypertension_bugtest{ 
+foreach var of varlist t1_infect_parasite - t3_symp_headache tEver_infect_parasite - tEver_symp_headache { 
 	safetab `var', m
 }
 
