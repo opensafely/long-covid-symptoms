@@ -428,7 +428,7 @@ foreach var of varlist infect_parasite - symp_mobilityimpair {
 } 
 
 *create variable names
-foreach var of varlist tEver_infect_parasite - tEver_symp_mobilityimpair {
+foreach var of varlist t1_infect_parasite - t3_injury_poison t1_symp_cough - t3_symp_mobilityimpair  tEver_infect_parasite - tEver_symp_mobilityimpair {
 	label variable `var' "`var'"
 } 
 
