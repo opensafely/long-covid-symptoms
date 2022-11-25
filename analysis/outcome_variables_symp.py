@@ -14,8 +14,22 @@ def generate_outcome_variables_symp(index_date_variable):
 # TIME PERIOD TWO (T2): 12 WEEKS TO 6 MONTHS (85 days - 180 days)
 # TIME PERIOD THREE (T3): 6 MONTHS ONWARDS (181 days+)
 
-    symp_breathless=patients.with_these_clinical_events(
-        breathlessness_symptom_codes,
+#First approved set (25 Nov) i.e.:
+#opensafely/symptoms-cough/72d8934b
+#opensafely/symptoms-chest-tightness/40b9ace1
+#opensafely/symptoms-palpitations/27aa39ac
+#opensafely/symptoms-fatigue/0e9ac677
+#opensafely/symptoms-fever/758b5341
+#opensafely/symptoms-cognitive-impairment/7af0d32d
+#opensafely/symptoms-sleep-disturbance/59c92016
+#opensafely/symptoms-peripheral-neuropathy/09fbfa1a
+#opensafely/symptoms-dizzy/5c7be00c
+#opensafely/symptoms-mobility-impairment/62a81387
+
+    
+
+    symp_cough=patients.with_these_clinical_events(
+        cough_symptom_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
         returning="date", 
@@ -23,55 +37,22 @@ def generate_outcome_variables_symp(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),  
 
-    t1_symp_breathless=patients.with_these_clinical_events(
-        breathlessness_symptom_codes,
+    t1_symp_cough=patients.with_these_clinical_events(
+        cough_symptom_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_symp_breathless=patients.with_these_clinical_events(
-        breathlessness_symptom_codes,
+    t2_symp_cough=patients.with_these_clinical_events(
+        cough_symptom_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_symp_breathless=patients.with_these_clinical_events(
-        breathlessness_symptom_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
-        returning="binary_flag", 
-        return_expectations={"incidence": 0.15},
-    ), 
-
-
-
-
-    symp_chestpain=patients.with_these_clinical_events(
-        chestpain_symptom_codes,
-        on_or_after=f"{index_date_variable}",
-        find_first_match_in_period=True,
-        returning="date", 
-        date_format="YYYY-MM-DD",
-        return_expectations={"date": {"earliest": "index_date"}},
-    ),  
-
-    t1_symp_chestpain=patients.with_these_clinical_events(
-        chestpain_symptom_codes,
-        between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
-        returning="binary_flag", 
-        return_expectations={"incidence": 0.15},
-    ),  
-
-    t2_symp_chestpain=patients.with_these_clinical_events(
-        chestpain_symptom_codes,
-        between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
-        returning="binary_flag", 
-        return_expectations={"incidence": 0.15},
-    ),  
-
-    t3_symp_chestpain=patients.with_these_clinical_events(
-        chestpain_symptom_codes,
+    t3_symp_cough=patients.with_these_clinical_events(
+        cough_symptom_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
@@ -111,8 +92,8 @@ def generate_outcome_variables_symp(index_date_variable):
 
 
 
-    symp_cough=patients.with_these_clinical_events(
-        cough_symptom_codes,
+    symp_palp=patients.with_these_clinical_events(
+        palpitations_symptom_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
         returning="date", 
@@ -120,54 +101,22 @@ def generate_outcome_variables_symp(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),  
 
-    t1_symp_cough=patients.with_these_clinical_events(
-        cough_symptom_codes,
+    t1_symp_palp=patients.with_these_clinical_events(
+        palpitations_symptom_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_symp_cough=patients.with_these_clinical_events(
-        cough_symptom_codes,
+    t2_symp_palp=patients.with_these_clinical_events(
+        palpitations_symptom_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_symp_cough=patients.with_these_clinical_events(
-        cough_symptom_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
-        returning="binary_flag", 
-        return_expectations={"incidence": 0.15},
-    ), 
-    
-
-
-    symp_dizzy=patients.with_these_clinical_events(
-        dizzy_symptom_codes,
-        on_or_after=f"{index_date_variable}",
-        find_first_match_in_period=True,
-        returning="date", 
-        date_format="YYYY-MM-DD",
-        return_expectations={"date": {"earliest": "index_date"}},
-    ),  
-
-    t1_symp_dizzy=patients.with_these_clinical_events(
-        dizzy_symptom_codes,
-        between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
-        returning="binary_flag", 
-        return_expectations={"incidence": 0.15},
-    ),  
-
-    t2_symp_dizzy=patients.with_these_clinical_events(
-        dizzy_symptom_codes,
-        between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
-        returning="binary_flag", 
-        return_expectations={"incidence": 0.15},
-    ),  
-
-    t3_symp_dizzy=patients.with_these_clinical_events(
-        dizzy_symptom_codes,
+    t3_symp_palp=patients.with_these_clinical_events(
+        palpitations_symptom_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
@@ -239,8 +188,8 @@ def generate_outcome_variables_symp(index_date_variable):
 
 
 
-    symp_mobilityimpair=patients.with_these_clinical_events(
-        mobilityimpairment_symptom_codes,
+    symp_cogimpair=patients.with_these_clinical_events(
+        cogimpairment_symptom_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
         returning="date", 
@@ -248,86 +197,22 @@ def generate_outcome_variables_symp(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),  
 
-    t1_symp_mobilityimpair=patients.with_these_clinical_events(
-        mobilityimpairment_symptom_codes,
+    t1_symp_cogimpair=patients.with_these_clinical_events(
+        cogimpairment_symptom_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_symp_mobilityimpair=patients.with_these_clinical_events(
-        mobilityimpairment_symptom_codes,
+    t2_symp_cogimpair=patients.with_these_clinical_events(
+        cogimpairment_symptom_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_symp_mobilityimpair=patients.with_these_clinical_events(
-        mobilityimpairment_symptom_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
-        returning="binary_flag", 
-        return_expectations={"incidence": 0.15},
-    ), 
-
-
-
-    symp_palp=patients.with_these_clinical_events(
-        palpitations_symptom_codes,
-        on_or_after=f"{index_date_variable}",
-        find_first_match_in_period=True,
-        returning="date", 
-        date_format="YYYY-MM-DD",
-        return_expectations={"date": {"earliest": "index_date"}},
-    ),  
-
-    t1_symp_palp=patients.with_these_clinical_events(
-        palpitations_symptom_codes,
-        between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
-        returning="binary_flag", 
-        return_expectations={"incidence": 0.15},
-    ),  
-
-    t2_symp_palp=patients.with_these_clinical_events(
-        palpitations_symptom_codes,
-        between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
-        returning="binary_flag", 
-        return_expectations={"incidence": 0.15},
-    ),  
-
-    t3_symp_palp=patients.with_these_clinical_events(
-        palpitations_symptom_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
-        returning="binary_flag", 
-        return_expectations={"incidence": 0.15},
-    ), 
-
-
-
-    symp_periphneuro=patients.with_these_clinical_events(
-        peripheralneuropathy_symptom_codes,
-        on_or_after=f"{index_date_variable}",
-        find_first_match_in_period=True,
-        returning="date", 
-        date_format="YYYY-MM-DD",
-        return_expectations={"date": {"earliest": "index_date"}},
-    ),  
-
-    t1_symp_periphneuro=patients.with_these_clinical_events(
-        peripheralneuropathy_symptom_codes,
-        between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
-        returning="binary_flag", 
-        return_expectations={"incidence": 0.15},
-    ),  
-
-    t2_symp_periphneuro=patients.with_these_clinical_events(
-        peripheralneuropathy_symptom_codes,
-        between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
-        returning="binary_flag", 
-        return_expectations={"incidence": 0.15},
-    ),  
-
-    t3_symp_periphneuro=patients.with_these_clinical_events(
-        peripheralneuropathy_symptom_codes,
+    t3_symp_cogimpair=patients.with_these_clinical_events(
+        cogimpairment_symptom_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
@@ -367,8 +252,8 @@ def generate_outcome_variables_symp(index_date_variable):
 
 
 
-    symp_delirium=patients.with_these_clinical_events(
-        delirium_symptom_codes,
+    symp_periphneuro=patients.with_these_clinical_events(
+        peripheralneuropathy_symptom_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
         returning="date", 
@@ -376,22 +261,22 @@ def generate_outcome_variables_symp(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),  
 
-    t1_symp_delirium=patients.with_these_clinical_events(
-        delirium_symptom_codes,
+    t1_symp_periphneuro=patients.with_these_clinical_events(
+        peripheralneuropathy_symptom_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_symp_delirium=patients.with_these_clinical_events(
-        delirium_symptom_codes,
+    t2_symp_periphneuro=patients.with_these_clinical_events(
+        peripheralneuropathy_symptom_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_symp_delirium=patients.with_these_clinical_events(
-        delirium_symptom_codes,
+    t3_symp_periphneuro=patients.with_these_clinical_events(
+        peripheralneuropathy_symptom_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
@@ -399,8 +284,8 @@ def generate_outcome_variables_symp(index_date_variable):
 
 
 
-    symp_hairloss=patients.with_these_clinical_events(
-        hairloss_symptom_codes,
+    symp_dizzy=patients.with_these_clinical_events(
+        dizzy_symptom_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
         returning="date", 
@@ -408,22 +293,22 @@ def generate_outcome_variables_symp(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),  
 
-    t1_symp_hairloss=patients.with_these_clinical_events(
-        hairloss_symptom_codes,
+    t1_symp_dizzy=patients.with_these_clinical_events(
+        dizzy_symptom_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_symp_hairloss=patients.with_these_clinical_events(
-        hairloss_symptom_codes,
+    t2_symp_dizzy=patients.with_these_clinical_events(
+        dizzy_symptom_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_symp_hairloss=patients.with_these_clinical_events(
-        hairloss_symptom_codes,
+    t3_symp_dizzy=patients.with_these_clinical_events(
+        dizzy_symptom_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
@@ -431,8 +316,8 @@ def generate_outcome_variables_symp(index_date_variable):
 
 
 
-    symp_headache=patients.with_these_clinical_events(
-        headache_symptom_codes,
+    symp_mobilityimpair=patients.with_these_clinical_events(
+        mobilityimpairment_symptom_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
         returning="date", 
@@ -440,27 +325,26 @@ def generate_outcome_variables_symp(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),  
 
-    t1_symp_headache=patients.with_these_clinical_events(
-        headache_symptom_codes,
+    t1_symp_mobilityimpair=patients.with_these_clinical_events(
+        mobilityimpairment_symptom_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_symp_headache=patients.with_these_clinical_events(
-        headache_symptom_codes,
+    t2_symp_mobilityimpair=patients.with_these_clinical_events(
+        mobilityimpairment_symptom_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_symp_headache=patients.with_these_clinical_events(
-        headache_symptom_codes,
+    t3_symp_mobilityimpair=patients.with_these_clinical_events(
+        mobilityimpairment_symptom_codes,
         on_or_after=f"{index_date_variable} + 181 days",
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ), 
-
 
 
     )

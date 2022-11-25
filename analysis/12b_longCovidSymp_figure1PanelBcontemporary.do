@@ -17,7 +17,7 @@ sysdir set PERSONAL ./analysis/adofiles
 
 *checking tabulations
 capture log close
-log using ./logs/12_longCovidSymp_figure1PanelBcontemporary.log, replace t
+log using ./logs/12b_longCovidSymp_figure1PanelBcontemporary.log, replace t
 
 *list of all outcomes
 global diagnosisOutcomes tEver_infect_parasite tEver_neoplasms tEver_blood_diseases tEver_endocr_nutr_dis tEver_mental_disorder tEver_nervous_sys_dis tEver_ear_mastoid_dis tEver_circ_sys_dis tEver_resp_system_dis tEver_digest_syst_dis tEver_skin_disease tEver_musculo_dis tEver_genitourin_dis tEver_pregnancy_compl tEver_perinatal_dis tEver_congenital_dis tEver_injury_poison

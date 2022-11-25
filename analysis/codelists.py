@@ -204,89 +204,79 @@ hypertension_from_hhclassifAndAnna = codelist_from_csv(
 
 
 # SYMPTOM OUTCOME VARIABLES
-breathlessness_symptom_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-symptoms-breathlessness-new.csv",
-    system="snomed",
-    column="code",
-)
+#First approved set (25 Nov) i.e.:
+#opensafely/symptoms-cough/72d8934b
+#opensafely/symptoms-chest-tightness/40b9ace1
+#opensafely/symptoms-palpitations/27aa39ac
+#opensafely/symptoms-fatigue/0e9ac677
+#opensafely/symptoms-fever/758b5341
+#opensafely/symptoms-cognitive-impairment/7af0d32d
+#opensafely/symptoms-sleep-disturbance/59c92016
+#opensafely/symptoms-peripheral-neuropathy/09fbfa1a
+#opensafely/symptoms-dizzy/5c7be00c
+#opensafely/symptoms-mobility-impairment/62a81387
 
-chestpain_symptom_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-draft-symptoms-chest-pain.csv",
+
+cough_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-cough.csv",
     system="snomed",
     column="code",
 )
 
 chesttightness_symptom_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-draft-symptoms-chest-tightness.csv",
-    system="snomed",
-    column="code",
-)
-
-cough_symptom_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-draft-symptoms-cough.csv",
-    system="snomed",
-    column="code",
-)
-
-dizzy_symptom_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-draft-symptoms-dizzy.csv",
-    system="snomed",
-    column="code",
-)
-
-fatigue_symptom_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-draft-symptoms-fatigue.csv",
-    system="snomed",
-    column="code",
-)
-
-fever_symptom_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-draft-symptoms-fever.csv",
-    system="snomed",
-    column="code",
-)
-
-mobilityimpairment_symptom_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-draft-symptoms-mobility-impairment-v2.csv",
+    "codelists/opensafely-symptoms-chest-tightness.csv",
     system="snomed",
     column="code",
 )
 
 palpitations_symptom_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-draft-symptoms-palpitations.csv",
+    "codelists/opensafely-symptoms-palpitations.csv",
     system="snomed",
     column="code",
 )
 
-peripheralneuropathy_symptom_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-draft-symptoms-peripheral-neuropathy.csv",
+fatigue_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-fatigue.csv",
+    system="snomed",
+    column="code",
+)
+
+fever_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-fever.csv",
+    system="snomed",
+    column="code",
+)
+
+cogimpairment_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-cognitive-impairment.csv",
     system="snomed",
     column="code",
 )
 
 sleepdisturbance_symptom_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-draft-symptoms-sleep-disturbance.csv",
+    "codelists/opensafely-symptoms-sleep-disturbance.csv",
     system="snomed",
     column="code",
 )
 
-delirium_symptom_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-draft-symptoms-delirium.csv",
+peripheralneuropathy_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-peripheral-neuropathy.csv",
     system="snomed",
     column="code",
 )
 
-hairloss_symptom_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-draft-symptoms-hair-loss.csv",
+dizzy_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-dizzy.csv",
     system="snomed",
     column="code",
 )
 
-headache_symptom_codes = codelist_from_csv(
-    "codelists/user-kate-mansfield-draft-symptoms-headache-v2.csv",
+mobilityimpairment_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-mobility-impairment.csv",
     system="snomed",
     column="code",
 )
+
 
 
 
