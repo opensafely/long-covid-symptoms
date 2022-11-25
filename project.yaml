@@ -648,14 +648,64 @@ actions:
         table1contemporary: output/table1_longCovidSymp_contemporary.txt
 
 
-# 12. FIGURE 1
-  figure_1panelB_contemporary:
-    run: stata-mp:latest analysis/12_longCovidSymp_figure1PanelBcontemporary.do
+# 12b. FIGURE 1A - SYMPTOMS AT ANY TIME
+  figure_1panelA_contemporary:
+    run: stata-mp:latest analysis/12a_longCovidSymp_figure1PanelAcontemporary.do
     needs: [create_analysis_file]
     outputs:
       moderately_sensitive:
-        log: logs/12_longCovidSymp_figure1PanelBcontemporary.log
+        log: logs/12a_longCovidSymp_figure1PanelAcontemporary.log
+        figure1contemporary: output/figure1PanelA_longCovidSymp_contemporary.txt
+
+
+# 12b. FIGURE 1B - DIAGNOSES AT ANY TIME
+  figure_1panelB_contemporary:
+    run: stata-mp:latest analysis/12b_longCovidSymp_figure1PanelBcontemporary.do
+    needs: [create_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/12b_longCovidSymp_figure1PanelBcontemporary.log
         figure1contemporary: output/figure1PanelB_longCovidSymp_contemporary.txt
+
+
+# 12b. FIGURE 1C - PRESCRIPTIONS AT ANY TIME
+  figure_1panelC_contemporary:
+    run: stata-mp:latest analysis/12b_longCovidSymp_figure1PanelCcontemporary.do
+    needs: [create_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/12c_longCovidSymp_figure1PanelBcontemporary.log
+        figure1contemporary: output/figure1PanelC_longCovidSymp_contemporary.txt
+
+
+# 13a. FIGURE 2A - SYMPTOMS OVER THREE TIME PERIODS
+  figure_2panelA_contemporary:
+    run: stata-mp:latest analysis/13a_longCovidSymp_figure2PanelAcontemporary.do
+    needs: [create_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/13a_longCovidSymp_figure2PanelAcontemporary.log
+        figure1contemporary: output/figure2PanelA_longCovidSymp_contemporary.txt
+
+
+# 13b. FIGURE 2B - DIAGNOSES OVER THREE TIME PERIODS
+  figure_2panelB_contemporary:
+    run: stata-mp:latest analysis/13b_longCovidSymp_figure2PanelBcontemporary.do
+    needs: [create_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/13b_longCovidSymp_figure2PanelBcontemporary.log
+        figure1contemporary: output/figure2PanelB_longCovidSymp_contemporary.txt
+
+
+# 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS
+  figure_2panelC_contemporary:
+    run: stata-mp:latest analysis/13c_longCovidSymp_figure2PanelCcontemporary.do
+    needs: [create_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/13c_longCovidSymp_figure2PanelCcontemporary.log
+        figure1contemporary: output/figure2PanelC_longCovidSymp_contemporary.txt
 
 
 
