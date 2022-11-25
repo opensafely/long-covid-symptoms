@@ -159,7 +159,7 @@ foreach var of varlist comorb_infection_or_parasite - comorb_injury_poisoning{
 
 
 *all outcomes
-foreach var of varlist t1_infect_parasite - t3_symp_headache tEver_infect_parasite - tEver_symp_headache { 
+foreach var of varlist t1_infect_parasite - t3_symp_mobilityimpair tEver_infect_parasite - tEver_symp_mobilityimpair { 
 	safetab `var', m
 }
 
