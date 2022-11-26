@@ -648,7 +648,7 @@ actions:
         table1contemporary: output/table1_longCovidSymp_contemporary.txt
 
 
-# 12b. FIGURE 1A - SYMPTOMS AT ANY TIME
+# 12a. FIGURE 1A - SYMPTOMS AT ANY TIME
   figure_1panelA_contemporary:
     run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelAcontemporary.do
     needs: [create_analysis_file]
@@ -668,7 +668,7 @@ actions:
         figure1contemporary: output/figure1PanelB_longCovidDiagAnyTime_contemporary.txt
 
 
-# 12b. FIGURE 1C - PRESCRIPTIONS AT ANY TIME
+# 12c. FIGURE 1C - PRESCRIPTIONS AT ANY TIME
   figure_1panelC_contemporary:
     run: stata-mp:latest analysis/12b_longCovidPrescrAnyTime_figure1PanelCcontemporary.do
     needs: [create_analysis_file]
