@@ -20,6 +20,22 @@ sysdir set PLUS ./analysis/adofiles
 sysdir set PERSONAL ./analysis/adofiles
 pwd
 
+*set up some global lists of variables to make sure ordering for loops is correct on the server
+*comorbs
+global comorbs comorb_infection_or_parasite comorb_neoplasms comorb_blood_diseases comorb_endocrine_nutr_metab_dise comorb_mental_behav_disorder comorb_nervous_system_diseases comorb_ear_mastoid_disease comorb_circulatory_system_diseas comorb_respiratory_system_diseas comorb_digestive_system_disease comorb_skin_disease comorb_muscuoloskeletal_connecti comorb_genitourinary_disease comorb_pregnancy_complications comorb_perinatal_disease comorb_congenital_disease comorb_injury_poisoning
+*diagnoses outcome dates
+global diagDate infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_disorder nervous_sys_dis ear_mastoid_dis circ_sys_dis resp_system_dis digest_syst_dis skin_disease musculo_dis genitourin_dis pregnancy_compl perinatal_dis congenital_dis injury_poison
+*diagnoses ever
+global diagEver tEver_infect_parasite tEver_neoplasms tEver_blood_diseases tEver_endocr_nutr_dis tEver_mental_disorder tEver_nervous_sys_dis tEver_ear_mastoid_dis tEver_circ_sys_dis tEver_resp_system_dis tEver_digest_syst_dis tEver_skin_disease tEver_musculo_dis tEver_genitourin_dis tEver_pregnancy_compl tEver_perinatal_dis tEver_congenital_dis tEver_injury_poison
+*diagnoses in time periods
+global diagTimePeriods t1_infect_parasite t2_infect_parasite t3_infect_parasite t1_neoplasms t2_neoplasms t3_neoplasms t1_blood_diseases t2_blood_diseases t3_blood_diseases t1_endocr_nutr_dis t2_endocr_nutr_dis t3_endocr_nutr_dis t1_mental_disorder t2_mental_disorder t3_mental_disorder t1_nervous_sys_dis t2_nervous_sys_dis t3_nervous_sys_dis t1_ear_mastoid_dis t2_ear_mastoid_dis t3_ear_mastoid_dis t1_circ_sys_dis t2_circ_sys_dis t3_circ_sys_dis t1_resp_system_dis t2_resp_system_dis t3_resp_system_dis t1_digest_syst_dis t2_digest_syst_dis t3_digest_syst_dis t1_skin_disease t2_skin_disease t3_skin_disease t1_musculo_dis t2_musculo_dis t3_musculo_dis t1_genitourin_dis t2_genitourin_dis t3_genitourin_dis t1_pregnancy_compl t2_pregnancy_compl t3_pregnancy_compl t1_perinatal_dis t2_perinatal_dis t3_perinatal_dis t1_congenital_dis t2_congenital_dis t3_congenital_dis t1_injury_poison t2_injury_poison t3_injury_poison
+*symptoms outcome dates
+global sympDate symp_cough symp_chesttight symp_palp symp_fatigue symp_fever symp_cogimpair symp_sleepdisturb symp_periphneuro symp_dizzy symp_mobilityimpair
+*symptoms ever
+global sympEver tEver_symp_cough tEver_symp_chesttight tEver_symp_palp tEver_symp_fatigue tEver_symp_fever tEver_symp_cogimpair tEver_symp_sleepdisturb tEver_symp_periphneuro tEver_symp_dizzy tEver_symp_mobilityimpair
+*symptoms in time periods
+global sympTimePeriods t1_symp_cough t2_symp_cough t3_symp_cough t1_symp_chesttight t2_symp_chesttight t3_symp_chesttight t1_symp_palp t2_symp_palp t3_symp_palp t1_symp_fatigue t2_symp_fatigue t3_symp_fatigue t1_symp_fever t2_symp_fever t3_symp_fever t1_symp_cogimpair t2_symp_cogimpair t3_symp_cogimpair t1_symp_sleepdisturb t2_symp_sleepdisturb t3_symp_sleepdisturb t1_symp_periphneuro t2_symp_periphneuro t3_symp_periphneuro t1_symp_dizzy t2_symp_dizzy t3_symp_dizzy t1_symp_mobilityimpair t2_symp_mobilityimpair t3_symp_mobilityimpair 
+
 
 * Open a log file
 cap log close
@@ -395,6 +411,7 @@ label var rural_urbanBroad "Rural-Urban"
 
 *(e)===Pre-existing clinical comorbidities===
 *number of broad diagnostic categories containing records in the one year before COVID-19
+order patient_id case_index_date $comorbs
 egen numPreExistingComorbs=rowtotal(comorb_infection_or_parasite-comorb_injury_poisoning)
 *have a look at this
 sum numPreExistingComorbs, detail
@@ -410,7 +427,7 @@ la var preExistComorbCat "Number of comorbidities diagnosed in prev yr"
 
 *(f) Recode all dates from the strings 
 *order variables to make for loop quicker
-order patient_id case_index_date first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_hosp pos_covid_test_ever infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_disorder nervous_sys_dis ear_mastoid_dis circ_sys_dis resp_system_dis digest_syst_dis skin_disease musculo_dis genitourin_dis pregnancy_compl perinatal_dis congenital_dis injury_poison death_date dereg_date first_known_covid19 symp_cough-symp_mobilityimpair
+order patient_id case_index_date first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_hosp pos_covid_test_ever death_date dereg_date first_known_covid19 $diagDate $sympDate
 *have to rename some variables here as too long
 foreach var of varlist case_index_date - symp_mobilityimpair {
 	capture noisily confirm string variable `var'
@@ -422,13 +439,13 @@ foreach var of varlist case_index_date - symp_mobilityimpair {
 }
 
 *(f2)Create variables for each outcome that are "EVER HAD"
-foreach var of varlist infect_parasite - symp_mobilityimpair {
+foreach var of varlist $diagDate $sympDate {
 	generate tEver_`var'=0
 	replace tEver_`var'=1 if `var'!=.
 } 
 
 *create variable names
-foreach var of varlist t1_infect_parasite - t3_injury_poison t1_symp_cough - t3_symp_mobilityimpair  tEver_infect_parasite - tEver_symp_mobilityimpair {
+foreach var of varlist $diagTimePeriods $sympTimePeriods $diagEver $sympEver {
 	label variable `var' "`var'"
 } 
 
