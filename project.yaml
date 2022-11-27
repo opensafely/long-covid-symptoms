@@ -140,7 +140,7 @@ actions:
 
 # 3. SPLIT HISTORICAL COMPARATORS UP BY STP
   01b_longCovidSymp_splitHistorical_by_stp:
-    run: stata-mp:latest analysis/01_longCovidSymp_cr_splitHistorical_by_stp.do
+    run: stata-mp:latest analysis/01b_longCovidSymp_cr_splitHistorical_by_stp.do
     needs: [generate_potential_controls_historical]
     outputs:
       highly_sensitive:
