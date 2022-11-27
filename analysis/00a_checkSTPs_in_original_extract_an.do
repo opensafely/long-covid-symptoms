@@ -32,9 +32,16 @@ safetab stp
 
 
 
-*(2)=========Controls============
+*(2)=========Contemporary Controls============
 import delimited ./output/input_controls_contemporary.csv, clear
 safetab stp
+
+
+
+*(2)=========Historical Controls============
+import delimited ./output/input_controls_historical.csv, clear
+safetab stp
+
 
 
 log close
