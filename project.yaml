@@ -58,14 +58,14 @@ actions:
  # *** contemporary potential comparators
   checkSTPs_in_original_extract:
     run: stata-mp:latest analysis/00a_checkSTPs_in_original_extract_an.do
-    needs: [set_case_index_date, generate_potential_controls_contemporary]
+    needs: [set_case_index_date, generate_potential_controls_contemporary, generate_potential_controls_historical]
     outputs:
       moderately_sensitive:
         log: logs/00a_checkSTPs_in_original_extract_an.log
 
 
 
-# 3. SPLIT CASES AND COMPARATORS UP BY STP
+# 3. SPLIT CONTEMPORARY CASES AND COMPARATORS UP BY STP
   01_longCovidSymp_split_by_stp:
     run: stata-mp:latest analysis/01_longCovidSymp_cr_split_by_stp.do
     needs: [set_case_index_date, generate_potential_controls_contemporary]
@@ -136,6 +136,47 @@ actions:
       moderately_sensitive:
         log: logs/01_longCovidSymp_split_by_stp.log
 
+
+
+# 3. SPLIT HISTORICAL COMPARATORS UP BY STP
+  01b_longCovidSymp_splitHistorical_by_stp:
+    run: stata-mp:latest analysis/01_longCovidSymp_cr_splitHistorical_by_stp.do
+    needs: [generate_potential_controls_historical]
+    outputs:
+      highly_sensitive:
+        case_stp5: output/input_controls_historical_stp5.csv
+        case_stp6: output/input_controls_historical_stp6.csv
+        case_stp7: output/input_controls_historical_stp7.csv
+        case_stp8: output/input_controls_historical_stp8.csv
+        case_stp9: output/input_controls_historical_stp9.csv
+        case_stp10: output/input_controls_historical_stp10.csv
+        case_stp12: output/input_controls_historical_stp12.csv
+        case_stp13: output/input_controls_historical_stp13.csv
+        case_stp14: output/input_controls_historical_stp14.csv
+        case_stp15: output/input_controls_historical_stp15.csv
+        case_stp16: output/input_controls_historical_stp16.csv
+        case_stp17: output/input_controls_historical_stp17.csv
+        case_stp20: output/input_controls_historical_stp20.csv
+        case_stp21: output/input_controls_historical_stp21.csv
+        case_stp22: output/input_controls_historical_stp22.csv
+        case_stp23: output/input_controls_historical_stp23.csv
+        case_stp24: output/input_controls_historical_stp24.csv
+        case_stp25: output/input_controls_historical_stp25.csv
+        case_stp26: output/input_controls_historical_stp26.csv
+        case_stp27: output/input_controls_historical_stp27.csv
+        case_stp29: output/input_controls_historical_stp29.csv
+        case_stp33: output/input_controls_historical_stp33.csv
+        case_stp35: output/input_controls_historical_stp35.csv
+        case_stp36: output/input_controls_historical_stp36.csv
+        case_stp37: output/input_controls_historical_stp37.csv
+        case_stp40: output/input_controls_historical_stp40.csv
+        case_stp41: output/input_controls_historical_stp41.csv
+        case_stp42: output/input_controls_historical_stp42.csv
+        case_stp43: output/input_controls_historical_stp43.csv
+        case_stp44: output/input_controls_historical_stp44.csv
+        case_stp49: output/input_controls_historical_stp49.csv
+      moderately_sensitive:
+        log: logs/01b_longCovidSymp_splitHistorical_by_stp.log
 
 
 # 4. MATCH CASES TO COMPARATORS
