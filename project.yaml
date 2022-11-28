@@ -589,7 +589,7 @@ actions:
       highly_sensitive:
         matched_cases_historical_stp10: output/matched_cases_historical_stp10.csv
         matched_matches_historical_stp10: output/matched_matches_historical_stp10.csv
-        matched_historical_all_stp10: output/matched_combined_historical_historical_stp10.csv
+        matched_historical_all_stp10: output/matched_combined_historical_stp10.csv
       moderately_sensitive:
         matching_report_historical_stp10: output/matching_report_historical_stp10.txt
       

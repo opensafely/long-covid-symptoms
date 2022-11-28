@@ -2,8 +2,7 @@ import pandas as pd
 from osmatching import match
 
 ## MATCH SEPARATE STPS OF CASES AND CONTROLS
-
-#stp37
+#stp5
 match(
     case_csv="input_covid_communitycases_stp37",
     match_csv="input_controls_contemporary_stp37",
