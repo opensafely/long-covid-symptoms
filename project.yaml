@@ -878,9 +878,6 @@ actions:
       moderately_sensitive:
         log: logs/05_check_vars_after_matching.log
 
-
-
-
   checkVars_inHistoricalMatchedFiles:
     run: stata-mp:latest analysis/05a_check_varsHistorical_after_matching.do
     needs: [match_historical_stp29]
@@ -928,13 +925,56 @@ actions:
         log: logs/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching.log
 
 
-# 6a. CHECK VARIABLES FOR COMBINED CASES AND COMBINED CONTROLS PRIOR TO ADDING MORE VARIABLES
-#  check_combinedFiles:
-#    run: stata-mp:latest analysis/6a_longCovidSymp_checkCombinedFiles.do
-#    needs: [combine_matched_CASESstps, combine_matched_COMPARATORstps]
-#    outputs:
-#      moderately_sensitive:
-#        log: logs/6a_longCovidSymp_checkCombinedFiles.log
+
+
+# 6. COMBINE MATCHED CASES AND MATCHED HISTORICAL COMPARATORS BY STP
+  combine_matched_historical_CASESstps:
+    run: stata-mp:latest analysis/06c_longCovidSymp_cr_combine_historical_CASEstps_after_matching.do
+    needs: [match_historical_stp5, match_historical_stp6, match_historical_stp7, match_historical_stp8, match_historical_stp9,
+    match_historical_stp10, match_historical_stp12, match_historical_stp13, match_historical_stp14, match_historical_stp15,
+    match_historical_stp16, match_historical_stp17, match_historical_stp20, match_historical_stp21, match_historical_stp22,
+    match_historical_stp23, match_historical_stp24, match_historical_stp25, match_historical_stp26, match_historical_stp27,
+    match_historical_stp29, match_historical_stp33, match_historical_stp35, match_historical_stp36, match_historical_stp37, 
+    match_historical_stp40, match_historical_stp41, match_historical_stp42, match_historical_stp43, match_historical_stp44, 
+    match_historical_stp49]
+    outputs:
+      highly_sensitive:
+        matched_cases_allstps: output/input_covid_matched_cases_historical_allSTPs.csv
+      moderately_sensitive:
+        log: logs/06c_longCovidSymp_cr_combine_historical_CASEstps_after_matching.log
+
+
+  combine_matched_historical_COMPARATORstps:
+    run: stata-mp:latest analysis/06d_longCovidSymp_cr_combine_historical_COMPARATORstps_after_matching.do
+    needs: [match_historical_stp5, match_historical_stp6, match_historical_stp7, match_historical_stp8, match_historical_stp9,
+    match_historical_stp10, match_historical_stp12, match_historical_stp13, match_historical_stp14, match_historical_stp15,
+    match_historical_stp16, match_historical_stp17, match_historical_stp20, match_historical_stp21, match_historical_stp22,
+    match_historical_stp23, match_historical_stp24, match_historical_stp25, match_historical_stp26, match_historical_stp27,
+    match_historical_stp29, match_historical_stp33, match_historical_stp35, match_historical_stp36, match_historical_stp37, 
+    match_historical_stp40, match_historical_stp41, match_historical_stp42, match_historical_stp43, match_historical_stp44, 
+    match_historical_stp49]
+    outputs:
+      highly_sensitive:
+        matched_matches_allstps: output/input_covid_matched_matches_historical_allSTPs.csv
+      moderately_sensitive:
+        log: logs/06d_longCovidSymp_cr_combine_historical_COMPARATORstps_after_matching.log
+
+
+ #6e. CHECK VARIABLES FOR COMBINED CASES AND COMBINED CONTROLS PRIOR TO ADDING MORE VARIABLES
+ # check_combinedFiles:
+ #   run: stata-mp:latest analysis/6a_longCovidSymp_checkCombinedFiles.do
+ #   needs: [combine_matched_CASESstps, combine_matched_COMPARATORstps]
+ #   outputs:
+ #     moderately_sensitive:
+ #      log: logs/6a_longCovidSymp_checkCombinedFiles.log
+
+ # 6f. CHECK VARIABLES FOR COMBINED CASES AND COMBINED CONTROLS PRIOR TO ADDING MORE VARIABLES
+  check_historical_combinedFiles:
+    run: stata-mp:latest analysis/6f_longCovidSymp_checkHistoricalCombinedFiles.do
+    needs: [combine_matched_historical_CASESstps, combine_matched_historical_COMPARATORstps]
+    outputs:
+      moderately_sensitive:
+       log: logs/6a_longCovidSymp_checkHistoricalCombinedFiles.log
 
 
 # 7. ADD FURTHER VARIABLES TO CASES FOLLOWING MATCHING
@@ -946,7 +986,7 @@ actions:
         matched_cases_contemporary_wVars: output/input_complete_covid_communitycases.csv
 
 
- # 8. ADD FURTHER VARIABLES TO CONTROLS FOLLOWING MATCHING
+ # 8. ADD FURTHER VARIABLES TO CONTEMPORARY CONTROLS FOLLOWING MATCHING
   add_allVars_contemporary_controls:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_contemporary 
     needs: [combine_matched_COMPARATORstps]
