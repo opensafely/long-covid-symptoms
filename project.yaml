@@ -881,6 +881,16 @@ actions:
 
 
 
+  checkVars_inHistoricalMatchedFiles:
+    run: stata-mp:latest analysis/05a_check_varsHistorical_after_matching.do
+    needs: [match_historical_stp29]
+    outputs:
+      moderately_sensitive:
+        log: logs/05a_check_varsHistorical_after_matching.log
+
+
+
+
 
 
 
