@@ -23,7 +23,7 @@ pwd
 
 * Open a log file
 cap log close
-log using ./logs/06b_longCovidSymp_cr_combine_historical_COMPARATORstps_after_matching.log, replace t
+log using ./logs/06d_longCovidSymp_cr_combine_historical_COMPARATORstps_after_matching.log, replace t
 
 *(1)=========Change source files to stata format============
 *change source files to stata format
