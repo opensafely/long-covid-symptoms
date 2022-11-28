@@ -95,12 +95,17 @@ capture noisily assert dereg_date>=case_index_date
 codebook case_index_date
 summ case_index_date, detail
 
+
 *check for specific date that it is one year prior
 keep patient_id set_id case_index_date
 duplicates drop patient_id, force
 merge m:1 set_id using `caseIndexChecker'
 keep if _merge==3
+assert case_index_date==case_index_dateForCase-366
+/*checked that this was ok but commenting out so list results are not in the log file
 list patient_id case_index_date case_index_dateForCase set_id
+*/
+
 
 log close
 
