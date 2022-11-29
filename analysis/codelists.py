@@ -278,6 +278,22 @@ mobilityimpairment_symptom_codes = codelist_from_csv(
 )
 
 
+# COVARIATES
+ethnicity_codes = codelist_from_csv(
+    "codelists/opensafely-ethnicity.csv",
+    system="ctv3",
+    column="Code",
+    category_column="Grouping_6",
+)
+
+ethnicity_codes_16 = codelist_from_csv(
+    "codelists/opensafely-ethnicity.csv",
+    system="ctv3",
+    column="Code",
+    category_column="Grouping_16",
+)
+
+
 
 
 

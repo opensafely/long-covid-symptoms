@@ -997,14 +997,14 @@ actions:
 
 # 8a. GET PREV YRS CONSULTATION COUNT VAR FOR CASES
   get_consultationCount_cases:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_gpconsultations_cases_contemporary 
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_gpconsultations_cases
     needs: [combine_matched_CASESstps]
     outputs:
       highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_gpconsultations_cases_contemporary.csv
+        matched_controls_contemporary_wVars: output/input_gpconsultations_cases.csv
 
 
-# 8b. GET PREV YRS CONSULTATION COUNT VAR FOR CONTROLS
+# 8b. GET PREV YRS CONSULTATION COUNT VAR FOR CONTEMPORARY CONTROLS
   get_consultationCount_controls:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_gpconsultations_controls_contemporary 
     needs: [combine_matched_COMPARATORstps]
@@ -1015,14 +1015,14 @@ actions:
 
 # 8c. GET SYMPTOMS FOR CASES
   get_symptoms_cases:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_cases_contemporary 
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_cases
     needs: [combine_matched_CASESstps]
     outputs:
       highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_symptoms_cases_contemporary.csv
+        matched_controls_contemporary_wVars: output/input_symptoms_cases.csv
 
 
-# 8d. GET SYMPTOMS FOR CONTROLS
+# 8d. GET SYMPTOMS FOR CONTEMPORAY CONTROLS
   get_symptoms_controls:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_contemporary 
     needs: [combine_matched_COMPARATORstps]
@@ -1031,7 +1031,7 @@ actions:
         matched_controls_contemporary_wVars: output/input_symptoms_controls_contemporary.csv
 
 
-# 8e. CHECK VARIABLES (CURRENTLY CHECKING NEW SYMPTOM VARIABLES)
+# 8e. CHECK VARIABLES FOR CASES AND CONTEMPORARY CONTROLS (CURRENTLY CHECKING NEW SYMPTOM VARIABLES)
   # *** contemporary potential comparators for each stp
   checkVars_inCasesAndCOntrolsAfterAddingFurtherVariables:
     run: stata-mp:latest analysis/08e_checkVars_casesControls_after_adding_furtherVars.do
@@ -1041,7 +1041,27 @@ actions:
         log: logs/08e_checkVars_casesControls_after_adding_furtherVars.log
 
 
-# 9. CREATE ANALYSIS FILE (ALSO COMBINES CASES AND CONTROLS)
+# 8f. ADD DIAGNOSES, REMAINING COVARIATES AND GPCOUNT TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
+  add_allVars_historical_controls:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_historical 
+    needs: [combine_matched_historical_COMPARATORstps]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_complete_controls_historical.csv
+
+
+ # 8g. ADD SYMPTOMS TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
+  get_symptoms_historical_controls:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_historical 
+    needs: [combine_matched_historical_COMPARATORstps]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_symptoms_controls_historical.csv
+
+
+
+
+# 9. CREATE CONTEMPORARY ANALYSIS FILE (ALSO COMBINES CASES AND CONTROLS)
   create_analysis_file:
     run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do
     needs: [set_case_index_date, generate_potential_controls_contemporary, 

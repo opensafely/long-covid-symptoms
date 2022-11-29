@@ -1,58 +1,99 @@
+# Import necessary functions
 from cohortextractor import (
-    StudyDefinition, 
-    patients, 
-    codelist, 
+    StudyDefinition,
+    patients,
     codelist_from_csv,
-    filter_codes_by_category
-    combine_codelists,
+    codelist,
+    filter_codes_by_category,
+    combine_codelists
 )
-from common_variables_short import generate_common_variables_short
+
+# Import all codelists
 from codelists import *
 
-# need shortened version of common vars with just matching vars
-# i.e., age +/- whatever I use for matching
-common_variables_short = generate_common_variables_short(index_date_variable="index_date")
+# Import the required data 
+
+CONTROLS = "output/input_covid_matched_matches_historical_allSTPs.csv"
+
+# Import Variables 
+
+## covariates not yet added i.e.: rural/urban, ethnicity, comorbidities
+## all above relative to index date
+from covariates_complete import generate_covariates_complete
+covariates_complete= generate_covariates_complete(index_date_variable="case_index_date")
+
+## outcome variables (note, relative to community COVID19 case (index) date)
+from outcome_variables_diag import generate_outcome_variables_diag
+outcome_variables_diag = generate_outcome_variables_diag(index_date_variable="case_index_date")
+
+
+# Specify study definition
 
 study = StudyDefinition(
+    # configure the expectations framework
     default_expectations={
-        "date": {"earliest": "1980-01-01", "latest": "today"},
+        "date": {"earliest": "1900-01-01", "latest": "today"},
         "rate": "uniform",
-        "incidence": 0.2,
+        "incidence" : 0.2
     },
-    population=patients.satisfying(
-        """
-            has_follow_up
-        AND (age <= 110)
-        AND (sex = "M" OR sex = "F")
-        AND imd > 0
-        AND NOT stp = ""
-        """,
-        # registered between march 2018 and march 2020
-        # and in a later step confirm that comparators have 3 months of registration
-        # before their index date (can't do this now, as we don't know index)
-        # so will need to up matching ratio to account for people who stop being eligible
-        # because they don't have continuous registration
 
-        # drop the above suggestions instead edit in match.py use case index to set control eligibility
-        # see under 'more examples' here: https://github.com/opensafely-core/matching#readme%5C
+     # select the study population
+    population=patients.which_exist_in_file(CONTROLS), 
+
+    # start of observation period (note, needs to be called index date)
+    index_date="2019-02-01", # note should be ignored when using case_index_date 
+
+    # get case index date from controls file
+    case_index_date=patients.with_value_from_file(
+        CONTROLS, 
+        returning="case_index_date", 
+        returning_type="date"), 
+
+    # extract the NEW VARIABLES ONLY.
+    # all other variables (that have already been extracted in the first extraction step) I will get by MERGING IN STATA
+    # doing it this way as am uncomfortable about "reextracting" any variables that I have already extracted ((and performed checks)
+    # for example, when I re-extracted, there there were some missing STPs and some sex categories other than M or F, despite these
+    # being defined as required (for STP) or only M or F (for sex)
+
+    
+
+    # extract the new variables i.e. (1) covariates: ethnicity, rural_urban and comorbidities and (2) diagnoses (3) prev GP consultations
+    # (symptoms are added by the next study definition)
+    # COVARIATES  
+    **covariates_complete, 
+
+    # DIAGNOSES VARIABLES  
+    **outcome_variables_diag, 
 
 
-        has_follow_up=patients.registered_with_one_practice_between(
-            "index_date - 3 months", "index_date"
+    # TIME-VARYING SELECTION VARIABLES
+    ## Need to redo these as previously they were just assessed based upon index date 
+    has_follow_up=patients.registered_with_one_practice_between(
+        start_date="case_index_date - 3 months",
+        end_date="case_index_date",
+        return_expectations={"incidence": 0.95},
         ),
+
+    ### died before case index date
+    has_died=patients.died_from_any_cause(
+      on_or_before="case_index_date",
+      returning="binary_flag",
     ),
 
-    # I guess we do something different here due to the matching program
-    # do I explictly need to exclude people with previous COVID here?
-    # I guess not necessary as gen pop 2018-2019 by definition can't have covid
-    # also as I want to match 2020 covid people to 2018 gen pop
-    # and 2021 covid people to 2019 gen pop, do I need a separate study def file for 2018
-    # and 2019?
-    index_date="2019-02-01",
-    **common_variables_short
-)
+    ### died after case index date
+    death_date=patients.died_from_any_cause(
+        on_or_after="case_index_date",
+        returning="date_of_death",
+        date_format="YYYY-MM-DD", 
+        return_expectations={
+            "date": {
+                "earliest": "2020-02-01",  
+                "latest": "2021-01-31", }, 
+                "incidence": 0.01 },
+    ),
 
-
-
-
-
+    ### deregistered after case index date
+    dereg_date=patients.date_deregistered_from_all_supported_practices(
+        on_or_after="case_index_date", date_format="YYYY-MM",
+    ),
+) 
