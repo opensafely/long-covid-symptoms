@@ -31,14 +31,16 @@ foreach i of numlist 5/10 12/17 20/27 29 33 35/37 40/44 49 {
 	capture noisily import delimited ./output/matched_matches_historical_stp`i'.csv, clear
 	*FOR TESTING ON DUMMY DATA
 	*import delimited ./output/input_covid_communitycases_stp`i'.csv, clear
-	capture noisily tempfile matched_matches_historical_stp`i'
-	capture noisily save `matched_matches_historical_stp`i'', replace
+	capture noisily tempfile matched_comp_hist_stp`i'
+	capture noisily save `matched_comp_hist_stp`i'', replace
 }
 
+*need to rename files here as names are too long for a macro
+
 *(2)=========Append separate cases files==========
-use `matched_matches_historical_stp5', clear
+use `matched_comp_hist_stp5', clear
 foreach i of numlist 6/10 12/17 20/27 29 33 35/37 40/44 49 {
-	capture noisily append using `matched_matches_historical_stp`i'', force
+	capture noisily append using `matched_comp_hist_stp`i'', force
 }
 
 *count of total cases and STPs
