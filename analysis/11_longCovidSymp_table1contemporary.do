@@ -265,6 +265,10 @@ file write tablecontent _n
 tabulatevariable, variable(preExistComorbCat) min(0) max(2) 
 file write tablecontent _n 
 
+*Previous consultations (3 categories)
+tabulatevariable, variable(gpCountCat) min(0) max(2) 
+file write tablecontent _n 
+
 
 file write tablecontent _n _n
 
