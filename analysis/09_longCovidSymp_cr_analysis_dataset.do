@@ -20,6 +20,10 @@ sysdir set PLUS ./analysis/adofiles
 sysdir set PERSONAL ./analysis/adofiles
 pwd
 
+*setup so that the code in this file can be used to output analyses for both contemporary and historical comparators (and is called twice by separate .yaml actions)
+local dataset `1'
+
+
 *set up some global lists of all comorb, diagnosis and symptom variables to help with subsequent programming (all will need updated as Kate approves more codelists)
 *master list of comorbs
 global comorbs comorb_infection_or_parasite comorb_neoplasms comorb_blood_diseases comorb_endocrine_nutr_metab_dise comorb_mental_behav_disorder comorb_nervous_system_diseases comorb_ear_mastoid_disease comorb_circulatory_system_diseas comorb_respiratory_system_diseas comorb_digestive_system_disease comorb_skin_disease comorb_muscuoloskeletal_connecti comorb_genitourinary_disease comorb_pregnancy_complications comorb_perinatal_disease comorb_congenital_disease comorb_injury_poisoning
@@ -31,7 +35,7 @@ global symp symp_cough symp_chesttight symp_palp symp_fatigue symp_fever symp_co
 
 * Open a log file
 cap log close
-log using ./logs/09_longCovidSymp_cr_analysis_dataset.log, replace t
+log using ./logs/09_longCovidSymp_cr_`dataset'_analysis_dataset.log, replace t
 
 
 
@@ -46,7 +50,7 @@ di "**Potential cases:**"
 safecount
 
 *comparator
-capture noisily import delimited ./output/input_controls_contemporary.csv, clear
+capture noisily import delimited ./output/input_controls_`dataset'.csv, clear
 di "**Potential comparators:**"
 safecount
 
@@ -55,48 +59,52 @@ safecount
 *(1)=========Get all the (case and comparator related) variables from the matched cases and matched controls files============
 *case
 /*for cases the variables I want are: age, case, covid_hosp, covid_tpp_prob, covid_tpp_probw2, death_date, dereg_date, first_known_covid19, first_pos_test, first_pos_testw2, had_covid_hosp, has_died, has_follow_up, imd, match_counts, pos_covid_test_ever, set_id, sex, stp*/
-capture noisily import delimited ./output/input_covid_matched_cases_allSTPs.csv, clear
+capture noisily import delimited ./output/input_covid_matched_cases_`dataset'_allSTPs.csv, clear
 keep patient_id age case covid_hosp covid_tpp_prob covid_tpp_probw2 death_date dereg_date first_known_covid19 first_pos_test first_pos_testw2 had_covid_hosp has_died has_follow_up imd match_counts pos_covid_test_ever  set_id sex stp
 tempfile cases_match_info
 *for dummy data, should do nothing in the real data
 duplicates drop patient_id, force
 save `cases_match_info', replace
 *NUMBER OF MATCHED CASES
-count
+safecount
 
 
 *comparator
 /*for comparator the variables I want are: age, case, covid_hosp, covid_tpp_prob, covid_tpp_probw2, first_known_covid19, first_pos_test, first_pos_testw2, imd, pos_covid_test_ever, set_id, sex, stp*/
 *DON'T NEED has_follow_up, has_died, death_date or dereg_date from the original file - these are all created new based on case_index_date in the new file
-capture noisily import delimited ./output/input_covid_matched_matches_allSTPs.csv, clear
+capture noisily import delimited ./output/input_covid_matched_matches_`dataset'_allSTPs.csv, clear
 keep patient_id age case covid_hosp covid_tpp_prob covid_tpp_probw2 first_known_covid19 first_pos_test first_pos_testw2 imd pos_covid_test_ever set_id sex stp
 tempfile comp_match_info
 *for dummy data, should do nothing in the real data
 duplicates drop patient_id, force
 save `comp_match_info', replace
 *NUMBER OF MATCHED CONTROLS BEFORE DROPPING THOSE DUE TO FOLLOW-UP ISSUES RELATED TO CASE_INDEX_DATE (SEE BELOW)
-count
+safecount
 
-*(1a)========Get the gp consultation count variable for cases and controls============
-capture noisily import delimited ./output/input_gpconsultations_cases_contemporary.csv, clear
-count
+*(1a)========Get the gp consultation count variable for cases and controls - only need to do this for the contemporary controls as gp_count was included as a covariate in the historical controls============
+capture noisily import delimited ./output/input_gpconsultations_cases.csv, clear
+safecount
 keep patient_id gp_count
 tempfile case_gp_count
 save `case_gp_count'
-capture noisily import delimited ./output/input_gpconsultations_controls_contemporary.csv, clear
-count
-keep patient_id gp_count
-tempfile control_gp_count
-save `control_gp_count'
+
+*the following only needs done for the contemporary controls as the historical controls already have the gp_count variable
+if "`dataset'"=="contemporary" {
+	capture noisily import delimited ./output/input_gpconsultations_controls_`dataset'.csv, clear
+	count
+	keep patient_id gp_count
+	tempfile control_gp_count
+	save `control_gp_count'
+}
 
 
 *(1b)========Get the symptom information for cases and controls============
-capture noisily import delimited ./output/input_symptoms_cases_contemporary.csv, clear
+capture noisily import delimited ./output/input_symptoms_cases_`dataset'.csv, clear
 count
 drop case_index_date
 tempfile case_symptoms
 save `case_symptoms'
-capture noisily import delimited ./output/input_symptoms_controls_contemporary.csv, clear
+capture noisily import delimited ./output/input_symptoms_controls_`dataset'.csv, clear
 count
 drop case_index_date
 tempfile control_symptoms
@@ -104,8 +112,10 @@ save `control_symptoms'
 
 
 *(2)=========Add the case and comparator information from above to the files with the rest of the information============
-*import (matched) cases with variables and merge with match variables
+*import matched cases with variables and merge with match variables - note that the "complete" cases file is applicable to both current- and historical- matched cases
 capture noisily import delimited ./output/input_complete_covid_communitycases.csv, clear
+ 
+*add match info
 merge 1:1 patient_id using `cases_match_info'
 keep if _merge==3
 drop _merge
@@ -124,14 +134,18 @@ di "**Matched cases:**"
 safecount
 
 
-capture noisily import delimited ./output/input_complete_controls_contemporary.csv, clear
+capture noisily import delimited ./output/input_complete_controls_`dataset'.csv, clear
+*add match info
 merge 1:1 patient_id using `comp_match_info'
 keep if _merge==3
 drop _merge
-*add gp_count
-merge 1:1 patient_id using `control_gp_count'
-keep if _merge==3
-drop _merge
+*add gp_count info
+*the following only needs done for the contemporary controls as the historical controls already have the gp_count variable
+if "`dataset'"=="contemporary" {
+	merge 1:1 patient_id using `control_gp_count'
+	keep if _merge==3
+	drop _merge
+}
 *add symptoms
 merge 1:1 patient_id using `control_symptoms'
 keep if _merge==3
@@ -143,7 +157,7 @@ safecount
 
 
 *NOTE: Flowchart re: who was dropped here due date exclusions can be obtained from the STP matching logs (if needed)
-*/
+
 
 *(3)=========Append case and comparator files together, drop controls with required has follow up and tidy up, then check number as expected============
 append using `cases_with_vars_and_match_info', force
@@ -484,11 +498,11 @@ la var caseHospForCOVIDDurFUP3 "case who was hospitalised for COVID during FUP p
 	
 
 *save final file
-save ./output/longCovidSymp_analysis_dataset_contemporary.dta, replace
+save ./output/longCovidSymp_analysis_dataset_`dataset'.dta, replace
 *save a version that contains only the patient_ids and removes duplicates (for correcting imd and any other covariates assessed independent of case index date)
 duplicates drop patient_id, force
 keep patient_id
-capture noisily export delimited using "./output/longCovidSymp_analysis_dataset_contemporary.csv", replace
+capture noisily export delimited using "./output/longCovidSymp_analysis_dataset_`dataset'.csv", replace
 
 
 

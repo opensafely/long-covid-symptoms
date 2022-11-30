@@ -1043,6 +1043,7 @@ actions:
 
 # 8f. FROM LIST OF CASES MATCHED TO CONTEMPORARY CONTROLS (WITH ALL VARS ADDED), SELECT THOSE MATCHED TO HISTORICAL
 #THis is to avoid having to extract all of the information for the matched historical cases that will be very similar to matched contemp cases 
+#Looks like I don't need this file as all were matched, but I DO NEED to keep the match specific data from 
   select_historical_matched_cases:
     run: stata-mp:latest analysis/08f_getHistoricalMatchedCases.do 
     needs: [combine_matched_historical_CASESstps, combine_matched_CASESstps]
@@ -1077,8 +1078,8 @@ actions:
 
 
 # 9. CREATE CONTEMPORARY ANALYSIS FILE (ALSO COMBINES CASES AND CONTROLS)
-  create_analysis_file:
-    run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do
+  create_contemporary_analysis_file:
+    run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do contemporary
     needs: [set_case_index_date, generate_potential_controls_contemporary, 
     add_allVars_contemporary_controls, add_allVars_cases, combine_matched_CASESstps, combine_matched_COMPARATORstps, 
     get_consultationCount_cases, get_consultationCount_controls, get_symptoms_cases, get_symptoms_controls]
@@ -1095,7 +1096,7 @@ actions:
 
 # 9b. CREATE HISTORICAL ANALYSIS FILE (ALSO COMBINES CASES AND HISTORICAL CONTROLS)
   create_historical_analysis_file:
-    run: stata-mp:latest analysis/09b_longCovidSymp_cr_historical_analysis_dataset.do
+    run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do historical
     needs: [set_case_index_date, generate_potential_controls_historical, 
     add_allVars_historical_controls, add_allVars_cases, combine_matched_historical_CASESstps, combine_matched_historical_COMPARATORstps, 
     get_consultationCount_cases, get_symptoms_cases, get_symptoms_historical_controls]
@@ -1133,7 +1134,7 @@ actions:
 # 10. CHECK DATA FOR COMBINED CASE AND CONTROL FILE
   data_checks:
     run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do
-    needs: [create_analysis_file]
+    needs: [create_contemporary_analysis_file]
     outputs:
       moderately_sensitive:
         log: logs/10_longCovidSymp_data_checks.log
@@ -1142,7 +1143,7 @@ actions:
 # 11. DESCRIPTIVE TABLE CONTEMPORARY
   table_1_contemporary:
     run: stata-mp:latest analysis/11_longCovidSymp_table1contemporary.do
-    needs: [create_analysis_file]
+    needs: [create_contemporary_analysis_file]
     outputs:
       moderately_sensitive:
         log: logs/11_longCovidSymp_table1contemporary.log
@@ -1162,7 +1163,7 @@ actions:
 # 12a. FIGURE 1A - SYMPTOMS AT ANY TIME (CONTEMPORARY)
   figure_1panelA_contemporary:
     run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelA.do contemporary
-    needs: [create_analysis_file]
+    needs: [create_contemporary_analysis_file]
     outputs:
       moderately_sensitive:
         log: logs/12a_longCovidSympAnyTime_figure1PanelAcontemporary.log
@@ -1182,7 +1183,7 @@ actions:
 # 12b. FIGURE 1B - DIAGNOSES AT ANY TIME
   figure_1panelB_contemporary:
     run: stata-mp:latest analysis/12b_longCovidDiagAnyTime_figure1PanelBcontemporary.do
-    needs: [create_analysis_file]
+    needs: [create_contemporary_analysis_file]
     outputs:
       moderately_sensitive:
         log: logs/12b_longCovidDiagAnyTime_figure1PanelBcontemporary.log
@@ -1192,7 +1193,7 @@ actions:
 # 12c. FIGURE 1C - PRESCRIPTIONS AT ANY TIME
   figure_1panelC_contemporary:
     run: stata-mp:latest analysis/12b_longCovidPrescrAnyTime_figure1PanelCcontemporary.do
-    needs: [create_analysis_file]
+    needs: [create_contemporary_analysis_file]
     outputs:
       moderately_sensitive:
         log: logs/12c_longCovidPrescrAnyTime_figure1PanelBcontemporary.log
@@ -1202,7 +1203,7 @@ actions:
 # 13a. FIGURE 2A - SYMPTOMS OVER THREE TIME PERIODS
   figure_2panelA_contemporary:
     run: stata-mp:latest analysis/13a_longCovidSympTimePeriods_figure2PanelAcontemporary.do
-    needs: [create_analysis_file]
+    needs: [create_contemporary_analysis_file]
     outputs:
       moderately_sensitive:
         log: logs/13a_longCovidSympTimePeriods_figure2PanelAcontemporary.log
@@ -1212,7 +1213,7 @@ actions:
 # 13b. FIGURE 2B - DIAGNOSES OVER THREE TIME PERIODS
   figure_2panelB_contemporary:
     run: stata-mp:latest analysis/13b_longCovidDiagTimePeriods_figure2PanelBcontemporary.do
-    needs: [create_analysis_file]
+    needs: [create_contemporary_analysis_file]
     outputs:
       moderately_sensitive:
         log: logs/13b_longCovidDiagTimePeriods_figure2PanelBcontemporary.log
@@ -1222,7 +1223,7 @@ actions:
 # 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS
   figure_2panelC_contemporary:
     run: stata-mp:latest analysis/13c_longCovidPrescrTimePeriods_figure2PanelCcontemporary.do
-    needs: [create_analysis_file]
+    needs: [create_contemporary_analysis_file]
     outputs:
       moderately_sensitive:
         log: logs/13c_longCovidPrescrTimePeriods_figure2PanelCcontemporary.log
