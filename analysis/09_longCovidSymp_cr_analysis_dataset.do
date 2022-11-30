@@ -99,7 +99,7 @@ if "`dataset'"=="contemporary" {
 
 
 *(1b)========Get the symptom information for cases and controls============
-capture noisily import delimited ./output/input_symptoms_cases_`dataset'.csv, clear
+capture noisily import delimited ./output/input_symptoms_cases.csv, clear
 count
 drop case_index_date
 tempfile case_symptoms
