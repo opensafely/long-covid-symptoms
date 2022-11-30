@@ -45,7 +45,7 @@ foreach i of numlist 6/10 12/17 20/27 29 33 35/37 40/44 49 {
 capture noisily safetab stp
 capture noisily count
 *save as .csv file for input into study definitions that add further variables, erase dta version
-capture noisily export delimited using "./output/input_covid_matched_cases_allSTPs.csv", replace
+capture noisily export delimited using "./output/input_covid_matched_cases_contemporary_allSTPs.csv", replace
 
 
 
