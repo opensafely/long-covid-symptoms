@@ -15,9 +15,12 @@
 sysdir set PLUS ./analysis/adofiles
 sysdir set PERSONAL ./analysis/adofiles
 
+*setup so that the code in this file can be used to output analyses for both contemporary and historical comparators (and is called twice by separate .yaml actions)
+local dataset `1' 
+
 *checking tabulations
 capture log close
-log using ./logs/12a_longCovidSympAnyTime_figure1PanelAcontemporary.log, replace t
+log using ./logs/12a_longCovidSympAnyTime_figure1PanelA`dataset'.log, replace t
 
 *list of symptoms (first release here)
 global symptomOutcomes tEver_symp_cough tEver_symp_chesttight tEver_symp_palp tEver_symp_fatigue tEver_symp_fever tEver_symp_cogimpair tEver_symp_sleepdisturb tEver_symp_periphneuro tEver_symp_dizzy tEver_symp_mobilityimpair
@@ -82,7 +85,7 @@ prog define outputORsforOutcome
 	
 	*write each row
 	*crude 
-	file write tablecontents  ("`varLab'") _tab ("vs 2020 general population") _tab ("Crude") _tab %4.2f (`hr_crude')  " (" %4.2f (`lb_crude') "-" %4.2f (`ub_crude') ")" _tab (`events') _tab %3.1f (`percWEvent') ("%")  _n
+	file write tablecontents  ("`varLab'") _tab ("Crude") _tab %4.2f (`hr_crude')  " (" %4.2f (`lb_crude') "-" %4.2f (`ub_crude') ")" _tab (`events') _tab %3.1f (`percWEvent') ("%")  _n
 	*depr and ethnicity adjusted
 	file write tablecontents  _tab _tab ("Adjusted for deprivation, ethnicity &rural/urban") _tab %4.2f (`hr_deprEth_adj')  " (" %4.2f (`lb_deprEth_adj') "-" %4.2f (`ub_deprEth_adj') ")"  _n
 	*fully adjusted
@@ -94,11 +97,11 @@ end
 
 *call program and output tables
 
-use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
+use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 rename case expStatus
-file open tablecontents using ./output/figure1PanelA_longCovidSympAnyTime_contemporary.txt, t w replace
-file write tablecontents "Fig 1: Panel A. Community COVID-19: Odds ratios comparing odds of post-COVID SYMPTOMS AT ANY TIME during follow up in community COVID-19 compared to comparator populations." _n _n
-file write tablecontents ("Diagnoses") _tab ("Comparator") _tab _tab ("OR (95% CI)") _tab ("Number of events") _tab ("Proportion of population with events") _n
+file open tablecontents using ./output/figure1PanelA_longCovidSympAnyTime_`dataset'.txt, t w replace
+file write tablecontents "Fig 1: Panel A. Community COVID-19: Odds ratios comparing odds of post-COVID SYMPTOMS AT ANY TIME during follow up in community COVID-19 compared to `dataset' comparator population" _n _n
+file write tablecontents ("Diagnoses") _tab _tab ("OR (95% CI)") _tab ("Number of events") _tab ("Proportion of population with events") _n
 
 *loop through each outcome
 *foreach outcome in $diagnosisOutcomes {
