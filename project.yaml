@@ -904,7 +904,7 @@ actions:
     match_contemporary_stp49]
     outputs:
       highly_sensitive:
-        matched_cases_allstps: output/input_covid_matched_cases_allSTPs.csv
+        matched_cases_allstps: output/input_covid_matched_cases_contemporary_allSTPs.csv
       moderately_sensitive:
         log: logs/06a_longCovidSymp_cr_combine_CASEstps_after_matching.log
 
@@ -920,7 +920,7 @@ actions:
     match_contemporary_stp49]
     outputs:
       highly_sensitive:
-        matched_matches_allstps: output/input_covid_matched_matches_allSTPs.csv
+        matched_matches_allstps: output/input_covid_matched_matches_contemporary_allSTPs.csv
       moderately_sensitive:
         log: logs/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching.log
 
@@ -1041,7 +1041,16 @@ actions:
         log: logs/08e_checkVars_casesControls_after_adding_furtherVars.log
 
 
-# 8f. ADD DIAGNOSES, REMAINING COVARIATES AND GPCOUNT TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
+# 8f. FROM LIST OF CASES MATCHED TO CONTEMPORARY CONTROLS (WITH ALL VARS ADDED), SELECT THOSE MATCHED TO HISTORICAL
+# select_historical_matched_cases:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_historical 
+ #   needs: [combine_matched_historical_COMPARATORstps]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_controls_contemporary_wVars: output/input_complete_controls_historical.csv
+
+
+# 8g. ADD DIAGNOSES, REMAINING COVARIATES AND GPCOUNT TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
   add_allVars_historical_controls:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_historical 
     needs: [combine_matched_historical_COMPARATORstps]
@@ -1050,7 +1059,7 @@ actions:
         matched_controls_contemporary_wVars: output/input_complete_controls_historical.csv
 
 
- # 8g. ADD SYMPTOMS TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
+ # 8h. ADD SYMPTOMS TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
   get_symptoms_historical_controls:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_historical 
     needs: [combine_matched_historical_COMPARATORstps]
@@ -1075,7 +1084,24 @@ actions:
         mainAnalysisFileCSV: output/longCovidSymp_analysis_dataset_contemporary.csv
         unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_analysis_dataset.dta
       moderately_sensitive: 
-        log: logs/09_longCovidSymp_cr_analysis_dataset.log
+        log: logs/09_longCovidSymp_cr_contemporary_analysis_dataset.log
+
+
+# 9b. CREATE HISTORICAL ANALYSIS FILE (ALSO COMBINES CASES AND HISTORICAL CONTROLS)
+  create_historical_analysis_file:
+    run: stata-mp:latest analysis/09b_longCovidSymp_cr_historical_analysis_dataset.do
+    needs: [set_case_index_date, generate_potential_controls_historical, 
+    add_allVars_historical_controls, add_allVars_cases, combine_matched_historical_CASESstps, combine_matched_historical_COMPARATORstps, 
+    get_consultationCount_cases, get_symptoms_cases, get_symptoms_historical_controls]
+    outputs:
+      highly_sensitive:
+        # casesContemporary: output/cases_contemporary.dta 
+        # controlsContemporary: output/controls_contemporary.dta 
+        mainAnalysisFile: output/longCovidSymp_analysis_dataset_historical.dta
+        mainAnalysisFileCSV: output/longCovidSymp_analysis_dataset_historical.csv
+        unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_historical_analysis_dataset.dta
+      moderately_sensitive: 
+        log: logs/09_longCovidSymp_cr_historical_analysis_dataset.log
 
 
 # 10a. IMD CORRECTION (ONLY NEEDED IF ACTION 1 NOT BEING RUN)
@@ -1107,7 +1133,7 @@ actions:
         log: logs/10_longCovidSymp_data_checks.log
 
 
-# 11. DESCRIPTIVE TABLE
+# 11. DESCRIPTIVE TABLE CONTEMPORARY
   table_1_contemporary:
     run: stata-mp:latest analysis/11_longCovidSymp_table1contemporary.do
     needs: [create_analysis_file]
@@ -1117,14 +1143,34 @@ actions:
         table1contemporary: output/table1_longCovidSymp_contemporary.txt
 
 
-# 12a. FIGURE 1A - SYMPTOMS AT ANY TIME
+# 11b. DESCRIPTIVE TABLE HISTORICAL
+  table_1_historical:
+    run: stata-mp:latest analysis/11_longCovidSymp_table1historical.do
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/11_longCovidSymp_table1historical.log
+        table1historical: output/table1_longCovidSymp_historical.txt
+
+
+# 12a. FIGURE 1A - SYMPTOMS AT ANY TIME (CONTEMPORARY)
   figure_1panelA_contemporary:
-    run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelAcontemporary.do
+    run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelA.do contemporary
     needs: [create_analysis_file]
     outputs:
       moderately_sensitive:
         log: logs/12a_longCovidSympAnyTime_figure1PanelAcontemporary.log
         figure1contemporary: output/figure1PanelA_longCovidSympAnyTime_contemporary.txt
+
+
+# 12b. FIGURE 1B - SYMPTOMS AT ANY TIME (HISTORICAL)
+  figure_1panelA_historical:
+    run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelA.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/12a_longCovidSympAnyTime_figure1PanelAhistorical.log
+        figure1contemporary: output/figure1PanelA_longCovidSympAnyTime_historical.txt
 
 
 # 12b. FIGURE 1B - DIAGNOSES AT ANY TIME
