@@ -1089,7 +1089,7 @@ actions:
         # controlsContemporary: output/controls_contemporary.dta 
         mainAnalysisFile: output/longCovidSymp_analysis_dataset_contemporary.dta
         mainAnalysisFileCSV: output/longCovidSymp_analysis_dataset_contemporary.csv
-        unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_analysis_dataset.dta
+        unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_contemporary_analysis_dataset.dta
       moderately_sensitive: 
         log: logs/09_longCovidSymp_cr_contemporary_analysis_dataset.log
 

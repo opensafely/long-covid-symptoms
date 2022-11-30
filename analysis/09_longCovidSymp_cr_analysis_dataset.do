@@ -210,7 +210,7 @@ preserve
 	keep if _merge==2
 	safecount
 	*save file for descriptive analysis
-	save output/longCovidSymp_UnmatchedCases_analysis_dataset.dta, replace
+	save output/longCovidSymp_UnmatchedCases_`dataset'_analysis_dataset.dta, replace
 	di "***********************FLOWCHART 4. NUMBER OF UMATCHED CASES FROM UNMATCHED CASES FILE (TO CONFIRM IT ALIGNS WITH THE ABOVE FLOWCHART POINTS)********************:"
 	safecount
 restore

@@ -12,7 +12,7 @@ from cohortextractor import (
 from codelists import *
 
 # Import the required data 
-CONTROLS = "output/input_covid_matched_matches_allSTPs.csv"
+CONTROLS = "input_covid_matched_matches_contemporary_allSTPs.csv"
 
 # Import Variables 
 ## outcome variables (note, relative to community COVID19 case (index) date)
