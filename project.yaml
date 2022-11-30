@@ -1042,12 +1042,18 @@ actions:
 
 
 # 8f. FROM LIST OF CASES MATCHED TO CONTEMPORARY CONTROLS (WITH ALL VARS ADDED), SELECT THOSE MATCHED TO HISTORICAL
-# select_historical_matched_cases:
-#    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_historical 
- #   needs: [combine_matched_historical_COMPARATORstps]
- #   outputs:
- #     highly_sensitive:
- #       matched_controls_contemporary_wVars: output/input_complete_controls_historical.csv
+#THis is to avoid having to extract all of the information for the matched historical cases that will be very similar to matched contemp cases 
+  select_historical_matched_cases:
+    run: stata-mp:latest analysis/08f_getHistoricalMatchedCases.do 
+    needs: [combine_matched_historical_CASESstps, combine_matched_CASESstps]
+    outputs:
+      highly_sensitive:
+        historical_and_current_cases: output/input_historical_and_current_cases.dta
+        historical_cases_only: output/input_historical_cases_only.csv
+      moderately_sensitive: 
+        log: logs/08f_getHistoricalMatchedCases.log
+      
+      
 
 
 # 8g. ADD DIAGNOSES, REMAINING COVARIATES AND GPCOUNT TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
