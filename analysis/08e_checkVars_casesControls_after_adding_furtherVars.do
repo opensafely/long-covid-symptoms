@@ -30,7 +30,7 @@ log using ./logs/08e_checkVars_casesControls_after_adding_furtherVars.log, repla
 *codebook
 
 *check distribution of gp consultations in previous year in order to plan for caregorical variable
-capture noisily import delimited ./output/input_symptoms_cases_contemporary.csv, clear
+capture noisily import delimited ./output/input_symptoms_cases.csv, clear
 codebook
 
  
