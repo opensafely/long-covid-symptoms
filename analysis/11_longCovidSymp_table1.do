@@ -238,20 +238,20 @@ local lab0: label case 0
 local lab1: label case 1   
 *for display n values
 safecount if case==0
-local current=r(N)
+local comparator=r(N)
 safecount if case==1
-local caseCurrent=r(N)
+local case=r(N)
 safecount
 local total=r(N)
 
 file write tablecontent _tab ("Total")	_tab ///			 
-							 ("Unexposed (2020 general population")	_tab ///
-							 ("Exposed (2020 matched)")  			_n 	
+							 ("Unexposed (`1'")	_tab ///
+							 ("Exposed (`1')")  			_n 	
 
 							 
 file write tablecontent _tab ("n=`total'")				  		  _tab ///
-							 ("n=`current'")				  	_tab ///
-							 ("n=`caseCurrent'")  			  	  _n
+							 ("n=`comparator'")				  	_tab ///
+							 ("n=`case'")  			  	  _n
 							 
 
 
