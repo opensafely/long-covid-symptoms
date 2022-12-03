@@ -1132,12 +1132,20 @@ actions:
 
 
 # 10. CHECK DATA FOR COMBINED CASE AND CONTROL FILE
-  data_checks:
-    run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do
+  data_checks_contemporary:
+    run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do contemporary
     needs: [create_contemporary_analysis_file]
     outputs:
       moderately_sensitive:
-        log: logs/10_longCovidSymp_data_checks.log
+        log: logs/10_longCovidSymp_data_checks_contemporary.log
+
+
+  data_checks_historical:
+    run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/10_longCovidSymp_data_checks_historical.log
 
 
 # 11. DESCRIPTIVE TABLE CONTEMPORARY

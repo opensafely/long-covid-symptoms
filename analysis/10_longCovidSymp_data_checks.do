@@ -23,17 +23,18 @@ pwd
 
 * Open a log file
 cap log close
-log using ./logs/10_longCovidSymp_data_checks.log, replace t
+log using ./logs/10_longCovidSymp_data_checks_`1'.log, replace t
 
 
-
+*setup so that the code in this file can be used to output analyses for both contemporary and historical comparators (and is called twice by separate .yaml actions)
+local dataset `1'
 
 
 
 
 
 *(0)=========Load file and check total numbers and cases and controls============
-use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
+use ./output/longCovidSymp_analysis_dataset_`1'.dta, clear
 
 *eyeball all variables
 *codebook
