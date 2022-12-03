@@ -1,0 +1,14 @@
+
+
+
+*set up some global lists of all comorb, diagnosis and symptom variables to help with subsequent programming (all will need updated as Kate approves more codelists)
+*master list of comorbs
+global comorbs comorb_infection_or_parasite comorb_neoplasms comorb_blood_diseases comorb_endocrine_nutr_metab_dise comorb_mental_behav_disorder comorb_nervous_system_diseases comorb_ear_mastoid_disease comorb_circulatory_system_diseas comorb_respiratory_system_diseas comorb_digestive_system_disease comorb_skin_disease comorb_muscuoloskeletal_connecti comorb_genitourinary_disease comorb_pregnancy_complications comorb_perinatal_disease comorb_congenital_disease comorb_injury_poisoning
+*master list of diagnoses
+global diag infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_disorder nervous_sys_dis ear_mastoid_dis circ_sys_dis resp_system_dis digest_syst_dis skin_disease musculo_dis genitourin_dis pregnancy_compl perinatal_dis congenital_dis injury_poison
+*master list of symptoms
+global symp symp_cough symp_chesttight symp_palp symp_fatigue symp_fever symp_cogimpair symp_sleepdisturb symp_periphneuro symp_dizzy symp_mobilityimpair
+
+
+
+
