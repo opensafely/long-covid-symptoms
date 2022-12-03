@@ -245,8 +245,8 @@ safecount
 local total=r(N)
 
 file write tablecontent _tab ("Total")	_tab ///			 
-							 ("Unexposed (`1'")	_tab ///
-							 ("Exposed (`1')")  			_n 	
+							 ("Unexposed (`1')")	_tab ///
+							 ("Exposed")  			_n 	
 
 							 
 file write tablecontent _tab ("n=`total'")				  		  _tab ///
