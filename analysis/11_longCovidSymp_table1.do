@@ -1,5 +1,5 @@
 /*==============================================================================
-DO FILE NAME:			11_longCovidSymp_table1historical
+DO FILE NAME:			11_longCovidSymp_table1contemporary
 PROJECT:				Covid symptoms analysis 
 DATE: 					12 Oct  
 AUTHOR:					K Wing
@@ -28,15 +28,18 @@ clear all
 sysdir set PLUS ./analysis/adofiles
 sysdir set PERSONAL ./analysis/adofiles
 
+*setup so that the code in this file can be used to output analyses for both contemporary and historical comparators (and is called twice by separate .yaml actions)
+local dataset `1'
+
 
 capture log close
-log using ./logs/11_longCovidSymp_table1historical.log, replace t
+log using ./logs/11_longCovidSymp_table1`1'.log, replace t
 
 *list for use below
 global table1Vars age ageCat sex imd eth5Table1 rural_urbanBroad preExistComorbCat gpCountCat
 
 
-use ./output/longCovidSymp_analysis_dataset_historical.dta, clear
+use ./output/longCovidSymp_analysis_dataset_`1'.dta, clear
 
 /*
 *keep just variables for this table and save as tempfile, create a new case variable just for displaying in this file
@@ -221,9 +224,9 @@ end
 
 *Set up output file
 cap file close tablecontent
-file open tablecontent using ./output/table1_longCovidSymp_historical.txt, write text replace
+file open tablecontent using ./output/table1_longCovidSymp_`1'.txt, write text replace
 
-file write tablecontent ("Table 1: Demographic and clinical characteristics for exposed to COVID-19 and historical matched unexposed") _n
+file write tablecontent ("Table 1: Demographic and clinical characteristics for exposed to COVID-19 and `1' matched unexposed") _n
 
 
 
@@ -235,20 +238,20 @@ local lab0: label case 0
 local lab1: label case 1   
 *for display n values
 safecount if case==0
-local historical=r(N)
+local current=r(N)
 safecount if case==1
-local caseHistorical=r(N)
+local caseCurrent=r(N)
 safecount
 local total=r(N)
 
 file write tablecontent _tab ("Total")	_tab ///			 
-							 ("Unexposed (2018-19 general population")	_tab ///
-							 ("Exposed (2018-19 matched)")  			_n 	
+							 ("Unexposed (2020 general population")	_tab ///
+							 ("Exposed (2020 matched)")  			_n 	
 
 							 
 file write tablecontent _tab ("n=`total'")				  		  _tab ///
-							 ("n=`historical'")				  	_tab ///
-							 ("n=`caseHistorical'")  			  	  _n
+							 ("n=`current'")				  	_tab ///
+							 ("n=`caseCurrent'")  			  	  _n
 							 
 
 

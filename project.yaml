@@ -1150,7 +1150,7 @@ actions:
 
 # 11. DESCRIPTIVE TABLE CONTEMPORARY
   table_1_contemporary:
-    run: stata-mp:latest analysis/11_longCovidSymp_table1contemporary.do
+    run: stata-mp:latest analysis/11_longCovidSymp_table1.do contemporary
     needs: [create_contemporary_analysis_file]
     outputs:
       moderately_sensitive:
@@ -1160,7 +1160,7 @@ actions:
 
 # 11b. DESCRIPTIVE TABLE HISTORICAL
   table_1_historical:
-    run: stata-mp:latest analysis/11_longCovidSymp_table1historical.do
+    run: stata-mp:latest analysis/11_longCovidSymp_table1.do historical
     needs: [create_historical_analysis_file]
     outputs:
       moderately_sensitive:

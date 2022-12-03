@@ -18,6 +18,8 @@ sysdir set PERSONAL "/Users/kw/Documents/GitHub/households-research/analysis/ado
 ==============================================================================*/
 sysdir set PLUS ./analysis/adofiles
 sysdir set PERSONAL ./analysis/adofiles
+*globals of lists of diagnoses and symptoms etc
+do ./analysis/masterLists.do
 pwd
 
 
@@ -154,14 +156,17 @@ datacheck inlist(eth5, 1, 2, 3, 4, 5, .), nol
 datacheck inlist(eth5, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, .), nol
 
 *comorb
-foreach var of varlist comorb_infection_or_parasite - comorb_injury_poisoning{ 
+foreach var of varlist $comorbs{ 
 	safetab `var', m
 }
 
 
-*all outcomes
-foreach var of varlist t1_infect_parasite - t3_symp_mobilityimpair tEver_infect_parasite - tEver_symp_mobilityimpair { 
-	safetab `var', m
+*all outcomes 
+foreach var of varlist $diag $symp { 
+	safetab t1_`var', m
+	safetab t2_`var', m
+	safetab t3_`var', m
+	safetab tEver_`var', m
 }
 
 
