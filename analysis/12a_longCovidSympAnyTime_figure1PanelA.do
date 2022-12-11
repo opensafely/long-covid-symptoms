@@ -14,6 +14,9 @@
 *************************************************************************
 sysdir set PLUS ./analysis/adofiles
 sysdir set PERSONAL ./analysis/adofiles
+*run globals of lists of diagnoses and symptoms, then make loc
+do ./analysis/masterLists.do
+
 
 *setup so that the code in this file can be used to output analyses for both contemporary and historical comparators (and is called twice by separate .yaml actions)
 local dataset `1' 
@@ -22,13 +25,9 @@ local dataset `1'
 capture log close
 log using ./logs/12a_longCovidSympAnyTime_figure1PanelA`dataset'.log, replace t
 
-*list of symptoms (first release here)
-global symptomOutcomes tEver_symp_cough tEver_symp_chesttight tEver_symp_palp tEver_symp_fatigue tEver_symp_fever tEver_symp_cogimpair tEver_symp_sleepdisturb tEver_symp_periphneuro tEver_symp_dizzy tEver_symp_mobilityimpair
-
 	
 prog drop _all
 
-*2300 Thursday - I need to use lincom after the estimates in order to make my estimates retrievable
 
 prog define outputORsforOutcome
 	syntax, outcome(string)
@@ -105,8 +104,8 @@ file write tablecontents ("Diagnoses") _tab _tab ("OR (95% CI)") _tab ("Number o
 
 *loop through each outcome
 *foreach outcome in $diagnosisOutcomes {
-foreach outcome in $symptomOutcomes {
-	cap noisily outputORsforOutcome, outcome(`outcome')
+foreach outcome in $symp {
+	cap noisily outputORsforOutcome, outcome(tEver_`outcome')
 	file write tablecontents _n
 }
 

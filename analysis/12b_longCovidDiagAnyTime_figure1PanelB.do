@@ -14,13 +14,16 @@
 *************************************************************************
 sysdir set PLUS ./analysis/adofiles
 sysdir set PERSONAL ./analysis/adofiles
+*globals of lists of diagnoses and symptoms etc
+do ./analysis/masterLists.do
+
+*setup so that the code in this file can be used to output analyses for both contemporary and historical comparators (and is called twice by separate .yaml actions)
+local dataset `1' 
 
 *checking tabulations
 capture log close
-log using ./logs/12b_longCovidDiagAnyTime_figure1PanelBcontemporary.log, replace t
+log using ./logs/12b_longCovidDiagAnyTime_figure1PanelB`dataset'.log, replace t
 
-*list of all outcomes
-global diagnosisOutcomes tEver_infect_parasite tEver_neoplasms tEver_blood_diseases tEver_endocr_nutr_dis tEver_mental_disorder tEver_nervous_sys_dis tEver_ear_mastoid_dis tEver_circ_sys_dis tEver_resp_system_dis tEver_digest_syst_dis tEver_skin_disease tEver_musculo_dis tEver_genitourin_dis tEver_pregnancy_compl tEver_perinatal_dis tEver_congenital_dis tEver_injury_poison
 
 	
 prog drop _all
@@ -82,7 +85,7 @@ prog define outputORsforOutcome
 	
 	*write each row
 	*crude 
-	file write tablecontents  ("`varLab'") _tab ("vs 2020 general population") _tab ("Crude") _tab %4.2f (`hr_crude')  " (" %4.2f (`lb_crude') "-" %4.2f (`ub_crude') ")" _tab (`events') _tab %3.1f (`percWEvent') ("%")  _n
+	file write tablecontents  ("`varLab'") _tab ("vs 'dataset' population") _tab ("Crude") _tab %4.2f (`hr_crude')  " (" %4.2f (`lb_crude') "-" %4.2f (`ub_crude') ")" _tab (`events') _tab %3.1f (`percWEvent') ("%")  _n
 	*depr and ethnicity adjusted
 	file write tablecontents  _tab _tab ("Adjusted for deprivation, ethnicity &rural/urban") _tab %4.2f (`hr_deprEth_adj')  " (" %4.2f (`lb_deprEth_adj') "-" %4.2f (`ub_deprEth_adj') ")"  _n
 	*fully adjusted
@@ -94,16 +97,16 @@ end
 
 *call program and output tables
 
-use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
+use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 rename case expStatus
-file open tablecontents using ./output/figure1PanelB_longCovidDiagAnyTime_contemporary.txt, t w replace
-file write tablecontents "Fig 1: Panel B. Community COVID-19: Odds ratios comparing odds of post-COVID diagnoses at any time during follow up in community COVID-19 compared to comparator populations." _n _n
+file open tablecontents using ./output/figure1PanelB_longCovidDiagAnyTime_`dataset'.txt, t w replace
+file write tablecontents "Fig 1: Panel B. Community COVID-19: Odds ratios comparing odds of post-COVID diagnoses at any time during follow up in community COVID-19 compared to `dataset' comparator population." _n _n
 file write tablecontents ("Diagnoses") _tab ("Comparator") _tab _tab ("OR (95% CI)") _tab ("Number of events") _tab ("Proportion of population with events") _n
 
 *loop through each outcome
 *foreach outcome in $diagnosisOutcomes {
-foreach outcome in $diagnosisOutcomes {
-	cap noisily outputORsforOutcome, outcome(`outcome')
+foreach outcome in $diag {
+	cap noisily outputORsforOutcome, outcome(tEver_`outcome')
 	file write tablecontents _n
 }
 
