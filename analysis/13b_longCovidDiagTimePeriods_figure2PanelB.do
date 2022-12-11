@@ -14,13 +14,17 @@
 *************************************************************************
 sysdir set PLUS ./analysis/adofiles
 sysdir set PERSONAL ./analysis/adofiles
+*globals of lists of diagnoses and symptoms etc
+do ./analysis/masterLists.do
+
+*setup so that the code in this file can be used to output analyses for both contemporary and historical comparators (and is called twice by separate .yaml actions)
+local dataset `1' 
+
+
 
 *checking tabulations
 capture log close
-log using ./logs/13a_longCovidSympTimePeriods_figure2PanelAcontemporary.log, replace t
-
-*list of symptoms (first release here)
-global symptomOutcomes symp_cough symp_chesttight symp_palp symp_fatigue symp_fever symp_cogimpair symp_sleepdisturb symp_periphneuro symp_dizzy symp_mobilityimpair 
+log using ./logs/13b_longCovidDiagTimePeriods_figure2PanelB`dataset'.log, replace t
 
         
 
@@ -65,22 +69,22 @@ prog define outputORsforOutcome
 		
 		*write each row
 		*T1: 4-12 weeks
-		file write tablecontents  ("`varLab'") _tab ("vs 2020 general population") _tab ("Time period `i' ") _tab %4.2f (`hr')  " (" %4.2f (`lb') "-" %4.2f (`ub') ")" _tab (`events') _tab %3.1f (`percWEvent') ("%")  _n
+		file write tablecontents  ("`varLab'") _tab ("Time period `i' ") _tab %4.2f (`hr')  " (" %4.2f (`lb') "-" %4.2f (`ub') ")" _tab (`events') _tab %3.1f (`percWEvent') ("%")  _n
 	}
 					
 end
 
 *call program and output tables
 
-use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
+use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 rename case expStatus
-file open tablecontents using ./output/figure2PanelA_longCovidSympTimePeriods_contemporary.txt, t w replace
-file write tablecontents "Fig 2: Panel A. Community COVID-19: Odds ratios comparing odds of post-COVID SYMPTOMS OVER THREE TIME PERIODS during follow up in community COVID-19 compared to comparator populations." _n _n
-file write tablecontents ("Symptom") _tab ("Comparator") _tab _tab ("OR (95% CI)") _tab ("Number of events") _tab ("Proportion of population with events") _n
+file open tablecontents using ./output/figure2PanelB_longCovidDiagTimePeriods_`dataset'.txt, t w replace
+file write tablecontents "Fig 2: Panel A. Community COVID-19: Odds ratios comparing odds of post-COVID SYMPTOMS OVER THREE TIME PERIODS during follow up in community COVID-19 compared to `dataset' comparator populations." _n _n
+file write tablecontents ("Symptom") _tab ("Comparator") _tab ("OR (95% CI)") _tab ("Number of events") _tab ("Proportion of population with events") _n
 
 *loop through each outcome
 *foreach outcome in $diagnosisOutcomes {	
-foreach outcome in $symptomOutcomes {
+foreach outcome in $diag {
 	cap noisily outputORsforOutcome, outcome(`outcome')
 	file write tablecontents _n
 }
