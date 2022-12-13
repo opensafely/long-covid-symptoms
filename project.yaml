@@ -32,12 +32,20 @@ actions:
       highly_sensitive:
         cohort: output/input_controls_contemporary.csv
 
-# *** historical potential comparators
+# *** historical potential comparators (2018)
   generate_potential_controls_historical:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_controls_historical
     outputs:
       highly_sensitive:
         cohort: output/input_controls_historical.csv
+
+
+# *** 2019 potential comparators
+  generate_potential_controls_2019:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_controls_2019
+    outputs:
+      highly_sensitive:
+        cohort: output/input_controls_2019.csv
 
 
 ## 2a CODEBOOK VARIABLES FOR CASES AND CONTROLS AND CORRECT CASE INDEX DATE IN CASES ONLY (ADD 28 DAYS TO ORIGNAL INDEX DATE)
