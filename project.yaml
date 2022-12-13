@@ -146,9 +146,9 @@ actions:
 
 
 
-# 3. SPLIT HISTORICAL COMPARATORS UP BY STP
+# 3. SPLIT 2019 COMPARATORS UP BY STP
   01b_longCovidSymp_splitHistorical_by_stp:
-    run: stata-mp:latest analysis/01b_longCovidSymp_cr_splitHistorical_by_stp.do
+    run: stata-mp:latest analysis/01b_longCovidSymp_cr_splitComparator_by_stp.do historical
     needs: [generate_potential_controls_historical]
     outputs:
       highly_sensitive:
@@ -185,6 +185,49 @@ actions:
         case_stp49: output/input_controls_historical_stp49.csv
       moderately_sensitive:
         log: logs/01b_longCovidSymp_splitHistorical_by_stp.log
+
+
+  01b_longCovidSymp_split2019_by_stp:
+    run: stata-mp:latest analysis/01b_longCovidSymp_cr_splitComparator_by_stp.do 2019
+    needs: [generate_potential_controls_2019]
+    outputs:
+      highly_sensitive:
+        case_stp5: output/input_controls_2019_stp5.csv
+        case_stp6: output/input_controls_2019_stp6.csv
+        case_stp7: output/input_controls_2019_stp7.csv
+        case_stp8: output/input_controls_2019_stp8.csv
+        case_stp9: output/input_controls_2019_stp9.csv
+        case_stp10: output/input_controls_2019_stp10.csv
+        case_stp12: output/input_controls_2019_stp12.csv
+        case_stp13: output/input_controls_2019_stp13.csv
+        case_stp14: output/input_controls_2019_stp14.csv
+        case_stp15: output/input_controls_2019_stp15.csv
+        case_stp16: output/input_controls_2019_stp16.csv
+        case_stp17: output/input_controls_2019_stp17.csv
+        case_stp20: output/input_controls_2019_stp20.csv
+        case_stp21: output/input_controls_2019_stp21.csv
+        case_stp22: output/input_controls_2019_stp22.csv
+        case_stp23: output/input_controls_2019_stp23.csv
+        case_stp24: output/input_controls_2019_stp24.csv
+        case_stp25: output/input_controls_2019_stp25.csv
+        case_stp26: output/input_controls_2019_stp26.csv
+        case_stp27: output/input_controls_2019_stp27.csv
+        case_stp29: output/input_controls_2019_stp29.csv
+        case_stp33: output/input_controls_2019_stp33.csv
+        case_stp35: output/input_controls_2019_stp35.csv
+        case_stp36: output/input_controls_2019_stp36.csv
+        case_stp37: output/input_controls_2019_stp37.csv
+        case_stp40: output/input_controls_2019_stp40.csv
+        case_stp41: output/input_controls_2019_stp41.csv
+        case_stp42: output/input_controls_2019_stp42.csv
+        case_stp43: output/input_controls_2019_stp43.csv
+        case_stp44: output/input_controls_2019_stp44.csv
+        case_stp49: output/input_controls_2019_stp49.csv
+      moderately_sensitive:
+        log: logs/01b_longCovidSymp_split2019_by_stp.log
+
+
+
 
 
 # 4. MATCH CASES TO CONTEMPORARY COMPARATORS

@@ -81,7 +81,7 @@ export delimited using "./output/input_controls_contemporary.csv", replace
 
 
 
-*(2)=========Create separate stps for historical comparators============
+*(3)=========Create separate stps for historical comparators============
 import delimited ./output/input_controls_historical.csv, clear
 *tabulate before changes
 tab stp
@@ -91,6 +91,19 @@ replaceSTPs
 tab stp
 *export output
 export delimited using "./output/input_controls_historical.csv", replace
+
+
+
+*(4)=========Create separate stps for 2019 comparators============
+import delimited ./output/input_controls_2019.csv, clear
+*tabulate before changes
+tab stp
+*call program
+replaceSTPs
+*tabulate after changes
+tab stp
+*export output
+export delimited using "./output/input_controls_2019.csv", replace
 
 
 log close
