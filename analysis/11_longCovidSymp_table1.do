@@ -118,8 +118,10 @@ syntax, variable(varname) condition(string)
 
 	/*this loops through groups*/
 	forvalues i=0/1{
+		safecount if case==`i'
+		local coldenom=r(N)
 		cou if case == `i' & `variable' `condition'
-		local pct = 100*(r(N)/`rowdenom')
+		local pct = 100*(r(N)/`coldenom')
 		*file write tablecontent %9.0gc (r(N)) (" (") %3.1f (`pct') (")") _tab
 		file write tablecontent %9.0f (round(r(N),5)) (" (") %3.1f (`pct') (")") _tab
 	}
