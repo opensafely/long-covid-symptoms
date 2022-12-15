@@ -1571,6 +1571,23 @@ actions:
         log: logs/09_longCovidSymp_cr_historical_analysis_dataset.log
 
 
+# 9b. CREATE 2019 ANALYSIS FILE (ALSO COMBINES CASES AND 2019 CONTROLS)
+  create_2019_analysis_file:
+    run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do 2019
+    needs: [set_case_index_date, generate_potential_controls_2019, 
+    add_allVars_2019_controls, add_allVars_cases, combine_matched_2019_CASESstps, combine_matched_2019_COMPARATORstps, 
+    get_consultationCount_cases, get_symptoms_cases, get_symptoms_2019_controls]
+    outputs:
+      highly_sensitive:
+        # casesContemporary: output/cases_contemporary.dta 
+        # controlsContemporary: output/controls_contemporary.dta 
+        mainAnalysisFile: output/longCovidSymp_analysis_dataset_2019.dta
+        mainAnalysisFileCSV: output/longCovidSymp_analysis_dataset_2019.csv
+        unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_2019_analysis_dataset.dta
+      moderately_sensitive: 
+        log: logs/09_longCovidSymp_cr_2019_analysis_dataset.log
+
+
 # 10a. IMD CORRECTION (ONLY NEEDED IF ACTION 1 NOT BEING RUN)
 #  imd_correction:
 #    run: cohortextractor:latest generate_cohort --study-definition study_definition_imd_correction
