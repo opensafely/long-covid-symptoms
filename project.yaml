@@ -1625,6 +1625,14 @@ actions:
         log: logs/10_longCovidSymp_data_checks_historical.log
 
 
+  data_checks_2019:
+    run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do 2019
+    needs: [create_2019_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/10_longCovidSymp_data_checks_2019.log
+
+
 # 11. DESCRIPTIVE TABLE CONTEMPORARY
   table_1_contemporary:
     run: stata-mp:latest analysis/11_longCovidSymp_table1.do contemporary
@@ -1643,6 +1651,15 @@ actions:
       moderately_sensitive:
         log: logs/11_longCovidSymp_table1historical.log
         table1historical: output/table1_longCovidSymp_historical.txt
+
+# 11c. DESCRIPTIVE TABLE 2019
+  table_1_2019:
+    run: stata-mp:latest analysis/11_longCovidSymp_table1.do 2019
+    needs: [create_2019_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/11_longCovidSymp_table12019.log
+        table1historical: output/table1_longCovidSymp_2019.txt
 
 
 # 12a. FIGURE 1A - SYMPTOMS AT ANY TIME (CONTEMPORARY - GOING TO RUN THIS NEXT WHEN ALL SYMPS ARE READY)
