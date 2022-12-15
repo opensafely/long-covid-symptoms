@@ -1406,11 +1406,18 @@ actions:
 
  # 6f. CHECK VARIABLES FOR COMBINED CASES AND COMBINED CONTROLS PRIOR TO ADDING MORE VARIABLES
   check_historical_combinedFiles:
-    run: stata-mp:latest analysis/6f_longCovidSymp_checkHistoricalCombinedFiles.do
+    run: stata-mp:latest analysis/6f_longCovidSymp_checkHistoricalCombinedFiles.do historical
     needs: [combine_matched_historical_CASESstps, combine_matched_historical_COMPARATORstps]
     outputs:
       moderately_sensitive:
        log: logs/6a_longCovidSymp_checkHistoricalCombinedFiles.log
+
+  check_2019_combinedFiles:
+    run: stata-mp:latest analysis/6f_longCovidSymp_checkHistoricalCombinedFiles.do 2019
+    needs: [combine_matched_2019_CASESstps, combine_matched_2019_COMPARATORstps]
+    outputs:
+      moderately_sensitive:
+       log: logs/6a_longCovidSymp_check2019CombinedFiles.log
 
 
 # 7. ADD FURTHER VARIABLES TO CASES FOLLOWING MATCHING
@@ -1490,8 +1497,7 @@ actions:
       moderately_sensitive: 
         log: logs/08f_getHistoricalMatchedCases.log
       
-      
-
+  
 
 # 8g. ADD DIAGNOSES, REMAINING COVARIATES AND GPCOUNT TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
   add_allVars_historical_controls:
@@ -1502,13 +1508,31 @@ actions:
         matched_controls_contemporary_wVars: output/input_complete_controls_historical.csv
 
 
- # 8h. ADD SYMPTOMS TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
+# 8h. ADD SYMPTOMS TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
   get_symptoms_historical_controls:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_historical 
     needs: [combine_matched_historical_COMPARATORstps]
     outputs:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_symptoms_controls_historical.csv
+
+
+# 8i. ADD DIAGNOSES, REMAINING COVARIATES AND GPCOUNT TO *2019* CONTROLS FOLLOWING MATCHING
+  add_allVars_2019_controls:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_2019 
+    needs: [combine_matched_2019_COMPARATORstps]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_complete_controls_2019.csv
+
+
+# 8j. ADD SYMPTOMS TO *2019* CONTROLS FOLLOWING MATCHING
+  get_symptoms_2019_controls:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_2019 
+    needs: [combine_matched_2019_COMPARATORstps]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_symptoms_controls_2019.csv
 
 
 
