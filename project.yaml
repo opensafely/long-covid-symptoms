@@ -1682,6 +1682,16 @@ actions:
         figure1Ahistorical: output/figure1PanelA_longCovidSympAnyTime_historical.txt
 
 
+# 12a. FIGURE 1A - SYMPTOMS AT ANY TIME (2019 - AS ABOVE)
+  figure_1panelA_2019:
+    run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelA.do 2019
+    needs: [create_2019_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/12a_longCovidSympAnyTime_figure1PanelA2019.log
+        figure1A2019: output/figure1PanelA_longCovidSympAnyTime_2019.txt
+
+
 # 12b. FIGURE 1B - DIAGNOSES AT ANY TIME (CONTEMPORARY)
   figure_1panelB_contemporary:
     run: stata-mp:latest analysis/12b_longCovidDiagAnyTime_figure1PanelB.do contemporary
@@ -1700,6 +1710,16 @@ actions:
       moderately_sensitive:
         log: logs/12b_longCovidDiagAnyTime_figure1PanelBhistorical.log
         figure1Bhistorical: output/figure1PanelB_longCovidDiagAnyTime_historical.txt
+
+
+# 12b. FIGURE 1B - DIAGNOSES AT ANY TIME (2019)
+  figure_1panelB_2019:
+    run: stata-mp:latest analysis/12b_longCovidDiagAnyTime_figure1PanelB.do 2019
+    needs: [create_2019_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/12b_longCovidDiagAnyTime_figure1PanelB2019.log
+        figure1B2019: output/figure1PanelB_longCovidDiagAnyTime_2019.txt
 
 
 # 12c. FIGURE 1C - PRESCRIPTIONS AT ANY TIME (CONTEMPORARY)
@@ -1722,6 +1742,16 @@ actions:
         figure1Chistorical: output/figure1PanelC_longCovidPrescrAnyTime_historical.txt
 
 
+# 12c. FIGURE 1C - PRESCRIPTIONS AT ANY TIME (2019)
+  figure_1panelC_2019:
+    run: stata-mp:latest analysis/12c_longCovidPrescrAnyTime_figure1Panel.do 2019
+    needs: [create_2019_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/12c_longCovidPrescrAnyTime_figure1PanelB2019.log
+        figure1C2019: output/figure1PanelC_longCovidPrescrAnyTime_2019.txt
+
+
 # 13a. FIGURE 2A - SYMPTOMS OVER THREE TIME PERIODS (CONTEMPORARY - GOING TO RUN THIS NEXT WHEN ALL SYMPS ARE READY)
   figure_2panelA_contemporary:
     run: stata-mp:latest analysis/13a_longCovidSympTimePeriods_figure2PanelA.do contemporary
@@ -1742,6 +1772,16 @@ actions:
         figure2Ahistorical: output/figure2PanelA_longCovidSympTimePeriods_historical.txt
 
 
+# 13a. FIGURE 2A - SYMPTOMS OVER THREE TIME PERIODS (2019 - AS ABOVE)
+  figure_2panelA_2019:
+    run: stata-mp:latest analysis/13a_longCovidSympTimePeriods_figure2PanelA.do 2019
+    needs: [create_2019_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/13a_longCovidSympTimePeriods_figure2PanelA2019.log
+        figure2A2019: output/figure2PanelA_longCovidSympTimePeriods_2019.txt
+
+
 # 13b. FIGURE 2B - DIAGNOSES OVER THREE TIME PERIODS (CONTEMPORARY)
   figure_2panelB_contemporary:
     run: stata-mp:latest analysis/13b_longCovidDiagTimePeriods_figure2PanelB.do contemporary
@@ -1751,8 +1791,7 @@ actions:
         log: logs/13b_longCovidDiagTimePeriods_figure2PanelBcontemporary.log
         figure2Bcontemporary: output/figure2PanelB_longCovidDiagTimePeriods_contemporary.txt
 
-
-# 13b. FIGURE 2B - DIAGNOSES OVER THREE TIME PERIODS (HISTORICAL)
+  # 13b. FIGURE 2B - DIAGNOSES OVER THREE TIME PERIODS (historical)
   figure_2panelB_historical:
     run: stata-mp:latest analysis/13b_longCovidDiagTimePeriods_figure2PanelB.do historical
     needs: [create_historical_analysis_file]
@@ -1762,7 +1801,17 @@ actions:
         figure12Bhistorical: output/figure2PanelB_longCovidDiagTimePeriods_historical.txt
 
 
-# 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (CONTEMPORARY)
+  # 13b. FIGURE 2B - DIAGNOSES OVER THREE TIME PERIODS (2019)
+  figure_2panelB_2019:
+    run: stata-mp:latest analysis/13b_longCovidDiagTimePeriods_figure2PanelB.do 2019
+    needs: [create_2019_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/13b_longCovidDiagTimePeriods_figure2PanelB2019.log
+        figure12B2019: output/figure2PanelB_longCovidDiagTimePeriods_2019.txt
+
+
+  # 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (CONTEMPORARY)
   figure_2panelC_contemporary:
     run: stata-mp:latest analysis/13c_longCovidPrescrTimePeriods_figure2PanelC.do contemporary
     needs: [create_contemporary_analysis_file]
@@ -1772,7 +1821,7 @@ actions:
         figure2Ccontemporary: output/figure2PanelC_longCovidPrescrTimePeriods_contemporary.txt
 
 
-# 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (HISTORICAL)
+  # 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (historical)
   figure_2panelC_historical:
     run: stata-mp:latest analysis/13c_longCovidPrescrTimePeriods_figure2PanelC.do historical
     needs: [create_historical_analysis_file]
@@ -1780,6 +1829,16 @@ actions:
       moderately_sensitive:
         log: logs/13c_longCovidPrescrTimePeriods_figure2PanelChistorical.log
         figure2Chistorical: output/figure2PanelC_longCovidPrescrTimePeriods_historical.txt
+
+
+# 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (2019)
+  figure_2panelC_2019:
+    run: stata-mp:latest analysis/13c_longCovidPrescrTimePeriods_figure2PanelC.do 2019
+    needs: [create_2019_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/13c_longCovidPrescrTimePeriods_figure2PanelC2019.log
+        figure2C2019: output/figure2PanelC_longCovidPrescrTimePeriods_2019.txt
 
 
 
