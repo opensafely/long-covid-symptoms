@@ -18,18 +18,30 @@ sysdir set PERSONAL "/Users/kw/Documents/GitHub/households-research/analysis/ado
 ==============================================================================*/
 sysdir set PLUS ./analysis/adofiles
 sysdir set PERSONAL ./analysis/adofiles
+*globals of lists of diagnoses and symptoms etc
+do ./analysis/masterLists.do
 pwd
+
+*setup so that the code in this file can be used to output analyses for both contemporary, historical and 2019 comparators (and is called twice by separate .yaml actions)
+local dataset `1'
+
 
 
 * Open a log file
 cap log close
-log using ./logs/05_check_vars_after_matching.log, replace t
+log using ./logs/05_check_vars`1'_after_matching.log, replace t
 
 
 *(1)=========Import case file, codebook and then look at dates============
 *using stp 29 as this is one of the smaller stps but not too small (has 6,317 cases)
 *cases
-capture noisily import delimited ./output/matched_cases_stp29.csv, clear
+
+if "`1'"=="contemporary" {
+	capture noisily import delimited ./output/matched_cases_stp29.csv, clear
+}
+else {
+	capture noisily import delimited ./output/matched_cases_`1'_stp29.csv, clear
+}
 codebook
 
 
@@ -61,14 +73,27 @@ capture noisily assert dereg_date>=case_index_dateorig
 *capture noisily import delimited ./output/matched_matches_stp29.csv, clear
 *codebook
 
+*keep one record to check case_index_date of matched historical comparator
+keep if _n==1
+keep patient_id set_id case_index_date
+duplicates drop patient_id, force
+rename case_index_date case_index_dateForCase
+tempfile caseIndexChecker
+save `caseIndexChecker'
+
 
 
 
 
 *(2)=========Import comparator file, codebook and then look at dates============
 *using stp 29 as this is one of the smaller stps but not too small (has 6,317 cases)
-*cases
-capture noisily import delimited ./output/matched_matches_stp29.csv, clear
+*comparators
+if "`1'"=="contemporary" {
+	capture noisily import delimited ./output/matched_matches_stp29.csv, clear
+}
+else {
+	capture noisily import delimited ./output/matched_matches_`1'_stp29.csv, clear
+}
 codebook
 
 
@@ -88,6 +113,24 @@ capture noisily assert first_known_covid>=case_index_date
 capture noisily assert death_date>=case_index_date
 capture noisily assert dereg_date>=case_index_date
 
+
+*summarise case index date
+codebook case_index_date
+summ case_index_date, detail
+
+
+
+*for historical and 2019 comparatirs, check for specific date that it is one or two years prior
+keep patient_id set_id case_index_date
+duplicates drop patient_id, force
+merge m:1 set_id using `caseIndexChecker'
+keep if _merge==3
+if "`1'"=="historical" {
+	assert case_index_date==case_index_dateForCase-731
+}
+else if "`1'"=="2019" {
+	assert case_index_date==case_index_dateForCase-366
+}
 
 
 

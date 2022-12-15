@@ -1267,18 +1267,25 @@ actions:
 # 5. CHECK VARIABLES IN MATCHED FILES
   # *** contemporary potential comparators for each stp
   checkVars_inMatchedFiles:
-    run: stata-mp:latest analysis/05_check_vars_after_matching.do
+    run: stata-mp:latest analysis/05_check_vars_after_matching.do contemporary
     needs: [match_contemporary_stp29]
     outputs:
       moderately_sensitive:
-        log: logs/05_check_vars_after_matching.log
+        log: logs/05_check_varsContemporary_after_matching.log
 
   checkVars_inHistoricalMatchedFiles:
-    run: stata-mp:latest analysis/05a_check_varsHistorical_after_matching.do
+    run: stata-mp:latest analysis/05_check_vars_after_matching.do historical
     needs: [match_historical_stp29]
     outputs:
       moderately_sensitive:
-        log: logs/05a_check_varsHistorical_after_matching.log
+        log: logs/05_check_varsHistorical_after_matching.log
+
+  checkVars_in2019MatchedFiles:
+    run: stata-mp:latest analysis/05_check_vars_after_matching.do 2019
+    needs: [match_2019_stp29]
+    outputs:
+      moderately_sensitive:
+        log: logs/05_check_vars2019_after_matching.log
 
 
 
@@ -1289,7 +1296,7 @@ actions:
 
 # 6. COMBINE MATCHED CASES AND MATCHED COMPARATORS BY STP
   combine_matched_CASESstps:
-    run: stata-mp:latest analysis/06a_longCovidSymp_cr_combine_CASEstps_after_matching.do
+    run: stata-mp:latest analysis/06a_longCovidSymp_cr_combine_CASEstps_after_matching.do contemporary
     needs: [match_contemporary_stp5, match_contemporary_stp6, match_contemporary_stp7, match_contemporary_stp8, match_contemporary_stp9,
     match_contemporary_stp10, match_contemporary_stp12, match_contemporary_stp13, match_contemporary_stp14, match_contemporary_stp15,
     match_contemporary_stp16, match_contemporary_stp17, match_contemporary_stp20, match_contemporary_stp21, match_contemporary_stp22,
@@ -1301,11 +1308,11 @@ actions:
       highly_sensitive:
         matched_cases_allstps: output/input_covid_matched_cases_contemporary_allSTPs.csv
       moderately_sensitive:
-        log: logs/06a_longCovidSymp_cr_combine_CASEstps_after_matching.log
+        log: logs/06a_longCovidSymp_cr_combine_contemporary_CASEstps_after_matching.log
 
 
   combine_matched_COMPARATORstps:
-    run: stata-mp:latest analysis/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching.do
+    run: stata-mp:latest analysis/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching.do contemporary
     needs: [match_contemporary_stp5, match_contemporary_stp6, match_contemporary_stp7, match_contemporary_stp8, match_contemporary_stp9,
     match_contemporary_stp10, match_contemporary_stp12, match_contemporary_stp13, match_contemporary_stp14, match_contemporary_stp15,
     match_contemporary_stp16, match_contemporary_stp17, match_contemporary_stp20, match_contemporary_stp21, match_contemporary_stp22,
@@ -1317,14 +1324,14 @@ actions:
       highly_sensitive:
         matched_matches_allstps: output/input_covid_matched_matches_contemporary_allSTPs.csv
       moderately_sensitive:
-        log: logs/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching.log
+        log: logs/06b_longCovidSymp_cr_combine_contemporary_COMPARATORstps_after_matching.log
 
 
 
 
 # 6. COMBINE MATCHED CASES AND MATCHED HISTORICAL COMPARATORS BY STP
   combine_matched_historical_CASESstps:
-    run: stata-mp:latest analysis/06c_longCovidSymp_cr_combine_historical_CASEstps_after_matching.do
+    run: stata-mp:latest analysis/06a_longCovidSymp_cr_combine_CASEstps_after_matching.do historical
     needs: [match_historical_stp5, match_historical_stp6, match_historical_stp7, match_historical_stp8, match_historical_stp9,
     match_historical_stp10, match_historical_stp12, match_historical_stp13, match_historical_stp14, match_historical_stp15,
     match_historical_stp16, match_historical_stp17, match_historical_stp20, match_historical_stp21, match_historical_stp22,
@@ -1336,11 +1343,11 @@ actions:
       highly_sensitive:
         matched_cases_allstps: output/input_covid_matched_cases_historical_allSTPs.csv
       moderately_sensitive:
-        log: logs/06c_longCovidSymp_cr_combine_historical_CASEstps_after_matching.log
+        log: logs/06a_longCovidSymp_cr_combine_historical_CASEstps_after_matching.log
 
 
   combine_matched_historical_COMPARATORstps:
-    run: stata-mp:latest analysis/06d_longCovidSymp_cr_combine_historical_COMPARATORstps_after_matching.do
+    run: stata-mp:latest analysis/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching.do historical
     needs: [match_historical_stp5, match_historical_stp6, match_historical_stp7, match_historical_stp8, match_historical_stp9,
     match_historical_stp10, match_historical_stp12, match_historical_stp13, match_historical_stp14, match_historical_stp15,
     match_historical_stp16, match_historical_stp17, match_historical_stp20, match_historical_stp21, match_historical_stp22,
@@ -1352,7 +1359,41 @@ actions:
       highly_sensitive:
         matched_matches_allstps: output/input_covid_matched_matches_historical_allSTPs.csv
       moderately_sensitive:
-        log: logs/06d_longCovidSymp_cr_combine_historical_COMPARATORstps_after_matching.log
+        log: logs/06b_longCovidSymp_cr_combine_historical_COMPARATORstps_after_matching.log
+
+
+
+ # 6. COMBINE MATCHED CASES AND MATCHED 2019 COMPARATORS BY STP
+  combine_matched_2019_CASESstps:
+    run: stata-mp:latest analysis/06a_longCovidSymp_cr_combine_CASEstps_after_matching.do 2019
+    needs: [match_2019_stp5, match_2019_stp6, match_2019_stp7, match_2019_stp8, match_2019_stp9,
+    match_2019_stp10, match_2019_stp12, match_2019_stp13, match_2019_stp14, match_2019_stp15,
+    match_2019_stp16, match_2019_stp17, match_2019_stp20, match_2019_stp21, match_2019_stp22,
+    match_2019_stp23, match_2019_stp24, match_2019_stp25, match_2019_stp26, match_2019_stp27,
+    match_2019_stp29, match_2019_stp33, match_2019_stp35, match_2019_stp36, match_2019_stp37, 
+    match_2019_stp40, match_2019_stp41, match_2019_stp42, match_2019_stp43, match_2019_stp44, 
+    match_2019_stp49]
+    outputs:
+      highly_sensitive:
+        matched_cases_allstps: output/input_covid_matched_cases_2019_allSTPs.csv
+      moderately_sensitive:
+        log: logs/06a_longCovidSymp_cr_combine_2019_CASEstps_after_matching.log
+
+
+  combine_matched_2019_COMPARATORstps:
+    run: stata-mp:latest analysis/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching.do 2019
+    needs: [match_2019_stp5, match_2019_stp6, match_2019_stp7, match_2019_stp8, match_2019_stp9,
+    match_2019_stp10, match_2019_stp12, match_2019_stp13, match_2019_stp14, match_2019_stp15,
+    match_2019_stp16, match_2019_stp17, match_2019_stp20, match_2019_stp21, match_2019_stp22,
+    match_2019_stp23, match_2019_stp24, match_2019_stp25, match_2019_stp26, match_2019_stp27,
+    match_2019_stp29, match_2019_stp33, match_2019_stp35, match_2019_stp36, match_2019_stp37, 
+    match_2019_stp40, match_2019_stp41, match_2019_stp42, match_2019_stp43, match_2019_stp44, 
+    match_2019_stp49]
+    outputs:
+      highly_sensitive:
+        matched_matches_allstps: output/input_covid_matched_matches_2019_allSTPs.csv
+      moderately_sensitive:
+        log: logs/06b_longCovidSymp_cr_combine_2019_COMPARATORstps_after_matching.log
 
 
  #6e. CHECK VARIABLES FOR COMBINED CASES AND COMBINED CONTROLS PRIOR TO ADDING MORE VARIABLES
