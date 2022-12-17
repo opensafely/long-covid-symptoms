@@ -3,8 +3,8 @@ from codelists import *
 from datetime import datetime, timedelta
 
 
-def generate_outcome_variables_diag(index_date_variable):
-    outcome_variables_diag = dict(
+def generate_outcome_variables_diag_contemporary(index_date_variable):
+    outcome_variables_diag_contemporary = dict(
 
 
 
@@ -39,7 +39,7 @@ def generate_outcome_variables_diag(index_date_variable):
 
     t3_infect_parasite=patients.with_these_clinical_events(
         infectious_disease_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ), 
@@ -71,7 +71,7 @@ def generate_outcome_variables_diag(index_date_variable):
 
     t3_neoplasms=patients.with_these_clinical_events(
         neoplastic_disease_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -119,7 +119,7 @@ def generate_outcome_variables_diag(index_date_variable):
             disorder_haematopoietic_codes,
             disorder_immune_codes,
         ),
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -167,7 +167,7 @@ def generate_outcome_variables_diag(index_date_variable):
             metabolic_disease_codes,
             nutritional_disorder_codes,
         ),
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -199,7 +199,7 @@ def generate_outcome_variables_diag(index_date_variable):
 
     t3_mental_disorder=patients.with_these_clinical_events(
         mental_disorder_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -243,7 +243,7 @@ def generate_outcome_variables_diag(index_date_variable):
             disorder_neurological_codes,
             cns_codes,
         ),
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -275,7 +275,7 @@ def generate_outcome_variables_diag(index_date_variable):
 
     t3_ear_mastoid_dis=patients.with_these_clinical_events(
         auditory_disorder_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -307,7 +307,7 @@ def generate_outcome_variables_diag(index_date_variable):
 
     t3_circ_sys_dis=patients.with_these_clinical_events(
         cardiovascular_disease_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -339,7 +339,7 @@ def generate_outcome_variables_diag(index_date_variable):
 
     t3_resp_system_dis=patients.with_these_clinical_events(
         disorder_respiratory_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -371,7 +371,7 @@ def generate_outcome_variables_diag(index_date_variable):
 
     t3_digest_syst_dis=patients.with_these_clinical_events(
         disorder_digestive_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -403,7 +403,7 @@ def generate_outcome_variables_diag(index_date_variable):
 
     t3_skin_disease=patients.with_these_clinical_events(
         disorder_skin_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -447,7 +447,7 @@ def generate_outcome_variables_diag(index_date_variable):
             disorder_musculoskeletal_codes,
             disorder_connective_codes,
         ),
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -479,7 +479,7 @@ def generate_outcome_variables_diag(index_date_variable):
 
     t3_genitourin_dis=patients.with_these_clinical_events(
         disorder_genitourinary_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -527,7 +527,7 @@ def generate_outcome_variables_diag(index_date_variable):
             disorder_peurperium_codes,
             disorder_labor_codes,
         ),
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -559,7 +559,7 @@ def generate_outcome_variables_diag(index_date_variable):
 
     t3_perinatal_dis=patients.with_these_clinical_events(
         disorder_fetus_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -591,7 +591,7 @@ def generate_outcome_variables_diag(index_date_variable):
 
     t3_congenital_dis=patients.with_these_clinical_events(
         congential_disease_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -635,7 +635,7 @@ def generate_outcome_variables_diag(index_date_variable):
             poisoning_codes,
             injury_codes,
         ),
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -667,7 +667,7 @@ def generate_outcome_variables_diag(index_date_variable):
 
     t3_hypertension_bugTest=patients.with_these_clinical_events(
         hypertension_from_hhclassifAndAnna,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),
@@ -678,4 +678,4 @@ def generate_outcome_variables_diag(index_date_variable):
 
 
     )
-    return outcome_variables_diag
+    return outcome_variables_diag_contemporary
