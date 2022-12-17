@@ -3,8 +3,8 @@ from codelists import *
 from datetime import datetime, timedelta
 
 
-def generate_outcome_variables_symp(index_date_variable):
-    outcome_variables_symp = dict(
+def generate_outcome_variables_symp_contemporary(index_date_variable):
+    outcome_variables_symp_contemporary = dict(
 
 
 
@@ -53,7 +53,7 @@ def generate_outcome_variables_symp(index_date_variable):
 
     t3_symp_cough=patients.with_these_clinical_events(
         cough_symptom_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ), 
@@ -85,7 +85,7 @@ def generate_outcome_variables_symp(index_date_variable):
 
     t3_symp_chesttight=patients.with_these_clinical_events(
         chesttightness_symptom_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ), 
@@ -117,7 +117,7 @@ def generate_outcome_variables_symp(index_date_variable):
 
     t3_symp_palp=patients.with_these_clinical_events(
         palpitations_symptom_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ), 
@@ -149,7 +149,7 @@ def generate_outcome_variables_symp(index_date_variable):
 
     t3_symp_fatigue=patients.with_these_clinical_events(
         fatigue_symptom_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ), 
@@ -181,7 +181,7 @@ def generate_outcome_variables_symp(index_date_variable):
 
     t3_symp_fever=patients.with_these_clinical_events(
         fever_symptom_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ), 
@@ -213,7 +213,7 @@ def generate_outcome_variables_symp(index_date_variable):
 
     t3_symp_cogimpair=patients.with_these_clinical_events(
         cogimpairment_symptom_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ), 
@@ -245,7 +245,7 @@ def generate_outcome_variables_symp(index_date_variable):
 
     t3_symp_sleepdisturb=patients.with_these_clinical_events(
         sleepdisturbance_symptom_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ), 
@@ -277,7 +277,7 @@ def generate_outcome_variables_symp(index_date_variable):
 
     t3_symp_periphneuro=patients.with_these_clinical_events(
         peripheralneuropathy_symptom_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ), 
@@ -309,7 +309,7 @@ def generate_outcome_variables_symp(index_date_variable):
 
     t3_symp_dizzy=patients.with_these_clinical_events(
         dizzy_symptom_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ), 
@@ -341,11 +341,11 @@ def generate_outcome_variables_symp(index_date_variable):
 
     t3_symp_mobilityimpair=patients.with_these_clinical_events(
         mobilityimpairment_symptom_codes,
-        on_or_after=f"{index_date_variable} + 181 days",
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ), 
 
 
     )
-    return outcome_variables_symp
+    return outcome_variables_symp_contemporary
