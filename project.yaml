@@ -176,7 +176,7 @@ actions:
         case_stp44: output/input_controls_historical_stp44.csv
         case_stp49: output/input_controls_historical_stp49.csv
       moderately_sensitive:
-        log: logs/01b_longCovidSymp_splitHistorical_by_stp.log
+        log: logs/01b_longCovidSymp_splithistorical_by_stp.log
 
 
 

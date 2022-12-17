@@ -12,7 +12,7 @@ match(
         "sex": "category",
     },
     index_date_variable="case_index_date", 
-    replace_match_index_date_with_case="2_years_earlier", 
+    replace_match_index_date_with_case="3_years_earlier", 
     date_exclusion_variables={
         "death_date": "before",
         "dereg_date": "before",

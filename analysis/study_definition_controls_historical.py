@@ -41,7 +41,7 @@ study = StudyDefinition(
     },
 
     # start of observation period i.e. year before start of wave 1 (note, needs to be called index date)
-    index_date="2018-02-01", 
+    index_date="2017-02-01", 
 
      # select the study population
      # note that this is the POOL of potential unexposed concurrent controls 
@@ -89,8 +89,8 @@ study = StudyDefinition(
         date_format="YYYY-MM-DD", 
         return_expectations={
             "date": {
-                "earliest": "2020-12-08",  
-                "latest": "2021-05-11", }, 
+                "earliest": "2017-02-01",  
+                "latest": "2019-01-31", }, 
                 "incidence": 0.01 },
     ),
 
