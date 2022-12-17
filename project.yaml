@@ -40,13 +40,6 @@ actions:
         cohort: output/input_controls_historical.csv
 
 
-# *** 2019 potential comparators
-  generate_potential_controls_2019:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_controls_2019
-    outputs:
-      highly_sensitive:
-        cohort: output/input_controls_2019.csv
-
 
 ## 2a CODEBOOK VARIABLES FOR CASES AND CONTROLS AND CORRECT CASE INDEX DATE IN CASES ONLY (ADD 28 DAYS TO ORIGNAL INDEX DATE)
   set_case_index_date:
@@ -145,8 +138,7 @@ actions:
         log: logs/01_longCovidSymp_split_by_stp.log
 
 
-
-# 3. SPLIT 2019 COMPARATORS UP BY STP
+# 3. SPLIT HISTORICAL COMPARATORS UP BY STP
   01b_longCovidSymp_splitHistorical_by_stp:
     run: stata-mp:latest analysis/01b_longCovidSymp_cr_splitComparator_by_stp.do historical
     needs: [generate_potential_controls_historical]
@@ -185,48 +177,6 @@ actions:
         case_stp49: output/input_controls_historical_stp49.csv
       moderately_sensitive:
         log: logs/01b_longCovidSymp_splitHistorical_by_stp.log
-
-
-  01b_longCovidSymp_split2019_by_stp:
-    run: stata-mp:latest analysis/01b_longCovidSymp_cr_splitComparator_by_stp.do 2019
-    needs: [generate_potential_controls_2019]
-    outputs:
-      highly_sensitive:
-        case_stp5: output/input_controls_2019_stp5.csv
-        case_stp6: output/input_controls_2019_stp6.csv
-        case_stp7: output/input_controls_2019_stp7.csv
-        case_stp8: output/input_controls_2019_stp8.csv
-        case_stp9: output/input_controls_2019_stp9.csv
-        case_stp10: output/input_controls_2019_stp10.csv
-        case_stp12: output/input_controls_2019_stp12.csv
-        case_stp13: output/input_controls_2019_stp13.csv
-        case_stp14: output/input_controls_2019_stp14.csv
-        case_stp15: output/input_controls_2019_stp15.csv
-        case_stp16: output/input_controls_2019_stp16.csv
-        case_stp17: output/input_controls_2019_stp17.csv
-        case_stp20: output/input_controls_2019_stp20.csv
-        case_stp21: output/input_controls_2019_stp21.csv
-        case_stp22: output/input_controls_2019_stp22.csv
-        case_stp23: output/input_controls_2019_stp23.csv
-        case_stp24: output/input_controls_2019_stp24.csv
-        case_stp25: output/input_controls_2019_stp25.csv
-        case_stp26: output/input_controls_2019_stp26.csv
-        case_stp27: output/input_controls_2019_stp27.csv
-        case_stp29: output/input_controls_2019_stp29.csv
-        case_stp33: output/input_controls_2019_stp33.csv
-        case_stp35: output/input_controls_2019_stp35.csv
-        case_stp36: output/input_controls_2019_stp36.csv
-        case_stp37: output/input_controls_2019_stp37.csv
-        case_stp40: output/input_controls_2019_stp40.csv
-        case_stp41: output/input_controls_2019_stp41.csv
-        case_stp42: output/input_controls_2019_stp42.csv
-        case_stp43: output/input_controls_2019_stp43.csv
-        case_stp44: output/input_controls_2019_stp44.csv
-        case_stp49: output/input_controls_2019_stp49.csv
-      moderately_sensitive:
-        log: logs/01b_longCovidSymp_split2019_by_stp.log
-
-
 
 
 
@@ -921,349 +871,6 @@ actions:
 
 
 
-# 4c. MATCH CASES TO 2019 COMPARATORS
-  match_2019_stp5:
-    run: python:latest python analysis/match_2019_stp5.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp5: output/matched_cases_2019_stp5.csv
-        matched_matches_2019_stp5: output/matched_matches_2019_stp5.csv
-        matched_2019_all_stp5: output/matched_combined_2019_stp5.csv
-      moderately_sensitive:
-        matching_report_2019_stp5: output/matching_report_2019_stp5.txt
-
-  match_2019_stp6:
-    run: python:latest python analysis/match_2019_stp6.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp6: output/matched_cases_2019_stp6.csv
-        matched_matches_2019_stp6: output/matched_matches_2019_stp6.csv
-        matched_2019_all_stp6: output/matched_combined_2019_stp6.csv
-      moderately_sensitive:
-         matching_report_2019_stp6: output/matching_report_2019_stp6.txt
-
-  match_2019_stp7:
-    run: python:latest python analysis/match_2019_stp7.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp7: output/matched_cases_2019_stp7.csv
-        matched_matches_2019_stp7: output/matched_matches_2019_stp7.csv
-        matched_2019_all_stp7: output/matched_combined_2019_stp7.csv
-      moderately_sensitive:
-         matching_report_2019_stp7: output/matching_report_2019_stp7.txt
-
-  match_2019_stp8:
-    run: python:latest python analysis/match_2019_stp8.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp8: output/matched_cases_2019_stp8.csv
-        matched_matches_2019_stp8: output/matched_matches_2019_stp8.csv
-        matched_2019_all_stp8: output/matched_combined_2019_stp8.csv
-      moderately_sensitive:
-         matching_report_2019_stp8: output/matching_report_2019_stp8.txt
-
-  match_2019_stp9:
-    run: python:latest python analysis/match_2019_stp9.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp9: output/matched_cases_2019_stp9.csv
-        matched_matches_2019_stp9: output/matched_matches_2019_stp9.csv
-        matched_2019_all_stp9: output/matched_combined_2019_stp9.csv
-      moderately_sensitive:
-         matching_report_2019_stp9: output/matching_report_2019_stp9.txt
-
-  match_2019_stp10:
-    run: python:latest python analysis/match_2019_stp10.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp10: output/matched_cases_2019_stp10.csv
-        matched_matches_2019_stp10: output/matched_matches_2019_stp10.csv
-        matched_2019_all_stp10: output/matched_combined_2019_stp10.csv
-      moderately_sensitive:
-        matching_report_2019_stp10: output/matching_report_2019_stp10.txt
-      
-  match_2019_stp12:
-    run: python:latest python analysis/match_2019_stp12.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp12: output/matched_cases_2019_stp12.csv
-        matched_matches_2019_stp12: output/matched_matches_2019_stp12.csv
-        matched_2019_all_stp12: output/matched_combined_2019_stp12.csv
-      moderately_sensitive:
-        matching_report_2019_stp12: output/matching_report_2019_stp12.txt
-
-  match_2019_stp13:
-    run: python:latest python analysis/match_2019_stp13.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp13: output/matched_cases_2019_stp13.csv
-        matched_matches_2019_stp13: output/matched_matches_2019_stp13.csv
-        matched_2019_all_stp13: output/matched_combined_2019_stp13.csv
-      moderately_sensitive:
-        matching_report_2019_stp13: output/matching_report_2019_stp13.txt
-
-  match_2019_stp14:
-    run: python:latest python analysis/match_2019_stp14.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp14: output/matched_cases_2019_stp14.csv
-        matched_matches_2019_stp14: output/matched_matches_2019_stp14.csv
-        matched_2019_all_stp14: output/matched_combined_2019_stp14.csv
-      moderately_sensitive:
-        matching_report_2019_stp14: output/matching_report_2019_stp14.txt
-
-  match_2019_stp15:
-    run: python:latest python analysis/match_2019_stp15.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp15: output/matched_cases_2019_stp15.csv
-        matched_matches_2019_stp15: output/matched_matches_2019_stp15.csv
-        matched_2019_all_stp15: output/matched_combined_2019_stp15.csv
-      moderately_sensitive:
-        matching_report_2019_stp15: output/matching_report_2019_stp15.txt
-       
-  match_2019_stp16:
-    run: python:latest python analysis/match_2019_stp16.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp16: output/matched_cases_2019_stp16.csv
-        matched_matches_2019_stp16: output/matched_matches_2019_stp16.csv
-        matched_2019_all_stp16: output/matched_combined_2019_stp16.csv
-      moderately_sensitive:
-        matching_report_2019_stp16: output/matching_report_2019_stp16.txt
-        
-  match_2019_stp17:
-    run: python:latest python analysis/match_2019_stp17.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp17: output/matched_cases_2019_stp17.csv
-        matched_matches_2019_stp17: output/matched_matches_2019_stp17.csv
-        matched_2019_all_stp17: output/matched_combined_2019_stp17.csv
-      moderately_sensitive:
-        matching_report_2019_stp17: output/matching_report_2019_stp17.txt
-        
-  match_2019_stp20:
-    run: python:latest python analysis/match_2019_stp20.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp20: output/matched_cases_2019_stp20.csv
-        matched_matches_2019_stp20: output/matched_matches_2019_stp20.csv
-        matched_2019_all_stp20: output/matched_combined_2019_stp20.csv
-      moderately_sensitive:
-        matching_report_2019_stp20: output/matching_report_2019_stp20.txt
-
-  match_2019_stp21:
-    run: python:latest python analysis/match_2019_stp21.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp21: output/matched_cases_2019_stp21.csv
-        matched_matches_2019_stp21: output/matched_matches_2019_stp21.csv
-        matched_2019_all_stp21: output/matched_combined_2019_stp21.csv
-      moderately_sensitive:
-        matching_report_2019_stp21: output/matching_report_2019_stp21.txt
-       
-  match_2019_stp22:
-    run: python:latest python analysis/match_2019_stp22.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp22: output/matched_cases_2019_stp22.csv
-        matched_matches_2019_stp22: output/matched_matches_2019_stp22.csv
-        matched_2019_all_stp22: output/matched_combined_2019_stp22.csv
-      moderately_sensitive:
-        matching_report_2019_stp22: output/matching_report_2019_stp22.txt
-
-  match_2019_stp23:
-    run: python:latest python analysis/match_2019_stp23.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp23: output/matched_cases_2019_stp23.csv
-        matched_matches_2019_stp23: output/matched_matches_2019_stp23.csv
-        matched_2019_all_stp23: output/matched_combined_2019_stp23.csv
-      moderately_sensitive:
-        matching_report_2019_stp23: output/matching_report_2019_stp23.txt
-
-  match_2019_stp24:
-    run: python:latest python analysis/match_2019_stp24.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp24: output/matched_cases_2019_stp24.csv
-        matched_matches_2019_stp24: output/matched_matches_2019_stp24.csv
-        matched_2019_all_stp24: output/matched_combined_2019_stp24.csv
-      moderately_sensitive:
-        matching_report_2019_stp24: output/matching_report_2019_stp24.txt
-
-  match_2019_stp25:
-    run: python:latest python analysis/match_2019_stp25.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp25: output/matched_cases_2019_stp25.csv
-        matched_matches_2019_stp25: output/matched_matches_2019_stp25.csv
-        matched_2019_all_stp25: output/matched_combined_2019_stp25.csv
-      moderately_sensitive:
-        matching_report_2019_stp25: output/matching_report_2019_stp25.txt
-
-  match_2019_stp26:
-    run: python:latest python analysis/match_2019_stp26.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp26: output/matched_cases_2019_stp26.csv
-        matched_matches_2019_stp26: output/matched_matches_2019_stp26.csv
-        matched_2019_all_stp26: output/matched_combined_2019_stp26.csv
-      moderately_sensitive:
-        matching_report_2019_stp26: output/matching_report_2019_stp26.txt
-        
-  match_2019_stp27:
-    run: python:latest python analysis/match_2019_stp27.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp27: output/matched_cases_2019_stp27.csv
-        matched_matches_2019_stp27: output/matched_matches_2019_stp27.csv
-        matched_2019_all_stp27: output/matched_combined_2019_stp27.csv
-      moderately_sensitive:
-        matching_report_2019_stp27: output/matching_report_2019_stp27.txt
-
-  match_2019_stp29:
-    run: python:latest python analysis/match_2019_stp29.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp29: output/matched_cases_2019_stp29.csv
-        matched_matches_2019_stp29: output/matched_matches_2019_stp29.csv
-        matched_2019_all_stp29: output/matched_combined_2019_stp29.csv
-      moderately_sensitive:
-        matching_report_2019_stp29: output/matching_report_2019_stp29.txt
-
-  match_2019_stp33:
-    run: python:latest python analysis/match_2019_stp33.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp33: output/matched_cases_2019_stp33.csv
-        matched_matches_2019_stp33: output/matched_matches_2019_stp33.csv
-        matched_2019_all_stp33: output/matched_combined_2019_stp33.csv
-      moderately_sensitive:
-        matching_report_2019_stp33: output/matching_report_2019_stp33.txt
-
-  match_2019_stp35:
-    run: python:latest python analysis/match_2019_stp35.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp35: output/matched_cases_2019_stp35.csv
-        matched_matches_2019_stp35: output/matched_matches_2019_stp35.csv
-        matched_2019_all_stp35: output/matched_combined_2019_stp35.csv
-      moderately_sensitive:
-        matching_report_2019_stp35: output/matching_report_2019_stp35.txt
-
-  match_2019_stp36:
-    run: python:latest python analysis/match_2019_stp36.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp36: output/matched_cases_2019_stp36.csv
-        matched_matches_2019_stp36: output/matched_matches_2019_stp36.csv
-        matched_2019_all_stp36: output/matched_combined_2019_stp36.csv
-      moderately_sensitive:
-        matching_report_2019_stp36: output/matching_report_2019_stp36.txt
-
-  match_2019_stp37:
-    run: python:latest python analysis/match_2019_stp37.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp37: output/matched_cases_2019_stp37.csv
-        matched_matches_2019_stp37: output/matched_matches_2019_stp37.csv
-        matched_2019_all_stp37: output/matched_combined_2019_stp37.csv
-      moderately_sensitive:
-        matching_report_2019_stp37: output/matching_report_2019_stp37.txt
-
-  match_2019_stp40:
-    run: python:latest python analysis/match_2019_stp40.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp40: output/matched_cases_2019_stp40.csv
-        matched_matches_2019_stp40: output/matched_matches_2019_stp40.csv
-        matched_2019_all_stp40: output/matched_combined_2019_stp40.csv
-      moderately_sensitive:
-        matching_report_2019_stp40: output/matching_report_2019_stp40.txt
-
-  match_2019_stp41:
-    run: python:latest python analysis/match_2019_stp41.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp41: output/matched_cases_2019_stp41.csv
-        matched_matches_2019_stp41: output/matched_matches_2019_stp41.csv
-        matched_2019_all_stp41: output/matched_combined_2019_stp41.csv
-      moderately_sensitive:
-        matching_report_2019_stp41: output/matching_report_2019_stp41.txt
-
-  match_2019_stp42:
-    run: python:latest python analysis/match_2019_stp42.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp42: output/matched_cases_2019_stp42.csv
-        matched_matches_2019_stp42: output/matched_matches_2019_stp42.csv
-        matched_2019_all_stp42: output/matched_combined_2019_stp42.csv
-      moderately_sensitive:
-        matching_report_2019_stp41: output/matching_report_2019_stp42.txt
-
-  match_2019_stp43:
-    run: python:latest python analysis/match_2019_stp43.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp43: output/matched_cases_2019_stp43.csv
-        matched_matches_2019_stp43: output/matched_matches_2019_stp43.csv
-        matched_2019_all_stp43: output/matched_combined_2019_stp43.csv
-      moderately_sensitive:
-         matching_report_2019_stp43: output/matching_report_2019_stp43.txt
-
-  match_2019_stp44:
-    run: python:latest python analysis/match_2019_stp44.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp44: output/matched_cases_2019_stp44.csv
-        matched_matches_2019_stp44: output/matched_matches_2019_stp44.csv
-        matched_2019_all_stp44: output/matched_combined_2019_stp44.csv
-      moderately_sensitive:
-         matching_report_2019_stp44: output/matching_report_2019_stp44.txt
-
-  match_2019_stp49:
-    run: python:latest python analysis/match_2019_stp49.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_split2019_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_2019_stp49: output/matched_cases_2019_stp49.csv
-        matched_matches_2019_stp49: output/matched_matches_2019_stp49.csv
-        matched_2019_all_stp49: output/matched_combined_2019_stp49.csv
-      moderately_sensitive:
-         matching_report_2019_stp49: output/matching_report_2019_stp49.txt
-
-
 # 5. CHECK VARIABLES IN MATCHED FILES
   # *** contemporary potential comparators for each stp
   checkVars_inMatchedFiles:
@@ -1279,17 +886,6 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/05_check_varsHistorical_after_matching.log
-
-  checkVars_in2019MatchedFiles:
-    run: stata-mp:latest analysis/05_check_vars_after_matching.do 2019
-    needs: [match_2019_stp29]
-    outputs:
-      moderately_sensitive:
-        log: logs/05_check_vars2019_after_matching.log
-
-
-
-
 
 
 
@@ -1362,40 +958,6 @@ actions:
         log: logs/06b_longCovidSymp_cr_combine_historical_COMPARATORstps_after_matching.log
 
 
-
- # 6. COMBINE MATCHED CASES AND MATCHED 2019 COMPARATORS BY STP
-  combine_matched_2019_CASESstps:
-    run: stata-mp:latest analysis/06a_longCovidSymp_cr_combine_CASEstps_after_matching.do 2019
-    needs: [match_2019_stp5, match_2019_stp6, match_2019_stp7, match_2019_stp8, match_2019_stp9,
-    match_2019_stp10, match_2019_stp12, match_2019_stp13, match_2019_stp14, match_2019_stp15,
-    match_2019_stp16, match_2019_stp17, match_2019_stp20, match_2019_stp21, match_2019_stp22,
-    match_2019_stp23, match_2019_stp24, match_2019_stp25, match_2019_stp26, match_2019_stp27,
-    match_2019_stp29, match_2019_stp33, match_2019_stp35, match_2019_stp36, match_2019_stp37, 
-    match_2019_stp40, match_2019_stp41, match_2019_stp42, match_2019_stp43, match_2019_stp44, 
-    match_2019_stp49]
-    outputs:
-      highly_sensitive:
-        matched_cases_allstps: output/input_covid_matched_cases_2019_allSTPs.csv
-      moderately_sensitive:
-        log: logs/06a_longCovidSymp_cr_combine_2019_CASEstps_after_matching.log
-
-
-  combine_matched_2019_COMPARATORstps:
-    run: stata-mp:latest analysis/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching.do 2019
-    needs: [match_2019_stp5, match_2019_stp6, match_2019_stp7, match_2019_stp8, match_2019_stp9,
-    match_2019_stp10, match_2019_stp12, match_2019_stp13, match_2019_stp14, match_2019_stp15,
-    match_2019_stp16, match_2019_stp17, match_2019_stp20, match_2019_stp21, match_2019_stp22,
-    match_2019_stp23, match_2019_stp24, match_2019_stp25, match_2019_stp26, match_2019_stp27,
-    match_2019_stp29, match_2019_stp33, match_2019_stp35, match_2019_stp36, match_2019_stp37, 
-    match_2019_stp40, match_2019_stp41, match_2019_stp42, match_2019_stp43, match_2019_stp44, 
-    match_2019_stp49]
-    outputs:
-      highly_sensitive:
-        matched_matches_allstps: output/input_covid_matched_matches_2019_allSTPs.csv
-      moderately_sensitive:
-        log: logs/06b_longCovidSymp_cr_combine_2019_COMPARATORstps_after_matching.log
-
-
  #6e. CHECK VARIABLES FOR COMBINED CASES AND COMBINED CONTROLS PRIOR TO ADDING MORE VARIABLES
  # check_combinedFiles:
  #   run: stata-mp:latest analysis/6a_longCovidSymp_checkCombinedFiles.do
@@ -1411,13 +973,6 @@ actions:
     outputs:
       moderately_sensitive:
        log: logs/6a_longCovidSymp_checkHistoricalCombinedFiles.log
-
-  check_2019_combinedFiles:
-    run: stata-mp:latest analysis/6f_longCovidSymp_checkHistoricalCombinedFiles.do 2019
-    needs: [combine_matched_2019_CASESstps, combine_matched_2019_COMPARATORstps]
-    outputs:
-      moderately_sensitive:
-       log: logs/6a_longCovidSymp_check2019CombinedFiles.log
 
 
 # 7. ADD FURTHER VARIABLES TO CASES FOLLOWING MATCHING
@@ -1517,25 +1072,6 @@ actions:
         matched_controls_contemporary_wVars: output/input_symptoms_controls_historical.csv
 
 
-# 8i. ADD DIAGNOSES, REMAINING COVARIATES AND GPCOUNT TO *2019* CONTROLS FOLLOWING MATCHING
-  add_allVars_2019_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_2019 
-    needs: [combine_matched_2019_COMPARATORstps]
-    outputs:
-      highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_complete_controls_2019.csv
-
-
-# 8j. ADD SYMPTOMS TO *2019* CONTROLS FOLLOWING MATCHING
-  get_symptoms_2019_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_2019 
-    needs: [combine_matched_2019_COMPARATORstps]
-    outputs:
-      highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_symptoms_controls_2019.csv
-
-
-
 
 # 9. CREATE CONTEMPORARY ANALYSIS FILE (ALSO COMBINES CASES AND CONTROLS)
   create_contemporary_analysis_file:
@@ -1570,22 +1106,6 @@ actions:
       moderately_sensitive: 
         log: logs/09_longCovidSymp_cr_historical_analysis_dataset.log
 
-
-# 9b. CREATE 2019 ANALYSIS FILE (ALSO COMBINES CASES AND 2019 CONTROLS)
-  create_2019_analysis_file:
-    run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do 2019
-    needs: [set_case_index_date, generate_potential_controls_2019, 
-    add_allVars_2019_controls, add_allVars_cases, combine_matched_2019_CASESstps, combine_matched_2019_COMPARATORstps, 
-    get_consultationCount_cases, get_symptoms_cases, get_symptoms_2019_controls]
-    outputs:
-      highly_sensitive:
-        # casesContemporary: output/cases_contemporary.dta 
-        # controlsContemporary: output/controls_contemporary.dta 
-        mainAnalysisFile: output/longCovidSymp_analysis_dataset_2019.dta
-        mainAnalysisFileCSV: output/longCovidSymp_analysis_dataset_2019.csv
-        unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_2019_analysis_dataset.dta
-      moderately_sensitive: 
-        log: logs/09_longCovidSymp_cr_2019_analysis_dataset.log
 
 
 # 10a. IMD CORRECTION (ONLY NEEDED IF ACTION 1 NOT BEING RUN)
@@ -1624,15 +1144,6 @@ actions:
       moderately_sensitive:
         log: logs/10_longCovidSymp_data_checks_historical.log
 
-
-  data_checks_2019:
-    run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do 2019
-    needs: [create_2019_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/10_longCovidSymp_data_checks_2019.log
-
-
 # 11. DESCRIPTIVE TABLE CONTEMPORARY
   table_1_contemporary:
     run: stata-mp:latest analysis/11_longCovidSymp_table1.do contemporary
@@ -1651,15 +1162,6 @@ actions:
       moderately_sensitive:
         log: logs/11_longCovidSymp_table1historical.log
         table1historical: output/table1_longCovidSymp_historical.txt
-
-# 11c. DESCRIPTIVE TABLE 2019
-  table_1_2019:
-    run: stata-mp:latest analysis/11_longCovidSymp_table1.do 2019
-    needs: [create_2019_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/11_longCovidSymp_table12019.log
-        table1historical: output/table1_longCovidSymp_2019.txt
 
 
 # 12a. FIGURE 1A - SYMPTOMS AT ANY TIME (CONTEMPORARY - GOING TO RUN THIS NEXT WHEN ALL SYMPS ARE READY)
@@ -1682,16 +1184,6 @@ actions:
         figure1Ahistorical: output/figure1PanelA_longCovidSympAnyTime_historical.txt
 
 
-# 12a. FIGURE 1A - SYMPTOMS AT ANY TIME (2019 - AS ABOVE)
-  figure_1panelA_2019:
-    run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelA.do 2019
-    needs: [create_2019_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12a_longCovidSympAnyTime_figure1PanelA2019.log
-        figure1A2019: output/figure1PanelA_longCovidSympAnyTime_2019.txt
-
-
 # 12b. FIGURE 1B - DIAGNOSES AT ANY TIME (CONTEMPORARY)
   figure_1panelB_contemporary:
     run: stata-mp:latest analysis/12b_longCovidDiagAnyTime_figure1PanelB.do contemporary
@@ -1710,16 +1202,6 @@ actions:
       moderately_sensitive:
         log: logs/12b_longCovidDiagAnyTime_figure1PanelBhistorical.log
         figure1Bhistorical: output/figure1PanelB_longCovidDiagAnyTime_historical.txt
-
-
-# 12b. FIGURE 1B - DIAGNOSES AT ANY TIME (2019)
-  figure_1panelB_2019:
-    run: stata-mp:latest analysis/12b_longCovidDiagAnyTime_figure1PanelB.do 2019
-    needs: [create_2019_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12b_longCovidDiagAnyTime_figure1PanelB2019.log
-        figure1B2019: output/figure1PanelB_longCovidDiagAnyTime_2019.txt
 
 
 # 12c. FIGURE 1C - PRESCRIPTIONS AT ANY TIME (CONTEMPORARY)
@@ -1742,16 +1224,6 @@ actions:
         figure1Chistorical: output/figure1PanelC_longCovidPrescrAnyTime_historical.txt
 
 
-# 12c. FIGURE 1C - PRESCRIPTIONS AT ANY TIME (2019)
-  figure_1panelC_2019:
-    run: stata-mp:latest analysis/12c_longCovidPrescrAnyTime_figure1Panel.do 2019
-    needs: [create_2019_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12c_longCovidPrescrAnyTime_figure1PanelB2019.log
-        figure1C2019: output/figure1PanelC_longCovidPrescrAnyTime_2019.txt
-
-
 # 13a. FIGURE 2A - SYMPTOMS OVER THREE TIME PERIODS (CONTEMPORARY - GOING TO RUN THIS NEXT WHEN ALL SYMPS ARE READY)
   figure_2panelA_contemporary:
     run: stata-mp:latest analysis/13a_longCovidSympTimePeriods_figure2PanelA.do contemporary
@@ -1770,16 +1242,6 @@ actions:
       moderately_sensitive:
         log: logs/13a_longCovidSympTimePeriods_figure2PanelAhistorical.log
         figure2Ahistorical: output/figure2PanelA_longCovidSympTimePeriods_historical.txt
-
-
-# 13a. FIGURE 2A - SYMPTOMS OVER THREE TIME PERIODS (2019 - AS ABOVE)
-  figure_2panelA_2019:
-    run: stata-mp:latest analysis/13a_longCovidSympTimePeriods_figure2PanelA.do 2019
-    needs: [create_2019_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13a_longCovidSympTimePeriods_figure2PanelA2019.log
-        figure2A2019: output/figure2PanelA_longCovidSympTimePeriods_2019.txt
 
 
 # 13b. FIGURE 2B - DIAGNOSES OVER THREE TIME PERIODS (CONTEMPORARY)
@@ -1801,16 +1263,6 @@ actions:
         figure12Bhistorical: output/figure2PanelB_longCovidDiagTimePeriods_historical.txt
 
 
-  # 13b. FIGURE 2B - DIAGNOSES OVER THREE TIME PERIODS (2019)
-  figure_2panelB_2019:
-    run: stata-mp:latest analysis/13b_longCovidDiagTimePeriods_figure2PanelB.do 2019
-    needs: [create_2019_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13b_longCovidDiagTimePeriods_figure2PanelB2019.log
-        figure12B2019: output/figure2PanelB_longCovidDiagTimePeriods_2019.txt
-
-
   # 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (CONTEMPORARY)
   figure_2panelC_contemporary:
     run: stata-mp:latest analysis/13c_longCovidPrescrTimePeriods_figure2PanelC.do contemporary
@@ -1830,15 +1282,6 @@ actions:
         log: logs/13c_longCovidPrescrTimePeriods_figure2PanelChistorical.log
         figure2Chistorical: output/figure2PanelC_longCovidPrescrTimePeriods_historical.txt
 
-
-# 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (2019)
-  figure_2panelC_2019:
-    run: stata-mp:latest analysis/13c_longCovidPrescrTimePeriods_figure2PanelC.do 2019
-    needs: [create_2019_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13c_longCovidPrescrTimePeriods_figure2PanelC2019.log
-        figure2C2019: output/figure2PanelC_longCovidPrescrTimePeriods_2019.txt
 
 
 
