@@ -16,8 +16,8 @@ CASES = "output/input_covid_matched_cases_contemporary_allSTPs.csv"
 
 # Import Variables 
 ## outcome variables (note, relative to community COVID19 case (index) date)
-from outcome_variables_symp import generate_outcome_variables_symp
-outcome_variables_symp = generate_outcome_variables_symp(index_date_variable="case_index_date")
+from outcome_variables_symp_contemporary import generate_outcome_variables_symp_contemporary
+outcome_variables_symp_contemporary = generate_outcome_variables_symp_contemporary(index_date_variable="case_index_date")
 
 
 # Specify study definition
@@ -43,6 +43,6 @@ study = StudyDefinition(
         returning_type="date"), 
 
     # OUTCOME VARIABLES FOR SYMPTOMS
-    **outcome_variables_symp,  
+    **outcome_variables_symp_contemporary,  
 
 ) 
