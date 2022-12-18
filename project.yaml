@@ -972,7 +972,7 @@ actions:
     needs: [combine_matched_historical_CASESstps, combine_matched_historical_COMPARATORstps]
     outputs:
       moderately_sensitive:
-       log: logs/6a_longCovidSymp_checkHistoricalCombinedFiles.log
+       log: logs/6a_longCovidSymp_checkhistoricalCombinedFiles.log
 
 
 # 7. ADD FURTHER VARIABLES TO CASES FOLLOWING MATCHING
