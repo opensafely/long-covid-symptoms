@@ -23,8 +23,8 @@ from covariates_complete import generate_covariates_complete
 covariates_complete= generate_covariates_complete(index_date_variable="case_index_date")
 
 ## outcome variables (note, relative to community COVID19 case (index) date)
-from outcome_variables_diag import generate_outcome_variables_diag
-outcome_variables_diag = generate_outcome_variables_diag(index_date_variable="case_index_date")
+from outcome_variables_diag_historical import generate_outcome_variables_diag_historical
+outcome_variables_diag_historical = generate_outcome_variables_diag_historical(index_date_variable="case_index_date")
 
 
 # Specify study definition
@@ -41,7 +41,7 @@ study = StudyDefinition(
     population=patients.which_exist_in_file(CONTROLS), 
 
     # start of observation period (note, needs to be called index date)
-    index_date="2018-02-01", # note should be ignored when using case_index_date 
+    index_date="2017-02-01", # note should be ignored when using case_index_date 
 
     # get case index date from controls file
     case_index_date=patients.with_value_from_file(
@@ -63,7 +63,7 @@ study = StudyDefinition(
     **covariates_complete, 
 
     # DIAGNOSES VARIABLES  
-    **outcome_variables_diag, 
+    **outcome_variables_diag_historical, 
 
 
     # TIME-VARYING SELECTION VARIABLES
@@ -87,8 +87,8 @@ study = StudyDefinition(
         date_format="YYYY-MM-DD", 
         return_expectations={
             "date": {
-                "earliest": "2020-02-01",  
-                "latest": "2021-01-31", }, 
+                "earliest": "2017-02-01",  
+                "latest": "2019-01-31", }, 
                 "incidence": 0.01 },
     ),
 

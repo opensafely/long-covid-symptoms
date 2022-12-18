@@ -16,8 +16,8 @@ CONTROLS = "output/input_covid_matched_matches_historical_allSTPs.csv"
 
 # Import Variables 
 ## outcome variables (note, relative to community COVID19 case (index) date)
-from outcome_variables_symp import generate_outcome_variables_symp
-outcome_variables_symp = generate_outcome_variables_symp(index_date_variable="case_index_date")
+from outcome_variables_symp_historical import generate_outcome_variables_symp_historical
+outcome_variables_symp_historical = generate_outcome_variables_symp_historical(index_date_variable="case_index_date")
 
 
 # Specify study definition
@@ -34,7 +34,7 @@ study = StudyDefinition(
     population=patients.which_exist_in_file(CONTROLS), 
 
     # start of observation period (note, needs to be called index date)
-    index_date="2018-02-01", # note should be ignored when using case_index_date 
+    index_date="2017-02-01", # note should be ignored when using case_index_date 
 
     # get case index date from original file
     case_index_date=patients.with_value_from_file(
@@ -43,7 +43,7 @@ study = StudyDefinition(
         returning_type="date"), 
 
     # OUTCOME VARIABLES FOR SYMPTOMS
-    **outcome_variables_symp,  
+    **outcome_variables_symp_historical,  
 
 ) 
 
