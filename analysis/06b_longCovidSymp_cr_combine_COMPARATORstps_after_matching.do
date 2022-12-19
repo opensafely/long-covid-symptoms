@@ -35,14 +35,14 @@ if "`1'"=="contemporary" {
 	*change source files to stata format
 	foreach i of numlist 5/10 12/17 20/27 29 33 35/37 40/44 49 {
 		capture noisily import delimited ./output/matched_matches_stp`i'.csv, clear
-		capture noisily tempfile matched_matches_stp`i'
-		capture noisily save `matched_matches_stp`i'', replace
+		capture noisily tempfile m_matches_stp`i'
+		capture noisily save `m_matches_stp`i'', replace
 	}
 
 	*(2)=========Append separate cases files==========
-	use `matched_matches_stp5', clear
+	use `m_matches_stp5', clear
 	foreach i of numlist 6/10 12/17 20/27 29 33 35/37 40/44 49 {
-		capture noisily append using `matched_matches_stp`i'', force
+		capture noisily append using `m_matches_stp`i'', force
 	}
 }
 else {
@@ -50,14 +50,14 @@ else {
 	*change source files to stata format
 	foreach i of numlist 5/10 12/17 20/27 29 33 35/37 40/44 49 {
 		capture noisily import delimited ./output/matched_matches_`1'_stp`i'.csv, clear
-		capture noisily tempfile matched_matches_`1'_stp`i'
-		capture noisily save `matched_matches_`1'_stp`i'', replace
+		capture noisily tempfile m_matches_`1'_stp`i'
+		capture noisily save `m_matches_`1'_stp`i'', replace
 	}
 
 	*(2)=========Append separate cases files==========
-	use `matched_matches_`1'_stp5', clear
+	use `m_matches_`1'_stp5', clear
 	foreach i of numlist 6/10 12/17 20/27 29 33 35/37 40/44 49 {
-		capture noisily append using `matched_matches_`1'_stp`i'', force
+		capture noisily append using `m_matches_`1'_stp`i'', force
 	}
 }
 
