@@ -958,21 +958,20 @@ actions:
         log: logs/06b_longCovidSymp_cr_combine_historical_COMPARATORstps_after_matching.log
 
 
- #6e. CHECK VARIABLES FOR COMBINED CASES AND COMBINED CONTROLS PRIOR TO ADDING MORE VARIABLES
- # check_combinedFiles:
- #   run: stata-mp:latest analysis/6a_longCovidSymp_checkCombinedFiles.do
- #   needs: [combine_matched_CASESstps, combine_matched_COMPARATORstps]
- #   outputs:
- #     moderately_sensitive:
- #      log: logs/6a_longCovidSymp_checkCombinedFiles.log
+ #6a. CHECK VARIABLES FOR COMBINED CASES AND COMBINED CONTROLS PRIOR TO ADDING MORE VARIABLES
+  check_contemporary_combinedFiles:
+    run: stata-mp:latest analysis/6f_longCovidSymp_checkCombinedFiles.do contemporary
+    needs: [combine_matched_CASESstps, combine_matched_COMPARATORstps]
+    outputs:
+      moderately_sensitive:
+       log: logs/6f_longCovidSymp_contemporary_checkCombinedFiles.log
 
- # 6f. CHECK VARIABLES FOR COMBINED CASES AND COMBINED CONTROLS PRIOR TO ADDING MORE VARIABLES
   check_historical_combinedFiles:
-    run: stata-mp:latest analysis/6f_longCovidSymp_checkHistoricalCombinedFiles.do historical
+    run: stata-mp:latest analysis/6f_longCovidSymp_checkCombinedFiles.do historical
     needs: [combine_matched_historical_CASESstps, combine_matched_historical_COMPARATORstps]
     outputs:
       moderately_sensitive:
-       log: logs/6a_longCovidSymp_checkhistoricalCombinedFiles.log
+       log: logs/6f_longCovidSymp_historical_checkCombinedFiles.log
 
 
 # 7. ADD FURTHER VARIABLES TO CASES FOLLOWING MATCHING
