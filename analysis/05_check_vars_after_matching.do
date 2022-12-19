@@ -128,9 +128,6 @@ keep if _merge==3
 if "`1'"=="historical" {
 	assert case_index_date==case_index_dateForCase-731
 }
-else if "`1'"=="2019" {
-	assert case_index_date==case_index_dateForCase-366
-}
 
 
 
