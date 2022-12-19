@@ -126,10 +126,7 @@ duplicates drop patient_id, force
 merge m:1 set_id using `caseIndexChecker'
 keep if _merge==3
 if "`1'"=="historical" {
-	assert case_index_date==case_index_dateForCase-731
-}
-else if "`1'"=="2019" {
-	assert case_index_date==case_index_dateForCase-366
+	capture noisily assert case_index_date==case_index_dateForCase-1096
 }
 
 
