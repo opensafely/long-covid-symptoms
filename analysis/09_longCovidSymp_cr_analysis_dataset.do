@@ -438,9 +438,15 @@ foreach var of varlist case_index_date - first_known_covid19 $diag $symp  {
 }
 
 *(f2)Create variables for each outcome that are "EVER HAD"
+/*incorrect, as this is date until end of follow-up!
 foreach var of varlist $diag $symp {
 	generate tEver_`var'=0
 	replace tEver_`var'=1 if `var'!=.
+} 
+*/
+foreach var of varlist $diag $symp {
+	generate tEver_`var'=0
+	replace tEver_`var'=1 if t1_`var'==1 | t2_`var'==1 |  t3_`var'==1
 } 
 
 *create variable names
