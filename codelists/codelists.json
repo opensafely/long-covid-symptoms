@@ -300,6 +300,12 @@
       "downloaded_at": "2022-08-22 13:01:22.464184Z",
       "sha": "2b601916cacaa83467579ac2ed7fc423400b465a"
     },
+    "opensafely-symptoms-breathlessness-new.csv": {
+      "id": "opensafely/symptoms-breathlessness-new/5aee78ee",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-breathlessness-new/5aee78ee/",
+      "downloaded_at": "2022-12-24 17:46:21.796377Z",
+      "sha": "dadb9221b8437453e930c1c0814fb805717a168a"
+    },
     "opensafely-symptoms-cough.csv": {
       "id": "opensafely/symptoms-cough/72d8934b",
       "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-cough/72d8934b/",
@@ -336,6 +342,12 @@
       "downloaded_at": "2022-11-25 13:04:18.264094Z",
       "sha": "1fac3375ebc596e1ee2de2270f8d3b55090b4849"
     },
+    "opensafely-symptoms-headache.csv": {
+      "id": "opensafely/symptoms-headache/4930920c",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-headache/4930920c/",
+      "downloaded_at": "2022-12-24 17:46:23.467021Z",
+      "sha": "d8d35c1d0035124c154a0efb2818df6888f9b656"
+    },
     "opensafely-symptoms-sleep-disturbance.csv": {
       "id": "opensafely/symptoms-sleep-disturbance/59c92016",
       "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-sleep-disturbance/59c92016/",
@@ -354,11 +366,71 @@
       "downloaded_at": "2022-11-25 13:04:20.170929Z",
       "sha": "de13a43eaf6cb19abbc134fca13f08f776ceeb68"
     },
+    "opensafely-symptoms-delirium.csv": {
+      "id": "opensafely/symptoms-delirium/73fdec23",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-delirium/73fdec23/",
+      "downloaded_at": "2022-12-24 17:46:24.397314Z",
+      "sha": "e7690b0476c063d18989b7c794f1c99218154dea"
+    },
     "opensafely-symptoms-mobility-impairment.csv": {
       "id": "opensafely/symptoms-mobility-impairment/62a81387",
       "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-mobility-impairment/62a81387/",
       "downloaded_at": "2022-11-25 13:04:20.606171Z",
       "sha": "9025c47838241f7e9c9fea3a6fc78b7d25fe7e68"
+    },
+    "opensafely-symptoms-visual-disturbance.csv": {
+      "id": "opensafely/symptoms-visual-disturbance/1711aba2",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-visual-disturbance/1711aba2/",
+      "downloaded_at": "2022-12-24 17:46:25.111713Z",
+      "sha": "db49384bd9706741cea84679f193786d24388272"
+    },
+    "opensafely-symptoms-nausea-and-vomiting.csv": {
+      "id": "opensafely/symptoms-nausea-and-vomiting/30211ed7",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-nausea-and-vomiting/30211ed7/",
+      "downloaded_at": "2022-12-24 17:46:25.426765Z",
+      "sha": "9a3f2a00170c6c42abf220c188688ddf11eed042"
+    },
+    "opensafely-symptoms-diarrhoea.csv": {
+      "id": "opensafely/symptoms-diarrhoea/7b4f7876",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-diarrhoea/7b4f7876/",
+      "downloaded_at": "2022-12-24 17:46:25.629306Z",
+      "sha": "803ea81e531b1404afbf85aaae3245321acf3d22"
+    },
+    "opensafely-symptoms-weight-loss-and-reduced-appetite.csv": {
+      "id": "opensafely/symptoms-weight-loss-and-reduced-appetite/7e02386c",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-weight-loss-and-reduced-appetite/7e02386c/",
+      "downloaded_at": "2022-12-24 17:46:25.886639Z",
+      "sha": "207b4d1258062ce4eb453566de45bd8eb4e1cd84"
+    },
+    "opensafely-symptoms-ptsd.csv": {
+      "id": "opensafely/symptoms-ptsd/64f2c537",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-ptsd/64f2c537/",
+      "downloaded_at": "2022-12-24 17:46:26.070008Z",
+      "sha": "2645b0a6b31a4094ceaf8c1c82e3158fb921abbc"
+    },
+    "opensafely-symptoms-tinnitus.csv": {
+      "id": "opensafely/symptoms-tinnitus/4be35202",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-tinnitus/4be35202/",
+      "downloaded_at": "2022-12-24 17:46:26.283405Z",
+      "sha": "f88eeb2c28a751e7caad865ff0c92b5e2b89508d"
+    },
+    "opensafely-symptoms-earache.csv": {
+      "id": "opensafely/symptoms-earache/32d3decd",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-earache/32d3decd/",
+      "downloaded_at": "2022-12-24 17:46:26.495506Z",
+      "sha": "d76bd8040216c4b0ac15b147821b0726a2660c45"
+    },
+    "opensafely-symptoms-loss-of-taste-or-smell.csv": {
+      "id": "opensafely/symptoms-loss-of-taste-or-smell/19c46b98",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-loss-of-taste-or-smell/19c46b98/",
+      "downloaded_at": "2022-12-24 17:46:26.704805Z",
+      "sha": "3774b67736d2703635d1cf250359255af4028ec3"
+    },
+    "opensafely-symptoms-hair-loss.csv": {
+      "id": "opensafely/symptoms-hair-loss/042e6be8",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-hair-loss/042e6be8/",
+      "downloaded_at": "2022-12-24 17:46:26.936389Z",
+      "sha": "32ab516e7d41fa30cb0bdc320937a78af033f059"
     }
   }
 }
