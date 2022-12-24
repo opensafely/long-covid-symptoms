@@ -7,7 +7,7 @@ global comorbs comorb_infection_or_parasite comorb_neoplasms comorb_blood_diseas
 *master list of diagnoses
 global diag infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_disorder nervous_sys_dis ear_mastoid_dis circ_sys_dis resp_system_dis digest_syst_dis skin_disease musculo_dis genitourin_dis pregnancy_compl perinatal_dis congenital_dis injury_poison
 *master list of symptoms
-global symp symp_cough symp_chesttight symp_palp symp_fatigue symp_fever symp_cogimpair symp_sleepdisturb symp_periphneuro symp_dizzy symp_mobilityimpair
+global symp symp_breathless symp_cough symp_chesttight symp_palp symp_fatigue symp_fever symp_cogimpair symp_headache symp_sleepdisturb symp_periphneuro symp_dizzy symp_delirium symp_mobilityimpair symp_visualdisturbance symp_nauseavomiting symp_weightloss symp_ptsd symp_tinnitus symp_earache symp_taste_smell symp_hairloss 
 
 
 
