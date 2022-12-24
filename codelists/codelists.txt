@@ -48,16 +48,30 @@ user/kate-mansfield/nutritional-disorder-all-descendants/7776d441
 user/kate-mansfield/poisoning-all-descendants/3460ba84
 user/kate-mansfield/traumatic-andor-non-traumatic-injury-all-descendants/7cdc542d
 user/kate-mansfield/visual-system-disorder-all-descendants/42a52de1
+opensafely/symptoms-breathlessness-new/5aee78ee
 opensafely/symptoms-cough/72d8934b
 opensafely/symptoms-chest-tightness/40b9ace1
 opensafely/symptoms-palpitations/27aa39ac
 opensafely/symptoms-fatigue/0e9ac677
 opensafely/symptoms-fever/758b5341
 opensafely/symptoms-cognitive-impairment/7af0d32d
+opensafely/symptoms-headache/4930920c
 opensafely/symptoms-sleep-disturbance/59c92016
 opensafely/symptoms-peripheral-neuropathy/09fbfa1a
 opensafely/symptoms-dizzy/5c7be00c
+opensafely/symptoms-delirium/73fdec23
 opensafely/symptoms-mobility-impairment/62a81387
+opensafely/symptoms-visual-disturbance/1711aba2
+opensafely/symptoms-nausea-and-vomiting/30211ed7
+opensafely/symptoms-diarrhoea/7b4f7876
+opensafely/symptoms-weight-loss-and-reduced-appetite/7e02386c
+opensafely/symptoms-ptsd/64f2c537 
+opensafely/symptoms-tinnitus/4be35202
+opensafely/symptoms-earache/32d3decd
+opensafely/symptoms-loss-of-taste-or-smell/19c46b98
+opensafely/symptoms-hair-loss/042e6be8
+
+
 
 
 

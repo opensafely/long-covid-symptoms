@@ -216,6 +216,11 @@ hypertension_from_hhclassifAndAnna = codelist_from_csv(
 #opensafely/symptoms-dizzy/5c7be00c
 #opensafely/symptoms-mobility-impairment/62a81387
 
+breathless_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-breathlessness-new.csv",
+    system="snomed",
+    column="code",
+)
 
 cough_symptom_codes = codelist_from_csv(
     "codelists/opensafely-symptoms-cough.csv",
@@ -253,6 +258,12 @@ cogimpairment_symptom_codes = codelist_from_csv(
     column="code",
 )
 
+headache_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-headache.csv",
+    system="snomed",
+    column="code",
+)
+
 sleepdisturbance_symptom_codes = codelist_from_csv(
     "codelists/opensafely-symptoms-sleep-disturbance.csv",
     system="snomed",
@@ -271,8 +282,68 @@ dizzy_symptom_codes = codelist_from_csv(
     column="code",
 )
 
+delirium_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-delirium.csv",
+    system="snomed",
+    column="code",
+)
+
 mobilityimpairment_symptom_codes = codelist_from_csv(
     "codelists/opensafely-symptoms-mobility-impairment.csv",
+    system="snomed",
+    column="code",
+)
+
+visualdisturbance_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-visual-disturbance.csv",
+    system="snomed",
+    column="code",
+)
+
+nauseavomiting_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-nausea-and-vomiting.csv",
+    system="snomed",
+    column="code",
+)
+
+diarrhoea_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-diarrhoea.csv",
+    system="snomed",
+    column="code",
+)
+
+weightloss_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-weight-loss-and-reduced-appetite.csv",
+    system="snomed",
+    column="code",
+)
+
+ptsd_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-ptsd.csv",
+    system="snomed",
+    column="code",
+)
+
+tinnitus_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-tinnitus.csv",
+    system="snomed",
+    column="code",
+)
+
+earache_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-earache.csv",
+    system="snomed",
+    column="code",
+)
+
+taste_smell_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-loss-of-taste-or-smell.csv",
+    system="snomed",
+    column="code",
+)
+
+hairloss_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-hair-loss.csv",
     system="snomed",
     column="code",
 )
@@ -292,9 +363,5 @@ ethnicity_codes_16 = codelist_from_csv(
     column="Code",
     category_column="Grouping_16",
 )
-
-
-
-
 
 
