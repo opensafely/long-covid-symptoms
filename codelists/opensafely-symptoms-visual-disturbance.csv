@@ -1,0 +1,465 @@
+code,term
+1052233008,Constriction of visual field of left eye
+1052234002,Constriction of visual field of right eye
+105505001,Blind person
+105597003,Blindness AND/OR vision impairment level
+111516008,Blurring of visual image
+111517004,Amblyopia
+111518009,"Impairment level: better eye: severe impairment: lesser eye: blind, not further specified"
+111519001,Impairment level: one eye: near-total impairment: other eye: normal vision
+1151008,Visual field constriction
+12184005,Visual field defect
+12772003,Abnormal peripheral vision
+128127008,Visual system disorder
+1283006,"Visual acuity less than .02 (1/60, count fingers 1 meter) or visual field less than 5 degrees, but better than 5."
+128429000,Impairment level of vision
+129625005,Ring scotoma
+129626006,Quadrantic scotoma
+13155005,Infection caused by Elaeophora schneideri
+13164000,Reduced visual acuity
+139543008,Visual symptoms
+139545001,Diplopia
+139547009,Floaters in visual field
+139548004,Blindness
+139549007,Temporary visual disturbance
+139551006,Visual symptom NOS
+141145005,O/E R-eye: [perceives light only] or [blind]
+141146006,O/E - R-eye completely blind
+141159003,O/E L-eye: [perceives light only] or [blind]
+141160008,O/E - L-eye completely blind
+141165003,O/E - near vision abnormal
+141208009,O/E - central scotoma
+141901006,Visual testing abnormal
+14781008,Impairment level: one eye: near-total impairment: other eye: near-normal vision
+147957006,Registered: [partially sighted] or [partially blind]
+147958001,Registered blind
+147960004,Poor visual acuity
+151491003,Visual defect-remedial therapy
+151494006,Visual defect - remedial therapy NOS
+151591001,Specific disability rehabilitation (& blind)
+151592008,Blind rehabilitation
+15203004,Sudden visual loss
+15462009,Arcuate scotoma
+155139004,Visual disturbance
+155140002,(Subjective visual disturbances) or (visual hallucinations) or (photophobia) or
+155141003,Diplopia
+155142005,Visual field defect (& [hemianopia & (heteronymous) or (homonymous)] or [scotoma])
+155145007,(Visual disturbances NOS) or (amblyopia) or (blurred vision)
+155146008,Impaired vision (& [blindness &/or low] or [partial sight])
+155147004,Blindness - both eyes
+155148009,Blind or low vision - both eyes
+155149001,Blind or low vision - one eye only
+155150001,Blindness or low vision NOS
+15927941000119105,Distortion of visual image of right eye
+15927981000119100,Distortion of visual image of left eye
+15928021000119102,Distortion of visual image of bilateral eyes
+16058911000119101,Peripheral visual field defect of bilateral eyes
+16058951000119100,Peripheral visual field defect of left eye
+16058991000119105,Peripheral visual field defect of right eye
+16059031000119103,Visual field defect of bilateral eyes
+16059071000119100,Visual field defect of right eye
+16059111000119107,Scotoma of right eye
+16059151000119108,Scotoma of left eye
+16059191000119103,Scotoma of bilateral eyes
+16059231000119107,Visual field defect of left eye
+16169003,Impairment level: one eye: moderate impairment: other eye: normal vision
+162274004,Visual symptoms
+162276002,Diplopia
+162278001,Floaters in visual field
+162279009,Temporary visual disturbance
+162281006,Visual symptom NOS
+16352008,"Visual acuity less than .3 (6/18,20/70), but better than 2."
+163945008,O/E R-eye: [perceives light only] or [blind]
+163946009,On examination - right eye completely blind
+163959001,O/E L-eye: [perceives light only] or [blind]
+163960006,On examination - left eye completely blind
+163965001,On examination - near vision abnormal
+164009000,On examination - central scotoma
+164728001,Visual testing abnormal
+16931000000106,Certification of blindness - Scotland
+16951000000104,Scottish partially sighted certification - blindness likely before 16
+16961000000101,Scottish certification visual handicap - likely to improve
+16971000000108,Scottish certification visual handicap - likely to deteriorate
+170726007,Registered: [partially sighted] or [partially blind]
+170727003,Registered blind
+170728008,Poor visual acuity
+183270005,Visual defect-remedial therapy
+183272002,Visual defect - remedial therapy NOS
+183360005,Specific disability rehabilitation (& blind)
+183361009,Blind rehabilitation
+193640007,Subjective visual disturbances
+193641006,Unspecified subjective visual disturbance
+193642004,Scintillating scotoma
+193644003,Other transient visual loss
+193647005,Other visual discomfort
+193650008,Visual halos
+193651007,Refractive diplopia
+193653005,Other visual distortion
+193655003,Other psychophysical visual disturbance
+193656002,Subjective visual disturbance NOS
+193657006,Other binocular vision disorders
+193658001,Unspecified binocular vision disorder
+193659009,Binocular vision suppression
+193664008,Other binocular vision disturbance NOS
+193665009,Visual field defects (& [scotoma])
+193666005,Unspecified visual field defect
+193667001,Centrocecal scotoma
+193668006,Paracentral scotoma
+193669003,Central area scotoma NOS
+193670002,Blind spot scotoma
+193671003,Paracecal scotoma
+193673000,Blind spot area scotoma NOS
+193674006,Siedel's scotoma
+193675007,Sector or arcuate visual defect NOS
+193676008,Ring scotoma
+193677004,Scotoma NOS
+193678009,Visual contraction: [generalised] or [tunnel vision]
+193682006,Visual field defects NOS
+193694002,Other specified visual disturbance
+193695001,Vision NOS: [blurred] or [cloudy] or [dull]
+193696000,Other specified visual disturbance NOS
+193697009,Visual disturbance NOS
+193698004,Impaired vision (& [blindness &/or low] or [partial sight])
+193699007,Blindness - both eyes
+193700008,Unspecified blindness both eyes
+193701007,Both eyes total visual impairment
+193702000,"Better eye: near total visual impairment, Lesser eye: unspecified"
+193703005,"Better eye: near total visual impairment, Lesser eye: total visual impairment"
+193704004,"Better eye: near total visual impairment, Lesser eye: near total visual impairment"
+193705003,"Better eye: profound visual impairment, Lesser eye: unspecified"
+193706002,"Better eye: profound visual impairment, Lesser eye: total visual impairment"
+193707006,"Better eye: profound visual impairment, Lesser eye: near total visual impairment"
+193708001,"Better eye: profound visual impairment, Lesser eye: profound visual impairment"
+193709009,Acquired blindness of bilateral eyes
+193710004,Blindness both eyes NOS
+193711000,"Better eye: low vision, Lesser eye: profound visual impairment"
+193712007,"One eye blind, one eye low vision"
+193713002,"Better eye: severe visual impairment, Lesser eye: blind, unspecified"
+193714008,"Better eye: severe visual impairment, Lesser eye: total visual impairment"
+193715009,"Better eye: severe visual impairment, Lesser eye: near total visual impairment"
+193716005,"Better eye: severe visual impairment, Lesser eye: profound visual impairment"
+193717001,"Better eye: moderate visual impairment, Lesser eye: blind, unspecified"
+193718006,"Better eye: moderate visual impairment, Lesser eye: total visual impairment"
+193719003,"Better eye: moderate visual impairment, Lesser eye: near total visual impairment"
+193720009,"Better eye: moderate visual impairment, Lesser eye: profound visual impairment"
+193721008,"One eye blind, one eye low vision NOS"
+193722001,"Low vision, both eyes"
+193723006,"Low vision, both eyes unspecified"
+193724000,"Better eye: severe visual impairment, Lesser eye: low vision unspecified"
+193725004,"Better eye: severe visual impairment, Lesser eye: severe visual impairment"
+193726003,"Better eye: moderate visual impairment, Lesser eye: low vision unspecified"
+193727007,"Better eye: moderate visual impairment, Lesser eye: severe visual impairment"
+193728002,"Better eye: moderate visual impairment, Lesser eye: moderate visual impairment"
+193729005,"Low vision, both eyes NOS"
+193730000,"Visual loss, both eyes unqualified"
+193731001,Legal blindness (United States of America)
+193733003,"Blindness, one eye, unspecified"
+193734009,"Lesser eye: total visual impairment, Better eye: unspecified"
+193735005,"Lesser eye: total visual impairment, Better eye: near normal vision"
+193736006,"Lesser eye: total visual impairment, Better eye: normal vision"
+193737002,"Lesser eye: near total visual impairment, Better eye: unspecified"
+193738007,"Lesser eye: near total visual impairment, Better eye: near normal vision"
+193739004,"Lesser eye: near total visual impairment, Better eye: normal vision"
+193740002,"Lesser eye: profound visual impairment, Better eye: unspecified"
+193741003,"Lesser eye: profound visual impairment, Better eye: near normal vision"
+193742005,"Lesser eye: profound visual impairment, Better eye: normal vision"
+193743000,"Acquired blindness, one eye"
+193745007,"Low vision, one eye"
+193746008,"Low vision, one eye, unspecified"
+193747004,"Lesser eye: severe visual impairment, Better eye: unspecified"
+193748009,"Lesser eye: severe visual impairment, Better eye: near normal vision"
+193749001,"Lesser eye: severe visual impairment, Better eye: normal vision"
+193750001,"Lesser eye: moderate visual impairment, Better eye: unspecified"
+193751002,"Lesser eye: moderate visual impairment, Better eye: near normal vision"
+193752009,"Lesser eye: moderate visual impairment, Better eye: normal vision"
+193753004,"Low vision, one eye NOS"
+193754005,"Visual loss, one eye, unqualified"
+193755006,(Visual loss NOS) or (acquired blindness)
+194654005,[X]Visual disturbances and blindness
+194655006,[X]Other disorders of binocular vision
+194656007,[X]Other visual disturbances
+194660005,[X]Visual disturbances in diseases classified elsewhere
+197511000000102,Visual disability
+19900004,Decreased peripheral vision
+20098009,Incomplete blind
+202161000000108,Certificate of vision impairment
+202891000000106,Abnormal stereoscopic vision
+207951000000105,Certificate of vision impairment
+207961000000108,Certificate of vision impairment
+21273008,Relative scotoma
+218951000119100,Bilateral visual impairment
+2228002,Scintillating scotoma
+225569001,Painful blind eye
+225581002,Sight deteriorating
+22950006,Blindness of one eye
+232149003,Acquired blindness
+23388006,Visual field scotoma
+23672003,"Impairment level: better eye: moderate impairment: lesser eye: blind, not further specified"
+240091000000105,Blurred vision
+240311000000103,Loss of vision
+243113006,Blind and partially sighted rehabilitation - employment placement
+24370009,Seidel scotoma
+243886006,Blind registration
+2457001,Blind rehabilitation therapy
+246634006,Weak vision
+246635007,Dim vision
+246636008,Hazy vision
+246638009,Interference with vision
+246639001,Shapes in visual field
+246640004,Lights or colors in visual field
+246641000,Sees lights in visual field
+246645009,Sees colors in visual field
+246651004,Fading of visual image
+246652006,Visual image fades and reappears
+246653001,Visual image lingers
+246654007,Multiple visual images
+246655008,Double vision with both eyes open
+246656009,Loss of part of visual field
+246657000,Unilateral visual field constriction
+246658005,Seeing blob in vision
+246659002,Peripheral scotoma
+246660007,Peripheral ring scotoma
+246661006,Local peripheral scotoma
+246662004,Altitudinal scotoma
+246663009,Curtain across vision
+246670009,Visual neglect
+246718000,Finding relating to focusing
+2481000000102,England and Wales blind certification
+2491000000100,Scottish - blind certification
+24982008,Diplopia
+2501000000106,Scottish partially sighted certification - blindness likely over 16
+2511000000108,Scottish - certification visual handicap
+251755005,Homonymous diplopia
+251756006,Heteronymous diplopia
+251757002,Paradoxical diplopia
+251758007,Incongruous diplopia
+2521000000102,Scottish certification visual handicap - stable
+2531000000100,England and Wales partially sighted certification
+257192006,Aid to vision
+264524000,Eye completely blind
+267628004,Generalized visual field constriction
+267629007,Blurred vision NOS
+267630002,Impaired vision
+267631003,Visual loss NOS
+267724006,(Subjective visual disturbances) or (visual hallucinations) or (photophobia) or
+267725007,Visual field defect (& [hemianopia & (heteronymous) or (homonymous)] or [scotoma])
+267726008,(Visual disturbances NOS) or (amblyopia) or (blurred vision)
+267727004,Blind or low vision - both eyes
+267728009,Blind or low vision - one eye only
+267729001,Blindness or low vision NOS
+27061006,Pteridium aquilinum poisoning
+271725002,Impaired vision
+274571007,Blind left eye
+274572000,Blind right eye
+277675000,Blind
+29960003,Lead dog for the blind training
+301982003,Vision problem
+306961005,Training for blind or partially sighted person
+307696003,Spontaneous eye movements associated with visual loss
+307697007,Spontaneous eye movements associated with monocular visual loss
+310418000,Blindness certification
+31079007,Impairment level: one eye: total impairment: other eye: near-normal vision
+312978008,"Acquired blindness, both eyes"
+312979000,"Acquired blindness, one eye"
+313165001,Functional visual loss
+33014001,Centrocecal scotoma
+33048000,Peripheral visual field defect
+331431000119107,Visual discomfort of right eye
+331791000119103,Transient visual loss of right eye
+331921000119103,Sudden visual loss of right eye
+332131000119107,Sector visual field defect of right eye
+332201000000100,People with visual disability - National Public Health Classification
+333371000119102,Paracentral scotoma of right eye
+333381000119104,Paracecal scotoma of right eye
+334311000119108,"Low vision left eye, normal vision right eye"
+336171000119109,Central scotoma of right eye
+336371000119106,Arcuate visual field defect of right eye
+337041000119104,Visual discomfort of left eye
+337411000119105,Transient visual loss of left eye
+337541000119105,Sudden visual loss of left eye
+337741000119101,Sector visual field defect of left eye
+338981000119109,Paracentral scotoma of left eye
+338991000119107,Paracecal scotoma of left eye
+33970004,Enlarged blind spot
+339911000119106,"Low vision right eye, normal vision left eye"
+34063005,Homonymous hemianopia
+341781000119100,Central scotoma of left eye
+341981000119103,Arcuate visual field defect of left eye
+342301000119101,Impairment of visual contrast sensitivity
+343021000119100,"Blind right eye, normal vision left eye"
+343031000119102,"Blind right eye, low vision left eye"
+343041000119106,"Blind left eye, normal vision right eye"
+343051000119108,"Blind left eye, low vision right eye"
+343121000119104,Visual discomfort of bilateral eyes
+343201000119104,Transient visual loss of bilateral eyes
+343331000119104,Sudden visual loss of bilateral eyes
+343511000119104,Sector visual field defect of bilateral eyes
+344731000119103,Paracentral scotoma of bilateral eyes
+344741000119107,Paracecal scotoma of bilateral eyes
+345121001,Heteronymous bilateral visual field defects
+346991000119107,Central scotoma of bilateral eyes
+347161000119100,Arcuate visual field defect of bilateral eyes
+347311000000109,Issue of local authority blind registration
+35558006,Impairment level: one eye: moderate impairment: other eye: near-normal vision
+361121001,Vision impairment level
+361122008,Impairment level of vision
+36794003,Impairment level: low vision of one eye
+36994005,Transient visual loss
+386243005,Vision therapy
+38950008,Central scotoma
+39139002,Central blindness
+396184003,Isometropic amblyopia
+397540003,Visual impairment
+397541004,Severe visual impairment
+397542006,Moderate visual impairment
+397543001,Mild visual impairment
+397685007,Finding related to focusing
+39926002,Sees haloes around lights
+399323001,Day blindness
+40031005,Vision problem
+404183005,Functional vision problem
+404191001,Multiple disability visual impairment
+404650002,Pericentral scotoma
+404666000,Visual obscuration
+405088009,Vision compensation behavior
+405149005,Risk control behavior: visual impairment
+408888006,Vision care assessment
+414121000000109,[X]Other visual disturbances
+414405001,Higher-order aberration of vision
+414621000,Lower-order aberration of vision
+416626008,Functional visual field loss
+420990001,Tunnel visual field constriction
+421238007,Central island of vision
+421293001,Unexplained visual loss
+42134006,Distortion of visual image
+421376003,Subjective visual disturbance of image size
+421561005,Concentric visual field constriction
+422677000,Absent response to visual stimuli
+422877002,Abnormal response to visual stimuli
+42515004,Perception of things changing size
+431771000000102,[X]Visual disturbances and blindness
+433147009,Combined visual and hearing impairment
+43661000119103,Sector and/or arcuate visual field defect
+445923001,Sector visual field defect
+446020008,Arcuate visual field defect
+446617001,Visual distortion of perception of shape
+450575009,Registration of visual impairment
+45339001,Visual deprivation nystagmus
+455751000000107,[X]Other disorders of binocular vision
+471071000000102,[X]Visual disturbances in diseases classified elsewhere
+48404003,"Visual acuity less than .05 (3/30,20/400) or visual field than 10 degrees, but better than 4."
+49073008,Absolute scotoma
+492361000000106,Referral to visual impairment multidisciplinary team
+492371000000104,Referral to visual impairment multidisciplinary team 
+492381000000102,Referral to visual impairment multidisciplinary team 
+50446000,Monocular diplopia
+53547005,Concentric fading of visual field
+548871000000107,"Better eye: moderate visual impairment, Lesser eye: blind, unspecified"
+548881000000109,"One eye blind, one eye low vision NOS"
+548901000000107,"Better eye: moderate visual impairment, Lesser eye: low vision unspecified"
+548911000000109,"Low vision, both eyes NOS"
+548921000000103,"Lesser eye: near total visual impairment, Better eye: unspecified"
+548931000000101,"Lesser eye: profound visual impairment, Better eye: unspecified"
+55891002,Problem of visual accommodation
+566991000000106,Visual loss NOS
+581851000000101,Unspecified binocular vision disorder
+581861000000103,Other binocular vision disturbance NOS
+581871000000105,Unspecified visual field defect
+581881000000107,Central area scotoma NOS
+581891000000109,Blind spot area scotoma NOS
+581901000000105,Sector or arcuate visual defect NOS
+581911000000107,Scotoma NOS
+587691000000101,"Lesser eye: moderate visual impairment, Better eye: unspecified"
+588021000000106,Other visual discomfort
+592641000000107,"Lesser eye: total visual impairment, Better eye: unspecified"
+592661000000108,"Low vision, one eye, unspecified"
+594141000000107,Visual symptom NOS
+59695000,Bilateral visual field constriction
+59854000,Heteronymous bilateral visual field defects
+599721000000102,Visual disturbance NOS
+599731000000100,Unspecified blindness both eyes
+599761000000105,Blindness both eyes NOS
+605331000000105,"Better eye: profound visual impairment, Lesser eye: unspecified"
+606941000000106,Unspecified subjective visual disturbance
+606951000000109,Other transient visual loss
+608011000000105,Visual field defects NOS
+608081000000103,Other specified visual disturbance
+608091000000101,Other specified visual disturbance NOS
+6131008,Impairment level: one eye: profound impairment: other eye: normal vision
+615981000000106,Other visual distortion
+616001000000107,Other psychophysical visual disturbance
+616011000000109,Subjective visual disturbance NOS
+616021000000103,Other binocular vision disorders
+619201000000106,"Blindness, one eye, unspecified"
+619221000000102,"Lesser eye: severe visual impairment, Better eye: unspecified"
+619241000000109,"Low vision, one eye NOS"
+619431000000104,"Better eye: near total visual impairment, Lesser eye: unspecified"
+619441000000108,"Better eye: severe visual impairment, Lesser eye: blind, unspecified"
+619471000000102,"Low vision, both eyes unspecified"
+619481000000100,"Better eye: severe visual impairment, Lesser eye: low vision unspecified"
+63063006,"Visual acuity, no light perception"
+63102001,Visual disturbance
+640591000000104,Visual defect - remedial therapy NOS
+64418005,Paracentral scotoma
+65529000,"Visual acuity less than .1 (6/60,20/200) or visual field less than 20 degrees, but better than 3."
+65943000,Visual rehabilitation
+65956007,Legal blindness
+678701000119106,Tunnel vision of bilateral eyes
+678711000119109,Tunnel vision of left eye
+678721000119102,Tunnel vision of right eye
+679411000000103,Blindness or low vision NOS
+68114006,Unqualified visual loss of both eyes
+69456008,Visual distortions of shape AND/OR size
+698606000,Localized visual field defect
+70042006,Psychophysical visual disturbance
+703821000000109,Blurred vision NOS
+70556002,Impairment level: low vision of both eyes
+72020003,Impairment level: one eye: severe impairment: other eye: near-normal vision
+720911000000106,People with visual disability
+727391000000102,Certificate of vision impairment
+727451000000103,Completion of certificate of vision impairment form
+73000008,Unqualified visual loss of one eye
+733338003,Isolated peripheral scotoma
+735545002,Dissociative neurological symptom disorder with visual symptom
+736421009,Structure of right visual pathway
+75000006,Impairment level: one eye: severe impairment: other eye: normal vision
+75364009,Refractive diplopia
+75390007,Day blindness
+765178008,Total visual and total hearing impairment
+7751009,Visual discomfort
+782291000000102,Visual impairment care management
+78307003,Impairment level: one eye: total impairment: other eye: normal vision
+78455002,Subjective visual disturbance
+787411000000108,Registration of visual impairment
+7973008,Abnormal vision
+804251000000100,Combined visual and hearing impairment
+807461000000109,Combined visual and hearing impairment
+813871000000108,Severe binocular visual impairment
+813881000000105,Severe monocular visual impairment
+813891000000107,Moderate binocular visual impairment
+813901000000108,Moderate monocular visual impairment
+815041000000108,Mild visual impairment
+815051000000106,Mild binocular visual impairment
+82617003,Impairment level: one eye: profound impairment: other eye: near-normal vision
+829979008,Complete blindness of right eye
+829980006,Complete blindness of left eye
+832731000000101,Severe binocular visual impairment
+832741000000105,Severe monocular visual impairment
+83275001,Binocular vision disorder
+832751000000108,Moderate binocular visual impairment
+832761000000106,Moderate monocular visual impairment
+832771000000104,"Blindness, monocular"
+833131000000108,Mild binocular visual impairment
+83551002,Visual halos
+83785004,Transient blindness
+862731000000105,Uses guide dog for the blind
+870705000,Poor visual fixation
+87537003,Chromatic aberration of vision
+875801000000109,Uses guide dog for the blind
+8771000119104,Bilateral moderate to severe visual impairment
+88032003,Amaurosis fugax
+88902008,Hysterical blindness
+88991009,Scotopic vision
+91408006,"Impairment level: blindness, one eye - low vision other eye"
+917411000000100,Impaired vision
+95677002,Disorder of vision
