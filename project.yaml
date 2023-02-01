@@ -1010,7 +1010,7 @@ actions:
         matched_controls_contemporary_wVars: output/input_gpconsultations_controls_contemporary.csv
 
 
-# 8c. GET SYMPTOMS FOR CASES
+# 8c. GET SYMPTOMS AND MEDICINES FOR CASES
   get_symptoms_cases:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_cases
     needs: [combine_matched_CASESstps]
@@ -1019,13 +1019,30 @@ actions:
         matched_controls_contemporary_wVars: output/input_symptoms_cases.csv
 
 
-# 8d. GET SYMPTOMS FOR CONTEMPORAY CONTROLS
+  get_medicines_cases:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_cases
+    needs: [combine_matched_CASESstps]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_medicines_cases.csv
+
+
+
+# 8d. GET SYMPTOMS AND MEDICINES FOR CONTEMPORAY CONTROLS
   get_symptoms_controls:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_contemporary 
     needs: [combine_matched_COMPARATORstps]
     outputs:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_symptoms_controls_contemporary.csv
+
+
+  get_medicines_controls:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_controls_contemporary 
+    needs: [combine_matched_COMPARATORstps]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_medicines_controls_contemporary.csv
 
 
 # 8e. CHECK VARIABLES FOR CASES AND CONTEMPORARY CONTROLS (CURRENTLY CHECKING NEW SYMPTOM VARIABLES)
@@ -1062,13 +1079,21 @@ actions:
         matched_controls_contemporary_wVars: output/input_complete_controls_historical.csv
 
 
-# 8h. ADD SYMPTOMS TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
+# 8h. ADD SYMPTOMS AND MEDICINES TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
   get_symptoms_historical_controls:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_historical 
     needs: [combine_matched_historical_COMPARATORstps]
     outputs:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_symptoms_controls_historical.csv
+
+
+  get_medicines_historical_controls:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_controls_historical 
+    needs: [combine_matched_historical_COMPARATORstps]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_medicines_controls_historical.csv
 
 
 

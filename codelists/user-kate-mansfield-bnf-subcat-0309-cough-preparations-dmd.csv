@@ -1,0 +1,428 @@
+dmd_type,dmd_id,dmd_name,bnf_code
+VMP,15065911000001106,Codeine 15mg/5ml linctus,0309010C0AAAAAA
+AMP,108011000001105,Codeine 15mg/5ml linctus,0309010C0AAAAAA
+AMP,257111000001103,Codeine 15mg/5ml linctus,0309010C0AAAAAA
+AMP,14775111000001108,Codeine 15mg/5ml linctus,0309010C0AAAAAA
+AMP,9829911000001106,Codeine 15mg/5ml linctus,0309010C0AAAAAA
+AMP,15215911000001101,Codeine 15mg/5ml linctus,0309010C0AAAAAA
+AMP,833011000001102,Codeine 15mg/5ml linctus,0309010C0AAAAAA
+AMP,149311000001106,Codeine 15mg/5ml linctus,0309010C0AAAAAA
+AMP,22082211000001106,Codeine 15mg/5ml linctus,0309010C0AAAAAA
+VMP,35370211000001104,Codeine 3mg/5ml linctus paediatric,0309010C0AAACAC
+AMP,5226111000001104,Codeine 3mg/5ml linctus paediatric,0309010C0AAACAC
+VMP,38896411000001100,Codeine 15mg/5ml linctus sugar free,0309010C0AAADAD
+AMP,3445711000001102,Codeine 15mg/5ml linctus sugar free,0309010C0AAADAD
+AMP,3447811000001100,Codeine 15mg/5ml linctus sugar free,0309010C0AAADAD
+AMP,22639111000001106,Codeine 15mg/5ml linctus sugar free,0309010C0AAADAD
+AMP,3447111000001107,Codeine 15mg/5ml linctus sugar free,0309010C0AAADAD
+AMP,38860011000001108,Codeine 15mg/5ml linctus sugar free,0309010C0AAADAD
+AMP,23652611000001104,Codeine 15mg/5ml linctus sugar free,0309010C0AAADAD
+AMP,18953111000001102,Codeine 15mg/5ml linctus sugar free,0309010C0AAADAD
+AMP,15216111000001105,Codeine 15mg/5ml linctus sugar free,0309010C0AAADAD
+AMP,3448511000001104,Codeine 15mg/5ml linctus sugar free,0309010C0AAADAD
+AMP,3446711000001105,Codeine 15mg/5ml linctus sugar free,0309010C0AAADAD
+VMP,3336311000001100,Codeine 3mg/5ml linctus paediatric sugar free,0309010C0AAAEAE
+AMP,3446911000001107,Galcodine 15mg/5ml linctus,0309010C0BBAAAD
+AMP,2979711000001105,Galcodine 3mg/5ml linctus paediatric,0309010C0BBABAE
+VMP,11718411000001108,Dextromethorphan 10mg/5ml oral solution,0309010L0AAACAC
+AMP,11669411000001106,Dextromethorphan 10mg/5ml oral solution,0309010L0AAACAC
+VMP,3973311000001104,Dextromethorphan 2.5mg lozenges,0309010L0AAADAD
+VMP,28279511000001105,Dextromethorphan 30mg/5ml oral suspension,0309010L0AAAHAH
+AMP,28787311000001108,Dextromethorphan 30mg/5ml oral suspension,0309010L0AAAHAH
+VMP,11718611000001106,Dextromethorphan 20mg/5ml oral solution,0309010L0AAAIAI
+VMP,11718711000001102,Dextromethorphan 20mg/5ml oral suspension,0309010L0AAAIAI
+AMP,11670311000001101,Dextromethorphan 20mg/5ml oral solution,0309010L0AAAIAI
+AMP,11669711000001100,Dextromethorphan 20mg/5ml oral suspension,0309010L0AAAIAI
+VMP,11718811000001105,Dextromethorphan 40.5mg/5ml oral solution,0309010L0AAALAL
+VMP,11718911000001100,Dextromethorphan 40.5mg/5ml oral suspension,0309010L0AAALAL
+AMP,11671611000001101,Dextromethorphan 40.5mg/5ml oral solution,0309010L0AAALAL
+AMP,11671011000001108,Dextromethorphan 40.5mg/5ml oral suspension,0309010L0AAALAL
+VMP,11718511000001107,Dextromethorphan 10mg/5ml oral suspension,0309010L0AAAMAM
+AMP,11669111000001101,Dextromethorphan 10mg/5ml oral suspension,0309010L0AAAMAM
+VMP,4701111000001104,Dextromethorphan 5mg/5ml / Triprolidine 625micrograms/5ml oral solution sugar free,0309010L0AAANAN
+VMP,4650911000001106,Dextromethorphan 7.5mg/5ml oral solution sugar free,0309010L0AAAQAQ
+VMP,7969611000001107,Dextromethorphan 5mg/5ml oral solution sugar free,0309010L0AAARAR
+VMP,8832211000001109,Dextromethorphan 7.5mg pastilles sugar free,0309010L0AAASAS
+VMP,4932011000001106,Dextromethorphan 7.5mg/5ml oral solution,0309010L0AAATAT
+VMP,4931811000001109,Dextromethorphan 3.75mg/5ml oral solution sugar free,0309010L0AAAUAU
+VMP,4931911000001104,Dextromethorphan 7.5mg/5ml / Menthol 2.5mg/5ml oral solution,0309010L0AAAVAV
+VMP,34377511000001105,Dextromethorphan 30mg/5ml oral solution,0309010L0AAAXAX
+AMP,34348211000001105,Dextromethorphan 30mg/5ml oral solution,0309010L0AAAXAX
+AMP,11755311000001100,Boots Dry Cough Relief 2.5mg lozenges,0309010L0BDAAAD
+AMP,4916611000001109,Covonia Original Bronchial Balsam oral solution,0309010L0BFABAV
+AMP,28268611000001109,Delsym 12 Hour Cough Relief liquid,0309010L0BGAAAH
+AMP,3966711000001101,Strepsils Cough 2.5mg lozenges,0309010L0BJAAAD
+AMP,4673911000001100,Benylin Children's Coughs & Colds oral solution,0309010L0BKAAAN
+AMP,4914011000001107,Benylin Dry Coughs 7.5mg/5ml oral solution,0309010L0BKABAT
+AMP,4647511000001103,Robitussin Dry Cough 7.5mg/5ml oral solution sugar free,0309010L0BMAAAQ
+AMP,8831811000001101,Robitussin soft pastilles for dry cough 7.5mg,0309010L0BMABAS
+AMP,4917011000001104,Robitussin Junior Persistent Cough 3.75mg/5ml oral solution,0309010L0BMACAU
+AMP,7943911000001105,Dry Cough 5mg/5ml syrup,0309010L0BNAAAR
+AMP,16736811000001102,Tussabron 10mg/5ml syrup,0309010L0BPAAAC
+AMP,24390311000001106,Numark Adult Dry Cough linctus,0309010L0BQAAAC
+VMP,11719411000001100,Diamorphine 2.5mg/5ml oral solution,0309010N0AAAHAH
+AMP,11662811000001103,Diamorphine 2.5mg/5ml oral solution,0309010N0AAAHAH
+VMP,11719011000001109,Diamorphine 1.25mg/5ml oral solution,0309010N0AAAIAI
+AMP,11659711000001106,Diamorphine 1.25mg/5ml oral solution,0309010N0AAAIAI
+VMP,11720111000001106,Diamorphine 3mg/5ml oral solution,0309010N0AAAJAJ
+AMP,11666611000001101,Diamorphine 3mg/5ml oral solution,0309010N0AAAJAJ
+VMP,11719911000001108,Diamorphine 2mg/5ml oral solution,0309010N0AAAKAK
+AMP,11665211000001109,Diamorphine 2mg/5ml oral solution,0309010N0AAAKAK
+VMP,36123011000001106,Methadone 2mg/5ml linctus,0309010S0AAAAAA
+AMP,3865511000001109,Methadone 2mg/5ml linctus,0309010S0AAAAAA
+AMP,3866711000001107,Methadone 2mg/5ml linctus,0309010S0AAAAAA
+AMP,3866111000001106,Methadone 2mg/5ml linctus,0309010S0AAAAAA
+VMP,4562211000001103,Pholcodine 4mg/5ml oral solution sugar free,0309010X0AAAAAA
+VMP,38753611000001100,Pholcodine 5mg/5ml linctus,0309010X0AAABAB
+AMP,568611000001105,Pholcodine 5mg/5ml linctus,0309010X0AAABAB
+AMP,830211000001102,Pholcodine 5mg/5ml linctus,0309010X0AAABAB
+AMP,14774511000001100,Pholcodine 5mg/5ml linctus,0309010X0AAABAB
+AMP,9827711000001101,Pholcodine 5mg/5ml linctus,0309010X0AAABAB
+AMP,24585911000001104,Pholcodine 5mg/5ml linctus,0309010X0AAABAB
+AMP,11757211000001100,Pholcodine 5mg/5ml linctus,0309010X0AAABAB
+AMP,192911000001108,Pholcodine 5mg/5ml linctus,0309010X0AAABAB
+VMP,38753711000001109,Pholcodine 10mg/5ml linctus strong,0309010X0AAACAC
+AMP,10134411000001109,Pholcodine 10mg/5ml linctus strong,0309010X0AAACAC
+AMP,693511000001107,Pholcodine 10mg/5ml linctus strong,0309010X0AAACAC
+AMP,16659911000001105,Pholcodine 10mg/5ml linctus strong,0309010X0AAACAC
+VMP,4482011000001100,Pholcodine 0.12% pastilles,0309010X0AAAJAJ
+VMP,36564911000001105,Pholcodine 5mg/5ml linctus sugar free,0309010X0AAALAL
+AMP,916211000001102,Pholcodine 5mg/5ml linctus sugar free,0309010X0AAALAL
+AMP,673511000001102,Pholcodine 5mg/5ml linctus sugar free,0309010X0AAALAL
+AMP,37774211000001105,Pholcodine 5mg/5ml linctus sugar free,0309010X0AAALAL
+AMP,876711000001105,Pholcodine 5mg/5ml linctus sugar free,0309010X0AAALAL
+AMP,39187011000001100,Pholcodine 5mg/5ml linctus sugar free,0309010X0AAALAL
+AMP,24586111000001108,Pholcodine 5mg/5ml linctus sugar free,0309010X0AAALAL
+AMP,13625711000001101,Pholcodine 5mg/5ml linctus sugar free,0309010X0AAALAL
+AMP,7383511000001100,Pholcodine 5mg/5ml linctus sugar free,0309010X0AAALAL
+AMP,352211000001100,Pholcodine 5mg/5ml linctus sugar free,0309010X0AAALAL
+VMP,36564111000001107,Pholcodine 10mg/5ml linctus strong sugar free,0309010X0AAAQAQ
+AMP,529311000001104,Pholcodine 10mg/5ml linctus strong sugar free,0309010X0AAAQAQ
+AMP,112211000001100,Pholcodine 10mg/5ml linctus strong sugar free,0309010X0AAAQAQ
+AMP,37774511000001108,Pholcodine 10mg/5ml linctus strong sugar free,0309010X0AAAQAQ
+AMP,552811000001102,Pholcodine 10mg/5ml linctus strong sugar free,0309010X0AAAQAQ
+AMP,39187211000001105,Pholcodine 10mg/5ml linctus strong sugar free,0309010X0AAAQAQ
+AMP,13625911000001104,Pholcodine 10mg/5ml linctus strong sugar free,0309010X0AAAQAQ
+AMP,24103111000001105,Pholcodine 10mg/5ml linctus strong sugar free,0309010X0AAAQAQ
+VMP,35368611000001108,Pholcodine 2mg/5ml oral solution sugar free,0309010X0AAARAR
+AMP,495011000001100,Galenphol 5mg/5ml linctus,0309010X0BCAAAL
+AMP,477811000001107,Galenphol Strong 10mg/5ml linctus,0309010X0BCABAQ
+AMP,663711000001104,Galenphol Paediatric 2mg/5ml linctus,0309010X0BCACAR
+AMP,742111000001108,Pavacol-D 5mg/5ml mixture,0309010X0BFAAAL
+AMP,850711000001105,Expulin Dry Cough 10mg/5ml linctus,0309010X0BLAAAQ
+AMP,4470411000001103,Potter's Pholcodine cough pastilles,0309010X0BMAAAJ
+AMP,11752711000001105,Children's 1 Year Plus Dry Cough 2mg/5ml syrup,0309010X0BNAAAR
+AMP,17842311000001105,Boots Dry Cough 6 Years+ 2mg/5ml syrup,0309010X0BNABAR
+AMP,4554911000001106,Tixylix Dry Cough 4mg/5ml oral solution,0309010X0BPAAAA
+AMP,8135211000001105,Hill's Balsam Dry Cough 10mg/5ml liquid,0309010X0BQAAAC
+AMP,4987511000001109,Benylin Children's Dry Coughs 2mg/5ml oral solution,0309010X0BRAAAR
+AMP,24521111000001107,Covonia Dry Cough Sugar Free Formula 5mg/5ml oral solution,0309010X0BSAAAL
+VMP,12697811000001104,Ephedrine 15mg/5ml / Dextromethorphan 7.5mg/5ml oral solution sugar free,0309010Y0AAAAAA
+AMP,12683911000001104,Paranorm Cough Syrup,0309010Y0BBAAAA
+VMP,18288711000001104,Norway spruce extract 1.445g/5ml oral solution,030902000AAAYAY
+VMP,29004411000001106,Marshmallow root 830mg/15ml / Thyme 120mg/15ml oral suspension sugar free,030902000AAAZAZ
+VMP,8175011000001103,Generic Bronchial Cough mixture,030902000BEBBA0
+AMP,8173111000001103,Boots Bronchial Cough mixture,030902000BEBBA0
+AMP,13586611000001103,Mentholated Bronchial Balsam oral solution,030902000BEBYA0
+VMP,16246411000001109,Generic Potter's Strong Bronchial Catarrh pastilles,030902000BECBA0
+AMP,16228011000001103,Potter's Strong Bronchial Catarrh pastilles,030902000BECBA0
+VMP,4650511000001104,Generic Hill's Balsam Chesty Cough pastilles,030902000BECDA0
+AMP,4645511000001107,Hill's Balsam Chesty Cough pastilles,030902000BECDA0
+VMP,4665511000001101,Acetic acid dilute 420microlitres/5ml oral solution sugar free,030902000BECGA0
+AMP,4663911000001107,Baby Meltus 0.42ml/5ml cough linctus,030902000BECGA0
+VMP,4598411000001100,Generic Adult Meltus Night Time syrup sugar free,030902000BECHA0
+AMP,4573611000001101,Adult Meltus Night Time syrup,030902000BECHA0
+VMP,8029811000001104,Generic Lockets Medicated linctus,030902000BECIA0
+AMP,8030811000001105,Lockets Medicated linctus,030902000BECIA0
+AMP,8026811000001105,Allens Pine and Honey Balsam oral solution,030902000BECLA0
+VMP,8033211000001104,Levomenthol 6.25mg/5ml oral solution,030902000BECMA0
+AMP,8034011000001106,Vicks Vaposyrup for Tickly Coughs oral solution,030902000BECMA0
+VMP,4665311000001107,Pseudoephedrine 10mg/5ml / Dextromethorphan 3.5mg/5ml oral solution sugar free,030902000BECNA0
+AMP,4662411000001108,Junior Meltus Dry Coughs with Congestion oral solution,030902000BECNA0
+VMP,4706911000001106,Squill liquid extract 0.062% / Capsicum tincture 0.05% oral solution,030902000BECPA0
+AMP,4703511000001107,Buttercup Original Cough syrup,030902000BECPA0
+VMP,4706011000001107,Generic Buttercup Syrup Honey and Lemon,030902000BECQA0
+AMP,4704111000001101,Buttercup Syrup Honey and Lemon,030902000BECQA0
+VMP,9532011000001101,Glucose liquid 3.18g/5ml / Treacle 1.35g/5ml oral solution,030902000BECTA0
+AMP,9527811000001108,Veno's Cough mixture,030902000BECTA0
+VMP,8028011000001100,Generic Beechams Veno's Expectorant oral solution,030902000BECUA0
+AMP,8028811000001106,Veno's Expectorant oral solution,030902000BECUA0
+VMP,8032911000001101,Generic Beechams Veno's Honey and Lemon syrup,030902000BECVA0
+AMP,8033611000001102,Veno's Honey and Lemon syrup,030902000BECVA0
+VMP,9831311000001108,Generic Potter's Balm of Gilead Cough mixture sugar free,030902000BECWA0
+AMP,9826711000001104,Potter's Balm of Gilead Cough mixture,030902000BECWA0
+VMP,8024211000001104,Generic Hill's Balsam Extra Strong 2 in 1 pastilles,030902000BECXA0
+AMP,8024411000001100,Hill's Balsam Extra Strong 2 in 1 pastilles,030902000BECXA0
+VMP,4934011000001100,Generic Histalix Syrup,030902000BECYA0
+AMP,4921111000001104,Histalix Syrup,030902000BECYA0
+VMP,4932811000001100,Generic Benylin Dry Coughs Night syrup,030902000BECZA0
+AMP,4916311000001104,Benylin Dry Coughs Night syrup,030902000BECZA0
+VMP,4939211000001109,Generic Do-Do ChestEze tablets,030902000BEDAA0
+AMP,4938311000001107,Do-Do ChestEze tablets,030902000BEDAA0
+AMP,13426811000001104,Allens Chesty Cough oral solution,030902000BEDBA0
+AMP,8026511000001107,Allens Dry Tickly Cough oral solution,030902000BEDCA0
+AMP,13585311000001103,Covonia Catarrh Relief Formula oral solution,030902000BEDDA0
+VMP,4934511000001108,Generic Tixylix Cough & Cold oral solution sugar free,030902000BEDEA0
+AMP,4922311000001106,Tixylix Cough & Cold oral solution,030902000BEDEA0
+VMP,8087811000001104,Generic Beehive Balsam oral suspension,030902000BEDGA0
+AMP,8085611000001105,Beehive Balsam oral suspension,030902000BEDGA0
+VMP,8011011000001102,Generic Buttercup Blackcurrant Flavoured Cough syrup,030902000BEDHA0
+AMP,8011911000001103,Buttercup Blackcurrant Flavoured Cough syrup,030902000BEDHA0
+VMP,16101111000001104,Generic Benylin Mucus Cough Night oral solution,030902000BEDIA0
+AMP,16094211000001103,Benylin Mucus Cough Night oral solution,030902000BEDIA0
+AMP,8031511000001100,Menthodex Cough mixture,030902000BEDJA0
+AMP,9047011000001102,Kilkof oral solution,030902000BEDKA0
+AMP,16756111000001105,Bell's Mentholated Bronchial Balsam oral solution,030902000BEDLA0
+AMP,18274211000001109,Bronchosan Pine Cough syrup,030902000BEDMAY
+AMP,19468811000001108,Covonia Herbal Mucus Cough syrup,030902000BEDNA0
+VMP,8028111000001104,Generic Hactos Cough mixture,030902000BEDPA0
+AMP,8029311000001108,Hactos Cough mixture,030902000BEDPA0
+VMP,21244911000001106,Generic Noradran Bronchial syrup,030902000BEDQA0
+AMP,21218311000001106,Noradran Bronchial syrup,030902000BEDQA0
+AMP,24391111000001103,Numark Mentholated Bronchial Balsam oral solution,030902000BEDRA0
+AMP,28999011000001108,Buttercup Bronchostop Cough syrup,030902000BEDSAZ
+VMP,32498611000001104,Generic Bell's Cough linctus,030902000BEDTA0
+AMP,32474511000001104,Bell's Cough linctus,030902000BEDTA0
+VMP,34796911000001105,Generic Unicough 14mg/5ml / 135mg/5ml / 1.1mg/5ml oral solution,030902000BEDUA0
+AMP,34790211000001103,Unicough 14mg/5ml / 135mg/5ml / 1.1mg/5ml oral solution,030902000BEDUA0
+VMP,5240611000001108,Potassium iodide ammoniated mixture,030902020AAAAAA
+AMP,8186111000001102,Potassium iodide ammoniated mixture,030902020AAAAAA
+AMP,11419111000001102,Potassium iodide ammoniated mixture,030902020AAAAAA
+VMP,4018811000001101,Pholcodine 1.5mg/5ml / Promethazine 1.5mg/5ml oral solution sugar free,030902030AAAHAH
+AMP,3985911000001109,Tixylix Night Cough oral solution,030902030BEACAH
+VMP,4559311000001106,Diphenhydramine 7mg/5ml / Levomenthol 550micrograms/5ml oral solution sugar free,030902040AAAAAA
+VMP,8019811000001109,Diphenhydramine 6.25mg/5ml oral solution sugar free,030902040AAABAB
+VMP,4932111000001107,Diphenhydramine 14mg/5ml / Levomenthol 2mg/5ml oral solution,030902040BBAAA0
+AMP,4909911000001105,Benylin Chesty Coughs Original oral solution,030902040BBAAA0
+VMP,9117311000001103,Generic Benylin with Codeine oral solution,030902040BBACA0
+AMP,9106111000001101,Benylin with Codeine oral solution,030902040BBACA0
+AMP,4555311000001109,Benylin Children's Night Coughs oral solution,030902040BBADAA
+AMP,8111711000001105,Fedril Paediatric 6.25mg/5ml elixir,030902040BDAAAB
+VMP,5144111000001107,Ammonium acetate solution strong,0309020A0AAAAAA
+AMP,5141811000001102,Ammonium acetate solution strong,0309020A0AAAAAA
+VMP,13093911000001101,Ibuprofen 100mg/5ml / Pseudoephedrine 15mg/5ml oral suspension sugar free,0309020AAAAABAB
+AMP,8133411000001105,Lemsip Cold and Flu Sinus 12 Hr Ibuprofen + Pseudoephedrine modified-release capsules,0309020AABBAAAA
+AMP,9466411000001106,Lemsip Flu 12 Hr Ibuprofen + Pseudoephedrine modified-release capsules,0309020AABBABAA
+AMP,13093011000001100,Orbifen Cold & Flu oral suspension,0309020AABCAAAB
+VMP,8888411000001101,Diphenhydramine 12.5mg/5ml / Pholcodine 3.75mg/5ml oral solution,0309020ABAAAAAA
+AMP,8857011000001101,Cough Nurse Night Time Liquid,0309020ABBBAAAA
+AMP,11757011000001105,Nirolex Night Time Coughs oral solution,0309020ABBCAAAA
+AMP,31013011000001106,Boots Night Cough Relief oral solution,0309020ABBDAAAA
+VMP,9519611000001106,Guaiacol 75mg/5ml / Codeine 7mg/5ml oral solution,0309020ACAAAAAA
+AMP,9508611000001104,Pulmo Bailly oral solution,0309020ACBBAAAA
+VMP,9654811000001105,Squill liquid extract 73mg/g / Ipecacuanha liquid extract 36mg/g pastilles,0309020ADAAAAAA
+AMP,9626311000001108,Halls Children's Cough pastilles,0309020ADBBAAAA
+VMP,11762311000001103,Ephedrine 3mg/5ml / Ipecacuanha liquid extract 6.25mg/5ml oral solution sugar free,0309020AEAAAAAA
+AMP,11759211000001106,Children's 6 Month Plus Cough and Congestion syrup,0309020AEBBAAAA
+VMP,4939911000001100,Pseudoephedrine 30mg/5ml / Dextromethorphan 10mg/5ml oral solution,0309020AFAAAAAA
+AMP,11760711000001103,Boots Dry Cough & Congestion Relief oral solution,0309020AFBBAAAA
+AMP,4937111000001109,Sudafed Dry Coughs with Decongestant liquid,0309020AFBCAAAA
+VMP,8140111000001106,Citric acid monohydrate 20mg/5ml / Ipecacuanha liquid extract 10microlitres/5ml oral solution sugar free,0309020AGAAAAAA
+AMP,8137211000001102,Hill's Balsam Chesty Cough Liquid for Children,0309020AGBBAAAA
+VMP,8029711000001107,Ammonium chloride 130mg/5ml / Diphenhydramine 14mg/5ml oral solution,0309020AHAAAAAA
+AMP,13667111000001102,Numark Chesty Cough Expectorant oral solution,0309020AHBBAAAA
+VMP,35901711000001101,Ammonia and Ipecacuanha mixture,0309020B0AAACAC
+AMP,3725011000001106,Ammonia and Ipecacuanha mixture,0309020B0AAACAC
+AMP,5003711000001108,Ammonia and Ipecacuanha mixture,0309020B0AAACAC
+AMP,3726011000001102,Ammonia and Ipecacuanha mixture,0309020B0AAACAC
+VMP,35923911000001105,Simple linctus,0309020D0AAAAAA
+AMP,374211000001106,Simple linctus,0309020D0AAAAAA
+AMP,404211000001107,Simple linctus,0309020D0AAAAAA
+AMP,17022311000001107,Simple linctus,0309020D0AAAAAA
+AMP,368411000001109,Simple linctus,0309020D0AAAAAA
+AMP,9827911000001104,Simple linctus,0309020D0AAAAAA
+AMP,14932111000001106,Simple linctus,0309020D0AAAAAA
+AMP,96211000001109,Simple linctus,0309020D0AAAAAA
+VMP,35924011000001108,Simple linctus paediatric,0309020D0AAABAB
+AMP,205111000001103,Simple linctus paediatric,0309020D0AAABAB
+AMP,820811000001103,Simple linctus paediatric,0309020D0AAABAB
+AMP,17022711000001106,Simple linctus paediatric,0309020D0AAABAB
+AMP,37804311000001108,Simple linctus paediatric,0309020D0AAABAB
+AMP,336011000001108,Simple linctus paediatric,0309020D0AAABAB
+VMP,35924211000001103,Simple linctus sugar free,0309020D0AAADAD
+AMP,3634511000001109,Simple linctus sugar free,0309020D0AAADAD
+AMP,3635311000001104,Simple linctus sugar free,0309020D0AAADAD
+AMP,37804011000001105,Simple linctus sugar free,0309020D0AAADAD
+AMP,3635011000001102,Simple linctus sugar free,0309020D0AAADAD
+AMP,39894411000001106,Simple linctus sugar free,0309020D0AAADAD
+AMP,24586511000001104,Simple linctus sugar free,0309020D0AAADAD
+AMP,13626711000001109,Simple linctus sugar free,0309020D0AAADAD
+AMP,19271411000001109,Simple linctus sugar free,0309020D0AAADAD
+AMP,3634811000001107,Simple linctus sugar free,0309020D0AAADAD
+VMP,35924111000001109,Simple linctus paediatric sugar free,0309020D0AAAFAF
+AMP,3644511000001108,Simple linctus paediatric sugar free,0309020D0AAAFAF
+AMP,3645011000001101,Simple linctus paediatric sugar free,0309020D0AAAFAF
+AMP,21840311000001107,Simple linctus paediatric sugar free,0309020D0AAAFAF
+AMP,3644811000001106,Simple linctus paediatric sugar free,0309020D0AAAFAF
+AMP,39249911000001101,Simple linctus paediatric sugar free,0309020D0AAAFAF
+AMP,8985411000001100,Simple linctus paediatric sugar free,0309020D0AAAFAF
+AMP,21315911000001106,Simple linctus paediatric sugar free,0309020D0AAAFAF
+AMP,24586311000001105,Numark Simple linctus,0309020D0BBABAA
+AMP,24586911000001106,Numark Paediatric Simple linctus,0309020D0BBACAB
+AMP,20352511000001108,Care Simple linctus paediatric sugar free,0309020D0BCAAAF
+VMP,10563011000001101,Guaifenesin powder,0309020G0AAAAAA
+AMP,10553011000001107,Guaifenesin powder,0309020G0AAAAAA
+VMP,7641011000001106,Guaifenesin 100mg/5ml oral solution,0309020G0AAABAB
+VMP,4651011000001103,Guaifenesin 100mg/5ml oral solution sugar free,0309020G0AAABAB
+VMP,7970111000001101,Guaifenesin 66.67mg/5ml oral solution sugar free,0309020G0AAAEAE
+VMP,4367511000001100,Guaifenesin 100mg/5ml / Pseudoephedrine 30mg/5ml oral solution,0309020G0AAAGAG
+VMP,4854711000001105,Guaifenesin 50mg/5ml / Cetylpyridinium chloride 2.5mg/5ml oral solution sugar free,0309020G0AAAHAH
+VMP,5565811000001104,Guaifenesin 33.33mg/5ml oral solution sugar free,0309020G0AAAJAJ
+VMP,8888511000001102,Guaifenesin 100mg/5ml / Cetylpyridinium chloride 2.5mg/5ml oral solution sugar free,0309020G0AAAKAK
+VMP,8147311000001109,Guaifenesin 50mg/5ml oral solution,0309020G0AAALAL
+VMP,9103411000001101,Guaifenesin 100mg/5ml / Levomenthol 1.1mg/5ml oral solution 5ml sachets,0309020G0AAAMAM
+VMP,4598911000001108,Guaifenesin 50mg/5ml oral solution sugar free,0309020G0AAANAN
+VMP,4957311000001107,Guaifenesin 100mg/5ml / Levomenthol 1.1mg/5ml oral solution,0309020G0AAAPAP
+VMP,7970011000001102,Guaifenesin 66.67mg/5ml / Pseudoephedrine 20mg/5ml oral solution sugar free,0309020G0AAAQAQ
+VMP,13716711000001108,Guaifenesin 66.67mg/5ml oral solution,0309020G0AAARAR
+VMP,17853911000001101,Guaifenesin 50mg/5ml / Pseudoephedrine 10mg/5ml oral solution sugar free,0309020G0AAASAS
+VMP,7526811000001100,Guaifenesin 100mg/5ml / Pseudoephedrine 30mg/5ml oral solution sugar free,0309020G0AAATAT
+AMP,4648111000001108,Robitussin Chesty Cough 100mg/5ml oral solution,0309020G0BBACAB
+AMP,7520111000001109,Robitussin Chesty Cough with Congestion liquid,0309020G0BBADAT
+AMP,13668411000001106,Vicks Vaposyrup for Chesty Coughs 66.67mg/5ml oral solution,0309020G0BEACAR
+AMP,7944411000001104,Lloydspharmacy Expectorant Cough 66.67mg/5ml syrup,0309020G0BFAAAE
+AMP,7942211000001107,Lloydspharmacy Expectorant Junior Cough 33.33mg/5ml syrup,0309020G0BFABAJ
+AMP,7944911000001107,Lloydspharmacy Expectorant and Decongestant Cough syrup,0309020G0BFACAQ
+AMP,4580911000001105,Tixylix Chesty Cough 50mg/5ml oral solution,0309020G0BGABAN
+AMP,11785811000001103,Children's 1 Year Plus Chesty Cough 50mg/5ml syrup,0309020G0BHABAN
+AMP,17842511000001104,Boots Chesty Cough 6 Years+ 50mg/5ml syrup,0309020G0BHACAN
+AMP,17848511000001102,Boots Cough and Decongestant 6 Years+ syrup,0309020G0BHADAS
+AMP,17854211000001108,Boots Nirolex Chesty Cough & Congestion Relief linctus,0309020G0BHAEAG
+AMP,20567611000001104,Boots Catarrh Cough syrup,0309020G0BHAFAT
+AMP,20567811000001100,Boots Chesty Cough Relief 100mg/5ml oral solution,0309020G0BHAGAB
+AMP,4850811000001107,Junior Meltus Colour and Sugar Free Expectorant oral solution,0309020G0BJAAAH
+AMP,8158311000001107,Junior Meltus Chesty Coughs with Catarrh oral solution,0309020G0BJABAH
+AMP,8856011000001104,Adult Meltus Chesty Coughs Sugar & Colour Free oral solution,0309020G0BJACAK
+AMP,8855111000001109,Family Meltus Chesty Coughs Honey and Lemon Flavour 50mg/5ml oral solution,0309020G0BJADAL
+AMP,4757411000001107,Adult Meltus for Chesty Coughs and Catarrh oral solution,0309020G0BJAEA0
+AMP,4366711000001107,Adult Meltus Chesty Cough with Decongestant oral solution,0309020G0BJAFAG
+AMP,5565211000001100,Beechams Veno's for Kids Chesty Cough 33.33mg/5ml syrup,0309020G0BKAAAJ
+AMP,4685811000001101,Nirolex Chesty Coughs with Decongestant oral solution,0309020G0BLAAAG
+AMP,9539011000001108,Boots Mucus Cough Relief 100mg/5ml oral solution,0309020G0BLABAB
+AMP,7636811000001109,Jackson's Extra Strength All Fours 100mg/5ml oral solution,0309020G0BMAAAB
+AMP,8144711000001101,Jackson's The Original All Fours 50mg/5ml oral solution,0309020G0BMABAL
+VMP,9096511000001103,Guaifenesin 50mg/5ml oral solution 5ml sachets sugar free,0309020G0BNAAA0
+AMP,9092711000001109,Benylin Children's Chesty Coughs 50mg/5ml oral solution 5ml sachets,0309020G0BNAAA0
+AMP,9100211000001105,Benylin Chesty Coughs oral solution 5ml sachets,0309020G0BNABAM
+AMP,4946111000001105,Benylin Chesty Coughs Non-Drowsy oral solution,0309020G0BNACAP
+AMP,4985911000001107,Benylin Children's Chesty Coughs 50mg/5ml oral solution,0309020G0BNADAN
+AMP,16093611000001104,Benylin Mucus Cough oral solution,0309020G0BNAEAP
+AMP,18540411000001106,Benylin Mucus Cough Plus Decongestant syrup,0309020G0BNAFAG
+AMP,18541311000001109,Benylin Mucus Cough Max Menthol 100mg/5ml oral solution,0309020G0BNAGAB
+AMP,35773711000001101,Benylin Mucus Cough Max Honey & Lemon Flavour 100mg/5ml syrup,0309020G0BNAHAB
+AMP,9465611000001104,Lemsip Cough for Chesty Cough 50mg/5ml oral solution,0309020G0BPAAAL
+AMP,21672711000001102,Lemsip Cough for Mucus Cough 100mg/2.5mg/5ml oral solution,0309020G0BPABA0
+AMP,27984211000001106,Lemsip Cough for Mucus Cough Sugar & Colour Free 100mg/2.5mg/5ml oral solution,0309020G0BPACAK
+AMP,38040011000001102,Lemsip Cough for Mucus Cough & Catarrh 100mg/2.5mg/5ml oral solution,0309020G0BPADAK
+AMP,11931811000001104,Calcough Six Plus 50mg/5ml oral solution,0309020G0BQAAAN
+AMP,8135511000001108,Hill's Balsam Chesty Cough 100mg/5ml liquid,0309020G0BRAAAB
+AMP,4925011000001103,Sudafed Chesty Coughs with Decongestant liquid,0309020G0BSAAAG
+AMP,16751411000001106,Bell's Mucus Cough 100mg/5ml oral solution,0309020G0BTAAAB
+AMP,24391311000001101,Numark Mucus Cough 100mg/5ml oral solution,0309020G0BUAAAB
+AMP,29864611000001107,Covonia Chesty Cough Sugar Free syrup,0309020G0BVAAAE
+AMP,33799711000001100,Liqufruta Garlic Cough Medicine 50mg/5ml oral solution,0309020G0BWAAAL
+VMP,11762611000001108,"Generic Glycerin, Honey and Lemon with Ipecacuanha linctus",0309020H0AAABAB
+VMP,15633111000001107,"Generic Glycerin, Lemon and Honey with Glucose and Ipecacuanha oral solution",0309020H0AAABAB
+AMP,11752211000001103,"Glycerin, Honey and Lemon with Ipecacuanha linctus",0309020H0AAABAB
+AMP,18755011000001105,"Glycerin, Lemon and Honey with Glucose and Ipecacuanha oral solution",0309020H0AAABAB
+AMP,15616711000001108,"Glycerin, Lemon and Honey with Glucose and Ipecacuanha oral solution",0309020H0AAABAB
+VMP,11787711000001100,"Generic Glycerin, Honey and Lemon linctus",0309020H0AAAEAE
+VMP,4661111000001108,Generic Lemsip Cough for Dry Cough & Sore Throat oral solution,0309020H0AAAEAE
+VMP,4661211000001102,Honey purified 1.5g/5ml / Glycerol 630mg/5ml oral solution,0309020H0AAAEAE
+VMP,4138911000001106,Glycerol 750microlitres/5ml oral solution sugar free,0309020H0AAAHAH
+VMP,9096411000001102,Glycerol 750microlitres/5ml / Sucrose 1.7g/5ml oral solution,0309020H0AAAIAI
+VMP,13587311000001106,Glycerol 1.36g/5ml / Glucose liquid 280mg/5ml oral solution,0309020H0AAAJAJ
+AMP,18754311000001109,"Glycerin, Lemon and Honey with Glucose oral solution",0309020H0AAAJAJ
+AMP,15615911000001103,"Glycerin, Lemon and Honey with Glucose oral solution",0309020H0AAAJAJ
+VMP,17956111000001104,Glycerol 500microlitres/5ml / Ipecacuanha liquid extract 9.8microlitres/5ml oral solution,0309020H0AAAKAK
+VMP,14796511000001100,"Generic Glycerin, Lemon and Honey Expectorant oral solution",0309020H0AAALAL
+AMP,14788011000001106,"Glycerin, Lemon and Honey Expectorant oral solution",0309020H0AAALAL
+VMP,8028211000001105,Glycerol 750mg/5ml oral solution,0309020H0AAAMAM
+AMP,4655311000001103,Lemsip Cough for Dry Cough & Sore Throat oral solution,0309020H0BEABAE
+AMP,15524611000001108,"Numark Compound Syrup of Glycerin, Lemon & Honey",0309020H0BFABAM
+AMP,15979411000001101,Tixylix Toddler 750microlitres/5ml syrup,0309020H0BHABAH
+AMP,17577311000001107,"Tixylix Honey, Lemon & Glycerol oral solution",0309020H0BHACAE
+AMP,22764111000001108,Tixylix Blackcurrant Flavour syrup,0309020H0BHADAH
+AMP,4124811000001106,Tixylix Baby 15% syrup,0309020H0BHAEAH
+AMP,4655011000001101,Jackson's Lemon linctus,0309020H0BIAAAE
+AMP,8173311000001101,Boots Cough Syrup 3 Months Plus,0309020H0BJAAAH
+AMP,16064011000001106,Glycerin and Blackcurrant linctus,0309020H0BJABAI
+AMP,16063711000001106,Benylin Dry Coughs Blackcurrant oral solution,0309020H0BJACAI
+AMP,31073211000001106,Boots Tickly Cough Relief oral solution,0309020H0BJADAI
+AMP,34868611000001102,"Glycerin, Honey and Lemon linctus",0309020H0BJAEAE
+AMP,16064211000001101,Nirolex Dry Cough linctus,0309020H0BKAAAI
+AMP,13114011000001106,Benylin Children's Tickly Coughs 750microlitres/5ml oral solution,0309020H0BLAAAH
+AMP,16737011000001106,Benylin Children's Apple Flavour Cough syrup,0309020H0BLABAH
+AMP,18541111000001107,Benylin Children's Blackcurrant Flavour Cough syrup,0309020H0BLACAI
+AMP,29685411000001100,Benylin Infant's Cough syrup,0309020H0BLADAH
+AMP,29685711000001106,Benylin Children's Cough & Sore Throat syrup,0309020H0BLAEAI
+AMP,9093011000001103,Benylin Dry & Tickly Cough syrup,0309020H0BLAFAI
+AMP,13075711000001109,CalCough Tickly 750microlitres/5ml oral solution,0309020H0BMAAAH
+AMP,17041211000001108,CalCough Infant 750microlitres/5ml syrup,0309020H0BMABAH
+AMP,18540911000001103,CalCough Children's syrup,0309020H0BMACAI
+AMP,13582511000001103,Covonia Dry & Tickly Cough linctus,0309020H0BNAAAJ
+AMP,16659511000001103,Bell's Dry Tickly Cough 750mg/5ml syrup,0309020H0BPAAAM
+AMP,16747311000001108,Bell's Childrens Dry Cough syrup,0309020H0BPABAM
+AMP,17945011000001106,"Bell's Chesty Cough Compound of Glycerin, Lemon and Ipecacuanha oral solution",0309020H0BPACAK
+AMP,22706411000001105,Buttercup Chesty Cough oral solution,0309020H0BQAAAK
+VMP,9097211000001104,Squill liquid extract,0309020I0AAABAB
+AMP,9090811000001102,Squill liquid extract,0309020I0AAABAB
+VMP,5241411000001101,Squill oxymel,0309020I0AAAEAE
+AMP,5228811000001107,Squill oxymel,0309020I0AAAEAE
+AMP,5229211000001101,Squill oxymel,0309020I0AAAEAE
+AMP,5229011000001106,Squill oxymel,0309020I0AAAEAE
+AMP,9000011000001106,Squill oxymel,0309020I0AAAEAE
+AMP,8011511000001105,Covonia mentholated cough mixture,0309020I0BBAAA0
+VMP,8019711000001101,Generic Potter's Gees Linctus pastilles,0309020K0AAAAAA
+VMP,35930911000001104,Squill opiate linctus,0309020K0AAAEAE
+AMP,5178111000001102,Gee's linctus,0309020K0AAAEAE
+VMP,35931011000001107,Squill opiate linctus paediatric,0309020K0AAAFAF
+AMP,5186111000001107,Squill opiate linctus paediatric,0309020K0AAAFAF
+AMP,8021011000001106,Potter's Gees Linctus pastilles,0309020K0BCAAAA
+VMP,5146711000001104,Camphorated opium tincture,0309020N0AAABAB
+AMP,5146411000001105,Camphorated opium tincture,0309020N0AAABAB
+VMP,4389211000001106,Generic Multi-Action Actifed Chesty Coughs oral solution,0309020Q0AAACAC
+VMP,4389311000001103,Generic Multi-Action Actifed Dry Coughs liquid,0309020Q0AAADAD
+AMP,10725511000001103,Sudafed Non-Drowsy Children's 30mg/5ml syrup,0309020Q0BBABAB
+AMP,4386711000001109,Multi-Action Actifed Dry Coughs liquid,0309020Q0BCACAD
+AMP,4387011000001105,Multi-Action Actifed Chesty Coughs oral solution,0309020Q0BCADAC
+VMP,4504111000001102,Diphenhydramine 10mg/5ml / Dextromethorphan 6.65mg/5ml oral solution sugar free,0309020R0AAABAB
+VMP,4754411000001102,Dextromethorphan 10mg/5ml / Pseudoephedrine 10mg/5ml oral suspension sugar free,0309020R0AAACAC
+AMP,4485611000001103,Covonia night time formula oral solution,0309020R0BDAAAB
+AMP,34445711000001102,Covonia Hot Dose Cough & Cold syrup,0309020R0BDABAB
+AMP,4754111000001107,Adult Meltus for Dry Coughs with Congestion oral suspension,0309020R0BEAAAC
+VMP,5239611000001101,Ipecacuanha alkaline mixture,0309020T0AAAAAA
+AMP,8178711000001108,Ipecacuanha alkaline mixture,0309020T0AAAAAA
+AMP,11418511000001100,Ipecacuanha alkaline mixture,0309020T0AAAAAA
+VMP,5239811000001102,Ipecacuanha mixture paediatric,0309020T0AAABAB
+AMP,8180411000001105,Ipecacuanha mixture paediatric,0309020T0AAABAB
+AMP,11420711000001100,Ipecacuanha mixture paediatric,0309020T0AAABAB
+VMP,5239711000001105,Ipecacuanha and Ammonia mixture paediatric,0309020T0AAACAC
+AMP,8179611000001108,Ipecacuanha and Ammonia mixture paediatric,0309020T0AAACAC
+AMP,11419211000001108,Ipecacuanha and Ammonia mixture paediatric,0309020T0AAACAC
+VMP,5239911000001107,Ipecacuanha opiate mixture paediatric,0309020T0AAADAD
+AMP,8181211000001100,Ipecacuanha opiate mixture paediatric,0309020T0AAADAD
+AMP,11419911000001104,Ipecacuanha opiate mixture paediatric,0309020T0AAADAD
+VMP,8029611000001103,Ipecacuanha 20mg tablets,0309020T0AAAFAF
+AMP,17322411000001104,Ipecacuanha 20mg tablets,0309020T0AAAFAF
+VMP,16756711000001106,Liquorice liquid extract 125microlitres/5ml / Ipecacuanha liquid extract 5microlitres/5ml oral solution,0309020T0AAAGAG
+VMP,36049111000001100,Ipecacuanha and Morphine mixture BP 1980,0309020T0AAAHAH
+AMP,19271211000001105,Ipecacuanha and Morphine mixture BP 1980,0309020T0AAAHAH
+AMP,8030111000001103,Fennings Little Healers 20mg tablets,0309020T0BDAAAF
+AMP,16755411000001109,Children's Cough Balsam linctus,0309020T0BEAAAG
+VMP,4651111000001102,Generic Dimotane Co oral solution sugar free,0309020U0AAAAAA
+VMP,4660711000001101,Generic Dimotane Co oral solution paediatric sugar free,0309020U0AAABAB
+VMP,4665611000001102,Generic Dimotane Expectorant oral solution sugar free,0309020U0AAACAC
+AMP,4647211000001101,Dimotane Co oral solution sugar free,0309020U0BBAAAA
+AMP,4646411000001104,Dimotane Co oral solution paediatric sugar free,0309020U0BBABAB
+AMP,4652611000001104,Dimotane Expectorant oral solution,0309020U0BBADAC
+VMP,8981911000001106,Generic Potter's Sugar Free Cough pastilles,0309020V0BEAAA0
+AMP,8977811000001101,Potter's Sugar Free Cough pastilles,0309020V0BEAAA0
+VMP,4957811000001103,Terpin 32.5mg/5ml / Codeine 16mg/5ml linctus,0309020X0AAAAAA
+AMP,4942811000001104,Terpin 32.5mg/5ml / Codeine 16mg/5ml linctus,0309020X0AAAAAA
+AMP,15230611000001106,Terpin 32.5mg/5ml / Codeine 16mg/5ml linctus,0309020X0AAAAAA
+AMP,4943111000001100,Terpin 32.5mg/5ml / Codeine 16mg/5ml linctus,0309020X0AAAAAA
+VMP,5242111000001101,Wild cherry syrup,0309020Z0AAAAAA
+AMP,5220611000001105,Wild cherry syrup,0309020Z0AAAAAA
+AMP,30283511000001100,Wild cherry syrup,0309020Z0AAAAAA
+AMP,9000811000001100,Wild cherry syrup,0309020Z0AAAAAA

@@ -1,0 +1,418 @@
+dmd_type,dmd_id,dmd_name,bnf_code
+VMP,40087411000001104,Generic Trimbow NEXThaler 88micrograms/dose / 5micrograms/dose / 9micrograms/dose dry powder inhaler,0301011ABAAAAAA
+VMP,34683311000001106,Generic Trimbow 87micrograms/dose / 5micrograms/dose / 9micrograms/dose inhaler,0301011ABBBAAA0
+AMP,34681611000001100,Trimbow 87micrograms/dose / 5micrograms/dose / 9micrograms/dose inhaler,0301011ABBBAAA0
+AMP,39993311000001105,Trimbow NEXThaler 88micrograms/dose / 5micrograms/dose / 9micrograms/dose dry powder inhaler,0301011ABBBABAA
+VMP,320258002,Bambuterol 10mg tablets,0301011B0AAAAAA
+VMP,320259005,Bambuterol 20mg tablets,0301011B0AAABAB
+AMP,375711000001100,Bambec 10mg tablets,0301011B0BBAAAA
+AMP,809411000001102,Bambec 20mg tablets,0301011B0BBABAB
+VMP,12626211000001108,Formoterol 12microgram inhalation powder capsules with device,0301011E0AAAAAA
+VMP,39112911000001101,Formoterol 6micrograms/dose dry powder inhaler,0301011E0AAABAB
+VMP,39113011000001109,Formoterol 12micrograms/dose dry powder inhaler,0301011E0AAACAC
+VMP,9652711000001107,Formoterol 12micrograms/dose inhaler CFC free,0301011E0AAADAD
+AMP,3206811000001109,Foradil 12microgram inhalation powder capsules with device,0301011E0BBAAAA
+AMP,3243511000001107,Oxis 6 Turbohaler,0301011E0BCAAAB
+AMP,3245011000001103,Oxis 12 Turbohaler,0301011E0BCABAC
+AMP,9628711000001106,Atimos Modulite 12micrograms/dose inhaler,0301011E0BDAAAD
+AMP,11176411000001106,Formoterol Easyhaler 12micrograms/dose dry powder inhaler,0301011E0BEAAAC
+VMP,4558411000001107,Fenoterol 200micrograms/dose inhaler,0301011F0AAAAAA
+AMP,4537611000001107,Berotec 200micrograms/dose inhaler,0301011F0BBACAA
+VMP,35936511000001108,Salbutamol 100micrograms/dose inhaler,0301011R0AAAAAA
+AMP,3408611000001107,Salbutamol 100micrograms/dose inhaler,0301011R0AAAAAA
+AMP,3417111000001102,Salbutamol 100micrograms/dose inhaler,0301011R0AAAAAA
+AMP,10432311000001108,Salbutamol 100micrograms/dose inhaler,0301011R0AAAAAA
+AMP,3412611000001107,Salbutamol 100micrograms/dose inhaler,0301011R0AAAAAA
+AMP,3415711000001107,Salbutamol 100micrograms/dose inhaler,0301011R0AAAAAA
+AMP,3410611000001106,Salbutamol 100micrograms/dose inhaler,0301011R0AAAAAA
+VMP,35936411000001109,Salbutamol 100micrograms/dose breath actuated inhaler,0301011R0AAADAD
+VMP,35937211000001107,Salbutamol 95micrograms/dose dry powder inhaler,0301011R0AAAFAF
+VMP,35936711000001103,Salbutamol 200microgram inhalation powder blisters with device,0301011R0AAAIAI
+VMP,35936911000001101,Salbutamol 400microgram inhalation powder blisters with device,0301011R0AAAJAJ
+VMP,35936611000001107,Salbutamol 200microgram inhalation powder blisters,0301011R0AAAKAK
+VMP,35936811000001106,Salbutamol 400microgram inhalation powder blisters,0301011R0AAALAL
+VMP,39113611000001102,Salbutamol 100micrograms/dose inhaler CFC free,0301011R0AAAPAP
+AMP,7511000001105,Salbutamol 100micrograms/dose inhaler CFC free,0301011R0AAAPAP
+AMP,18041311000001106,Salbutamol 100micrograms/dose inhaler CFC free,0301011R0AAAPAP
+AMP,757611000001104,Salbutamol 100micrograms/dose inhaler CFC free,0301011R0AAAPAP
+AMP,45111000001100,Salbutamol 100micrograms/dose inhaler CFC free,0301011R0AAAPAP
+VMP,39113311000001107,Salbutamol 200micrograms/dose dry powder inhaler,0301011R0AAAQAQ
+VMP,38895911000001101,Salbutamol 500micrograms/1ml solution for injection ampoules,0301011R0AAAUAU
+VMP,39709711000001100,Salbutamol 200microgram inhalation powder capsules,0301011R0AAAVAV
+VMP,39709811000001108,Salbutamol 400microgram inhalation powder capsules,0301011R0AAAWAW
+VMP,39709611000001109,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AAAXAX
+AMP,3385711000001103,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AAAXAX
+AMP,11006511000001106,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AAAXAX
+AMP,17026511000001100,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AAAXAX
+AMP,10453811000001108,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AAAXAX
+AMP,18080711000001105,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AAAXAX
+AMP,12880611000001109,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AAAXAX
+AMP,30891911000001100,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AAAXAX
+AMP,17927211000001106,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AAAXAX
+AMP,9102311000001103,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AAAXAX
+AMP,3386811000001103,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AAAXAX
+VMP,320106000,Salbutamol 2mg tablets,0301011R0AAAZAZ
+AMP,659111000001106,Salbutamol 2mg tablets,0301011R0AAAZAZ
+AMP,506611000001108,Salbutamol 2mg tablets,0301011R0AAAZAZ
+AMP,921311000001107,Salbutamol 2mg tablets,0301011R0AAAZAZ
+AMP,287611000001100,Salbutamol 2mg tablets,0301011R0AAAZAZ
+AMP,30094911000001103,Salbutamol 2mg tablets,0301011R0AAAZAZ
+AMP,161811000001109,Salbutamol 2mg tablets,0301011R0AAAZAZ
+AMP,39241911000001100,Salbutamol 2mg tablets,0301011R0AAAZAZ
+AMP,21895211000001100,Salbutamol 2mg tablets,0301011R0AAAZAZ
+VMP,39703611000001107,Salbutamol 4mg tablets,0301011R0AABABA
+AMP,262711000001105,Salbutamol 4mg tablets,0301011R0AABABA
+AMP,194411000001107,Salbutamol 4mg tablets,0301011R0AABABA
+AMP,52811000001102,Salbutamol 4mg tablets,0301011R0AABABA
+AMP,273911000001107,Salbutamol 4mg tablets,0301011R0AABABA
+AMP,30095111000001102,Salbutamol 4mg tablets,0301011R0AABABA
+AMP,258311000001100,Salbutamol 4mg tablets,0301011R0AABABA
+AMP,39242111000001108,Salbutamol 4mg tablets,0301011R0AABABA
+AMP,21895411000001101,Salbutamol 4mg tablets,0301011R0AABABA
+VMP,39709511000001105,Salbutamol 5mg/ml nebuliser liquid,0301011R0AABBBB
+VMP,39025311000001106,Salbutamol 5mg/5ml solution for infusion ampoules,0301011R0AABCBC
+VMP,39710011000001108,Salbutamol 5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AABDBD
+AMP,3379611000001104,Salbutamol 5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AABDBD
+AMP,11006711000001101,Salbutamol 5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AABDBD
+AMP,17026711000001105,Salbutamol 5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AABDBD
+AMP,10454011000001100,Salbutamol 5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AABDBD
+AMP,18080911000001107,Salbutamol 5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AABDBD
+AMP,12880811000001108,Salbutamol 5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AABDBD
+AMP,30892111000001108,Salbutamol 5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AABDBD
+AMP,17927411000001105,Salbutamol 5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AABDBD
+AMP,9102511000001109,Salbutamol 5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AABDBD
+AMP,3381111000001101,Salbutamol 5mg/2.5ml nebuliser liquid unit dose vials,0301011R0AABDBD
+VMP,39025011000001108,Salbutamol 4mg modified-release tablets,0301011R0AABEBE
+VMP,35937111000001101,Salbutamol 8mg modified-release tablets,0301011R0AABFBF
+VMP,39109411000001101,Salbutamol 2mg/5ml oral solution sugar free,0301011R0AABGBG
+AMP,161111000001102,Salbutamol 2mg/5ml oral solution sugar free,0301011R0AABGBG
+AMP,803911000001107,Salbutamol 2mg/5ml oral solution sugar free,0301011R0AABGBG
+AMP,896511000001106,Salbutamol 2mg/5ml oral solution sugar free,0301011R0AABGBG
+AMP,13626311000001105,Salbutamol 2mg/5ml oral solution sugar free,0301011R0AABGBG
+AMP,221511000001100,Salbutamol 2mg/5ml oral solution sugar free,0301011R0AABGBG
+VMP,39025211000001103,Salbutamol 4mg modified-release capsules,0301011R0AABMBM
+VMP,39025111000001109,Salbutamol 8mg modified-release capsules,0301011R0AABPBP
+VMP,39112711000001103,Salbutamol 100micrograms/dose breath actuated inhaler CFC free,0301011R0AABUBU
+VMP,35937011000001102,Salbutamol 5mg/50ml solution for infusion vials,0301011R0AABVBV
+AMP,4889111000001103,Salbutamol 5mg/50ml solution for infusion vials,0301011R0AABVBV
+VMP,9207411000001106,Salbutamol 100micrograms/dose dry powder inhaler,0301011R0AABZBZ
+VMP,13566211000001103,Salbutamol 100micrograms/dose dry powder inhalation cartridge with device,0301011R0AACBCB
+VMP,13566111000001109,Salbutamol 100micrograms/dose dry powder inhalation cartridge,0301011R0AACCCC
+AMP,840111000001107,Salbulin 100micrograms/dose inhaler,0301011R0BDAEAP
+AMP,3382711000001107,Ventolin 200micrograms/dose Accuhaler,0301011R0BEAHAQ
+AMP,222311000001102,Ventolin 100micrograms/dose Evohaler,0301011R0BEAIAP
+AMP,892011000001102,Ventolin 2mg/5ml syrup,0301011R0BEAMBG
+AMP,3387011000001107,Ventolin 2.5mg Nebules,0301011R0BEANAX
+AMP,3214211000001100,Ventolin 200microgram Rotacaps,0301011R0BEAPAV
+AMP,3218011000001101,Ventolin 400microgram Rotacaps,0301011R0BEAQAW
+AMP,4843911000001107,Ventolin 5mg/ml respirator solution,0301011R0BEARBB
+AMP,3926911000001108,Ventolin 500micrograms/1ml solution for injection ampoules,0301011R0BEATAU
+AMP,886111000001103,Ventolin 5mg/5ml solution for infusion ampoules,0301011R0BEAUBC
+AMP,3381811000001108,Ventolin 5mg Nebules,0301011R0BEAXBD
+AMP,3386411000001100,Maxivent 2.5mg/2.5ml nebuliser liquid unit dose Steripoule vials,0301011R0BGABAX
+AMP,3380811000001100,Maxivent 5mg/2.5ml nebuliser liquid unit dose Steripoule vials,0301011R0BGACBD
+AMP,3387511000001104,Salamol 2.5mg/2.5ml nebuliser liquid Steri-Neb unit dose vials,0301011R0BIADAX
+AMP,3383511000001109,Salamol 5mg/2.5ml nebuliser liquid Steri-Neb unit dose vials,0301011R0BIAEBD
+AMP,106511000001103,Salamol 100micrograms/dose inhaler CFC free,0301011R0BIAFAP
+AMP,3215311000001107,Salamol 100micrograms/dose Easi-Breathe inhaler,0301011R0BIAGBU
+AMP,20434411000001107,Salamol 100micrograms/dose inhaler CFC free,0301011R0BIAHAP
+AMP,3186011000001104,Asmasal 95micrograms/dose Clickhaler,0301011R0BJABAF
+AMP,3293111000001105,Aerolin 100micrograms/dose Autohaler,0301011R0BKADAD
+AMP,3080411000001101,Ventodisks 200microgram with Diskhaler,0301011R0BLAAAI
+AMP,3086111000001109,Ventodisks 200microgram,0301011R0BLABAK
+AMP,3083011000001100,Ventodisks 400microgram with Diskhaler,0301011R0BLACAJ
+AMP,3089011000001102,Ventodisks 400microgram,0301011R0BLADAL
+AMP,597011000001101,Airomir 100micrograms/dose inhaler,0301011R0BMAAAP
+AMP,3214311000001108,Airomir 100micrograms/dose Autohaler,0301011R0BMABBU
+AMP,196411000001104,Volmax 4mg modified-release tablets,0301011R0BNAABE
+AMP,831811000001109,Volmax 8mg modified-release tablets,0301011R0BNABBF
+AMP,3214611000001103,Salbutamol 200 Cyclocaps,0301011R0BPACAV
+AMP,3217611000001109,Salbutamol 400 Cyclocaps,0301011R0BPADAW
+AMP,626411000001107,Ventmax SR 4mg capsules,0301011R0BSAABM
+AMP,281511000001105,Ventmax SR 8mg capsules,0301011R0BSABBP
+AMP,3384111000001103,Pulvinal Salbutamol 200micrograms/dose dry powder inhaler,0301011R0BTAAAQ
+AMP,650211000001107,Salapin 2mg/5ml syrup,0301011R0BUAABG
+AMP,9040011000001103,Salbutamol 2.5mg/2.5ml nebuliser liquid unit dose Steripoule vials,0301011R0BVAAAX
+AMP,9040211000001108,Salbutamol 5mg/2.5ml nebuliser liquid unit dose Steripoule vials,0301011R0BVABBD
+AMP,9205211000001104,Easyhaler Salbutamol sulfate 100micrograms/dose dry powder inhaler,0301011R0BWAABZ
+AMP,9204911000001109,Easyhaler Salbutamol sulfate 200micrograms/dose dry powder inhaler,0301011R0BWABAQ
+AMP,13533511000001104,Salbulin Novolizer 100micrograms/dose inhalation powder,0301011R0BXAACB
+AMP,13533711000001109,Salbulin Novolizer 100micrograms/dose inhalation powder refill,0301011R0BXABCC
+AMP,18148111000001107,Asmavent 100micrograms/dose inhaler CFC free,0301011R0BYAAAP
+AMP,22503111000001109,AirSalb 100micrograms/dose inhaler CFC free,0301011R0BZAAAP
+VMP,35937811000001108,Salmeterol 50microgram inhalation powder blisters with device,0301011U0AAAAAA
+VMP,35938011000001101,Salmeterol 50microgram inhalation powder blisters,0301011U0AAABAB
+VMP,39110811000001105,Salmeterol 25micrograms/dose inhaler,0301011U0AAACAC
+VMP,39113211000001104,Salmeterol 50micrograms/dose dry powder inhaler,0301011U0AAAEAE
+VMP,10075611000001101,Salmeterol 25micrograms/dose inhaler CFC free,0301011U0AAAHAH
+AMP,3084011000001103,Serevent 50microgram disks with Diskhaler,0301011U0BBAAAA
+AMP,3082411000001100,Serevent 50microgram disks,0301011U0BBABAB
+AMP,408911000001105,Serevent 25micrograms/dose inhaler,0301011U0BBACAC
+AMP,3380111000001107,Serevent 50micrograms/dose Accuhaler,0301011U0BBAEAE
+AMP,10073011000001107,Serevent 25micrograms/dose Evohaler,0301011U0BBAFAH
+AMP,19562111000001107,Neovent 25micrograms/dose inhaler CFC free,0301011U0BDAAAH
+AMP,19568411000001100,Neovent 25micrograms/dose inhaler CFC free,0301011U0BEAAAH
+AMP,22650111000001100,Vertine 25micrograms/dose inhaler CFC free,0301011U0BFAAAH
+AMP,33561211000001109,Soltel 25micrograms/dose inhaler CFC free,0301011U0BGAAAH
+VMP,39113111000001105,Terbutaline 250micrograms/dose inhaler,0301011V0AAAAAA
+VMP,35916211000001103,Terbutaline 500micrograms/1ml solution for injection ampoules,0301011V0AAABAB
+VMP,3654411000001106,Terbutaline 5mg/2ml nebuliser liquid unit dose vials,0301011V0AAADAD
+AMP,11256611000001108,Terbutaline 5mg/2ml nebuliser liquid unit dose vials,0301011V0AAADAD
+AMP,22355111000001103,Terbutaline 5mg/2ml nebuliser liquid unit dose vials,0301011V0AAADAD
+AMP,11150411000001106,Terbutaline 5mg/2ml nebuliser liquid unit dose vials,0301011V0AAADAD
+AMP,12062211000001109,Terbutaline 5mg/2ml nebuliser liquid unit dose vials,0301011V0AAADAD
+AMP,17661711000001102,Terbutaline 5mg/2ml nebuliser liquid unit dose vials,0301011V0AAADAD
+AMP,9111011000001106,Terbutaline 5mg/2ml nebuliser liquid unit dose vials,0301011V0AAADAD
+AMP,30924211000001107,Terbutaline 5mg/2ml nebuliser liquid unit dose vials,0301011V0AAADAD
+AMP,21787311000001103,Terbutaline 5mg/2ml nebuliser liquid unit dose vials,0301011V0AAADAD
+VMP,35916111000001109,Terbutaline 250micrograms/dose inhaler with spacer,0301011V0AAAFAF
+VMP,35915911000001100,Terbutaline 1.5mg/5ml oral solution sugar free,0301011V0AAAGAG
+AMP,9239411000001108,Terbutaline 1.5mg/5ml oral solution sugar free,0301011V0AAAGAG
+AMP,248411000001109,Terbutaline 1.5mg/5ml oral solution sugar free,0301011V0AAAGAG
+AMP,225511000001102,Terbutaline 1.5mg/5ml oral solution sugar free,0301011V0AAAGAG
+VMP,320203000,Terbutaline 5mg tablets,0301011V0AAAHAH
+VMP,35916411000001104,Terbutaline 7.5mg modified-release tablets,0301011V0AAAIAI
+VMP,35916011000001108,Terbutaline 2.5mg/5ml solution for injection ampoules,0301011V0AAAKAK
+VMP,39714711000001104,Terbutaline 10mg/ml nebuliser liquid,0301011V0AAAXAX
+VMP,28279711000001100,Terbutaline 7.5mg/15ml solution for infusion pre-filled syringes,0301011V0AABABA
+AMP,28194211000001100,Terbutaline 7.5mg/15ml solution for infusion pre-filled syringes,0301011V0AABABA
+VMP,35916311000001106,Terbutaline 500micrograms/dose dry powder inhaler,0301011V0AABBBB
+AMP,738811000001100,Bricanyl 5mg tablets,0301011V0BBAAAH
+AMP,726111000001105,Bricanyl 1.5mg/5ml syrup,0301011V0BBABAG
+AMP,691211000001105,Bricanyl 500micrograms/1ml solution for injection ampoules,0301011V0BBACAB
+AMP,3248011000001106,Bricanyl 250micrograms/dose inhaler,0301011V0BBADAA
+AMP,3248711000001108,Bricanyl 250micrograms/dose spacer inhaler,0301011V0BBAFAF
+AMP,101011000001104,Bricanyl 2.5mg/5ml solution for injection ampoules,0301011V0BBAJAK
+AMP,3633911000001104,Bricanyl 5mg/2ml Respules,0301011V0BBALAD
+AMP,364811000001103,Bricanyl SA 7.5mg tablets,0301011V0BBANAI
+AMP,2831711000001102,Bricanyl 10mg/ml respirator solution,0301011V0BBAQAX
+AMP,3218311000001103,Bricanyl 500micrograms/dose Turbohaler,0301011V0BBARBB
+AMP,28011000001107,Monovent 1.5mg/5ml syrup,0301011V0BDABAG
+VMP,17313711000001107,Indacaterol 150microgram inhalation powder capsules with device,0301011X0AAAAAA
+VMP,17313811000001104,Indacaterol 300microgram inhalation powder capsules with device,0301011X0AAABAB
+AMP,17300811000001109,Onbrez Breezhaler 150microgram inhalation powder capsules with device,0301011X0BBAAAA
+AMP,17299911000001102,Onbrez Breezhaler 300microgram inhalation powder capsules with device,0301011X0BBABAB
+VMP,24670111000001108,Olodaterol 2.5micrograms/dose solution for inhalation cartridge with device CFC free,0301011Z0AAAAAA
+VMP,37692311000001106,Olodaterol 2.5micrograms/dose inhalation solution cartridge CFC free,0301011Z0AAABAB
+AMP,24608011000001103,Striverdi Respimat 2.5micrograms/dose inhalation solution cartridge with device,0301011Z0BBAAAA
+AMP,37678311000001100,Striverdi Respimat 2.5micrograms/dose inhalation solution refill cartridge,0301011Z0BBABAB
+VMP,10514511000001106,Adrenaline (base) 220micrograms/dose inhaler,0301012A0AAABAB
+VMP,10525011000001107,Adrenaline (base) 220micrograms/dose inhaler refill,0301012A0AAACAC
+AMP,10514711000001101,Primatene Mist 220micrograms/dose inhaler,0301012A0BCABAB
+AMP,10525611000001100,Primatene Mist 220micrograms/dose inhaler refill,0301012A0BCACAC
+VMP,320296001,Ephedrine hydrochloride 15mg tablets,0301012F0AAAAAA
+AMP,211111000001103,Ephedrine hydrochloride 15mg tablets,0301012F0AAAAAA
+AMP,104411000001105,Ephedrine hydrochloride 15mg tablets,0301012F0AAAAAA
+AMP,38110311000001103,Ephedrine hydrochloride 15mg tablets,0301012F0AAAAAA
+AMP,20711000001107,Ephedrine hydrochloride 15mg tablets,0301012F0AAAAAA
+AMP,39854311000001107,Ephedrine hydrochloride 15mg tablets,0301012F0AAAAAA
+AMP,29849611000001101,Ephedrine hydrochloride 15mg tablets,0301012F0AAAAAA
+AMP,263011000001104,Ephedrine hydrochloride 15mg tablets,0301012F0AAAAAA
+VMP,320297005,Ephedrine hydrochloride 30mg tablets,0301012F0AAABAB
+AMP,485911000001100,Ephedrine hydrochloride 30mg tablets,0301012F0AAABAB
+AMP,97411000001105,Ephedrine hydrochloride 30mg tablets,0301012F0AAABAB
+AMP,38110111000001100,Ephedrine hydrochloride 30mg tablets,0301012F0AAABAB
+AMP,663911000001102,Ephedrine hydrochloride 30mg tablets,0301012F0AAABAB
+AMP,38883511000001108,Ephedrine hydrochloride 30mg tablets,0301012F0AAABAB
+AMP,29849811000001102,Ephedrine hydrochloride 30mg tablets,0301012F0AAABAB
+AMP,897511000001108,Ephedrine hydrochloride 30mg tablets,0301012F0AAABAB
+VMP,36072011000001107,Ephedrine 15mg/5ml elixir,0301012F0AAADAD
+AMP,75411000001109,Ephedrine 15mg/5ml elixir,0301012F0AAADAD
+VMP,36072311000001105,Ephedrine 4mg/5ml oral solution sugar free,0301012F0AAALAL
+VMP,8487511000001107,Ephedrine 15mg/5ml oral suspension,0301012F0AAAUAU
+AMP,8464511000001101,Ephedrine 15mg/5ml oral suspension,0301012F0AAAUAU
+VMP,12294411000001109,Ephedrine 4mg/5ml oral solution,0301012F0AAAVAV
+AMP,12259911000001107,Ephedrine 4mg/5ml oral solution,0301012F0AAAVAV
+AMP,900911000001105,CAM Mixture,0301012F0BBAAAL
+VMP,39701711000001104,Orciprenaline 20mg tablets,0301012S0AAAFAF
+VMP,36022711000001108,Orciprenaline 10mg/5ml oral solution sugar free,0301012S0AAAGAG
+AMP,897211000001105,Alupent 20mg tablets,0301012S0BBAAAF
+AMP,599311000001108,Alupent 10mg/5ml syrup,0301012S0BBABAG
+VMP,36049311000001103,Ipratropium bromide 20micrograms/dose inhaler,0301020I0AAAAAA
+VMP,39717511000001101,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+AMP,3221011000001103,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+AMP,11006311000001100,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+AMP,21720011000001109,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+AMP,3223511000001105,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+AMP,10453611000001109,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+AMP,23949311000001100,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+AMP,8097811000001100,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+AMP,30215011000001107,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+AMP,39001511000001107,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+AMP,17933311000001107,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+AMP,15214311000001101,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+AMP,9102111000001100,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+AMP,3222711000001108,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+AMP,22062511000001106,Ipratropium bromide 500micrograms/2ml nebuliser liquid unit dose vials,0301020I0AAACAC
+VMP,36049411000001105,Ipratropium bromide 40micrograms/dose inhaler,0301020I0AAADAD
+VMP,39717211000001104,Ipratropium bromide 250micrograms/1ml nebuliser liquid unit dose vials,0301020I0AAAFAF
+AMP,3225311000001103,Ipratropium bromide 250micrograms/1ml nebuliser liquid unit dose vials,0301020I0AAAFAF
+AMP,11006111000001102,Ipratropium bromide 250micrograms/1ml nebuliser liquid unit dose vials,0301020I0AAAFAF
+AMP,21719511000001100,Ipratropium bromide 250micrograms/1ml nebuliser liquid unit dose vials,0301020I0AAAFAF
+AMP,3227511000001100,Ipratropium bromide 250micrograms/1ml nebuliser liquid unit dose vials,0301020I0AAAFAF
+AMP,10453411000001106,Ipratropium bromide 250micrograms/1ml nebuliser liquid unit dose vials,0301020I0AAAFAF
+AMP,23949111000001102,Ipratropium bromide 250micrograms/1ml nebuliser liquid unit dose vials,0301020I0AAAFAF
+AMP,8097311000001109,Ipratropium bromide 250micrograms/1ml nebuliser liquid unit dose vials,0301020I0AAAFAF
+AMP,39001311000001101,Ipratropium bromide 250micrograms/1ml nebuliser liquid unit dose vials,0301020I0AAAFAF
+AMP,17933111000001105,Ipratropium bromide 250micrograms/1ml nebuliser liquid unit dose vials,0301020I0AAAFAF
+AMP,15213511000001109,Ipratropium bromide 250micrograms/1ml nebuliser liquid unit dose vials,0301020I0AAAFAF
+AMP,9101911000001108,Ipratropium bromide 250micrograms/1ml nebuliser liquid unit dose vials,0301020I0AAAFAF
+AMP,3226811000001104,Ipratropium bromide 250micrograms/1ml nebuliser liquid unit dose vials,0301020I0AAAFAF
+AMP,22062311000001100,Ipratropium bromide 250micrograms/1ml nebuliser liquid unit dose vials,0301020I0AAAFAF
+VMP,36049211000001106,Ipratropium bromide 20micrograms/dose breath actuated inhaler,0301020I0AAAGAG
+VMP,39717311000001107,Ipratropium bromide 40microgram inhalation powder capsules with device,0301020I0AAAHAH
+VMP,39717411000001100,Ipratropium bromide 40microgram inhalation powder capsules,0301020I0AAAIAI
+VMP,38894511000001107,Ipratropium bromide 20micrograms/dose inhaler CFC free,0301020I0AAANAN
+AMP,27872911000001109,Ipratropium bromide 20micrograms/dose inhaler CFC free,0301020I0AAANAN
+AMP,24011000001103,Atrovent 20micrograms/dose inhaler,0301020I0BBAAAA
+AMP,3222411000001102,Atrovent 500micrograms/2ml nebuliser liquid UDVs,0301020I0BBACAC
+AMP,347611000001103,Atrovent Forte 40micrograms/dose inhaler,0301020I0BBADAD
+AMP,3226411000001101,Atrovent 250micrograms/1ml nebuliser liquid UDVs,0301020I0BBAFAF
+AMP,351411000001106,Atrovent 20micrograms/dose Autohaler,0301020I0BBAGAG
+AMP,3238911000001106,Atrovent 40microgram Aerocaps with Aerohaler,0301020I0BBAHAH
+AMP,3235911000001100,Atrovent 40microgram Aerocaps,0301020I0BBAIAI
+AMP,7389911000001105,Atrovent 20micrograms/dose inhaler CFC free,0301020I0BBAJAN
+AMP,3227211000001103,Ipratropium 250micrograms/1ml nebuliser liquid Steri-Neb unit dose vials,0301020I0BEAAAF
+AMP,3223111000001101,Ipratropium 500micrograms/2ml nebuliser liquid Steri-Neb unit dose vials,0301020I0BEABAC
+AMP,3225811000001107,Tropiovent 250micrograms/1ml nebuliser liquid unit dose Steripoule vials,0301020I0BFAAAF
+AMP,3221911000001104,Tropiovent 500micrograms/2ml nebuliser liquid unit dose Steripoule vials,0301020I0BFABAC
+AMP,3227011000001108,Respontin 250micrograms/1ml Nebules,0301020I0BGAAAF
+AMP,3222911000001105,Respontin 500micrograms/2ml Nebules,0301020I0BGABAC
+AMP,9039611000001103,Ipratropium 250micrograms/1ml nebuliser liquid unit dose Steripoule vials,0301020I0BHAAAF
+AMP,9039811000001104,Ipratropium 500micrograms/2ml nebuliser liquid unit dose Steripoule vials,0301020I0BHABAC
+AMP,34954811000001109,Inhalvent 20micrograms/dose inhaler,0301020I0BIAAAN
+AMP,37842911000001109,Ipravent 20micrograms/dose inhaler CFC free,0301020I0BJAAAN
+VMP,36022911000001105,Oxitropium bromide 100micrograms/dose inhaler,0301020P0AAAAAA
+VMP,36022811000001100,Oxitropium bromide 100micrograms/dose breath actuated inhaler,0301020P0AAABAB
+AMP,2944211000001101,Oxivent 100micrograms/dose inhaler,0301020P0BBAAAA
+AMP,2947411000001107,Oxivent 100micrograms/dose Autohaler,0301020P0BBABAB
+VMP,9479011000001103,Tiotropium bromide 18microgram inhalation powder capsules with device,0301020Q0AAAAAA
+VMP,9478911000001107,Tiotropium bromide 18microgram inhalation powder capsules,0301020Q0AAABAB
+VMP,12197411000001102,Tiotropium bromide 2.5micrograms/dose solution for inhalation cartridge with device CFC free,0301020Q0AAACAC
+VMP,33596311000001107,Tiotropium bromide 10microgram inhalation powder capsules with device,0301020Q0AAADAD
+VMP,37692711000001105,Tiotropium bromide 2.5micrograms/dose inhalation solution cartridge CFC free,0301020Q0AAAEAE
+AMP,3378211000001106,Spiriva 18microgram inhalation powder capsules with HandiHaler,0301020Q0BBAAAA
+AMP,3380011000001106,Spiriva 18microgram inhalation powder capsules,0301020Q0BBABAB
+AMP,12146911000001103,Spiriva Respimat 2.5micrograms/dose inhalation solution cartridge with device,0301020Q0BBACAC
+AMP,37677711000001102,Spiriva Respimat 2.5micrograms/dose inhalation solution refill cartridge,0301020Q0BBADAE
+AMP,33594911000001100,Braltus 10microgram inhalation powder capsules with Zonda inhaler,0301020Q0BCAAAD
+AMP,39666311000001103,Acopair 18microgram inhalation powder capsules with NeumoHaler,0301020Q0BDAAAA
+AMP,39605711000001106,Tiogiva 18microgram inhalation powder capsules with device,0301020Q0BEAAAA
+AMP,39606211000001105,Tiogiva 18microgram inhalation powder capsules,0301020Q0BEABAB
+VMP,38893611000001108,Aclidinium bromide 375micrograms/dose dry powder inhaler,0301020R0AAAAAA
+AMP,20985511000001101,Eklira 322micrograms/dose Genuair,0301020R0BBAAAA
+VMP,21496211000001102,Glycopyrronium bromide 55microgram inhalation powder capsules with device,0301020S0AAAAAA
+AMP,21495411000001107,Seebri Breezhaler 44microgram inhalation powder capsules with device,0301020S0BBAAAA
+VMP,27890611000001109,Umeclidinium bromide 65micrograms/dose dry powder inhaler,0301020T0AAAAAA
+AMP,27567911000001101,Incruse Ellipta 55micrograms/dose dry powder inhaler,0301020T0BBAAAA
+VMP,35900711000001109,Aminophylline 250mg/10ml solution for injection pre-filled syringes,0301030B0AAA9A9
+VMP,35900511000001104,Aminophylline 250mg/10ml solution for injection ampoules,0301030B0AAABAB
+AMP,585311000001107,Aminophylline 250mg/10ml solution for injection ampoules,0301030B0AAABAB
+AMP,10681511000001104,Aminophylline 250mg/10ml solution for injection ampoules,0301030B0AAABAB
+AMP,870011000001105,Aminophylline 250mg/10ml solution for injection ampoules,0301030B0AAABAB
+AMP,205711000001102,Aminophylline 250mg/10ml solution for injection ampoules,0301030B0AAABAB
+AMP,5081211000001104,Aminophylline 250mg/10ml solution for injection ampoules,0301030B0AAABAB
+VMP,14054211000001103,Aminophylline 360mg suppositories,0301030B0AAAMAM
+AMP,14020611000001107,Aminophylline 360mg suppositories,0301030B0AAAMAM
+VMP,320357005,Aminophylline 100mg tablets,0301030B0AAANAN
+AMP,801111000001108,Aminophylline 100mg tablets,0301030B0AAANAN
+VMP,35900411000001103,Aminophylline 225mg modified-release tablets,0301030B0AAARAR
+AMP,10062711000001109,Aminophylline 225mg modified-release tablets,0301030B0AAARAR
+AMP,4707111000001106,Aminophylline 250mg/10ml solution for injection Minijet pre-filled syringes,0301030B0BCAAA9
+AMP,3291311000001106,Amnivent-225 SR tablets,0301030B0BDAAAR
+AMP,3292211000001105,Norphyllin SR 225mg tablets,0301030B0BFABAR
+VMP,14608611000001106,Aminophylline hydrate 350mg modified-release tablets,0301030C0AAACAC
+VMP,14608511000001107,Aminophylline hydrate 100mg modified-release tablets,0301030C0AAADAD
+VMP,13663211000001104,Aminophylline hydrate 225mg modified-release tablets,0301030C0AAAEAE
+AMP,3287411000001108,Phyllocontin Continus 225mg tablets,0301030C0BCAAAE
+AMP,550511000001101,Phyllocontin Forte Continus 350mg tablets,0301030C0BCABAC
+AMP,515811000001101,Phyllocontin Paediatric Continus 100mg tablets,0301030C0BCACAD
+VMP,15775211000001109,Theophylline 300mg suppositories,0301030S0AAA3A3
+AMP,15704211000001100,Theophylline 300mg suppositories,0301030S0AAA3A3
+VMP,35918211000001102,Theophylline 60mg modified-release capsules,0301030S0AAABAB
+VMP,35957711000001104,Theophylline 125mg modified-release capsules,0301030S0AAACAC
+VMP,35917911000001105,Theophylline 250mg modified-release capsules,0301030S0AAADAD
+VMP,320415003,Theophylline 60mg/5ml oral solution,0301030S0AAAGAG
+VMP,14797111000001107,Theophylline 60mg/5ml oral suspension,0301030S0AAAGAG
+AMP,14789811000001107,Theophylline 60mg/5ml oral solution,0301030S0AAAGAG
+AMP,14790111000001106,Theophylline 60mg/5ml oral suspension,0301030S0AAAGAG
+VMP,8725311000001108,Theophylline 10mg/5ml oral solution,0301030S0AAAHAH
+VMP,8725211000001100,Theophylline 10mg/5ml oral suspension,0301030S0AAAHAH
+AMP,8709611000001109,Theophylline 10mg/5ml oral solution,0301030S0AAAHAH
+AMP,8710111000001109,Theophylline 10mg/5ml oral suspension,0301030S0AAAHAH
+VMP,320414004,Theophylline 125mg tablets,0301030S0AAAJAJ
+VMP,35917611000001104,Theophylline 175mg modified-release tablets,0301030S0AAALAL
+VMP,35917711000001108,Theophylline 200mg modified-release tablets,0301030S0AAAMAM
+VMP,35917811000001100,Theophylline 250mg modified-release tablets,0301030S0AAANAN
+VMP,35918011000001107,Theophylline 300mg modified-release tablets,0301030S0AAAPAP
+VMP,35918111000001108,Theophylline 400mg modified-release tablets,0301030S0AAARAR
+VMP,23676311000001105,Theophylline 125mg/5ml oral suspension,0301030S0AABBBB
+AMP,23671111000001104,Theophylline 125mg/5ml oral suspension,0301030S0AABBBB
+VMP,15227511000001109,Theophylline 250mg/5ml oral solution,0301030S0AABEBE
+VMP,15227611000001108,Theophylline 250mg/5ml oral suspension,0301030S0AABEBE
+AMP,15169611000001109,Theophylline 250mg/5ml oral solution,0301030S0AABEBE
+AMP,15169911000001103,Theophylline 250mg/5ml oral suspension,0301030S0AABEBE
+VMP,16075511000001107,Theophylline 120mg/5ml oral solution,0301030S0AABFBF
+VMP,16075611000001106,Theophylline 120mg/5ml oral suspension,0301030S0AABFBF
+AMP,16043311000001103,Theophylline 120mg/5ml oral solution,0301030S0AABFBF
+AMP,16043911000001102,Theophylline 120mg/5ml oral suspension,0301030S0AABFBF
+VMP,16075711000001102,Theophylline 175mg/5ml oral solution,0301030S0AABGBG
+VMP,16075811000001105,Theophylline 175mg/5ml oral suspension,0301030S0AABGBG
+AMP,16045011000001100,Theophylline 175mg/5ml oral solution,0301030S0AABGBG
+AMP,16044511000001107,Theophylline 175mg/5ml oral suspension,0301030S0AABGBG
+VMP,24535311000001108,Theophylline 5mg/5ml oral solution,0301030S0AABHBH
+AMP,24524711000001106,Theophylline 5mg/5ml oral solution,0301030S0AABHBH
+VMP,34378911000001102,Theophylline 75mg/5ml oral suspension,0301030S0AABJBJ
+AMP,34347611000001108,Theophylline 75mg/5ml oral suspension,0301030S0AABJBJ
+VMP,24595311000001101,Theophylline 50mg/5ml oral solution,0301030S0AABKBK
+AMP,24588211000001101,Theophylline 50mg/5ml oral solution,0301030S0AABKBK
+VMP,35101211000001105,Theophylline 50mg/5ml oral suspension,0301030S0AABLBL
+AMP,35050111000001109,Theophylline 50mg/5ml oral suspension,0301030S0AABLBL
+AMP,468311000001108,Nuelin 125mg tablets,0301030S0BDAAAJ
+AMP,436811000001108,Nuelin 60mg/5ml liquid,0301030S0BDABAG
+AMP,184211000001107,Nuelin SA 175mg tablets,0301030S0BDAEAL
+AMP,456911000001102,Nuelin SA 250 tablets,0301030S0BDAFAN
+AMP,792111000001103,Slo-Phyllin 60mg capsules,0301030S0BHAAAB
+AMP,176011000001103,Slo-Phyllin 125mg capsules,0301030S0BHABAC
+AMP,543711000001100,Slo-Phyllin 250mg capsules,0301030S0BHACAD
+AMP,296711000001107,Theo-Dur 200mg tablets,0301030S0BIAAAM
+AMP,727211000001102,Theo-Dur 300mg tablets,0301030S0BIABAP
+AMP,2892211000001108,Uniphyllin Continus 400mg tablets,0301030S0BKAAAR
+AMP,454311000001109,Uniphyllin Continus 200mg tablets,0301030S0BKABAM
+AMP,2891811000001100,Uniphyllin Continus 300mg tablets,0301030S0BKACAP
+VMP,39343611000001104,Glycopyrronium 7.2micrograms/dose / Formoterol 5micrograms/dose inhaler CFC free,0301040AAAAAAAA
+AMP,39329111000001107,Bevespi Aerosphere 7.2micrograms/dose / 5micrograms/dose pressurised inhaler,0301040AABBAAAA
+VMP,320471001,Theophylline 120mg / Ephedrine sulfate 15mg tablets,0301040J0AAAAAA
+AMP,3844211000001102,Franol Plus tablets,0301040J0BBAAAA
+VMP,320470000,Theophylline 120mg / Ephedrine hydrochloride 11mg tablets,0301040K0AAAGAG
+AMP,3715711000001101,Franol tablets,0301040K0BFABAG
+VMP,36066611000001106,Fenoterol 100micrograms/dose / Ipratropium 40micrograms/dose inhaler,0301040M0AAAAAA
+VMP,39711511000001107,Fenoterol 1.25mg/4ml / Ipratropium 500micrograms/4ml nebuliser liquid unit dose vials,0301040M0AAABAB
+VMP,36066711000001102,Fenoterol 100micrograms/dose / Ipratropium bromide 40micrograms/dose breath actuated inhaler,0301040M0AAACAC
+VMP,28422511000001101,Fenoterol 50micrograms/dose / Ipratropium bromide 20micrograms/dose inhaler CFC free,0301040M0AAADAD
+AMP,2923111000001107,Duovent inhaler,0301040M0BBAAAA
+AMP,4192411000001109,Duovent UDVs nebuliser liquid 4ml,0301040M0BBABAB
+AMP,2964011000001104,Duovent Autohaler,0301040M0BBACAC
+AMP,28410811000001107,Berodual N inhaler,0301040M0BCABAD
+VMP,35936311000001102,Salbutamol 100micrograms/dose / Ipratropium 20micrograms/dose inhaler,0301040R0AAAAAA
+VMP,39710511000001100,Salbutamol 2.5mg/2.5ml / Ipratropium bromide 500micrograms/2.5ml nebuliser liquid unit dose vials,0301040R0AAABAB
+VMP,15534911000001100,Salbutamol 2.5mg/2.5ml / Ipratropium bromide 500micrograms/2.5ml nebuliser liquid ampoules,0301040R0AAACAC
+AMP,3348611000001107,Combivent inhaler,0301040R0BBAAAA
+AMP,3406011000001104,Combivent nebuliser liquid 2.5ml UDVs,0301040R0BBABAB
+AMP,10927511000001104,Ipramol nebuliser solution 2.5ml Steri-Neb unit dose vials,0301040R0BCAAAB
+AMP,15522411000001103,Salipraneb 0.5mg/2.5mg nebuliser solution 2.5ml ampoules,0301040R0BDAAAC
+AMP,32898611000001109,Salipraneb 0.5mg/2.5mg nebuliser solution 2.5ml ampoules,0301040R0BEAAAC
+AMP,38617811000001107,Combiprasal 0.5mg/2.5mg nebuliser solution 2.5ml unit dose vials,0301040R0BFAAAB
+VMP,28365011000001100,Aclidinium bromide 396micrograms/dose / Formoterol 11.8micrograms/dose dry powder inhaler,0301040V0AAAAAA
+AMP,28357211000001106,Duaklir 340micrograms/dose / 12micrograms/dose Genuair,0301040V0BBAAAA
+VMP,24645511000001105,Umeclidinium bromide 65micrograms/dose / Vilanterol 22micrograms/dose dry powder inhaler,0301040W0AAAAAA
+AMP,32364511000001104,Umeclidinium bromide 65micrograms/dose / Vilanterol 22micrograms/dose dry powder inhaler,0301040W0AAAAAA
+AMP,32629811000001101,Umeclidinium bromide 65micrograms/dose / Vilanterol 22micrograms/dose dry powder inhaler,0301040W0AAAAAA
+AMP,24644611000001108,Anoro Ellipta 55micrograms/dose / 22micrograms/dose dry powder inhaler,0301040W0BBAAAA
+VMP,29987211000001108,Tiotropium bromide 2.5micrograms/dose / Olodaterol 2.5micrograms/dose solution for inhalation cartridge with device CFC free,0301040X0AAAAAA
+VMP,37692511000001100,Tiotropium bromide 2.5micrograms/dose / Olodaterol 2.5micrograms/dose inhalation solution cartridge CFC free,0301040X0AAABAB
+AMP,29971311000001100,Spiolto Respimat 2.5micrograms/dose / 2.5micrograms/dose inhalation solution cartridge with device,0301040X0BBAAAA
+AMP,37678011000001103,Spiolto Respimat 2.5micrograms/dose / 2.5micrograms/dose inhalation solution refill cartridge,0301040X0BBABAB
+AMP,37540311000001105,Yanimo Respimat 2.5micrograms/dose / 2.5micrograms/dose inhalation solution cartridge with device,0301040X0BCAAAA
+VMP,28049611000001104,Indacaterol 85micrograms/dose / Glycopyrronium bromide 54micrograms/dose inhalation powder capsules with device,0301040Y0AAAAAA
+AMP,28007211000001102,Ultibro Breezhaler 85microgram/43microgram inhalation powder capsules with device,0301040Y0BBAAAA
