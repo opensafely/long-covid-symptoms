@@ -1018,7 +1018,6 @@ actions:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_symptoms_cases.csv
 
-
   get_medicines_cases:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_cases
     needs: [combine_matched_CASESstps]
@@ -1070,7 +1069,7 @@ actions:
       
   
 
-# 8g. ADD DIAGNOSES, REMAINING COVARIATES AND GPCOUNT TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
+# 8g. ADD DIAGNOSES, REMAINING COVARIATES TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
   add_allVars_historical_controls:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_historical 
     needs: [combine_matched_historical_COMPARATORstps]
@@ -1079,14 +1078,13 @@ actions:
         matched_controls_contemporary_wVars: output/input_complete_controls_historical.csv
 
 
-# 8h. ADD SYMPTOMS AND MEDICINES TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
+# 8h. ADD SYMPTOMS, MEDICINES AND CONSULTATIONS TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
   get_symptoms_historical_controls:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_historical 
     needs: [combine_matched_historical_COMPARATORstps]
     outputs:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_symptoms_controls_historical.csv
-
 
   get_medicines_historical_controls:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_controls_historical 
@@ -1095,6 +1093,12 @@ actions:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_medicines_controls_historical.csv
 
+  get_gpconsultations_historical_controls:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_gpconsultations_controls_historical 
+    needs: [combine_matched_historical_COMPARATORstps]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_gpconsultations_controls_historical.csv
 
 
 # 9. CREATE CONTEMPORARY ANALYSIS FILE (ALSO COMBINES CASES AND CONTROLS)

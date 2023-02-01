@@ -39,12 +39,39 @@ study = StudyDefinition(
         returning="case_index_date", 
         returning_type="date"), 
 
+
+
     #NUMBER OF GP CONSULTATIONS IN THE PREVIOUS YEAR
-    gp_count=patients.with_gp_consultations(
+    gp_count_prevYear=patients.with_gp_consultations(
         between=["case_index_date - 1 year", "case_index_date"],
         returning="number_of_matches_in_period",
         return_expectations={"int": {"distribution": "normal", "mean": 6, "stddev": 3},"incidence": 0.6,},
     ),
+
+    #NUMBER OF GP CONSULTATIONS (AS AN OUTCOME)
+    total_gp_count=patients.with_gp_consultations(
+        between=["case_index_date", "2022-01-31"],
+        returning="number_of_matches_in_period",
+        return_expectations={"int": {"distribution": "normal", "mean": 6, "stddev": 3},"incidence": 0.6,},
+    ),  
+
+    t1_gp_count=patients.with_gp_consultations(
+        between=["case_index_date + 28 days", "case_index_date + 84 days"],
+        returning="number_of_matches_in_period",
+        return_expectations={"int": {"distribution": "normal", "mean": 6, "stddev": 3},"incidence": 0.6,},
+    ), 
+
+    t2_gp_count=patients.with_gp_consultations(
+        between=["case_index_date + 85 days", "case_index_date + 180 days"],
+        returning="number_of_matches_in_period",
+        return_expectations={"int": {"distribution": "normal", "mean": 6, "stddev": 3},"incidence": 0.6,},
+    ),      
+
+    t3_gp_count=patients.with_gp_consultations(
+        between=["case_index_date + 181 days", "2022-01-31"],
+        returning="number_of_matches_in_period",
+        return_expectations={"int": {"distribution": "normal", "mean": 6, "stddev": 3},"incidence": 0.6,},
+    ), 
 
 
 ) 
