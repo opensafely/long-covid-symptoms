@@ -105,6 +105,19 @@ tempfile control_symptoms
 save `control_symptoms'
 
 
+*(1c)========Get the medicines information for cases and controls============
+capture noisily import delimited ./output/input_medicines_cases.csv, clear
+count
+drop case_index_date
+tempfile case_medicines
+save `case_medicines'
+capture noisily import delimited ./output/input_medicines_controls_`dataset'.csv, clear
+count
+drop case_index_date
+tempfile control_medicines
+save `control_medicines'
+
+
 *(2)=========Add the case and comparator information from above to the files with the rest of the information============
 *import matched cases with variables and merge with match variables - note that the "complete" cases file is applicable to both current- and historical- matched cases
 capture noisily import delimited ./output/input_complete_covid_communitycases.csv, clear
@@ -121,6 +134,11 @@ drop _merge
 merge 1:1 patient_id using `case_symptoms'
 keep if _merge==3
 drop _merge
+*add medicines
+merge 1:1 patient_id using `case_medicines'
+keep if _merge==3
+drop _merge
+
 tempfile cases_with_vars_and_match_info
 save `cases_with_vars_and_match_info', replace
 di "***********************FLOWCHART 2. NUMBER OF MATCHED CASES AND MATCHED COMPARATORS BEFORE DROPPING CONTROLS INELIGIBLE DUE TO HAS_FOLLOW_UP AND DEATH_DATE VARS********************:"
@@ -142,6 +160,12 @@ if "`dataset'"=="contemporary" {
 }
 *add symptoms
 merge 1:1 patient_id using `control_symptoms'
+keep if _merge==3
+drop _merge
+tempfile comp_with_vars_and_match_info
+save `comp_with_vars_and_match_info', replace
+*add medicines
+merge 1:1 patient_id using `control_medicines'
 keep if _merge==3
 drop _merge
 tempfile comp_with_vars_and_match_info
@@ -320,14 +344,14 @@ label values eth16 eth16
 safetab eth16,m
 
 
-*(a2)gp_count - create a categorical variable that
+*(a2)gp_count - create a categorical variable for gp consultations in previous year (i.e. covariate for adjustment)
 *gp_count categorised as 0, 1-5, 6+
-egen gpCountCat=cut(gp_count), at (0, 1, 6, 100000)
-recode gpCountCat 0=0 1=1 6=2
-label define gpCountCat 0 "0" 1 "1-5" 2 "6+"
-label values gpCountCat gpCountCat
-safetab gpCountCat, miss
-la var gpCountCat "Categorised number of GP appts in previous year"
+egen gpCountPrevYearCat=cut(gp_count_prevYear), at (0, 1, 6, 100000)
+recode gpCountPrevYearCat 0=0 1=1 6=2
+label define gpCountPrevYearCat 0 "0" 1 "1-5" 2 "6+"
+label values gpCountPrevYearCat gpCountPrevYearCat
+safetab gpCountPrevYearCat, miss
+la var gpCountPrevYearCat "Categorised number of GP appts in previous year"
 
 
 *(b)===STP====
@@ -408,8 +432,8 @@ label var rural_urbanBroad "Rural-Urban"
 
 
 
-*(e)===Pre-existing clinical comorbidities===
-*number of broad diagnostic categories containing records in the one year before COVID-19
+*(e)===Pre-existing clinical comorbidities and precribing in the previous year===
+*number of broad diagnostic categories containing records in the one year before COVID-19 (or matched date)
 order patient_id case_index_date $comorbs
 egen numPreExistingComorbs=rowtotal(comorb_infection_or_parasite-comorb_injury_poisoning)
 *have a look at this
@@ -421,6 +445,20 @@ label define preExistComorbCat 0 "0" 1 "1" 2 "2+"
 label values preExistComorbCat preExistComorbCat
 safetab preExistComorbCat, miss
 la var preExistComorbCat "Number of comorbidities diagnosed in prev yr"
+
+*number of distinct bnf group prescriptions in the one year before COVID-19 (or matched date)
+order patient_id case_index_date $prevMedicines
+egen numPrescTypesPrevYear=rowtotal(prev_bnf_gastro_broad-prev_bnf_anxiolytic_spec)
+*have a look at this
+sum numPrescTypesPrevYear, detail
+la var numPrescTypesPrevYear "Number of types of distinct BNF groups of drugs prescribed in prev year"
+*for now create a category with 0, 1, 2+
+egen numPrescTypesPrevYearCat=cut(numPrescTypesPrevYear), at (0, 1, 2, 200) 
+label define numPrescTypesPrevYearCat 0 "0" 1 "1" 2 "2+"
+label values numPrescTypesPrevYearCat numPrescTypesPrevYearCat
+safetab numPrescTypesPrevYearCat, miss
+la var numPrescTypesPrevYearCat "Number of ypes of distinct BNF groups of drugs prescribed in prev year"
+
 
 
 
@@ -444,13 +482,13 @@ foreach var of varlist $diag $symp {
 	replace tEver_`var'=1 if `var'!=.
 } 
 */
-foreach var of varlist $diag $symp {
+foreach var of varlist $diag $symp $medicines {
 	generate tEver_`var'=0
 	replace tEver_`var'=1 if t1_`var'==1 | t2_`var'==1 |  t3_`var'==1
 } 
 
 *create variable names
-foreach var of varlist $diag $symp {
+foreach var of varlist $diag $symp $medicines {
 	label variable tEver_`var' "tEver_`var'"
 	label variable t1_`var' "t1_`var'"
 	label variable t2_`var' "t2_`var'"
