@@ -70,6 +70,33 @@ opensafely/symptoms-tinnitus/4be35202
 opensafely/symptoms-earache/32d3decd
 opensafely/symptoms-loss-of-taste-or-smell/19c46b98
 opensafely/symptoms-hair-loss/042e6be8
+user/kate-mansfield/bnf-1-gastro-intestinal-system-dmd/157adb87
+user/kate-mansfield/bnf-2-cardiovascular-system-dmd/7c6b6851 
+user/kate-mansfield/bnf-3-respiratory-system-dmd/635bf51c
+user/kate-mansfield/bnf-4-central-nervous-system-dmd/4a4c81e7
+user/kate-mansfield/bnf-5-infections-dmd/313d0eb2
+user/kate-mansfield/bnf-6-endocrine-system-dmd/182d9b7d
+user/kate-mansfield/bnf-7-obstetrics-gynaecology-and-urinary-tract-disorders-dmd/7f1e2847
+user/kate-mansfield/bnf-8-malignant-disease-and-immunosuppression-dmd/660eb512
+user/kate-mansfield/bnf-9-nutrition-and-blood-dmd/4cff41dd
+user/kate-mansfield/bnf-10-musculoskeletal-and-joint-diseases-dmd/33efcea8
+user/kate-mansfield/bnf-11-eye-dmd/1ae05b73
+user/kate-mansfield/bnf-12-ear-nose-and-oropharynx-dmd/01d0e83e
+user/kate-mansfield/bnf-13-skin-dmd/68c17508
+user/kate-mansfield/bnf-subcat-0301-bronchodilators-dmd/4fb201d3
+user/kate-mansfield/bnf-subcat-0309-cough-preparations-dmd/36a28e9e
+user/kate-mansfield/bnf-subcat-0203-anti-arrhythmic-drugs-dmd/1d931b69
+user/kate-mansfield/bnf-subcat-0407-analgesics-dmd/0483a834
+user/kate-mansfield/bnf-subcat-040101-hypnotics-dmd/6b7434fe
+user/kate-mansfield/bnf-subcat-0406-drugs-used-in-nausea-and-vertigo-dmd/5264c1c9
+user/kate-mansfield/bnf-subcat-0104-acute-diarrhoea-dmd/39554e94
+user/kate-mansfield/bnf-subcat-100101-non-steroidal-anti-inflammatory-drugs-dmd/2045db5f
+user/kate-mansfield/bnf-subcat-100302-rubefacients-topical-nsaids-capsaicin-and-poultices-dmd/0736682a
+user/kate-mansfield/bnf-subcat-0403-antidepressant-drugs-dmd/6e26f4f4
+user/kate-mansfield/bnf-subcat-040102-anxiolytics-dmd/551781bf
+
+
+
 
 
 

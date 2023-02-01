@@ -226,6 +226,200 @@ def generate_covariates_complete(index_date_variable):
     ), 
 
 
+
+
+    # MEDICATIONS (PRESCRIPTIONS FOR ANY OF THE BROAD MEDICATION CATEGORIES IN THE PREVIOUS YEAR)
+    bnf_gastro_broad=patients.with_these_medications(
+        gastro_broad_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_cardio_broad=patients.with_these_medications(
+        cardio_broad_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_respiratory_broad=patients.with_these_medications(
+        respiratory_broad_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_cns_broad=patients.with_these_medications(
+        cns_broad_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_infect_broad=patients.with_these_medications(
+        infections_broad_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_endo_broad=patients.with_these_medications(
+        endocrine_broad_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_obstet_broad=patients.with_these_medications(
+        obstetrics_broad_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_malign_broad=patients.with_these_medications(
+        malignancies_broad_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_nutr_broad=patients.with_these_medications(
+        nutrition_blood_broad_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_musculo_broad=patients.with_these_medications(
+        musculo_broad_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_eye_broad=patients.with_these_medications(
+        eye_broad_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_ear_broad=patients.with_these_medications(
+        ear_broad_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_skin_broad=patients.with_these_medications(
+        skin_broad_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_broncho_spec=patients.with_these_medications(
+        bronchodil_spec_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_cough_spec=patients.with_these_medications(
+        cough_spec_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_antiarrhth_spec=patients.with_these_medications(
+        antiarrhth_spec_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_analgesics_spec=patients.with_these_medications(
+        analgesics_spec_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_hypnotics_spec=patients.with_these_medications(
+        hypnotics_spec_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_nausea_spec=patients.with_these_medications(
+        nausea_spec_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_diarrhoea_spec=patients.with_these_medications(
+        diarrhoea_spec_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_nsaids_spec=patients.with_these_medications(
+        nsaids_spec_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_topicalpain_spec=patients.with_these_medications(
+        topicalpain_spec_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_antidepr_spec=patients.with_these_medications(
+        antidepr_spec_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
+
+    bnf_anxiolytic_spec=patients.with_these_medications(
+        anxiolytic_spec_bnf_codes,
+        between=[f"{index_date_variable} - 1 year", f"{index_date_variable}"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),
+
     
     )
     return covariates_complete

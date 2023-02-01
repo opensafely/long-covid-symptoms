@@ -204,17 +204,6 @@ hypertension_from_hhclassifAndAnna = codelist_from_csv(
 
 
 # SYMPTOM OUTCOME VARIABLES
-#First approved set (25 Nov) i.e.:
-#opensafely/symptoms-cough/72d8934b
-#opensafely/symptoms-chest-tightness/40b9ace1
-#opensafely/symptoms-palpitations/27aa39ac
-#opensafely/symptoms-fatigue/0e9ac677
-#opensafely/symptoms-fever/758b5341
-#opensafely/symptoms-cognitive-impairment/7af0d32d
-#opensafely/symptoms-sleep-disturbance/59c92016
-#opensafely/symptoms-peripheral-neuropathy/09fbfa1a
-#opensafely/symptoms-dizzy/5c7be00c
-#opensafely/symptoms-mobility-impairment/62a81387
 
 breathless_symptom_codes = codelist_from_csv(
     "codelists/opensafely-symptoms-breathlessness-new.csv",
@@ -347,6 +336,158 @@ hairloss_symptom_codes = codelist_from_csv(
     system="snomed",
     column="code",
 )
+
+
+
+
+# MEDICINES OUTCOME VARIABLES
+
+gastro_broad_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-1-gastro-intestinal-system-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+cardio_broad_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-2-cardiovascular-system-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+respiratory_broad_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-3-respiratory-system-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+cns_broad_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-4-central-nervous-system-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+infections_broad_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-5-infections-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+endocrine_broad_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-6-endocrine-system-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+obstetrics_broad_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-7-obstetrics-gynaecology-and-urinary-tract-disorders-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+malignancies_broad_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-8-malignant-disease-and-immunosuppression-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+nutrition_blood_broad_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-9-nutrition-and-blood-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+musculo_broad_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-10-musculoskeletal-and-joint-diseases-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+eye_broad_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-11-eye-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+ear_broad_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-12-ear-nose-and-oropharynx-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+skin_broad_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-13-skin-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+bronchodil_spec_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-subcat-0301-bronchodilators-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+cough_spec_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-subcat-0309-cough-preparations-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+antiarrhth_spec_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-subcat-0203-anti-arrhythmic-drugs-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+analgesics_spec_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-subcat-0407-analgesics-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+hypnotics_spec_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-subcat-040101-hypnotics-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+nausea_spec_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-subcat-0406-drugs-used-in-nausea-and-vertigo-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+diarrhoea_spec_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-subcat-0104-acute-diarrhoea-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+nsaids_spec_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-subcat-100101-non-steroidal-anti-inflammatory-drugs-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+topicalpain_spec_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-subcat-100302-rubefacients-topical-nsaids-capsaicin-and-poultices-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+antidepr_spec_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-subcat-0403-antidepressant-drugs-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+anxiolytic_spec_bnf_codes = codelist_from_csv(
+    "codelists/user-kate-mansfield-bnf-subcat-040102-anxiolytics-dmd.csv",
+    system="snomed",
+    column="dmd_id",
+)
+
+
+
 
 
 # COVARIATES

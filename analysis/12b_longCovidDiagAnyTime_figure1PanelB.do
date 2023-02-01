@@ -56,7 +56,7 @@ prog define outputORsforOutcome
 	local ub_crude = r(ub)
 	*depr, ethnicity and rural/urban adjusted
 	display "`outcome' additionally adjusted for deprivation, ethnicity and rural/urban"
-	capture noisily clogit `outcome' i.expStatus i.imd i.ethnicity i._rural_urban, strata(set_id) or
+	capture noisily clogit `outcome' i.expStatus i.imd i.ethnicity i.rural_urban, strata(set_id) or
 	capture noisily lincom 1.expStatus, or
 	local hr_deprEth_adj = r(estimate)
 	local lb_deprEth_adj = r(lb)
