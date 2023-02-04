@@ -75,21 +75,19 @@ save `comp_match_info', replace
 *NUMBER OF MATCHED CONTROLS BEFORE DROPPING THOSE DUE TO FOLLOW-UP ISSUES RELATED TO CASE_INDEX_DATE (SEE BELOW)
 safecount
 
-*(1a)========Get the gp consultation count variable for cases and controls - only need to do this for the contemporary controls as gp_count was included as a covariate in the historical controls============
+*(1a)========Get the gp consultation count variables for cases and controls============
 capture noisily import delimited ./output/input_gpconsultations_cases.csv, clear
 safecount
-keep patient_id gp_count
+keep patient_id gp_count_prevyear total_gp_count t1_gp_count t2_gp_count t3_gp_count
 tempfile case_gp_count
 save `case_gp_count'
 
-*the following only needs done for the contemporary controls as the historical controls already have the gp_count variable
-if "`dataset'"=="contemporary" {
-	capture noisily import delimited ./output/input_gpconsultations_controls_`dataset'.csv, clear
-	count
-	keep patient_id gp_count
-	tempfile control_gp_count
-	save `control_gp_count'
-}
+capture noisily import delimited ./output/input_gpconsultations_controls_`dataset'.csv, clear
+count
+keep patient_id gp_count gp_count_prevyear total_gp_count t1_gp_count t2_gp_count t3_gp_count
+tempfile control_gp_count
+save `control_gp_count'
+
 
 
 *(1b)========Get the symptom information for cases and controls============
@@ -152,12 +150,9 @@ merge 1:1 patient_id using `comp_match_info'
 keep if _merge==3
 drop _merge
 *add gp_count info
-*the following only needs done for the contemporary controls as the historical controls already have the gp_count variable
-if "`dataset'"=="contemporary" {
-	merge 1:1 patient_id using `control_gp_count'
-	keep if _merge==3
-	drop _merge
-}
+merge 1:1 patient_id using `control_gp_count'
+keep if _merge==3
+drop _merge
 *add symptoms
 merge 1:1 patient_id using `control_symptoms'
 keep if _merge==3
@@ -344,14 +339,51 @@ label values eth16 eth16
 safetab eth16,m
 
 
-*(a2)gp_count - create a categorical variable for gp consultations in previous year (i.e. covariate for adjustment)
-*gp_count categorised as 0, 1-5, 6+
-egen gpCountPrevYearCat=cut(gp_count_prevYear), at (0, 1, 6, 100000)
+*(a2)GP consultation covariates
+*previous gp_count categorised as 0, 1-5, 6+
+egen gpCountPrevYearCat=cut(gp_count_prevyear), at (0, 1, 6, 100000)
 recode gpCountPrevYearCat 0=0 1=1 6=2
 label define gpCountPrevYearCat 0 "0" 1 "1-5" 2 "6+"
 label values gpCountPrevYearCat gpCountPrevYearCat
 safetab gpCountPrevYearCat, miss
 la var gpCountPrevYearCat "Categorised number of GP appts in previous year"
+*label gp count outcome variables
+la var total_gp_count "Num of gp conslts during all post-COVID follow-up"
+la var t1_gp_count "Num of gp conslts during 4-12 wk post-COVID"
+la var t2_gp_count "Num of gp conslts during 12 wk - 6 mo post-COVID"
+la var t3_gp_count "Num of gp conslts during 6 mo - 1 yr post-COVID"
+*create gp count outcome categorical variables
+*overall
+egen total_gp_countCat=cut(total_gp_count), at (0, 1, 6, 100000)
+recode total_gp_countCat 0=0 1=1 6=2
+label define total_gp_countCat 0 "0" 1 "1-5" 2 "6+"
+label values total_gp_countCat total_gp_countCat
+safetab total_gp_countCat, miss
+la var total_gp_countCat "Num of gp conslts during all post-COVID follow-up"
+*time period 1
+egen t1_gp_countCat=cut(t1_gp_count), at (0, 1, 4, 100000)
+recode t1_gp_countCat 0=0 1=1 4=2
+label define t1_gp_countCat 0 "0" 1 "1-3" 2 "4+"
+label values t1_gp_countCat t1_gp_countCat
+safetab t1_gp_countCat, miss
+la var t1_gp_countCat "Num of gp conslts during 12 wk - 6 mo post-COVID"
+*time period 2
+egen t2_gp_countCat=cut(t1_gp_count), at (0, 1, 4, 100000)
+recode t2_gp_countCat 0=0 1=1 4=2
+label define t2_gp_countCat 0 "0" 1 "1-3" 2 "4+"
+label values t2_gp_countCat t1_gp_countCat
+safetab t2_gp_countCat, miss
+la var t2_gp_countCat "Num of gp conslts during 6 mo - 1 yr post-COVID"
+*time period 2
+egen t3_gp_countCat=cut(t1_gp_count), at (0, 1, 4, 100000)
+recode t3_gp_countCat 0=0 1=1 4=2
+label define t3_gp_countCat 0 "0" 1 "1-3" 2 "4+"
+label values t3_gp_countCat t1_gp_countCat
+safetab t3_gp_countCat, miss
+la var t3_gp_countCat "Num of gp conslts during 6 mo - 1 yr post-COVID"
+
+
+
 
 
 *(b)===STP====

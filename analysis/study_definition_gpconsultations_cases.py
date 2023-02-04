@@ -43,7 +43,7 @@ study = StudyDefinition(
 
 
     #NUMBER OF GP CONSULTATIONS IN THE PREVIOUS YEAR (AS A COVARIATE)
-    gp_count_prevYear=patients.with_gp_consultations(
+    gp_count_prevyear=patients.with_gp_consultations(
         between=["case_index_date - 1 year", "case_index_date"],
         returning="number_of_matches_in_period",
         return_expectations={"int": {"distribution": "normal", "mean": 6, "stddev": 3},"incidence": 0.6,},
