@@ -136,8 +136,8 @@ safetab t1_gp_countCat
 sum t2_gp_count
 safetab t2_gp_countCat
 *time period 3 gp consultations
-sum t2_gp_count
-safetab t2_gp_countCat
+sum t3_gp_count
+safetab t3_gp_countCat
 
 
 
