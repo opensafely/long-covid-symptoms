@@ -489,7 +489,7 @@ egen numPrescTypesPrevYearCat=cut(numPrescTypesPrevYear), at (0, 1, 2, 200)
 label define numPrescTypesPrevYearCat 0 "0" 1 "1" 2 "2+"
 label values numPrescTypesPrevYearCat numPrescTypesPrevYearCat
 safetab numPrescTypesPrevYearCat, miss
-la var numPrescTypesPrevYearCat "Number of ypes of distinct BNF groups of drugs prescribed in prev year"
+la var numPrescTypesPrevYearCat "Number of types of distinct BNF groups of drugs prescribed in prev year"
 
 
 

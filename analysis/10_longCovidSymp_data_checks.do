@@ -172,6 +172,10 @@ foreach var of varlist $comorbs{
 	safetab `var', m
 }
 
+*prev medicines
+sum numPrescTypesPrevYear, detail
+safetab numPrescTypesPrevYearCat
+
 
 *all outcomes 
 foreach var of varlist $diag $symp $medicines { 
