@@ -361,24 +361,24 @@ label values total_gp_countCat total_gp_countCat
 safetab total_gp_countCat, miss
 la var total_gp_countCat "Num of gp conslts during all post-COVID follow-up"
 *time period 1
-egen t1_gp_countCat=cut(t1_gp_count), at (0, 1, 4, 100000)
+egen t1_gp_countCat=cut(t1_gp_count), at (0, 1, 3, 100000)
 recode t1_gp_countCat 0=0 1=1 4=2
-label define t1_gp_countCat 0 "0" 1 "1-3" 2 "4+"
+label define t1_gp_countCat 0 "0" 1 "1-2" 2 "3+"
 label values t1_gp_countCat t1_gp_countCat
 safetab t1_gp_countCat, miss
 la var t1_gp_countCat "Num of gp conslts during 12 wk - 6 mo post-COVID"
 *time period 2
-egen t2_gp_countCat=cut(t1_gp_count), at (0, 1, 4, 100000)
+egen t2_gp_countCat=cut(t2_gp_count), at (0, 1, 3, 100000)
 recode t2_gp_countCat 0=0 1=1 4=2
-label define t2_gp_countCat 0 "0" 1 "1-3" 2 "4+"
-label values t2_gp_countCat t1_gp_countCat
+label define t2_gp_countCat 0 "0" 1 "1-2" 2 "3+"
+label values t2_gp_countCat t2_gp_countCat
 safetab t2_gp_countCat, miss
 la var t2_gp_countCat "Num of gp conslts during 6 mo - 1 yr post-COVID"
 *time period 2
-egen t3_gp_countCat=cut(t1_gp_count), at (0, 1, 4, 100000)
+egen t3_gp_countCat=cut(t2_gp_count), at (0, 1, 3, 100000)
 recode t3_gp_countCat 0=0 1=1 4=2
-label define t3_gp_countCat 0 "0" 1 "1-3" 2 "4+"
-label values t3_gp_countCat t1_gp_countCat
+label define t3_gp_countCat 0 "0" 1 "1-2" 2 "3+"
+label values t3_gp_countCat t3_gp_countCat
 safetab t3_gp_countCat, miss
 la var t3_gp_countCat "Num of gp conslts during 6 mo - 1 yr post-COVID"
 
@@ -485,8 +485,8 @@ egen numPrescTypesPrevYear=rowtotal(prev_bnf_gastro_broad-prev_bnf_anxiolytic_sp
 sum numPrescTypesPrevYear, detail
 la var numPrescTypesPrevYear "Number of types of distinct BNF groups of drugs prescribed in prev year"
 *for now create a category with 0, 1, 2+
-egen numPrescTypesPrevYearCat=cut(numPrescTypesPrevYear), at (0, 1, 2, 200) 
-label define numPrescTypesPrevYearCat 0 "0" 1 "1" 2 "2+"
+egen numPrescTypesPrevYearCat=cut(numPrescTypesPrevYear), at (0, 1, 3, 200) 
+label define numPrescTypesPrevYearCat 0 "0" 1 "1-2" 2 "3+"
 label values numPrescTypesPrevYearCat numPrescTypesPrevYearCat
 safetab numPrescTypesPrevYearCat, miss
 la var numPrescTypesPrevYearCat "Number of types of distinct BNF groups of drugs prescribed in prev year"
@@ -498,7 +498,7 @@ la var numPrescTypesPrevYearCat "Number of types of distinct BNF groups of drugs
 *order variables to make for loop quicker (remember the plain diag and symp named variables contain dates)
 order patient_id case_index_date first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_hosp pos_covid_test_ever death_date dereg_date first_known_covid19 $diag $symp
 *have to rename some variables here as too long
-foreach var of varlist case_index_date - first_known_covid19 $diag $symp  {
+foreach var of varlist case_index_date - first_known_covid19 $diag $symp $medicines {
 	capture noisily confirm string variable `var'
 	capture noisily rename `var' `var'_dstr
 	capture noisily gen `var' = date(`var'_dstr, "YMD")
@@ -514,6 +514,7 @@ foreach var of varlist $diag $symp {
 	replace tEver_`var'=1 if `var'!=.
 } 
 */
+
 foreach var of varlist $diag $symp $medicines {
 	generate tEver_`var'=0
 	replace tEver_`var'=1 if t1_`var'==1 | t2_`var'==1 |  t3_`var'==1
