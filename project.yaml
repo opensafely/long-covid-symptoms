@@ -1106,7 +1106,7 @@ actions:
     run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do contemporary
     needs: [set_case_index_date, generate_potential_controls_contemporary, 
     add_allVars_contemporary_controls, add_allVars_cases, combine_matched_CASESstps, combine_matched_COMPARATORstps, 
-    get_consultationCount_cases, get_consultationCount_controls, get_symptoms_cases, get_symptoms_controls, get_medicines_cases, get_medicines_controls]
+    get_consultationCount_cases, get_consultationCount_controls, get_gpconsultations_historical_controls, get_symptoms_cases, get_symptoms_controls, get_medicines_cases, get_medicines_controls]
     outputs:
       highly_sensitive:
         # casesContemporary: output/cases_contemporary.dta 
