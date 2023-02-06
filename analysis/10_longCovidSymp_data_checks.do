@@ -126,8 +126,20 @@ capture noisily assert stp!=.
 
 
 /*(2a)======================CHECK GP_COUNT=====================================*/ 
-safetab gpCountCat
-safetab case gpCountCat
+*prev gp consultations
+sum gp_count_prevyear, detail
+safetab gpCountPrevYearCat
+*time period 1 gp consultations
+sum t1_gp_count
+safetab t1_gp_countCat
+*time period 2 gp consultations
+sum t2_gp_count
+safetab t2_gp_countCat
+*time period 3 gp consultations
+sum t2_gp_count
+safetab t2_gp_countCat
+
+
 
 
 
@@ -162,7 +174,7 @@ foreach var of varlist $comorbs{
 
 
 *all outcomes 
-foreach var of varlist $diag $symp { 
+foreach var of varlist $diag $symp $medicines { 
 	safetab t1_`var', m
 	safetab t2_`var', m
 	safetab t3_`var', m
