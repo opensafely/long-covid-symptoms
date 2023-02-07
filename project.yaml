@@ -1235,21 +1235,21 @@ actions:
 
 # 12c. FIGURE 1C - PRESCRIPTIONS AT ANY TIME (CONTEMPORARY)
   figure_1panelC_contemporary:
-    run: stata-mp:latest analysis/12c_longCovidPrescrAnyTime_figure1Panel.do contemporary
+    run: stata-mp:latest analysis/12c_longCovidBNFAnyTime_figure1PanelC.do contemporary
     needs: [create_contemporary_analysis_file]
     outputs:
       moderately_sensitive:
-        log: logs/12c_longCovidPrescrAnyTime_figure1PanelBcontemporary.log
+        log: logs/12c_longCovidPrescrAnyTime_figure1PanelCcontemporary.log
         figure1Ccontemporary: output/figure1PanelC_longCovidPrescrAnyTime_contemporary.txt
 
 
 # 12c. FIGURE 1C - PRESCRIPTIONS AT ANY TIME (HISTORICAL)
   figure_1panelC_historical:
-    run: stata-mp:latest analysis/12c_longCovidPrescrAnyTime_figure1Panel.do historical
+    run: stata-mp:latest analysis/12c_longCovidBNFAnyTime_figure1PanelC.do historical
     needs: [create_historical_analysis_file]
     outputs:
       moderately_sensitive:
-        log: logs/12c_longCovidPrescrAnyTime_figure1PanelBhistorical.log
+        log: logs/12c_longCovidPrescrAnyTime_figure1PanelChistorical.log
         figure1Chistorical: output/figure1PanelC_longCovidPrescrAnyTime_historical.txt
 
 
@@ -1294,7 +1294,7 @@ actions:
 
   # 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (CONTEMPORARY)
   figure_2panelC_contemporary:
-    run: stata-mp:latest analysis/13c_longCovidPrescrTimePeriods_figure2PanelC.do contemporary
+    run: stata-mp:latest analysis/13c_longCovidBNFTimePeriods_figure2PanelC.do contemporary
     needs: [create_contemporary_analysis_file]
     outputs:
       moderately_sensitive:
@@ -1304,7 +1304,7 @@ actions:
 
   # 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (historical)
   figure_2panelC_historical:
-    run: stata-mp:latest analysis/13c_longCovidPrescrTimePeriods_figure2PanelC.do historical
+    run: stata-mp:latest analysis/13c_longCovidBNFTimePeriods_figure2PanelC.do historical
     needs: [create_historical_analysis_file]
     outputs:
       moderately_sensitive:

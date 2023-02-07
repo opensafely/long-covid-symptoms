@@ -24,7 +24,7 @@ local dataset `1'
 
 *checking tabulations
 capture log close
-log using ./logs/13b_longCovidDiagTimePeriods_figure2PanelB`dataset'.log, replace t
+log using ./logs/13c_longCovidPrescrTimePeriods_figure2PanelC`dataset'.log, replace t
 
         
 
@@ -78,13 +78,13 @@ end
 
 use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 rename case expStatus
-file open tablecontents using ./output/figure2PanelB_longCovidDiagTimePeriods_`dataset'.txt, t w replace
+file open tablecontents using ./output/figure2PanelC_longCovidPrescrTimePeriods_`dataset'.txt, t w replace
 file write tablecontents "Fig 2: Panel A. Community COVID-19: Odds ratios comparing odds of post-COVID SYMPTOMS OVER THREE TIME PERIODS during follow up in community COVID-19 compared to `dataset' comparator populations." _n _n
 file write tablecontents ("Symptom") _tab ("Comparator") _tab ("OR (95% CI)") _tab ("Number of events") _tab ("Proportion of population with events") _n
 
 *loop through each outcome
 *foreach outcome in $diagnosisOutcomes {	
-foreach outcome in $diag {
+foreach outcome in $medicines {
 	cap noisily outputORsforOutcome, outcome(`outcome')
 	file write tablecontents _n
 }

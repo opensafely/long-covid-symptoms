@@ -70,7 +70,7 @@ prog define outputORsforOutcome
 	local ub_full_adj = r(ub)
 	*Adding consultation rate
 	display "`outcome' additionally adjusted for number of consultations in previous year"
-	capture noisily clogit `outcome' i.expStatus i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs i.gpCountCat, strata(set_id) or
+	capture noisily clogit `outcome' i.expStatus i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs i.gpCountPrevYearCat, strata(set_id) or
 	capture noisily lincom 1.expStatus, or
 	local hr_fullwgpCountCat_adj = r(estimate)
 	local lb_fullwgpCountCat_adj = r(lb)
