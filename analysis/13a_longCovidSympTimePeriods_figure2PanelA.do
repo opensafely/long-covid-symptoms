@@ -53,7 +53,7 @@ prog define outputORsforOutcome
 		display "t`i'_`outcome' regression results"
 		safetab expStatus t`i'_`outcome', row
 		*conditional logistic regressions for each time period
-		capture noisily clogit t`i'_`outcome' i.expStatus i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs i.gpCountCat, strata(set_id) or
+		capture noisily clogit t`i'_`outcome' i.expStatus i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs i.gpCountPrevYearCat, strata(set_id) or
 		*this lincom ensures OR and CI can be stored in the r values, doesn't work straight from clogit
 		capture noisily lincom 1.expStatus, or
 		local hr = r(estimate)
