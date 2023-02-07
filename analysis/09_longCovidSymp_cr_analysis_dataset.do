@@ -366,7 +366,7 @@ recode t1_gp_countCat 0=0 1=1 4=2
 label define t1_gp_countCat 0 "0" 1 "1-2" 2 "3+"
 label values t1_gp_countCat t1_gp_countCat
 safetab t1_gp_countCat, miss
-la var t1_gp_countCat "Num of gp conslts during 12 wk - 6 mo post-COVID"
+la var t1_gp_countCat "Num of gp conslts during 4 wk - 12 wk post-COVID"
 *time period 2
 egen t2_gp_countCat=cut(t2_gp_count), at (0, 1, 3, 100000)
 recode t2_gp_countCat 0=0 1=1 4=2
@@ -375,7 +375,7 @@ label values t2_gp_countCat t2_gp_countCat
 safetab t2_gp_countCat, miss
 la var t2_gp_countCat "Num of gp conslts during 6 mo - 1 yr post-COVID"
 *time period 2
-egen t3_gp_countCat=cut(t2_gp_count), at (0, 1, 3, 100000)
+egen t3_gp_countCat=cut(t3_gp_count), at (0, 1, 3, 100000)
 recode t3_gp_countCat 0=0 1=1 4=2
 label define t3_gp_countCat 0 "0" 1 "1-2" 2 "3+"
 label values t3_gp_countCat t3_gp_countCat

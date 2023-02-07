@@ -195,7 +195,19 @@ bysort ageCat: summ age
 bysort ageCatChildCombined: summ age
 
 *comorbidities
-safetab numPreExistingComorbs
+sum numPreExistingComorbs, detail
+safetab preExistComorbCat
+
+*prev medications
+sum numPrescTypesPrevYear, detail
+safetab numPrescTypesPrevYearCat
+
+*prev consultations
+sum gp_count_prevyear, detail
+safetab gpCountPrevYearCat
+
+
+
 
 /* EXPECTED RELATIONSHIPS=====================================================*/ 
 
@@ -204,12 +216,16 @@ safetab numPreExistingComorbs
 safetab ageCat ethnicity, row 
 *Age and IMD
 safetab ageCat imd, row 
+*Age and distinct bnf category prescriptions
+safetab ageCat numPrescTypesPrevYearCat, row
+*Age and consultations
+safetab ageCat gpCountPrevYearCat
 *Age and pre-existing comorbidities
-safetab ageCat numPreExistingComorbs, row
+safetab ageCat preExistComorbCat, row
 *Sex and pre-existing comorbidities
-safetab sex numPreExistingComorbs, row
+safetab sex preExistComorbCat, row
 *Ethnicity and pre-existing comorbidities
-safetab ethnicity numPreExistingComorbs, row
+safetab ethnicity preExistComorbCat, row
 
 /*                          
 * Relationships of outcomes with age
