@@ -294,15 +294,14 @@ tab preExistComorbCat case, col
 tabulatevariable, variable(preExistComorbCat) min(0) max(2) 
 file write tablecontent _n 
 
-*Prescribing (number of distinct bnf categories of prescribing)
-tab preExistComorbCat case, col
-tabulatevariable, variable(preExistComorbCat) min(0) max(2) 
+*Prescribing (number of distinct bnf categories of prescribing - 3 categories)
+tab numPrescTypesPrevYearCat case, col
+tabulatevariable, variable(numPrescTypesPrevYearCat) min(0) max(2) 
 file write tablecontent _n 
 
-
 *Previous consultations (3 categories)
-tab gpCountCat case, col
-tabulatevariable, variable(gpCountCat) min(0) max(2) 
+tab gpCountPrevYearCat case, col
+tabulatevariable, variable(gpCountPrevYearCat) min(0) max(2) 
 file write tablecontent _n 
 
 
