@@ -22,7 +22,7 @@ local dataset `1'
 capture log close
 log using ./logs/12c_longCovidPrescrAnyTime_figure1PanelC`dataset'.log, replace t
 
-
+*NEED TO CORRECT THIS FILE SO ANYONE WHO HAD THAT SPECIFIC BNF CATEGORY PRESCRIPTION IN THE YEAR PRIOR TO THIER INDEX DATE IS EXCLUDED*
 	
 prog drop _all
 
@@ -95,17 +95,21 @@ end
 
 *call program and output tables
 
-use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
-rename case expStatus
+*use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
+*rename case expStatus
 file open tablecontents using ./output/figure1PanelC_longCovidPrescrAnyTime_`dataset'.txt, t w replace
 file write tablecontents "Fig 1: Panel B. Community COVID-19: Odds ratios comparing odds of post-COVID diagnoses at any time during follow up in community COVID-19 compared to `dataset' comparator population." _n _n
 file write tablecontents ("Diagnoses") _tab ("Comparator") _tab _tab ("OR (95% CI)") _tab ("Number of events") _tab ("Proportion of population with events") _n
 
-*loop through each outcome
-*foreach outcome in $diagnosisOutcomes {
+*loop through each bnf category, dropping people who had any prescriptions for that bnf category in the previous year
+use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
+rename case expStatus
 foreach outcome in $medicines {
-	cap noisily outputORsforOutcome, outcome(tEver_`outcome')
-	file write tablecontents _n
+		preserve
+			drop if prev_`outcome'==1
+			cap noisily outputORsforOutcome, outcome(tEver_`outcome')
+			file write tablecontents _n
+		restore
 }
 
 cap file close tablecontents 
