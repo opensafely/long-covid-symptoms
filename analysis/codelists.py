@@ -223,6 +223,12 @@ chesttightness_symptom_codes = codelist_from_csv(
     column="code",
 )
 
+chestpain_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-chest-pain-unexplained.csv",
+    system="snomed",
+    column="code",
+)
+
 palpitations_symptom_codes = codelist_from_csv(
     "codelists/opensafely-symptoms-palpitations.csv",
     system="snomed",
@@ -289,6 +295,12 @@ visualdisturbance_symptom_codes = codelist_from_csv(
     column="code",
 )
 
+abdominalpain_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-abdominal-pain.csv",
+    system="snomed",
+    column="code",
+)
+
 nauseavomiting_symptom_codes = codelist_from_csv(
     "codelists/opensafely-symptoms-nausea-and-vomiting.csv",
     system="snomed",
@@ -303,6 +315,24 @@ diarrhoea_symptom_codes = codelist_from_csv(
 
 weightloss_symptom_codes = codelist_from_csv(
     "codelists/opensafely-symptoms-weight-loss-and-reduced-appetite.csv",
+    system="snomed",
+    column="code",
+)
+
+pain_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-pain.csv",
+    system="snomed",
+    column="code",
+)
+
+depression_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-depression.csv",
+    system="snomed",
+    column="code",
+)
+
+anxiety_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-anxiety.csv",
     system="snomed",
     column="code",
 )
@@ -325,8 +355,26 @@ earache_symptom_codes = codelist_from_csv(
     column="code",
 )
 
+sorethroat_symptom_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-sore-throat.csv",
+    system="snomed",
+    column="code",
+)
+
 taste_smell_symptom_codes = codelist_from_csv(
     "codelists/opensafely-symptoms-loss-of-taste-or-smell.csv",
+    system="snomed",
+    column="code",
+)
+
+nasal_congestion_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-nasal-congestion.csv",
+    system="snomed",
+    column="code",
+)
+
+rashes_codes = codelist_from_csv(
+    "codelists/opensafely-symptoms-rashes.csv",
     system="snomed",
     column="code",
 )

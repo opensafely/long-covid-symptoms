@@ -76,17 +76,22 @@ end
 
 *call program and output tables
 
-use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
-rename case expStatus
+*use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 file open tablecontents using ./output/figure2PanelC_longCovidPrescrTimePeriods_`dataset'.txt, t w replace
 file write tablecontents "Fig 2: Panel A. Community COVID-19: Odds ratios comparing odds of post-COVID SYMPTOMS OVER THREE TIME PERIODS during follow up in community COVID-19 compared to `dataset' comparator populations." _n _n
 file write tablecontents ("Symptom") _tab ("Comparator") _tab ("OR (95% CI)") _tab ("Number of events") _tab ("Proportion of population with events") _n
 
 *loop through each outcome
 *foreach outcome in $diagnosisOutcomes {	
+
+use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
+rename case expStatus
 foreach outcome in $medicines {
-	cap noisily outputORsforOutcome, outcome(`outcome')
-	file write tablecontents _n
+		preserve
+			drop if prev_`outcome'==1
+			cap noisily outputORsforOutcome, outcome(tEver_`outcome')
+			file write tablecontents _n
+		restore
 }
 
 cap file close tablecontents 

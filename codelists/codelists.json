@@ -318,6 +318,12 @@
       "downloaded_at": "2022-11-25 13:04:13.512953Z",
       "sha": "75d4b41555d8ff127be6e616847664a6cce3899b"
     },
+    "opensafely-symptoms-chest-pain-unexplained.csv": {
+      "id": "opensafely/symptoms-chest-pain-unexplained/0d0d5f59",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-chest-pain-unexplained/0d0d5f59/",
+      "downloaded_at": "2023-02-08 11:31:53.491069Z",
+      "sha": "742fd0e051d57600f165a15afc66d49b2457224a"
+    },
     "opensafely-symptoms-palpitations.csv": {
       "id": "opensafely/symptoms-palpitations/27aa39ac",
       "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-palpitations/27aa39ac/",
@@ -384,6 +390,12 @@
       "downloaded_at": "2022-12-24 17:46:25.111713Z",
       "sha": "db49384bd9706741cea84679f193786d24388272"
     },
+    "opensafely-symptoms-abdominal-pain.csv": {
+      "id": "opensafely/symptoms-abdominal-pain/344e73f1",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-abdominal-pain/344e73f1/",
+      "downloaded_at": "2023-02-08 11:31:57.265334Z",
+      "sha": "38b7ee80c476cecd38a785bf2d5973ac3140b8e8"
+    },
     "opensafely-symptoms-nausea-and-vomiting.csv": {
       "id": "opensafely/symptoms-nausea-and-vomiting/30211ed7",
       "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-nausea-and-vomiting/30211ed7/",
@@ -401,6 +413,24 @@
       "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-weight-loss-and-reduced-appetite/7e02386c/",
       "downloaded_at": "2022-12-24 17:46:25.886639Z",
       "sha": "207b4d1258062ce4eb453566de45bd8eb4e1cd84"
+    },
+    "opensafely-symptoms-pain.csv": {
+      "id": "opensafely/symptoms-pain/71385a33",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-pain/71385a33/",
+      "downloaded_at": "2023-02-08 11:31:58.663717Z",
+      "sha": "f10644780459fc727569c6217778f122f7d4a0dc"
+    },
+    "opensafely-symptoms-depression.csv": {
+      "id": "opensafely/symptoms-depression/0e294f34",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-depression/0e294f34/",
+      "downloaded_at": "2023-02-08 11:31:58.894192Z",
+      "sha": "d0a4fe9f4ad57bd68c78cbb1ac05e5ae267e4245"
+    },
+    "opensafely-symptoms-anxiety.csv": {
+      "id": "opensafely/symptoms-anxiety/7519dbfe",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-anxiety/7519dbfe/",
+      "downloaded_at": "2023-02-08 11:31:59.156928Z",
+      "sha": "64932eddd4aca319dd9614fb73a841ec24b998b0"
     },
     "opensafely-symptoms-ptsd.csv": {
       "id": "opensafely/symptoms-ptsd/64f2c537",
@@ -420,11 +450,29 @@
       "downloaded_at": "2022-12-24 17:46:26.495506Z",
       "sha": "d76bd8040216c4b0ac15b147821b0726a2660c45"
     },
+    "opensafely-symptoms-sore-throat.csv": {
+      "id": "opensafely/symptoms-sore-throat/4e8ca8fb",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-sore-throat/4e8ca8fb/",
+      "downloaded_at": "2023-02-08 11:32:00.372328Z",
+      "sha": "55cfa871ee5070c445d702708662cde2e16928cc"
+    },
     "opensafely-symptoms-loss-of-taste-or-smell.csv": {
       "id": "opensafely/symptoms-loss-of-taste-or-smell/19c46b98",
       "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-loss-of-taste-or-smell/19c46b98/",
       "downloaded_at": "2022-12-24 17:46:26.704805Z",
       "sha": "3774b67736d2703635d1cf250359255af4028ec3"
+    },
+    "opensafely-symptoms-nasal-congestion.csv": {
+      "id": "opensafely/symptoms-nasal-congestion/357d35c6",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-nasal-congestion/357d35c6/",
+      "downloaded_at": "2023-02-08 11:32:00.802812Z",
+      "sha": "c6c29b9812864f46b53bfaff5295480d8cbea042"
+    },
+    "opensafely-symptoms-rashes.csv": {
+      "id": "opensafely/symptoms-rashes/6bd2da47",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-rashes/6bd2da47/",
+      "downloaded_at": "2023-02-08 11:32:01.066104Z",
+      "sha": "b4f30abf8d6f7763f06a27d2aefa49a2d019c793"
     },
     "opensafely-symptoms-hair-loss.csv": {
       "id": "opensafely/symptoms-hair-loss/042e6be8",

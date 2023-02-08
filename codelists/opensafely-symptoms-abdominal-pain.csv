@@ -1,0 +1,358 @@
+code,term
+102613000,Localized abdominal pain
+102614006,Generalized abdominal pain
+10743008,Irritable bowel syndrome
+1082731000000107,Irritable Bowel Syndrome - Symptom Severity Scale
+1083661000000101,Assessment using Irritable Bowel Syndrome - Symptom Severity Scale
+1083671000000108,Irritable Bowel Syndrome - Symptom Severity Scale score
+11072008,Nonspecific abdominal symptom
+1119211005,Tenderness of left abdominal lumbar region
+1119212003,Tenderness of right abdominal lumbar region
+1119217009,Pain in right abdominal lumbar region
+1119218004,Pain in left abdominal lumbar region
+111985007,Chronic abdominal pain
+116289008,Abdominal bloating
+116290004,Acute abdominal pain
+11708003,Hypogastric region structure
+118948005,Disorder of abdomen
+119416008,Epigastric discomfort
+136051000119105,Abdominal colic in child less than or equal to 12 months
+136571000119109,Adult colic
+137891000119105,Abdominal colic in adult or child greater than 12 months
+139304008,Type of GIT pain
+139306005,Abdominal colic
+139307001,Non-colicky abdominal pain
+139310008,Infantile colic
+139311007,Abdominal migraine - symptom
+139312000,Abdominal discomfort
+139313005,Abdominal pain
+139315003,Type of GIT pain NOS
+139316002,Pain: [site of GIT] or [abdominal site symptom] or [flank] or [subcostal] or [iliac fossa]
+139317006,Central abdominal pain
+139318001,Epigastric pain
+139319009,Left subcostal pain
+139320003,Right subcostal pain
+139323001,Right iliac fossa pain (& C/O)
+139324007,Left iliac fossa pain (& C/O)
+139326009,Generalised abdominal pain
+139327000,Upper abdominal pain
+139328005,Lower abdominal pain
+139329002,Site of GIT pain NOS
+139343007,Abdominal distension symptom
+139345000,Abdomen feels bloated
+139346004,Abdomen feels distended
+139347008,Abdomen feels swollen
+140422000,O/E pain: [abdominal (& on palpation)] or [epigastric] or [iliac] or [lumbar] or [umbilical]
+140424004,O/E - abd.pain-R.hypochondrium
+140425003,O/E - abd. pain - epigastrium
+140426002,O/E - abd.pain-L.hypochondrium
+140427006,O/E - abd. pain - R.lumbar
+140428001,O/E - abd. pain - umbilical
+140429009,O/E - abd. pain - L.lumbar
+140430004,O/E - right iliac: [abdominal pain] or [tender]
+140431000,O/E - abd. pain - hypogastrium
+140432007,O/E - left iliac: [abdominal pain] or [tender]
+140436005,O/E - guarding-R.hypochondrium
+140437001,O/E - guarding - epigastrium
+140438006,O/E - guarding-L.hypochondrium
+140440001,O/E - guarding - umbilical
+140442009,O/E - guarding - R.iliac
+140443004,O/E - guarding - hypogastrium
+140444005,O/E - guarding - L.iliac
+140448008,O/E - rebound-R.hypochondrium
+140449000,O/E - rebound - epigastrium
+140450000,O/E - rebound-L.hypochondrium
+140452008,O/E - rebound - umbilical
+140454009,O/E - rebound - R.iliac
+140455005,O/E - rebound - hypogastrium
+140456006,O/E - rebound - L.iliac
+140458007,O/E - abdominal rigidity
+140460009,Abdomen: [O/E - board like rigidity] or [acute]
+140461008,O/E - abdominal rigidity NOS
+155783000,(Irritable bowel syndrome) or (pseudomembranous colitis)
+158435003,"[D]Abdominal distension, gaseous"
+158498003,[D]Abdominal pain
+158499006,[D]Acute abdomen
+158500002,[D]Abdominal tenderness
+158501003,[D]Abdominal colic
+158502005,Colic [D]
+158503000,[D]Infantile colic
+158504006,[D]Abdominal cramps
+158505007,[D]Epigastric pain
+158506008,[D]Umbilical pain
+158507004,[D]Hypochondrial pain
+158509001,[D]Pain in right iliac fossa
+158510006,[D]Pain in left iliac fossa
+158512003,[D]Abdominal pain NOS
+158529000,[D]Abdominal rigidity
+162036004,Type of GIT pain (& [abdominal pain] or [symptom])
+162038003,Non-colicky abdominal pain
+162040008,Abdominal migraine - symptom
+162041007,Abdominal discomfort
+162042000,Abdominal wall pain
+162044004,Type of gastrointestinal tract pain NOS
+162045003,Pain: [GIT site] or [abdominal] or [flank] or [subcostal] or [iliac fossa]
+162046002,Central abdominal pain
+162047006,Left subcostal pain
+162048001,Right subcostal pain
+162051008,Right iliac fossa pain
+162052001,Left iliac fossa pain
+162053006,Suprapubic pain
+162054000,Site of gastrointestinal tract pain NOS
+162068007,Abdominal distension symptom
+162070003,Abdomen feels bloated
+162071004,Abdomen feels distended
+162072006,Abdomen feels swollen
+162073001,Abdominal distension symptom NOS
+162424004,(Symptom: chest wall) or (C/O symptom: [chest wall] or [abdominal wall])
+163212000,O/E: pain on palpation (& [abdominal] or [epigastric] or [iliac] or [lumbar] or [umbilical])
+163213005,On examination - no abdominal pain on palpation
+163214004,On examination - abdominal pain - right hypochondrium
+163215003,On examination - abdominal pain - epigastrium
+163216002,On examination - abdominal pain - left hypochondrium
+163217006,On examination - abdominal pain - right lumbar
+163218001,On examination - abdominal pain - umbilical
+163219009,On examination - abdominal pain - left lumbar
+163220003,On examination - abdominal pain - right iliac
+163221004,On examination - abdominal pain - hypogastrium
+163222006,On examination - abdominal pain - left iliac
+163223001,On examination - abdominal pain on palpation NOS
+163224007,On examination - guarding on palpation
+163226009,On examination - guarding - right hypochondrium
+163227000,On examination - guarding - epigastrium
+163228005,On examination - guarding - left hypochondrium
+163230007,On examination - guarding - umbilical
+163232004,On examination - guarding - right iliac
+163233009,On examination - guarding - hypogastrium
+163234003,On examination - guarding - left iliac
+163238000,On examination - rebound - right hypochondrium
+163239008,On examination - rebound - epigastrium
+163240005,On examination - rebound-left hypochondrium
+163242002,On examination - rebound - umbilical
+163244001,On examination - rebound - right iliac
+163245000,On examination - rebound - hypogastrium
+163246004,On examination - rebound - left iliac
+163248003,On examination - abdominal rigidity
+163250006,O/E abdomen: [board like rigidity] or [acute]
+163251005,On examination - abdominal rigidity NOS
+164629003,Tenderness of epigastrium
+18156008,Abdominal hyperesthesia
+192434000,[X] Somatoform autonomic dysfunction (& named variants)
+197124009,(Irritable bowel syndrome) or (pseudomembranous colitis) or (spastic colon)
+197125005,Irritable bowel syndrome with diarrhea
+207127000,[D]Gas pain (abdominal)
+207128005,"[D]Abdominal distension, gaseous"
+207205003,[D]Abdominal pain
+207206002,[D]Abdominal tenderness
+207207006,[D]Abdominal colic
+207208001,[D]Colic NOS
+207209009,[D]Infantile colic
+207210004,[D]Abdominal cramps
+207211000,[D]Epigastric pain
+207212007,[D]Umbilical pain
+207213002,[D]Hypochondrial pain
+207215009,[D]Pain in right iliac fossa
+207216005,[D]Pain in left iliac fossa
+207219003,[D]Abdominal migraine
+207220009,[D]Recurrent acute abdominal pain
+207221008,[D]Acute abdomen
+207223006,[D] Upper abdominal pain
+207228002,[D]Nonspecific abdominal pain
+207229005,[D]Other specified abdominal pain
+207230000,[D]Abdominal pain NOS
+207251002,[D]Abdominal rigidity
+207255006,[D]Acute abdomen
+207588000,[X]Pain localized to other parts of lower abdomen
+207589008,[X]Other and unspecified abdominal pain
+21522001,Abdominal pain
+2174009,Abdominal rebound pain
+231510006,Hypochondriacal pain
+231515001,Hypochondriacal pain
+235838003,Irritable bowel syndrome variant of childhood
+235839006,Irritable bowel syndrome variant of childhood with diarrhea
+235840008,Irritable bowel syndrome variant of childhood with constipation
+235841007,Chronic nonspecific abdominal pain
+239271000000108,Pain radiating to lower abdomen
+239291000000107,Pain radiating to middle abdomen
+239381000000101,Pain radiating to upper abdomen
+241236003,Pubic region
+243354008,Entire right upper quadrant of abdomen
+243388002,Entire right lower quadrant of abdomen
+243963000,Structure of right iliac fossa
+247351001,Generalised abdominal pain
+247352008,Subcostal pain
+247353003,Site of abdominal pain
+247354009,Iliac fossa pain
+247356006,Type of gastrointestinal tract pain - symptom
+247358007,Type of abdominal pain
+247360009,Infantile colic
+247361008,Evening colic
+247362001,Pain on abdominal wall movement
+248490000,Bloating symptom
+249545003,Abdominal guarding
+25451005,Board-like abdominal rigidity
+266525002,(Irritable bowel syndrome) or (pseudomembranous colitis)
+267050002,Site of gastrointestinal tract pain
+267165003,Pain: [site of GIT] or [abdominal site symptom] or [flank] or [subcostal] or [iliac fossa]
+268941000,On examination - abdominal pain on palpation
+268942007,On examination - board-like abdominal rigidity
+269018004,O/E pain: [abdominal (& on palpation)] or [epigastric] or [iliac] or [lumbar] or [umbilical]
+269019007,O/E - right iliac: [abdominal pain] or [tender]
+269020001,O/E - left iliac: [abdominal pain] or [tender]
+269021002,Abdomen: [O/E - board like rigidity] or [acute]
+270477000,Type of gastrointestinal tract pain
+270956009,Right iliac fossa pain (& C/O)
+270957000,Left iliac fossa pain (& C/O)
+271835004,"Abdominal distension, gaseous"
+271853005,Hypochondrial pain
+271854004,Right iliac fossa pain
+271855003,Left iliac fossa pain
+271858001,Recurrent acute abdominal pain
+271859009,Other specified abdominal pain
+272042000,Infantile colic
+274256007,[D]Colic
+274277005,Complaining of right iliac fossa pain
+274278000,Complaining of left iliac fossa pain
+274287009,On examination - abdominal pain
+274288004,On examination - epigastric pain
+274289007,On examination - iliac pain - abdominal
+274290003,On examination - lumbar pain abdominal
+274291004,On examination - umbilical pain - abdominal
+274292006,On examination - left iliac fossa tender
+274670001,Pain localized to other parts of lower abdomen
+275315004,On examination - iliac pain on palpation
+28221000119103,Abdominal muscle pain
+285348005,Strain of abdominal muscle
+285387005,Left sided abdominal pain
+285388000,Right sided abdominal pain
+300410004,Finding of abdominal guarding
+300411000,Guarding of right hypochondrium
+300412007,Guarding of epigastrium
+300413002,Guarding of left hypochondrium
+300416005,Guarding of umbilical region
+300417001,Guarding of right iliac fossa
+300418006,Guarding of left iliac fossa
+300419003,Guarding of hypogastrium
+300421008,Finding of abdominal rigidity
+301367001,Right hypochondrial pain
+301368006,Left hypochondrial pain
+301403003,Tenderness of epigastrium
+301404009,Tenderness of right hypochondrium
+301405005,Tenderness of left hypochondrium
+301409004,Tenderness of hypogastrium
+301410009,Tenderness of right iliac fossa
+301411008,Tenderness of left iliac fossa
+301412001,Rebound tenderness of epigastrium
+301413006,Rebound tenderness of right hypochondrium
+301414000,Rebound tenderness of left hypochondrium
+301418002,Rebound tenderness of hypogastrium
+301419005,Rebound tenderness of right iliac fossa
+301420004,Rebound tenderness of left iliac fossa
+304542004,Nonspecific abdominal pain
+307199009,Psychosomatic abdominal pain
+307725002,[D] Upper abdominal pain
+308903002,On examination - epigastric pain on palpation
+311813008,[D]Nonspecific abdominal pain
+314212008,Abdominal pain - cause unknown
+35363006,Infantile colic
+35611005,Rebound tenderness
+364630006,Abdominal pain characteristic
+364761006,Finding of site of gastrointestinal tract pain
+364762004,Finding of type of gastrointestinal tract pain
+371094000,Colicky hypogastric pain
+371102005,Generalized colicky abdominal pain
+390251000000109,[D]Abdominal pain NOS
+397851000000109,[D]Colic NOS
+410716004,Colicky sensation quality
+415183006,"Protective cup, device"
+416390003,Somatic dysfunction of abdomen
+417735002,Somatic dysfunction of ilium
+41931001,Abdominal distension
+425860006,Pain radiating to lower abdomen
+427075000,Pain radiating to upper abdomen
+427668002,Pain radiating to middle abdomen
+43364001,Abdominal discomfort
+43478001,Abdominal tenderness
+438509009,Abdominal rigidity of right lower quadrant
+438512007,Abdominal rigidity of periumbilical region
+438774001,Abdominal rigidity of epigastrium
+439469002,Recurrent abdominal pain
+439582007,Abdominal rigidity of left upper quadrant
+439593009,Abdominal rigidity of left lower quadrant
+439774009,Tenderness of left lower quadrant of abdomen
+440122009,Generalized abdominal rigidity
+440220007,Generalized abdominal tenderness
+440544005,Irritable bowel syndrome characterized by alternating bowel habit
+440630006,Irritable bowel syndrome characterized by constipation
+443503005,Periumbilical pain
+444651000000101,[D]Abdominal pain NOS
+444746004,Acute exacerbation of chronic abdominal pain
+445386003,Tenderness of periumbilical region
+448265002,Tenderness of right upper quadrant of abdomen
+448660000,Tenderness of left upper quadrant of abdomen
+448661001,Tenderness of right lower quadrant of abdomen
+449092006,Abdominal rigidity of right upper quadrant
+449890002,Functional abdominal pain syndrome
+45979003,Abdominal wind pain
+462571000000108,[X]Other and unspecified abdominal pain
+462851000000101,[X]Pain localised to other parts of lower abdomen
+48544008,Structure of right lower quadrant of abdomen
+498521000000105,[D]Gas pain (abdominal)
+498531000000107,"[D]Abdominal distension, gaseous"
+499111000000101,[D]Abdominal pain
+499121000000107,[D]Abdominal tenderness
+499131000000109,[D]Abdominal colic
+499141000000100,[D]Infantile colic
+499151000000102,[D]Abdominal cramps
+499161000000104,[D]Epigastric pain
+499171000000106,[D]Umbilical pain
+499181000000108,[D]Hypochondrial pain
+499201000000107,[D]Pain in right iliac fossa
+499211000000109,[D]Pain in left iliac fossa
+499241000000105,[D]Abdominal migraine
+499251000000108,[D]Recurrent acute abdominal pain
+499261000000106,[D]Acute abdomen
+499281000000102,[D]Other specified abdominal pain
+499451000000107,[D]Abdominal rigidity
+502391000000105,[D]Colic
+502591000000100,[D]Upper abdominal pain
+502841000000108,[D]Nonspecific abdominal pain
+50519007,Structure of right upper quadrant of abdomen
+51197009,Stomach cramps
+540501000000100,On examination - abdominal pain on palpation NOS
+54586004,Lower abdominal pain
+564321000000100,On examination - abdominal rigidity NOS
+582731000000109,Site of gastrointestinal tract pain NOS
+583831000000109,Abdominal distension symptom NOS
+585781000000100,Type of gastrointestinal tract pain NOS
+60043000,Midabdominal crampy pain
+60728008,Swollen abdomen
+667301000000109,Pain localized to other parts of lower abdomen
+695831000000102,Other specified abdominal pain
+707597009,Continuous abdominal pain of left lower quadrant
+71850005,Abdominal pain worse on motion
+718922009,Somatic dysfunction of abdominal region
+72300008,Abdominal rigidity
+724890000,Strain of tendon of abdomen
+73063007,Colicky pain
+74704000,Abdominal pain through to back
+75879005,Abdominal migraine
+78409004,Abdominal polyradiculopathy
+791011000000108,Functional abdominal pain syndrome
+79922009,Epigastric pain
+808731000000106,Functional abdominal pain syndrome
+82648006,Abdominal involuntary guarding
+82708005,Abdominal voluntary guarding
+83132003,Upper abdominal pain
+833290005,Rebound tenderness of umbilical region
+838410008,Pain in epigastric region on palpation
+838411007,Pain in abdominal region on palpation
+8644006,Epigastric fullness
+871692005,Strain of rectus abdominus muscle
+88522004,Umbilical pain
+9209005,Acute abdomen
+928191000000105,Irritable bowel syndrome characterised by alternating bowel habit
+928201000000107,Irritable bowel syndrome characterised by constipation
+938221000000100,Irritable bowel syndrome characterised by alternating bowel habit
+938291000000102,Irritable bowel syndrome characterised by constipation
+9991008,Abdominal colic
