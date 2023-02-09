@@ -121,6 +121,37 @@ def generate_outcome_variables_symp_contemporary(index_date_variable):
     ), 
 
 
+    symp_chestpain=patients.with_these_clinical_events(
+        chestpain_symptom_codes,
+        on_or_after=f"{index_date_variable}",
+        find_first_match_in_period=True,
+        returning="date", 
+        date_format="YYYY-MM-DD",
+        return_expectations={"date": {"earliest": "index_date"}},
+    ),  
+
+    t1_symp_chestpain=patients.with_these_clinical_events(
+        chestpain_symptom_codes,
+        between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t2_symp_chestpain=patients.with_these_clinical_events(
+        chestpain_symptom_codes,
+        between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t3_symp_chestpain=patients.with_these_clinical_events(
+        chestpain_symptom_codes,
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ), 
+
+
 
     symp_palp=patients.with_these_clinical_events(
         palpitations_symptom_codes,
@@ -470,6 +501,38 @@ def generate_outcome_variables_symp_contemporary(index_date_variable):
     ), 
 
 
+
+    symp_abdominalpain=patients.with_these_clinical_events(
+        abdominalpain_symptom_codes,
+        on_or_after=f"{index_date_variable}",
+        find_first_match_in_period=True,
+        returning="date", 
+        date_format="YYYY-MM-DD",
+        return_expectations={"date": {"earliest": "index_date"}},
+    ),  
+
+    t1_symp_abdominalpain=patients.with_these_clinical_events(
+        abdominalpain_symptom_codes,
+        between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t2_symp_abdominalpain=patients.with_these_clinical_events(
+        abdominalpain_symptom_codes,
+        between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t3_symp_abdominalpain=patients.with_these_clinical_events(
+        abdominalpain_symptom_codes,
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ), 
+
+
     symp_nauseavomiting=patients.with_these_clinical_events(
         nauseavomiting_symptom_codes,
         on_or_after=f"{index_date_variable}",
@@ -501,6 +564,37 @@ def generate_outcome_variables_symp_contemporary(index_date_variable):
     ), 
 
 
+    symp_diarrhoea=patients.with_these_clinical_events(
+        diarrhoea_symptom_codes,
+        on_or_after=f"{index_date_variable}",
+        find_first_match_in_period=True,
+        returning="date", 
+        date_format="YYYY-MM-DD",
+        return_expectations={"date": {"earliest": "index_date"}},
+    ),  
+
+    t1_symp_diarrhoea=patients.with_these_clinical_events(
+        diarrhoea_symptom_codes,
+        between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t2_symp_diarrhoea=patients.with_these_clinical_events(
+        diarrhoea_symptom_codes,
+        between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t3_symp_diarrhoea=patients.with_these_clinical_events(
+        diarrhoea_symptom_codes,
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ), 
+
+
     symp_weightloss=patients.with_these_clinical_events(
         weightloss_symptom_codes,
         on_or_after=f"{index_date_variable}",
@@ -526,6 +620,99 @@ def generate_outcome_variables_symp_contemporary(index_date_variable):
 
     t3_symp_weightloss=patients.with_these_clinical_events(
         weightloss_symptom_codes,
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ), 
+
+
+    symp_pain=patients.with_these_clinical_events(
+        pain_symptom_codes,
+        on_or_after=f"{index_date_variable}",
+        find_first_match_in_period=True,
+        returning="date", 
+        date_format="YYYY-MM-DD",
+        return_expectations={"date": {"earliest": "index_date"}},
+    ),  
+
+    t1_symp_pain=patients.with_these_clinical_events(
+        pain_symptom_codes,
+        between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t2_symp_pain=patients.with_these_clinical_events(
+        pain_symptom_codes,
+        between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t3_symp_pain=patients.with_these_clinical_events(
+        pain_symptom_codes,
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ), 
+
+
+    symp_depression=patients.with_these_clinical_events(
+        depression_symptom_codes,
+        on_or_after=f"{index_date_variable}",
+        find_first_match_in_period=True,
+        returning="date", 
+        date_format="YYYY-MM-DD",
+        return_expectations={"date": {"earliest": "index_date"}},
+    ),  
+
+    t1_symp_depression=patients.with_these_clinical_events(
+        depression_symptom_codes,
+        between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t2_symp_depression=patients.with_these_clinical_events(
+        depression_symptom_codes,
+        between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t3_symp_depression=patients.with_these_clinical_events(
+        depression_symptom_codes,
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ), 
+
+
+    symp_anxiety=patients.with_these_clinical_events(
+        anxiety_symptom_codes,
+        on_or_after=f"{index_date_variable}",
+        find_first_match_in_period=True,
+        returning="date", 
+        date_format="YYYY-MM-DD",
+        return_expectations={"date": {"earliest": "index_date"}},
+    ),  
+
+    t1_symp_anxiety=patients.with_these_clinical_events(
+        anxiety_symptom_codes,
+        between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t2_symp_anxiety=patients.with_these_clinical_events(
+        anxiety_symptom_codes,
+        between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t3_symp_anxiety=patients.with_these_clinical_events(
+        anxiety_symptom_codes,
         between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
@@ -623,6 +810,102 @@ def generate_outcome_variables_symp_contemporary(index_date_variable):
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ), 
+
+
+
+    symp_sorethroat=patients.with_these_clinical_events(
+        sorethroat_symptom_codes,
+        on_or_after=f"{index_date_variable}",
+        find_first_match_in_period=True,
+        returning="date", 
+        date_format="YYYY-MM-DD",
+        return_expectations={"date": {"earliest": "index_date"}},
+    ),  
+
+    t1_symp_sorethroat=patients.with_these_clinical_events(
+        sorethroat_symptom_codes,
+        between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t2_symp_sorethroat=patients.with_these_clinical_events(
+        sorethroat_symptom_codes,
+        between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t3_symp_sorethroat=patients.with_these_clinical_events(
+        sorethroat_symptom_codes,
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ), 
+
+
+    symp_nasal_congestion=patients.with_these_clinical_events(
+        nasal_congestion_codes,
+        on_or_after=f"{index_date_variable}",
+        find_first_match_in_period=True,
+        returning="date", 
+        date_format="YYYY-MM-DD",
+        return_expectations={"date": {"earliest": "index_date"}},
+    ),  
+
+    t1_symp_nasal_congestion=patients.with_these_clinical_events(
+        nasal_congestion_codes,
+        between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t2_symp_nasal_congestion=patients.with_these_clinical_events(
+        nasal_congestion_codes,
+        between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t3_symp_nasal_congestion=patients.with_these_clinical_events(
+        nasal_congestion_codes,
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ), 
+
+
+
+    symp_rashes_codes=patients.with_these_clinical_events(
+        rashes_codes,
+        on_or_after=f"{index_date_variable}",
+        find_first_match_in_period=True,
+        returning="date", 
+        date_format="YYYY-MM-DD",
+        return_expectations={"date": {"earliest": "index_date"}},
+    ),  
+
+    t1_symp_rashes_codes=patients.with_these_clinical_events(
+        rashes_codes,
+        between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t2_symp_rashes_codes=patients.with_these_clinical_events(
+        rashes_codes,
+        between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ),  
+
+    t3_symp_rashes_codes=patients.with_these_clinical_events(
+        rashes_codes,
+        between=[f"{index_date_variable} + 181 days", "2022-01-31"],
+        returning="binary_flag", 
+        return_expectations={"incidence": 0.15},
+    ), 
+
 
 
     symp_taste_smell=patients.with_these_clinical_events(
