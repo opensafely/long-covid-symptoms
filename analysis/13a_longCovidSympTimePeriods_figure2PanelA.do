@@ -83,8 +83,16 @@ file write tablecontents "Fig 2: Panel A. Community COVID-19: Odds ratios compar
 file write tablecontents ("Symptom") _tab ("Comparator") _tab ("OR (95% CI)") _tab ("Number of events") _tab ("Proportion of population with events") _n
 
 *loop through each outcome
-*foreach outcome in $diagnosisOutcomes {	
+*this is when doing the whole list
+/*
 foreach outcome in $symp {
+	cap noisily outputORsforOutcome, outcome(`outcome')
+	file write tablecontents _n
+}
+*/
+*this is when doing just the codelists added subsequently (pain etc)
+
+foreach outcome in $sympAddtl {
 	cap noisily outputORsforOutcome, outcome(`outcome')
 	file write tablecontents _n
 }
