@@ -89,7 +89,7 @@ rename case expStatus
 foreach outcome in $medicines {
 		preserve
 			drop if prev_`outcome'==1
-			cap noisily outputORsforOutcome, outcome(tEver_`outcome')
+			cap noisily outputORsforOutcome, outcome(`outcome')
 			file write tablecontents _n
 		restore
 }
