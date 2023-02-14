@@ -1203,6 +1203,15 @@ actions:
         figure1Ahistorical: output/figure1PanelA_longCovidSympAnyTime_contemporary.txt
 
 
+  figure_1panelA_contemporaryCounts:
+    run: stata-mp:latest analysis/12aa_longCovidSympAnyTime_countsPerGroup.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/12aa_longCovidSympAnyTime_countsPerGroupcontemporary.log
+        figure1Ahistorical: output/figure1PanelA_countsPerGroup_contemporary.txt
+
+
 # 12a. FIGURE 1A - SYMPTOMS AT ANY TIME (HISTORICAL - AS ABOVE)
   figure_1panelA_historical:
     run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelA.do historical
@@ -1211,6 +1220,15 @@ actions:
       moderately_sensitive:
         log: logs/12a_longCovidSympAnyTime_figure1PanelAhistorical.log
         figure1Ahistorical: output/figure1PanelA_longCovidSympAnyTime_historical.txt
+
+
+  figure_1panelA_historicalCounts:
+    run: stata-mp:latest analysis/12aa_longCovidSympAnyTime_countsPerGroup.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/12aa_longCovidSympAnyTime_countsPerGrouphistorical.log
+        figure1Ahistorical: output/figure1PanelA_countsPerGroup_historical.txt
 
 
 # 12b. FIGURE 1B - DIAGNOSES AT ANY TIME (CONTEMPORARY)
@@ -1223,6 +1241,15 @@ actions:
         figure1Bcontemporary: output/figure1PanelB_longCovidDiagAnyTime_contemporary.txt
 
 
+  figure_1panelB_contemporaryCounts:
+    run: stata-mp:latest analysis/12bb_longCovidDiagAnyTime_countsPerGroup.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/12bb_longCovidDiagAnyTime_countsPerGroupcontemporary.log
+        figure1Ahistorical: output/figure1PanelB_countsPerGroup_contemporary.txt
+
+
 # 12b. FIGURE 1B - DIAGNOSES AT ANY TIME (HISTORICAL)
   figure_1panelB_historical:
     run: stata-mp:latest analysis/12b_longCovidDiagAnyTime_figure1PanelB.do historical
@@ -1231,6 +1258,15 @@ actions:
       moderately_sensitive:
         log: logs/12b_longCovidDiagAnyTime_figure1PanelBhistorical.log
         figure1Bhistorical: output/figure1PanelB_longCovidDiagAnyTime_historical.txt
+
+
+  figure_1panelB_historicalCounts:
+    run: stata-mp:latest analysis/12bb_longCovidDiagAnyTime_countsPerGroup.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/12bb_longCovidDiagAnyTime_countsPerGrouphistorical.log
+        figure1Ahistorical: output/figure1PanelB_countsPerGroup_historical.txt
 
 
 # 12c. FIGURE 1C - PRESCRIPTIONS AT ANY TIME (CONTEMPORARY)
@@ -1243,6 +1279,15 @@ actions:
         figure1Ccontemporary: output/figure1PanelC_longCovidPrescrAnyTime_contemporary.txt
 
 
+  figure_1panelC_contemporaryCounts:
+    run: stata-mp:latest analysis/12cc_longCovidBNFAnyTime_countsPerGroup.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/12cc_longCovidBNFAnyTime_countsPerGroupcontemporary.log
+        figure1Ahistorical: output/figure1PanelC_countsPerGroup_contemporary.txt
+
+
 # 12c. FIGURE 1C - PRESCRIPTIONS AT ANY TIME (HISTORICAL)
   figure_1panelC_historical:
     run: stata-mp:latest analysis/12c_longCovidBNFAnyTime_figure1PanelC.do historical
@@ -1251,6 +1296,15 @@ actions:
       moderately_sensitive:
         log: logs/12c_longCovidPrescrAnyTime_figure1PanelChistorical.log
         figure1Chistorical: output/figure1PanelC_longCovidPrescrAnyTime_historical.txt
+
+
+  figure_1panelC_historicalCounts:
+    run: stata-mp:latest analysis/12cc_longCovidBNFAnyTime_countsPerGroup.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/12cc_longCovidBNFAnyTime_countsPerGrouphistorical.log
+        figure1Ahistorical: output/figure1PanelC_countsPerGroup_historical.txt
 
 
 # 13a. FIGURE 2A - SYMPTOMS OVER THREE TIME PERIODS (CONTEMPORARY - GOING TO RUN THIS NEXT WHEN ALL SYMPS ARE READY)
@@ -1262,6 +1316,14 @@ actions:
         log: logs/13a_longCovidSympTimePeriods_figure2PanelAcontemporary.log
         figure2Acontemporary: output/figure2PanelA_longCovidSympTimePeriods_contemporary.txt
 
+  figure_2panelA_contemporaryCounts:
+    run: stata-mp:latest analysis/13aa_longCovidSympTimePeriods_countsPerGroup.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/13aa_longCovidSympTimePeriods_countsPerGroupcontemporary.log
+        figure1Ahistorical: output/figure2PanelA_countsPerGroup_contemporary.txt
+
 
 # 13a. FIGURE 2A - SYMPTOMS OVER THREE TIME PERIODS (HISTORICAL - AS ABOVE)
   figure_2panelA_historical:
@@ -1271,6 +1333,16 @@ actions:
       moderately_sensitive:
         log: logs/13a_longCovidSympTimePeriods_figure2PanelAhistorical.log
         figure2Ahistorical: output/figure2PanelA_longCovidSympTimePeriods_historical.txt
+
+  figure_2panelA_historicalCounts:
+    run: stata-mp:latest analysis/13aa_longCovidSympTimePeriods_countsPerGroup.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/13aa_longCovidSympTimePeriods_countsPerGrouphistorical.log
+        figure1Ahistorical: output/figure2PanelA_countsPerGroup_historical.txt
+
+
 
 
 # 13b. FIGURE 2B - DIAGNOSES OVER THREE TIME PERIODS (CONTEMPORARY)
@@ -1282,6 +1354,14 @@ actions:
         log: logs/13b_longCovidDiagTimePeriods_figure2PanelBcontemporary.log
         figure2Bcontemporary: output/figure2PanelB_longCovidDiagTimePeriods_contemporary.txt
 
+  figure_2panelB_contemporaryCounts:
+    run: stata-mp:latest analysis/13bb_longCovidDiagTimePeriods_countsPerGroup.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/13bb_longCovidDiagTimePeriods_countsPerGroupcontemporary.log
+        figure1Ahistorical: output/figure2PanelB_countsPerGroup_contemporary.txt
+
   # 13b. FIGURE 2B - DIAGNOSES OVER THREE TIME PERIODS (historical)
   figure_2panelB_historical:
     run: stata-mp:latest analysis/13b_longCovidDiagTimePeriods_figure2PanelB.do historical
@@ -1290,6 +1370,15 @@ actions:
       moderately_sensitive:
         log: logs/13b_longCovidDiagTimePeriods_figure2PanelBhistorical.log
         figure12Bhistorical: output/figure2PanelB_longCovidDiagTimePeriods_historical.txt
+
+
+  figure_2panelB_historicalCounts:
+    run: stata-mp:latest analysis/13bb_longCovidDiagTimePeriods_countsPerGroup.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/13bb_longCovidDiagTimePeriods_countsPerGrouphistorical.log
+        figure1Ahistorical: output/figure2PanelB_countsPerGroup_historical.txt
 
 
   # 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (CONTEMPORARY)
@@ -1301,6 +1390,14 @@ actions:
         log: logs/13c_longCovidPrescrTimePeriods_figure2PanelCcontemporary.log
         figure2Ccontemporary: output/figure2PanelC_longCovidPrescrTimePeriods_contemporary.txt
 
+  figure_2panelC_contemporaryCounts:
+    run: stata-mp:latest analysis/13cc_longCovidBNFTimePeriods_countsPerGroup.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/13cc_longCovidBNFTimePeriods_countsPerGroupcontemporary.log
+        figure1Ahistorical: output/figure2PanelC_countsPerGroup_contemporary.txt
+
 
   # 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (historical)
   figure_2panelC_historical:
@@ -1310,6 +1407,18 @@ actions:
       moderately_sensitive:
         log: logs/13c_longCovidPrescrTimePeriods_figure2PanelChistorical.log
         figure2Chistorical: output/figure2PanelC_longCovidPrescrTimePeriods_historical.txt
+
+
+  figure_2panelC_historicalCounts:
+    run: stata-mp:latest analysis/13cc_longCovidBNFTimePeriods_countsPerGroup.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/13cc_longCovidBNFTimePeriods_countsPerGrouphistorical.log
+        figure1Ahistorical: output/figure2PanelC_countsPerGroup_historical.txt
+
+
+
 
 
 
