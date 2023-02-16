@@ -486,6 +486,7 @@ sum numPrescTypesPrevYear, detail
 la var numPrescTypesPrevYear "Number of types of distinct BNF groups of drugs prescribed in prev year"
 *for now create a category with 0, 1, 2+
 egen numPrescTypesPrevYearCat=cut(numPrescTypesPrevYear), at (0, 1, 3, 200) 
+recode numPrescTypesPrevYearCat 3=2
 label define numPrescTypesPrevYearCat 0 "0" 1 "1-2" 2 "3+"
 label values numPrescTypesPrevYearCat numPrescTypesPrevYearCat
 safetab numPrescTypesPrevYearCat, miss
