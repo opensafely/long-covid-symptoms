@@ -1420,6 +1420,30 @@ actions:
 
 
 
+  # 14. FIGURE 3 - COMPARISON OF MEDIAN CONSULTATION RATE (CONTEMPORARY)
+  figure_3_contemporary:
+    run: stata-mp:latest analysis/14_longCovidConsultations_figure3.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/14_longCovidConsultationRate_figure3contemporary.log
+        figure3contemporary: output/figure3_longCovidConsultations_contemporary.txt
+
+
+  # 14. FIGURE 3 - COMPARISON OF MEDIAN CONSULTATION RATE (HISTORICAL)
+  figure_3_historical:
+    run: stata-mp:latest analysis/14_longCovidConsultations_figure3.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/14_longCovidConsultationRate_figure3historical.log
+        figure3historical: output/figure3_longCovidConsultations_historical.txt
+
+
+
+
+
+
 
 
 
