@@ -83,13 +83,26 @@ file write tablecontents "Fig 2: Panel A. Community COVID-19: Odds ratios compar
 file write tablecontents ("Symptom") _tab ("Comparator") _tab ("OR (95% CI)") _tab ("Number of events") _tab ("Proportion of population with events") _n
 
 *loop through each outcome
-*this is when doing the whole list
 /*
 foreach outcome in $symp {
 	cap noisily outputORsforOutcome, outcome(`outcome')
 	file write tablecontents _n
 }
 */
+
+*stratified by previous year gpcount
+file write tablecontents ("Symptom results stratified by consultations in prev year (0=0 consultations, 1=1-5 consultations, 2=6+ consultations)") _n
+forvalues i=0/2 {
+	preserve
+		keep if gpCountPrevYearCat==`i'
+		file write tablecontents ("Previous gp count category `i'") _n
+		foreach outcome in $symp {
+			cap noisily outputORsforOutcome, outcome(`outcome')
+			file write tablecontents _n
+		}
+	restore
+}
+
 *this is when doing just the codelists added subsequently (pain etc)
 
 *Entire list
@@ -100,10 +113,12 @@ foreach outcome in $sympAddtl {
 }
 */
 
+/*
 *JUST FOR DELIRIUM
 keep if age>=67
 cap noisily outputORsforOutcome, outcome(symp_delirium)
 file write tablecontents _n
+*/
 
 cap file close tablecontents 
 cap log close
