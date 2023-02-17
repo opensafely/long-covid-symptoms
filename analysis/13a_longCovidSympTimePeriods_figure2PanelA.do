@@ -92,10 +92,18 @@ foreach outcome in $symp {
 */
 *this is when doing just the codelists added subsequently (pain etc)
 
+*Entire list
+/*
 foreach outcome in $sympAddtl {
 	cap noisily outputORsforOutcome, outcome(`outcome')
 	file write tablecontents _n
 }
+*/
+
+*JUST FOR DELIRIUM
+keep if age>=67
+cap noisily outputORsforOutcome, outcome(symp_delirium)
+file write tablecontents _n
 
 cap file close tablecontents 
 cap log close
