@@ -106,14 +106,15 @@ file write tablecontents ("Diagnoses") _tab _tab ("OR (95% CI)") _tab ("Number o
 
 
 *loop through each outcome
-/*
+
 foreach outcome in $symp {
 	cap noisily outputORsforOutcome, outcome(tEver_`outcome')
 	file write tablecontents _n
 }
-*/
+
 
 *stratified by previous year gpcount
+/*
 file write tablecontents ("Symptom results stratified by consultations in prev year (0=0 consultations, 1=1-5 consultations, 2=6+ consultations)") _n
 forvalues i=0/2 {
 	preserve
@@ -125,6 +126,7 @@ forvalues i=0/2 {
 		}
 	restore
 }
+*/
 
 
 *this is when doing just the codelists added subsequently (pain etc)
