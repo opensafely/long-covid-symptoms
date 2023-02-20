@@ -1457,6 +1457,22 @@ actions:
         figure1Ahistorical: output/Figure4_gpConsInteraction_historical.txt
 
 
+  # 16. FIGURE 4 - P-VALUES FOR INTERACTION FOR FIGURE 4
+  figure_4_p_values_contemporary:
+    run: stata-mp:latest analysis/15a_longCovidSympAnyTime_gpConsInteraction_pvalues.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/15a_longCovidSympAnyTime_gpConsInteraction_pvaluescontemporary.log
+
+  figure_4_p_values_historical:
+    run: stata-mp:latest analysis/15a_longCovidSympAnyTime_gpConsInteraction_pvalues.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/15a_longCovidSympAnyTime_gpConsInteraction_pvalueshistorical.log
+
+
 
 
 
