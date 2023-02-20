@@ -1418,8 +1418,6 @@ actions:
         figure1Ahistorical: output/figure2PanelC_countsPerGroup_historical.txt
 
 
-
-
   # 14. FIGURE 3 - COMPARISON OF MEDIAN CONSULTATION RATE (CONTEMPORARY)
   figure_3_contemporary:
     run: stata-mp:latest analysis/14_longCovidConsultations_figure3.do contemporary
@@ -1438,6 +1436,25 @@ actions:
       moderately_sensitive:
         log: logs/14_longCovidConsultationRate_figure3historical.log
         figure3historical: output/figure3_longCovidConsultations_historical.txt
+
+
+
+  # 15. FIGURE 4 - SYMPTOMS AT ANY TIME WITH INTERACTION WITH PREV GPCONS (CONTEMPORARY - GOING TO RUN THIS NEXT WHEN ALL SYMPS ARE READY)
+  figure_4_contemporary:
+    run: stata-mp:latest analysis/15_longCovidSympAnyTime_gpConsInteraction.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/15_longCovidSympAnyTime_gpConsInteractioncontemporary.log
+        figure1Ahistorical: output/Figure4_gpConsInteraction_contemporary.txt
+
+  figure_4_historical:
+    run: stata-mp:latest analysis/15_longCovidSympAnyTime_gpConsInteraction.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/15_longCovidSympAnyTime_gpConsInteractionhistorical.log
+        figure1Ahistorical: output/Figure4_gpConsInteraction_historical.txt
 
 
 
