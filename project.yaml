@@ -1439,7 +1439,7 @@ actions:
 
 
 
-  # 15. FIGURE 4 - SYMPTOMS AT ANY TIME WITH INTERACTION WITH PREV GPCONS (CONTEMPORARY - GOING TO RUN THIS NEXT WHEN ALL SYMPS ARE READY)
+  # 15. FIGURE 4 - SYMPTOMS AT ANY TIME WITH INTERACTION WITH PREV GPCONS
   figure_4_contemporary:
     run: stata-mp:latest analysis/15_longCovidSympAnyTime_gpConsInteraction.do contemporary
     needs: [create_contemporary_analysis_file]
@@ -1471,6 +1471,24 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/15a_longCovidSympAnyTime_gpConsInteraction_pvalueshistorical.log
+
+
+  # 16. FIGURE 5 - SYMPTOMS OVER THREE TIME PERIODS WITH INTERACTION WITH PREV GPCONS 
+  figure_5_contemporary:
+    run: stata-mp:latest analysis/16_longCovidSympTimePeriods_gpConsInteraction.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/16_longCovidSympTimePeriods_gpConsInteractioncontemporary.log
+        figure1Ahistorical: output/Figure5_gpConsInteraction_contemporary.txt
+
+  figure_5_historical:
+    run: stata-mp:latest analysis/16_longCovidSympTimePeriods_gpConsInteraction.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/16_longCovidSympTimePeriods_gpConsInteractionhistorical.log
+        figure1Ahistorical: output/Figure5_gpConsInteraction_historical.txt
 
 
 
