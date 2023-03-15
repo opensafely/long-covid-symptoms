@@ -179,10 +179,10 @@ safetab numPrescTypesPrevYearCat
 
 *all outcomes 
 foreach var of varlist $diag $symp $medicines { 
-	safetab t1_`var', m
-	safetab t2_`var', m
-	safetab t3_`var', m
-	safetab tEver_`var', m
+	safetab t1_`var' case, m
+	safetab t2_`var' case, m
+	safetab t3_`var' case, m
+	safetab tEver_`var' case, m
 }
 
 

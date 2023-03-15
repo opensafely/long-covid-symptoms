@@ -106,14 +106,15 @@ file write tablecontents ("Diagnoses") _tab _tab ("OR (95% CI)") _tab ("Number o
 
 
 *loop through each outcome
-
+/*
 foreach outcome in $symp {
 	cap noisily outputORsforOutcome, outcome(tEver_`outcome')
 	file write tablecontents _n
 }
+*/
 
 
-*stratified by previous year gpcount
+*stratified by previous year gpcount - done this via an interaction instead in file 15
 /*
 file write tablecontents ("Symptom results stratified by consultations in prev year (0=0 consultations, 1=1-5 consultations, 2=6+ consultations)") _n
 forvalues i=0/2 {
@@ -130,19 +131,22 @@ forvalues i=0/2 {
 
 
 *this is when doing just the codelists added subsequently (pain etc)
-/*
 foreach outcome in $sympAddtl {
 	cap noisily outputORsforOutcome, outcome(tEver_`outcome')
 	file write tablecontents _n
 }
-*/
 
-/*
+
 *JUST FOR DELIRIUM
 keep if age>=67
 cap noisily outputORsforOutcome, outcome(tEver_symp_delirium)
 file write tablecontents _n
-*/
+
+
+*JUST FOR any symptom ever
+cap noisily outputORsforOutcome, outcome(anySymptomEver)
+file write tablecontents _n
+
 
 cap file close tablecontents 
 cap log close

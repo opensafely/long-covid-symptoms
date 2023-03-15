@@ -529,7 +529,11 @@ foreach var of varlist $diag $symp $medicines {
 	label variable t3_`var' "t3_`var'"
 } 
 
-
+*create a variable that defines whether a person had ANY symptoms
+egen totalSymptoms = rowtotal($symp)
+generate anySymptomEver=0
+replace anySymptomEver=1 if totalSymptoms>0
+la var anySymptomEver "Had at least one symptom"
 
 *(g) Sex
 rename sex sexOrig
