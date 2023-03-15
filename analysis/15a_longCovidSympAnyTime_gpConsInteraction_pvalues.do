@@ -29,12 +29,13 @@ rename case expStatus
 
 *loop through each outcome
 foreach outcome in $symp {
-	display "OUTCOME: tEver_`outcome'"
-	capture noisily clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+	capture quietly clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	est store A
-	capture noisily clogit tEver_`outcome' i.expStatus i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+	capture quietly clogit tEver_`outcome' i.expStatus i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	est store B
 	lrtest A B, force
+	display "LRtest p-value for tEver_`outcome':"
+	display r(p)
 }
 
 cap file close tablecontents 

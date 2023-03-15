@@ -105,10 +105,16 @@ file write tablecontents ("Diagnoses") _tab ("Comparator") _tab _tab ("OR (95% C
 
 *loop through each outcome
 *foreach outcome in $diagnosisOutcomes {
+	/*
 foreach outcome in $diag {
 	cap noisily outputORsforOutcome, outcome(tEver_`outcome')
 	file write tablecontents _n
 }
+*/
+
+*eye disease (left out originally)
+cap noisily outputORsforOutcome, outcome(tEver_eye_adnexa_dis)
+file write tablecontents _n
 
 cap file close tablecontents 
 cap log close
