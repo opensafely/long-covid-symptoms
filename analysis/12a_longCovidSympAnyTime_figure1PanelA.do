@@ -137,14 +137,14 @@ foreach outcome in $sympAddtl {
 }
 
 
-*JUST FOR DELIRIUM
-keep if age>=67
-cap noisily outputORsforOutcome, outcome(tEver_symp_delirium)
+*JUST FOR any symptom ever
+cap noisily outputORsforOutcome, outcome(anySymptomEver)
 file write tablecontents _n
 
 
-*JUST FOR any symptom ever
-cap noisily outputORsforOutcome, outcome(anySymptomEver)
+*JUST FOR DELIRIUM
+keep if age>=67
+cap noisily outputORsforOutcome, outcome(tEver_symp_delirium)
 file write tablecontents _n
 
 
