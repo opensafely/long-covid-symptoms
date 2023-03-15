@@ -876,7 +876,7 @@ def generate_outcome_variables_symp_contemporary(index_date_variable):
 
 
 
-    symp_rashes_codes=patients.with_these_clinical_events(
+    symp_rashes=patients.with_these_clinical_events(
         rashes_codes,
         on_or_after=f"{index_date_variable}",
         find_first_match_in_period=True,
@@ -885,21 +885,21 @@ def generate_outcome_variables_symp_contemporary(index_date_variable):
         return_expectations={"date": {"earliest": "index_date"}},
     ),  
 
-    t1_symp_rashes_codes=patients.with_these_clinical_events(
+    t1_symp_rashes=patients.with_these_clinical_events(
         rashes_codes,
         between=[f"{index_date_variable} + 28 days", f"{index_date_variable} + 84 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t2_symp_rashes_codes=patients.with_these_clinical_events(
+    t2_symp_rashes=patients.with_these_clinical_events(
         rashes_codes,
         between=[f"{index_date_variable} + 85 days", f"{index_date_variable} + 180 days"],
         returning="binary_flag", 
         return_expectations={"incidence": 0.15},
     ),  
 
-    t3_symp_rashes_codes=patients.with_these_clinical_events(
+    t3_symp_rashes=patients.with_these_clinical_events(
         rashes_codes,
         between=[f"{index_date_variable} + 181 days", "2022-01-31"],
         returning="binary_flag", 
