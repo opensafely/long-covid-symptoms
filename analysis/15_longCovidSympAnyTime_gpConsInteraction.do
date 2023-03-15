@@ -71,11 +71,23 @@ file open tablecontents using ./output/Figure4_gpConsInteraction_`dataset'.txt, 
 file write tablecontents "Fig 4: Analysis of symptoms (at any time) including interaction with age for `dataset' comparator population (full adjusted)" _n _n
 file write tablecontents ("Symptom") _tab ("Prev GP consults") _tab ("OR (95% CI)") _n
 
+/*
 *loop through each outcome
 foreach outcome in $symp {
 	cap noisily outputORsforOutcome, outcome(tEver_`outcome')
 	file write tablecontents _n
 }
+*/
+
+*JUST FOR any symptom ever
+cap noisily outputORsforOutcome, outcome(anySymptomEver)
+file write tablecontents _n
+
+*JUST FOR DELIRIUM
+keep if age>=67
+cap noisily outputORsforOutcome, outcome(tEver_symp_delirium)
+file write tablecontents _n
+
 
 cap file close tablecontents 
 cap log close
