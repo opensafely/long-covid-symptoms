@@ -94,16 +94,16 @@ foreach outcome in $symp {
 }*/
 
 *JUST FOR any symptom ever
-cap noisily outputORsforOutcome, outcome(anySymptomEver)
+cap noisily outputCountsforOutcome, outcome(anySymptomsEver)
 file write tablecontents _n
 
 *JUST FOR skin rash (as was error in historical)
-cap noisily outputORsforOutcome, outcome(tEver_symp_rashes)
+cap noisily outputCountsforOutcome, outcome(tEver_symp_rashes)
 file write tablecontents _n
 
 *JUST FOR DELIRIUM
 keep if age>=67
-cap noisily outputORsforOutcome, outcome(tEver_symp_delirium)
+cap noisily outputCountsforOutcome, outcome(tEver_symp_delirium)
 file write tablecontents _n
 
 

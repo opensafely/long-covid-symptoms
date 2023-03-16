@@ -138,7 +138,7 @@ foreach outcome in $sympAddtl {
 
 
 *JUST FOR any symptom ever
-cap noisily outputORsforOutcome, outcome(anySymptomEver)
+cap noisily outputORsforOutcome, outcome(anySymptomsEver)
 file write tablecontents _n
 
 

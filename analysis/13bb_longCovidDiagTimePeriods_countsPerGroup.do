@@ -95,6 +95,9 @@ foreach outcome in $diag {
 	file write tablecontents _n
 }*/
 
+cap noisily outputCountsforOutcome, outcome(tEver_eye_adnexa_dis)
+file write tablecontents _n
+
 cap file close tablecontents 
 cap log close
 
