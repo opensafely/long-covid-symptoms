@@ -493,8 +493,6 @@ safetab numPrescTypesPrevYearCat, miss
 la var numPrescTypesPrevYearCat "Number of types of distinct BNF groups of drugs prescribed in prev year"
 
 
-
-
 *(f) Recode all dates from the strings 
 *order variables to make for loop quicker (remember the plain diag and symp named variables contain dates)
 order patient_id case_index_date first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_hosp pos_covid_test_ever death_date dereg_date first_known_covid19 $diag $symp
@@ -521,6 +519,15 @@ foreach var of varlist $diag $symp $medicines {
 	replace tEver_`var'=1 if t1_`var'==1 | t2_`var'==1 |  t3_`var'==1
 } 
 
+*create a variable that defines whether a person had ANY symptoms ever over followup
+generate sympCounter=0
+foreach var of varlist $symp {
+	replace sympCounter=sympCounter+tEver_`var'
+} 
+generate anySymptomsEver=0
+replace anySymptomsEver=1 if sympCounter>0
+
+
 *create variable names
 foreach var of varlist $diag $symp $medicines {
 	label variable tEver_`var' "tEver_`var'"
@@ -528,12 +535,8 @@ foreach var of varlist $diag $symp $medicines {
 	label variable t2_`var' "t2_`var'"
 	label variable t3_`var' "t3_`var'"
 } 
-
-*create a variable that defines whether a person had ANY symptoms
-egen totalSymptoms = rowtotal($symp)
-generate anySymptomEver=0
-replace anySymptomEver=1 if totalSymptoms>0
-la var anySymptomEver "Had at least one symptom"
+la var sympCounter "Total number of types of symptoms"
+label variable anySymptomsEver "Had at least one symptom during entire follow-up"
 
 *(g) Sex
 rename sex sexOrig

@@ -83,11 +83,16 @@ file write tablecontents "Fig 2: Panel A. Community COVID-19: Odds ratios compar
 file write tablecontents ("Symptom") _tab ("Comparator") _tab ("OR (95% CI)") _tab ("Number of events") _tab ("Proportion of population with events") _n
 
 *loop through each outcome
-*foreach outcome in $diagnosisOutcomes {	
+*foreach outcome in $diagnosisOutcomes {
+	/*	
 foreach outcome in $diag {
 	cap noisily outputORsforOutcome, outcome(`outcome')
 	file write tablecontents _n
 }
+*/
+
+cap noisily outputORsforOutcome, outcome(tEver_eye_adnexa_dis)
+file write tablecontents _n
 
 cap file close tablecontents 
 cap log close

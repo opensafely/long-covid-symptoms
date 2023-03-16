@@ -80,7 +80,7 @@ foreach outcome in $symp {
 */
 
 *JUST FOR any symptom ever
-cap noisily outputORsforOutcome, outcome(anySymptomEver)
+cap noisily outputORsforOutcome, outcome(anySymptomsEver)
 file write tablecontents _n
 
 *JUST FOR DELIRIUM
