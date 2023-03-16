@@ -6,7 +6,7 @@
 * of interest, across 2 outcomes 
 *
 *Requires: final analysis dataset (analysis_dataset.dta)
-
+*k
 *
 *Coding: K Wing, base on file from HFORBES, based on file from Krishnan Bhaskaran
 *
@@ -81,6 +81,10 @@ foreach outcome in $symp {
 
 *JUST FOR any symptom ever
 cap noisily outputORsforOutcome, outcome(anySymptomsEver)
+file write tablecontents _n
+
+*JUST FOR skin rash
+cap noisily outputORsforOutcome, outcome(tEver_symp_rashes)
 file write tablecontents _n
 
 *JUST FOR DELIRIUM

@@ -120,6 +120,23 @@ cap noisily outputORsforOutcome, outcome(symp_delirium)
 file write tablecontents _n
 */
 
+*this is when doing just the codelists added subsequently (pain etc)
+foreach outcome in $sympAddtl {
+	cap noisily outputORsforOutcome, outcome(tEver_`outcome')
+	file write tablecontents _n
+}
+
+
+*JUST FOR any symptom ever
+cap noisily outputORsforOutcome, outcome(anySymptomsEver)
+file write tablecontents _n
+
+
+*JUST FOR delirium
+keep if age>=67
+cap noisily outputORsforOutcome, outcome(tEver_symp_delirium)
+file write tablecontents _n
+
 cap file close tablecontents 
 cap log close
 
