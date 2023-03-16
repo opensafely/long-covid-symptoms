@@ -22,7 +22,7 @@ local dataset `1'
 
 *checking tabulations
 capture log close
-log using ./logs/15a_longCovidSympAnyTime_gpConsInteraction_pvalues`dataset'.log, replace t
+log using ./logs/15a_longCovidSympAnyTime_gpConsInt_pvals`dataset'.log, replace t
 
 use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 rename case expStatus
@@ -36,7 +36,16 @@ foreach outcome in $symp {
 	lrtest A B, force
 	display "LRtest p-value for tEver_`outcome':"
 	display r(p)
-}
+}\
+
+*do any symptom ever
+capture quietly clogit anySymptomsEver i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+est store A
+capture quietly clogit anySymptomsEver i.expStatus i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+est store B
+lrtest A B, force
+display "LRtest p-value for anySymptomsEver:"
+display r(p)
 
 cap file close tablecontents 
 cap log close
