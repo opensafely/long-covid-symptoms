@@ -1463,14 +1463,14 @@ actions:
     needs: [create_contemporary_analysis_file]
     outputs:
       moderately_sensitive:
-        log: logs/15a_longCovidSympAnyTime_gpConsInteraction_pvaluescontemporary.log
+        log: logs/15a_longCovidSympAnyTime_gpConsInt_pvalscontemporary.log
 
   figure_4_p_values_historical:
     run: stata-mp:latest analysis/15a_longCovidSympAnyTime_gpConsInteraction_pvalues.do historical
     needs: [create_historical_analysis_file]
     outputs:
       moderately_sensitive:
-        log: logs/15a_longCovidSympAnyTime_gpConsInteraction_pvalueshistorical.log
+        log: logs/15a_longCovidSympAnyTime_gpConsInt_pvalshistorical.log
 
 
   # 16. FIGURE 5 - SYMPTOMS OVER THREE TIME PERIODS WITH INTERACTION WITH PREV GPCONS 
@@ -1490,6 +1490,15 @@ actions:
         log: logs/16_longCovidSympTimePeriods_gpConsInteractionhistorical.log
         figure1Ahistorical: output/Figure5_gpConsInteraction_historical.txt
 
+
+# 17. TABLES FOR SUNBURST
+  sunburst_contemporary:
+    run: stata-mp:latest analysis/17_longCovidSympTimePeriods_sunburst.do
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/17_longCovidSympTimePeriods_sunburstcontemporary.log
+        figure1Ahistorical: output/sunburst_contemporary.txt
 
 
 

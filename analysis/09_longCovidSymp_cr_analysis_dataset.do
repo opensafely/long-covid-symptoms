@@ -538,6 +538,39 @@ foreach var of varlist $diag $symp $medicines {
 la var sympCounter "Total number of types of symptoms"
 label variable anySymptomsEver "Had at least one symptom during entire follow-up"
 
+
+*CREATE THE SUNBURST PLOT VARIABLES
+*first, create variables that select people who had NO symptoms for each of the three time periods
+forvalues i=1/3 {
+	generate t`i'_sympCounter=0
+	foreach var of varlist $symp {
+		replace t`i'_sympCounter=t`i'_sympCounter+t`i'_`var'
+	}
+	generate t`i'_noSymptoms=1
+	la var t`i'_noSymptoms "t`i'_noSymptoms"
+	replace t`i'_noSymptoms=0 if t`i'_sympCounter>0
+}
+
+*then, setup broad symptom categories and mark who had any of these for each timeperiod
+*first loop loops through each of the high level categories
+foreach a of global highLevelSymp  {
+	display "`a'"
+	*second loop loops through time periods
+	forvalues i=1/3 {
+		generate t`i'_`a'Counter=0
+		*final loop loops through each symptom of the high level category and adds one to counter if the symptom was present during that time period
+		foreach var of varlist $`a' {
+			replace t`i'_`a'Counter=t`i'_`a'Counter+t`i'_`var'
+		}
+		generate t`i'_`a'=0
+		replace t`i'_`a'=1 if t`i'_`a'Counter>0
+		la var t`i'_`a' "t`i'_`a'"
+	}
+}
+
+
+
+
 *(g) Sex
 rename sex sexOrig
 gen sex = 1 if sexOrig == "M"
