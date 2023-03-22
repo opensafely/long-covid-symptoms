@@ -4,12 +4,31 @@
 *set up some global lists of all comorb, diagnosis and symptom variables to help with subsequent programming (all will need updated as Kate approves more codelists)
 *master list of comorbs
 global comorbs comorb_infection_or_parasite comorb_neoplasms comorb_blood_diseases comorb_endocrine_nutr_metab_dise comorb_mental_behav_disorder comorb_nervous_system_diseases comorb_ear_mastoid_disease comorb_circulatory_system_diseas comorb_respiratory_system_diseas comorb_digestive_system_disease comorb_skin_disease comorb_muscuoloskeletal_connecti comorb_genitourinary_disease comorb_pregnancy_complications comorb_perinatal_disease comorb_congenital_disease comorb_injury_poisoning
+
+
 *master list of diagnoses
 global diag infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_disorder nervous_sys_dis eye_adnexa_dis ear_mastoid_dis circ_sys_dis resp_system_dis digest_syst_dis skin_disease musculo_dis genitourin_dis pregnancy_compl perinatal_dis congenital_dis injury_poison
+
+
 *master list of symptoms
 global symp symp_breathless symp_cough symp_chesttight symp_chestpain symp_palp symp_fatigue symp_fever symp_cogimpair symp_headache symp_sleepdisturb symp_periphneuro symp_dizzy symp_delirium symp_mobilityimpair symp_visualdisturbance symp_abdominalpain symp_nauseavomiting symp_diarrhoea symp_weightloss symp_pain symp_depression symp_anxiety symp_ptsd symp_tinnitus symp_earache symp_sorethroat symp_taste_smell symp_nasal_congestion symp_rashes symp_hairloss 
 *symptoms added later (also included in above list but list is here to help minimise amount of regressions, includes one already in above as a sanity check)
 global sympAddtl symp_chestpain symp_abdominalpain symp_diarrhoea symp_pain symp_depression symp_anxiety symp_sorethroat symp_nasal_congestion symp_rashes symp_mobilityimpair
+*high level symptom categories
+global sympResp symp_breathless symp_cough
+global sympCardio symp_chesttight symp_chestpain symp_palp
+global sympGeneral symp_fatigue symp_fever
+global sympNeuro symp_cogimpair symp_headache symp_sleepdisturb symp_periphneuro symp_dizzy symp_delirium symp_mobilityimpair symp_visualdisturbance
+global sympGastro symp_abdominalpain symp_nauseavomiting symp_diarrhoea symp_weightloss
+global sympMusculo symp_pain
+global sympPsych symp_depression symp_anxiety symp_ptsd
+global sympENT symp_tinnitus symp_earache symp_sorethroat symp_taste_smell symp_nasal_congestion
+global sympDerm symp_rashes symp_hairloss
+*list of all highlevel categories
+global highLevelSymp sympResp sympCardio sympGeneral sympNeuro sympGastro sympMusculo sympPsych sympENT sympDerm
+*list of all highlevel categories + noSymptoms category
+global highLevelSympAndNone sympResp sympCardio sympGeneral sympNeuro sympGastro sympMusculo sympPsych sympENT sympDerm noSymptoms
+
 *master list of medicine group outcomes
 global medicines bnf_gastro_broad bnf_cardio_broad bnf_respiratory_broad bnf_cns_broad bnf_infect_broad bnf_endo_broad bnf_obstet_broad bnf_malign_broad bnf_nutr_broad bnf_musculo_broad bnf_eye_broad bnf_ear_broad bnf_skin_broad bnf_broncho_spec bnf_cough_spec bnf_antiarrhth_spec bnf_analgesics_spec bnf_hypnotics_spec bnf_nausea_spec bnf_diarrhoea_spec bnf_nsaids_spec bnf_topicalpain_spec bnf_antidepr_spec bnf_anxiolytic_spec
 *master list of prev medicine groups 
