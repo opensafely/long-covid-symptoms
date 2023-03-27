@@ -57,7 +57,7 @@ prog define outputCountsforOutcome
 		local expPercWEvent=100*(`expEvents'/`expDenom')	
 						
 		*get variable name
-		local varLab: variable label `outcome'
+		local varLab: variable label t`i'_`outcome'
 		display "`varLab'"
 		*get category name
 		*local category: label `catLabel' `i'
@@ -84,16 +84,31 @@ file write tablecontents ("Unexposed to COVID N=`totUnexp'") _tab ("Exposed to C
 file write tablecontents _tab ("Total N") _tab ("n with event") _tab ("% of total with events") _tab ("Unexposed N") _tab ("n unexposed with event") _tab ("% of unexposed with events") _tab ("Exposed to COVID N") _tab ("n exposed to COVID with event") _tab ("% of exposed to COVID with events") _n
 
 *loop through each outcome
+/*
 foreach outcome in $symp {
 	cap noisily outputCountsforOutcome, outcome(`outcome')
 	file write tablecontents _n
 }
+*/
 
 *this is when doing just the codelists added subsequently (pain etc)
 /*foreach outcome in $sympAddtl {
 	cap noisily outputCountsforOutcome, outcome(tEver_`outcome')
 	file write tablecontents _n
 }*/
+
+*JUST FOR any symptom ever
+cap noisily outputCountsforOutcome, outcome(anySymptomsEver)
+file write tablecontents _n
+
+*JUST FOR skin rash (as was error in historical)
+cap noisily outputCountsforOutcome, outcome(symp_rashes)
+file write tablecontents _n
+
+*JUST FOR DELIRIUM
+keep if age>=67
+cap noisily outputCountsforOutcome, outcome(symp_delirium)
+file write tablecontents _n
 
 cap file close tablecontents 
 cap log close

@@ -91,7 +91,7 @@ foreach outcome in $diag {
 }
 */
 
-cap noisily outputORsforOutcome, outcome(tEver_eye_adnexa_dis)
+cap noisily outputORsforOutcome, outcome(eye_adnexa_dis)
 file write tablecontents _n
 
 cap file close tablecontents 

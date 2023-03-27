@@ -519,6 +519,7 @@ foreach var of varlist $diag $symp $medicines {
 	replace tEver_`var'=1 if t1_`var'==1 | t2_`var'==1 |  t3_`var'==1
 } 
 
+
 *create a variable that defines whether a person had ANY symptoms ever over followup
 generate sympCounter=0
 foreach var of varlist $symp {
@@ -526,6 +527,20 @@ foreach var of varlist $symp {
 } 
 generate anySymptomsEver=0
 replace anySymptomsEver=1 if sympCounter>0
+*repeat by each time period
+forvalues i=1/3 {
+	generate t`i'SympCounter=0
+	foreach var of varlist $symp {
+		replace t`i'SympCounter=t`i'SympCounter+t`i'_`var'
+	} 
+	generate t`i'_anySymptomsEver=0
+	replace t`i'_anySymptomsEver=1 if t`i'SympCounter>0
+	la var t`i'_anySymptomsEver "t`i'_anySymptomsEver"
+	drop t`i'SympCounter
+}
+
+
+
 
 
 *create variable names
@@ -539,7 +554,8 @@ la var sympCounter "Total number of types of symptoms"
 label variable anySymptomsEver "Had at least one symptom during entire follow-up"
 
 
-*CREATE THE SUNBURST PLOT VARIABLES
+*****CREATE THE SUNBURST PLOT VARIABLES*****
+*(A) THREE TIME PERIODS
 *first, create variables that select people who had NO symptoms for each of the three time periods
 forvalues i=1/3 {
 	generate t`i'_sympCounter=0
@@ -549,6 +565,7 @@ forvalues i=1/3 {
 	generate t`i'_noSymptoms=1
 	la var t`i'_noSymptoms "t`i'_noSymptoms"
 	replace t`i'_noSymptoms=0 if t`i'_sympCounter>0
+	drop t`i'_sympCounter
 }
 
 *then, setup broad symptom categories and mark who had any of these for each timeperiod
@@ -567,6 +584,41 @@ foreach a of global highLevelSymp  {
 		la var t`i'_`a' "t`i'_`a'"
 	}
 }
+
+
+
+*(B) TWO TIME PERIODS (FIRST TWO TIME PERIODS COMBINED)
+*create a combined t1-t2 for each symptom
+foreach var of varlist $symp {
+	generate t1t2_`var'=0
+	replace t1t2_`var'=1 if t1_`var'|t1_`var'==1
+}
+
+*then, create variables that select people who had NO symptoms for the combined t1t2 group
+generate t1t2_sympCounter=0
+foreach var of varlist $symp {
+	replace t1t2_sympCounter=t1t2_sympCounter+t1t2_`var'
+}
+generate t1t2_noSymptoms=1
+la var t1t2_noSymptoms "t1t2_noSymptoms"
+replace t1t2_noSymptoms=0 if t1t2_sympCounter>0
+drop t1t2_sympCounter
+
+*then, setup broad symptom categories and mark who had any of these for each timeperiod
+*first loop loops through each of the high level categories
+foreach a of global highLevelSymp  {
+	display "`a'"
+	generate t1t2_`a'Counter=0
+	*final loop loops through each symptom of the high level category and adds one to counter if the symptom was present during that time period
+	foreach var of varlist $`a' {
+		replace t1t2_`a'Counter=t1t2_`a'Counter+t1t2_`var'
+	}
+	generate t1t2_`a'=0
+	replace t1t2_`a'=1 if t1t2_`a'Counter>0
+	la var t1t2_`a' "t1t2_`a'"
+}
+
+
 
 
 

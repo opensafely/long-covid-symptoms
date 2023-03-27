@@ -1498,7 +1498,8 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/17_longCovidSympTimePeriods_sunburstcontemporary.log
-        figure1Ahistorical: output/sunburst_contemporary.txt
+        sunburst3levels: output/sunburst_contemporary_3Periods.txt
+        sunburst2levels: output/sunburst_contemporary_2Periods.txt
 
 
 

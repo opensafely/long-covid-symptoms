@@ -25,8 +25,10 @@ log using ./logs/17_longCovidSympTimePeriods_sunburstcontemporary.log, replace t
 use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
 
 
-file open tablecontents using ./output/sunburst_contemporary.txt, t w replace
-file write tablecontents "Tables to support sunburst plots" _n _n
+
+******(A) THREE LEVEL SUNBURST PLOT******
+file open tablecontents using ./output/sunburst_contemporary_3Periods.txt, t w replace
+file write tablecontents "Table to support three level sunburst plot" _n _n
 file write tablecontents ("Level 1") _tab ("n") _tab ("Level 2") _tab ("n") _tab ("Level 3") _tab ("n") _n
 
 *helper macros for outputting to excel
@@ -69,8 +71,42 @@ foreach a of global highLevelSympAndNone {
 	}
 }
 
+cap file close tablecontents 
+
+
+
+******(B) TWO LEVEL SUNBURST PLOT (TIME PERIODS ONE AND TWO COMBINED)*****
+file open tablecontents using ./output/sunburst_contemporary_2Periods.txt, t w replace
+file write tablecontents "Table to support 2 level sunburst plot" _n _n
+file write tablecontents ("Level 1") _tab ("n") _tab ("Level 2") _tab ("n") _n
+
+*helper macros for outputting to excel
+local l1count=-1
+local l2count=0
+
+foreach a of global highLevelSympAndNone {
+	count if t1t2_`a'==1	
+	local level1_Count=round(r(N),5)
+	*get label
+	local level1_Lab: variable label t1t2_`a'
+	local l1count=`l1count'+1
+	foreach b of global highLevelSympAndNone {
+		count if t1t2_`a'==1 & t3_`b'==1
+		local level2_Count=round(r(N),5)
+		local level2_Lab: variable label t3_`b'
+		local l2count=`l2count'+1
+		if (`l2count'-1)/10==`l1count' {
+			file write tablecontents  ("`level1_Lab'") _tab (`level1_Count') _tab ("`level1_Lab' and `level2_Lab'") _tab (`level2_Count') _n 
+		}
+		else {
+			file write tablecontents  _tab _tab ("`level1_Lab' and `level2_Lab'") _tab (`level2_Count') _n
+		}
+	}
+}
+
 
 cap file close tablecontents 
+
 cap log close
 
 

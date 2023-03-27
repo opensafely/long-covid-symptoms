@@ -185,6 +185,9 @@ foreach var of varlist $diag $symp $medicines {
 	safetab tEver_`var' case, m
 }
 
+*any symptoms ever
+safetab anySymptomsEver
+
 
 
 
