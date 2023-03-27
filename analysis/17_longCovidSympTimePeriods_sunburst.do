@@ -3,9 +3,10 @@
 *
 *Purpose: Create content that is ready to paste into a pre-formatted Word 
 * shell table containing minimally and fully-adjusted HRs for risk factors
-* of interest, across 2 outcomes 
+* of interest, across 2 outcomes g
 *
 *Requires: final analysis dataset (analysis_dataset.dta)
+*g
 
 *
 *Coding: K Wing, base on file from HFORBES, based on file from Krishnan Bhaskaran

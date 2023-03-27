@@ -5,7 +5,7 @@
 * shell table containing minimally and fully-adjusted HRs for risk factors
 * of interest, across 2 outcomes 
 *
-*Requires: final analysis dataset (analysis_dataset.dta)
+*Requires: final analysis dataset (analysis_dataset.dta) g h
 
 *
 *Coding: K Wing, base on file from HFORBES, based on file from Krishnan Bhaskaran

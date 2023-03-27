@@ -17,7 +17,7 @@ actions:
 #    run: stata-mp:latest analysis/1a_longCovidSymp_checkCaseExtract.do
 #    needs: [create_analysis_file]
 #   outputs:
-#     moderately_sensitive:f
+#     moderately_sensitive:fg
 #        log: logs/1a_longCovidSymp_checkCaseExtract.log
 
 

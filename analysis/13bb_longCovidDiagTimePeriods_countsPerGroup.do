@@ -6,6 +6,7 @@
 * of interest, across 2 outcomes 
 *
 *Requires: final analysis dataset (analysis_dataset.dta)
+*
 
 *
 *Coding: K Wing, base on file from HFORBES, based on file from Krishnan Bhaskaran
