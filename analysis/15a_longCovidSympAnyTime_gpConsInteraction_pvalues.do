@@ -36,7 +36,8 @@ foreach outcome in $symp {
 	lrtest A B, force
 	display "LRtest p-value for tEver_`outcome':"
 	display r(p)
-}\
+}
+
 
 *do any symptom ever
 capture quietly clogit anySymptomsEver i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
