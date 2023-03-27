@@ -5,7 +5,7 @@
 * shell table containing minimally and fully-adjusted HRs for risk factors
 * of interest, across 2 outcomes 
 *
-*Requires: final analysis dataset (analysis_dataset.dta)
+*Requires: final analysis dataset (analysis_dataset.dta) g h
 
 *
 *Coding: K Wing, base on file from HFORBES, based on file from Krishnan Bhaskaran
@@ -82,6 +82,28 @@ file open tablecontents using ./output/figure2PanelA_longCovidSympTimePeriods_`d
 file write tablecontents "Fig 2: Panel A. Community COVID-19: Odds ratios comparing odds of post-COVID SYMPTOMS OVER THREE TIME PERIODS during follow up in community COVID-19 compared to `dataset' comparator populations." _n _n
 file write tablecontents ("Symptom") _tab ("Comparator") _tab ("OR (95% CI)") _tab ("Number of events") _tab ("Proportion of population with events") _n
 
+
+*this is when doing just the codelists added subsequently (pain etc)
+foreach outcome in $sympAddtl {
+	cap noisily outputORsforOutcome, outcome(`outcome')
+	file write tablecontents _n
+}
+
+
+*JUST FOR any symptom ever
+cap noisily outputORsforOutcome, outcome(anySymptomsEver)
+file write tablecontents _n
+
+
+*JUST FOR delirium
+keep if age>=67
+cap noisily outputORsforOutcome, outcome(tEver_symp_delirium)
+file write tablecontents _n
+
+cap file close tablecontents 
+cap log close
+
+
 *loop through each outcome
 /*
 foreach outcome in $symp {
@@ -91,6 +113,7 @@ foreach outcome in $symp {
 */
 
 *stratified by previous year gpcount
+/*
 file write tablecontents ("Symptom results stratified by consultations in prev year (0=0 consultations, 1=1-5 consultations, 2=6+ consultations)") _n
 forvalues i=0/2 {
 	preserve
@@ -102,6 +125,7 @@ forvalues i=0/2 {
 		}
 	restore
 }
+*/
 
 *this is when doing just the codelists added subsequently (pain etc)
 
@@ -120,25 +144,6 @@ cap noisily outputORsforOutcome, outcome(symp_delirium)
 file write tablecontents _n
 */
 
-*this is when doing just the codelists added subsequently (pain etc)
-foreach outcome in $sympAddtl {
-	cap noisily outputORsforOutcome, outcome(tEver_`outcome')
-	file write tablecontents _n
-}
-
-
-*JUST FOR any symptom ever
-cap noisily outputORsforOutcome, outcome(anySymptomsEver)
-file write tablecontents _n
-
-
-*JUST FOR delirium
-keep if age>=67
-cap noisily outputORsforOutcome, outcome(tEver_symp_delirium)
-file write tablecontents _n
-
-cap file close tablecontents 
-cap log close
 
 
 

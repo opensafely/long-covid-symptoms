@@ -57,7 +57,7 @@ prog define outputCountsforOutcome
 		local expPercWEvent=100*(`expEvents'/`expDenom')	
 						
 		*get variable name
-		local varLab: variable label `outcome'
+		local varLab: variable label t`i'_`outcome'
 		display "`varLab'"
 		*get category name
 		*local category: label `catLabel' `i'

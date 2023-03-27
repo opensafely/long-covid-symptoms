@@ -6,6 +6,7 @@
 * of interest, across 2 outcomes 
 *
 *Requires: final analysis dataset (analysis_dataset.dta)
+*
 
 *
 *Coding: K Wing, base on file from HFORBES, based on file from Krishnan Bhaskaran
@@ -91,7 +92,7 @@ foreach outcome in $diag {
 }
 */
 
-cap noisily outputORsforOutcome, outcome(tEver_eye_adnexa_dis)
+cap noisily outputORsforOutcome, outcome(eye_adnexa_dis)
 file write tablecontents _n
 
 cap file close tablecontents 

@@ -9,6 +9,7 @@ DATASETS CREATED: 		none
 OTHER OUTPUT: 			logfiles, printed to folder analysis/$logdir
 
 t
+g
 
 
 sysdir set PLUS "/Users/kw/Documents/GitHub/households-research/analysis/adofiles" 
@@ -184,6 +185,9 @@ foreach var of varlist $diag $symp $medicines {
 	safetab t3_`var' case, m
 	safetab tEver_`var' case, m
 }
+
+*any symptoms ever
+safetab anySymptomsEver
 
 
 
