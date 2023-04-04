@@ -19,14 +19,11 @@ sysdir set PERSONAL ./analysis/adofiles
 do ./analysis/masterLists.do
 
 capture log close
-log using ./logs/17_longCovidSympTimePeriods_sunburstcontemporary.log, replace t
+log using ./logs/17_longCovidSympTimePeriods_sunburst.log, replace t
 
 *test area for this file!
-*this is the correct logic, just need it to output tables
-use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
 
-
-
+/*
 ******(A) THREE LEVEL SUNBURST PLOT******
 file open tablecontents using ./output/sunburst_contemporary_3Periods.txt, t w replace
 file write tablecontents "Table to support three level sunburst plot" _n _n
@@ -73,40 +70,64 @@ foreach a of global highLevelSympAndNone {
 }
 
 cap file close tablecontents 
-
+*/
 
 
 ******(B) TWO LEVEL SUNBURST PLOT (TIME PERIODS ONE AND TWO COMBINED)*****
-file open tablecontents using ./output/sunburst_contemporary_2Periods.txt, t w replace
-file write tablecontents "Table to support 2 level sunburst plot" _n _n
-file write tablecontents ("Level 1") _tab ("n") _tab ("Level 2") _tab ("n") _n
+prog define twoLevelSunburst
+	syntax, caseStatus(string)
+	file open tablecontents using ./output/sunburst_`caseStatus'_2Periods.txt, t w replace
+	file write tablecontents "Table to support 2 level sunburst plot for `caseStatus'" _n _n
+	file write tablecontents ("Level 1") _tab ("n") _tab ("Level 2") _tab ("n") _n
 
-*helper macros for outputting to excel
-local l1count=-1
-local l2count=0
+	*helper macros for outputting to excel
+	local l1count=-1
+	local l2count=0
 
-foreach a of global highLevelSympAndNone {
-	count if t1t2_`a'==1	
-	local level1_Count=round(r(N),5)
-	*get label
-	local level1_Lab: variable label t1t2_`a'
-	local l1count=`l1count'+1
-	foreach b of global highLevelSympAndNone {
-		count if t1t2_`a'==1 & t3_`b'==1
-		local level2_Count=round(r(N),5)
-		local level2_Lab: variable label t3_`b'
-		local l2count=`l2count'+1
-		if (`l2count'-1)/10==`l1count' {
-			file write tablecontents  ("`level1_Lab'") _tab (`level1_Count') _tab ("`level1_Lab' and `level2_Lab'") _tab (`level2_Count') _n 
-		}
-		else {
-			file write tablecontents  _tab _tab ("`level1_Lab' and `level2_Lab'") _tab (`level2_Count') _n
+	foreach a of global highLevelSympAndNone {
+		count if t1t2_`a'==1	
+		local level1_Count=round(r(N),5)
+		if `level1_Count'<11 {
+				local level2_Count="[REDACTED]"
+			}
+		*get label
+		local level1_Lab: variable label t1t2_`a'
+		local l1count=`l1count'+1
+		foreach b of global highLevelSympAndNone {
+			count if t1t2_`a'==1 & t3_`b'==1
+			local level2_Count=round(r(N),5)
+			if `level2_Count'<11 {
+				local level2_Count="[REDACTED]"
+			}
+			local level2_Lab: variable label t3_`b'
+			local l2count=`l2count'+1
+			if (`l2count'-1)/10==`l1count' {
+				file write tablecontents  ("`level1_Lab'") _tab ("`level1_Count'") _tab ("`level1_Lab' and `level2_Lab'") _tab ("`level2_Count'") _n 
+			}
+			else {
+				file write tablecontents  _tab _tab ("`level1_Lab' and `level2_Lab'") _tab ("`level2_Count'") _n
+			}
 		}
 	}
-}
+	cap file close tablecontents 
+end
 
-
-cap file close tablecontents 
+*call program for each case status
+*Covid
+use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
+preserve
+	keep if case==1
+	twoLevelSunburst, caseStatus(COVID)
+restore
+*contemporary comparator
+preserve
+	keep if case==0
+	twoLevelSunburst, caseStatus(contemporary)
+restore
+*historical comparator
+use ./output/longCovidSymp_analysis_dataset_historical.dta, clear
+keep if case==0
+twoLevelSunburst, caseStatus(historical)
 
 cap log close
 

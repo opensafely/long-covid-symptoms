@@ -1492,14 +1492,15 @@ actions:
 
 
 # 17. TABLES FOR SUNBURST
-  sunburst_contemporary:
+  sunburstTables:
     run: stata-mp:latest analysis/17_longCovidSympTimePeriods_sunburst.do
-    needs: [create_contemporary_analysis_file]
+    needs: [create_contemporary_analysis_file, create_historical_analysis_file]
     outputs:
       moderately_sensitive:
-        log: logs/17_longCovidSympTimePeriods_sunburstcontemporary.log
-        sunburst3levels: output/sunburst_contemporary_3Periods.txt
-        sunburst2levels: output/sunburst_contemporary_2Periods.txt
+        log: logs/17_longCovidSympTimePeriods_sunburst.log
+        sunburst2levelsCOVID: output/sunburst_COVID_2Periods.txt
+        sunburst2levelscontemporaryComparator: output/sunburst_contemporary_2Periods.txt
+        sunburst2levelshistoricalComparator: output/sunburst_historical_2Periods.txt
 
 
 
