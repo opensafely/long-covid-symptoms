@@ -65,10 +65,26 @@ file write tablecontents "Fig 5: Analysis of symptoms (over three time periods) 
 file write tablecontents ("Symptom") _tab ("Prev GP consults") _tab ("OR (95% CI)") _n
 
 *loop through each outcome
+/*
 foreach outcome in $symp {
 	cap noisily outputORsforOutcome, outcome(`outcome')
 	file write tablecontents _n
 }
+*/
+
+*JUST FOR any symptom ever
+cap noisily outputORsforOutcome, outcome(anySymptomsEver)
+file write tablecontents _n
+
+*JUST FOR rash
+cap noisily outputORsforOutcome, outcome(anySymptomsEver)
+file write tablecontents _n
+
+
+*JUST FOR DELIRIUM
+keep if age>=67
+cap noisily outputORsforOutcome, outcome(tEver_symp_delirium)
+file write tablecontents _n
 
 cap file close tablecontents 
 cap log close
