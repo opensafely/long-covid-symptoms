@@ -41,7 +41,7 @@ actions:
 
 
 
-## 2a CODEBOOK VARIABLES FOR CASES AND CONTROLS AND CORRECT CASE INDEX DATE IN CASES ONLY (ADD 28 DAYS TO ORIGNAL INDEX DATE)
+## 2a CORRECT CASE INDEX DATE IN CASES ONLY (ADD 28 DAYS TO ORIGNAL INDEX DATE)
   set_case_index_date:
     run: stata-mp:latest analysis/00_set_case_index_date_cr.do
     needs: [generate_community_cases_cohort, generate_potential_controls_contemporary]
