@@ -346,7 +346,7 @@ recode gpCountPrevYearCat 0=0 1=1 6=2
 label define gpCountPrevYearCat 0 "0" 1 "1-5" 2 "6+"
 label values gpCountPrevYearCat gpCountPrevYearCat
 safetab gpCountPrevYearCat, miss
-la var gpCountPrevYearCat "Categorised number of GP appts in previous year"
+la var gpCountPrevYearCat "Categorised number of GP appts in year prior to COVID-19 diagnosis"
 *label gp count outcome variables
 la var total_gp_count "Num of gp conslts during all post-COVID follow-up"
 la var t1_gp_count "Num of gp conslts during 4-12 wk post-COVID"
