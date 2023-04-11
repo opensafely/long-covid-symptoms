@@ -89,11 +89,6 @@ foreach outcome in $medicines {
 	file write tablecontents _n
 }
 
-*this is when doing just the codelists added subsequently (pain etc)
-/*foreach outcome in $sympAddtl {
-	cap noisily outputCountsforOutcome, outcome(tEver_`outcome')
-	file write tablecontents _n
-}*/
 
 cap file close tablecontents 
 cap log close

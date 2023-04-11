@@ -11,7 +11,7 @@ global diag infect_parasite neoplasms blood_diseases endocr_nutr_dis mental_diso
 
 
 *master list of symptoms
-global symp symp_breathless symp_cough symp_chesttight symp_chestpain symp_palp symp_fatigue symp_fever symp_cogimpair symp_headache symp_sleepdisturb symp_periphneuro symp_dizzy symp_delirium symp_mobilityimpair symp_visualdisturbance symp_abdominalpain symp_nauseavomiting symp_diarrhoea symp_weightloss symp_pain symp_depression symp_anxiety symp_ptsd symp_tinnitus symp_earache symp_sorethroat symp_taste_smell symp_nasal_congestion symp_rashes symp_hairloss 
+global symp symp_breathless symp_cough symp_chesttight symp_chestpain symp_palp symp_fatigue symp_fever symp_cogimpair symp_headache symp_sleepdisturb symp_periphneuro symp_dizzy symp_mobilityimpair symp_visualdisturbance symp_abdominalpain symp_nauseavomiting symp_diarrhoea symp_weightloss symp_pain symp_depression symp_anxiety symp_ptsd symp_tinnitus symp_earache symp_sorethroat symp_taste_smell symp_nasal_congestion symp_rashes symp_hairloss 
 *symptoms added later (also included in above list but list is here to help minimise amount of regressions, includes one already in above as a sanity check)
 global sympAddtl symp_chestpain symp_abdominalpain symp_diarrhoea symp_pain symp_depression symp_anxiety symp_sorethroat symp_nasal_congestion symp_rashes symp_mobilityimpair
 *high level symptom categories

@@ -80,21 +80,17 @@ file write tablecontents ("Unexposed to COVID N=`totUnexp'") _tab ("Exposed to C
 file write tablecontents _tab ("Total N") _tab ("n with event") _tab ("% of total with events") _tab ("Unexposed N") _tab ("n unexposed with event") _tab ("% of unexposed with events") _tab ("Exposed to COVID N") _tab ("n exposed to COVID with event") _tab ("% of exposed to COVID with events") _n
 
 *loop through each outcome
-/*
 foreach outcome in $diag {
 	cap noisily outputCountsforOutcome, outcome(tEver_`outcome')
 	file write tablecontents _n
 }
-*/
 
-*this is when doing just the codelists added subsequently (pain etc)
-/*foreach outcome in $sympAddtl {
-	cap noisily outputCountsforOutcome, outcome(tEver_`outcome')
-	file write tablecontents _n
-}*/
 
+
+/*
 cap noisily outputCountsforOutcome, outcome(tEver_eye_adnexa_dis)
 file write tablecontents _n
+*/
 
 cap file close tablecontents 
 cap log close

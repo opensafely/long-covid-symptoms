@@ -83,11 +83,9 @@ file write tablecontents "Fig 1: Panel A supporting figures. Number with events 
 file write tablecontents ("Unexposed to COVID N=`totUnexp'") _tab ("Exposed to COVID N=`totExp'") _n _n
 file write tablecontents _tab ("Cons in prev yr") _tab ("Total N") _tab ("n with event") _tab ("% of total with events") _tab ("Unexposed N") _tab ("n unexposed with event") _tab ("% of unexposed with events") _tab ("Exposed to COVID N") _tab ("n exposed to COVID with event") _tab ("% of exposed to COVID with events") _n
 
-*this is when doing just the codelists added subsequently (pain etc)
-/*foreach outcome in $sympAddtl {
-	cap noisily outputCountsforOutcome, outcome(tEver_`outcome')
-	file write tablecontents _n
-}*/
+*JUST FOR any symptom ever
+cap noisily outputCountsforOutcome, outcome(anySymptomsEver)
+file write tablecontents _n
 
 *loop through each outcome
 foreach outcome in $symp {
@@ -95,9 +93,6 @@ foreach outcome in $symp {
 	file write tablecontents _n
 }
 
-*JUST FOR any symptom ever
-cap noisily outputCountsforOutcome, outcome(anySymptomsEver)
-file write tablecontents _n
 
 *JUST FOR delirium
 keep if age>=67
