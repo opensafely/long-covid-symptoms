@@ -82,35 +82,35 @@ file open tablecontents using ./output/figure2PanelA_longCovidSympTimePeriods_`d
 file write tablecontents "Fig 2: Panel A. Community COVID-19: Odds ratios comparing odds of post-COVID SYMPTOMS OVER THREE TIME PERIODS during follow up in community COVID-19 compared to `dataset' comparator populations." _n _n
 file write tablecontents ("Symptom") _tab ("Comparator") _tab ("OR (95% CI)") _tab ("Number of events") _tab ("Proportion of population with events") _n
 
-
+/*
 *this is when doing just the codelists added subsequently (pain etc)
 foreach outcome in $sympAddtl {
 	cap noisily outputORsforOutcome, outcome(`outcome')
 	file write tablecontents _n
 }
+*/
 
 
 *JUST FOR any symptom ever
 cap noisily outputORsforOutcome, outcome(anySymptomsEver)
 file write tablecontents _n
 
+*loop through each outcome
+foreach outcome in $symp {
+	cap noisily outputORsforOutcome, outcome(`outcome')
+	file write tablecontents _n
+}
+
 
 *JUST FOR delirium
 keep if age>=67
-cap noisily outputORsforOutcome, outcome(tEver_symp_delirium)
+cap noisily outputORsforOutcome, outcome(symp_delirium)
 file write tablecontents _n
 
 cap file close tablecontents 
 cap log close
 
 
-*loop through each outcome
-/*
-foreach outcome in $symp {
-	cap noisily outputORsforOutcome, outcome(`outcome')
-	file write tablecontents _n
-}
-*/
 
 *stratified by previous year gpcount
 /*

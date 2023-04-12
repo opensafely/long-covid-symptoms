@@ -85,15 +85,11 @@ file write tablecontents ("Symptom") _tab ("Comparator") _tab ("OR (95% CI)") _t
 
 *loop through each outcome
 *foreach outcome in $diagnosisOutcomes {
-	/*	
 foreach outcome in $diag {
 	cap noisily outputORsforOutcome, outcome(`outcome')
 	file write tablecontents _n
 }
-*/
 
-cap noisily outputORsforOutcome, outcome(eye_adnexa_dis)
-file write tablecontents _n
 
 cap file close tablecontents 
 cap log close

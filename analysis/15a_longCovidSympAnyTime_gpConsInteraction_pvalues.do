@@ -27,7 +27,18 @@ log using ./logs/15a_longCovidSympAnyTime_gpConsInt_pvals`dataset'.log, replace 
 use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 rename case expStatus
 
-/*
+
+
+*do any symptom ever
+capture quietly clogit anySymptomsEver i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+est store A
+capture quietly clogit anySymptomsEver i.expStatus i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+est store B
+lrtest A B, force
+display "LRtest p-value for anySymptomsEver:"
+display r(p)
+
+
 *loop through each outcome
 foreach outcome in $symp {
 	capture quietly clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
@@ -38,18 +49,8 @@ foreach outcome in $symp {
 	display "LRtest p-value for tEver_`outcome':"
 	display r(p)
 }
-*/
 
-/*
-*do any symptom ever
-capture quietly clogit anySymptomsEver i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
-est store A
-capture quietly clogit anySymptomsEver i.expStatus i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
-est store B
-lrtest A B, force
-display "LRtest p-value for anySymptomsEver:"
-display r(p)
-*/
+
 
 *do any symptom ever - test for trend by increasing gp count
 clogit anySymptomsEver i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
@@ -61,14 +62,6 @@ display "LRtest p-value for anySymptomsEver (test for trend):"
 display r(p)
 
 
-*do rash
-capture quietly clogit symp_rashes i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
-est store A
-capture quietly clogit symp_rashes i.expStatus i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
-est store B
-lrtest A B, force
-display "LRtest p-value for rash:"
-display r(p)
 
 
 cap file close tablecontents 
