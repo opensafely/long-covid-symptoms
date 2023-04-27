@@ -22,14 +22,14 @@ local dataset `1'
 
 *checking tabulations
 capture log close
-log using ./logs/15a_longCovidSympAnyTime_gpConsInt_pvals`dataset'.log, replace t
+log using ./logs/17a_longCovidBNFAnyTime_gpConsInt_pvals`dataset'.log, replace t
 
 use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 rename case expStatus
 
 
 *loop through each outcome
-foreach outcome in $symp {
+foreach outcome in $medicines {
 	capture quietly clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	est store A
 	capture quietly clogit tEver_`outcome' i.expStatus i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
@@ -40,24 +40,14 @@ foreach outcome in $symp {
 }
 
 
-*do any symptom ever
-capture quietly clogit anySymptomsEver i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+
+*test for trend by increasing gp count for NSAIDs 
+capture quietly clogit bnf_nsaids_spec i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 est store A
-capture quietly clogit anySymptomsEver i.expStatus i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+capture quietly clogit bnf_nsaids_spec i.expStatus##c.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 est store B
 lrtest A B, force
-display "LRtest p-value for anySymptomsEver:"
-display r(p)
-
-
-
-*do any symptom ever - test for trend by increasing gp count
-clogit anySymptomsEver i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
-est store A
-clogit anySymptomsEver i.expStatus##c.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
-est store B
-lrtest A B, force
-display "LRtest p-value for anySymptomsEver (test for trend):"
+display "LRtest p-value for NSAIDs (test for trend):"
 display r(p)
 
 
