@@ -1458,24 +1458,16 @@ actions:
 
 
   # 15. FIGURE 4 - SYMPTOMS AT ANY TIME WITH INTERACTION WITH PREV GPCONS - COUNTS
-  figure_4Counts_contemporary:
-    run: stata-mp:latest analysis/15aa_longCovidSympConsultationGroups_countsPerGroup.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/15aa_longCovidSympConsultationGroups_countsPerGroupcontemporary.log
-        figure1Ahistorical: output/Figure4_gpConsInteractionCounts_contemporary.txt
-
-  figure_4Counts_historical:
-    run: stata-mp:latest analysis/15aa_longCovidSympConsultationGroups_countsPerGroup.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/15aa_longCovidSympConsultationGroups_countsPerGrouphistorical.log
-        figure1Ahistorical: output/Figure4_gpConsInteractionCounts_historical.txt
+  #figure_4Counts_contemporary:
+  #  run: stata-mp:latest analysis/15aa_longCovidSympConsultationGroups_countsPerGroup.do contemporary
+  #  needs: [create_contemporary_analysis_file]
+  #  outputs:
+  #    moderately_sensitive:
+  #      log: logs/15aa_longCovidSympConsultationGroups_countsPerGroupcontemporary.log
+  #      figure1Ahistorical: output/Figure4_gpConsInteractionCounts_contemporary.txt
 
 
-  # 16. FIGURE 4 - P-VALUES FOR INTERACTION FOR FIGURE 4
+  # 15. FIGURE 4 - P-VALUES FOR INTERACTION FOR FIGURE 4
   figure_4_p_values_contemporary:
     run: stata-mp:latest analysis/15a_longCovidSympAnyTime_gpConsInteraction_pvalues.do contemporary
     needs: [create_contemporary_analysis_file]
@@ -1489,6 +1481,75 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/15a_longCovidSympAnyTime_gpConsInt_pvalshistorical.log
+
+
+
+  # 16. FIGURE 5 - DIAGNOSES AT ANY TIME WITH INTERACTION WITH PREV GPCONS
+  figure_5_contemporary:
+    run: stata-mp:latest analysis/16_longCovidDiagAnyTime_gpConsInteraction.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/16_longCovidDiagAnyTime_gpConsInteractioncontemporary.log
+        figure1Ahistorical: output/Figure5_gpConsInteraction_contemporary.txt
+
+  figure_5_historical:
+    run: stata-mp:latest analysis/16_longCovidDiagAnyTime_gpConsInteraction.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/16_longCovidDiagAnyTime_gpConsInteractionhistorical.log
+        figure1Ahistorical: output/Figure5_gpConsInteraction_historical.txt
+
+  # 16. FIGURE 5 - P-VALUES FOR INTERACTION FOR FIGURE 5
+  figure_5_p_values_contemporary:
+    run: stata-mp:latest analysis/16a_longCovidDiagAnyTime_gpConsInteraction_pvalues.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/16a_longCovidDiagAnyTime_gpConsInt_pvalscontemporary.log
+
+  figure_5_p_values_historical:
+    run: stata-mp:latest analysis/16a_longCovidDiagAnyTime_gpConsInteraction_pvalues.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/16a_longCovidDiagAnyTime_gpConsInt_pvalshistorical.log
+
+
+
+  # 17. FIGURE 6 - BNF AT ANY TIME WITH INTERACTION WITH PREV GPCONS
+  figure_6_contemporary:
+    run: stata-mp:latest analysis/17_longCovidBNFAnyTime_gpConsInteraction.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/17_longCovidBNFAnyTime_gpConsInteractioncontemporary.log
+        figure1Ahistorical: output/Figure6_gpConsInteraction_contemporary.txt
+
+  figure_6_historical:
+    run: stata-mp:latest analysis/17_longCovidBNFAnyTime_gpConsInteraction.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/17_longCovidBNFAnyTime_gpConsInteractionhistorical.log
+        figure1Ahistorical: output/Figure6_gpConsInteraction_historical.txt
+
+
+  # 17. FIGURE 6 - P-VALUES FOR INTERACTION FOR FIGURE 6
+  figure_6_p_values_contemporary:
+    run: stata-mp:latest analysis/17a_longCovidBNFAnyTime_gpConsInteraction_pvalues.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/17a_longCovidBNFAnyTime_gpConsInt_pvalscontemporary.log
+
+  figure_6_p_values_historical:
+    run: stata-mp:latest analysis/17a_longCovidBNFAnyTime_gpConsInteraction_pvalues.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/17a_longCovidBNFAnyTime_gpConsInt_pvalshistorical.log
 
 
   # 16. FIGURE 5 - SYMPTOMS OVER THREE TIME PERIODS WITH INTERACTION WITH PREV GPCONS 
@@ -1509,13 +1570,13 @@ actions:
   #      figure1Ahistorical: output/Figure5_gpConsInteraction_historical.txt
 
 
-# 17. TABLES FOR SUNBURST
+# 18. TABLES FOR SUNBURST
   sunburstTables:
-    run: stata-mp:latest analysis/17_longCovidSympTimePeriods_sunburst.do
+    run: stata-mp:latest analysis/18_longCovidSympTimePeriods_sunburst.do
     needs: [create_contemporary_analysis_file, create_historical_analysis_file]
     outputs:
       moderately_sensitive:
-        log: logs/17_longCovidSympTimePeriods_sunburst.log
+        log: logs/18_longCovidSympTimePeriods_sunburst.log
         sunburst2levelsCOVID: output/sunburst_COVID_2Periods.txt
         sunburst2levelscontemporaryComparator: output/sunburst_contemporary_2Periods.txt
         sunburst2levelshistoricalComparator: output/sunburst_historical_2Periods.txt

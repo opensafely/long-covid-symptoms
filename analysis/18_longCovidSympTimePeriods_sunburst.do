@@ -19,7 +19,7 @@ sysdir set PERSONAL ./analysis/adofiles
 do ./analysis/masterLists.do
 
 capture log close
-log using ./logs/17_longCovidSympTimePeriods_sunburst.log, replace t
+log using ./logs/18_longCovidSympTimePeriods_sunburst.log, replace t
 
 *test area for this file!
 
