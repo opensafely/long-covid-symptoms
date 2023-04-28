@@ -1458,7 +1458,7 @@ actions:
 
 
   # 15. FIGURE 4 - SYMPTOMS AT ANY TIME WITH INTERACTION WITH PREV GPCONS - COUNTS
-  #figure_4Counts_contemporary:
+  #  figure_4Counts_contemporary:
   #  run: stata-mp:latest analysis/15aa_longCovidSympConsultationGroups_countsPerGroup.do contemporary
   #  needs: [create_contemporary_analysis_file]
   #  outputs:
@@ -1501,6 +1501,16 @@ actions:
         log: logs/16_longCovidDiagAnyTime_gpConsInteractionhistorical.log
         figure1Ahistorical: output/Figure5_gpConsInteraction_historical.txt
 
+   # 16. FIGURE 5 - DIAGNOSIS AT ANY TIME WITH INTERACTION WITH PREV GPCONS - COUNTS
+  figure_5Counts_contemporary:
+    run: stata-mp:latest analysis/16aa_longCovidDiagConsultationGroups_countsPerGroup.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/16aa_longCovidDiagConsultationGroups_countsPerGroupcontemporary.log
+        figure1Ahistorical: output/Figure5_gpConsInteractionCounts_contemporary.txt
+
+
   # 16. FIGURE 5 - P-VALUES FOR INTERACTION FOR FIGURE 5
   figure_5_p_values_contemporary:
     run: stata-mp:latest analysis/16a_longCovidDiagAnyTime_gpConsInteraction_pvalues.do contemporary
@@ -1515,6 +1525,9 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/16a_longCovidDiagAnyTime_gpConsInt_pvalshistorical.log
+
+
+ 
 
 
 
@@ -1535,6 +1548,14 @@ actions:
         log: logs/17_longCovidBNFAnyTime_gpConsInteractionhistorical.log
         figure1Ahistorical: output/Figure6_gpConsInteraction_historical.txt
 
+  #  17. FIGURE 6 - PRESCRIPTIONS AT ANY TIME WITH INTERACTION WITH PREV GPCONS - COUNTS
+  # figure_6Counts_contemporary:
+  #  run: stata-mp:latest analysis/17aa_longCovidBNFConsultationGroups_countsPerGroup.do contemporary
+  #  needs: [create_contemporary_analysis_file]
+  #  outputs:
+  #    moderately_sensitive:
+  #      log: logs/17aa_longCovidBNFConsultationGroups_countsPerGroupcontemporary.log
+
 
   # 17. FIGURE 6 - P-VALUES FOR INTERACTION FOR FIGURE 6
   figure_6_p_values_contemporary:
@@ -1550,6 +1571,10 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/17a_longCovidBNFAnyTime_gpConsInt_pvalshistorical.log
+
+
+ 
+   
 
 
   # 16. FIGURE 5 - SYMPTOMS OVER THREE TIME PERIODS WITH INTERACTION WITH PREV GPCONS 
