@@ -5,7 +5,7 @@ expectations:
 
 actions:
 
-## 1. EXTRACT DATA FOR EXPOSED - **NOTE CURRENTLY THIS IS FOR WAVE 2 ONLY (SO WHOLE ANALYSIS IS WAVE 2 ONLY) UNTIL EVERYTHING WORKS**
+## 1. EXTRACT DATA FOR EXPOSED - **NOTE THIS IS FOR WAVE 2 ONLY**
   generate_community_cases_cohort:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_covid_communitycases
     outputs:
@@ -31,6 +31,22 @@ actions:
     outputs:
       highly_sensitive:
         cohort: output/input_controls_contemporary.csv
+
+
+# *** contemporary potential comparators - flowcheck
+  generate_potential_controls_contemporaryFlowCheck:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_controls_contemporaryFlowCheck
+    outputs:
+      highly_sensitive:
+        cohort: output/input_controls_contemporaryFlowCheck.csv
+
+  flowCheck:
+    run: stata-mp:latest analysis/000_controlsFlowCheck.do
+    needs: [generate_potential_controls_contemporaryFlowCheck]
+    outputs:
+      moderately_sensitive:
+        log: logs/000_controlsFlowCheck.log
+
 
 # *** historical potential comparators (2018)
   generate_potential_controls_historical:
