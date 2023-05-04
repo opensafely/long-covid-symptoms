@@ -90,7 +90,7 @@ study = StudyDefinition(
         return_expectations={
             "date": {
                 "earliest": "2020-12-08",  
-                "latest": "2021-05-11", }, 
+                "latest": "2021-01-31", }, 
                 "incidence": 0.01 },
     ),
 

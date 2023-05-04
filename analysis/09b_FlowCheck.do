@@ -73,6 +73,15 @@ safetab diedDuringFUP3 expStatus, col
 safetab deregDuringFUP3 expStatus, col
 
 
+*due to the weirdness of dereg date, check in the source files
+capture noisily import delimited ./output/input_covid_communitycases.csv, clear
+sum dereg_date, detail
+sum death_date, detail
+
+capture noisily import delimited ./output/input_controls_`dataset'.csv, clear
+sum dereg_date, detail
+sum death_date, detail
+
 
 safecount
 
