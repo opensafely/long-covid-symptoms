@@ -36,41 +36,41 @@ rename case expStatus
 
 *(0) Ever during follow-up
 *(a) any ineligibility
-safetab becameIneligEver expStatus
+safetab becameIneligEver expStatus, col
 *(b) specific reasons
-safetab compBecameCaseEver expStatus
-safetab caseHospForCOVIDEver expStatus
-safetab diedEver expStatus
-safetab deregEver expStatus
+safetab compBecameCaseEver expStatus, col
+safetab caseHospForCOVIDEver expStatus, col
+safetab diedEver expStatus, col
+safetab deregEver expStatus, col
 
 *(1) During FUP1
 *(a) any ineligibility
-safetab becameIneligFUP1 expStatus
+safetab becameIneligFUP1 expStatus, col
 *(b) specific reasons
-safetab compBecameCaseDurFUP1 expStatus
-safetab caseHospForCOVIDDurFUP1 expStatus
-safetab diedDuringFUP1 expStatus
-safetab deregDuringFUP1 expStatus
+safetab compBecameCaseDurFUP1 expStatus, col
+safetab caseHospForCOVIDDurFUP1 expStatus, col
+safetab diedDuringFUP1 expStatus, col
+safetab deregDuringFUP1 expStatus, col
 
 
 *(2) During FUP2
 *(a) any ineligibility
-safetab becameIneligFUP2 expStatus
+safetab becameIneligFUP2 expStatus, col
 *(b) specific reasons
-safetab compBecameCaseDurFUP2 expStatus
-safetab caseHospForCOVIDDurFUP2 expStatus
-safetab diedDuringFUP2 expStatus
-safetab deregDuringFUP2 expStatus
+safetab compBecameCaseDurFUP2 expStatus, col
+safetab caseHospForCOVIDDurFUP2 expStatus, col
+safetab diedDuringFUP2 expStatus, col
+safetab deregDuringFUP2 expStatus, col
 
 
 *(3) During FUP3
 *(a) any ineligibility
-safetab becameIneligFUP3 expStatus
+safetab becameIneligFUP3 expStatus, col
 *(b) specific reasons
-safetab compBecameCaseDurFUP3 expStatus
-safetab caseHospForCOVIDDurFUP3 expStatus
-safetab diedDuringFUP3 expStatus
-safetab deregDuringFUP3 expStatus
+safetab compBecameCaseDurFUP3 expStatus, col
+safetab caseHospForCOVIDDurFUP3 expStatus, col
+safetab diedDuringFUP3 expStatus, col
+safetab deregDuringFUP3 expStatus, col
 
 
 
