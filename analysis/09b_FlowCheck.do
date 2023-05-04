@@ -25,26 +25,55 @@ pwd
 *setup so that the code in this file can be used to output analyses for both contemporary and historical comparators (and is called twice by separate .yaml actions)
 local dataset `1'
 
-
-
 * Open a log file
 cap log close
-log using ./logs/000_controlsFlowCheck.log, replace t
+log using ./logs/09b_FlowCheck_`dataset'.log, replace t
+
+
+*load file
+use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
+rename case expStatus
+
+*(0) Ever during follow-up
+*(a) any ineligibility
+safetab becameIneligEver expStatus
+*(b) specific reasons
+safetab compBecameCaseEver expStatus
+safetab caseHospForCOVIDEver expStatus
+safetab diedEver expStatus
+safetab deregEver expStatus
+
+*(1) During FUP1
+*(a) any ineligibility
+safetab becameIneligFUP1 expStatus
+*(b) specific reasons
+safetab compBecameCaseDurFUP1 expStatus
+safetab caseHospForCOVIDDurFUP1 expStatus
+safetab diedDuringFUP1 expStatus
+safetab deregDuringFUP1 expStatus
+
+
+*(2) During FUP2
+*(a) any ineligibility
+safetab becameIneligFUP2 expStatus
+*(b) specific reasons
+safetab compBecameCaseDurFUP2 expStatus
+safetab caseHospForCOVIDDurFUP2 expStatus
+safetab diedDuringFUP2 expStatus
+safetab deregDuringFUP2 expStatus
+
+
+*(3) During FUP3
+*(a) any ineligibility
+safetab becameIneligFUP3 expStatus
+*(b) specific reasons
+safetab compBecameCaseDurFUP3 expStatus
+safetab caseHospForCOVIDDurFUP3 expStatus
+safetab diedDuringFUP3 expStatus
+safetab deregDuringFUP3 expStatus
 
 
 
-
-*(0)=========Get total cases and potential matches figure for flowchart - extra bit of work in this file is to drop comparators without the necessary follow-up or who died before case index date============
-/*Has follow-up needs checked as there is nowhere previously where it is checked against the matched cases case index date, plus the death_date variable for controls so far is only related to the
-*index date, not the case_index_date*/
-*case
-capture noisily import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, clear
-di "***********************FLOWCHART 1. NUMBER OF POTENTIAL CONTROLS (WAVE 2) - CHECKING AT START OF WAVE 2********************:"
-
-
-*comparator
-capture noisily import delimited ./output/input_controls_contemporaryFlowCheck.csv, clear
-di "**Potential comparators:**"
 safecount
 
 

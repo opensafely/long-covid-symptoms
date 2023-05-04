@@ -40,12 +40,6 @@ actions:
       highly_sensitive:
         cohort: output/input_controls_contemporaryFlowCheck.csv
 
-  flowCheck:
-    run: stata-mp:latest analysis/000_controlsFlowCheck.do
-    needs: [generate_potential_controls_contemporaryFlowCheck]
-    outputs:
-      moderately_sensitive:
-        log: logs/000_controlsFlowCheck.log
 
 
 # *** historical potential comparators (2018)
@@ -1150,6 +1144,22 @@ actions:
         unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_historical_analysis_dataset.dta
       moderately_sensitive: 
         log: logs/09_longCovidSymp_cr_historical_analysis_dataset.log
+
+
+  flowCheck_contemporary:
+    run: stata-mp:latest analysis/09b_FlowCheck.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/09b_FlowCheck_contemporary.log
+
+
+  flowCheck_historical:
+    run: stata-mp:latest analysis/09b_FlowCheck.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/09b_FlowCheck_historical.log
 
 
 

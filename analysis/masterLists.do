@@ -18,7 +18,7 @@ global sympAddtl symp_chestpain symp_abdominalpain symp_diarrhoea symp_pain symp
 global sympResp symp_breathless symp_cough
 global sympCardio symp_chesttight symp_chestpain symp_palp
 global sympGeneral symp_fatigue symp_fever
-global sympNeuro symp_cogimpair symp_headache symp_sleepdisturb symp_periphneuro symp_dizzy symp_delirium symp_mobilityimpair symp_visualdisturbance
+global sympNeuro symp_cogimpair symp_headache symp_sleepdisturb symp_periphneuro symp_dizzy symp_mobilityimpair symp_visualdisturbance
 global sympGastro symp_abdominalpain symp_nauseavomiting symp_diarrhoea symp_weightloss
 global sympMusculo symp_pain
 global sympPsych symp_depression symp_anxiety symp_ptsd
