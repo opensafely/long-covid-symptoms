@@ -65,7 +65,10 @@ safecount
 
 *comparator
 /*for comparator the variables I want are: age, case, covid_hosp, covid_tpp_prob, covid_tpp_probw2, first_known_covid19, first_pos_test, first_pos_testw2, imd, pos_covid_test_ever, set_id, sex, stp*/
+
+/*
 *DON'T NEED has_follow_up, has_died, death_date or dereg_date from the original file - these are all created new based on case_index_date in the new file
+*/
 capture noisily import delimited ./output/input_covid_matched_matches_`dataset'_allSTPs.csv, clear
 keep patient_id age case covid_hosp covid_tpp_prob covid_tpp_probw2 first_known_covid19 first_pos_test first_pos_testw2 imd pos_covid_test_ever set_id sex stp
 tempfile comp_match_info

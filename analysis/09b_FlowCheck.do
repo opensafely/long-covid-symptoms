@@ -29,19 +29,22 @@ local dataset `1'
 cap log close
 log using ./logs/09b_FlowCheck_`dataset'.log, replace t
 
-/*
+
 *load file
 use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 rename case expStatus
+bysort expStatus: sum death_date
+bysort expStatus: sum dereg_date
 
+/*
 *(0) Ever during follow-up
 *(a) any ineligibility
 safetab becameIneligEver expStatus, col
 *(b) specific reasons
 safetab compBecameCaseEver expStatus, col
 safetab caseHospForCOVIDEver expStatus, col
-safetab diedEver expStatus, col
-safetab deregEver expStatus, col
+tab diedEver expStatus, col
+tab deregEver expStatus, col
 
 *(1) During FUP1
 *(a) any ineligibility
@@ -74,24 +77,23 @@ safetab deregDuringFUP3 expStatus, col
 */
 
 
-*due to the weirdness of dereg date, check in the source files - checked these and both death_date and dereg_date look fine
+*due to the weirdness of dereg date, check in the source files
+*(1)In cohort of cases
 capture noisily import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, clear
-sum dereg_date, detail
-sum death_date, detail
+codebook death_date
+codebook dereg_date
 
+*(2)In original cohort of controls
 capture noisily import delimited ./output/input_controls_`dataset'.csv, clear
-sum dereg_date, detail
-sum death_date, detail
+codebook death_date
+codebook dereg_date
 
-
-
+*(3)In matched controls
 capture noisily import delimited ./output/input_covid_matched_matches_`dataset'_allSTPs.csv, clear
-sum dereg_date, detail
-sum death_date, detail
+codebook death_date
+codebook dereg_date
 
-capture noisily import delimited ./output/input_complete_controls_`dataset'.csv, clear
-sum dereg_date, detail
-sum death_date, detail
+
 
 safecount
 
