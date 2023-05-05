@@ -113,7 +113,7 @@ capture noisily import delimited ./output/input_medicines_controls_`dataset'.csv
 count
 drop case_index_date
 tempfile control_medicines
-save `control_medicines'
+save `control_medicines'++++++++++++++
 
 
 *(2)=========Add the case and comparator information from above to the files with the rest of the information============

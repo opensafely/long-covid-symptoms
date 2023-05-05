@@ -29,7 +29,7 @@ local dataset `1'
 cap log close
 log using ./logs/09b_FlowCheck_`dataset'.log, replace t
 
-
+/*
 *load file
 use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 rename case expStatus
@@ -73,7 +73,7 @@ safetab diedDuringFUP3 expStatus, col
 safetab deregDuringFUP3 expStatus, col
 
 
-*due to the weirdness of dereg date, check in the source files
+*due to the weirdness of dereg date, check in the source files - checked these and both death_date and dereg_date look fine
 capture noisily import delimited ./output/input_covid_communitycases.csv, clear
 sum dereg_date, detail
 sum death_date, detail
@@ -81,7 +81,16 @@ sum death_date, detail
 capture noisily import delimited ./output/input_controls_`dataset'.csv, clear
 sum dereg_date, detail
 sum death_date, detail
+*/
 
+
+capture noisily import delimited ./output/input_covid_matched_matches_`dataset'_allSTPs.csv, clear
+sum dereg_date, detail
+sum death_date, detail
+
+capture noisily import delimited ./output/input_complete_controls_`dataset'.csv, clear
+sum dereg_date, detail
+sum death_date, detail
 
 safecount
 
