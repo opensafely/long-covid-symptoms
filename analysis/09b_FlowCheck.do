@@ -71,6 +71,7 @@ safetab compBecameCaseDurFUP3 expStatus, col
 safetab caseHospForCOVIDDurFUP3 expStatus, col
 safetab diedDuringFUP3 expStatus, col
 safetab deregDuringFUP3 expStatus, col
+*/
 
 
 *due to the weirdness of dereg date, check in the source files - checked these and both death_date and dereg_date look fine
@@ -81,7 +82,7 @@ sum death_date, detail
 capture noisily import delimited ./output/input_controls_`dataset'.csv, clear
 sum dereg_date, detail
 sum death_date, detail
-*/
+
 
 
 capture noisily import delimited ./output/input_covid_matched_matches_`dataset'_allSTPs.csv, clear
