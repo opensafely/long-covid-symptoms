@@ -75,7 +75,7 @@ safetab deregDuringFUP3 expStatus, col
 
 
 *due to the weirdness of dereg date, check in the source files - checked these and both death_date and dereg_date look fine
-capture noisily import delimited ./output/input_covid_communitycases.csv, clear
+capture noisily import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, clear
 sum dereg_date, detail
 sum death_date, detail
 
