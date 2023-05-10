@@ -48,6 +48,26 @@ capture noisily import delimited ./output/input_controls_`dataset'.csv, clear
 di "**Potential comparators:**"
 safecount
 
+*Code to fix bug due to de_reg date error (eventually needs fixed by re-extraction)
+replace dereg_date=dereg_date + "-01" if dereg_date!=""
+
+*see if I can select those who were (1) alive and (2) hadn't deregistered at the start of wave 2
+
+foreach var of varlist dereg_date death_date {
+	capture noisily confirm string variable `var'
+	capture noisily rename `var' `var'_dstr
+	capture noisily gen `var' = date(`var'_dstr, "YMD")
+	capture noisily drop `var'_dstr
+	capture noisily format `var' %td 
+}
+
+
+drop if dereg_date<date("01sep2020","DMY")
+drop if death_date<date("01sep2020","DMY")
+
+di "**Potential comparators who were alive and hadn't deregistered at the start of WAVE 2:**"
+safecount
+
 
 
 *(1)=========Get all the (case and comparator related) variables from the matched cases and matched controls files============
@@ -116,7 +136,7 @@ capture noisily import delimited ./output/input_medicines_controls_`dataset'.csv
 count
 drop case_index_date
 tempfile control_medicines
-save `control_medicines'++++++++++++++
+save `control_medicines'
 
 
 *(2)=========Add the case and comparator information from above to the files with the rest of the information============
@@ -496,6 +516,10 @@ safetab numPrescTypesPrevYearCat, miss
 la var numPrescTypesPrevYearCat "Number of types of distinct BNF groups of drugs prescribed in prev year"
 
 
+*Code to fix bug due to de_reg date error (eventually needs fixed by re-extraction)
+replace dereg_date=dereg_date + "-01" if dereg_date!="" & case==0
+
+
 *(f) Recode all dates from the strings 
 *order variables to make for loop quicker (remember the plain diag and symp named variables contain dates)
 order patient_id case_index_date first_pos_test first_pos_testw2 covid_tpp_prob covid_tpp_probw2 covid_hosp pos_covid_test_ever death_date dereg_date first_known_covid19 $diag $symp
@@ -506,7 +530,6 @@ foreach var of varlist case_index_date - first_known_covid19 $diag $symp $medici
 	capture noisily gen `var' = date(`var'_dstr, "YMD")
 	capture noisily drop `var'_dstr
 	capture noisily format `var' %td 
-
 }
 
 *(f2)Create variables for each outcome that are "EVER HAD"
