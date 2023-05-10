@@ -36,7 +36,7 @@ rename case expStatus
 bysort expStatus: sum death_date
 bysort expStatus: sum dereg_date
 
-/*
+
 *(0) Ever during follow-up
 *(a) any ineligibility
 safetab becameIneligEver expStatus, col
@@ -74,24 +74,10 @@ safetab compBecameCaseDurFUP3 expStatus, col
 safetab caseHospForCOVIDDurFUP3 expStatus, col
 safetab diedDuringFUP3 expStatus, col
 safetab deregDuringFUP3 expStatus, col
-*/
 
 
-*due to the weirdness of dereg date, check in the source files
-*(1)In cohort of cases
-capture noisily import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, clear
-codebook death_date
-codebook dereg_date
 
-*(2)In original cohort of controls
-capture noisily import delimited ./output/input_controls_`dataset'.csv, clear
-codebook death_date
-codebook dereg_date
 
-*(3)In matched controls
-capture noisily import delimited ./output/input_covid_matched_matches_`dataset'_allSTPs.csv, clear
-codebook death_date
-codebook dereg_date
 
 
 
