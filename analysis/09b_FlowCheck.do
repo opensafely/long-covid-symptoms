@@ -40,14 +40,17 @@ bysort expStatus: sum dereg_date
 
 safecount if death_date>case_index_date & death_date<case_index_date+365 & expStatus==0
 
+sum set_id, detail
+
 log close
 
 /*
 
 *investigation into why so few deaths in the one year follow-up period (particularly for historical comparator)
-keep expStatus death_date case_index_date dereg_date set_id
+keep patient_id expStatus death_date case_index_date dereg_date set_id
 generate oneYrFUP=case_index_date + 365
 format oneYrFUP %td
+
 
 
 *(0) Ever during follow-up
