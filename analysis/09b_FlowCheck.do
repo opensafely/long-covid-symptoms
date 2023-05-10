@@ -32,25 +32,6 @@ log using ./logs/09b_FlowCheck_`dataset'.log, replace t
 
 *load main analysis file
 use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
-codebook case_index_date
-
-*by case status
-codebook case_index_date if case==0
-codebook case_index_date if case==1
-
-
-*check in earlier files
-capture noisily import delimited ./output/input_covid_communitycases.csv, clear
-codebook case_index_date
-
-
-capture noisily import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, clear
-codebook case_index_date
-
-
-log close
-
-/*
 
 
 rename case expStatus
@@ -58,6 +39,10 @@ bysort expStatus: sum death_date
 bysort expStatus: sum dereg_date
 
 safecount if death_date>case_index_date & death_date<case_index_date+365 & expStatus==0
+
+log close
+
+/*
 
 *investigation into why so few deaths in the one year follow-up period (particularly for historical comparator)
 keep expStatus death_date case_index_date dereg_date set_id
