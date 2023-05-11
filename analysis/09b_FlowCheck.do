@@ -8,7 +8,7 @@ DATASETS USED:			.csv
 DATASETS CREATED: 		none
 OTHER OUTPUT: 			logfiles, printed to folder analysis/$logdir
 
-tg
+tgg
 
 
 sysdir set PLUS "/Users/kw/Documents/GitHub/households-research/analysis/adofiles" 
