@@ -76,6 +76,15 @@ sort random
 keep if _n<500
 list case_index_date death_date
 
+*repeat for total extracted controls just to see if the issue was created after the initial extraction or was there in the initial extraction
+capture noisily import delimited ./output/input_controls_`dataset'.csv, clear
+keep if death_date!=.
+set seed 478298
+generate random = runiform()
+sort random
+keep if _n<500
+list death_date
+
 
 log close
 
