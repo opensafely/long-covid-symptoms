@@ -52,16 +52,30 @@ if "`1'"=="historical" {
 keep patient_id expStatus case_index_date dereg_date set_id death_date 
 *keep only comparators who have a death_date populated
 keep if expStatus==0 & death_date!=.
-*number of historical comparators who died
+*number of comparators who died
 safecount
-*number who died during follow-up
-safecount if death_date>=case_index_date & death_date<case_index_date+365
-*number who died afer end of follow-up
-safecount if death_date>=case_index_date+365
+
 *number who died before start of follow_up
 safecount if death_date<case_index_date
 
-sum set_id, detail
+*number who died during follow-up, and eyeball case_index_date and index_date for these
+safecount if death_date>=case_index_date & death_date<case_index_date+365
+preserve
+	keep if death_date>=case_index_date & death_date<case_index_date+365
+	list case_index_date death_date 
+restore
+
+
+*number who died afer end of follow-up
+safecount if death_date>=case_index_date+365
+*eyeball randome sample of 500 of these
+keep if death_date>=case_index_date+365
+set seed 74925
+generate random = runiform()
+sort random
+keep if _n<500
+list case_index_date death_date
+
 
 log close
 
