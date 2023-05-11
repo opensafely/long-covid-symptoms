@@ -50,11 +50,18 @@ if "`1'"=="historical" {
 
 *have a look at the case_index_dates for a sample of people
 keep patient_id expStatus case_index_date dereg_date set_id death_date 
+*keep only comparators who have a death_date populated
+keep if expStatus==0 & death_date!=.
+*number of historical comparators who died
+safecount
+*number who died during follow-up
+safecount if death_date>=case_index_date & death_date<case_index_date+365
+*number who died afer end of follow-up
+safecount if death_date>=case_index_date+365
+*number who died before start of follow_up
+safecount if death_date<case_index_date
 
-capture noisily display patient_id  set_id expStatus case_index_date dereg_date death_date if patient_id==9989
-capture noisily display patient_id  set_id expStatus case_index_date dereg_date death_date if patient_id==1573996
-capture noisily display patient_id  set_id expStatus case_index_date dereg_date death_date if patient_id==3047809
-capture noisily display patient_id  set_id expStatus case_index_date dereg_date death_date if patient_id==7981457
+sum set_id, detail
 
 log close
 
