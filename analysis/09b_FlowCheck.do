@@ -32,19 +32,47 @@ log using ./logs/09b_FlowCheck_`dataset'.log, replace t
 
 *load main analysis file
 use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
-
-
 rename case expStatus
 bysort expStatus: sum death_date
 bysort expStatus: sum dereg_date
 
-safecount if death_date>case_index_date & death_date<case_index_date+365 & expStatus==0
+*check case_index_date is three years before for historical comparators
+keep patient_id expStatus set_id case_index_date death_date dereg_date
+gsort set_id -expStatus
+generate caseCase_index_date=case_index_date if expStatus==1
+by set_id: replace caseCase_index_date=caseCase_index_date[1] if caseCase_index_date==.
+if "`1'"=="historical" {
+	*check if it is three years before (this is what it should be)
+	capture noisily assert case_index_date==caseCase_index_date-1096 if expStatus==0
+	*check if it is two years before (if it isn't three years before)
+	capture noisily assert case_index_date==caseCase_index_date-731 if expStatus==0
+}
 
-sum set_id, detail
+*have a look at the case_index_dates for a sample of people
+keep patient_id expStatus case_index_date dereg_date set_id death_date 
+
+capture noisily display patient_id  set_id expStatus case_index_date dereg_date death_date if patient_id==9989
+capture noisily display patient_id  set_id expStatus case_index_date dereg_date death_date if patient_id==1573996
+capture noisily display patient_id  set_id expStatus case_index_date dereg_date death_date if patient_id==3047809
+capture noisily display patient_id  set_id expStatus case_index_date dereg_date death_date if patient_id==7981457
 
 log close
 
+
+
+
+
+
 /*
+*safecount if death_date>case_index_date & death_date<case_index_date+365 & expStatus==0
+
+*sum set_id, detail
+
+
+
+log close
+
+
 
 *investigation into why so few deaths in the one year follow-up period (particularly for historical comparator)
 keep patient_id expStatus death_date case_index_date dereg_date set_id
