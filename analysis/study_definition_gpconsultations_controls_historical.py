@@ -31,7 +31,7 @@ study = StudyDefinition(
     population=patients.which_exist_in_file(CONTROLS), 
 
     # start of observation period (note, needs to be called index date)
-    index_date="2017-02-01", # note should be ignored when using case_index_date 
+    index_date="2020-02-01", # note should be ignored when using case_index_date 
 
     # get case index date from original file
     case_index_date=patients.with_value_from_file(

@@ -94,6 +94,6 @@ study = StudyDefinition(
 
     ### deregistered after case index date (extracted as used as a matching variable, so needs to exist)
     dereg_date=patients.date_deregistered_from_all_supported_practices(
-        on_or_after="case_index_date", date_format="YYYY-MM",
+        on_or_after="case_index_date", date_format="YYYY-MM-DD",
     ),
 ) 

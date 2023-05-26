@@ -41,7 +41,10 @@ study = StudyDefinition(
     },
 
     # start of observation period i.e. start of wave 1 (note, needs to be called index date)
-    index_date="2020-02-01", 
+    # this has to be start of wave 1 as it is used to estimate first known covid (a matching exclusion parameter) and this has to include wave 1 covid
+    index_date="2020-02-01",
+    # start of observation period i.e. start of wave 2 (note, needs to be called index date)
+    #index_date="2020-09-01", 
 
      # select the study population
      # after trying to run matching for all regions and it taking 5 days without finishing, here are trying just 1 region on its own
@@ -139,7 +142,7 @@ study = StudyDefinition(
 
     ### deregistered after case index date (extracted as used as a matching variable, so needs to exist)
     dereg_date=patients.date_deregistered_from_all_supported_practices(
-        on_or_after="case_index_date", date_format="YYYY-MM",
+        on_or_after="case_index_date", date_format="YYYY-MM-DD",
     ),
 
 
