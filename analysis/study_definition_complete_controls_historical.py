@@ -74,10 +74,19 @@ study = StudyDefinition(
         return_expectations={"incidence": 0.95},
         ),
 
+
+    #have to do the death variables twice as need primary care death date for dates prior to 1 Feb 2019 
     ### died before case index date
     has_died=patients.died_from_any_cause(
       on_or_before="case_index_date",
       returning="binary_flag",
+      date_format="YYYY-MM-DD",
+    ),
+
+    has_diedPrimaryCare=patients.with_death_recorded_in_primary_care(
+         on_or_before="case_index_date",
+         returning="binary_flag",
+         date_format="YYYY-MM-DD",
     ),
 
     ### died after case index date
@@ -92,8 +101,16 @@ study = StudyDefinition(
                 "incidence": 0.01 },
     ),
 
+
+    death_datePrimaryCare=patients.with_death_recorded_in_primary_care(
+         on_or_after="index_date",
+         returning="date_of_death",
+         date_format= "YYYY-MM-DD",
+         return_expectations={"incidence": 0.10, "date": {"earliest" : "2017-02-01", "latest": "2022-11-30"}},
+    ),
+
     ### deregistered after case index date
     dereg_date=patients.date_deregistered_from_all_supported_practices(
-        on_or_after="case_index_date", date_format="YYYY-MM",
+        on_or_after="case_index_date", date_format="YYYY-MM-DD",
     ),
 ) 

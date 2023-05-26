@@ -34,11 +34,11 @@ actions:
 
 
 # *** contemporary potential comparators - flowcheck
-  generate_potential_controls_contemporaryFlowCheck:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_controls_contemporaryFlowCheck
-    outputs:
-      highly_sensitive:
-        cohort: output/input_controls_contemporaryFlowCheck.csv
+#  generate_potential_controls_contemporaryFlowCheck:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_controls_contemporaryFlowCheck
+#    outputs:
+#      highly_sensitive:
+#        cohort: output/input_controls_contemporaryFlowCheck.csv
 
 
 

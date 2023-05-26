@@ -77,11 +77,19 @@ study = StudyDefinition(
 
     ## For the controls, the only criteria that can be applied before the assignment of the case index date is age, sex,  death and dereg criteria 
 
+
+    #have to do the death variables twice as need primary care death date for dates prior to 1 Feb 2019 
     has_died=patients.died_from_any_cause(
      on_or_before="index_date",
          returning="binary_flag",
          date_format="YYYY-MM-DD", 
      ),
+
+    has_diedPrimaryCare=patients.with_death_recorded_in_primary_care(
+         on_or_before="index_date",
+         returning="binary_flag",
+         date_format="YYYY-MM-DD",
+    ),
 
     death_date=patients.died_from_any_cause(
         on_or_after="index_date",
@@ -94,8 +102,15 @@ study = StudyDefinition(
                 "incidence": 0.01 },
     ),
 
+    death_datePrimaryCare=patients.with_death_recorded_in_primary_care(
+         on_or_after="index_date",
+         returning="date_of_death",
+         date_format= "YYYY-MM-DD",
+         return_expectations={"incidence": 0.10, "date": {"earliest" : "2017-02-01", "latest": "2022-11-30"}},
+    ),
+
     dereg_date=patients.date_deregistered_from_all_supported_practices(
-        on_or_after="index_date", date_format="YYYY-MM",
+        on_or_after="index_date", date_format="YYYY-MM-DD",
     ),
 
 ) 

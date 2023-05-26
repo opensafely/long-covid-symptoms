@@ -86,6 +86,8 @@ keep if _n<500
 list death_date
 
 
+
+
 log close
 
 
