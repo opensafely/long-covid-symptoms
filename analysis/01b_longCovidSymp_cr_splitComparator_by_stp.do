@@ -22,6 +22,7 @@ pwd
 
 *setup so that the code in this file can be used to output analyses for any types of comparators (and is called twice by separate .yaml actions)
 local dataset `1'
+display "`1'"
 
 
 * Open a log file
@@ -31,7 +32,13 @@ log using ./logs/01b_longCovidSymp_split`1'_by_stp.log, replace t
 
 
 *(1)=========Split historical or 2019 comparators into separate stp files============
-import delimited ./output/input_controls_`1'.csv, clear
+if "`1'"=="historical" {
+	import delimited ./output/input_controls_historical_correctedDeathDate.csv, clear 
+}
+else {
+	import delimited ./output/input_controls_`1'.csv, clear
+}
+
 safetab stp
 
 *stp is always set to 1 in dummy data so manually splitting up here (just for dummy data)
