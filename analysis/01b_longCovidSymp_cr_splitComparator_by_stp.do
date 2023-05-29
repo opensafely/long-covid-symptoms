@@ -33,7 +33,7 @@ log using ./logs/01b_longCovidSymp_split`1'_by_stp.log, replace t
 
 *(1)=========Split historical or 2019 comparators into separate stp files============
 if "`1'"=="historical" {
-	import delimited ./output/input_controls_historical_correctedDeathDate.csv, clear 
+	import delimited ./output/input_controls_historicalCorrectedDeathDate.csv, clear 
 }
 else {
 	import delimited ./output/input_controls_`1'.csv, clear
