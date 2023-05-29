@@ -49,6 +49,15 @@ actions:
       highly_sensitive:
         cohort: output/input_controls_historical.csv
 
+  set_historical_death_date:
+    run: stata-mp:latest analysis/000_set_historical_death_date_cr.do
+    needs: [generate_potential_controls_historical]
+    outputs:
+      highly_sensitive:
+        cohort: output/input_controls_historicalCorrectedDeathDate.csv
+      moderately_sensitive:
+        log: logs/000_set_historical_death_date_cr.log
+
 
 
 ## 2a CORRECT CASE INDEX DATE IN CASES ONLY (ADD 28 DAYS TO ORIGNAL INDEX DATE)
@@ -151,7 +160,7 @@ actions:
 # 3. SPLIT HISTORICAL COMPARATORS UP BY STP
   01b_longCovidSymp_splitHistorical_by_stp:
     run: stata-mp:latest analysis/01b_longCovidSymp_cr_splitComparator_by_stp.do historical
-    needs: [generate_potential_controls_historical]
+    needs: [set_historical_death_date]
     outputs:
       highly_sensitive:
         case_stp5: output/input_controls_historical_stp5.csv
