@@ -119,8 +119,14 @@ codebook case_index_date
 summ case_index_date, detail
 
 
+*summarise death_date and dereg_date
+codebook death_date
+summ death_date, detail
+codebook dereg_date
+summ dereg_date, detail
 
-*for historical and 2019 comparatirs, check for specific date that it is one or two years prior
+
+*for historical comparators, check for specific date that it is three years prior
 keep patient_id set_id case_index_date
 duplicates drop patient_id, force
 merge m:1 set_id using `caseIndexChecker'
