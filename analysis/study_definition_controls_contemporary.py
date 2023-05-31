@@ -54,6 +54,7 @@ study = StudyDefinition(
         AND (sex = "M" OR sex = "F") 
         AND imd > 0 
         AND NOT has_died
+        AND NOT has_diedPrimaryCare
         AND NOT stp = ""
         """,
     ),
