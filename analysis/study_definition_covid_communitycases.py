@@ -115,6 +115,12 @@ study = StudyDefinition(
       returning="binary_flag",
     ),
 
+    has_diedPrimaryCare=patients.with_death_recorded_in_primary_care(
+         on_or_before="index_date",
+         returning="binary_flag",
+         date_format="YYYY-MM-DD",
+    ),
+
     ### died between (temp) case_index_date and real case index date
     has_died_28dys=patients.died_from_any_cause(
       on_or_before="case_index_date + 28 days",

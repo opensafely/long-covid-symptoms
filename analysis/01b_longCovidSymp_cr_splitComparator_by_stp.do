@@ -22,7 +22,6 @@ pwd
 
 *setup so that the code in this file can be used to output analyses for any types of comparators (and is called twice by separate .yaml actions)
 local dataset `1'
-display "`1'"
 
 
 * Open a log file

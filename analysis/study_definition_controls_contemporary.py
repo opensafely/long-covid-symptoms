@@ -81,7 +81,13 @@ study = StudyDefinition(
      on_or_before="index_date",
          returning="binary_flag",
          date_format="YYYY-MM-DD", 
-     ),
+    ),
+
+    has_diedPrimaryCare=patients.with_death_recorded_in_primary_care(
+         on_or_before="index_date",
+         returning="binary_flag",
+         date_format="YYYY-MM-DD",
+    ),
 
     death_date=patients.died_from_any_cause(
         on_or_after="index_date",
@@ -92,6 +98,13 @@ study = StudyDefinition(
                 "earliest": "2020-12-08",  
                 "latest": "2021-01-31", }, 
                 "incidence": 0.01 },
+    ),
+
+    death_datePrimaryCare=patients.with_death_recorded_in_primary_care(
+         on_or_after="index_date",
+         returning="date_of_death",
+         date_format= "YYYY-MM-DD",
+         return_expectations={"incidence": 0.10, "date": {"earliest" : "2017-02-01", "latest": "2022-11-30"}},
     ),
 
     dereg_date=patients.date_deregistered_from_all_supported_practices(

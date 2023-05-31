@@ -37,17 +37,17 @@ log using ./logs/00_set_case_index_date_cr.log, replace t
 
 *(0)=========Check variables in cases and controls============
 *cases
-import delimited ./output/input_covid_communitycases.csv, clear
-codebook
+*import delimited ./output/input_covid_communitycases.csv, clear
+*codebook
 
 *controls
-import delimited ./output/input_controls_contemporary.csv, clear
-codebook
+*import delimited ./output/input_controls_contemporary.csv, clear
+*codebook
 
 
 *(1)=============Create a variable that is the same as first_known_covid but has all the dates on or before the temp_index_date dropped (called first_known_covidORIGINAL)============================== 
 *import cases
-import delimited ./output/input_covid_communitycases.csv, clear
+import delimited ./output/input_covidcommunitycasesCorrectedDeathDate.csv, clear
 generate first_known_covid19ORIGINAL=first_known_covid19
 la var first_known_covid19 "Original first known covid varialble (for checking code)"
 *for cases, remove all first known covid dates to prevent all the cases being dropped when searching for first known covid prior to the new (28 days later) index date

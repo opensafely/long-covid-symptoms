@@ -61,7 +61,7 @@ foreach i of numlist 10 12/17 20/27 29 33 35/37 40/44 49 {
 
 
 *(2)=========Split controls into separate stp files============
-import delimited ./output/input_controls_contemporary.csv, clear
+import delimited ./output/input_controls_contemporaryCorrectedDeathDate.csv, clear
 safetab stp
 
 *stp is always set to 1 in dummy data so manually splitting up here (just for dummy data)
