@@ -36,6 +36,58 @@ rename case expStatus
 bysort expStatus: sum death_date
 bysort expStatus: sum dereg_date
 
+*Numbers for flowchart check
+*(0) Ever during follow-up
+*(a) any ineligibility
+safetab becameIneligEver expStatus, col
+*(b) specific reasons
+safetab compBecameCaseEver expStatus, col
+safetab caseHospForCOVIDEver expStatus, col
+tab diedEver expStatus, col
+tab deregEver expStatus, col
+
+*(1) During FUP1
+*(a) any ineligibility
+safetab becameIneligFUP1 expStatus, col
+*(b) specific reasons
+safetab compBecameCaseDurFUP1 expStatus, col
+safetab caseHospForCOVIDDurFUP1 expStatus, col
+safetab diedDuringFUP1 expStatus, col
+safetab deregDuringFUP1 expStatus, col
+
+
+*(2) During FUP2
+*(a) any ineligibility
+safetab becameIneligFUP2 expStatus, col
+*(b) specific reasons
+safetab compBecameCaseDurFUP2 expStatus, col
+safetab caseHospForCOVIDDurFUP2 expStatus, col
+safetab diedDuringFUP2 expStatus, col
+safetab deregDuringFUP2 expStatus, col
+
+
+*(3) During FUP3
+*(a) any ineligibility
+safetab becameIneligFUP3 expStatus, col
+*(b) specific reasons
+safetab compBecameCaseDurFUP3 expStatus, col
+safetab caseHospForCOVIDDurFUP3 expStatus, col
+safetab diedDuringFUP3 expStatus, col
+safetab deregDuringFUP3 expStatus, col
+
+
+safecount
+
+
+log close
+
+
+
+
+
+*bughunting code
+/*
+
 *check case_index_date is three years before for historical comparators
 keep patient_id expStatus set_id case_index_date death_date dereg_date
 gsort set_id -expStatus
@@ -89,78 +141,4 @@ list death_date
 
 
 log close
-
-
-
-
-
-
-/*
-*safecount if death_date>case_index_date & death_date<case_index_date+365 & expStatus==0
-
-*sum set_id, detail
-
-
-
-log close
-
-
-
-*investigation into why so few deaths in the one year follow-up period (particularly for historical comparator)
-keep patient_id expStatus death_date case_index_date dereg_date set_id
-generate oneYrFUP=case_index_date + 365
-format oneYrFUP %td
-
-
-
-*(0) Ever during follow-up
-*(a) any ineligibility
-safetab becameIneligEver expStatus, col
-*(b) specific reasons
-safetab compBecameCaseEver expStatus, col
-safetab caseHospForCOVIDEver expStatus, col
-tab diedEver expStatus, col
-tab deregEver expStatus, col
-
-*(1) During FUP1
-*(a) any ineligibility
-safetab becameIneligFUP1 expStatus, col
-*(b) specific reasons
-safetab compBecameCaseDurFUP1 expStatus, col
-safetab caseHospForCOVIDDurFUP1 expStatus, col
-safetab diedDuringFUP1 expStatus, col
-safetab deregDuringFUP1 expStatus, col
-
-
-*(2) During FUP2
-*(a) any ineligibility
-safetab becameIneligFUP2 expStatus, col
-*(b) specific reasons
-safetab compBecameCaseDurFUP2 expStatus, col
-safetab caseHospForCOVIDDurFUP2 expStatus, col
-safetab diedDuringFUP2 expStatus, col
-safetab deregDuringFUP2 expStatus, col
-
-
-*(3) During FUP3
-*(a) any ineligibility
-safetab becameIneligFUP3 expStatus, col
-*(b) specific reasons
-safetab compBecameCaseDurFUP3 expStatus, col
-safetab caseHospForCOVIDDurFUP3 expStatus, col
-safetab diedDuringFUP3 expStatus, col
-safetab deregDuringFUP3 expStatus, col
-
-
-
-
-
-
-
-safecount
-
-
-log close
-
-
-
+*/
