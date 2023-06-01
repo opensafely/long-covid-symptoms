@@ -49,7 +49,7 @@ di "**Potential comparators:**"
 safecount
 
 *Code to fix bug due to de_reg date error (eventually needs fixed by re-extraction)
-replace dereg_date=dereg_date + "-01" if dereg_date!=""
+*replace dereg_date=dereg_date + "-01" if dereg_date!=""
 
 *see if I can select those who were (1) alive and (2) hadn't deregistered at the start of wave 2
 
@@ -517,7 +517,7 @@ la var numPrescTypesPrevYearCat "Number of types of distinct BNF groups of drugs
 
 
 *Code to fix bug due to de_reg date error (eventually needs fixed by re-extraction)
-replace dereg_date=dereg_date + "-01" if dereg_date!="" & case==0
+*replace dereg_date=dereg_date + "-01" if dereg_date!="" & case==0
 
 
 *(f) Recode all dates from the strings 
