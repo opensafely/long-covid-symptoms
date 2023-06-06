@@ -1189,7 +1189,7 @@ actions:
     needs: [set_case_index_date, generate_potential_controls_historical, 
     add_allVars_historical_controls, add_allVars_cases, combine_matched_historical_CASESstps, combine_matched_historical_COMPARATORstps, 
     get_consultationCount_cases, get_gpconsultations_historical_controls, get_symptoms_cases, get_symptoms_historical_controls, get_medicines_cases, 
-    get_medicines_historical_controls, create_historical_analysis_file]
+    get_medicines_historical_controls, create_historical_analysis_file, correct_historical_control_death_dates]
     outputs:
       moderately_sensitive:
         log: logs/09b_FlowCheck_historical.log
