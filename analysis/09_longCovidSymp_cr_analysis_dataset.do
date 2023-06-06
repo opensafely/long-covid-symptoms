@@ -44,7 +44,7 @@ di "**Potential cases:**"
 safecount
 
 *comparator
-capture noisily import delimited ./output/input_controls_`dataset'.csv, clear
+capture noisily import delimited ./output/input_controls_`dataset'CorrectedDeathDate.csv, clear
 di "**Potential comparators:**"
 safecount
 

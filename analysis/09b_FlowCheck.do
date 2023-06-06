@@ -14,6 +14,14 @@ tgg
 sysdir set PLUS "/Users/kw/Documents/GitHub/households-research/analysis/adofiles" 
 sysdir set PERSONAL "/Users/kw/Documents/GitHub/households-research/analysis/adofiles" 
 
+
+*NEEDS REDONE THIS WEEK SO THAT THE COUNTS AT THE BEGINNING OF EACH FUP HAVE BEEN INCLUDED TO DROP THOSE THAT WERE NO LONGER ELIGIBLE FOR THAT FUP PERIOD (AND ALSO DROPPED ANY
+NO LONGER MATCHED AFTER DOING SO). THINK I NEED TO DROP COMPARATORS WHO BECAME CASES IN THE PREVIOUS FUP PERIOD, BUT LIKELY DO A SENSITIVITY ANALYSIS WHERE THESE PEOPLE ARE NOT DROPPED(?). 
+
+OTHER OPTION WOULD BE THAT THESE PEOPLE SHOULD BECOME CASES, MATCHED TO NEW COMPARATORS AND THEN INCLUDED IN THE ANALYIS FOR THE NEXT FUP?
+
+I THINK THE FIRST WAY OF DOING IT SHOULD BE OK THOUGH, CAN REPORT NUMBERS*
+
 							
 ==============================================================================*/
 sysdir set PLUS ./analysis/adofiles
@@ -35,6 +43,37 @@ use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 rename case expStatus
 bysort expStatus: sum death_date
 bysort expStatus: sum dereg_date
+
+****BUGHUNTING MAIN ANALYSIS FILE******
+set seed 478298
+generate random = runiform()
+sort random
+keep if _n<1000
+list death_date
+
+
+
+****BUGHUNTING OTHER FILES******
+capture noisily import delimited ./output/input_controls_`dataset'CorrectedDeathDate.csv, clear
+set seed 478298
+generate random = runiform()
+sort random
+keep if _n<1000
+list death_date
+
+
+capture noisily import delimited ./output/input_covid_matched_cases_`dataset'_allSTPs.csv, clear
+set seed 478298
+generate random = runiform()
+sort random
+keep if _n<1000
+list death_date
+
+log close
+
+/*
+
+************************
 
 *Numbers for flowchart check
 *(0) Ever during follow-up
