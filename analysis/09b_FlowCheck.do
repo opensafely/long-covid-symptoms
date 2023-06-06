@@ -45,6 +45,7 @@ bysort expStatus: sum death_date
 bysort expStatus: sum dereg_date
 
 ****BUGHUNTING MAIN ANALYSIS FILE******
+keep if death_date!=.
 set seed 478298
 generate random = runiform()
 sort random
@@ -55,6 +56,7 @@ list death_date
 
 ****BUGHUNTING OTHER FILES******
 capture noisily import delimited ./output/input_controls_`dataset'CorrectedDeathDate.csv, clear
+keep if death_date!=""
 set seed 478298
 generate random = runiform()
 sort random
@@ -63,6 +65,7 @@ list death_date
 
 
 capture noisily import delimited ./output/input_covid_matched_cases_`dataset'_allSTPs.csv, clear
+keep if death_date!=""
 set seed 478298
 generate random = runiform()
 sort random
