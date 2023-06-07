@@ -50,6 +50,7 @@ set seed 478298
 generate random = runiform()
 sort random
 keep if _n<1000
+sort death_date
 list death_date
 
 
@@ -66,6 +67,16 @@ list death_date
 
 
 capture noisily import delimited ./output/input_covid_matched_matches_`dataset'_allSTPs.csv, clear
+keep if death_date!=""
+set seed 478298
+generate random = runiform()
+sort random
+keep if _n<1000
+sort death_date
+list death_date
+
+
+capture noisily import delimited ./output/input_complete_controls_`dataset'.csv, clear
 keep if death_date!=""
 set seed 478298
 generate random = runiform()
