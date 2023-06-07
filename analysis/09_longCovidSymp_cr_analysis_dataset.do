@@ -166,8 +166,13 @@ di "***********************FLOWCHART 2. NUMBER OF MATCHED CASES AND MATCHED COMP
 di "**Matched cases:**"
 safecount
 
-
-capture noisily import delimited ./output/input_complete_controls_`dataset'.csv, clear
+*historical needed death dates fixed as some of the deaths post-follow-up could be before 01Feb2019, comtemporary didn't need this fixed again here as no deathdates were before this date
+if "`1'"=="historical" {
+	capture noisily import delimited ./output/input_complete_controls_`dataset'CorrectedDeathDate.csv, clear
+}
+else if "`1'"=="contemporary" {
+	capture noisily import delimited ./output/input_complete_controls_`dataset'.csv, clear
+}
 *add match info
 merge 1:1 patient_id using `comp_match_info'
 keep if _merge==3
