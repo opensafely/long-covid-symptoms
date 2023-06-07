@@ -54,7 +54,7 @@ sort death_date
 list death_date
 
 
-
+/*
 ****BUGHUNTING OTHER FILES******
 capture noisily import delimited ./output/input_controls_`dataset'CorrectedDeathDate.csv, clear
 keep if death_date!=""
@@ -74,24 +74,11 @@ sort random
 keep if _n<1000
 sort death_date
 list death_date
+*/
 
 
-if "`1'"=="historical" {
-	capture noisily import delimited ./output/input_complete_controls_`dataset'CorrectedDeathDate.csv, clear
-	keep if death_date!=""
-	set seed 478298
-	generate random = runiform()
-	sort random
-	keep if _n<1000
-	sort death_date
-	list death_date
-}
 
-log close
 
-/*
-
-************************
 
 *Numbers for flowchart check
 *(0) Ever during follow-up
@@ -142,60 +129,3 @@ log close
 
 
 
-*bughunting code
-/*
-
-*check case_index_date is three years before for historical comparators
-keep patient_id expStatus set_id case_index_date death_date dereg_date
-gsort set_id -expStatus
-generate caseCase_index_date=case_index_date if expStatus==1
-by set_id: replace caseCase_index_date=caseCase_index_date[1] if caseCase_index_date==.
-if "`1'"=="historical" {
-	*check if it is three years before (this is what it should be)
-	capture noisily assert case_index_date==caseCase_index_date-1096 if expStatus==0
-	*check if it is two years before (if it isn't three years before)
-	capture noisily assert case_index_date==caseCase_index_date-731 if expStatus==0
-}
-
-*have a look at the case_index_dates for a sample of people
-keep patient_id expStatus case_index_date dereg_date set_id death_date 
-*keep only comparators who have a death_date populated
-keep if expStatus==0 & death_date!=.
-*number of comparators who died
-safecount
-
-*number who died before start of follow_up
-safecount if death_date<case_index_date
-
-*number who died during follow-up, and eyeball case_index_date and index_date for these
-safecount if death_date>=case_index_date & death_date<case_index_date+365
-preserve
-	keep if death_date>=case_index_date & death_date<case_index_date+365
-	list case_index_date death_date 
-restore
-
-
-*number who died afer end of follow-up
-safecount if death_date>=case_index_date+365
-*eyeball randome sample of 500 of these
-keep if death_date>=case_index_date+365
-set seed 74925
-generate random = runiform()
-sort random
-keep if _n<500
-list case_index_date death_date
-
-*repeat for total extracted controls just to see if the issue was created after the initial extraction or was there in the initial extraction
-capture noisily import delimited ./output/input_controls_`dataset'.csv, clear
-keep if death_date!=""
-set seed 478298
-generate random = runiform()
-sort random
-keep if _n<500
-list death_date
-
-
-
-
-log close
-*/
