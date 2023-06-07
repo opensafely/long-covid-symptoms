@@ -1028,6 +1028,7 @@ actions:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_complete_controls_contemporary.csv
 
+  
 
 # 8a. GET PREV YRS CONSULTATION COUNT VAR FOR CASES
   get_consultationCount_cases:
@@ -1114,6 +1115,15 @@ actions:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_complete_controls_historical.csv
 
+  correct_historical_control_death_dates_wAllVars:
+    run: stata-mp:latest analysis/07_correct_death_dates_cr.do historical
+    needs: [add_allVars_historical_controls]
+    outputs:
+      highly_sensitive:
+        historicalcontrolcohort: output/input_complete_controls_historicalCorrectedDeathDate.csv
+      moderately_sensitive:
+        log: logs/07_set_correct_death_dates_historical_wAllVars.log
+
 
 # 8h. ADD SYMPTOMS, MEDICINES AND CONSULTATIONS TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
   get_symptoms_historical_controls:
@@ -1161,7 +1171,7 @@ actions:
     needs: [set_case_index_date, generate_potential_controls_historical, 
     add_allVars_historical_controls, add_allVars_cases, combine_matched_historical_CASESstps, combine_matched_historical_COMPARATORstps, 
     get_consultationCount_cases, get_gpconsultations_historical_controls, get_symptoms_cases, get_symptoms_historical_controls, get_medicines_cases, 
-    get_medicines_historical_controls]
+    get_medicines_historical_controls, correct_historical_control_death_dates_wAllVars]
     outputs:
       highly_sensitive:
         # casesContemporary: output/cases_contemporary.dta 
