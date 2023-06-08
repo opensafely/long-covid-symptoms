@@ -79,7 +79,7 @@ list death_date
 
 
 use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
-
+rename case expStatus
 
 *Numbers for flowchart check
 *(0) Ever during follow-up
