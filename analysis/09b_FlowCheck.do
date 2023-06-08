@@ -78,6 +78,7 @@ list death_date
 
 
 
+use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 
 
 *Numbers for flowchart check
