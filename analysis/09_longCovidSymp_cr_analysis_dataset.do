@@ -375,6 +375,14 @@ label define gpCountPrevYearCat 0 "0" 1 "1-5" 2 "6+"
 label values gpCountPrevYearCat gpCountPrevYearCat
 safetab gpCountPrevYearCat, miss
 la var gpCountPrevYearCat "Categorised number of GP appts in year prior to COVID-19 diagnosis"
+*create alternative previous consultations variable where the lowest category is 1
+egen gpCountPrevYearSENS=cut(gp_count_prevyear), at (1, 2, 6, 100000)
+la var gpCountPrevYearSENS "Sens analysis: num of GP appts in yr prior to COVID-19 diagnosis"
+recode gpCountPrevYearSENS 1=0 2=1 6=2
+label define gpCountPrevYearSENS 0 "1" 1 "2-5" 2 "6+"
+label values gpCountPrevYearSENS gpCountPrevYearSENS
+safetab gpCountPrevYearSENS, miss
+safetab gpCountPrevYearSENS gpCountPrevYearCat, miss
 *label gp count outcome variables
 la var total_gp_count "Num of gp conslts during all post-COVID follow-up"
 la var t1_gp_count "Num of gp conslts during 4-12 wk post-COVID"
