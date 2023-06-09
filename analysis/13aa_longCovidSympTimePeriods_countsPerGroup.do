@@ -31,16 +31,42 @@ prog drop _all
 
 
 prog define outputCountsforOutcome
-	syntax, outcome(string)
-	*above will need edited when also have the historical population to compare to
-
-	*get overall denominator			
-	count
-	local denom=r(N)
+	*`1'=outcome, `2'=dataset
 	
 	forvalues i=1/3{
+		*drop people who became ineligible during the previous period
+		if `i'==1{
+			*FUP1 don't need to do anything
+			use ./output/longCovidSymp_analysis_dataset_`2'.dta, clear
+			rename case expStatus
+			*get denominator for reporting proportion of exposed with events			
+			count if expStatus==1
+			local denom=r(N)
+		} 
+		else if `i'==2 {
+			*FUP2 need to drop those who became ineligible during FUP1
+			use ./output/longCovidSymp_analysis_dataset_`2'.dta, clear
+			rename case expStatus
+			drop if becameIneligFUP1==1
+			*get denominator for reporting proportion of exposed with events			
+			count if expStatus==1
+			local denom=r(N)
+		} 
+		else if `i'==3 {
+			*FUP3 need to drop those who became ineligible during FUP1 and FUP2
+			use ./output/longCovidSymp_analysis_dataset_`2'.dta, clear
+			rename case expStatus
+			drop if becameIneligFUP1==1|becameIneligFUP2==1
+			*get denominator for reporting proportion of exposed with events			
+			count if expStatus==1
+			local denom=r(N)
+		}
+		*restrict for delirium
+		if "`1'"=="symp_delirium"{
+			keep if age>=67
+		} 
 		*get number of people with specific outcome (events column)
-		cou if t`i'_`outcome' == 1
+		cou if t`i'_`1' == 1
 		local events=round(r(N),5)
 		*calculate proportion of people with events
 		local percWEvent=100*(`events'/`denom')
@@ -50,15 +76,15 @@ prog define outputCountsforOutcome
 		count if expStatus==1
 		local expDenom=round(r(N),5)
 		*get number of people (and %) with events by exposure status 
-		cou if t`i'_`outcome'== 1 & expStatus==0
+		cou if t`i'_`1'== 1 & expStatus==0
 		local unexpEvents=round(r(N),5)
 		local unexpPercWEvent=100*(`unexpEvents'/`unexpDenom')
-		cou if t`i'_`outcome' == 1 & expStatus==1
+		cou if t`i'_`1' == 1 & expStatus==1
 		local expEvents=round(r(N),5)
 		local expPercWEvent=100*(`expEvents'/`expDenom')	
 						
 		*get variable name
-		local varLab: variable label t`i'_`outcome'
+		local varLab: variable label t`i'_`1'
 		display "`varLab'"
 		*get category name
 		*local category: label `catLabel' `i'
@@ -74,7 +100,7 @@ end
 
 use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 rename case expStatus
-*counts for table header of overall number exposed and unexposed
+*counts for table header of overall number exposed and unexposed at start
 count if expStatus==0
 local totUnexp=r(N)
 count if expStatus==1
@@ -85,18 +111,18 @@ file write tablecontents ("Unexposed to COVID N=`totUnexp'") _tab ("Exposed to C
 file write tablecontents _tab ("Total N") _tab ("n with event") _tab ("% of total with events") _tab ("Unexposed N") _tab ("n unexposed with event") _tab ("% of unexposed with events") _tab ("Exposed to COVID N") _tab ("n exposed to COVID with event") _tab ("% of exposed to COVID with events") _n
 
 *JUST FOR any symptom ever
-cap noisily outputCountsforOutcome, outcome(anySymptomsEver)
+cap noisily outputCountsforOutcome anySymptomsEver `dataset'
 file write tablecontents _n
 
 *loop through each outcome
 foreach outcome in $symp {
-	cap noisily outputCountsforOutcome, outcome(`outcome')
+	cap noisily outputCountsforOutcome `outcome' `dataset'
 	file write tablecontents _n
 }
 
 *JUST FOR DELIRIUM
 keep if age>=67
-cap noisily outputCountsforOutcome, outcome(symp_delirium)
+cap noisily outputCountsforOutcome symp_delirium `dataset'
 file write tablecontents _n
 
 cap file close tablecontents 

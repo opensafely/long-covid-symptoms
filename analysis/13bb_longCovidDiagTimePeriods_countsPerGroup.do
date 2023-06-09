@@ -1,4 +1,4 @@
-*************************************************************************
+ *************************************************************************
 *Do file: 08_hhClassif_an_mv_analysis_perEth5Group_HR_table.do
 *
 *Purpose: Create content that is ready to paste into a pre-formatted Word 
@@ -31,16 +31,41 @@ prog drop _all
 
 
 prog define outputCountsforOutcome
-	syntax, outcome(string)
-	*above will need edited when also have the historical population to compare to
-
-	*get overall denominator			
-	count
-	local denom=r(N)
+	*`1'=outcome, `2'=dataset)
 	
 	forvalues i=1/3{
+		if `i'==1{
+			*FUP1 don't need to do anything
+			use ./output/longCovidSymp_analysis_dataset_`2'.dta, clear
+			rename case expStatus
+			*get denominator for reporting proportion of exposed with events			
+			count if expStatus==1
+			local denom=r(N)
+		} 
+		else if `i'==2 {
+			*FUP2 need to drop those who became ineligible during FUP1
+			use ./output/longCovidSymp_analysis_dataset_`2'.dta, clear
+			rename case expStatus
+			drop if becameIneligFUP1==1
+			*get denominator for reporting proportion of exposed with events			
+			count if expStatus==1
+			local denom=r(N)
+		} 
+		else if `i'==3 {
+			*FUP3 need to drop those who became ineligible during FUP1 and FUP2
+			use ./output/longCovidSymp_analysis_dataset_`2'.dta, clear
+			rename case expStatus
+			drop if becameIneligFUP1==1|becameIneligFUP2==1
+			*get denominator for reporting proportion of exposed with events			
+			count if expStatus==1
+			local denom=r(N)
+		}
+		*restrict for delirium
+		if "`1'"=="symp_delirium"{
+			keep if age>=67
+		} 
 		*get number of people with specific outcome (events column)
-		cou if t`i'_`outcome' == 1
+		cou if t`i'_`1' == 1
 		local events=round(r(N),5)
 		*calculate proportion of people with events
 		local percWEvent=100*(`events'/`denom')
@@ -50,15 +75,15 @@ prog define outputCountsforOutcome
 		count if expStatus==1
 		local expDenom=round(r(N),5)
 		*get number of people (and %) with events by exposure status 
-		cou if t`i'_`outcome'== 1 & expStatus==0
+		cou if t`i'_`1'== 1 & expStatus==0
 		local unexpEvents=round(r(N),5)
 		local unexpPercWEvent=100*(`unexpEvents'/`unexpDenom')
-		cou if t`i'_`outcome' == 1 & expStatus==1
+		cou if t`i'_`1' == 1 & expStatus==1
 		local expEvents=round(r(N),5)
 		local expPercWEvent=100*(`expEvents'/`expDenom')	
 						
 		*get variable name
-		local varLab: variable label t`i'_`outcome'
+		local varLab: variable label t`i'_`1'
 		display "`varLab'"
 		*get category name
 		*local category: label `catLabel' `i'
@@ -87,7 +112,7 @@ file write tablecontents _tab ("Total N") _tab ("n with event") _tab ("% of tota
 
 *loop through each outcome
 foreach outcome in $diag {
-	cap noisily outputCountsforOutcome, outcome(`outcome')
+	cap noisily outputCountsforOutcome `outcome' `dataset'
 	file write tablecontents _n
 }
 
