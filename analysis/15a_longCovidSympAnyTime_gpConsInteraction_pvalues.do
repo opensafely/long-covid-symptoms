@@ -50,16 +50,26 @@ display "LRtest p-value for anySymptomsEver:"
 display r(p)
 
 
-
 *do any symptom ever - test for trend by increasing gp count
-clogit anySymptomsEver i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+capture quietly clogit anySymptomsEver i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 est store A
-clogit anySymptomsEver i.expStatus##c.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+capture quietly clogit anySymptomsEver i.expStatus##c.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 est store B
 lrtest A B, force
 display "LRtest p-value for anySymptomsEver (test for trend):"
 display r(p)
 
+
+*run through for SENSITIVITY ANALYSIS p-value for each outcome
+foreach outcome in $symp {
+	capture quietly clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+	est store A
+	capture quietly clogit tEver_`outcome' i.expStatus i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+	est store B
+	lrtest A B, force
+	display "LRtest p-value for tEver_`outcome' (sensitivity analysis):"
+	display r(p)
+}
 
 
 

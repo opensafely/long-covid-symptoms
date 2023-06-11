@@ -40,7 +40,7 @@ local dataset `1'
 use ./output/longCovidSymp_analysis_dataset_`1'.dta, clear
 
 *eyeball all variables
-*codebook
+codebook
 
 
 *total number in cohort

@@ -40,7 +40,6 @@ foreach outcome in $medicines {
 }
 
 
-
 *test for trend by increasing gp count for NSAIDs 
 capture quietly clogit bnf_nsaids_spec i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 est store A
@@ -51,6 +50,16 @@ display "LRtest p-value for NSAIDs (test for trend):"
 display r(p)
 
 
+*loop through each outcome - sensitivity analysis
+foreach outcome in $medicines {
+	capture quietly clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+	est store A
+	capture quietly clogit tEver_`outcome' i.expStatus i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+	est store B
+	lrtest A B, force
+	display "LRtest p-value for tEver_`outcome' (sensitivity analysis):"
+	display r(p)
+}
 
 
 cap file close tablecontents 
