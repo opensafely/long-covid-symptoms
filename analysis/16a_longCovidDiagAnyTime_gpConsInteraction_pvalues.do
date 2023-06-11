@@ -28,7 +28,7 @@ use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 rename case expStatus
 
 
-*loop through each outcome
+*loop through each diagnosis for gpcount prev year variable
 foreach outcome in $diag {
 	capture quietly clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	est store A
@@ -39,8 +39,7 @@ foreach outcome in $diag {
 	display r(p)
 }
 
-
-*do any symptom ever - test for trend by increasing for infectious diseases
+*do infect parasite diagnosis - test for trend by increasing for infectious diseases
 capture quietly clogit infect_parasite i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 est store A
 capture quietly clogit infect_parasite i.expStatus##c.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
@@ -48,6 +47,20 @@ est store B
 lrtest A B, force
 display "LRtest p-value for infectious diseases outcome (test for trend):"
 display r(p)
+
+
+
+
+*repeat for sensitivity analysis
+foreach outcome in $diag {
+	capture quietly clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+	est store A
+	capture quietly clogit tEver_`outcome' i.expStatus i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+	est store B
+	lrtest A B, force
+	display "LRtest p-value for tEver_`outcome' (sensitivity analysis):"
+	display r(p)
+}
 
 
 
