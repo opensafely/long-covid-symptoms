@@ -558,6 +558,14 @@ foreach var of varlist $diag $symp $medicines {
 	replace tEver_`var'=1 if t1_`var'==1 | t2_`var'==1 |  t3_`var'==1
 } 
 
+*delirium!!!!
+generate tEver_symp_delirium=0
+replace tEver_symp_delirium=1 if t1_symp_delirium==1 | t2_symp_delirium==1 |  t3_symp_delirium==1
+label variable tEver_symp_delirium "tEver_symp_delirium"
+label variable t1_symp_delirium "t1_symp_delirium"
+label variable t2_symp_delirium "t2_symp_delirium"
+label variable t3_symp_delirium "t3_symp_delirium"
+
 
 *create a variable that defines whether a person had ANY symptoms ever over followup
 generate sympCounter=0

@@ -1570,7 +1570,7 @@ actions:
         log: logs/16_longCovidDiagAnyTime_gpConsInteractionhistorical.log
         figure1Ahistorical: output/Figure5_gpConsInteraction_historical.txt
 
-   # 16. FIGURE 5 - DIAGNOSIS AT ANY TIME WITH INTERACTION WITH PREV GPCONS - COUNTS
+   # 16. FIGURE 5 - COUNTS FOR PREV CONS FOR SYMP, DIAGNOSIS AND MEDICINES (INCL SENSITIVITY ANALYSIS)
   figure_5Counts_contemporary:
     run: stata-mp:latest analysis/16aa_longCovidDiagConsultationGroups_countsPerGroup.do contemporary
     needs: [create_contemporary_analysis_file]
