@@ -1642,7 +1642,20 @@ actions:
         log: logs/17a_longCovidBNFAnyTime_gpConsInt_pvalshistorical.log
 
 
- 
+  # 18. TESTS FOR TREND FOR CONS INTERACTIONS "SENSITIVITY" AND DELIRIUM
+  additional_p_values_contemporary:
+    run: stata-mp:latest analysis/19_additional_pvalues.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/19_additional_pvaluescontemporary.log
+
+  additional_p_values_historical:
+    run: stata-mp:latest analysis/19_additional_pvalues.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/19_additional_pvalueshistorical.log
    
 
 
