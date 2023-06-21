@@ -112,6 +112,7 @@ foreach outcome in $sympAddtl {
 }
 */
 
+/*
 *JUST FOR any symptom ever
 cap noisily outputORsforOutcome, outcome(anySymptomsEver)
 file write tablecontents _n
@@ -121,6 +122,7 @@ foreach outcome in $symp {
 	cap noisily outputORsforOutcome, outcome(tEver_`outcome')
 	file write tablecontents _n
 }
+*/
 
 *JUST FOR DELIRIUM
 keep if age>=67
