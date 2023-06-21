@@ -72,6 +72,7 @@ file open tablecontents using ./output/Figure4_gpConsInteraction_`dataset'.txt, 
 file write tablecontents "Fig 4: Analysis of symptoms (at any time) including interaction with age for `dataset' comparator population (full adjusted)" _n _n
 file write tablecontents ("Symptom") _tab ("Prev GP consults") _tab ("OR (95% CI)") _n
 
+/* *COMMENTED OUT AS JUST RUNNING DELIRIUM SENS
 *JUST FOR any symptom ever
 cap noisily outputORsforOutcome, outcome(anySymptomsEver)
 file write tablecontents _n
@@ -87,7 +88,7 @@ foreach outcome in $symp {
 keep if age>=67
 cap noisily outputORsforOutcome, outcome(tEver_symp_delirium)
 file write tablecontents _n
-
+*/
 
 
 
@@ -135,6 +136,8 @@ rename case expStatus
 *drop all people wtih no consultations in previous year
 drop if gp_count_prevyear==0
 
+
+/* *COMMENTED OUT AS JUST RUNNING DELIRIUM SENS
 *call programs using alternative prev GP variable where lowest category is 1 in previous year (rather than 0)
 *JUST FOR any symptom ever
 cap noisily outputORsforOutcomeSENS, outcome(anySymptomsEver)
@@ -145,6 +148,8 @@ foreach outcome in $symp {
 	cap noisily outputORsforOutcomeSENS, outcome(tEver_`outcome')
 	file write tablecontents _n
 }
+
+*/
 
 *JUST for delirium
 keep if age>=67
