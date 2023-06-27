@@ -73,10 +73,12 @@ file write tablecontents ("Diagnosis") _tab ("Prev GP consults") _tab ("OR (95% 
 
 
 *loop through each outcome
+/*
 foreach outcome in $diag {
 	cap noisily outputORsforOutcome, outcome(tEver_`outcome')
 	file write tablecontents _n
 }
+*/
 
 
 *************SENSITIVITY ANALYSIS WHERE PEOPLE WITH NO CONSULTATIONS ARE DROPPED**************
@@ -127,10 +129,16 @@ drop if gp_count_prevyear==0
 
 *call programs using alternative prev GP variable where lowest category is 1 in previous year (rather than 0)
 *loop through each outcome
+/*
 foreach outcome in $diag {
 	cap noisily outputORsforOutcomeSENS, outcome(tEver_`outcome')
 	file write tablecontents _n
 }
+*/
+
+keep if age>=15 & age<=45
+cap noisily outputORsforOutcomeSENS, outcome(pregnancy_compl)
+file write tablecontents _n
 
 
 cap file close tablecontents 

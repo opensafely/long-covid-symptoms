@@ -111,10 +111,17 @@ file write tablecontents _tab ("Total N") _tab ("n with event") _tab ("% of tota
 
 
 *loop through each outcome
+/*
 foreach outcome in $diag {
 	cap noisily outputCountsforOutcome `outcome' `dataset'
 	file write tablecontents _n
 }
+*/
+
+
+keep if age>=15 & age<=45
+cap noisily outputCountsforOutcome, pregnancy_compl `dataset'
+file write tablecontents _n
 
 
 

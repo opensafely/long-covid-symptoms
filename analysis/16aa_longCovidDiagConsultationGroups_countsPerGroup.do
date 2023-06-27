@@ -195,8 +195,16 @@ file write tablecontents _n
 */
 
 *JUST FOR DELIRIUM
+/*
 keep if age>=67
-cap noisily outputCountsforOutcomeSENS, outcome(tEver_symp_delirium)
+cap noisily outputCountsforOutcomeSENS, outcome(tEver_pregnancy_compl)
+file write tablecontents _n
+*/
+
+
+
+keep if age>=15 & age<=45
+cap noisily outputCountsforOutcomeSENS, outcome(tEver_pregnancy_compl)
 file write tablecontents _n
 
 

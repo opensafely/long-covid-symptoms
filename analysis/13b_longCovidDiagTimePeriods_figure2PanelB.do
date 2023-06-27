@@ -108,10 +108,17 @@ file write tablecontents ("Symptom") _tab ("Comparator") _tab ("OR (95% CI)") _t
 
 *loop through each outcome
 *foreach outcome in $diagnosisOutcomes {
+	/*
 foreach outcome in $diag {
 	cap noisily outputORsforOutcome `outcome' `dataset'
 	file write tablecontents _n
 }
+*/
+
+*pregnancy complications with age range that is just for women of childbearing age
+keep if age>=15 & age<=45
+cap noisily outputCountsforOutcome, pregnancy_compl `dataset'
+file write tablecontents _n
 
 
 cap file close tablecontents 
