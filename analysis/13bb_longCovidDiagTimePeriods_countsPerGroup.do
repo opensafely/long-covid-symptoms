@@ -38,6 +38,7 @@ prog define outputCountsforOutcome
 			*FUP1 don't need to do anything
 			use ./output/longCovidSymp_analysis_dataset_`2'.dta, clear
 			rename case expStatus
+			keep if age>=15 & age<=45
 			*get denominator for reporting proportion of exposed with events			
 			count if expStatus==1
 			local denom=r(N)
@@ -46,6 +47,7 @@ prog define outputCountsforOutcome
 			*FUP2 need to drop those who became ineligible during FUP1
 			use ./output/longCovidSymp_analysis_dataset_`2'.dta, clear
 			rename case expStatus
+			keep if age>=15 & age<=45
 			drop if becameIneligFUP1==1
 			*get denominator for reporting proportion of exposed with events			
 			count if expStatus==1
@@ -55,6 +57,7 @@ prog define outputCountsforOutcome
 			*FUP3 need to drop those who became ineligible during FUP1 and FUP2
 			use ./output/longCovidSymp_analysis_dataset_`2'.dta, clear
 			rename case expStatus
+			keep if age>=15 & age<=45
 			drop if becameIneligFUP1==1|becameIneligFUP2==1
 			*get denominator for reporting proportion of exposed with events			
 			count if expStatus==1
@@ -119,7 +122,7 @@ foreach outcome in $diag {
 */
 
 
-keep if age>=15 & age<=45
+
 cap noisily outputCountsforOutcome, pregnancy_compl `dataset'
 file write tablecontents _n
 
