@@ -137,7 +137,7 @@ foreach outcome in $diag {
 */
 
 keep if age>=15 & age<=45
-cap noisily outputORsforOutcomeSENS, outcome(pregnancy_compl)
+cap noisily outputORsforOutcomeSENS, outcome(tEver_pregnancy_compl)
 file write tablecontents _n
 
 
