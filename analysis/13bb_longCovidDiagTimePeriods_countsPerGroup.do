@@ -123,7 +123,7 @@ foreach outcome in $diag {
 
 
 
-cap noisily outputCountsforOutcome, pregnancy_compl `dataset'
+cap noisily outputCountsforOutcome pregnancy_compl `dataset'
 file write tablecontents _n
 
 

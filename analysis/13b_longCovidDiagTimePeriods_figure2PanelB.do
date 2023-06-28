@@ -119,7 +119,7 @@ foreach outcome in $diag {
 */
 
 *pregnancy complications with age range that is just for women of childbearing age
-cap noisily outputCountsforOutcome, pregnancy_compl `dataset'
+cap noisily outputORsforOutcome pregnancy_compl `dataset'
 file write tablecontents _n
 
 
