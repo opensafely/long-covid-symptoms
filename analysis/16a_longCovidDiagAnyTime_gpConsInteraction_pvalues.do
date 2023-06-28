@@ -27,7 +27,7 @@ log using ./logs/16a_longCovidDiagAnyTime_gpConsInt_pvals`dataset'.log, replace 
 use ./output/longCovidSymp_analysis_dataset_`dataset'.dta, clear
 rename case expStatus
 
-
+/*
 *loop through each diagnosis for gpcount prev year variable
 foreach outcome in $diag {
 	capture quietly clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
@@ -61,7 +61,16 @@ foreach outcome in $diag {
 	display "LRtest p-value for tEver_`outcome' (sensitivity analysis):"
 	display r(p)
 }
+*/
 
+keep if age>=15 & age<=45
+capture quietly clogit tEver_pregnancy_compl i.expStatus##i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+est store A
+capture quietly clogit tEver_pregnancy_compl i.expStatus i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+est store B
+lrtest A B, force
+display "LRtest p-value for tEver_pregnancy_compl (sensitivity analysis):"
+display r(p)
 
 
 

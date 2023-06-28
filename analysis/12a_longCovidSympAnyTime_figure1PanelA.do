@@ -104,7 +104,7 @@ file write tablecontents ("Diagnoses") _tab _tab ("OR (95% CI)") _tab ("Number o
 
 
 
-*this is when doing just the codelists added subsequently (pain etc)
+*COMMENTED OUT AS JUST RUNNING DELIRIUM
 /*
 foreach outcome in $sympAddtl {
 	cap noisily outputORsforOutcome, outcome(tEver_`outcome')

@@ -105,16 +105,23 @@ file write tablecontents ("Diagnoses") _tab ("Comparator") _tab _tab ("OR (95% C
 
 *loop through each outcome
 
+/*
 foreach outcome in $diag {
 	cap noisily outputORsforOutcome, outcome(tEver_`outcome')
 	file write tablecontents _n
 }
+*/
 
 *eye disease (left out originally)
 /*
 cap noisily outputORsforOutcome, outcome(tEver_eye_adnexa_dis)
 file write tablecontents _n
 */
+
+*pregnancy complications with age range that is just for women of childbearing age
+keep if age>=15 & age<=45
+cap noisily outputORsforOutcome, outcome(tEver_pregnancy_compl)
+file write tablecontents _n
 
 cap file close tablecontents 
 cap log close
