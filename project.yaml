@@ -1,7 +1,7 @@
 version: '3.0'
 
 expectations:
-  population_size: 50000
+  population_size: 10000
 
 actions:
 
@@ -1689,6 +1689,516 @@ actions:
         sunburst2levelshistoricalComparator: output/sunburst_historical_2Periods.txt
 
 
+
+
+
+
+
+############################################################################################################
+############REPEAT CODE FOR OMICRON (WAVE 4) - 10 DECEMBER 2021 TO MARCH 31 2022############################
+############################################################################################################
+
+
+## 1. EXTRACT DATA FOR EXPOSED - **NOTE THIS IS FOR OMICRON WAVE 4 ONLY**
+  generate_community_cases_cohort_omicron:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_covid_communitycases_omicron
+    outputs:
+      highly_sensitive:
+        cohort: output/input_covid_communitycases_omicron.csv
+
+# 1a. CHECK EXTRACTED CASE RAW DATA
+#  check_case_extract:
+#    run: stata-mp:latest analysis/1a_longCovidSymp_checkCaseExtract.do
+#    needs: [create_analysis_file]
+#   outputs:
+#     moderately_sensitive:fg
+#        log: logs/1a_longCovidSymp_checkCaseExtract.log
+
+
+# 2. EXTRACT DATA FOR POTENTIAL COMPARATORS
+
+ # *** contemporary potential comparators
+  generate_potential_controls_contemporary_omicron:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_controls_contemporary_omicron
+    outputs:
+      highly_sensitive:
+        cohort: output/input_controls_contemporary_omicron.csv
+
+
+
+
+#########FRIDAY 4 AUGUST TRY RUNNING ACTUAL CODE FROM HERE##############  
+
+# *** contemporary potential comparators - flowcheck
+#  generate_potential_controls_contemporaryFlowCheck:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_controls_contemporaryFlowCheck
+#    outputs:
+#      highly_sensitive:
+#        cohort: output/input_controls_contemporaryFlowCheck.csv
+
+
+# *** correct death dates due to error in documentation
+  correct_case_death_dates_omicron:
+    run: stata-mp:latest analysis/000_correct_death_dates_omicron_cr.do cases
+    needs: [generate_community_cases_cohort_omicron]
+    outputs:
+      highly_sensitive:
+        casecohort: output/input_covidcommunitycasesCorrectedDeathDate_omicron.csv
+      moderately_sensitive:
+        log: logs/000_set_correct_death_dates_cases_omicron_cr.log
+
+  correct_contemporary_control_death_dates_omicron:
+    run: stata-mp:latest analysis/000_correct_death_dates_omicron_cr.do contemporary
+    needs: [generate_potential_controls_contemporary_omicron]
+    outputs:
+      highly_sensitive:
+        controlcohort: output/input_controls_contemporaryCorrectedDeathDate_omicron.csv
+      moderately_sensitive:
+        log: logs/000_set_correct_death_dates_contemporary_omicron_cr.log
+
+
+
+
+## 2a CORRECT CASE INDEX DATE IN CASES ONLY (ADD 28 DAYS TO ORIGNAL INDEX DATE)
+  set_case_index_date_omicron:
+    run: stata-mp:latest analysis/00_set_case_index_date_omicron_cr.do
+    needs: [correct_case_death_dates_omicron]
+    outputs:
+      highly_sensitive:
+        cohort: output/input_covid_communitycases_correctedCaseIndex_omicron.csv
+      moderately_sensitive:
+        log: logs/00_set_case_index_date_omicron_cr.log
+
+
+# ****NOTE: FOR DUMMY DATA STATA FILE 00B OMICRON NEEDS RUN HERE (NOT USING THE COHORT EXTRACTOR) IN ORDER TO CREATE SENSIBLE STPS****
+
+# 2b. CHECK NUMBERS IN EACH STP PRIOR TO SPLITTING AND APPENDING STEPS BELOW
+
+ # *** contemporary potential omicron comparators
+  checkSTPs_in_original_extract_omicron:
+    run: stata-mp:latest analysis/00a_checkSTPs_in_original_extract_omicron_an.do
+    needs: [set_case_index_date_omicron, generate_potential_controls_contemporary_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/00a_checkSTPs_in_original_extract_omicron_an.log
+
+
+
+# 3. SPLIT CONTEMPORARY OMICRON CASES AND COMPARATORS UP BY STP
+  01_longCovidSymp_split_by_stp_omicron:
+    run: stata-mp:latest analysis/01_longCovidSymp_cr_split_by_stp_omicron.do
+    needs: [set_case_index_date_omicron, correct_contemporary_control_death_dates_omicron]
+    outputs:
+      highly_sensitive:
+        case_stp5: output/input_controls_contemporary_stp5_omicron.csv
+        case_stp6: output/input_controls_contemporary_stp6_omicron.csv
+        case_stp7: output/input_controls_contemporary_stp7_omicron.csv
+        case_stp8: output/input_controls_contemporary_stp8_omicron.csv
+        case_stp9: output/input_controls_contemporary_stp9_omicron.csv
+        case_stp10: output/input_controls_contemporary_stp10_omicron.csv
+        case_stp12: output/input_controls_contemporary_stp12_omicron.csv
+        case_stp13: output/input_controls_contemporary_stp13_omicron.csv
+        case_stp14: output/input_controls_contemporary_stp14_omicron.csv
+        case_stp15: output/input_controls_contemporary_stp15_omicron.csv
+        case_stp16: output/input_controls_contemporary_stp16_omicron.csv
+        case_stp17: output/input_controls_contemporary_stp17_omicron.csv
+        case_stp20: output/input_controls_contemporary_stp20_omicron.csv
+        case_stp21: output/input_controls_contemporary_stp21_omicron.csv
+        case_stp22: output/input_controls_contemporary_stp22_omicron.csv
+        case_stp23: output/input_controls_contemporary_stp23_omicron.csv
+        case_stp24: output/input_controls_contemporary_stp24_omicron.csv
+        case_stp25: output/input_controls_contemporary_stp25_omicron.csv
+        case_stp26: output/input_controls_contemporary_stp26_omicron.csv
+        case_stp27: output/input_controls_contemporary_stp27_omicron.csv
+        case_stp29: output/input_controls_contemporary_stp29_omicron.csv
+        case_stp33: output/input_controls_contemporary_stp33_omicron.csv
+        case_stp35: output/input_controls_contemporary_stp35_omicron.csv
+        case_stp36: output/input_controls_contemporary_stp36_omicron.csv
+        case_stp37: output/input_controls_contemporary_stp37_omicron.csv
+        case_stp40: output/input_controls_contemporary_stp40_omicron.csv
+        case_stp41: output/input_controls_contemporary_stp41_omicron.csv
+        case_stp42: output/input_controls_contemporary_stp42_omicron.csv
+        case_stp43: output/input_controls_contemporary_stp43_omicron.csv
+        case_stp44: output/input_controls_contemporary_stp44_omicron.csv
+        case_stp49: output/input_controls_contemporary_stp49_omicron.csv
+        control_stp5: output/input_covid_communitycases_stp5_omicron.csv
+        control_stp6: output/input_covid_communitycases_stp6_omicron.csv
+        control_stp7: output/input_covid_communitycases_stp7_omicron.csv
+        control_stp8: output/input_covid_communitycases_stp8_omicron.csv
+        control_stp9: output/input_covid_communitycases_stp9_omicron.csv
+        control_stp10: output/input_covid_communitycases_stp10_omicron.csv
+        control_stp12: output/input_covid_communitycases_stp12_omicron.csv
+        control_stp13: output/input_covid_communitycases_stp13_omicron.csv
+        control_stp14: output/input_covid_communitycases_stp14_omicron.csv
+        control_stp15: output/input_covid_communitycases_stp15_omicron.csv
+        control_stp16: output/input_covid_communitycases_stp16_omicron.csv
+        control_stp17: output/input_covid_communitycases_stp17_omicron.csv
+        control_stp20: output/input_covid_communitycases_stp20_omicron.csv
+        control_stp21: output/input_covid_communitycases_stp21_omicron.csv
+        control_stp22: output/input_covid_communitycases_stp22_omicron.csv
+        control_stp23: output/input_covid_communitycases_stp23_omicron.csv
+        control_stp24: output/input_covid_communitycases_stp24_omicron.csv
+        control_stp25: output/input_covid_communitycases_stp25_omicron.csv
+        control_stp26: output/input_covid_communitycases_stp26_omicron.csv
+        control_stp27: output/input_covid_communitycases_stp27_omicron.csv
+        control_stp29: output/input_covid_communitycases_stp29_omicron.csv
+        control_stp33: output/input_covid_communitycases_stp33_omicron.csv
+        control_stp35: output/input_covid_communitycases_stp35_omicron.csv
+        control_stp36: output/input_covid_communitycases_stp36_omicron.csv
+        control_stp37: output/input_covid_communitycases_stp37_omicron.csv
+        control_stp40: output/input_covid_communitycases_stp40_omicron.csv
+        control_stp41: output/input_covid_communitycases_stp41_omicron.csv
+        control_stp42: output/input_covid_communitycases_stp42_omicron.csv
+        control_stp43: output/input_covid_communitycases_stp43_omicron.csv
+        control_stp44: output/input_covid_communitycases_stp44_omicron.csv
+        control_stp49: output/input_covid_communitycases_stp49_omicron.csv
+      moderately_sensitive:
+        log: logs/01_longCovidSymp_split_by_stp_omicron.log
+
+
+
+# 4. MATCH CASES TO CONTEMPORARY COMPARATORS
+  # *** contemporary potential comparators for each stp
+  match_contemporary_stp5_omicron:
+    run: python:latest python analysis/match_contemporary_stp5_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp5_omicron: output/matched_cases_stp5_omicron.csv
+        matched_matches_stp5_omicron: output/matched_matches_stp5_omicron.csv
+        matched_all_stp5_omicron: output/matched_combined_stp5_omicron.csv
+      moderately_sensitive:
+        matching_report_stp5_omicron: output/matching_report_stp5_omicron.txt
+
+  match_contemporary_stp6_omicron:
+    run: python:latest python analysis/match_contemporary_stp6_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp6_omicron: output/matched_cases_stp6_omicron.csv
+        matched_matches_stp6_omicron: output/matched_matches_stp6_omicron.csv
+        matched_all_stp6_omicron: output/matched_combined_stp6_omicron.csv
+      moderately_sensitive:
+         matching_report_stp6_omicron: output/matching_report_stp6_omicron.txt
+
+  match_contemporary_stp7_omicron:
+    run: python:latest python analysis/match_contemporary_stp7_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp7_omicron: output/matched_cases_stp7_omicron.csv
+        matched_matches_stp7_omicron: output/matched_matches_stp7_omicron.csv
+        matched_all_stp7_omicron: output/matched_combined_stp7_omicron.csv
+      moderately_sensitive:
+         matching_report_stp7_omicron: output/matching_report_stp7_omicron.txt
+
+  match_contemporary_stp8_omicron:
+    run: python:latest python analysis/match_contemporary_stp8_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp8_omicron: output/matched_cases_stp8_omicron.csv
+        matched_matches_stp8_omicron: output/matched_matches_stp8_omicron.csv
+        matched_all_stp8_omicron: output/matched_combined_stp8_omicron.csv
+      moderately_sensitive:
+         matching_report_stp8_omicron: output/matching_report_stp8_omicron.txt
+
+  match_contemporary_stp9_omicron:
+    run: python:latest python analysis/match_contemporary_stp9_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp9_omicron: output/matched_cases_stp9_omicron.csv
+        matched_matches_stp9_omicron: output/matched_matches_stp9_omicron.csv
+        matched_all_stp9_omicron: output/matched_combined_stp9_omicron.csv
+      moderately_sensitive:
+         matching_report_stp9_omicron: output/matching_report_stp9_omicron.txt
+
+  match_contemporary_stp10_omicron:
+    run: python:latest python analysis/match_contemporary_stp10_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp10_omicron: output/matched_cases_stp10_omicron.csv
+        matched_matches_stp10_omicron: output/matched_matches_stp10_omicron.csv
+        matched_all_stp10_omicron: output/matched_combined_stp10_omicron.csv
+      moderately_sensitive:
+        matching_report_stp10_omicron: output/matching_report_stp10_omicron.txt
+      
+  match_contemporary_stp12_omicron:
+    run: python:latest python analysis/match_contemporary_stp12_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp12_omicron: output/matched_cases_stp12_omicron.csv
+        matched_matches_stp12_omicron: output/matched_matches_stp12_omicron.csv
+        matched_all_stp12_omicron: output/matched_combined_stp12_omicron.csv
+      moderately_sensitive:
+        matching_report_stp12_omicron: output/matching_report_stp12_omicron.txt
+
+  match_contemporary_stp13_omicron:
+    run: python:latest python analysis/match_contemporary_stp13_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp13_omicron: output/matched_cases_stp13_omicron.csv
+        matched_matches_stp13_omicron: output/matched_matches_stp13_omicron.csv
+        matched_all_stp13_omicron: output/matched_combined_stp13_omicron.csv
+      moderately_sensitive:
+        matching_report_stp13_omicron: output/matching_report_stp13_omicron.txt
+
+  match_contemporary_stp14_omicron:
+    run: python:latest python analysis/match_contemporary_stp14_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp14_omicron: output/matched_cases_stp14_omicron.csv
+        matched_matches_stp14_omicron: output/matched_matches_stp14_omicron.csv
+        matched_all_stp14_omicron: output/matched_combined_stp14_omicron.csv
+      moderately_sensitive:
+        matching_report_stp14_omicron: output/matching_report_stp14_omicron.txt
+
+  match_contemporary_stp15_omicron:
+    run: python:latest python analysis/match_contemporary_stp15_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp15_omicron: output/matched_cases_stp15_omicron.csv
+        matched_matches_stp15_omicron: output/matched_matches_stp15_omicron.csv
+        matched_all_stp15_omicron: output/matched_combined_stp15_omicron.csv
+      moderately_sensitive:
+        matching_report_stp15_omicron: output/matching_report_stp15_omicron.txt
+       
+  match_contemporary_stp16_omicron:
+    run: python:latest python analysis/match_contemporary_stp16_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp16_omicron: output/matched_cases_stp16_omicron.csv
+        matched_matches_stp16_omicron: output/matched_matches_stp16_omicron.csv
+        matched_all_stp16_omicron: output/matched_combined_stp16_omicron.csv
+      moderately_sensitive:
+        matching_report_stp16_omicron: output/matching_report_stp16_omicron.txt
+        
+  match_contemporary_stp17_omicron:
+    run: python:latest python analysis/match_contemporary_stp17_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp17_omicron: output/matched_cases_stp17_omicron.csv
+        matched_matches_stp17_omicron: output/matched_matches_stp17_omicron.csv
+        matched_all_stp17_omicron: output/matched_combined_stp17_omicron.csv
+      moderately_sensitive:
+        matching_report_stp17_omicron: output/matching_report_stp17_omicron.txt
+        
+  match_contemporary_stp20_omicron:
+    run: python:latest python analysis/match_contemporary_stp20_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp20_omicron: output/matched_cases_stp20_omicron.csv
+        matched_matches_stp20_omicron: output/matched_matches_stp20_omicron.csv
+        matched_all_stp20_omicron: output/matched_combined_stp20_omicron.csv
+      moderately_sensitive:
+        matching_report_stp20_omicron: output/matching_report_stp20_omicron.txt
+
+  match_contemporary_stp21_omicron:
+    run: python:latest python analysis/match_contemporary_stp21_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp21_omicron: output/matched_cases_stp21_omicron.csv
+        matched_matches_stp21_omicron: output/matched_matches_stp21_omicron.csv
+        matched_all_stp21_omicron: output/matched_combined_stp21_omicron.csv
+      moderately_sensitive:
+        matching_report_stp21_omicron: output/matching_report_stp21_omicron.txt
+       
+  match_contemporary_stp22_omicron:
+    run: python:latest python analysis/match_contemporary_stp22_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp22_omicron: output/matched_cases_stp22_omicron.csv
+        matched_matches_stp22_omicron: output/matched_matches_stp22_omicron.csv
+        matched_all_stp22_omicron: output/matched_combined_stp22_omicron.csv
+      moderately_sensitive:
+        matching_report_stp22_omicron: output/matching_report_stp22_omicron.txt
+
+  match_contemporary_stp23_omicron:
+    run: python:latest python analysis/match_contemporary_stp23_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp23_omicron: output/matched_cases_stp23_omicron.csv
+        matched_matches_stp23_omicron: output/matched_matches_stp23_omicron.csv
+        matched_all_stp23_omicron: output/matched_combined_stp23_omicron.csv
+      moderately_sensitive:
+        matching_report_stp23_omicron: output/matching_report_stp23_omicron.txt
+
+  match_contemporary_stp24_omicron:
+    run: python:latest python analysis/match_contemporary_stp24_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp24_omicron: output/matched_cases_stp24_omicron.csv
+        matched_matches_stp24_omicron: output/matched_matches_stp24_omicron.csv
+        matched_all_stp24_omicron: output/matched_combined_stp24_omicron.csv
+      moderately_sensitive:
+        matching_report_stp24_omicron: output/matching_report_stp24_omicron.txt
+
+  match_contemporary_stp25_omicron:
+    run: python:latest python analysis/match_contemporary_stp25_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp25_omicron: output/matched_cases_stp25_omicron.csv
+        matched_matches_stp25_omicron: output/matched_matches_stp25_omicron.csv
+        matched_all_stp25_omicron: output/matched_combined_stp25_omicron.csv
+      moderately_sensitive:
+        matching_report_stp25_omicron: output/matching_report_stp25_omicron.txt
+
+  match_contemporary_stp26_omicron:
+    run: python:latest python analysis/match_contemporary_stp26_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp26_omicron: output/matched_cases_stp26_omicron.csv
+        matched_matches_stp26_omicron: output/matched_matches_stp26_omicron.csv
+        matched_all_stp26_omicron: output/matched_combined_stp26_omicron.csv
+      moderately_sensitive:
+        matching_report_stp26_omicron: output/matching_report_stp26_omicron.txt
+        
+  match_contemporary_stp27_omicron:
+    run: python:latest python analysis/match_contemporary_stp27_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp27_omicron: output/matched_cases_stp27_omicron.csv
+        matched_matches_stp27_omicron: output/matched_matches_stp27_omicron.csv
+        matched_all_stp27_omicron: output/matched_combined_stp27_omicron.csv
+      moderately_sensitive:
+        matching_report_stp27_omicron: output/matching_report_stp27_omicron.txt
+
+  match_contemporary_stp29_omicron:
+    run: python:latest python analysis/match_contemporary_stp29_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp29_omicron: output/matched_cases_stp29_omicron.csv
+        matched_matches_stp29_omicron: output/matched_matches_stp29_omicron.csv
+        matched_all_stp29_omicron: output/matched_combined_stp29_omicron.csv
+      moderately_sensitive:
+        matching_report_stp29_omicron: output/matching_report_stp29_omicron.txt
+
+  match_contemporary_stp33_omicron:
+    run: python:latest python analysis/match_contemporary_stp33_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp33_omicron: output/matched_cases_stp33_omicron.csv
+        matched_matches_stp33_omicron: output/matched_matches_stp33_omicron.csv
+        matched_all_stp33_omicron: output/matched_combined_stp33_omicron.csv
+      moderately_sensitive:
+        matching_report_stp33_omicron: output/matching_report_stp33_omicron.txt
+
+  match_contemporary_stp35_omicron:
+    run: python:latest python analysis/match_contemporary_stp35_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp35_omicron: output/matched_cases_stp35_omicron.csv
+        matched_matches_stp35_omicron: output/matched_matches_stp35_omicron.csv
+        matched_all_stp35_omicron: output/matched_combined_stp35_omicron.csv
+      moderately_sensitive:
+        matching_report_stp35_omicron: output/matching_report_stp35_omicron.txt
+
+  match_contemporary_stp36_omicron:
+    run: python:latest python analysis/match_contemporary_stp36_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp36_omicron: output/matched_cases_stp36_omicron.csv
+        matched_matches_stp36_omicron: output/matched_matches_stp36_omicron.csv
+        matched_all_stp36_omicron: output/matched_combined_stp36_omicron.csv
+      moderately_sensitive:
+        matching_report_stp36_omicron: output/matching_report_stp36_omicron.txt
+
+  match_contemporary_stp37_omicron:
+    run: python:latest python analysis/match_contemporary_stp37_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp37_omicron: output/matched_cases_stp37_omicron.csv
+        matched_matches_stp37_omicron: output/matched_matches_stp37_omicron.csv
+        matched_all_stp37_omicron: output/matched_combined_stp37_omicron.csv
+      moderately_sensitive:
+        matching_report_stp37_omicron: output/matching_report_stp37_omicron.txt
+
+  match_contemporary_stp40_omicron:
+    run: python:latest python analysis/match_contemporary_stp40_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp40_omicron: output/matched_cases_stp40_omicron.csv
+        matched_matches_stp40_omicron: output/matched_matches_stp40_omicron.csv
+        matched_all_stp40_omicron: output/matched_combined_stp40_omicron.csv
+      moderately_sensitive:
+        matching_report_stp40_omicron: output/matching_report_stp40_omicron.txt
+
+  match_contemporary_stp41_omicron:
+    run: python:latest python analysis/match_contemporary_stp41_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp41_omicron: output/matched_cases_stp41_omicron.csv
+        matched_matches_stp41_omicron: output/matched_matches_stp41_omicron.csv
+        matched_all_stp41_omicron: output/matched_combined_stp41_omicron.csv
+      moderately_sensitive:
+        matching_report_stp41_omicron: output/matching_report_stp41_omicron.txt
+
+  match_contemporary_stp42_omicron:
+    run: python:latest python analysis/match_contemporary_stp42_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp42_omicron: output/matched_cases_stp42_omicron.csv
+        matched_matches_stp42_omicron: output/matched_matches_stp42_omicron.csv
+        matched_all_stp42_omicron: output/matched_combined_stp42_omicron.csv
+      moderately_sensitive:
+        matching_report_stp41_omicron: output/matching_report_stp42_omicron.txt
+
+  match_contemporary_stp43_omicron:
+    run: python:latest python analysis/match_contemporary_stp43_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp43_omicron: output/matched_cases_stp43_omicron.csv
+        matched_matches_stp43_omicron: output/matched_matches_stp43_omicron.csv
+        matched_all_stp43_omicron: output/matched_combined_stp43_omicron.csv
+      moderately_sensitive:
+         matching_report_stp43_omicron: output/matching_report_stp43_omicron.txt
+
+  match_contemporary_stp44_omicron:
+    run: python:latest python analysis/match_contemporary_stp44_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp44_omicron: output/matched_cases_stp44_omicron.csv
+        matched_matches_stp44_omicron: output/matched_matches_stp44_omicron.csv
+        matched_all_stp44_omicron: output/matched_combined_stp44_omicron.csv
+      moderately_sensitive:
+         matching_report_stp44_omicron: output/matching_report_stp44_omicron.txt
+
+  match_contemporary_stp49_omicron:
+    run: python:latest python analysis/match_contemporary_stp49_omicron.py
+    needs: [01_longCovidSymp_split_by_stp_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_stp49_omicron: output/matched_cases_stp49_omicron.csv
+        matched_matches_stp49_omicron: output/matched_matches_stp49_omicron.csv
+        matched_all_stp49_omicron: output/matched_combined_stp49_omicron.csv
+      moderately_sensitive:
+         matching_report_stp49_omicron: output/matching_report_stp49_omicron.txt
 
 
 

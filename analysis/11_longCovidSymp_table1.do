@@ -305,6 +305,12 @@ tabulatevariable, variable(gpCountPrevYearCat) min(0) max(2)
 file write tablecontent _n 
 
 
+*Previous consultations (SENS version that has 0 dropped)
+drop if gp_count_prevyear==0
+tab gpCountPrevYearSENS case, col
+tabulatevariable, variable(gpCountPrevYearSENS) min(0) max(2) 
+file write tablecontent _n 
+
 file write tablecontent _n _n
 
 
