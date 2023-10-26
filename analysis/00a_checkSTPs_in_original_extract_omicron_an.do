@@ -38,9 +38,9 @@ safetab stp
 
 
 
-*(2)=========Historical Controls============
-import delimited ./output/input_controls_historical_omicron.csv, clear
-safetab stp
+*(2)=========Historical Controls - not doing these for Omicron============
+*import delimited ./output/input_controls_historical_omicron.csv, clear
+*safetab stp
 
 
 
