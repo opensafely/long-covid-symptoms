@@ -68,7 +68,7 @@ export delimited using "C:\Users\lsh272586\Documents\Github\long-covid-symptoms/
 
 
 *(2)=========Create separate stps for comparators============
-import delimited C:\Users\lsh272586\Documents\Github\long-covid-symptoms/output/input_controls_contemporary_omicron.csv, clear
+import delimited C:\Users\lsh272586\Documents\Github\long-covid-symptoms/output/input_controls_contemporaryCorrectedDeathDate_omicron.csv, clear
 *tabulate before changes
 tab stp
 *call program
@@ -76,7 +76,7 @@ replaceSTPs
 *tabulate after changes
 tab stp
 *export output
-export delimited using "C:\Users\lsh272586\Documents\Github\long-covid-symptoms/output/input_controls_contemporary_omicron.csv", replace
+export delimited using "C:\Users\lsh272586\Documents\Github\long-covid-symptoms/output/input_controls_contemporaryCorrectedDeathDate_omicron.csv", replace
 
 
 

@@ -33,7 +33,7 @@ safetab stp
 
 
 *(2)=========Contemporary Controls============
-import delimited ./output/input_controls_contemporary_omicron.csv, clear
+import delimited ./output/input_controls_contemporaryCorrectedDeathDate_omicron.csv, clear
 safetab stp
 
 

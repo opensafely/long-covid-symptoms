@@ -31,11 +31,6 @@ import delimited ./output/input_covid_communitycases_correctedCaseIndex.csv, cle
 *tab just so I can see list of stps
 safetab stp
 
-*stp is always set to 1 in dummy data so manually splitting up here (just for dummy data)
-*COMMENT OUT THE FOLLOWING WHEN NOT RUNNING ON DUMMY DATA
-*replace stp="STP2" if _n<300
-
-**END OF COMMENT OUT
 
 *stps are coded E54000005-9, 10, 12-17, 20-27, 29, 33, 35-37, 40-44, 49
 *files need to be .csv format as this is what the matching program needs as input
@@ -64,10 +59,6 @@ foreach i of numlist 10 12/17 20/27 29 33 35/37 40/44 49 {
 import delimited ./output/input_controls_contemporaryCorrectedDeathDate.csv, clear
 safetab stp
 
-*stp is always set to 1 in dummy data so manually splitting up here (just for dummy data)
-*COMMENT OUT THE FOLLOWING WHEN NOT RUNNING ON DUMMY DATA
-	*replace stp="STP2" if _n>300
-	**END OF COMMENT OUT
 
 	*stps are coded E54000005-9, 10, 12-17, 20-27, 29, 33, 35-37, 40-44, 49
 foreach i of numlist 5/9  {

@@ -1777,7 +1777,7 @@ actions:
  # *** contemporary potential omicron comparators
   checkSTPs_in_original_extract_omicron:
     run: stata-mp:latest analysis/00a_checkSTPs_in_original_extract_omicron_an.do
-    needs: [set_case_index_date_omicron, generate_potential_controls_contemporary_omicron]
+    needs: [set_case_index_date_omicron, generate_potential_controls_contemporary_omicron, correct_contemporary_control_death_dates_omicron]
     outputs:
       moderately_sensitive:
         log: logs/00a_checkSTPs_in_original_extract_omicron_an.log
