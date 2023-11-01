@@ -47,11 +47,21 @@ log using ./logs/00_set_case_index_date_omicron_cr.log, replace t
 
 *(1)=============Create a variable that is the same as first_known_covid but has all the dates on or before the temp_index_date dropped (called first_known_covidORIGINAL)============================== 
 *import cases
-import delimited ./output/input_covidcommunitycasesCorrectedDeathDate_omicron.csv, clear
+import delimited "./output/input_covidcommunitycasesCorrectedDeathDate_omicron.csv", clear
 generate first_known_covid19ORIGINAL=first_known_covid19
 la var first_known_covid19 "Original first known covid varialble (for checking code)"
 *for cases, remove all first known covid dates to prevent all the cases being dropped when searching for first known covid prior to the new (28 days later) index date
 replace first_known_covid19=""
+
+/*Don't need this - is an excel issue that I am working through
+*ensure all dates are YMD format - need to destring them all, then restring back to YYYY-MM-DD
+order first_test_covid-dereg_date first_known_covid19-case_index_date
+gen case_index_date_2=case_index_date
+foreach var first_test_covid-case_index_date {
+	gen `var'2 = date(`var', "YMD")
+}
+*/
+
 
 
 *(2)=========Create new case_index_date that is 28 days later than the temp_case_index_date============
@@ -97,6 +107,7 @@ replace dereg_date=dereg_date_28dys if dereg_date_28dys!="" & death_date==""
 drop death_date_28dys
 */
 
+*ensure all dates
 
 *save file
 capture noisily export delimited using "./output/input_covid_communitycases_correctedCaseIndex_omicron.csv", replace

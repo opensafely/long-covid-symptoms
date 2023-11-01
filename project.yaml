@@ -2205,6 +2205,205 @@ actions:
 
 
 
+# 5. CHECK VARIABLES IN MATCHED FILES
+  # *** contemporary potential comparators for each stp
+  checkVars_inMatchedFiles_omicron:
+    run: stata-mp:latest analysis/05_check_vars_after_matching_omicron.do contemporary
+    needs: [match_contemporary_stp29_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/05_check_varscontemporary_after_matching_omicron.log
+
+
+# *** All the following still need the source files updated to omicron versions
+
+# 6. COMBINE MATCHED CASES AND MATCHED COMPARATORS BY STP
+  combine_matched_CASESstps_omicron:
+    run: stata-mp:latest analysis/06a_longCovidSymp_cr_combine_CASEstps_after_matching_omicron.do contemporary
+    needs: [match_contemporary_stp5_omicron, match_contemporary_stp6_omicron, match_contemporary_stp7_omicron, match_contemporary_stp8_omicron, 
+    match_contemporary_stp9_omicron, match_contemporary_stp10_omicron, match_contemporary_stp12_omicron, match_contemporary_stp13_omicron,
+    match_contemporary_stp14_omicron, match_contemporary_stp15_omicron, match_contemporary_stp16_omicron, match_contemporary_stp17_omicron,
+    match_contemporary_stp20_omicron, match_contemporary_stp21_omicron, match_contemporary_stp22_omicron, match_contemporary_stp23_omicron,
+    match_contemporary_stp24_omicron, match_contemporary_stp25_omicron, match_contemporary_stp26_omicron, match_contemporary_stp27_omicron,
+    match_contemporary_stp29_omicron, match_contemporary_stp33_omicron, match_contemporary_stp35_omicron, match_contemporary_stp36_omicron, 
+    match_contemporary_stp37_omicron, match_contemporary_stp40_omicron, match_contemporary_stp41_omicron, match_contemporary_stp42_omicron, 
+    match_contemporary_stp43_omicron, match_contemporary_stp44_omicron, match_contemporary_stp49_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_allstps: output/input_covid_matched_cases_contemporary_allSTPs_omicron.csv
+      moderately_sensitive:
+        log: logs/06a_longCovidSymp_cr_combine_contemporary_CASEstps_after_matching_omicron.log
+
+
+  combine_matched_COMPARATORstps_omicron:
+    run: stata-mp:latest analysis/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching_omicron.do contemporary
+    needs: [match_contemporary_stp5_omicron, match_contemporary_stp6_omicron, match_contemporary_stp7_omicron, match_contemporary_stp8_omicron, 
+    match_contemporary_stp9_omicron, match_contemporary_stp10_omicron, match_contemporary_stp12_omicron, match_contemporary_stp13_omicron, 
+    match_contemporary_stp14_omicron, match_contemporary_stp15_omicron, match_contemporary_stp16_omicron, match_contemporary_stp17_omicron, 
+    match_contemporary_stp20_omicron, match_contemporary_stp21_omicron, match_contemporary_stp22_omicron, match_contemporary_stp23_omicron, 
+    match_contemporary_stp24_omicron, match_contemporary_stp25_omicron, match_contemporary_stp26_omicron, match_contemporary_stp27_omicron,
+    match_contemporary_stp29_omicron, match_contemporary_stp33_omicron, match_contemporary_stp35_omicron, match_contemporary_stp36_omicron, 
+    match_contemporary_stp37_omicron, match_contemporary_stp40_omicron, match_contemporary_stp41_omicron, match_contemporary_stp42_omicron,
+    match_contemporary_stp43_omicron, match_contemporary_stp44_omicron, match_contemporary_stp49_omicron]
+    outputs:
+      highly_sensitive:
+        matched_matches_allstps: output/input_covid_matched_matches_contemporary_allSTPs_omicron.csv
+      moderately_sensitive:
+        log: logs/06b_longCovidSymp_cr_combine_contemporary_COMPARATORstps_after_matching_omicron.log
+
+
+ #6a. CHECK VARIABLES FOR COMBINED CASES AND COMBINED CONTROLS PRIOR TO ADDING MORE VARIABLES
+  check_contemporary_combinedFiles_omicron:
+    run: stata-mp:latest analysis/6f_longCovidSymp_checkCombinedFiles_omicron.do contemporary
+    needs: [combine_matched_CASESstps_omicron, combine_matched_COMPARATORstps_omicron]
+    outputs:
+      moderately_sensitive:
+       log: logs/6f_longCovidSymp_contemporary_checkCombinedFiles_omicron.log
+
+
+# 7. ADD FURTHER VARIABLES TO CASES FOLLOWING MATCHING
+  add_allVars_cases_omicron:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_covid_communitycases_omicron 
+    needs: [combine_matched_CASESstps_omicron]
+    outputs:
+      highly_sensitive:
+        matched_cases_contemporary_wVars: output/input_complete_covid_communitycases_omicron.csv
+
+
+ # 8. ADD FURTHER VARIABLES TO CONTEMPORARY CONTROLS FOLLOWING MATCHING
+  add_allVars_contemporary_controls_omicron:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_contemporary_omicron 
+    needs: [combine_matched_COMPARATORstps_omicron]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_complete_controls_contemporary_omicron.csv
+
+  
+
+# 8a. GET PREV YRS CONSULTATION COUNT VAR FOR CASES
+  get_consultationCount_cases_omicron:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_gpconsultations_cases_omicron
+    needs: [combine_matched_CASESstps_omicron]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_gpconsultations_cases_omicron.csv
+
+
+# 8b. GET PREV YRS CONSULTATION COUNT VAR FOR CONTEMPORARY CONTROLS
+  get_consultationCount_controls_omicron:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_gpconsultations_controls_contemporary_omicron
+    needs: [combine_matched_COMPARATORstps_omicron]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_gpconsultations_controls_contemporary_omicron.csv
+
+
+# 8c. GET SYMPTOMS AND MEDICINES FOR CASES
+  get_symptoms_cases_omicron:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_cases_omicron
+    needs: [combine_matched_CASESstps_omicron]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_symptoms_cases_omicron.csv
+
+  get_medicines_cases_omicron:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_cases_omicron
+    needs: [combine_matched_CASESstps_omicron]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_medicines_cases_omicron.csv
+
+
+
+# 8d. GET SYMPTOMS AND MEDICINES FOR CONTEMPORAY CONTROLS
+  get_symptoms_controls_omicron:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_contemporary_omicron
+    needs: [combine_matched_COMPARATORstps_omicron]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_symptoms_controls_contemporary_omicron.csv
+
+
+  get_medicines_controls_omicron:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_controls_contemporary_omicron 
+    needs: [combine_matched_COMPARATORstps_omicron]
+    outputs:
+      highly_sensitive:
+        matched_controls_contemporary_wVars: output/input_medicines_controls_contemporary_omicron.csv
+
+
+# 8e. CHECK VARIABLES FOR CASES AND CONTEMPORARY CONTROLS (CURRENTLY CHECKING NEW SYMPTOM VARIABLES)
+  # *** contemporary potential comparators for each stp
+  checkVars_inCasesAndCOntrolsAfterAddingFurtherVariables_omicron:
+    run: stata-mp:latest analysis/08e_checkVars_casesControls_after_adding_furtherVars_omicron.do
+    needs: [get_symptoms_cases_omicron, get_symptoms_controls_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/08e_checkVars_casesControls_after_adding_furtherVars_omicron.log
+      
+
+# 9. CREATE CONTEMPORARY ANALYSIS FILE (ALSO COMBINES CASES AND CONTROLS)
+  create_contemporary_analysis_file_omicron:
+    run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset_omicron.do contemporary
+    needs: [set_case_index_date_omicron, generate_potential_controls_contemporary_omicron, 
+    add_allVars_contemporary_controls_omicron, add_allVars_cases_omicron, combine_matched_CASESstps_omicron, 
+    combine_matched_COMPARATORstps_omicron, get_consultationCount_cases_omicron, get_consultationCount_controls_omicron, 
+    get_symptoms_cases_omicron, get_symptoms_controls_omicron, get_medicines_cases_omicron, get_medicines_controls_omicron]
+    outputs:
+      highly_sensitive:
+        # casesContemporary: output/cases_contemporary.dta 
+        # controlsContemporary: output/controls_contemporary.dta 
+        mainAnalysisFile: output/longCovidSymp_analysis_dataset_contemporary_omicron.dta
+        mainAnalysisFileCSV: output/longCovidSymp_analysis_dataset_contemporary_omicron.csv
+        unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_contemporary_analysis_dataset_omicron.dta
+      moderately_sensitive: 
+        log: logs/09_longCovidSymp_cr_contemporary_analysis_dataset_omicron.log
+
+
+  flowCheck_contemporary_omicron:
+    run: stata-mp:latest analysis/09b_FlowCheck_omicron.do contemporary
+    needs: [set_case_index_date_omicron, generate_potential_controls_contemporary_omicron, 
+    add_allVars_contemporary_controls_omicron, add_allVars_cases_omicron, combine_matched_CASESstps_omicron, 
+    combine_matched_COMPARATORstps_omicron, get_consultationCount_cases_omicron, get_consultationCount_controls_omicron,
+    get_symptoms_cases_omicron, get_symptoms_controls_omicron, get_medicines_cases_omicron, get_medicines_controls_omicron,
+    create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/09b_FlowCheck_contemporary_omicron.log
+
+
+
+# 10a. IMD CORRECTION (ONLY NEEDED IF ACTION 1 NOT BEING RUN)
+#  imd_correction:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_imd_correction
+#    needs: [create_analysis_file]
+#    outputs:
+#      highly_sensitive:
+#        cohort: output/input_imd_correction.csv
+
+
+# 10b. IMD CORRECTION PART 2
+#  add_corrected_imd:
+#    run: stata-mp:latest analysis/10b_longCovidSymp_add_correctIMD.do
+#    needs: [imd_correction, create_analysis_file]
+#    outputs:
+#      highly_sensitive:
+#        mainAnalysisFile: output/longCovidSymp_analysis_dataset_contemp_correctIMD.dta 
+#      moderately_sensitive:
+#        log: logs/10b_longCovidSymp_add_correctIMD.log
+
+
+# 10. CHECK DATA FOR COMBINED CASE AND CONTROL FILE
+  data_checks_contemporary_omicron:
+    run: stata-mp:latest analysis/10_longCovidSymp_data_checks_omicron.do contemporary
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/10_longCovidSymp_data_checks_contemporary_omicron.log
+
+
+ 
+
 
 
 
