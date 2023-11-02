@@ -2203,9 +2203,7 @@ actions:
 
 
 
-
-
-# 5. CHECK VARIABLES IN MATCHED FILES
+# 5. CHECK VARIABLES IN MATCHED FILES - RUN THIS BEFORE RUNNING MATCHING ON SERVER!
   # *** contemporary potential comparators for each stp
   checkVars_inMatchedFiles_omicron:
     run: stata-mp:latest analysis/05_check_vars_after_matching_omicron.do contemporary
@@ -2214,8 +2212,6 @@ actions:
       moderately_sensitive:
         log: logs/05_check_varscontemporary_after_matching_omicron.log
 
-
-# *** All the following still need the source files updated to omicron versions
 
 # 6. COMBINE MATCHED CASES AND MATCHED COMPARATORS BY STP
   combine_matched_CASESstps_omicron:
@@ -2278,7 +2274,7 @@ actions:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_complete_controls_contemporary_omicron.csv
 
-  
+# *** All the following still need the source files updated to omicron versions
 
 # 8a. GET PREV YRS CONSULTATION COUNT VAR FOR CASES
   get_consultationCount_cases_omicron:
