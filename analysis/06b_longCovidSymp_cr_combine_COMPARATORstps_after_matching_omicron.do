@@ -1,6 +1,6 @@
 /*==============================================================================
 DO FILE NAME:			05_longCovidSymp_cr_combined_cases_contemporary_controls.do
-PROJECT:				Long covid symptom
+PROJECT:				Long covid symptoms
 DATE: 					26th Aug 2022
 AUTHOR:					Kevin Wing 										
 DESCRIPTION OF FILE:	Combines all stp cases into a single file, and all stp comparators into a single file
@@ -28,44 +28,47 @@ local dataset `1'
 
 * Open a log file
 cap log close
-log using ./logs/06a_longCovidSymp_cr_combine_`1'_CASEstps_after_matching_omicron.log, replace t
+log using ./logs/06b_longCovidSymp_cr_combine_`1'_COMPARATORstps_after_matching_omicron.log, replace t
 
 if "`1'"=="contemporary" {
 	*(1)=========Change source files to stata format============
 	*change source files to stata format
 	foreach i of numlist 5/10 12/17 20/27 29 33 35/37 40/44 49 {
-		capture noisily import delimited ./output/matched_cases_stp`i'_omicron.csv, clear
-		capture noisily tempfile matched_cases_stp`i'_omicron
-		capture noisily save `matched_cases_stp`i'_omicron', replace
+		capture noisily import delimited ./output/matched_matches_stp`i'_omicron.csv, clear
+		capture noisily tempfile m_matches_stp`i'_omicron
+		capture noisily save `m_matches_stp`i'_omicron', replace
 	}
+
 	*(2)=========Append separate cases files==========
-	use `matched_cases_stp5_omicron', clear
+	use `m_matches_stp5_omicron', clear
 	foreach i of numlist 6/10 12/17 20/27 29 33 35/37 40/44 49 {
-		capture noisily append using `matched_cases_stp`i'_omicron', force
+		capture noisily append using `m_matches_stp`i'_omicron', force
 	}
 }
 else {
 	*(1)=========Change source files to stata format============
 	*change source files to stata format
 	foreach i of numlist 5/10 12/17 20/27 29 33 35/37 40/44 49 {
-		capture noisily import delimited ./output/matched_cases_`1'_stp`i'_omicron.csv, clear
-		capture noisily tempfile matched_cases_`1'_stp`i'_omicron
-		capture noisily save `matched_cases_`1'_stp`i'_omicron', replace
+		capture noisily import delimited ./output/matched_matches_`1'_stp`i'_omicron.csv, clear
+		capture noisily tempfile m_matches_`1'_stp`i'_omicron
+		capture noisily save `m_matches_`1'_stp`i'_omicron', replace
 	}
+
 	*(2)=========Append separate cases files==========
-	use `matched_cases_`1'_stp5_omicron', clear
+	use `m_matches_`1'_stp5_omicron', clear
 	foreach i of numlist 6/10 12/17 20/27 29 33 35/37 40/44 49 {
-		capture noisily append using `matched_cases_`1'_stp`i'_omicron', force
+		capture noisily append using `m_matches_`1'_stp`i'_omicron', force
 	}
 }
-codebook
 
 *count of total cases and STPs
 capture noisily safetab stp
 capture noisily count
 *save as .csv file for input into study definitions that add further variables, erase dta version
-capture noisily export delimited using "./output/input_covid_matched_cases_`1'_allSTPs_omicron.csv", replace
+capture noisily export delimited using "./output/input_covid_matched_matches_`1'_allSTPs_omicron.csv", replace
 
+
+*
 log close
 
 
