@@ -2317,7 +2317,6 @@ actions:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_symptoms_controls_contemporary_omicron.csv
 
-# *** All the following still need the source files updated to omicron versions
 
   get_medicines_controls_omicron:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_controls_contemporary_omicron 
@@ -2325,6 +2324,8 @@ actions:
     outputs:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_medicines_controls_contemporary_omicron.csv
+
+# *** All the following still need the source files updated to omicron versions
 
 
 # 8e. CHECK VARIABLES FOR CASES AND CONTEMPORARY CONTROLS (CURRENTLY CHECKING NEW SYMPTOM VARIABLES)
