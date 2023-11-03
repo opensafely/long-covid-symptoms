@@ -2284,7 +2284,6 @@ actions:
         matched_controls_contemporary_wVars: output/input_gpconsultations_cases_omicron.csv
 
 
-
 # 8b. GET PREV YRS CONSULTATION COUNT VAR FOR CONTEMPORARY CONTROLS
   get_consultationCount_controls_omicron:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_gpconsultations_controls_contemporary_omicron
@@ -2294,9 +2293,6 @@ actions:
         matched_controls_contemporary_wVars: output/input_gpconsultations_controls_contemporary_omicron.csv
 
 
-# *** All the following still need the source files updated to omicron versions
-
-
 # 8c. GET SYMPTOMS AND MEDICINES FOR CASES
   get_symptoms_cases_omicron:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_cases_omicron
@@ -2304,6 +2300,8 @@ actions:
     outputs:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_symptoms_cases_omicron.csv
+
+# *** All the following still need the source files updated to omicron versions
 
   get_medicines_cases_omicron:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_cases_omicron
