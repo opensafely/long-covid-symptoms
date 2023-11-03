@@ -2283,7 +2283,6 @@ actions:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_gpconsultations_cases_omicron.csv
 
-# *** All the following still need the source files updated to omicron versions
 
 
 # 8b. GET PREV YRS CONSULTATION COUNT VAR FOR CONTEMPORARY CONTROLS
@@ -2293,6 +2292,9 @@ actions:
     outputs:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_gpconsultations_controls_contemporary_omicron.csv
+
+
+# *** All the following still need the source files updated to omicron versions
 
 
 # 8c. GET SYMPTOMS AND MEDICINES FOR CASES
