@@ -2325,10 +2325,8 @@ actions:
       highly_sensitive:
         matched_controls_contemporary_wVars: output/input_medicines_controls_contemporary_omicron.csv
 
-# *** All the following still need the source files updated to omicron versions
 
-
-# 8e. CHECK VARIABLES FOR CASES AND CONTEMPORARY CONTROLS (CURRENTLY CHECKING NEW SYMPTOM VARIABLES)
+# 8e. CHECK VARIABLES FOR CASES AND CONTEMPORARY CONTROLS
   # *** contemporary potential comparators for each stp
   checkVars_inCasesAndCOntrolsAfterAddingFurtherVariables_omicron:
     run: stata-mp:latest analysis/08e_checkVars_casesControls_after_adding_furtherVars_omicron.do
@@ -2336,6 +2334,9 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/08e_checkVars_casesControls_after_adding_furtherVars_omicron.log
+
+
+# *** All the following still need the source files updated to omicron versions
       
 
 # 9. CREATE CONTEMPORARY ANALYSIS FILE (ALSO COMBINES CASES AND CONTROLS)
