@@ -26,11 +26,11 @@ actions:
 # or potentially 3 times: 2018 matches, 2019 matches, contemporary matches?
 
  # *** contemporary potential comparators
-  generate_potential_controls_contemporary:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_controls_contemporary
-    outputs:
-      highly_sensitive:
-        cohort: output/input_controls_contemporary.csv
+ # generate_potential_controls_contemporary:
+ #   run: cohortextractor:latest generate_cohort --study-definition study_definition_controls_contemporary
+ #   outputs:
+ #     highly_sensitive:
+ #       cohort: output/input_controls_contemporary.csv
 
 # *** contemporary potential comparators - flowcheck
 #  generate_potential_controls_contemporaryFlowCheck:
@@ -41,52 +41,52 @@ actions:
 
 
 # *** historical potential comparators (2018)
-  generate_potential_controls_historical:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_controls_historical
-    outputs:
-      highly_sensitive:
-        cohort: output/input_controls_historical.csv
+#  generate_potential_controls_historical:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_controls_historical
+#    outputs:
+#      highly_sensitive:
+#        cohort: output/input_controls_historical.csv
 
 
 # *** correct death dates due to error in documentation
-  correct_case_death_dates:
-    run: stata-mp:latest analysis/000_correct_death_dates_cr.do cases
-    needs: [generate_community_cases_cohort]
-    outputs:
-      highly_sensitive:
-        casecohort: output/input_covidcommunitycasesCorrectedDeathDate.csv
-      moderately_sensitive:
-        log: logs/000_set_correct_death_dates_cases_cr.log
+#  correct_case_death_dates:
+#    run: stata-mp:latest analysis/000_correct_death_dates_cr.do cases
+#    needs: [generate_community_cases_cohort]
+#    outputs:
+#      highly_sensitive:
+#        casecohort: output/input_covidcommunitycasesCorrectedDeathDate.csv
+#      moderately_sensitive:
+#        log: logs/000_set_correct_death_dates_cases_cr.log
 
-  correct_contemporary_control_death_dates:
-    run: stata-mp:latest analysis/000_correct_death_dates_cr.do contemporary
-    needs: [generate_potential_controls_contemporary]
-    outputs:
-      highly_sensitive:
-        controlcohort: output/input_controls_contemporaryCorrectedDeathDate.csv
-      moderately_sensitive:
-        log: logs/000_set_correct_death_dates_contemporary_cr.log
+#  correct_contemporary_control_death_dates:
+#    run: stata-mp:latest analysis/000_correct_death_dates_cr.do contemporary
+#    needs: [generate_potential_controls_contemporary]
+#    outputs:
+#      highly_sensitive:
+#        controlcohort: output/input_controls_contemporaryCorrectedDeathDate.csv
+#      moderately_sensitive:
+#        log: logs/000_set_correct_death_dates_contemporary_cr.log
 
-  correct_historical_control_death_dates:
-    run: stata-mp:latest analysis/000_correct_death_dates_cr.do historical
-    needs: [generate_potential_controls_historical]
-    outputs:
-      highly_sensitive:
-        historicalcontrolcohort: output/input_controls_historicalCorrectedDeathDate.csv
-      moderately_sensitive:
-        log: logs/000_set_correct_death_dates_historical_cr.log
+#  correct_historical_control_death_dates:
+#    run: stata-mp:latest analysis/000_correct_death_dates_cr.do historical
+#    needs: [generate_potential_controls_historical]
+#    outputs:
+#      highly_sensitive:
+#        historicalcontrolcohort: output/input_controls_historicalCorrectedDeathDate.csv
+#      moderately_sensitive:
+#        log: logs/000_set_correct_death_dates_historical_cr.log
 
 
 
 ## 2a CORRECT CASE INDEX DATE IN CASES ONLY (ADD 28 DAYS TO ORIGNAL INDEX DATE)
-  set_case_index_date:
-    run: stata-mp:latest analysis/00_set_case_index_date_cr.do
-    needs: [correct_case_death_dates]
-    outputs:
-      highly_sensitive:
-        cohort: output/input_covid_communitycases_correctedCaseIndex.csv
-      moderately_sensitive:
-        log: logs/00_set_case_index_date_cr.log
+#  set_case_index_date:
+#    run: stata-mp:latest analysis/00_set_case_index_date_cr.do
+#    needs: [correct_case_death_dates]
+#    outputs:
+#      highly_sensitive:
+#        cohort: output/input_covid_communitycases_correctedCaseIndex.csv
+#      moderately_sensitive:
+#        log: logs/00_set_case_index_date_cr.log
 
 
 # ****NOTE: FOR DUMMY DATA STATA FILE 00B NEEDS RUN HERE (NOT USING THE COHORT EXTRACTOR) IN ORDER TO CREATE SENSIBLE STPS****
@@ -94,1115 +94,1115 @@ actions:
 # 2b. CHECK NUMBERS IN EACH STP PRIOR TO SPLITTING AND APPENDING STEPS BELOW
 
  # *** contemporary potential comparators
-  checkSTPs_in_original_extract:
-    run: stata-mp:latest analysis/00a_checkSTPs_in_original_extract_an.do
-    needs: [set_case_index_date, generate_potential_controls_contemporary, generate_potential_controls_historical]
-    outputs:
-      moderately_sensitive:
-        log: logs/00a_checkSTPs_in_original_extract_an.log
+ # checkSTPs_in_original_extract:
+ #   run: stata-mp:latest analysis/00a_checkSTPs_in_original_extract_an.do
+ #   needs: [set_case_index_date, generate_potential_controls_contemporary, generate_potential_controls_historical]
+ #   outputs:
+ #     moderately_sensitive:
+ #       log: logs/00a_checkSTPs_in_original_extract_an.log
 
 
 
 # 3. SPLIT CONTEMPORARY CASES AND COMPARATORS UP BY STP
-  01_longCovidSymp_split_by_stp:
-    run: stata-mp:latest analysis/01_longCovidSymp_cr_split_by_stp.do
-    needs: [set_case_index_date, correct_contemporary_control_death_dates]
-    outputs:
-      highly_sensitive:
-        case_stp5: output/input_controls_contemporary_stp5.csv
-        case_stp6: output/input_controls_contemporary_stp6.csv
-        case_stp7: output/input_controls_contemporary_stp7.csv
-        case_stp8: output/input_controls_contemporary_stp8.csv
-        case_stp9: output/input_controls_contemporary_stp9.csv
-        case_stp10: output/input_controls_contemporary_stp10.csv
-        case_stp12: output/input_controls_contemporary_stp12.csv
-        case_stp13: output/input_controls_contemporary_stp13.csv
-        case_stp14: output/input_controls_contemporary_stp14.csv
-        case_stp15: output/input_controls_contemporary_stp15.csv
-        case_stp16: output/input_controls_contemporary_stp16.csv
-        case_stp17: output/input_controls_contemporary_stp17.csv
-        case_stp20: output/input_controls_contemporary_stp20.csv
-        case_stp21: output/input_controls_contemporary_stp21.csv
-        case_stp22: output/input_controls_contemporary_stp22.csv
-        case_stp23: output/input_controls_contemporary_stp23.csv
-        case_stp24: output/input_controls_contemporary_stp24.csv
-        case_stp25: output/input_controls_contemporary_stp25.csv
-        case_stp26: output/input_controls_contemporary_stp26.csv
-        case_stp27: output/input_controls_contemporary_stp27.csv
-        case_stp29: output/input_controls_contemporary_stp29.csv
-        case_stp33: output/input_controls_contemporary_stp33.csv
-        case_stp35: output/input_controls_contemporary_stp35.csv
-        case_stp36: output/input_controls_contemporary_stp36.csv
-        case_stp37: output/input_controls_contemporary_stp37.csv
-        case_stp40: output/input_controls_contemporary_stp40.csv
-        case_stp41: output/input_controls_contemporary_stp41.csv
-        case_stp42: output/input_controls_contemporary_stp42.csv
-        case_stp43: output/input_controls_contemporary_stp43.csv
-        case_stp44: output/input_controls_contemporary_stp44.csv
-        case_stp49: output/input_controls_contemporary_stp49.csv
-        control_stp5: output/input_covid_communitycases_stp5.csv
-        control_stp6: output/input_covid_communitycases_stp6.csv
-        control_stp7: output/input_covid_communitycases_stp7.csv
-        control_stp8: output/input_covid_communitycases_stp8.csv
-        control_stp9: output/input_covid_communitycases_stp9.csv
-        control_stp10: output/input_covid_communitycases_stp10.csv
-        control_stp12: output/input_covid_communitycases_stp12.csv
-        control_stp13: output/input_covid_communitycases_stp13.csv
-        control_stp14: output/input_covid_communitycases_stp14.csv
-        control_stp15: output/input_covid_communitycases_stp15.csv
-        control_stp16: output/input_covid_communitycases_stp16.csv
-        control_stp17: output/input_covid_communitycases_stp17.csv
-        control_stp20: output/input_covid_communitycases_stp20.csv
-        control_stp21: output/input_covid_communitycases_stp21.csv
-        control_stp22: output/input_covid_communitycases_stp22.csv
-        control_stp23: output/input_covid_communitycases_stp23.csv
-        control_stp24: output/input_covid_communitycases_stp24.csv
-        control_stp25: output/input_covid_communitycases_stp25.csv
-        control_stp26: output/input_covid_communitycases_stp26.csv
-        control_stp27: output/input_covid_communitycases_stp27.csv
-        control_stp29: output/input_covid_communitycases_stp29.csv
-        control_stp33: output/input_covid_communitycases_stp33.csv
-        control_stp35: output/input_covid_communitycases_stp35.csv
-        control_stp36: output/input_covid_communitycases_stp36.csv
-        control_stp37: output/input_covid_communitycases_stp37.csv
-        control_stp40: output/input_covid_communitycases_stp40.csv
-        control_stp41: output/input_covid_communitycases_stp41.csv
-        control_stp42: output/input_covid_communitycases_stp42.csv
-        control_stp43: output/input_covid_communitycases_stp43.csv
-        control_stp44: output/input_covid_communitycases_stp44.csv
-        control_stp49: output/input_covid_communitycases_stp49.csv
-      moderately_sensitive:
-        log: logs/01_longCovidSymp_split_by_stp.log
+#  01_longCovidSymp_split_by_stp:
+#    run: stata-mp:latest analysis/01_longCovidSymp_cr_split_by_stp.do
+#    needs: [set_case_index_date, correct_contemporary_control_death_dates]
+#    outputs:
+#      highly_sensitive:
+#        case_stp5: output/input_controls_contemporary_stp5.csv
+#        case_stp6: output/input_controls_contemporary_stp6.csv
+#        case_stp7: output/input_controls_contemporary_stp7.csv
+#        case_stp8: output/input_controls_contemporary_stp8.csv
+#        case_stp9: output/input_controls_contemporary_stp9.csv
+#        case_stp10: output/input_controls_contemporary_stp10.csv
+#        case_stp12: output/input_controls_contemporary_stp12.csv
+#       case_stp13: output/input_controls_contemporary_stp13.csv
+#        case_stp14: output/input_controls_contemporary_stp14.csv
+#        case_stp15: output/input_controls_contemporary_stp15.csv
+#        case_stp16: output/input_controls_contemporary_stp16.csv
+#        case_stp17: output/input_controls_contemporary_stp17.csv
+#        case_stp20: output/input_controls_contemporary_stp20.csv
+#        case_stp21: output/input_controls_contemporary_stp21.csv
+#        case_stp22: output/input_controls_contemporary_stp22.csv
+#        case_stp23: output/input_controls_contemporary_stp23.csv
+#        case_stp24: output/input_controls_contemporary_stp24.csv
+#        case_stp25: output/input_controls_contemporary_stp25.csv
+#        case_stp26: output/input_controls_contemporary_stp26.csv
+#        case_stp27: output/input_controls_contemporary_stp27.csv
+#        case_stp29: output/input_controls_contemporary_stp29.csv
+#        case_stp33: output/input_controls_contemporary_stp33.csv
+#        case_stp35: output/input_controls_contemporary_stp35.csv
+#        case_stp36: output/input_controls_contemporary_stp36.csv
+#        case_stp37: output/input_controls_contemporary_stp37.csv
+#        case_stp40: output/input_controls_contemporary_stp40.csv
+#        case_stp41: output/input_controls_contemporary_stp41.csv
+#       case_stp42: output/input_controls_contemporary_stp42.csv
+#        case_stp43: output/input_controls_contemporary_stp43.csv
+#        case_stp44: output/input_controls_contemporary_stp44.csv
+#        case_stp49: output/input_controls_contemporary_stp49.csv
+#        control_stp5: output/input_covid_communitycases_stp5.csv
+#        control_stp6: output/input_covid_communitycases_stp6.csv
+#        control_stp7: output/input_covid_communitycases_stp7.csv
+#        control_stp8: output/input_covid_communitycases_stp8.csv
+#        control_stp9: output/input_covid_communitycases_stp9.csv
+#        control_stp10: output/input_covid_communitycases_stp10.csv
+#        control_stp12: output/input_covid_communitycases_stp12.csv
+#        control_stp13: output/input_covid_communitycases_stp13.csv
+#        control_stp14: output/input_covid_communitycases_stp14.csv
+#        control_stp15: output/input_covid_communitycases_stp15.csv
+#        control_stp16: output/input_covid_communitycases_stp16.csv
+#        control_stp17: output/input_covid_communitycases_stp17.csv
+#        control_stp20: output/input_covid_communitycases_stp20.csv
+#        control_stp21: output/input_covid_communitycases_stp21.csv
+#        control_stp22: output/input_covid_communitycases_stp22.csv
+#        control_stp23: output/input_covid_communitycases_stp23.csv
+#        control_stp24: output/input_covid_communitycases_stp24.csv
+#        control_stp25: output/input_covid_communitycases_stp25.csv
+#        control_stp26: output/input_covid_communitycases_stp26.csv
+#        control_stp27: output/input_covid_communitycases_stp27.csv
+#        control_stp29: output/input_covid_communitycases_stp29.csv
+#        control_stp33: output/input_covid_communitycases_stp33.csv
+#        control_stp35: output/input_covid_communitycases_stp35.csv
+#        control_stp36: output/input_covid_communitycases_stp36.csv
+#        control_stp37: output/input_covid_communitycases_stp37.csv
+#        control_stp40: output/input_covid_communitycases_stp40.csv
+#        control_stp41: output/input_covid_communitycases_stp41.csv
+#        control_stp42: output/input_covid_communitycases_stp42.csv
+#        control_stp43: output/input_covid_communitycases_stp43.csv
+#        control_stp44: output/input_covid_communitycases_stp44.csv
+#        control_stp49: output/input_covid_communitycases_stp49.csv
+#      moderately_sensitive:
+#        log: logs/01_longCovidSymp_split_by_stp.log
 
 
 # 3. SPLIT HISTORICAL COMPARATORS UP BY STP
-  01b_longCovidSymp_splitHistorical_by_stp:
-    run: stata-mp:latest analysis/01b_longCovidSymp_cr_splitComparator_by_stp.do historical
-    needs: [correct_historical_control_death_dates]
-    outputs:
-      highly_sensitive:
-        case_stp5: output/input_controls_historical_stp5.csv
-        case_stp6: output/input_controls_historical_stp6.csv
-        case_stp7: output/input_controls_historical_stp7.csv
-        case_stp8: output/input_controls_historical_stp8.csv
-        case_stp9: output/input_controls_historical_stp9.csv
-        case_stp10: output/input_controls_historical_stp10.csv
-        case_stp12: output/input_controls_historical_stp12.csv
-        case_stp13: output/input_controls_historical_stp13.csv
-        case_stp14: output/input_controls_historical_stp14.csv
-        case_stp15: output/input_controls_historical_stp15.csv
-        case_stp16: output/input_controls_historical_stp16.csv
-        case_stp17: output/input_controls_historical_stp17.csv
-        case_stp20: output/input_controls_historical_stp20.csv
-        case_stp21: output/input_controls_historical_stp21.csv
-        case_stp22: output/input_controls_historical_stp22.csv
-        case_stp23: output/input_controls_historical_stp23.csv
-        case_stp24: output/input_controls_historical_stp24.csv
-        case_stp25: output/input_controls_historical_stp25.csv
-        case_stp26: output/input_controls_historical_stp26.csv
-        case_stp27: output/input_controls_historical_stp27.csv
-        case_stp29: output/input_controls_historical_stp29.csv
-        case_stp33: output/input_controls_historical_stp33.csv
-        case_stp35: output/input_controls_historical_stp35.csv
-        case_stp36: output/input_controls_historical_stp36.csv
-        case_stp37: output/input_controls_historical_stp37.csv
-        case_stp40: output/input_controls_historical_stp40.csv
-        case_stp41: output/input_controls_historical_stp41.csv
-        case_stp42: output/input_controls_historical_stp42.csv
-        case_stp43: output/input_controls_historical_stp43.csv
-        case_stp44: output/input_controls_historical_stp44.csv
-        case_stp49: output/input_controls_historical_stp49.csv
-      moderately_sensitive:
-        log: logs/01b_longCovidSymp_splithistorical_by_stp.log
+#  01b_longCovidSymp_splitHistorical_by_stp:
+#    run: stata-mp:latest analysis/01b_longCovidSymp_cr_splitComparator_by_stp.do historical
+#    needs: [correct_historical_control_death_dates]
+#    outputs:
+#      highly_sensitive:
+#        case_stp5: output/input_controls_historical_stp5.csv
+#        case_stp6: output/input_controls_historical_stp6.csv
+#        case_stp7: output/input_controls_historical_stp7.csv
+#        case_stp8: output/input_controls_historical_stp8.csv
+#        case_stp9: output/input_controls_historical_stp9.csv
+#        case_stp10: output/input_controls_historical_stp10.csv
+#        case_stp12: output/input_controls_historical_stp12.csv
+#        case_stp13: output/input_controls_historical_stp13.csv
+#        case_stp14: output/input_controls_historical_stp14.csv
+#        case_stp15: output/input_controls_historical_stp15.csv
+#        case_stp16: output/input_controls_historical_stp16.csv
+#        case_stp17: output/input_controls_historical_stp17.csv
+#        case_stp20: output/input_controls_historical_stp20.csv
+#        case_stp21: output/input_controls_historical_stp21.csv
+#        case_stp22: output/input_controls_historical_stp22.csv
+#        case_stp23: output/input_controls_historical_stp23.csv
+#        case_stp24: output/input_controls_historical_stp24.csv
+#        case_stp25: output/input_controls_historical_stp25.csv
+#        case_stp26: output/input_controls_historical_stp26.csv
+#        case_stp27: output/input_controls_historical_stp27.csv
+#        case_stp29: output/input_controls_historical_stp29.csv
+#        case_stp33: output/input_controls_historical_stp33.csv
+#        case_stp35: output/input_controls_historical_stp35.csv
+#        case_stp36: output/input_controls_historical_stp36.csv
+#        case_stp37: output/input_controls_historical_stp37.csv
+#        case_stp40: output/input_controls_historical_stp40.csv
+#        case_stp41: output/input_controls_historical_stp41.csv
+#        case_stp42: output/input_controls_historical_stp42.csv
+#        case_stp43: output/input_controls_historical_stp43.csv
+#        case_stp44: output/input_controls_historical_stp44.csv
+#        case_stp49: output/input_controls_historical_stp49.csv
+#      moderately_sensitive:
+#        log: logs/01b_longCovidSymp_splithistorical_by_stp.log
 
 
 
 # 4. MATCH CASES TO CONTEMPORARY COMPARATORS
   # *** contemporary potential comparators for each stp
-  match_contemporary_stp5:
-    run: python:latest python analysis/match_contemporary_stp5.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp5: output/matched_cases_stp5.csv
-        matched_matches_stp5: output/matched_matches_stp5.csv
-        matched_all_stp5: output/matched_combined_stp5.csv
-      moderately_sensitive:
-        matching_report_stp5: output/matching_report_stp5.txt
+ # match_contemporary_stp5:
+ #   run: python:latest python analysis/match_contemporary_stp5.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp5: output/matched_cases_stp5.csv
+ #       matched_matches_stp5: output/matched_matches_stp5.csv
+ #       matched_all_stp5: output/matched_combined_stp5.csv
+ #     moderately_sensitive:
+ #       matching_report_stp5: output/matching_report_stp5.txt
 
-  match_contemporary_stp6:
-    run: python:latest python analysis/match_contemporary_stp6.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp6: output/matched_cases_stp6.csv
-        matched_matches_stp6: output/matched_matches_stp6.csv
-        matched_all_stp6: output/matched_combined_stp6.csv
-      moderately_sensitive:
-         matching_report_stp6: output/matching_report_stp6.txt
+ # match_contemporary_stp6:
+ #   run: python:latest python analysis/match_contemporary_stp6.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp6: output/matched_cases_stp6.csv
+ #       matched_matches_stp6: output/matched_matches_stp6.csv
+ #       matched_all_stp6: output/matched_combined_stp6.csv
+ #     moderately_sensitive:
+ #        matching_report_stp6: output/matching_report_stp6.txt
 
-  match_contemporary_stp7:
-    run: python:latest python analysis/match_contemporary_stp7.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp7: output/matched_cases_stp7.csv
-        matched_matches_stp7: output/matched_matches_stp7.csv
-        matched_all_stp7: output/matched_combined_stp7.csv
-      moderately_sensitive:
-         matching_report_stp7: output/matching_report_stp7.txt
+ # match_contemporary_stp7:
+ #   run: python:latest python analysis/match_contemporary_stp7.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp7: output/matched_cases_stp7.csv
+ #       matched_matches_stp7: output/matched_matches_stp7.csv
+ #       matched_all_stp7: output/matched_combined_stp7.csv
+ #     moderately_sensitive:
+ #        matching_report_stp7: output/matching_report_stp7.txt
 
-  match_contemporary_stp8:
-    run: python:latest python analysis/match_contemporary_stp8.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp8: output/matched_cases_stp8.csv
-        matched_matches_stp8: output/matched_matches_stp8.csv
-        matched_all_stp8: output/matched_combined_stp8.csv
-      moderately_sensitive:
-         matching_report_stp8: output/matching_report_stp8.txt
+ # match_contemporary_stp8:
+ #   run: python:latest python analysis/match_contemporary_stp8.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp8: output/matched_cases_stp8.csv
+ #       matched_matches_stp8: output/matched_matches_stp8.csv
+ #       matched_all_stp8: output/matched_combined_stp8.csv
+ #     moderately_sensitive:
+ #        matching_report_stp8: output/matching_report_stp8.txt
 
-  match_contemporary_stp9:
-    run: python:latest python analysis/match_contemporary_stp9.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp9: output/matched_cases_stp9.csv
-        matched_matches_stp9: output/matched_matches_stp9.csv
-        matched_all_stp9: output/matched_combined_stp9.csv
-      moderately_sensitive:
-         matching_report_stp9: output/matching_report_stp9.txt
+ # match_contemporary_stp9:
+ #   run: python:latest python analysis/match_contemporary_stp9.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp9: output/matched_cases_stp9.csv
+ #       matched_matches_stp9: output/matched_matches_stp9.csv
+ #       matched_all_stp9: output/matched_combined_stp9.csv
+ #     moderately_sensitive:
+ #        matching_report_stp9: output/matching_report_stp9.txt
 
-  match_contemporary_stp10:
-    run: python:latest python analysis/match_contemporary_stp10.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp10: output/matched_cases_stp10.csv
-        matched_matches_stp10: output/matched_matches_stp10.csv
-        matched_all_stp10: output/matched_combined_stp10.csv
-      moderately_sensitive:
-        matching_report_stp10: output/matching_report_stp10.txt
+ # match_contemporary_stp10:
+ #   run: python:latest python analysis/match_contemporary_stp10.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp10: output/matched_cases_stp10.csv
+ #       matched_matches_stp10: output/matched_matches_stp10.csv
+ #       matched_all_stp10: output/matched_combined_stp10.csv
+ #     moderately_sensitive:
+ #       matching_report_stp10: output/matching_report_stp10.txt
       
-  match_contemporary_stp12:
-    run: python:latest python analysis/match_contemporary_stp12.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp12: output/matched_cases_stp12.csv
-        matched_matches_stp12: output/matched_matches_stp12.csv
-        matched_all_stp12: output/matched_combined_stp12.csv
-      moderately_sensitive:
-        matching_report_stp12: output/matching_report_stp12.txt
+ # match_contemporary_stp12:
+ #   run: python:latest python analysis/match_contemporary_stp12.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp12: output/matched_cases_stp12.csv
+ #       matched_matches_stp12: output/matched_matches_stp12.csv
+ #       matched_all_stp12: output/matched_combined_stp12.csv
+ #     moderately_sensitive:
+ #       matching_report_stp12: output/matching_report_stp12.txt
 
-  match_contemporary_stp13:
-    run: python:latest python analysis/match_contemporary_stp13.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp13: output/matched_cases_stp13.csv
-        matched_matches_stp13: output/matched_matches_stp13.csv
-        matched_all_stp13: output/matched_combined_stp13.csv
-      moderately_sensitive:
-        matching_report_stp13: output/matching_report_stp13.txt
+ # match_contemporary_stp13:
+ #   run: python:latest python analysis/match_contemporary_stp13.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp13: output/matched_cases_stp13.csv
+ #       matched_matches_stp13: output/matched_matches_stp13.csv
+ #       matched_all_stp13: output/matched_combined_stp13.csv
+ #     moderately_sensitive:
+ #       matching_report_stp13: output/matching_report_stp13.txt
 
-  match_contemporary_stp14:
-    run: python:latest python analysis/match_contemporary_stp14.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp14: output/matched_cases_stp14.csv
-        matched_matches_stp14: output/matched_matches_stp14.csv
-        matched_all_stp14: output/matched_combined_stp14.csv
-      moderately_sensitive:
-        matching_report_stp14: output/matching_report_stp14.txt
+ # match_contemporary_stp14:
+ #   run: python:latest python analysis/match_contemporary_stp14.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp14: output/matched_cases_stp14.csv
+ #       matched_matches_stp14: output/matched_matches_stp14.csv
+ #       matched_all_stp14: output/matched_combined_stp14.csv
+ #     moderately_sensitive:
+ #       matching_report_stp14: output/matching_report_stp14.txt
 
-  match_contemporary_stp15:
-    run: python:latest python analysis/match_contemporary_stp15.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp15: output/matched_cases_stp15.csv
-        matched_matches_stp15: output/matched_matches_stp15.csv
-        matched_all_stp15: output/matched_combined_stp15.csv
-      moderately_sensitive:
-        matching_report_stp15: output/matching_report_stp15.txt
+ # match_contemporary_stp15:
+ #   run: python:latest python analysis/match_contemporary_stp15.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp15: output/matched_cases_stp15.csv
+ #       matched_matches_stp15: output/matched_matches_stp15.csv
+ #       matched_all_stp15: output/matched_combined_stp15.csv
+ #     moderately_sensitive:
+ #       matching_report_stp15: output/matching_report_stp15.txt
        
-  match_contemporary_stp16:
-    run: python:latest python analysis/match_contemporary_stp16.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp16: output/matched_cases_stp16.csv
-        matched_matches_stp16: output/matched_matches_stp16.csv
-        matched_all_stp16: output/matched_combined_stp16.csv
-      moderately_sensitive:
-        matching_report_stp16: output/matching_report_stp16.txt
+ # match_contemporary_stp16:
+ #   run: python:latest python analysis/match_contemporary_stp16.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp16: output/matched_cases_stp16.csv
+ #     matched_matches_stp16: output/matched_matches_stp16.csv
+ #       matched_all_stp16: output/matched_combined_stp16.csv
+ #     moderately_sensitive:
+ #       matching_report_stp16: output/matching_report_stp16.txt
         
-  match_contemporary_stp17:
-    run: python:latest python analysis/match_contemporary_stp17.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp17: output/matched_cases_stp17.csv
-        matched_matches_stp17: output/matched_matches_stp17.csv
-        matched_all_stp17: output/matched_combined_stp17.csv
-      moderately_sensitive:
-        matching_report_stp17: output/matching_report_stp17.txt
+ # match_contemporary_stp17:
+ #   run: python:latest python analysis/match_contemporary_stp17.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp17: output/matched_cases_stp17.csv
+ #       matched_matches_stp17: output/matched_matches_stp17.csv
+ #       matched_all_stp17: output/matched_combined_stp17.csv
+ #     moderately_sensitive:
+ #       matching_report_stp17: output/matching_report_stp17.txt
         
-  match_contemporary_stp20:
-    run: python:latest python analysis/match_contemporary_stp20.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp20: output/matched_cases_stp20.csv
-        matched_matches_stp20: output/matched_matches_stp20.csv
-        matched_all_stp20: output/matched_combined_stp20.csv
-      moderately_sensitive:
-        matching_report_stp20: output/matching_report_stp20.txt
+ # match_contemporary_stp20:
+ #  run: python:latest python analysis/match_contemporary_stp20.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp20: output/matched_cases_stp20.csv
+ #       matched_matches_stp20: output/matched_matches_stp20.csv
+ #       matched_all_stp20: output/matched_combined_stp20.csv
+ #     moderately_sensitive:
+ #       matching_report_stp20: output/matching_report_stp20.txt
 
-  match_contemporary_stp21:
-    run: python:latest python analysis/match_contemporary_stp21.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp21: output/matched_cases_stp21.csv
-        matched_matches_stp21: output/matched_matches_stp21.csv
-        matched_all_stp21: output/matched_combined_stp21.csv
-      moderately_sensitive:
-        matching_report_stp21: output/matching_report_stp21.txt
+ # match_contemporary_stp21:
+ #   run: python:latest python analysis/match_contemporary_stp21.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp21: output/matched_cases_stp21.csv
+ #       matched_matches_stp21: output/matched_matches_stp21.csv
+ #       matched_all_stp21: output/matched_combined_stp21.csv
+ #     moderately_sensitive:
+ #       matching_report_stp21: output/matching_report_stp21.txt
        
-  match_contemporary_stp22:
-    run: python:latest python analysis/match_contemporary_stp22.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp22: output/matched_cases_stp22.csv
-        matched_matches_stp22: output/matched_matches_stp22.csv
-        matched_all_stp22: output/matched_combined_stp22.csv
-      moderately_sensitive:
-        matching_report_stp22: output/matching_report_stp22.txt
+ # match_contemporary_stp22:
+ #   run: python:latest python analysis/match_contemporary_stp22.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp22: output/matched_cases_stp22.csv
+ #       matched_matches_stp22: output/matched_matches_stp22.csv
+ #       matched_all_stp22: output/matched_combined_stp22.csv
+ #     moderately_sensitive:
+ #       matching_report_stp22: output/matching_report_stp22.txt
 
-  match_contemporary_stp23:
-    run: python:latest python analysis/match_contemporary_stp23.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp23: output/matched_cases_stp23.csv
-        matched_matches_stp23: output/matched_matches_stp23.csv
-        matched_all_stp23: output/matched_combined_stp23.csv
-      moderately_sensitive:
-        matching_report_stp23: output/matching_report_stp23.txt
+ # match_contemporary_stp23:
+ #   run: python:latest python analysis/match_contemporary_stp23.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp23: output/matched_cases_stp23.csv
+ #       matched_matches_stp23: output/matched_matches_stp23.csv
+ #       matched_all_stp23: output/matched_combined_stp23.csv
+ #     moderately_sensitive:
+ #       matching_report_stp23: output/matching_report_stp23.txt
 
-  match_contemporary_stp24:
-    run: python:latest python analysis/match_contemporary_stp24.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp24: output/matched_cases_stp24.csv
-        matched_matches_stp24: output/matched_matches_stp24.csv
-        matched_all_stp24: output/matched_combined_stp24.csv
-      moderately_sensitive:
-        matching_report_stp24: output/matching_report_stp24.txt
+ # match_contemporary_stp24:
+ #  run: python:latest python analysis/match_contemporary_stp24.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp24: output/matched_cases_stp24.csv
+ #       matched_matches_stp24: output/matched_matches_stp24.csv
+ #       matched_all_stp24: output/matched_combined_stp24.csv
+ #     moderately_sensitive:
+ #       matching_report_stp24: output/matching_report_stp24.txt
 
-  match_contemporary_stp25:
-    run: python:latest python analysis/match_contemporary_stp25.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp25: output/matched_cases_stp25.csv
-        matched_matches_stp25: output/matched_matches_stp25.csv
-        matched_all_stp25: output/matched_combined_stp25.csv
-      moderately_sensitive:
-        matching_report_stp25: output/matching_report_stp25.txt
+ # match_contemporary_stp25:
+ #   run: python:latest python analysis/match_contemporary_stp25.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp25: output/matched_cases_stp25.csv
+ #       matched_matches_stp25: output/matched_matches_stp25.csv
+ #       matched_all_stp25: output/matched_combined_stp25.csv
+ #     moderately_sensitive:
+ #       matching_report_stp25: output/matching_report_stp25.txt
 
-  match_contemporary_stp26:
-    run: python:latest python analysis/match_contemporary_stp26.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp26: output/matched_cases_stp26.csv
-        matched_matches_stp26: output/matched_matches_stp26.csv
-        matched_all_stp26: output/matched_combined_stp26.csv
-      moderately_sensitive:
-        matching_report_stp26: output/matching_report_stp26.txt
+ # match_contemporary_stp26:
+ #   run: python:latest python analysis/match_contemporary_stp26.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp26: output/matched_cases_stp26.csv
+ #       matched_matches_stp26: output/matched_matches_stp26.csv
+ #       matched_all_stp26: output/matched_combined_stp26.csv
+ #     moderately_sensitive:
+ #       matching_report_stp26: output/matching_report_stp26.txt
         
-  match_contemporary_stp27:
-    run: python:latest python analysis/match_contemporary_stp27.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp27: output/matched_cases_stp27.csv
-        matched_matches_stp27: output/matched_matches_stp27.csv
-        matched_all_stp27: output/matched_combined_stp27.csv
-      moderately_sensitive:
-        matching_report_stp27: output/matching_report_stp27.txt
+ # match_contemporary_stp27:
+ #   run: python:latest python analysis/match_contemporary_stp27.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp27: output/matched_cases_stp27.csv
+ #       matched_matches_stp27: output/matched_matches_stp27.csv
+ #       matched_all_stp27: output/matched_combined_stp27.csv
+ #     moderately_sensitive:
+ #       matching_report_stp27: output/matching_report_stp27.txt
 
-  match_contemporary_stp29:
-    run: python:latest python analysis/match_contemporary_stp29.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp29: output/matched_cases_stp29.csv
-        matched_matches_stp29: output/matched_matches_stp29.csv
-        matched_all_stp29: output/matched_combined_stp29.csv
-      moderately_sensitive:
-        matching_report_stp29: output/matching_report_stp29.txt
+ # match_contemporary_stp29:
+ #   run: python:latest python analysis/match_contemporary_stp29.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp29: output/matched_cases_stp29.csv
+ #       matched_matches_stp29: output/matched_matches_stp29.csv
+ #       matched_all_stp29: output/matched_combined_stp29.csv
+ #     moderately_sensitive:
+ #       matching_report_stp29: output/matching_report_stp29.txt
 
-  match_contemporary_stp33:
-    run: python:latest python analysis/match_contemporary_stp33.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp33: output/matched_cases_stp33.csv
-        matched_matches_stp33: output/matched_matches_stp33.csv
-        matched_all_stp33: output/matched_combined_stp33.csv
-      moderately_sensitive:
-        matching_report_stp33: output/matching_report_stp33.txt
+ # match_contemporary_stp33:
+ #   run: python:latest python analysis/match_contemporary_stp33.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp33: output/matched_cases_stp33.csv
+ #       matched_matches_stp33: output/matched_matches_stp33.csv
+ #       matched_all_stp33: output/matched_combined_stp33.csv
+ #     moderately_sensitive:
+ #       matching_report_stp33: output/matching_report_stp33.txt
 
-  match_contemporary_stp35:
-    run: python:latest python analysis/match_contemporary_stp35.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp35: output/matched_cases_stp35.csv
-        matched_matches_stp35: output/matched_matches_stp35.csv
-        matched_all_stp35: output/matched_combined_stp35.csv
-      moderately_sensitive:
-        matching_report_stp35: output/matching_report_stp35.txt
+ # match_contemporary_stp35:
+ #   run: python:latest python analysis/match_contemporary_stp35.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp35: output/matched_cases_stp35.csv
+ #       matched_matches_stp35: output/matched_matches_stp35.csv
+ #       matched_all_stp35: output/matched_combined_stp35.csv
+ #     moderately_sensitive:
+ #       matching_report_stp35: output/matching_report_stp35.txt
 
-  match_contemporary_stp36:
-    run: python:latest python analysis/match_contemporary_stp36.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp36: output/matched_cases_stp36.csv
-        matched_matches_stp36: output/matched_matches_stp36.csv
-        matched_all_stp36: output/matched_combined_stp36.csv
-      moderately_sensitive:
-        matching_report_stp36: output/matching_report_stp36.txt
+ # match_contemporary_stp36:
+ #   run: python:latest python analysis/match_contemporary_stp36.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp36: output/matched_cases_stp36.csv
+ #       matched_matches_stp36: output/matched_matches_stp36.csv
+ #       matched_all_stp36: output/matched_combined_stp36.csv
+ #     moderately_sensitive:
+ #       matching_report_stp36: output/matching_report_stp36.txt
 
-  match_contemporary_stp37:
-    run: python:latest python analysis/match_contemporary_stp37.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp37: output/matched_cases_stp37.csv
-        matched_matches_stp37: output/matched_matches_stp37.csv
-        matched_all_stp37: output/matched_combined_stp37.csv
-      moderately_sensitive:
-        matching_report_stp37: output/matching_report_stp37.txt
+ # match_contemporary_stp37:
+ #   run: python:latest python analysis/match_contemporary_stp37.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp37: output/matched_cases_stp37.csv
+ #       matched_matches_stp37: output/matched_matches_stp37.csv
+ #       matched_all_stp37: output/matched_combined_stp37.csv
+ #     moderately_sensitive:
+ #       matching_report_stp37: output/matching_report_stp37.txt
 
-  match_contemporary_stp40:
-    run: python:latest python analysis/match_contemporary_stp40.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp40: output/matched_cases_stp40.csv
-        matched_matches_stp40: output/matched_matches_stp40.csv
-        matched_all_stp40: output/matched_combined_stp40.csv
-      moderately_sensitive:
-        matching_report_stp40: output/matching_report_stp40.txt
+ # match_contemporary_stp40:
+ #   run: python:latest python analysis/match_contemporary_stp40.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp40: output/matched_cases_stp40.csv
+ #       matched_matches_stp40: output/matched_matches_stp40.csv
+ #       matched_all_stp40: output/matched_combined_stp40.csv
+ #     moderately_sensitive:
+ #       matching_report_stp40: output/matching_report_stp40.txt
 
-  match_contemporary_stp41:
-    run: python:latest python analysis/match_contemporary_stp41.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp41: output/matched_cases_stp41.csv
-        matched_matches_stp41: output/matched_matches_stp41.csv
-        matched_all_stp41: output/matched_combined_stp41.csv
-      moderately_sensitive:
-        matching_report_stp41: output/matching_report_stp41.txt
+ # match_contemporary_stp41:
+ #   run: python:latest python analysis/match_contemporary_stp41.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp41: output/matched_cases_stp41.csv
+ #       matched_matches_stp41: output/matched_matches_stp41.csv
+ #       matched_all_stp41: output/matched_combined_stp41.csv
+ #     moderately_sensitive:
+ #       matching_report_stp41: output/matching_report_stp41.txt
 
-  match_contemporary_stp42:
-    run: python:latest python analysis/match_contemporary_stp42.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp42: output/matched_cases_stp42.csv
-        matched_matches_stp42: output/matched_matches_stp42.csv
-        matched_all_stp42: output/matched_combined_stp42.csv
-      moderately_sensitive:
-        matching_report_stp41: output/matching_report_stp42.txt
+ # match_contemporary_stp42:
+ #   run: python:latest python analysis/match_contemporary_stp42.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp42: output/matched_cases_stp42.csv
+ #       matched_matches_stp42: output/matched_matches_stp42.csv
+ #       matched_all_stp42: output/matched_combined_stp42.csv
+ #     moderately_sensitive:
+ #       matching_report_stp41: output/matching_report_stp42.txt
 
-  match_contemporary_stp43:
-    run: python:latest python analysis/match_contemporary_stp43.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp43: output/matched_cases_stp43.csv
-        matched_matches_stp43: output/matched_matches_stp43.csv
-        matched_all_stp43: output/matched_combined_stp43.csv
-      moderately_sensitive:
-         matching_report_stp43: output/matching_report_stp43.txt
+ # match_contemporary_stp43:
+ #   run: python:latest python analysis/match_contemporary_stp43.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp43: output/matched_cases_stp43.csv
+ #       matched_matches_stp43: output/matched_matches_stp43.csv
+ #       matched_all_stp43: output/matched_combined_stp43.csv
+ #     moderately_sensitive:
+ #        matching_report_stp43: output/matching_report_stp43.txt
 
-  match_contemporary_stp44:
-    run: python:latest python analysis/match_contemporary_stp44.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp44: output/matched_cases_stp44.csv
-        matched_matches_stp44: output/matched_matches_stp44.csv
-        matched_all_stp44: output/matched_combined_stp44.csv
-      moderately_sensitive:
-         matching_report_stp44: output/matching_report_stp44.txt
+ # match_contemporary_stp44:
+ #   run: python:latest python analysis/match_contemporary_stp44.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp44: output/matched_cases_stp44.csv
+ #       matched_matches_stp44: output/matched_matches_stp44.csv
+ #       matched_all_stp44: output/matched_combined_stp44.csv
+ #     moderately_sensitive:
+ #        matching_report_stp44: output/matching_report_stp44.txt
 
-  match_contemporary_stp49:
-    run: python:latest python analysis/match_contemporary_stp49.py
-    needs: [01_longCovidSymp_split_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_stp49: output/matched_cases_stp49.csv
-        matched_matches_stp49: output/matched_matches_stp49.csv
-        matched_all_stp49: output/matched_combined_stp49.csv
-      moderately_sensitive:
-         matching_report_stp49: output/matching_report_stp49.txt
+ # match_contemporary_stp49:
+ #   run: python:latest python analysis/match_contemporary_stp49.py
+ #   needs: [01_longCovidSymp_split_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_stp49: output/matched_cases_stp49.csv
+ #       matched_matches_stp49: output/matched_matches_stp49.csv
+ #       matched_all_stp49: output/matched_combined_stp49.csv
+ #     moderately_sensitive:
+ #        matching_report_stp49: output/matching_report_stp49.txt
 
 
 
 
 # 4b. MATCH CASES TO HISTORICAL COMPARATORS
   # *** historical potential comparators for each stp
-  match_historical_stp5:
-    run: python:latest python analysis/match_historical_stp5.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp5: output/matched_cases_historical_stp5.csv
-        matched_matches_historical_stp5: output/matched_matches_historical_stp5.csv
-        matched_historical_all_stp5: output/matched_combined_historical_stp5.csv
-      moderately_sensitive:
-        matching_report_historical_stp5: output/matching_report_historical_stp5.txt
+ # match_historical_stp5:
+ #   run: python:latest python analysis/match_historical_stp5.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp5: output/matched_cases_historical_stp5.csv
+ #      matched_matches_historical_stp5: output/matched_matches_historical_stp5.csv
+ #       matched_historical_all_stp5: output/matched_combined_historical_stp5.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp5: output/matching_report_historical_stp5.txt
 
-  match_historical_stp6:
-    run: python:latest python analysis/match_historical_stp6.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp6: output/matched_cases_historical_stp6.csv
-        matched_matches_historical_stp6: output/matched_matches_historical_stp6.csv
-        matched_historical_all_stp6: output/matched_combined_historical_stp6.csv
-      moderately_sensitive:
-         matching_report_historical_stp6: output/matching_report_historical_stp6.txt
+ # match_historical_stp6:
+ #   run: python:latest python analysis/match_historical_stp6.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp6: output/matched_cases_historical_stp6.csv
+ #       matched_matches_historical_stp6: output/matched_matches_historical_stp6.csv
+ #       matched_historical_all_stp6: output/matched_combined_historical_stp6.csv
+ #     moderately_sensitive:
+ #        matching_report_historical_stp6: output/matching_report_historical_stp6.txt
 
-  match_historical_stp7:
-    run: python:latest python analysis/match_historical_stp7.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp7: output/matched_cases_historical_stp7.csv
-        matched_matches_historical_stp7: output/matched_matches_historical_stp7.csv
-        matched_historical_all_stp7: output/matched_combined_historical_stp7.csv
-      moderately_sensitive:
-         matching_report_historical_stp7: output/matching_report_historical_stp7.txt
+ # match_historical_stp7:
+ #   run: python:latest python analysis/match_historical_stp7.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp7: output/matched_cases_historical_stp7.csv
+ #       matched_matches_historical_stp7: output/matched_matches_historical_stp7.csv
+ #       matched_historical_all_stp7: output/matched_combined_historical_stp7.csv
+ #     moderately_sensitive:
+ #        matching_report_historical_stp7: output/matching_report_historical_stp7.txt
 
-  match_historical_stp8:
-    run: python:latest python analysis/match_historical_stp8.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp8: output/matched_cases_historical_stp8.csv
-        matched_matches_historical_stp8: output/matched_matches_historical_stp8.csv
-        matched_historical_all_stp8: output/matched_combined_historical_stp8.csv
-      moderately_sensitive:
-         matching_report_historical_stp8: output/matching_report_historical_stp8.txt
+ # match_historical_stp8:
+ #   run: python:latest python analysis/match_historical_stp8.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp8: output/matched_cases_historical_stp8.csv
+ #       matched_matches_historical_stp8: output/matched_matches_historical_stp8.csv
+ #       matched_historical_all_stp8: output/matched_combined_historical_stp8.csv
+ #     moderately_sensitive:
+ #        matching_report_historical_stp8: output/matching_report_historical_stp8.txt
 
-  match_historical_stp9:
-    run: python:latest python analysis/match_historical_stp9.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp9: output/matched_cases_historical_stp9.csv
-        matched_matches_historical_stp9: output/matched_matches_historical_stp9.csv
-        matched_historical_all_stp9: output/matched_combined_historical_stp9.csv
-      moderately_sensitive:
-         matching_report_historical_stp9: output/matching_report_historical_stp9.txt
+ # match_historical_stp9:
+ #   run: python:latest python analysis/match_historical_stp9.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp9: output/matched_cases_historical_stp9.csv
+ #       matched_matches_historical_stp9: output/matched_matches_historical_stp9.csv
+ #       matched_historical_all_stp9: output/matched_combined_historical_stp9.csv
+ #     moderately_sensitive:
+ #        matching_report_historical_stp9: output/matching_report_historical_stp9.txt
 
-  match_historical_stp10:
-    run: python:latest python analysis/match_historical_stp10.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp10: output/matched_cases_historical_stp10.csv
-        matched_matches_historical_stp10: output/matched_matches_historical_stp10.csv
-        matched_historical_all_stp10: output/matched_combined_historical_stp10.csv
-      moderately_sensitive:
-        matching_report_historical_stp10: output/matching_report_historical_stp10.txt
+ # match_historical_stp10:
+ #   run: python:latest python analysis/match_historical_stp10.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp10: output/matched_cases_historical_stp10.csv
+ #       matched_matches_historical_stp10: output/matched_matches_historical_stp10.csv
+ #       matched_historical_all_stp10: output/matched_combined_historical_stp10.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp10: output/matching_report_historical_stp10.txt
       
-  match_historical_stp12:
-    run: python:latest python analysis/match_historical_stp12.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp12: output/matched_cases_historical_stp12.csv
-        matched_matches_historical_stp12: output/matched_matches_historical_stp12.csv
-        matched_historical_all_stp12: output/matched_combined_historical_stp12.csv
-      moderately_sensitive:
-        matching_report_historical_stp12: output/matching_report_historical_stp12.txt
+ # match_historical_stp12:
+ #   run: python:latest python analysis/match_historical_stp12.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp12: output/matched_cases_historical_stp12.csv
+ #       matched_matches_historical_stp12: output/matched_matches_historical_stp12.csv
+ #       matched_historical_all_stp12: output/matched_combined_historical_stp12.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp12: output/matching_report_historical_stp12.txt
 
-  match_historical_stp13:
-    run: python:latest python analysis/match_historical_stp13.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp13: output/matched_cases_historical_stp13.csv
-        matched_matches_historical_stp13: output/matched_matches_historical_stp13.csv
-        matched_historical_all_stp13: output/matched_combined_historical_stp13.csv
-      moderately_sensitive:
-        matching_report_historical_stp13: output/matching_report_historical_stp13.txt
+ # match_historical_stp13:
+ #   run: python:latest python analysis/match_historical_stp13.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp13: output/matched_cases_historical_stp13.csv
+ #       matched_matches_historical_stp13: output/matched_matches_historical_stp13.csv
+ #       matched_historical_all_stp13: output/matched_combined_historical_stp13.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp13: output/matching_report_historical_stp13.txt
 
-  match_historical_stp14:
-    run: python:latest python analysis/match_historical_stp14.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp14: output/matched_cases_historical_stp14.csv
-        matched_matches_historical_stp14: output/matched_matches_historical_stp14.csv
-        matched_historical_all_stp14: output/matched_combined_historical_stp14.csv
-      moderately_sensitive:
-        matching_report_historical_stp14: output/matching_report_historical_stp14.txt
+ # match_historical_stp14:
+ #   run: python:latest python analysis/match_historical_stp14.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp14: output/matched_cases_historical_stp14.csv
+ #       matched_matches_historical_stp14: output/matched_matches_historical_stp14.csv
+ #       matched_historical_all_stp14: output/matched_combined_historical_stp14.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp14: output/matching_report_historical_stp14.txt
 
-  match_historical_stp15:
-    run: python:latest python analysis/match_historical_stp15.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp15: output/matched_cases_historical_stp15.csv
-        matched_matches_historical_stp15: output/matched_matches_historical_stp15.csv
-        matched_historical_all_stp15: output/matched_combined_historical_stp15.csv
-      moderately_sensitive:
-        matching_report_historical_stp15: output/matching_report_historical_stp15.txt
+ # match_historical_stp15:
+ #   run: python:latest python analysis/match_historical_stp15.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp15: output/matched_cases_historical_stp15.csv
+ #       matched_matches_historical_stp15: output/matched_matches_historical_stp15.csv
+ #       matched_historical_all_stp15: output/matched_combined_historical_stp15.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp15: output/matching_report_historical_stp15.txt
        
-  match_historical_stp16:
-    run: python:latest python analysis/match_historical_stp16.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp16: output/matched_cases_historical_stp16.csv
-        matched_matches_historical_stp16: output/matched_matches_historical_stp16.csv
-        matched_historical_all_stp16: output/matched_combined_historical_stp16.csv
-      moderately_sensitive:
-        matching_report_historical_stp16: output/matching_report_historical_stp16.txt
+ # match_historical_stp16:
+ #   run: python:latest python analysis/match_historical_stp16.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp16: output/matched_cases_historical_stp16.csv
+ #       matched_matches_historical_stp16: output/matched_matches_historical_stp16.csv
+ #       matched_historical_all_stp16: output/matched_combined_historical_stp16.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp16: output/matching_report_historical_stp16.txt
         
-  match_historical_stp17:
-    run: python:latest python analysis/match_historical_stp17.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp17: output/matched_cases_historical_stp17.csv
-        matched_matches_historical_stp17: output/matched_matches_historical_stp17.csv
-        matched_historical_all_stp17: output/matched_combined_historical_stp17.csv
-      moderately_sensitive:
-        matching_report_historical_stp17: output/matching_report_historical_stp17.txt
+ # match_historical_stp17:
+ #   run: python:latest python analysis/match_historical_stp17.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp17: output/matched_cases_historical_stp17.csv
+ #       matched_matches_historical_stp17: output/matched_matches_historical_stp17.csv
+ #       matched_historical_all_stp17: output/matched_combined_historical_stp17.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp17: output/matching_report_historical_stp17.txt
         
-  match_historical_stp20:
-    run: python:latest python analysis/match_historical_stp20.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp20: output/matched_cases_historical_stp20.csv
-        matched_matches_historical_stp20: output/matched_matches_historical_stp20.csv
-        matched_historical_all_stp20: output/matched_combined_historical_stp20.csv
-      moderately_sensitive:
-        matching_report_historical_stp20: output/matching_report_historical_stp20.txt
+ # match_historical_stp20:
+ #   run: python:latest python analysis/match_historical_stp20.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp20: output/matched_cases_historical_stp20.csv
+ #       matched_matches_historical_stp20: output/matched_matches_historical_stp20.csv
+ #       matched_historical_all_stp20: output/matched_combined_historical_stp20.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp20: output/matching_report_historical_stp20.txt
 
-  match_historical_stp21:
-    run: python:latest python analysis/match_historical_stp21.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp21: output/matched_cases_historical_stp21.csv
-        matched_matches_historical_stp21: output/matched_matches_historical_stp21.csv
-        matched_historical_all_stp21: output/matched_combined_historical_stp21.csv
-      moderately_sensitive:
-        matching_report_historical_stp21: output/matching_report_historical_stp21.txt
+ # match_historical_stp21:
+ #   run: python:latest python analysis/match_historical_stp21.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp21: output/matched_cases_historical_stp21.csv
+ #       matched_matches_historical_stp21: output/matched_matches_historical_stp21.csv
+ #       matched_historical_all_stp21: output/matched_combined_historical_stp21.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp21: output/matching_report_historical_stp21.txt
        
-  match_historical_stp22:
-    run: python:latest python analysis/match_historical_stp22.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp22: output/matched_cases_historical_stp22.csv
-        matched_matches_historical_stp22: output/matched_matches_historical_stp22.csv
-        matched_historical_all_stp22: output/matched_combined_historical_stp22.csv
-      moderately_sensitive:
-        matching_report_historical_stp22: output/matching_report_historical_stp22.txt
+ # match_historical_stp22:
+ #   run: python:latest python analysis/match_historical_stp22.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp22: output/matched_cases_historical_stp22.csv
+ #       matched_matches_historical_stp22: output/matched_matches_historical_stp22.csv
+ #       matched_historical_all_stp22: output/matched_combined_historical_stp22.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp22: output/matching_report_historical_stp22.txt
 
-  match_historical_stp23:
-    run: python:latest python analysis/match_historical_stp23.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp23: output/matched_cases_historical_stp23.csv
-        matched_matches_historical_stp23: output/matched_matches_historical_stp23.csv
-        matched_historical_all_stp23: output/matched_combined_historical_stp23.csv
-      moderately_sensitive:
-        matching_report_historical_stp23: output/matching_report_historical_stp23.txt
+ # match_historical_stp23:
+ #   run: python:latest python analysis/match_historical_stp23.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp23: output/matched_cases_historical_stp23.csv
+ #       matched_matches_historical_stp23: output/matched_matches_historical_stp23.csv
+ #       matched_historical_all_stp23: output/matched_combined_historical_stp23.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp23: output/matching_report_historical_stp23.txt
 
-  match_historical_stp24:
-    run: python:latest python analysis/match_historical_stp24.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp24: output/matched_cases_historical_stp24.csv
-        matched_matches_historical_stp24: output/matched_matches_historical_stp24.csv
-        matched_historical_all_stp24: output/matched_combined_historical_stp24.csv
-      moderately_sensitive:
-        matching_report_historical_stp24: output/matching_report_historical_stp24.txt
+ # match_historical_stp24:
+ #   run: python:latest python analysis/match_historical_stp24.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp24: output/matched_cases_historical_stp24.csv
+ #       matched_matches_historical_stp24: output/matched_matches_historical_stp24.csv
+ #       matched_historical_all_stp24: output/matched_combined_historical_stp24.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp24: output/matching_report_historical_stp24.txt
 
-  match_historical_stp25:
-    run: python:latest python analysis/match_historical_stp25.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp25: output/matched_cases_historical_stp25.csv
-        matched_matches_historical_stp25: output/matched_matches_historical_stp25.csv
-        matched_historical_all_stp25: output/matched_combined_historical_stp25.csv
-      moderately_sensitive:
-        matching_report_historical_stp25: output/matching_report_historical_stp25.txt
+ # match_historical_stp25:
+ #   run: python:latest python analysis/match_historical_stp25.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp25: output/matched_cases_historical_stp25.csv
+ #       matched_matches_historical_stp25: output/matched_matches_historical_stp25.csv
+ #       matched_historical_all_stp25: output/matched_combined_historical_stp25.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp25: output/matching_report_historical_stp25.txt
 
-  match_historical_stp26:
-    run: python:latest python analysis/match_historical_stp26.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp26: output/matched_cases_historical_stp26.csv
-        matched_matches_historical_stp26: output/matched_matches_historical_stp26.csv
-        matched_historical_all_stp26: output/matched_combined_historical_stp26.csv
-      moderately_sensitive:
-        matching_report_historical_stp26: output/matching_report_historical_stp26.txt
+ # match_historical_stp26:
+ #  run: python:latest python analysis/match_historical_stp26.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp26: output/matched_cases_historical_stp26.csv
+ #       matched_matches_historical_stp26: output/matched_matches_historical_stp26.csv
+ #       matched_historical_all_stp26: output/matched_combined_historical_stp26.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp26: output/matching_report_historical_stp26.txt
         
-  match_historical_stp27:
-    run: python:latest python analysis/match_historical_stp27.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp27: output/matched_cases_historical_stp27.csv
-        matched_matches_historical_stp27: output/matched_matches_historical_stp27.csv
-        matched_historical_all_stp27: output/matched_combined_historical_stp27.csv
-      moderately_sensitive:
-        matching_report_historical_stp27: output/matching_report_historical_stp27.txt
+ # match_historical_stp27:
+ #   run: python:latest python analysis/match_historical_stp27.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp27: output/matched_cases_historical_stp27.csv
+ #       matched_matches_historical_stp27: output/matched_matches_historical_stp27.csv
+ #       matched_historical_all_stp27: output/matched_combined_historical_stp27.csv
+ #    moderately_sensitive:
+ #       matching_report_historical_stp27: output/matching_report_historical_stp27.txt
 
-  match_historical_stp29:
-    run: python:latest python analysis/match_historical_stp29.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp29: output/matched_cases_historical_stp29.csv
-        matched_matches_historical_stp29: output/matched_matches_historical_stp29.csv
-        matched_historical_all_stp29: output/matched_combined_historical_stp29.csv
-      moderately_sensitive:
-        matching_report_historical_stp29: output/matching_report_historical_stp29.txt
+ # match_historical_stp29:
+ #   run: python:latest python analysis/match_historical_stp29.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp29: output/matched_cases_historical_stp29.csv
+ #       matched_matches_historical_stp29: output/matched_matches_historical_stp29.csv
+ #      matched_historical_all_stp29: output/matched_combined_historical_stp29.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp29: output/matching_report_historical_stp29.txt
 
-  match_historical_stp33:
-    run: python:latest python analysis/match_historical_stp33.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp33: output/matched_cases_historical_stp33.csv
-        matched_matches_historical_stp33: output/matched_matches_historical_stp33.csv
-        matched_historical_all_stp33: output/matched_combined_historical_stp33.csv
-      moderately_sensitive:
-        matching_report_historical_stp33: output/matching_report_historical_stp33.txt
+ # match_historical_stp33:
+ #   run: python:latest python analysis/match_historical_stp33.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp33: output/matched_cases_historical_stp33.csv
+ #       matched_matches_historical_stp33: output/matched_matches_historical_stp33.csv
+ #       matched_historical_all_stp33: output/matched_combined_historical_stp33.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp33: output/matching_report_historical_stp33.txt
 
-  match_historical_stp35:
-    run: python:latest python analysis/match_historical_stp35.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp35: output/matched_cases_historical_stp35.csv
-        matched_matches_historical_stp35: output/matched_matches_historical_stp35.csv
-        matched_historical_all_stp35: output/matched_combined_historical_stp35.csv
-      moderately_sensitive:
-        matching_report_historical_stp35: output/matching_report_historical_stp35.txt
+ # match_historical_stp35:
+ #   run: python:latest python analysis/match_historical_stp35.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp35: output/matched_cases_historical_stp35.csv
+ #       matched_matches_historical_stp35: output/matched_matches_historical_stp35.csv
+ #       matched_historical_all_stp35: output/matched_combined_historical_stp35.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp35: output/matching_report_historical_stp35.txt
 
-  match_historical_stp36:
-    run: python:latest python analysis/match_historical_stp36.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp36: output/matched_cases_historical_stp36.csv
-        matched_matches_historical_stp36: output/matched_matches_historical_stp36.csv
-        matched_historical_all_stp36: output/matched_combined_historical_stp36.csv
-      moderately_sensitive:
-        matching_report_historical_stp36: output/matching_report_historical_stp36.txt
+ # match_historical_stp36:
+ #   run: python:latest python analysis/match_historical_stp36.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp36: output/matched_cases_historical_stp36.csv
+ #       matched_matches_historical_stp36: output/matched_matches_historical_stp36.csv
+ #      matched_historical_all_stp36: output/matched_combined_historical_stp36.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp36: output/matching_report_historical_stp36.txt
 
-  match_historical_stp37:
-    run: python:latest python analysis/match_historical_stp37.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp37: output/matched_cases_historical_stp37.csv
-        matched_matches_historical_stp37: output/matched_matches_historical_stp37.csv
-        matched_historical_all_stp37: output/matched_combined_historical_stp37.csv
-      moderately_sensitive:
-        matching_report_historical_stp37: output/matching_report_historical_stp37.txt
+ # match_historical_stp37:
+ #   run: python:latest python analysis/match_historical_stp37.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp37: output/matched_cases_historical_stp37.csv
+ #       matched_matches_historical_stp37: output/matched_matches_historical_stp37.csv
+ #       matched_historical_all_stp37: output/matched_combined_historical_stp37.csv
+ #     moderately_sensitive:
+ #      matching_report_historical_stp37: output/matching_report_historical_stp37.txt
 
-  match_historical_stp40:
-    run: python:latest python analysis/match_historical_stp40.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp40: output/matched_cases_historical_stp40.csv
-        matched_matches_historical_stp40: output/matched_matches_historical_stp40.csv
-        matched_historical_all_stp40: output/matched_combined_historical_stp40.csv
-      moderately_sensitive:
-        matching_report_historical_stp40: output/matching_report_historical_stp40.txt
+ # match_historical_stp40:
+ #   run: python:latest python analysis/match_historical_stp40.py
+ #  needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp40: output/matched_cases_historical_stp40.csv
+ #       matched_matches_historical_stp40: output/matched_matches_historical_stp40.csv
+ #       matched_historical_all_stp40: output/matched_combined_historical_stp40.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp40: output/matching_report_historical_stp40.txt
 
-  match_historical_stp41:
-    run: python:latest python analysis/match_historical_stp41.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp41: output/matched_cases_historical_stp41.csv
-        matched_matches_historical_stp41: output/matched_matches_historical_stp41.csv
-        matched_historical_all_stp41: output/matched_combined_historical_stp41.csv
-      moderately_sensitive:
-        matching_report_historical_stp41: output/matching_report_historical_stp41.txt
+ # match_historical_stp41:
+ #   run: python:latest python analysis/match_historical_stp41.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp41: output/matched_cases_historical_stp41.csv
+ #       matched_matches_historical_stp41: output/matched_matches_historical_stp41.csv
+ #       matched_historical_all_stp41: output/matched_combined_historical_stp41.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp41: output/matching_report_historical_stp41.txt
 
-  match_historical_stp42:
-    run: python:latest python analysis/match_historical_stp42.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp42: output/matched_cases_historical_stp42.csv
-        matched_matches_historical_stp42: output/matched_matches_historical_stp42.csv
-        matched_historical_all_stp42: output/matched_combined_historical_stp42.csv
-      moderately_sensitive:
-        matching_report_historical_stp41: output/matching_report_historical_stp42.txt
+ # match_historical_stp42:
+ #   run: python:latest python analysis/match_historical_stp42.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp42: output/matched_cases_historical_stp42.csv
+ #       matched_matches_historical_stp42: output/matched_matches_historical_stp42.csv
+ #       matched_historical_all_stp42: output/matched_combined_historical_stp42.csv
+ #     moderately_sensitive:
+ #       matching_report_historical_stp41: output/matching_report_historical_stp42.txt
 
-  match_historical_stp43:
-    run: python:latest python analysis/match_historical_stp43.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp43: output/matched_cases_historical_stp43.csv
-        matched_matches_historical_stp43: output/matched_matches_historical_stp43.csv
-        matched_historical_all_stp43: output/matched_combined_historical_stp43.csv
-      moderately_sensitive:
-         matching_report_historical_stp43: output/matching_report_historical_stp43.txt
+ # match_historical_stp43:
+ #   run: python:latest python analysis/match_historical_stp43.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp43: output/matched_cases_historical_stp43.csv
+ #       matched_matches_historical_stp43: output/matched_matches_historical_stp43.csv
+ #       matched_historical_all_stp43: output/matched_combined_historical_stp43.csv
+ #     moderately_sensitive:
+ #        matching_report_historical_stp43: output/matching_report_historical_stp43.txt
 
-  match_historical_stp44:
-    run: python:latest python analysis/match_historical_stp44.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp44: output/matched_cases_historical_stp44.csv
-        matched_matches_historical_stp44: output/matched_matches_historical_stp44.csv
-        matched_historical_all_stp44: output/matched_combined_historical_stp44.csv
-      moderately_sensitive:
-         matching_report_historical_stp44: output/matching_report_historical_stp44.txt
+ # match_historical_stp44:
+ #   run: python:latest python analysis/match_historical_stp44.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp44: output/matched_cases_historical_stp44.csv
+ #       matched_matches_historical_stp44: output/matched_matches_historical_stp44.csv
+ #       matched_historical_all_stp44: output/matched_combined_historical_stp44.csv
+ #     moderately_sensitive:
+ #        matching_report_historical_stp44: output/matching_report_historical_stp44.txt
 
-  match_historical_stp49:
-    run: python:latest python analysis/match_historical_stp49.py
-    needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
-    outputs:
-      highly_sensitive:
-        matched_cases_historical_stp49: output/matched_cases_historical_stp49.csv
-        matched_matches_historical_stp49: output/matched_matches_historical_stp49.csv
-        matched_historical_all_stp49: output/matched_combined_historical_stp49.csv
-      moderately_sensitive:
-         matching_report_historical_stp49: output/matching_report_historical_stp49.txt
+ # match_historical_stp49:
+ #   run: python:latest python analysis/match_historical_stp49.py
+ #   needs: [01_longCovidSymp_split_by_stp, 01b_longCovidSymp_splitHistorical_by_stp]
+ #   outputs:
+ #     highly_sensitive:
+ #       matched_cases_historical_stp49: output/matched_cases_historical_stp49.csv
+ #       matched_matches_historical_stp49: output/matched_matches_historical_stp49.csv
+ #      matched_historical_all_stp49: output/matched_combined_historical_stp49.csv
+ #     moderately_sensitive:
+ #        matching_report_historical_stp49: output/matching_report_historical_stp49.txt
 
 
 
 # 5. CHECK VARIABLES IN MATCHED FILES
   # *** contemporary potential comparators for each stp
-  checkVars_inMatchedFiles:
-    run: stata-mp:latest analysis/05_check_vars_after_matching.do contemporary
-    needs: [match_contemporary_stp29]
-    outputs:
-      moderately_sensitive:
-        log: logs/05_check_varscontemporary_after_matching.log
+  # checkVars_inMatchedFiles:
+  # run: stata-mp:latest analysis/05_check_vars_after_matching.do contemporary
+  #  needs: [match_contemporary_stp29]
+  #  outputs:
+  #    moderately_sensitive:
+  #      log: logs/05_check_varscontemporary_after_matching.log
 
-  checkVars_inHistoricalMatchedFiles:
-    run: stata-mp:latest analysis/05_check_vars_after_matching.do historical
-    needs: [match_historical_stp29]
-    outputs:
-      moderately_sensitive:
-        log: logs/05_check_varshistorical_after_matching.log
+  #checkVars_inHistoricalMatchedFiles:
+  #  run: stata-mp:latest analysis/05_check_vars_after_matching.do historical
+  #  needs: [match_historical_stp29]
+  #  outputs:
+  #    moderately_sensitive:
+  #      log: logs/05_check_varshistorical_after_matching.log
 
 
 
 
 # 6. COMBINE MATCHED CASES AND MATCHED COMPARATORS BY STP
-  combine_matched_CASESstps:
-    run: stata-mp:latest analysis/06a_longCovidSymp_cr_combine_CASEstps_after_matching.do contemporary
-    needs: [match_contemporary_stp5, match_contemporary_stp6, match_contemporary_stp7, match_contemporary_stp8, match_contemporary_stp9,
-    match_contemporary_stp10, match_contemporary_stp12, match_contemporary_stp13, match_contemporary_stp14, match_contemporary_stp15,
-    match_contemporary_stp16, match_contemporary_stp17, match_contemporary_stp20, match_contemporary_stp21, match_contemporary_stp22,
-    match_contemporary_stp23, match_contemporary_stp24, match_contemporary_stp25, match_contemporary_stp26, match_contemporary_stp27,
-    match_contemporary_stp29, match_contemporary_stp33, match_contemporary_stp35, match_contemporary_stp36, match_contemporary_stp37, 
-    match_contemporary_stp40, match_contemporary_stp41, match_contemporary_stp42, match_contemporary_stp43, match_contemporary_stp44, 
-    match_contemporary_stp49]
-    outputs:
-      highly_sensitive:
-        matched_cases_allstps: output/input_covid_matched_cases_contemporary_allSTPs.csv
-      moderately_sensitive:
-        log: logs/06a_longCovidSymp_cr_combine_contemporary_CASEstps_after_matching.log
+  #combine_matched_CASESstps:
+  #  run: stata-mp:latest analysis/06a_longCovidSymp_cr_combine_CASEstps_after_matching.do contemporary
+  #  needs: [match_contemporary_stp5, match_contemporary_stp6, match_contemporary_stp7, match_contemporary_stp8, match_contemporary_stp9,
+  #  match_contemporary_stp10, match_contemporary_stp12, match_contemporary_stp13, match_contemporary_stp14, match_contemporary_stp15,
+  #  match_contemporary_stp16, match_contemporary_stp17, match_contemporary_stp20, match_contemporary_stp21, match_contemporary_stp22,
+  #  match_contemporary_stp23, match_contemporary_stp24, match_contemporary_stp25, match_contemporary_stp26, match_contemporary_stp27,
+  #  match_contemporary_stp29, match_contemporary_stp33, match_contemporary_stp35, match_contemporary_stp36, match_contemporary_stp37, 
+  #  match_contemporary_stp40, match_contemporary_stp41, match_contemporary_stp42, match_contemporary_stp43, match_contemporary_stp44, 
+  #  match_contemporary_stp49]
+  #  outputs:
+  #    highly_sensitive:
+  #      matched_cases_allstps: output/input_covid_matched_cases_contemporary_allSTPs.csv
+  #    moderately_sensitive:
+  #      log: logs/06a_longCovidSymp_cr_combine_contemporary_CASEstps_after_matching.log
 
 
-  combine_matched_COMPARATORstps:
-    run: stata-mp:latest analysis/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching.do contemporary
-    needs: [match_contemporary_stp5, match_contemporary_stp6, match_contemporary_stp7, match_contemporary_stp8, match_contemporary_stp9,
-    match_contemporary_stp10, match_contemporary_stp12, match_contemporary_stp13, match_contemporary_stp14, match_contemporary_stp15,
-    match_contemporary_stp16, match_contemporary_stp17, match_contemporary_stp20, match_contemporary_stp21, match_contemporary_stp22,
-    match_contemporary_stp23, match_contemporary_stp24, match_contemporary_stp25, match_contemporary_stp26, match_contemporary_stp27,
-    match_contemporary_stp29, match_contemporary_stp33, match_contemporary_stp35, match_contemporary_stp36, match_contemporary_stp37, 
-    match_contemporary_stp40, match_contemporary_stp41, match_contemporary_stp42, match_contemporary_stp43, match_contemporary_stp44, 
-    match_contemporary_stp49]
-    outputs:
-      highly_sensitive:
-        matched_matches_allstps: output/input_covid_matched_matches_contemporary_allSTPs.csv
-      moderately_sensitive:
-        log: logs/06b_longCovidSymp_cr_combine_contemporary_COMPARATORstps_after_matching.log
+  #combine_matched_COMPARATORstps:
+  #  run: stata-mp:latest analysis/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching.do contemporary
+  #  needs: [match_contemporary_stp5, match_contemporary_stp6, match_contemporary_stp7, match_contemporary_stp8, match_contemporary_stp9,
+  #  match_contemporary_stp10, match_contemporary_stp12, match_contemporary_stp13, match_contemporary_stp14, match_contemporary_stp15,
+  #  match_contemporary_stp16, match_contemporary_stp17, match_contemporary_stp20, match_contemporary_stp21, match_contemporary_stp22,
+  #  match_contemporary_stp23, match_contemporary_stp24, match_contemporary_stp25, match_contemporary_stp26, match_contemporary_stp27,
+  #  match_contemporary_stp29, match_contemporary_stp33, match_contemporary_stp35, match_contemporary_stp36, match_contemporary_stp37, 
+  #  match_contemporary_stp40, match_contemporary_stp41, match_contemporary_stp42, match_contemporary_stp43, match_contemporary_stp44, 
+  #  match_contemporary_stp49]
+  #  outputs:
+  #    highly_sensitive:
+  #      matched_matches_allstps: output/input_covid_matched_matches_contemporary_allSTPs.csv
+  #    moderately_sensitive:
+  #      log: logs/06b_longCovidSymp_cr_combine_contemporary_COMPARATORstps_after_matching.log
 
 
 
 
 # 6. COMBINE MATCHED CASES AND MATCHED HISTORICAL COMPARATORS BY STP
-  combine_matched_historical_CASESstps:
-    run: stata-mp:latest analysis/06a_longCovidSymp_cr_combine_CASEstps_after_matching.do historical
-    needs: [match_historical_stp5, match_historical_stp6, match_historical_stp7, match_historical_stp8, match_historical_stp9,
-    match_historical_stp10, match_historical_stp12, match_historical_stp13, match_historical_stp14, match_historical_stp15,
-    match_historical_stp16, match_historical_stp17, match_historical_stp20, match_historical_stp21, match_historical_stp22,
-    match_historical_stp23, match_historical_stp24, match_historical_stp25, match_historical_stp26, match_historical_stp27,
-    match_historical_stp29, match_historical_stp33, match_historical_stp35, match_historical_stp36, match_historical_stp37, 
-    match_historical_stp40, match_historical_stp41, match_historical_stp42, match_historical_stp43, match_historical_stp44, 
-    match_historical_stp49]
-    outputs:
-      highly_sensitive:
-        matched_cases_allstps: output/input_covid_matched_cases_historical_allSTPs.csv
-      moderately_sensitive:
-        log: logs/06a_longCovidSymp_cr_combine_historical_CASEstps_after_matching.log
+  #combine_matched_historical_CASESstps:
+  #  run: stata-mp:latest analysis/06a_longCovidSymp_cr_combine_CASEstps_after_matching.do historical
+  #  needs: [match_historical_stp5, match_historical_stp6, match_historical_stp7, match_historical_stp8, match_historical_stp9,
+  #  match_historical_stp10, match_historical_stp12, match_historical_stp13, match_historical_stp14, match_historical_stp15,
+  #  match_historical_stp16, match_historical_stp17, match_historical_stp20, match_historical_stp21, match_historical_stp22,
+  #  match_historical_stp23, match_historical_stp24, match_historical_stp25, match_historical_stp26, match_historical_stp27,
+  #  match_historical_stp29, match_historical_stp33, match_historical_stp35, match_historical_stp36, match_historical_stp37, 
+  #  match_historical_stp40, match_historical_stp41, match_historical_stp42, match_historical_stp43, match_historical_stp44, 
+  #  match_historical_stp49]
+  #  outputs:
+  #    highly_sensitive:
+  #      matched_cases_allstps: output/input_covid_matched_cases_historical_allSTPs.csv
+  #    moderately_sensitive:
+  #      log: logs/06a_longCovidSymp_cr_combine_historical_CASEstps_after_matching.log
 
 
-  combine_matched_historical_COMPARATORstps:
-    run: stata-mp:latest analysis/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching.do historical
-    needs: [match_historical_stp5, match_historical_stp6, match_historical_stp7, match_historical_stp8, match_historical_stp9,
-    match_historical_stp10, match_historical_stp12, match_historical_stp13, match_historical_stp14, match_historical_stp15,
-    match_historical_stp16, match_historical_stp17, match_historical_stp20, match_historical_stp21, match_historical_stp22,
-    match_historical_stp23, match_historical_stp24, match_historical_stp25, match_historical_stp26, match_historical_stp27,
-    match_historical_stp29, match_historical_stp33, match_historical_stp35, match_historical_stp36, match_historical_stp37, 
-    match_historical_stp40, match_historical_stp41, match_historical_stp42, match_historical_stp43, match_historical_stp44, 
-    match_historical_stp49]
-    outputs:
-      highly_sensitive:
-        matched_matches_allstps: output/input_covid_matched_matches_historical_allSTPs.csv
-      moderately_sensitive:
-        log: logs/06b_longCovidSymp_cr_combine_historical_COMPARATORstps_after_matching.log
+  #combine_matched_historical_COMPARATORstps:
+  #  run: stata-mp:latest analysis/06b_longCovidSymp_cr_combine_COMPARATORstps_after_matching.do historical
+  #  needs: [match_historical_stp5, match_historical_stp6, match_historical_stp7, match_historical_stp8, match_historical_stp9,
+  #  match_historical_stp10, match_historical_stp12, match_historical_stp13, match_historical_stp14, match_historical_stp15,
+  #  match_historical_stp16, match_historical_stp17, match_historical_stp20, match_historical_stp21, match_historical_stp22,
+  #  match_historical_stp23, match_historical_stp24, match_historical_stp25, match_historical_stp26, match_historical_stp27,
+  # match_historical_stp29, match_historical_stp33, match_historical_stp35, match_historical_stp36, match_historical_stp37, 
+  #  match_historical_stp40, match_historical_stp41, match_historical_stp42, match_historical_stp43, match_historical_stp44, 
+  #  match_historical_stp49]
+  #  outputs:
+  #    highly_sensitive:
+  #      matched_matches_allstps: output/input_covid_matched_matches_historical_allSTPs.csv
+  #    moderately_sensitive:
+  #      log: logs/06b_longCovidSymp_cr_combine_historical_COMPARATORstps_after_matching.log
 
 
  #6a. CHECK VARIABLES FOR COMBINED CASES AND COMBINED CONTROLS PRIOR TO ADDING MORE VARIABLES
-  check_contemporary_combinedFiles:
-    run: stata-mp:latest analysis/6f_longCovidSymp_checkCombinedFiles.do contemporary
-    needs: [combine_matched_CASESstps, combine_matched_COMPARATORstps]
-    outputs:
-      moderately_sensitive:
-       log: logs/6f_longCovidSymp_contemporary_checkCombinedFiles.log
+  #check_contemporary_combinedFiles:
+  #  run: stata-mp:latest analysis/6f_longCovidSymp_checkCombinedFiles.do contemporary
+  #  needs: [combine_matched_CASESstps, combine_matched_COMPARATORstps]
+  #  outputs:
+  #    moderately_sensitive:
+  #     log: logs/6f_longCovidSymp_contemporary_checkCombinedFiles.log
 
-  check_historical_combinedFiles:
-    run: stata-mp:latest analysis/6f_longCovidSymp_checkCombinedFiles.do historical
-    needs: [combine_matched_historical_CASESstps, combine_matched_historical_COMPARATORstps]
-    outputs:
-      moderately_sensitive:
-       log: logs/6f_longCovidSymp_historical_checkCombinedFiles.log
+  #check_historical_combinedFiles:
+  #  run: stata-mp:latest analysis/6f_longCovidSymp_checkCombinedFiles.do historical
+  #  needs: [combine_matched_historical_CASESstps, combine_matched_historical_COMPARATORstps]
+  #  outputs:
+  #    moderately_sensitive:
+  #     log: logs/6f_longCovidSymp_historical_checkCombinedFiles.log
 
 
 # 7. ADD FURTHER VARIABLES TO CASES FOLLOWING MATCHING
-  add_allVars_cases:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_covid_communitycases 
-    needs: [combine_matched_CASESstps]
-    outputs:
-      highly_sensitive:
-        matched_cases_contemporary_wVars: output/input_complete_covid_communitycases.csv
+  #add_allVars_cases:
+  #  run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_covid_communitycases 
+  #  needs: [combine_matched_CASESstps]
+  #  outputs:
+  #    highly_sensitive:
+  #      matched_cases_contemporary_wVars: output/input_complete_covid_communitycases.csv
 
 
  # 8. ADD FURTHER VARIABLES TO CONTEMPORARY CONTROLS FOLLOWING MATCHING
-  add_allVars_contemporary_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_contemporary 
-    needs: [combine_matched_COMPARATORstps]
-    outputs:
-      highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_complete_controls_contemporary.csv
+  #add_allVars_contemporary_controls:
+  #  run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_contemporary 
+  #  needs: [combine_matched_COMPARATORstps]
+  #  outputs:
+  #    highly_sensitive:
+  #      matched_controls_contemporary_wVars: output/input_complete_controls_contemporary.csv
 
   
 
 # 8a. GET PREV YRS CONSULTATION COUNT VAR FOR CASES
-  get_consultationCount_cases:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_gpconsultations_cases
-    needs: [combine_matched_CASESstps]
-    outputs:
-      highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_gpconsultations_cases.csv
+#  get_consultationCount_cases:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_gpconsultations_cases
+#    needs: [combine_matched_CASESstps]
+#    outputs:
+#      highly_sensitive:
+#        matched_controls_contemporary_wVars: output/input_gpconsultations_cases.csv
 
 
 # 8b. GET PREV YRS CONSULTATION COUNT VAR FOR CONTEMPORARY CONTROLS
-  get_consultationCount_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_gpconsultations_controls_contemporary 
-    needs: [combine_matched_COMPARATORstps]
-    outputs:
-      highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_gpconsultations_controls_contemporary.csv
+#  get_consultationCount_controls:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_gpconsultations_controls_contemporary 
+#    needs: [combine_matched_COMPARATORstps]
+#    outputs:
+#      highly_sensitive:
+#        matched_controls_contemporary_wVars: output/input_gpconsultations_controls_contemporary.csv
 
 
 # 8c. GET SYMPTOMS AND MEDICINES FOR CASES
-  get_symptoms_cases:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_cases
-    needs: [combine_matched_CASESstps]
-    outputs:
-      highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_symptoms_cases.csv
+#  get_symptoms_cases:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_cases
+#    needs: [combine_matched_CASESstps]
+#    outputs:
+#      highly_sensitive:
+#        matched_controls_contemporary_wVars: output/input_symptoms_cases.csv
 
-  get_medicines_cases:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_cases
-    needs: [combine_matched_CASESstps]
-    outputs:
-      highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_medicines_cases.csv
+#  get_medicines_cases:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_cases
+#    needs: [combine_matched_CASESstps]
+#    outputs:
+#      highly_sensitive:
+#        matched_controls_contemporary_wVars: output/input_medicines_cases.csv
 
 
 
 # 8d. GET SYMPTOMS AND MEDICINES FOR CONTEMPORAY CONTROLS
-  get_symptoms_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_contemporary 
-    needs: [combine_matched_COMPARATORstps]
-    outputs:
-      highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_symptoms_controls_contemporary.csv
+#  get_symptoms_controls:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_contemporary 
+#    needs: [combine_matched_COMPARATORstps]
+#    outputs:
+#      highly_sensitive:
+#        matched_controls_contemporary_wVars: output/input_symptoms_controls_contemporary.csv
 
 
-  get_medicines_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_controls_contemporary 
-    needs: [combine_matched_COMPARATORstps]
-    outputs:
-      highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_medicines_controls_contemporary.csv
+# get_medicines_controls:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_controls_contemporary 
+#    needs: [combine_matched_COMPARATORstps]
+#    outputs:
+#      highly_sensitive:
+#        matched_controls_contemporary_wVars: output/input_medicines_controls_contemporary.csv
 
 
 # 8e. CHECK VARIABLES FOR CASES AND CONTEMPORARY CONTROLS (CURRENTLY CHECKING NEW SYMPTOM VARIABLES)
   # *** contemporary potential comparators for each stp
-  checkVars_inCasesAndCOntrolsAfterAddingFurtherVariables:
-    run: stata-mp:latest analysis/08e_checkVars_casesControls_after_adding_furtherVars.do
-    needs: [get_symptoms_cases, get_symptoms_controls]
-    outputs:
-      moderately_sensitive:
-        log: logs/08e_checkVars_casesControls_after_adding_furtherVars.log
+#  checkVars_inCasesAndCOntrolsAfterAddingFurtherVariables:
+#    run: stata-mp:latest analysis/08e_checkVars_casesControls_after_adding_furtherVars.do
+#    needs: [get_symptoms_cases, get_symptoms_controls]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/08e_checkVars_casesControls_after_adding_furtherVars.log
 
 
 # 8f. FROM LIST OF CASES MATCHED TO CONTEMPORARY CONTROLS (WITH ALL VARS ADDED), SELECT THOSE MATCHED TO HISTORICAL
 #THis is to avoid having to extract all of the information for the matched historical cases that will be very similar to matched contemp cases 
 #Looks like I don't need this file as all were matched, but I DO NEED to keep the match specific data from 
-  select_historical_matched_cases:
-    run: stata-mp:latest analysis/08f_getHistoricalMatchedCases.do 
-    needs: [combine_matched_historical_CASESstps, combine_matched_CASESstps]
-    outputs:
-      highly_sensitive:
-        historical_and_current_cases: output/input_historical_and_current_cases.dta
-        historical_cases_only: output/input_historical_cases_only.csv
-      moderately_sensitive: 
-        log: logs/08f_getHistoricalMatchedCases.log
+#  select_historical_matched_cases:
+#    run: stata-mp:latest analysis/08f_getHistoricalMatchedCases.do 
+#    needs: [combine_matched_historical_CASESstps, combine_matched_CASESstps]
+#   outputs:
+#      highly_sensitive:
+#        historical_and_current_cases: output/input_historical_and_current_cases.dta
+#        historical_cases_only: output/input_historical_cases_only.csv
+#      moderately_sensitive: 
+#        log: logs/08f_getHistoricalMatchedCases.log
       
   
 
 # 8g. ADD DIAGNOSES, REMAINING COVARIATES TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
-  add_allVars_historical_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_historical 
-    needs: [combine_matched_historical_COMPARATORstps]
-    outputs:
-      highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_complete_controls_historical.csv
+#  add_allVars_historical_controls:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_complete_controls_historical 
+#    needs: [combine_matched_historical_COMPARATORstps]
+#    outputs:
+#      highly_sensitive:
+#        matched_controls_contemporary_wVars: output/input_complete_controls_historical.csv
 
-  correct_historical_control_death_dates_wAllVars:
-    run: stata-mp:latest analysis/07_correct_death_dates_cr.do historical
-    needs: [add_allVars_historical_controls]
-    outputs:
-      highly_sensitive:
-        historicalcontrolcohort: output/input_complete_controls_historicalCorrectedDeathDate.csv
-      moderately_sensitive:
-        log: logs/07_set_correct_death_dates_historical_wAllVars.log
+#  correct_historical_control_death_dates_wAllVars:
+#    run: stata-mp:latest analysis/07_correct_death_dates_cr.do historical
+#    needs: [add_allVars_historical_controls]
+#    outputs:
+#      highly_sensitive:
+#        historicalcontrolcohort: output/input_complete_controls_historicalCorrectedDeathDate.csv
+#      moderately_sensitive:
+#       log: logs/07_set_correct_death_dates_historical_wAllVars.log
 
 
 # 8h. ADD SYMPTOMS, MEDICINES AND CONSULTATIONS TO *HISTORICAL* CONTROLS FOLLOWING MATCHING
-  get_symptoms_historical_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_historical 
-    needs: [combine_matched_historical_COMPARATORstps]
-    outputs:
-      highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_symptoms_controls_historical.csv
+#  get_symptoms_historical_controls:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_symptoms_controls_historical 
+#    needs: [combine_matched_historical_COMPARATORstps]
+#    outputs:
+#      highly_sensitive:
+#        matched_controls_contemporary_wVars: output/input_symptoms_controls_historical.csv
 
-  get_medicines_historical_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_controls_historical 
-    needs: [combine_matched_historical_COMPARATORstps]
-    outputs:
-      highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_medicines_controls_historical.csv
+#  get_medicines_historical_controls:
+#   run: cohortextractor:latest generate_cohort --study-definition study_definition_medicines_controls_historical 
+#    needs: [combine_matched_historical_COMPARATORstps]
+#    outputs:
+#      highly_sensitive:
+#        matched_controls_contemporary_wVars: output/input_medicines_controls_historical.csv
 
-  get_gpconsultations_historical_controls:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_gpconsultations_controls_historical 
-    needs: [combine_matched_historical_COMPARATORstps]
-    outputs:
-      highly_sensitive:
-        matched_controls_contemporary_wVars: output/input_gpconsultations_controls_historical.csv
+#  get_gpconsultations_historical_controls:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_gpconsultations_controls_historical 
+#    needs: [combine_matched_historical_COMPARATORstps]
+#    outputs:
+#      highly_sensitive:
+#        matched_controls_contemporary_wVars: output/input_gpconsultations_controls_historical.csv
 
 
 # 9. CREATE CONTEMPORARY ANALYSIS FILE (ALSO COMBINES CASES AND CONTROLS)
-  create_contemporary_analysis_file:
-    run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do contemporary
-    needs: [set_case_index_date, generate_potential_controls_contemporary, 
-    add_allVars_contemporary_controls, add_allVars_cases, combine_matched_CASESstps, combine_matched_COMPARATORstps, 
-    get_consultationCount_cases, get_consultationCount_controls, get_symptoms_cases, get_symptoms_controls, get_medicines_cases, get_medicines_controls]
-    outputs:
-      highly_sensitive:
-        # casesContemporary: output/cases_contemporary.dta 
-        # controlsContemporary: output/controls_contemporary.dta 
-        mainAnalysisFile: output/longCovidSymp_analysis_dataset_contemporary.dta
-        mainAnalysisFileCSV: output/longCovidSymp_analysis_dataset_contemporary.csv
-        unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_contemporary_analysis_dataset.dta
-      moderately_sensitive: 
-        log: logs/09_longCovidSymp_cr_contemporary_analysis_dataset.log
+#  create_contemporary_analysis_file:
+#    run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do contemporary
+#    needs: [set_case_index_date, generate_potential_controls_contemporary, 
+#    add_allVars_contemporary_controls, add_allVars_cases, combine_matched_CASESstps, combine_matched_COMPARATORstps, 
+#    get_consultationCount_cases, get_consultationCount_controls, get_symptoms_cases, get_symptoms_controls, get_medicines_cases, get_medicines_controls]
+#    outputs:
+#      highly_sensitive:
+#        # casesContemporary: output/cases_contemporary.dta 
+#       # controlsContemporary: output/controls_contemporary.dta 
+#        mainAnalysisFile: output/longCovidSymp_analysis_dataset_contemporary.dta
+#        mainAnalysisFileCSV: output/longCovidSymp_analysis_dataset_contemporary.csv
+#        unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_contemporary_analysis_dataset.dta
+#      moderately_sensitive: 
+#        log: logs/09_longCovidSymp_cr_contemporary_analysis_dataset.log
 
 
 # 9b. CREATE HISTORICAL ANALYSIS FILE (ALSO COMBINES CASES AND HISTORICAL CONTROLS)
-  create_historical_analysis_file:
-    run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do historical
-    needs: [set_case_index_date, generate_potential_controls_historical, 
-    add_allVars_historical_controls, add_allVars_cases, combine_matched_historical_CASESstps, combine_matched_historical_COMPARATORstps, 
-    get_consultationCount_cases, get_gpconsultations_historical_controls, get_symptoms_cases, get_symptoms_historical_controls, get_medicines_cases, 
-    get_medicines_historical_controls, correct_historical_control_death_dates_wAllVars]
-    outputs:
-      highly_sensitive:
-        # casesContemporary: output/cases_contemporary.dta 
-        # controlsContemporary: output/controls_contemporary.dta 
-        mainAnalysisFile: output/longCovidSymp_analysis_dataset_historical.dta
-        mainAnalysisFileCSV: output/longCovidSymp_analysis_dataset_historical.csv
-        unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_historical_analysis_dataset.dta
-      moderately_sensitive: 
-        log: logs/09_longCovidSymp_cr_historical_analysis_dataset.log
+#  create_historical_analysis_file:
+#    run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do historical
+#    needs: [set_case_index_date, generate_potential_controls_historical, 
+#    add_allVars_historical_controls, add_allVars_cases, combine_matched_historical_CASESstps, combine_matched_historical_COMPARATORstps, 
+#    get_consultationCount_cases, get_gpconsultations_historical_controls, get_symptoms_cases, get_symptoms_historical_controls, get_medicines_cases, 
+#    get_medicines_historical_controls, correct_historical_control_death_dates_wAllVars]
+#    outputs:
+#      highly_sensitive:
+#        # casesContemporary: output/cases_contemporary.dta 
+#        # controlsContemporary: output/controls_contemporary.dta 
+#        mainAnalysisFile: output/longCovidSymp_analysis_dataset_historical.dta
+#        mainAnalysisFileCSV: output/longCovidSymp_analysis_dataset_historical.csv
+#        unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_historical_analysis_dataset.dta
+#      moderately_sensitive: 
+#        log: logs/09_longCovidSymp_cr_historical_analysis_dataset.log
 
 
-  flowCheck_contemporary:
-    run: stata-mp:latest analysis/09b_FlowCheck.do contemporary
-    needs: [set_case_index_date, generate_potential_controls_contemporary, 
-    add_allVars_contemporary_controls, add_allVars_cases, combine_matched_CASESstps, combine_matched_COMPARATORstps, 
-    get_consultationCount_cases, get_consultationCount_controls, get_symptoms_cases, get_symptoms_controls, get_medicines_cases, get_medicines_controls,
-    create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/09b_FlowCheck_contemporary.log
+#  flowCheck_contemporary:
+#    run: stata-mp:latest analysis/09b_FlowCheck.do contemporary
+#    needs: [set_case_index_date, generate_potential_controls_contemporary, 
+#    add_allVars_contemporary_controls, add_allVars_cases, combine_matched_CASESstps, combine_matched_COMPARATORstps, 
+#    get_consultationCount_cases, get_consultationCount_controls, get_symptoms_cases, get_symptoms_controls, get_medicines_cases, get_medicines_controls,
+#    create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/09b_FlowCheck_contemporary.log
 
 
-  flowCheck_historical:
-    run: stata-mp:latest analysis/09b_FlowCheck.do historical
-    needs: [set_case_index_date, generate_potential_controls_historical, 
-    add_allVars_historical_controls, add_allVars_cases, combine_matched_historical_CASESstps, combine_matched_historical_COMPARATORstps, 
-    get_consultationCount_cases, get_gpconsultations_historical_controls, get_symptoms_cases, get_symptoms_historical_controls, get_medicines_cases, 
-    get_medicines_historical_controls, create_historical_analysis_file, correct_historical_control_death_dates]
-    outputs:
-      moderately_sensitive:
-        log: logs/09b_FlowCheck_historical.log
+#  flowCheck_historical:
+#    run: stata-mp:latest analysis/09b_FlowCheck.do historical
+#    needs: [set_case_index_date, generate_potential_controls_historical, 
+#    add_allVars_historical_controls, add_allVars_cases, combine_matched_historical_CASESstps, combine_matched_historical_COMPARATORstps, 
+#    get_consultationCount_cases, get_gpconsultations_historical_controls, get_symptoms_cases, get_symptoms_historical_controls, get_medicines_cases, 
+#    get_medicines_historical_controls, create_historical_analysis_file, correct_historical_control_death_dates]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/09b_FlowCheck_historical.log
 
 
 
@@ -1227,303 +1227,303 @@ actions:
 
 
 # 10. CHECK DATA FOR COMBINED CASE AND CONTROL FILE
-  data_checks_contemporary:
-    run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/10_longCovidSymp_data_checks_contemporary.log
+#  data_checks_contemporary:
+#    run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/10_longCovidSymp_data_checks_contemporary.log
 
 
-  data_checks_historical:
-    run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/10_longCovidSymp_data_checks_historical.log
+#  data_checks_historical:
+#    run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/10_longCovidSymp_data_checks_historical.log
 
 # 11. DESCRIPTIVE TABLE CONTEMPORARY
-  table_1_contemporary:
-    run: stata-mp:latest analysis/11_longCovidSymp_table1.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/11_longCovidSymp_table1contemporary.log
-        table1contemporary: output/table1_longCovidSymp_contemporary.txt
+#  table_1_contemporary:
+#    run: stata-mp:latest analysis/11_longCovidSymp_table1.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/11_longCovidSymp_table1contemporary.log
+#        table1contemporary: output/table1_longCovidSymp_contemporary.txt
 
 
 # 11b. DESCRIPTIVE TABLE HISTORICAL
-  table_1_historical:
-    run: stata-mp:latest analysis/11_longCovidSymp_table1.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/11_longCovidSymp_table1historical.log
-        table1historical: output/table1_longCovidSymp_historical.txt
+#  table_1_historical:
+#    run: stata-mp:latest analysis/11_longCovidSymp_table1.do historical
+#   needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/11_longCovidSymp_table1historical.log
+#        table1historical: output/table1_longCovidSymp_historical.txt
 
 
 # 12a. FIGURE 1A - SYMPTOMS AT ANY TIME (CONTEMPORARY - GOING TO RUN THIS NEXT WHEN ALL SYMPS ARE READY)
-  figure_1panelA_contemporary:
-    run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelA.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12a_longCovidSympAnyTime_figure1PanelAcontemporary.log
-        figure1Ahistorical: output/figure1PanelA_longCovidSympAnyTime_contemporary.txt
+#  figure_1panelA_contemporary:
+#    run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelA.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/12a_longCovidSympAnyTime_figure1PanelAcontemporary.log
+#        figure1Ahistorical: output/figure1PanelA_longCovidSympAnyTime_contemporary.txt
 
 
-  figure_1panelA_contemporaryCounts:
-    run: stata-mp:latest analysis/12aa_longCovidSympAnyTime_countsPerGroup.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12aa_longCovidSympAnyTime_countsPerGroupcontemporary.log
-        figure1Ahistorical: output/figure1PanelA_countsPerGroup_contemporary.txt
+#  figure_1panelA_contemporaryCounts:
+#    run: stata-mp:latest analysis/12aa_longCovidSympAnyTime_countsPerGroup.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/12aa_longCovidSympAnyTime_countsPerGroupcontemporary.log
+#        figure1Ahistorical: output/figure1PanelA_countsPerGroup_contemporary.txt
 
 
 # 12a. FIGURE 1A - SYMPTOMS AT ANY TIME (HISTORICAL - AS ABOVE)
-  figure_1panelA_historical:
-    run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelA.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12a_longCovidSympAnyTime_figure1PanelAhistorical.log
-        figure1Ahistorical: output/figure1PanelA_longCovidSympAnyTime_historical.txt
+#  figure_1panelA_historical:
+#    run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelA.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/12a_longCovidSympAnyTime_figure1PanelAhistorical.log
+#        figure1Ahistorical: output/figure1PanelA_longCovidSympAnyTime_historical.txt
 
 
-  figure_1panelA_historicalCounts:
-    run: stata-mp:latest analysis/12aa_longCovidSympAnyTime_countsPerGroup.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12aa_longCovidSympAnyTime_countsPerGrouphistorical.log
-        figure1Ahistorical: output/figure1PanelA_countsPerGroup_historical.txt
+#  figure_1panelA_historicalCounts:
+#    run: stata-mp:latest analysis/12aa_longCovidSympAnyTime_countsPerGroup.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/12aa_longCovidSympAnyTime_countsPerGrouphistorical.log
+#        figure1Ahistorical: output/figure1PanelA_countsPerGroup_historical.txt
 
 
 # 12b. FIGURE 1B - DIAGNOSES AT ANY TIME (CONTEMPORARY)
-  figure_1panelB_contemporary:
-    run: stata-mp:latest analysis/12b_longCovidDiagAnyTime_figure1PanelB.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12b_longCovidDiagAnyTime_figure1PanelBcontemporary.log
-        figure1Bcontemporary: output/figure1PanelB_longCovidDiagAnyTime_contemporary.txt
+#  figure_1panelB_contemporary:
+#    run: stata-mp:latest analysis/12b_longCovidDiagAnyTime_figure1PanelB.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/12b_longCovidDiagAnyTime_figure1PanelBcontemporary.log
+#        figure1Bcontemporary: output/figure1PanelB_longCovidDiagAnyTime_contemporary.txt
 
 
-  figure_1panelB_contemporaryCounts:
-    run: stata-mp:latest analysis/12bb_longCovidDiagAnyTime_countsPerGroup.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12bb_longCovidDiagAnyTime_countsPerGroupcontemporary.log
-        figure1Ahistorical: output/figure1PanelB_countsPerGroup_contemporary.txt
+#  figure_1panelB_contemporaryCounts:
+#    run: stata-mp:latest analysis/12bb_longCovidDiagAnyTime_countsPerGroup.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/12bb_longCovidDiagAnyTime_countsPerGroupcontemporary.log
+#        figure1Ahistorical: output/figure1PanelB_countsPerGroup_contemporary.txt
 
 
 # 12b. FIGURE 1B - DIAGNOSES AT ANY TIME (HISTORICAL)
-  figure_1panelB_historical:
-    run: stata-mp:latest analysis/12b_longCovidDiagAnyTime_figure1PanelB.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12b_longCovidDiagAnyTime_figure1PanelBhistorical.log
-        figure1Bhistorical: output/figure1PanelB_longCovidDiagAnyTime_historical.txt
+#  figure_1panelB_historical:
+#    run: stata-mp:latest analysis/12b_longCovidDiagAnyTime_figure1PanelB.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/12b_longCovidDiagAnyTime_figure1PanelBhistorical.log
+#        figure1Bhistorical: output/figure1PanelB_longCovidDiagAnyTime_historical.txt
 
 
-  figure_1panelB_historicalCounts:
-    run: stata-mp:latest analysis/12bb_longCovidDiagAnyTime_countsPerGroup.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12bb_longCovidDiagAnyTime_countsPerGrouphistorical.log
-        figure1Ahistorical: output/figure1PanelB_countsPerGroup_historical.txt
+#  figure_1panelB_historicalCounts:
+#    run: stata-mp:latest analysis/12bb_longCovidDiagAnyTime_countsPerGroup.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/12bb_longCovidDiagAnyTime_countsPerGrouphistorical.log
+#        figure1Ahistorical: output/figure1PanelB_countsPerGroup_historical.txt
 
 
 # 12c. FIGURE 1C - PRESCRIPTIONS AT ANY TIME (CONTEMPORARY)
-  figure_1panelC_contemporary:
-    run: stata-mp:latest analysis/12c_longCovidBNFAnyTime_figure1PanelC.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12c_longCovidPrescrAnyTime_figure1PanelCcontemporary.log
-        figure1Ccontemporary: output/figure1PanelC_longCovidPrescrAnyTime_contemporary.txt
+#  figure_1panelC_contemporary:
+#    run: stata-mp:latest analysis/12c_longCovidBNFAnyTime_figure1PanelC.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/12c_longCovidPrescrAnyTime_figure1PanelCcontemporary.log
+#        figure1Ccontemporary: output/figure1PanelC_longCovidPrescrAnyTime_contemporary.txt
 
 
-  figure_1panelC_contemporaryCounts:
-    run: stata-mp:latest analysis/12cc_longCovidBNFAnyTime_countsPerGroup.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12cc_longCovidBNFAnyTime_countsPerGroupcontemporary.log
-        figure1Ahistorical: output/figure1PanelC_countsPerGroup_contemporary.txt
+# figure_1panelC_contemporaryCounts:
+#    run: stata-mp:latest analysis/12cc_longCovidBNFAnyTime_countsPerGroup.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/12cc_longCovidBNFAnyTime_countsPerGroupcontemporary.log
+#        figure1Ahistorical: output/figure1PanelC_countsPerGroup_contemporary.txt
 
 
 # 12c. FIGURE 1C - PRESCRIPTIONS AT ANY TIME (HISTORICAL)
-  figure_1panelC_historical:
-    run: stata-mp:latest analysis/12c_longCovidBNFAnyTime_figure1PanelC.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12c_longCovidPrescrAnyTime_figure1PanelChistorical.log
-        figure1Chistorical: output/figure1PanelC_longCovidPrescrAnyTime_historical.txt
+# figure_1panelC_historical:
+#    run: stata-mp:latest analysis/12c_longCovidBNFAnyTime_figure1PanelC.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/12c_longCovidPrescrAnyTime_figure1PanelChistorical.log
+#        figure1Chistorical: output/figure1PanelC_longCovidPrescrAnyTime_historical.txt
 
 
-  figure_1panelC_historicalCounts:
-    run: stata-mp:latest analysis/12cc_longCovidBNFAnyTime_countsPerGroup.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/12cc_longCovidBNFAnyTime_countsPerGrouphistorical.log
-        figure1Ahistorical: output/figure1PanelC_countsPerGroup_historical.txt
+#  figure_1panelC_historicalCounts:
+#    run: stata-mp:latest analysis/12cc_longCovidBNFAnyTime_countsPerGroup.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/12cc_longCovidBNFAnyTime_countsPerGrouphistorical.log
+#        figure1Ahistorical: output/figure1PanelC_countsPerGroup_historical.txt
 
 
 # 13a. FIGURE 2A - SYMPTOMS OVER THREE TIME PERIODS (CONTEMPORARY - GOING TO RUN THIS NEXT WHEN ALL SYMPS ARE READY)
-  figure_2panelA_contemporary:
-    run: stata-mp:latest analysis/13a_longCovidSympTimePeriods_figure2PanelA.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13a_longCovidSympTimePeriods_figure2PanelAcontemporary.log
-        figure2Acontemporary: output/figure2PanelA_longCovidSympTimePeriods_contemporary.txt
+#  figure_2panelA_contemporary:
+#    run: stata-mp:latest analysis/13a_longCovidSympTimePeriods_figure2PanelA.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/13a_longCovidSympTimePeriods_figure2PanelAcontemporary.log
+#        figure2Acontemporary: output/figure2PanelA_longCovidSympTimePeriods_contemporary.txt
 
-  figure_2panelA_contemporaryCounts:
-    run: stata-mp:latest analysis/13aa_longCovidSympTimePeriods_countsPerGroup.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13aa_longCovidSympTimePeriods_countsPerGroupcontemporary.log
-        figure1Ahistorical: output/figure2PanelA_countsPerGroup_contemporary.txt
+#  figure_2panelA_contemporaryCounts:
+#    run: stata-mp:latest analysis/13aa_longCovidSympTimePeriods_countsPerGroup.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/13aa_longCovidSympTimePeriods_countsPerGroupcontemporary.log
+#       figure1Ahistorical: output/figure2PanelA_countsPerGroup_contemporary.txt
 
 
 # 13a. FIGURE 2A - SYMPTOMS OVER THREE TIME PERIODS (HISTORICAL - AS ABOVE)
-  figure_2panelA_historical:
-    run: stata-mp:latest analysis/13a_longCovidSympTimePeriods_figure2PanelA.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13a_longCovidSympTimePeriods_figure2PanelAhistorical.log
-        figure2Ahistorical: output/figure2PanelA_longCovidSympTimePeriods_historical.txt
+#  figure_2panelA_historical:
+#    run: stata-mp:latest analysis/13a_longCovidSympTimePeriods_figure2PanelA.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/13a_longCovidSympTimePeriods_figure2PanelAhistorical.log
+#        figure2Ahistorical: output/figure2PanelA_longCovidSympTimePeriods_historical.txt
 
-  figure_2panelA_historicalCounts:
-    run: stata-mp:latest analysis/13aa_longCovidSympTimePeriods_countsPerGroup.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13aa_longCovidSympTimePeriods_countsPerGrouphistorical.log
-        figure1Ahistorical: output/figure2PanelA_countsPerGroup_historical.txt
+#  figure_2panelA_historicalCounts:
+#   run: stata-mp:latest analysis/13aa_longCovidSympTimePeriods_countsPerGroup.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/13aa_longCovidSympTimePeriods_countsPerGrouphistorical.log
+#        figure1Ahistorical: output/figure2PanelA_countsPerGroup_historical.txt
 
 
 
 
 # 13b. FIGURE 2B - DIAGNOSES OVER THREE TIME PERIODS (CONTEMPORARY)
-  figure_2panelB_contemporary:
-    run: stata-mp:latest analysis/13b_longCovidDiagTimePeriods_figure2PanelB.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13b_longCovidDiagTimePeriods_figure2PanelBcontemporary.log
-        figure2Bcontemporary: output/figure2PanelB_longCovidDiagTimePeriods_contemporary.txt
+#  figure_2panelB_contemporary:
+#    run: stata-mp:latest analysis/13b_longCovidDiagTimePeriods_figure2PanelB.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/13b_longCovidDiagTimePeriods_figure2PanelBcontemporary.log
+#        figure2Bcontemporary: output/figure2PanelB_longCovidDiagTimePeriods_contemporary.txt
 
-  figure_2panelB_contemporaryCounts:
-    run: stata-mp:latest analysis/13bb_longCovidDiagTimePeriods_countsPerGroup.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13bb_longCovidDiagTimePeriods_countsPerGroupcontemporary.log
-        figure1Ahistorical: output/figure2PanelB_countsPerGroup_contemporary.txt
+#  figure_2panelB_contemporaryCounts:
+#    run: stata-mp:latest analysis/13bb_longCovidDiagTimePeriods_countsPerGroup.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/13bb_longCovidDiagTimePeriods_countsPerGroupcontemporary.log
+#        figure1Ahistorical: output/figure2PanelB_countsPerGroup_contemporary.txt
 
   # 13b. FIGURE 2B - DIAGNOSES OVER THREE TIME PERIODS (historical)
-  figure_2panelB_historical:
-    run: stata-mp:latest analysis/13b_longCovidDiagTimePeriods_figure2PanelB.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13b_longCovidDiagTimePeriods_figure2PanelBhistorical.log
-        figure12Bhistorical: output/figure2PanelB_longCovidDiagTimePeriods_historical.txt
+# figure_2panelB_historical:
+#    run: stata-mp:latest analysis/13b_longCovidDiagTimePeriods_figure2PanelB.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/13b_longCovidDiagTimePeriods_figure2PanelBhistorical.log
+#        figure12Bhistorical: output/figure2PanelB_longCovidDiagTimePeriods_historical.txt
 
 
-  figure_2panelB_historicalCounts:
-    run: stata-mp:latest analysis/13bb_longCovidDiagTimePeriods_countsPerGroup.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13bb_longCovidDiagTimePeriods_countsPerGrouphistorical.log
-        figure1Ahistorical: output/figure2PanelB_countsPerGroup_historical.txt
+#  figure_2panelB_historicalCounts:
+#    run: stata-mp:latest analysis/13bb_longCovidDiagTimePeriods_countsPerGroup.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/13bb_longCovidDiagTimePeriods_countsPerGrouphistorical.log
+#        figure1Ahistorical: output/figure2PanelB_countsPerGroup_historical.txt
 
 
   # 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (CONTEMPORARY)
-  figure_2panelC_contemporary:
-    run: stata-mp:latest analysis/13c_longCovidBNFTimePeriods_figure2PanelC.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13c_longCovidPrescrTimePeriods_figure2PanelCcontemporary.log
-        figure2Ccontemporary: output/figure2PanelC_longCovidPrescrTimePeriods_contemporary.txt
+#  figure_2panelC_contemporary:
+#    run: stata-mp:latest analysis/13c_longCovidBNFTimePeriods_figure2PanelC.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/13c_longCovidPrescrTimePeriods_figure2PanelCcontemporary.log
+#        figure2Ccontemporary: output/figure2PanelC_longCovidPrescrTimePeriods_contemporary.txt
 
-  figure_2panelC_contemporaryCounts:
-    run: stata-mp:latest analysis/13cc_longCovidBNFTimePeriods_countsPerGroup.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13cc_longCovidBNFTimePeriods_countsPerGroupcontemporary.log
-        figure1Ahistorical: output/figure2PanelC_countsPerGroup_contemporary.txt
-
-
-  # 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (historical)
-  figure_2panelC_historical:
-    run: stata-mp:latest analysis/13c_longCovidBNFTimePeriods_figure2PanelC.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13c_longCovidPrescrTimePeriods_figure2PanelChistorical.log
-        figure2Chistorical: output/figure2PanelC_longCovidPrescrTimePeriods_historical.txt
+#  figure_2panelC_contemporaryCounts:
+#    run: stata-mp:latest analysis/13cc_longCovidBNFTimePeriods_countsPerGroup.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/13cc_longCovidBNFTimePeriods_countsPerGroupcontemporary.log
+#        figure1Ahistorical: output/figure2PanelC_countsPerGroup_contemporary.txt
 
 
-  figure_2panelC_historicalCounts:
-    run: stata-mp:latest analysis/13cc_longCovidBNFTimePeriods_countsPerGroup.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/13cc_longCovidBNFTimePeriods_countsPerGrouphistorical.log
-        figure1Ahistorical: output/figure2PanelC_countsPerGroup_historical.txt
+ # 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (historical)
+#  figure_2panelC_historical:
+#    run: stata-mp:latest analysis/13c_longCovidBNFTimePeriods_figure2PanelC.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/13c_longCovidPrescrTimePeriods_figure2PanelChistorical.log
+#        figure2Chistorical: output/figure2PanelC_longCovidPrescrTimePeriods_historical.txt
+
+
+#  figure_2panelC_historicalCounts:
+#    run: stata-mp:latest analysis/13cc_longCovidBNFTimePeriods_countsPerGroup.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/13cc_longCovidBNFTimePeriods_countsPerGrouphistorical.log
+#        figure1Ahistorical: output/figure2PanelC_countsPerGroup_historical.txt
 
 
   # 14. FIGURE 3 - COMPARISON OF MEDIAN CONSULTATION RATE (CONTEMPORARY)
-  figure_3_contemporary:
-    run: stata-mp:latest analysis/14_longCovidConsultations_figure3.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/14_longCovidConsultationRate_figure3contemporary.log
-        figure3contemporary: output/figure3_longCovidConsultations_contemporary.txt
+#  figure_3_contemporary:
+#    run: stata-mp:latest analysis/14_longCovidConsultations_figure3.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/14_longCovidConsultationRate_figure3contemporary.log
+#        figure3contemporary: output/figure3_longCovidConsultations_contemporary.txt
 
 
   # 14. FIGURE 3 - COMPARISON OF MEDIAN CONSULTATION RATE (HISTORICAL)
-  figure_3_historical:
-    run: stata-mp:latest analysis/14_longCovidConsultations_figure3.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/14_longCovidConsultationRate_figure3historical.log
-        figure3historical: output/figure3_longCovidConsultations_historical.txt
+#  figure_3_historical:
+#    run: stata-mp:latest analysis/14_longCovidConsultations_figure3.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/14_longCovidConsultationRate_figure3historical.log
+#        figure3historical: output/figure3_longCovidConsultations_historical.txt
 
 
 
   # 15. FIGURE 4 - SYMPTOMS AT ANY TIME WITH INTERACTION WITH PREV GPCONS
-  figure_4_contemporary:
-    run: stata-mp:latest analysis/15_longCovidSympAnyTime_gpConsInteraction.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/15_longCovidSympAnyTime_gpConsInteractioncontemporary.log
-        figure1Ahistorical: output/Figure4_gpConsInteraction_contemporary.txt
+#  figure_4_contemporary:
+#    run: stata-mp:latest analysis/15_longCovidSympAnyTime_gpConsInteraction.do contemporary
+#    needs: [create_contemporary_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/15_longCovidSympAnyTime_gpConsInteractioncontemporary.log
+#      figure1Ahistorical: output/Figure4_gpConsInteraction_contemporary.txt
 
-  figure_4_historical:
-    run: stata-mp:latest analysis/15_longCovidSympAnyTime_gpConsInteraction.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/15_longCovidSympAnyTime_gpConsInteractionhistorical.log
-        figure1Ahistorical: output/Figure4_gpConsInteraction_historical.txt
+ # figure_4_historical:
+ #   run: stata-mp:latest analysis/15_longCovidSympAnyTime_gpConsInteraction.do historical
+ #  needs: [create_historical_analysis_file]
+ #   outputs:
+ #     moderately_sensitive:
+ #       log: logs/15_longCovidSympAnyTime_gpConsInteractionhistorical.log
+ #       figure1Ahistorical: output/Figure4_gpConsInteraction_historical.txt
 
 
   # 15. FIGURE 4 - SYMPTOMS AT ANY TIME WITH INTERACTION WITH PREV GPCONS - COUNTS
@@ -1537,63 +1537,63 @@ actions:
 
 
   # 15. FIGURE 4 - P-VALUES FOR INTERACTION FOR FIGURE 4
-  figure_4_p_values_contemporary:
-    run: stata-mp:latest analysis/15a_longCovidSympAnyTime_gpConsInteraction_pvalues.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/15a_longCovidSympAnyTime_gpConsInt_pvalscontemporary.log
+  #figure_4_p_values_contemporary:
+  #  run: stata-mp:latest analysis/15a_longCovidSympAnyTime_gpConsInteraction_pvalues.do contemporary
+  #  needs: [create_contemporary_analysis_file]
+  #  outputs:
+  #    moderately_sensitive:
+  #      log: logs/15a_longCovidSympAnyTime_gpConsInt_pvalscontemporary.log
 
-  figure_4_p_values_historical:
-    run: stata-mp:latest analysis/15a_longCovidSympAnyTime_gpConsInteraction_pvalues.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/15a_longCovidSympAnyTime_gpConsInt_pvalshistorical.log
+  #figure_4_p_values_historical:
+  #  run: stata-mp:latest analysis/15a_longCovidSympAnyTime_gpConsInteraction_pvalues.do historical
+  #  needs: [create_historical_analysis_file]
+  #  outputs:
+  #    moderately_sensitive:
+  #      log: logs/15a_longCovidSympAnyTime_gpConsInt_pvalshistorical.log
 
 
 
   # 16. FIGURE 5 - DIAGNOSES AT ANY TIME WITH INTERACTION WITH PREV GPCONS
-  figure_5_contemporary:
-    run: stata-mp:latest analysis/16_longCovidDiagAnyTime_gpConsInteraction.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/16_longCovidDiagAnyTime_gpConsInteractioncontemporary.log
-        figure1Ahistorical: output/Figure5_gpConsInteraction_contemporary.txt
+  #figure_5_contemporary:
+  #  run: stata-mp:latest analysis/16_longCovidDiagAnyTime_gpConsInteraction.do contemporary
+  #  needs: [create_contemporary_analysis_file]
+  #  outputs:
+  #    moderately_sensitive:
+  #      log: logs/16_longCovidDiagAnyTime_gpConsInteractioncontemporary.log
+  #      figure1Ahistorical: output/Figure5_gpConsInteraction_contemporary.txt
 
-  figure_5_historical:
-    run: stata-mp:latest analysis/16_longCovidDiagAnyTime_gpConsInteraction.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/16_longCovidDiagAnyTime_gpConsInteractionhistorical.log
-        figure1Ahistorical: output/Figure5_gpConsInteraction_historical.txt
+  #figure_5_historical:
+  #  run: stata-mp:latest analysis/16_longCovidDiagAnyTime_gpConsInteraction.do historical
+  #  needs: [create_historical_analysis_file]
+  #  outputs:
+  #    moderately_sensitive:
+  #      log: logs/16_longCovidDiagAnyTime_gpConsInteractionhistorical.log
+  #      figure1Ahistorical: output/Figure5_gpConsInteraction_historical.txt
 
    # 16. FIGURE 5 - COUNTS FOR PREV CONS FOR SYMP, DIAGNOSIS AND MEDICINES (INCL SENSITIVITY ANALYSIS)
-  figure_5Counts_contemporary:
-    run: stata-mp:latest analysis/16aa_longCovidDiagConsultationGroups_countsPerGroup.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/16aa_longCovidDiagConsultationGroups_countsPerGroupcontemporary.log
-        figure1Ahistorical: output/Figure5_gpConsInteractionCounts_contemporary.txt
+  #figure_5Counts_contemporary:
+  #  run: stata-mp:latest analysis/16aa_longCovidDiagConsultationGroups_countsPerGroup.do contemporary
+  #  needs: [create_contemporary_analysis_file]
+  #  outputs:
+  #    moderately_sensitive:
+  #      log: logs/16aa_longCovidDiagConsultationGroups_countsPerGroupcontemporary.log
+  #      figure1Ahistorical: output/Figure5_gpConsInteractionCounts_contemporary.txt
 
 
   # 16. FIGURE 5 - P-VALUES FOR INTERACTION FOR FIGURE 5
-  figure_5_p_values_contemporary:
-    run: stata-mp:latest analysis/16a_longCovidDiagAnyTime_gpConsInteraction_pvalues.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/16a_longCovidDiagAnyTime_gpConsInt_pvalscontemporary.log
+  #figure_5_p_values_contemporary:
+  #  run: stata-mp:latest analysis/16a_longCovidDiagAnyTime_gpConsInteraction_pvalues.do contemporary
+  #  needs: [create_contemporary_analysis_file]
+  #  outputs:
+  #    moderately_sensitive:
+  #      log: logs/16a_longCovidDiagAnyTime_gpConsInt_pvalscontemporary.log
 
-  figure_5_p_values_historical:
-    run: stata-mp:latest analysis/16a_longCovidDiagAnyTime_gpConsInteraction_pvalues.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/16a_longCovidDiagAnyTime_gpConsInt_pvalshistorical.log
+  #figure_5_p_values_historical:
+  #  run: stata-mp:latest analysis/16a_longCovidDiagAnyTime_gpConsInteraction_pvalues.do historical
+  #  needs: [create_historical_analysis_file]
+  #  outputs:
+  #    moderately_sensitive:
+  #      log: logs/16a_longCovidDiagAnyTime_gpConsInt_pvalshistorical.log
 
 
  
@@ -1601,21 +1601,21 @@ actions:
 
 
   # 17. FIGURE 6 - BNF AT ANY TIME WITH INTERACTION WITH PREV GPCONS
-  figure_6_contemporary:
-    run: stata-mp:latest analysis/17_longCovidBNFAnyTime_gpConsInteraction.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/17_longCovidBNFAnyTime_gpConsInteractioncontemporary.log
-        figure1Ahistorical: output/Figure6_gpConsInteraction_contemporary.txt
+  #figure_6_contemporary:
+  #  run: stata-mp:latest analysis/17_longCovidBNFAnyTime_gpConsInteraction.do contemporary
+  #  needs: [create_contemporary_analysis_file]
+  #  outputs:
+  #    moderately_sensitive:
+  #      log: logs/17_longCovidBNFAnyTime_gpConsInteractioncontemporary.log
+  #      figure1Ahistorical: output/Figure6_gpConsInteraction_contemporary.txt
 
-  figure_6_historical:
-    run: stata-mp:latest analysis/17_longCovidBNFAnyTime_gpConsInteraction.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/17_longCovidBNFAnyTime_gpConsInteractionhistorical.log
-        figure1Ahistorical: output/Figure6_gpConsInteraction_historical.txt
+  #figure_6_historical:
+  #  run: stata-mp:latest analysis/17_longCovidBNFAnyTime_gpConsInteraction.do historical
+  #  needs: [create_historical_analysis_file]
+  #  outputs:
+  #   moderately_sensitive:
+  #      log: logs/17_longCovidBNFAnyTime_gpConsInteractionhistorical.log
+  #      figure1Ahistorical: output/Figure6_gpConsInteraction_historical.txt
 
   #  17. FIGURE 6 - PRESCRIPTIONS AT ANY TIME WITH INTERACTION WITH PREV GPCONS - COUNTS
   # figure_6Counts_contemporary:
@@ -1627,35 +1627,35 @@ actions:
 
 
   # 17. FIGURE 6 - P-VALUES FOR INTERACTION FOR FIGURE 6
-  figure_6_p_values_contemporary:
-    run: stata-mp:latest analysis/17a_longCovidBNFAnyTime_gpConsInteraction_pvalues.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/17a_longCovidBNFAnyTime_gpConsInt_pvalscontemporary.log
+  #figure_6_p_values_contemporary:
+  #  run: stata-mp:latest analysis/17a_longCovidBNFAnyTime_gpConsInteraction_pvalues.do contemporary
+  #  needs: [create_contemporary_analysis_file]
+  #  outputs:
+  #    moderately_sensitive:
+  #      log: logs/17a_longCovidBNFAnyTime_gpConsInt_pvalscontemporary.log
 
-  figure_6_p_values_historical:
-    run: stata-mp:latest analysis/17a_longCovidBNFAnyTime_gpConsInteraction_pvalues.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/17a_longCovidBNFAnyTime_gpConsInt_pvalshistorical.log
+  #figure_6_p_values_historical:
+  #  run: stata-mp:latest analysis/17a_longCovidBNFAnyTime_gpConsInteraction_pvalues.do historical
+  #  needs: [create_historical_analysis_file]
+  #  outputs:
+  #    moderately_sensitive:
+   #     log: logs/17a_longCovidBNFAnyTime_gpConsInt_pvalshistorical.log
 
 
   # 18. TESTS FOR TREND FOR CONS INTERACTIONS "SENSITIVITY" AND DELIRIUM
-  additional_p_values_contemporary:
-    run: stata-mp:latest analysis/19_additional_pvalues.do contemporary
-    needs: [create_contemporary_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/19_additional_pvaluescontemporary.log
+  #additional_p_values_contemporary:
+  #  run: stata-mp:latest analysis/19_additional_pvalues.do contemporary
+  #  needs: [create_contemporary_analysis_file]
+  #  outputs:
+  #    moderately_sensitive:
+  #     log: logs/19_additional_pvaluescontemporary.log
 
-  additional_p_values_historical:
-    run: stata-mp:latest analysis/19_additional_pvalues.do historical
-    needs: [create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/19_additional_pvalueshistorical.log
+#  additional_p_values_historical:
+#    run: stata-mp:latest analysis/19_additional_pvalues.do historical
+#    needs: [create_historical_analysis_file]
+#    outputs:
+#      moderately_sensitive:
+#        log: logs/19_additional_pvalueshistorical.log
    
 
 
@@ -1677,16 +1677,6 @@ actions:
   #      figure1Ahistorical: output/Figure5_gpConsInteraction_historical.txt
 
 
-# 18. TABLES FOR SUNBURST
-  sunburstTables:
-    run: stata-mp:latest analysis/18_longCovidSympTimePeriods_sunburst.do
-    needs: [create_contemporary_analysis_file, create_historical_analysis_file]
-    outputs:
-      moderately_sensitive:
-        log: logs/18_longCovidSympTimePeriods_sunburst.log
-        sunburst2levelsCOVID: output/sunburst_COVID_2Periods.txt
-        sunburst2levelscontemporaryComparator: output/sunburst_contemporary_2Periods.txt
-        sunburst2levelshistoricalComparator: output/sunburst_historical_2Periods.txt
 
 
 
