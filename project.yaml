@@ -6,11 +6,11 @@ expectations:
 actions:
 
 ## 1. EXTRACT DATA FOR EXPOSED - **NOTE THIS IS FOR WAVE 2 ONLY**
-  generate_community_cases_cohort:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_covid_communitycases
-    outputs:
-      highly_sensitive:
-        cohort: output/input_covid_communitycases.csv
+#  generate_community_cases_cohort:
+#    run: cohortextractor:latest generate_cohort --study-definition study_definition_covid_communitycases
+#    outputs:
+#      highly_sensitive:
+#        cohort: output/input_covid_communitycases.csv
 
 # 1a. CHECK EXTRACTED CASE RAW DATA
 #  check_case_extract:
