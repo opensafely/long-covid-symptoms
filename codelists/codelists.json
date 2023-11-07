@@ -2,625 +2,625 @@
   "files": {
     "opensafely-ethnicity.csv": {
       "id": "opensafely/ethnicity/2020-04-27",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/ethnicity/2020-04-27/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/ethnicity/2020-04-27/",
       "downloaded_at": "2022-01-14 13:59:35.076182Z",
       "sha": "3d2f3998b71863a80b24d60f6f4282e14191ae13"
     },
     "opensafely-bells-palsy.csv": {
       "id": "opensafely/bells-palsy/2a1a03e9",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/bells-palsy/2a1a03e9/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/bells-palsy/2a1a03e9/",
       "downloaded_at": "2022-01-14 13:59:35.262753Z",
       "sha": "8800156231674dbeb85e50e341bd56e075985047"
     },
     "opensafely-bells-palsy-icd-10.csv": {
       "id": "opensafely/bells-palsy-icd-10/7d609d6a",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/bells-palsy-icd-10/7d609d6a/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/bells-palsy-icd-10/7d609d6a/",
       "downloaded_at": "2022-01-14 13:59:35.439831Z",
       "sha": "f1258b4e6c5acef097aaf028756c1208b4d49845"
     },
     "opensafely-transverse-myelitis.csv": {
       "id": "opensafely/transverse-myelitis/3f3497f2",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/transverse-myelitis/3f3497f2/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/transverse-myelitis/3f3497f2/",
       "downloaded_at": "2022-01-14 13:59:35.622261Z",
       "sha": "48a02d5fad8c2da5063c197577e64e20e795e011"
     },
     "opensafely-acute-transverse-myelitis-icd-10.csv": {
       "id": "opensafely/acute-transverse-myelitis-icd-10/323243cb",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/acute-transverse-myelitis-icd-10/323243cb/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/acute-transverse-myelitis-icd-10/323243cb/",
       "downloaded_at": "2022-01-14 13:59:35.782593Z",
       "sha": "5c5f1a185607e93d2c84a9259a2fa92775e9d4cc"
     },
     "opensafely-guillain-barre.csv": {
       "id": "opensafely/guillain-barre/7aaddd74",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/guillain-barre/7aaddd74/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/guillain-barre/7aaddd74/",
       "downloaded_at": "2022-01-14 13:59:35.965474Z",
       "sha": "b0ae8229051f38d5d3b76c9c7bf2621c2973bd34"
     },
     "opensafely-guillain-barre-syndrome-icd10.csv": {
       "id": "opensafely/guillain-barre-syndrome-icd10/4b41b700",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/guillain-barre-syndrome-icd10/4b41b700/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/guillain-barre-syndrome-icd10/4b41b700/",
       "downloaded_at": "2022-01-14 13:59:36.131681Z",
       "sha": "c5ba370a4a584a06172c98533db62622a9029af7"
     },
     "opensafely-diabetes.csv": {
       "id": "opensafely/diabetes/2020-04-15",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/diabetes/2020-04-15/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/diabetes/2020-04-15/",
       "downloaded_at": "2022-01-14 13:59:36.321729Z",
       "sha": "f2781f0c9a0617b30996d681a798eedd152a09af"
     },
     "opensafely-hiv.csv": {
       "id": "opensafely/hiv/2020-07-13",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/hiv/2020-07-13/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/hiv/2020-07-13/",
       "downloaded_at": "2022-01-14 13:59:36.480503Z",
       "sha": "c36a629c306e57081f702c3f30671364e452a3ee"
     },
     "opensafely-lung-cancer.csv": {
       "id": "opensafely/lung-cancer/2020-04-15",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/lung-cancer/2020-04-15/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/lung-cancer/2020-04-15/",
       "downloaded_at": "2022-01-14 13:59:36.643140Z",
       "sha": "645584a20f81c4d76187a2c305c904e8b8c63dbb"
     },
     "opensafely-cancer-excluding-lung-and-haematological.csv": {
       "id": "opensafely/cancer-excluding-lung-and-haematological/2020-04-15",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/cancer-excluding-lung-and-haematological/2020-04-15/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/cancer-excluding-lung-and-haematological/2020-04-15/",
       "downloaded_at": "2022-01-14 13:59:36.852263Z",
       "sha": "8fa1164b587028c4bd5903289e0948642d399e56"
     },
     "opensafely-haematological-cancer.csv": {
       "id": "opensafely/haematological-cancer/2020-04-15",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/haematological-cancer/2020-04-15/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/haematological-cancer/2020-04-15/",
       "downloaded_at": "2022-01-14 13:59:37.042146Z",
       "sha": "59d65c613a7b984ba46eca8a74eedcc6320609fe"
     },
     "opensafely-hypertension.csv": {
       "id": "opensafely/hypertension/2020-04-28",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/hypertension/2020-04-28/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/hypertension/2020-04-28/",
       "downloaded_at": "2022-01-14 13:59:37.403049Z",
       "sha": "b0d7bbf6ea767366db458bc6f6d37955ae331cc7"
     },
     "primis-covid19-vacc-uptake-preg.csv": {
       "id": "primis-covid19-vacc-uptake/preg/v1",
-      "url": "https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/preg/v1/",
+      "url": "https://www.opencodelists.org/codelist/primis-covid19-vacc-uptake/preg/v1/",
       "downloaded_at": "2022-01-14 13:59:37.653004Z",
       "sha": "16b9bdf6c37c9f5e802912a98542c5dd5d21183d"
     },
     "opensafely-multiple-sclerosis-v2.csv": {
       "id": "opensafely/multiple-sclerosis-v2/063627df",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/multiple-sclerosis-v2/063627df/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/multiple-sclerosis-v2/063627df/",
       "downloaded_at": "2022-01-14 13:59:37.852096Z",
       "sha": "e89c12f28e67e5c8dedd322f936a279cc837c564"
     },
     "opensafely-chronic-inflammatory-demyelinating-polyneuropathy-cidp.csv": {
       "id": "opensafely/chronic-inflammatory-demyelinating-polyneuropathy-cidp/38550e49",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/chronic-inflammatory-demyelinating-polyneuropathy-cidp/38550e49/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/chronic-inflammatory-demyelinating-polyneuropathy-cidp/38550e49/",
       "downloaded_at": "2022-01-14 13:59:38.030174Z",
       "sha": "0f1fad6834a47aa99f0f3d022f52eb8217d9bfba"
     },
     "opensafely-antiphospholipid-syndrome.csv": {
       "id": "opensafely/antiphospholipid-syndrome/3a8c6298",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/antiphospholipid-syndrome/3a8c6298/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/antiphospholipid-syndrome/3a8c6298/",
       "downloaded_at": "2022-01-31 09:55:18.473537Z",
       "sha": "5519b9437478f1d67ed7973eb0775d4811957068"
     },
     "opensafely-rheumatoid-arthritis.csv": {
       "id": "opensafely/rheumatoid-arthritis/68dc9931",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/rheumatoid-arthritis/68dc9931/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/rheumatoid-arthritis/68dc9931/",
       "downloaded_at": "2022-01-31 12:28:43.302422Z",
       "sha": "4042d1daebf9ab893093d0eeff6b62ad5927c86e"
     },
     "opensafely-systemic-lupus-erythematosus-sle.csv": {
       "id": "opensafely/systemic-lupus-erythematosus-sle/36bdb2c7",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/systemic-lupus-erythematosus-sle/36bdb2c7/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/systemic-lupus-erythematosus-sle/36bdb2c7/",
       "downloaded_at": "2022-01-31 12:28:43.475744Z",
       "sha": "a7354e610e9ccc2f22f8e8b9b1a7c329a971aa7c"
     },
     "opensafely-covid-identification-in-primary-care-probable-covid-clinical-code.csv": {
       "id": "opensafely/covid-identification-in-primary-care-probable-covid-clinical-code/2020-07-16",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/covid-identification-in-primary-care-probable-covid-clinical-code/2020-07-16/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/covid-identification-in-primary-care-probable-covid-clinical-code/2020-07-16/",
       "downloaded_at": "2022-05-24 06:41:50.911140Z",
       "sha": "5de38f993b166d6ef97c6ea822635317a6c7ae85"
     },
     "opensafely-covid-identification-in-primary-care-probable-covid-positive-test.csv": {
       "id": "opensafely/covid-identification-in-primary-care-probable-covid-positive-test/2020-07-16",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/covid-identification-in-primary-care-probable-covid-positive-test/2020-07-16/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/covid-identification-in-primary-care-probable-covid-positive-test/2020-07-16/",
       "downloaded_at": "2022-05-24 06:41:51.169492Z",
       "sha": "563b536aaf850da011233653e91e10030a5bc15f"
     },
     "opensafely-covid-identification-in-primary-care-probable-covid-sequelae.csv": {
       "id": "opensafely/covid-identification-in-primary-care-probable-covid-sequelae/2020-07-16",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/covid-identification-in-primary-care-probable-covid-sequelae/2020-07-16/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/covid-identification-in-primary-care-probable-covid-sequelae/2020-07-16/",
       "downloaded_at": "2022-05-24 06:41:51.433428Z",
       "sha": "38dc0c0a34e2b8b376ba72819923f442c30b4946"
     },
     "opensafely-covid-identification.csv": {
       "id": "opensafely/covid-identification/2020-06-03",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/covid-identification/2020-06-03/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/covid-identification/2020-06-03/",
       "downloaded_at": "2022-05-24 08:54:38.476606Z",
       "sha": "124db6929439379b7dacd55ba26ae4f2ed9370bc"
     },
     "user-kate-mansfield-central-nervous-system-finding-all-descendants.csv": {
       "id": "user/kate-mansfield/central-nervous-system-finding-all-descendants/10864777",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/central-nervous-system-finding-all-descendants/10864777/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/central-nervous-system-finding-all-descendants/10864777/",
       "downloaded_at": "2022-08-22 13:00:59.674216Z",
       "sha": "1c72f2c3628ea7d366bd0c5e971c8e6a9aa150ab"
     },
     "user-kate-mansfield-complication-of-pregnancy-childbirth-andor-the-puerperium-all-descendants.csv": {
       "id": "user/kate-mansfield/complication-of-pregnancy-childbirth-andor-the-puerperium-all-descendants/2995baac",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/complication-of-pregnancy-childbirth-andor-the-puerperium-all-descendants/2995baac/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/complication-of-pregnancy-childbirth-andor-the-puerperium-all-descendants/2995baac/",
       "downloaded_at": "2022-08-03 17:56:05.599046Z",
       "sha": "809dc7d6cb3895323e2d3a0e9666aaa932ec5f0c"
     },
     "user-kate-mansfield-congenital-disease-all-descendants.csv": {
       "id": "user/kate-mansfield/congenital-disease-all-descendants/667fa0ee",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/congenital-disease-all-descendants/667fa0ee/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/congenital-disease-all-descendants/667fa0ee/",
       "downloaded_at": "2022-08-22 13:01:01.369693Z",
       "sha": "d3c737e4d43f94cfd16db7b568b2224eaf40d269"
     },
     "user-kate-mansfield-disorder-of-auditory-system-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-auditory-system-all-descendants/5e67610c",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-auditory-system-all-descendants/5e67610c/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-auditory-system-all-descendants/5e67610c/",
       "downloaded_at": "2022-07-22 11:48:16.050890Z",
       "sha": "8486bd72286a1652389f5c2c82d7f637838388a6"
     },
     "user-kate-mansfield-disorder-of-cardiovascular-system-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-cardiovascular-system-all-descendants/4abd6dc3",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-cardiovascular-system-all-descendants/4abd6dc3/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-cardiovascular-system-all-descendants/4abd6dc3/",
       "downloaded_at": "2022-08-22 13:01:03.017799Z",
       "sha": "4efa6a43a35d23e7db5621ee6addd7acd45e5a6f"
     },
     "user-kate-mansfield-disorder-of-cellular-component-of-blood-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-cellular-component-of-blood-all-descendants/611a2102",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-cellular-component-of-blood-all-descendants/611a2102/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-cellular-component-of-blood-all-descendants/611a2102/",
       "downloaded_at": "2022-08-22 13:01:03.369262Z",
       "sha": "772f2aec6db0166faa7fc923978fdb5995f72c16"
     },
     "user-kate-mansfield-disorder-of-connective-tissue-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-connective-tissue-all-descendants/74c4144b",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-connective-tissue-all-descendants/74c4144b/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-connective-tissue-all-descendants/74c4144b/",
       "downloaded_at": "2022-08-22 13:01:04.088888Z",
       "sha": "58e596f3b021c4e3ea0c936b78830ca9d08365c5"
     },
     "user-kate-mansfield-disorder-of-digestive-system-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-digestive-system-all-descendants/189e8759",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-digestive-system-all-descendants/189e8759/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-digestive-system-all-descendants/189e8759/",
       "downloaded_at": "2022-08-22 13:01:05.236089Z",
       "sha": "ec1474aad763a0c6f4bc2dc33d8d082b93067365"
     },
     "user-kate-mansfield-disorder-of-endocrine-system-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-endocrine-system-all-descendants/4557edd7",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-endocrine-system-all-descendants/4557edd7/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-endocrine-system-all-descendants/4557edd7/",
       "downloaded_at": "2022-08-22 13:01:05.807369Z",
       "sha": "1d446c1b7dc3462d0337aeebe4e8cfc9f30bf240"
     },
     "user-kate-mansfield-disorder-of-fetus-or-newborn-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-fetus-or-newborn-all-descendants/480aadcd",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-fetus-or-newborn-all-descendants/480aadcd/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-fetus-or-newborn-all-descendants/480aadcd/",
       "downloaded_at": "2022-08-22 13:01:06.502592Z",
       "sha": "d56001950773c17a7b37e16f0a74afc87b846025"
     },
     "user-kate-mansfield-disorder-of-hematopoietic-structure-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-hematopoietic-structure-all-descendants/2efb3a98",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-hematopoietic-structure-all-descendants/2efb3a98/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-hematopoietic-structure-all-descendants/2efb3a98/",
       "downloaded_at": "2022-08-22 13:01:06.860341Z",
       "sha": "9e278ceba31a55ec762f7363ace33b1d9af05338"
     },
     "user-kate-mansfield-disorder-of-immune-function-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-immune-function-all-descendants/15ebc763",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-immune-function-all-descendants/15ebc763/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-immune-function-all-descendants/15ebc763/",
       "downloaded_at": "2022-08-22 13:01:07.392990Z",
       "sha": "eb8801d888aef86aa54678a6261120cd26b228ae"
     },
     "user-kate-mansfield-disorder-of-labor-delivery-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-labor-delivery-all-descendants/2c487aa2",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-labor-delivery-all-descendants/2c487aa2/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-labor-delivery-all-descendants/2c487aa2/",
       "downloaded_at": "2022-08-03 17:56:06.062942Z",
       "sha": "9b6fd7f8cc8734f9231bbe7a81f26992b77e36fc"
     },
     "user-kate-mansfield-disorder-of-musculoskeletal-system-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-musculoskeletal-system-all-descendants/693260e4",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-musculoskeletal-system-all-descendants/693260e4/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-musculoskeletal-system-all-descendants/693260e4/",
       "downloaded_at": "2022-08-22 13:01:09.399143Z",
       "sha": "357fe22ac0dd75babbd95492327ff8c3ce8fee26"
     },
     "user-kate-mansfield-disorder-of-nervous-system-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-nervous-system-all-descendants/5bb4a116",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-nervous-system-all-descendants/5bb4a116/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-nervous-system-all-descendants/5bb4a116/",
       "downloaded_at": "2022-08-22 13:01:11.541312Z",
       "sha": "1b219b56e9db07fa1c1b0932df477c763354bf45"
     },
     "user-kate-mansfield-disorder-of-puerperium-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-puerperium-all-descendants/1339076d",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-puerperium-all-descendants/1339076d/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-puerperium-all-descendants/1339076d/",
       "downloaded_at": "2022-08-03 17:56:05.818114Z",
       "sha": "1700d4be79d2976c98dee833e8ee8df6e5b7e37a"
     },
     "user-kate-mansfield-disorder-of-respiratory-system-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-respiratory-system-all-descendants/31adfa8e",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-respiratory-system-all-descendants/31adfa8e/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-respiratory-system-all-descendants/31adfa8e/",
       "downloaded_at": "2022-08-22 13:01:12.608449Z",
       "sha": "5e052c384a4d7abd4151f447e1ed4c6bf39e8ed5"
     },
     "user-kate-mansfield-disorder-of-skin-andor-subcutaneous-tissue-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-skin-andor-subcutaneous-tissue-all-descendants/0241d41a",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-skin-andor-subcutaneous-tissue-all-descendants/0241d41a/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-skin-andor-subcutaneous-tissue-all-descendants/0241d41a/",
       "downloaded_at": "2022-08-22 13:01:13.846785Z",
       "sha": "a82c4f632a8c3b36ab1dcefe437dc0e02e759edb"
     },
     "user-kate-mansfield-disorder-of-the-genitourinary-system-all-descendants.csv": {
       "id": "user/kate-mansfield/disorder-of-the-genitourinary-system-all-descendants/63cce0f8",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/disorder-of-the-genitourinary-system-all-descendants/63cce0f8/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/disorder-of-the-genitourinary-system-all-descendants/63cce0f8/",
       "downloaded_at": "2022-08-22 13:01:14.753004Z",
       "sha": "bf58d1dffdc1decf6c1794ab7e38f09243abc6f2"
     },
     "user-kate-mansfield-infectious-disease-all-descendants.csv": {
       "id": "user/kate-mansfield/infectious-disease-all-descendants/7a299437",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/infectious-disease-all-descendants/7a299437/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/infectious-disease-all-descendants/7a299437/",
       "downloaded_at": "2022-08-22 13:01:15.797773Z",
       "sha": "a416d742439b2d824313e8b0c482ad70d3106627"
     },
     "user-kate-mansfield-mental-disorder-all-descendants.csv": {
       "id": "user/kate-mansfield/mental-disorder-all-descendants/4d702db9",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/mental-disorder-all-descendants/4d702db9/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/mental-disorder-all-descendants/4d702db9/",
       "downloaded_at": "2022-08-22 13:01:16.367528Z",
       "sha": "7b43fdf0275847f7fd60441ce12cefde5743d70b"
     },
     "user-kate-mansfield-metabolic-disease-all-descendants.csv": {
       "id": "user/kate-mansfield/metabolic-disease-all-descendants/1b51474f",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/metabolic-disease-all-descendants/1b51474f/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/metabolic-disease-all-descendants/1b51474f/",
       "downloaded_at": "2022-08-22 13:01:17.076846Z",
       "sha": "952bd8e8292a978b48acd29dbdb8092de446fbb1"
     },
     "user-kate-mansfield-neoplastic-disease-all-descendants.csv": {
       "id": "user/kate-mansfield/neoplastic-disease-all-descendants/7f8f1423",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/neoplastic-disease-all-descendants/7f8f1423/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/neoplastic-disease-all-descendants/7f8f1423/",
       "downloaded_at": "2022-08-22 13:01:18.446482Z",
       "sha": "8db8034851e0cd12fb81f1d8c374f9d7981a6b32"
     },
     "user-kate-mansfield-nutritional-disorder-all-descendants.csv": {
       "id": "user/kate-mansfield/nutritional-disorder-all-descendants/7776d441",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/nutritional-disorder-all-descendants/7776d441/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/nutritional-disorder-all-descendants/7776d441/",
       "downloaded_at": "2022-08-22 13:01:18.690470Z",
       "sha": "b87952d099c4deac8ca103391b2b0bc9055c8c08"
     },
     "user-kate-mansfield-poisoning-all-descendants.csv": {
       "id": "user/kate-mansfield/poisoning-all-descendants/3460ba84",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/poisoning-all-descendants/3460ba84/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/poisoning-all-descendants/3460ba84/",
       "downloaded_at": "2022-08-22 13:01:19.350663Z",
       "sha": "4c27e33fe90db4e3eca74de10cbbbcd19bd59e1e"
     },
     "user-kate-mansfield-traumatic-andor-non-traumatic-injury-all-descendants.csv": {
       "id": "user/kate-mansfield/traumatic-andor-non-traumatic-injury-all-descendants/7cdc542d",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/traumatic-andor-non-traumatic-injury-all-descendants/7cdc542d/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/traumatic-andor-non-traumatic-injury-all-descendants/7cdc542d/",
       "downloaded_at": "2022-08-22 13:01:21.225283Z",
       "sha": "bc65b46e6d3630991935be99c2a6b52f1488fd62"
     },
     "user-kate-mansfield-visual-system-disorder-all-descendants.csv": {
       "id": "user/kate-mansfield/visual-system-disorder-all-descendants/42a52de1",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/visual-system-disorder-all-descendants/42a52de1/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/visual-system-disorder-all-descendants/42a52de1/",
       "downloaded_at": "2022-08-22 13:01:22.464184Z",
       "sha": "2b601916cacaa83467579ac2ed7fc423400b465a"
     },
     "opensafely-symptoms-breathlessness-new.csv": {
       "id": "opensafely/symptoms-breathlessness-new/5aee78ee",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-breathlessness-new/5aee78ee/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-breathlessness-new/5aee78ee/",
       "downloaded_at": "2022-12-24 17:46:21.796377Z",
       "sha": "dadb9221b8437453e930c1c0814fb805717a168a"
     },
     "opensafely-symptoms-cough.csv": {
       "id": "opensafely/symptoms-cough/72d8934b",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-cough/72d8934b/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-cough/72d8934b/",
       "downloaded_at": "2022-11-25 13:04:13.270221Z",
       "sha": "a01cd677e02b9958eaab59cc6aa02c949d375e04"
     },
     "opensafely-symptoms-chest-tightness.csv": {
       "id": "opensafely/symptoms-chest-tightness/40b9ace1",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-chest-tightness/40b9ace1/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-chest-tightness/40b9ace1/",
       "downloaded_at": "2022-11-25 13:04:13.512953Z",
       "sha": "75d4b41555d8ff127be6e616847664a6cce3899b"
     },
     "opensafely-symptoms-chest-pain-unexplained.csv": {
       "id": "opensafely/symptoms-chest-pain-unexplained/0d0d5f59",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-chest-pain-unexplained/0d0d5f59/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-chest-pain-unexplained/0d0d5f59/",
       "downloaded_at": "2023-02-08 11:31:53.491069Z",
       "sha": "742fd0e051d57600f165a15afc66d49b2457224a"
     },
     "opensafely-symptoms-palpitations.csv": {
       "id": "opensafely/symptoms-palpitations/27aa39ac",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-palpitations/27aa39ac/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-palpitations/27aa39ac/",
       "downloaded_at": "2022-11-25 13:04:13.949570Z",
       "sha": "89efa42fa550e59c2c5927d4de14f43575a8d023"
     },
     "opensafely-symptoms-fatigue.csv": {
       "id": "opensafely/symptoms-fatigue/0e9ac677",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-fatigue/0e9ac677/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-fatigue/0e9ac677/",
       "downloaded_at": "2022-11-25 13:04:16.382148Z",
       "sha": "7b53acb7e3adc3174114853d87a13ff2f65844c2"
     },
     "opensafely-symptoms-fever.csv": {
       "id": "opensafely/symptoms-fever/758b5341",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-fever/758b5341/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-fever/758b5341/",
       "downloaded_at": "2022-11-25 13:04:16.870093Z",
       "sha": "189b0d500e232993d0cdf89d65a5ab1b3fa4bd99"
     },
     "opensafely-symptoms-cognitive-impairment.csv": {
       "id": "opensafely/symptoms-cognitive-impairment/7af0d32d",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-cognitive-impairment/7af0d32d/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-cognitive-impairment/7af0d32d/",
       "downloaded_at": "2022-11-25 13:04:18.264094Z",
       "sha": "1fac3375ebc596e1ee2de2270f8d3b55090b4849"
     },
     "opensafely-symptoms-headache.csv": {
       "id": "opensafely/symptoms-headache/4930920c",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-headache/4930920c/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-headache/4930920c/",
       "downloaded_at": "2022-12-24 17:46:23.467021Z",
       "sha": "d8d35c1d0035124c154a0efb2818df6888f9b656"
     },
     "opensafely-symptoms-sleep-disturbance.csv": {
       "id": "opensafely/symptoms-sleep-disturbance/59c92016",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-sleep-disturbance/59c92016/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-sleep-disturbance/59c92016/",
       "downloaded_at": "2022-11-25 13:04:19.184770Z",
       "sha": "cdf977c0493e5d22a414773af7647c33d7024d15"
     },
     "opensafely-symptoms-peripheral-neuropathy.csv": {
       "id": "opensafely/symptoms-peripheral-neuropathy/09fbfa1a",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-peripheral-neuropathy/09fbfa1a/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-peripheral-neuropathy/09fbfa1a/",
       "downloaded_at": "2022-11-25 13:04:19.756120Z",
       "sha": "32d9b317091b10f2759448599376898a8ac587df"
     },
     "opensafely-symptoms-dizzy.csv": {
       "id": "opensafely/symptoms-dizzy/5c7be00c",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-dizzy/5c7be00c/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-dizzy/5c7be00c/",
       "downloaded_at": "2022-11-25 13:04:20.170929Z",
       "sha": "de13a43eaf6cb19abbc134fca13f08f776ceeb68"
     },
     "opensafely-symptoms-delirium.csv": {
       "id": "opensafely/symptoms-delirium/73fdec23",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-delirium/73fdec23/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-delirium/73fdec23/",
       "downloaded_at": "2022-12-24 17:46:24.397314Z",
       "sha": "e7690b0476c063d18989b7c794f1c99218154dea"
     },
     "opensafely-symptoms-mobility-impairment.csv": {
       "id": "opensafely/symptoms-mobility-impairment/62a81387",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-mobility-impairment/62a81387/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-mobility-impairment/62a81387/",
       "downloaded_at": "2022-11-25 13:04:20.606171Z",
       "sha": "9025c47838241f7e9c9fea3a6fc78b7d25fe7e68"
     },
     "opensafely-symptoms-visual-disturbance.csv": {
       "id": "opensafely/symptoms-visual-disturbance/1711aba2",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-visual-disturbance/1711aba2/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-visual-disturbance/1711aba2/",
       "downloaded_at": "2022-12-24 17:46:25.111713Z",
       "sha": "db49384bd9706741cea84679f193786d24388272"
     },
     "opensafely-symptoms-abdominal-pain.csv": {
       "id": "opensafely/symptoms-abdominal-pain/344e73f1",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-abdominal-pain/344e73f1/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-abdominal-pain/344e73f1/",
       "downloaded_at": "2023-02-08 11:31:57.265334Z",
       "sha": "38b7ee80c476cecd38a785bf2d5973ac3140b8e8"
     },
     "opensafely-symptoms-nausea-and-vomiting.csv": {
       "id": "opensafely/symptoms-nausea-and-vomiting/30211ed7",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-nausea-and-vomiting/30211ed7/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-nausea-and-vomiting/30211ed7/",
       "downloaded_at": "2022-12-24 17:46:25.426765Z",
       "sha": "9a3f2a00170c6c42abf220c188688ddf11eed042"
     },
     "opensafely-symptoms-diarrhoea.csv": {
       "id": "opensafely/symptoms-diarrhoea/7b4f7876",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-diarrhoea/7b4f7876/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-diarrhoea/7b4f7876/",
       "downloaded_at": "2022-12-24 17:46:25.629306Z",
       "sha": "803ea81e531b1404afbf85aaae3245321acf3d22"
     },
     "opensafely-symptoms-weight-loss-and-reduced-appetite.csv": {
       "id": "opensafely/symptoms-weight-loss-and-reduced-appetite/7e02386c",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-weight-loss-and-reduced-appetite/7e02386c/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-weight-loss-and-reduced-appetite/7e02386c/",
       "downloaded_at": "2022-12-24 17:46:25.886639Z",
       "sha": "207b4d1258062ce4eb453566de45bd8eb4e1cd84"
     },
     "opensafely-symptoms-pain.csv": {
       "id": "opensafely/symptoms-pain/71385a33",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-pain/71385a33/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-pain/71385a33/",
       "downloaded_at": "2023-02-08 11:31:58.663717Z",
       "sha": "f10644780459fc727569c6217778f122f7d4a0dc"
     },
     "opensafely-symptoms-depression.csv": {
       "id": "opensafely/symptoms-depression/0e294f34",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-depression/0e294f34/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-depression/0e294f34/",
       "downloaded_at": "2023-02-08 11:31:58.894192Z",
       "sha": "d0a4fe9f4ad57bd68c78cbb1ac05e5ae267e4245"
     },
     "opensafely-symptoms-anxiety.csv": {
       "id": "opensafely/symptoms-anxiety/7519dbfe",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-anxiety/7519dbfe/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-anxiety/7519dbfe/",
       "downloaded_at": "2023-02-08 11:31:59.156928Z",
       "sha": "64932eddd4aca319dd9614fb73a841ec24b998b0"
     },
     "opensafely-symptoms-ptsd.csv": {
       "id": "opensafely/symptoms-ptsd/64f2c537",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-ptsd/64f2c537/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-ptsd/64f2c537/",
       "downloaded_at": "2022-12-24 17:46:26.070008Z",
       "sha": "2645b0a6b31a4094ceaf8c1c82e3158fb921abbc"
     },
     "opensafely-symptoms-tinnitus.csv": {
       "id": "opensafely/symptoms-tinnitus/4be35202",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-tinnitus/4be35202/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-tinnitus/4be35202/",
       "downloaded_at": "2022-12-24 17:46:26.283405Z",
       "sha": "f88eeb2c28a751e7caad865ff0c92b5e2b89508d"
     },
     "opensafely-symptoms-earache.csv": {
       "id": "opensafely/symptoms-earache/32d3decd",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-earache/32d3decd/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-earache/32d3decd/",
       "downloaded_at": "2022-12-24 17:46:26.495506Z",
       "sha": "d76bd8040216c4b0ac15b147821b0726a2660c45"
     },
     "opensafely-symptoms-sore-throat.csv": {
       "id": "opensafely/symptoms-sore-throat/4e8ca8fb",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-sore-throat/4e8ca8fb/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-sore-throat/4e8ca8fb/",
       "downloaded_at": "2023-02-08 11:32:00.372328Z",
       "sha": "55cfa871ee5070c445d702708662cde2e16928cc"
     },
     "opensafely-symptoms-loss-of-taste-or-smell.csv": {
       "id": "opensafely/symptoms-loss-of-taste-or-smell/19c46b98",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-loss-of-taste-or-smell/19c46b98/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-loss-of-taste-or-smell/19c46b98/",
       "downloaded_at": "2022-12-24 17:46:26.704805Z",
       "sha": "3774b67736d2703635d1cf250359255af4028ec3"
     },
     "opensafely-symptoms-nasal-congestion.csv": {
       "id": "opensafely/symptoms-nasal-congestion/357d35c6",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-nasal-congestion/357d35c6/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-nasal-congestion/357d35c6/",
       "downloaded_at": "2023-02-08 11:32:00.802812Z",
       "sha": "c6c29b9812864f46b53bfaff5295480d8cbea042"
     },
     "opensafely-symptoms-rashes.csv": {
       "id": "opensafely/symptoms-rashes/6bd2da47",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-rashes/6bd2da47/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-rashes/6bd2da47/",
       "downloaded_at": "2023-02-08 11:32:01.066104Z",
       "sha": "b4f30abf8d6f7763f06a27d2aefa49a2d019c793"
     },
     "opensafely-symptoms-hair-loss.csv": {
       "id": "opensafely/symptoms-hair-loss/042e6be8",
-      "url": "https://codelists.opensafely.org/codelist/opensafely/symptoms-hair-loss/042e6be8/",
+      "url": "https://www.opencodelists.org/codelist/opensafely/symptoms-hair-loss/042e6be8/",
       "downloaded_at": "2022-12-24 17:46:26.936389Z",
       "sha": "32ab516e7d41fa30cb0bdc320937a78af033f059"
     },
     "user-kate-mansfield-bnf-1-gastro-intestinal-system-dmd.csv": {
       "id": "user/kate-mansfield/bnf-1-gastro-intestinal-system-dmd/157adb87",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-1-gastro-intestinal-system-dmd/157adb87/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-1-gastro-intestinal-system-dmd/157adb87/",
       "downloaded_at": "2023-11-07 11:13:18.932597Z",
       "sha": "139d81ceb18a2d60aff07fd4bcae7ba9703fff70"
     },
     "user-kate-mansfield-bnf-2-cardiovascular-system-dmd.csv": {
       "id": "user/kate-mansfield/bnf-2-cardiovascular-system-dmd/7c6b6851",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-2-cardiovascular-system-dmd/7c6b6851/",
-      "downloaded_at": "2023-11-07 11:13:19.548629Z",
-      "sha": "ec0c6918d2b47ece39ceda25bebf5ed5cffb4e7f"
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-2-cardiovascular-system-dmd/7c6b6851/",
+      "downloaded_at": "2023-11-07 12:41:36.791935Z",
+      "sha": "85ddbb84965ca131e3d8f57b740ebd55e31b42da"
     },
     "user-kate-mansfield-bnf-3-respiratory-system-dmd.csv": {
       "id": "user/kate-mansfield/bnf-3-respiratory-system-dmd/635bf51c",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-3-respiratory-system-dmd/635bf51c/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-3-respiratory-system-dmd/635bf51c/",
       "downloaded_at": "2023-11-07 11:13:19.998186Z",
       "sha": "052c01fdc58e1ad00da4d4e2c78e394a5962cfc1"
     },
     "user-kate-mansfield-bnf-4-central-nervous-system-dmd.csv": {
       "id": "user/kate-mansfield/bnf-4-central-nervous-system-dmd/4a4c81e7",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-4-central-nervous-system-dmd/4a4c81e7/",
-      "downloaded_at": "2023-11-07 11:13:20.880597Z",
-      "sha": "96790b0ef1ca882745c86b4eebef1264dc4a5210"
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-4-central-nervous-system-dmd/4a4c81e7/",
+      "downloaded_at": "2023-11-07 12:41:37.846785Z",
+      "sha": "9d7f7597c60a3d7cda92ecf762e77afef4a29c1d"
     },
     "user-kate-mansfield-bnf-5-infections-dmd.csv": {
       "id": "user/kate-mansfield/bnf-5-infections-dmd/313d0eb2",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-5-infections-dmd/313d0eb2/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-5-infections-dmd/313d0eb2/",
       "downloaded_at": "2023-11-07 11:13:21.429856Z",
       "sha": "7ca9239535b78a3fc50dfe760f25ac63fcfaaa87"
     },
     "user-kate-mansfield-bnf-6-endocrine-system-dmd.csv": {
       "id": "user/kate-mansfield/bnf-6-endocrine-system-dmd/182d9b7d",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-6-endocrine-system-dmd/182d9b7d/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-6-endocrine-system-dmd/182d9b7d/",
       "downloaded_at": "2023-11-07 11:13:21.946090Z",
       "sha": "cf555a4fd2958698faf1023d97884c506280ec0b"
     },
     "user-kate-mansfield-bnf-7-obstetrics-gynaecology-and-urinary-tract-disorders-dmd.csv": {
       "id": "user/kate-mansfield/bnf-7-obstetrics-gynaecology-and-urinary-tract-disorders-dmd/7f1e2847",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-7-obstetrics-gynaecology-and-urinary-tract-disorders-dmd/7f1e2847/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-7-obstetrics-gynaecology-and-urinary-tract-disorders-dmd/7f1e2847/",
       "downloaded_at": "2023-11-07 11:13:22.212311Z",
       "sha": "834b9998f02c66cebde7310616924d195932f443"
     },
     "user-kate-mansfield-bnf-8-malignant-disease-and-immunosuppression-dmd.csv": {
       "id": "user/kate-mansfield/bnf-8-malignant-disease-and-immunosuppression-dmd/660eb512",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-8-malignant-disease-and-immunosuppression-dmd/660eb512/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-8-malignant-disease-and-immunosuppression-dmd/660eb512/",
       "downloaded_at": "2023-11-07 11:13:22.611941Z",
       "sha": "0eb22f6ebfd7a67e92a53502ddbcbdf3fdebfe08"
     },
     "user-kate-mansfield-bnf-9-nutrition-and-blood-dmd.csv": {
       "id": "user/kate-mansfield/bnf-9-nutrition-and-blood-dmd/4cff41dd",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-9-nutrition-and-blood-dmd/4cff41dd/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-9-nutrition-and-blood-dmd/4cff41dd/",
       "downloaded_at": "2023-11-07 11:13:23.144694Z",
       "sha": "54f3a43be243c1a7860a058e3a8c5e783a8e0212"
     },
     "user-kate-mansfield-bnf-10-musculoskeletal-and-joint-diseases-dmd.csv": {
       "id": "user/kate-mansfield/bnf-10-musculoskeletal-and-joint-diseases-dmd/33efcea8",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-10-musculoskeletal-and-joint-diseases-dmd/33efcea8/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-10-musculoskeletal-and-joint-diseases-dmd/33efcea8/",
       "downloaded_at": "2023-11-07 11:13:23.527540Z",
       "sha": "431c1bc959dcb56fe48470d76b56049a02a280d2"
     },
     "user-kate-mansfield-bnf-11-eye-dmd.csv": {
       "id": "user/kate-mansfield/bnf-11-eye-dmd/1ae05b73",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-11-eye-dmd/1ae05b73/",
-      "downloaded_at": "2023-11-07 11:13:23.877352Z",
-      "sha": "f63e38c6e20d697504ce3c642125d4746d7448fd"
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-11-eye-dmd/1ae05b73/",
+      "downloaded_at": "2023-11-07 12:41:40.486589Z",
+      "sha": "f1e908c55484865614e6242183b26f4abb57357e"
     },
     "user-kate-mansfield-bnf-12-ear-nose-and-oropharynx-dmd.csv": {
       "id": "user/kate-mansfield/bnf-12-ear-nose-and-oropharynx-dmd/01d0e83e",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-12-ear-nose-and-oropharynx-dmd/01d0e83e/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-12-ear-nose-and-oropharynx-dmd/01d0e83e/",
       "downloaded_at": "2023-11-07 11:13:24.659757Z",
       "sha": "07f7e0dd3e5feddd7c323fb5c00fbb5c72ef0d72"
     },
     "user-kate-mansfield-bnf-13-skin-dmd.csv": {
       "id": "user/kate-mansfield/bnf-13-skin-dmd/68c17508",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-13-skin-dmd/68c17508/",
-      "downloaded_at": "2023-11-07 11:13:26.091652Z",
-      "sha": "305a7c063e3307c7aeef8239a7d4c45508f48e52"
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-13-skin-dmd/68c17508/",
+      "downloaded_at": "2023-11-07 12:41:41.086165Z",
+      "sha": "68f26f0fac5af58b171fd57a0d249e364612a259"
     },
     "user-kate-mansfield-bnf-subcat-0301-bronchodilators-dmd.csv": {
       "id": "user/kate-mansfield/bnf-subcat-0301-bronchodilators-dmd/4fb201d3",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-subcat-0301-bronchodilators-dmd/4fb201d3/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-subcat-0301-bronchodilators-dmd/4fb201d3/",
       "downloaded_at": "2023-11-07 11:13:26.407753Z",
       "sha": "78e9395aceed281b526fb8e3a1c1a9073dbfa327"
     },
     "user-kate-mansfield-bnf-subcat-0309-cough-preparations-dmd.csv": {
       "id": "user/kate-mansfield/bnf-subcat-0309-cough-preparations-dmd/36a28e9e",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-subcat-0309-cough-preparations-dmd/36a28e9e/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-subcat-0309-cough-preparations-dmd/36a28e9e/",
       "downloaded_at": "2023-11-07 11:13:26.724126Z",
       "sha": "ecdfe9acaa0a43c7b7e0c72e75ca4f23d76323bb"
     },
     "user-kate-mansfield-bnf-subcat-0203-anti-arrhythmic-drugs-dmd.csv": {
       "id": "user/kate-mansfield/bnf-subcat-0203-anti-arrhythmic-drugs-dmd/1d931b69",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-subcat-0203-anti-arrhythmic-drugs-dmd/1d931b69/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-subcat-0203-anti-arrhythmic-drugs-dmd/1d931b69/",
       "downloaded_at": "2023-11-07 11:13:27.007199Z",
       "sha": "a8441a7816c75972205bcc4949eb120cd26f88b2"
     },
     "user-kate-mansfield-bnf-subcat-0407-analgesics-dmd.csv": {
       "id": "user/kate-mansfield/bnf-subcat-0407-analgesics-dmd/0483a834",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-subcat-0407-analgesics-dmd/0483a834/",
-      "downloaded_at": "2023-11-07 11:13:27.489976Z",
-      "sha": "4831f0e53b41c10b9389bcea1bb499e76b61a858"
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-subcat-0407-analgesics-dmd/0483a834/",
+      "downloaded_at": "2023-11-07 12:41:42.057879Z",
+      "sha": "41da38863f47d0a33c05b5d3947ce4af0331595c"
     },
     "user-kate-mansfield-bnf-subcat-040101-hypnotics-dmd.csv": {
       "id": "user/kate-mansfield/bnf-subcat-040101-hypnotics-dmd/6b7434fe",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-subcat-040101-hypnotics-dmd/6b7434fe/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-subcat-040101-hypnotics-dmd/6b7434fe/",
       "downloaded_at": "2023-11-07 11:13:27.773150Z",
       "sha": "aeb44d042687351788be13a88da6eb5b85b25d9e"
     },
     "user-kate-mansfield-bnf-subcat-0406-drugs-used-in-nausea-and-vertigo-dmd.csv": {
       "id": "user/kate-mansfield/bnf-subcat-0406-drugs-used-in-nausea-and-vertigo-dmd/5264c1c9",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-subcat-0406-drugs-used-in-nausea-and-vertigo-dmd/5264c1c9/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-subcat-0406-drugs-used-in-nausea-and-vertigo-dmd/5264c1c9/",
       "downloaded_at": "2023-11-07 11:13:28.036700Z",
       "sha": "cce6937385e347b3e404e57f35b1221aa1f3840b"
     },
     "user-kate-mansfield-bnf-subcat-0104-acute-diarrhoea-dmd.csv": {
       "id": "user/kate-mansfield/bnf-subcat-0104-acute-diarrhoea-dmd/39554e94",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-subcat-0104-acute-diarrhoea-dmd/39554e94/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-subcat-0104-acute-diarrhoea-dmd/39554e94/",
       "downloaded_at": "2023-11-07 11:13:28.305719Z",
       "sha": "3b5fb6a056d563e01f428cdda5c5af237071d0b2"
     },
     "user-kate-mansfield-bnf-subcat-100101-non-steroidal-anti-inflammatory-drugs-dmd.csv": {
       "id": "user/kate-mansfield/bnf-subcat-100101-non-steroidal-anti-inflammatory-drugs-dmd/2045db5f",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-subcat-100101-non-steroidal-anti-inflammatory-drugs-dmd/2045db5f/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-subcat-100101-non-steroidal-anti-inflammatory-drugs-dmd/2045db5f/",
       "downloaded_at": "2023-11-07 11:13:28.605480Z",
       "sha": "1c94ef3128a3485f771f1c0e00f7df1941280ade"
     },
     "user-kate-mansfield-bnf-subcat-100302-rubefacients-topical-nsaids-capsaicin-and-poultices-dmd.csv": {
       "id": "user/kate-mansfield/bnf-subcat-100302-rubefacients-topical-nsaids-capsaicin-and-poultices-dmd/0736682a",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-subcat-100302-rubefacients-topical-nsaids-capsaicin-and-poultices-dmd/0736682a/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-subcat-100302-rubefacients-topical-nsaids-capsaicin-and-poultices-dmd/0736682a/",
       "downloaded_at": "2023-11-07 11:13:28.838658Z",
       "sha": "0e50967c37a64783b948d42fe9c5783266154558"
     },
     "user-kate-mansfield-bnf-subcat-0403-antidepressant-drugs-dmd.csv": {
       "id": "user/kate-mansfield/bnf-subcat-0403-antidepressant-drugs-dmd/6e26f4f4",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-subcat-0403-antidepressant-drugs-dmd/6e26f4f4/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-subcat-0403-antidepressant-drugs-dmd/6e26f4f4/",
       "downloaded_at": "2023-11-07 11:13:29.121627Z",
       "sha": "93a80e66bb18b0f8432f00959d1cf2f82e3e834e"
     },
     "user-kate-mansfield-bnf-subcat-040102-anxiolytics-dmd.csv": {
       "id": "user/kate-mansfield/bnf-subcat-040102-anxiolytics-dmd/551781bf",
-      "url": "https://codelists.opensafely.org/codelist/user/kate-mansfield/bnf-subcat-040102-anxiolytics-dmd/551781bf/",
+      "url": "https://www.opencodelists.org/codelist/user/kate-mansfield/bnf-subcat-040102-anxiolytics-dmd/551781bf/",
       "downloaded_at": "2023-11-07 11:13:29.404604Z",
       "sha": "92e051a52bb355a5e0e021929c72b54b4d5d3138"
     }
