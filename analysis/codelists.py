@@ -393,145 +393,145 @@ hairloss_symptom_codes = codelist_from_csv(
 gastro_broad_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-1-gastro-intestinal-system-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 cardio_broad_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-2-cardiovascular-system-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 respiratory_broad_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-3-respiratory-system-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 cns_broad_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-4-central-nervous-system-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 infections_broad_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-5-infections-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 endocrine_broad_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-6-endocrine-system-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 obstetrics_broad_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-7-obstetrics-gynaecology-and-urinary-tract-disorders-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 malignancies_broad_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-8-malignant-disease-and-immunosuppression-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 nutrition_blood_broad_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-9-nutrition-and-blood-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 musculo_broad_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-10-musculoskeletal-and-joint-diseases-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 eye_broad_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-11-eye-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 ear_broad_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-12-ear-nose-and-oropharynx-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 skin_broad_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-13-skin-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 bronchodil_spec_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-subcat-0301-bronchodilators-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 cough_spec_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-subcat-0309-cough-preparations-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 antiarrhth_spec_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-subcat-0203-anti-arrhythmic-drugs-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 analgesics_spec_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-subcat-0407-analgesics-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 hypnotics_spec_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-subcat-040101-hypnotics-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 nausea_spec_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-subcat-0406-drugs-used-in-nausea-and-vertigo-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 diarrhoea_spec_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-subcat-0104-acute-diarrhoea-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 nsaids_spec_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-subcat-100101-non-steroidal-anti-inflammatory-drugs-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 topicalpain_spec_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-subcat-100302-rubefacients-topical-nsaids-capsaicin-and-poultices-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 antidepr_spec_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-subcat-0403-antidepressant-drugs-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 anxiolytic_spec_bnf_codes = codelist_from_csv(
     "codelists/user-kate-mansfield-bnf-subcat-040102-anxiolytics-dmd.csv",
     system="snomed",
-    column="dmd_id",
+    column="code",
 )
 
 
