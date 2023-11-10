@@ -68,7 +68,7 @@ export delimited using "./output/input_covid_communitycases_correctedCaseIndex.c
 
 
 *(2)=========Create separate stps for comparators============
-import delimited ./output/input_controls_contemporary.csv, clear
+import delimited ./output/input_controls_contemporaryCorrectedDeathDate.csv, clear
 *tabulate before changes
 tab stp
 *call program
@@ -76,13 +76,13 @@ replaceSTPs
 *tabulate after changes
 tab stp
 *export output
-export delimited using "./output/input_controls_contemporary.csv", replace
+export delimited using "./output/input_controls_contemporaryCorrectedDeathDate.csv", replace
 
 
 
 
 *(3)=========Create separate stps for historical comparators============
-import delimited ./output/input_controls_historical.csv, clear
+import delimited ./output/input_controls_historicalCorrectedDeathDate.csv, clear
 *tabulate before changes
 tab stp
 *call program
@@ -90,10 +90,10 @@ replaceSTPs
 *tabulate after changes
 tab stp
 *export output
-export delimited using "./output/input_controls_historical.csv", replace
+export delimited using "./output/input_controls_historicalCorrectedDeathDate.csv", replace
 
 
-
+/*
 *(4)=========Create separate stps for 2019 comparators============
 import delimited ./output/input_controls_2019.csv, clear
 *tabulate before changes
@@ -104,7 +104,7 @@ replaceSTPs
 tab stp
 *export output
 export delimited using "./output/input_controls_2019.csv", replace
-
+*/
 
 log close
 

@@ -74,7 +74,7 @@ safecount
 *case
 /*for cases the variables I want are: age, case, covid_hosp, covid_tpp_prob, covid_tpp_probw4, death_date, dereg_date, first_known_covid19, first_pos_test, first_pos_testw4, had_covid_hosp, has_died, has_follow_up, imd, match_counts, pos_covid_test_ever, set_id, sex, stp*/
 capture noisily import delimited ./output/input_covid_matched_cases_`dataset'_allSTPs_omicron.csv, clear
-keep patient_id age case covid_hosp covid_tpp_prob covid_tpp_probw4 death_date dereg_date first_known_covid19 first_pos_test first_pos_testw4 had_covid_hosp has_died has_follow_up imd match_counts pos_covid_test_ever  set_id sex stp
+keep patient_id age case covid_hosp covid_tpp_prob covid_tpp_probw4 death_date dereg_date first_known_covid19 first_pos_test first_pos_testw4 had_covid_hosp has_died has_follow_up imd match_counts pos_covid_test_ever set_id sex stp
 tempfile cases_match_info_omicron
 *for dummy data, should do nothing in the real data
 duplicates drop patient_id, force

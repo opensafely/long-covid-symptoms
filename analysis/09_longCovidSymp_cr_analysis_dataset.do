@@ -682,10 +682,22 @@ safetab sex
 safecount
 drop sexOrig
 
+/*for reference
+if "`1'"=="historical" {
+}
+else if "`1'"=="contemporary" {
+}
+*/
+
 
 *(h)Flag comparators who have a known covid date that is within the follow up period
 generate compBecameCaseEver=0 if case==0
-replace compBecameCaseEver=1 if first_known_covid19>(case_index_date) & first_known_covid19<=(case_index_date + 365) & case==0
+if "`1'"=="historical" {
+	replace compBecameCaseEver=1 if first_known_covid19>(case_index_date) & first_known_covid19<=(date("31jan2019","DMY")) & case==0
+}
+else if "`1'"=="contemporary" {
+	replace compBecameCaseEver=1 if first_known_covid19>(case_index_date) & first_known_covid19<=(date("31jan2022","DMY")) & case==0
+}
 la var compBecameCaseEver "comparator who had COVID anytime during follow-up"
 generate compBecameCaseDurFUP1=0 if case==0
 replace compBecameCaseDurFUP1=1 if first_known_covid19>(case_index_date) & first_known_covid19<=(case_index_date + 85) & case==0
@@ -694,7 +706,12 @@ generate compBecameCaseDurFUP2=0 if case==0
 replace compBecameCaseDurFUP2=1 if first_known_covid19>(case_index_date + 85) & first_known_covid19<=(case_index_date + 180) & case==0
 la var compBecameCaseDurFUP2 "comparator who had COVID during FUP period 2"
 generate compBecameCaseDurFUP3=0 if case==0
-replace  compBecameCaseDurFUP3=1 if first_known_covid19>(case_index_date + 180) & first_known_covid19<=(case_index_date + 365) & case==0 & first_known_covid19!=.
+if "`1'"=="historical" {
+		replace  compBecameCaseDurFUP3=1 if first_known_covid19>(case_index_date + 180) & first_known_covid19<=(date("31jan2019","DMY")) & case==0 & first_known_covid19!=.
+}
+else if "`1'"=="contemporary" {
+		replace  compBecameCaseDurFUP3=1 if first_known_covid19>(case_index_date + 180) & first_known_covid19<=(date("31jan2022","DMY")) & case==0 & first_known_covid19!=.
+}
 la var compBecameCaseDurFUP3 "comparator who had COVID during FUP period 3"
 
 
@@ -709,7 +726,12 @@ generate caseHospForCOVIDDurFUP2=0 if case==1
 replace caseHospForCOVIDDurFUP2=1 if covid_hosp>(case_index_date + 85) & covid_hosp<=(case_index_date + 180) & case==1
 la var caseHospForCOVIDDurFUP2 "case who was hospitalised for COVID during FUP period 2"
 generate caseHospForCOVIDDurFUP3=0 if case==1
-replace caseHospForCOVIDDurFUP3=1 if covid_hosp>(case_index_date + 180) & covid_hosp<=(case_index_date + 365) & case==1
+if "`1'"=="historical" {
+	replace caseHospForCOVIDDurFUP3=1 if covid_hosp>(case_index_date + 180) & covid_hosp<=(date("31jan2019","DMY")) & case==1
+}
+else if "`1'"=="contemporary" {
+	replace caseHospForCOVIDDurFUP3=1 if covid_hosp>(case_index_date + 180) & covid_hosp<=(date("31jan2022","DMY")) & case==1
+}
 la var caseHospForCOVIDDurFUP3 "case who was hospitalised for COVID during FUP period 3"
 
 
@@ -724,7 +746,12 @@ generate diedDuringFUP2=0
 replace diedDuringFUP2=1 if death_date>(case_index_date + 85) & death_date<=(case_index_date + 180)
 la var diedDuringFUP2 "died during FUP period 2"
 generate diedDuringFUP3=0
-replace diedDuringFUP3=1 if death_date>(case_index_date + 180) & death_date<=(case_index_date + 365)
+if "`1'"=="historical" {
+	replace diedDuringFUP3=1 if death_date>(case_index_date + 180) & death_date<=(date("31jan2019","DMY"))
+}
+else if "`1'"=="contemporary" {
+	replace diedDuringFUP3=1 if death_date>(case_index_date + 180) & death_date<=(date("31jan2022","DMY"))
+}
 la var caseHospForCOVIDDurFUP3 "died during FUP period 3"
 
 
@@ -739,7 +766,12 @@ generate deregDuringFUP2=0
 replace deregDuringFUP2=1 if dereg_date>(case_index_date + 85) & dereg_date<=(case_index_date + 180)
 la var deregDuringFUP2 "died during FUP period 2"
 generate deregDuringFUP3=0
-replace deregDuringFUP3=1 if dereg_date>(case_index_date + 180) & dereg_date<=(case_index_date + 365)
+if "`1'"=="historical" {
+	replace deregDuringFUP3=1 if dereg_date>(case_index_date + 180) & dereg_date<=(date("31jan2019","DMY"))
+}
+else if "`1'"=="contemporary" {
+	replace deregDuringFUP3=1 if dereg_date>(case_index_date + 180) & dereg_date<=(date("31jan2022","DMY"))
+}
 la var deregDuringFUP3 "died during FUP period 3"
 
 
