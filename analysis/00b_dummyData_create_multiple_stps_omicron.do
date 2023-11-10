@@ -68,7 +68,7 @@ export delimited using "./output/input_covid_communitycases_correctedCaseIndex_o
 
 
 *(2)=========Create separate stps for comparators============
-import delimited ./output/input_controls_contemporary_omicron.csv, clear
+import delimited ./output/input_controls_contemporaryCorrectedDeathDate_omicron.csv, clear
 *tabulate before changes
 tab stp
 *call program
