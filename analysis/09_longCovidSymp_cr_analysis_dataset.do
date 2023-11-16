@@ -717,7 +717,12 @@ la var compBecameCaseDurFUP3 "comparator who had COVID during FUP period 3"
 
 *(i)Flag cases who are hospitalised with COVID after the start of follow-up, and which period this was in
 generate caseHospForCOVIDEver=0 if case==1
-replace caseHospForCOVIDEver=1 if covid_hosp>(case_index_date) & covid_hosp<=(case_index_date + 85) & case==1
+if "`1'"=="historical" {
+	replace caseHospForCOVIDEver=1 if covid_hosp>(case_index_date) & covid_hosp<=(date("31jan2019","DMY")) & case==1
+}
+else if "`1'"=="contemporary" {
+	replace caseHospForCOVIDEver=1 if covid_hosp>(case_index_date) & covid_hosp<=(date("31jan2022","DMY")) & case==1
+}
 la var caseHospForCOVIDEver "case who was hospitalised for COVID anytime during follow-up"
 generate caseHospForCOVIDDurFUP1=0 if case==1
 replace caseHospForCOVIDDurFUP1=1 if covid_hosp>(case_index_date) & covid_hosp<=(case_index_date + 85) & case==1
@@ -737,7 +742,12 @@ la var caseHospForCOVIDDurFUP3 "case who was hospitalised for COVID during FUP p
 
 *(j)Flag anyone who died during follow-up, and which period this was in
 generate diedEver=0
-replace diedEver=1 if death_date>(case_index_date) & death_date<=(case_index_date + 365)
+if "`1'"=="historical" {
+	replace diedEver=1 if death_date>(case_index_date) & death_date<=(date("31jan2019","DMY")) & case==1
+}
+else if "`1'"=="contemporary" {
+	replace diedEver=1 if death_date>(case_index_date) & death_date<=(date("31jan2022","DMY")) & case==1
+}
 la var diedEver "died anytime during follow-up"
 generate diedDuringFUP1=0
 replace diedDuringFUP1=1 if death_date>(case_index_date) & death_date<=(case_index_date + 85)
@@ -757,7 +767,12 @@ la var caseHospForCOVIDDurFUP3 "died during FUP period 3"
 
 *(k)Flag anyone who deregistered during follow-up, and which period this was in
 generate deregEver=0
-replace deregEver=1 if dereg_date>(case_index_date) & dereg_date<=(case_index_date + 365)
+if "`1'"=="historical" {
+	replace deregEver=1 if dereg_date>(case_index_date) & dereg_date<=(date("31jan2019","DMY")) & case==1
+}
+else if "`1'"=="contemporary" {
+	replace deregEver=1 if dereg_date>(case_index_date) & dereg_date<=(date("31jan2022","DMY")) & case==1
+}
 la var deregEver "dereg anytime during follow-up"
 generate deregDuringFUP1=0
 replace deregDuringFUP1=1 if dereg_date>(case_index_date) & dereg_date<=(case_index_date + 85)

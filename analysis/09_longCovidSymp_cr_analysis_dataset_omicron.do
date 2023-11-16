@@ -685,7 +685,7 @@ drop sexOrig
 
 *(h)Flag comparators who have a known covid date that is within the follow up period
 generate compBecameCaseEver=0 if case==0
-replace compBecameCaseEver=1 if first_known_covid19>(case_index_date) & first_known_covid19<=(case_index_date + 365) & case==0
+replace compBecameCaseEver=1 if first_known_covid19>(case_index_date) & first_known_covid19<=(date("31mar2023","DMY") & case==0
 la var compBecameCaseEver "comparator who had COVID anytime during follow-up"
 generate compBecameCaseDurFUP1=0 if case==0
 replace compBecameCaseDurFUP1=1 if first_known_covid19>(case_index_date) & first_known_covid19<=(case_index_date + 85) & case==0
@@ -694,13 +694,13 @@ generate compBecameCaseDurFUP2=0 if case==0
 replace compBecameCaseDurFUP2=1 if first_known_covid19>(case_index_date + 85) & first_known_covid19<=(case_index_date + 180) & case==0
 la var compBecameCaseDurFUP2 "comparator who had COVID during FUP period 2"
 generate compBecameCaseDurFUP3=0 if case==0
-replace  compBecameCaseDurFUP3=1 if first_known_covid19>(case_index_date + 180) & first_known_covid19<=(case_index_date + 365) & case==0 & first_known_covid19!=.
+replace  compBecameCaseDurFUP3=1 if first_known_covid19>(case_index_date + 180) & first_known_covid19<=(date("31mar2023","DMY") & case==0 & first_known_covid19!=.
 la var compBecameCaseDurFUP3 "comparator who had COVID during FUP period 3"
 
 
 *(i)Flag cases who are hospitalised with COVID after the start of follow-up, and which period this was in
 generate caseHospForCOVIDEver=0 if case==1
-replace caseHospForCOVIDEver=1 if covid_hosp>(case_index_date) & covid_hosp<=(case_index_date + 85) & case==1
+replace caseHospForCOVIDEver=1 if covid_hosp>(case_index_date) & covid_hosp<=(date("31mar2023","DMY") & case==1
 la var caseHospForCOVIDEver "case who was hospitalised for COVID anytime during follow-up"
 generate caseHospForCOVIDDurFUP1=0 if case==1
 replace caseHospForCOVIDDurFUP1=1 if covid_hosp>(case_index_date) & covid_hosp<=(case_index_date + 85) & case==1
@@ -709,13 +709,13 @@ generate caseHospForCOVIDDurFUP2=0 if case==1
 replace caseHospForCOVIDDurFUP2=1 if covid_hosp>(case_index_date + 85) & covid_hosp<=(case_index_date + 180) & case==1
 la var caseHospForCOVIDDurFUP2 "case who was hospitalised for COVID during FUP period 2"
 generate caseHospForCOVIDDurFUP3=0 if case==1
-replace caseHospForCOVIDDurFUP3=1 if covid_hosp>(case_index_date + 180) & covid_hosp<=(case_index_date + 365) & case==1
+replace caseHospForCOVIDDurFUP3=1 if covid_hosp>(case_index_date + 180) & covid_hosp<=(date("31mar2023","DMY") & case==1
 la var caseHospForCOVIDDurFUP3 "case who was hospitalised for COVID during FUP period 3"
 
 
 *(j)Flag anyone who died during follow-up, and which period this was in
 generate diedEver=0
-replace diedEver=1 if death_date>(case_index_date) & death_date<=(case_index_date + 365)
+replace diedEver=1 if death_date>(case_index_date) & death_date<=(date("31mar2023","DMY")
 la var diedEver "died anytime during follow-up"
 generate diedDuringFUP1=0
 replace diedDuringFUP1=1 if death_date>(case_index_date) & death_date<=(case_index_date + 85)
@@ -724,13 +724,13 @@ generate diedDuringFUP2=0
 replace diedDuringFUP2=1 if death_date>(case_index_date + 85) & death_date<=(case_index_date + 180)
 la var diedDuringFUP2 "died during FUP period 2"
 generate diedDuringFUP3=0
-replace diedDuringFUP3=1 if death_date>(case_index_date + 180) & death_date<=(case_index_date + 365)
+replace diedDuringFUP3=1 if death_date>(case_index_date + 180) & death_date<=(date("31mar2023","DMY")
 la var caseHospForCOVIDDurFUP3 "died during FUP period 3"
 
 
 *(k)Flag anyone who deregistered during follow-up, and which period this was in
 generate deregEver=0
-replace deregEver=1 if dereg_date>(case_index_date) & dereg_date<=(case_index_date + 365)
+replace deregEver=1 if dereg_date>(case_index_date) & dereg_date<=(date("31mar2023","DMY")
 la var deregEver "dereg anytime during follow-up"
 generate deregDuringFUP1=0
 replace deregDuringFUP1=1 if dereg_date>(case_index_date) & dereg_date<=(case_index_date + 85)
@@ -739,7 +739,7 @@ generate deregDuringFUP2=0
 replace deregDuringFUP2=1 if dereg_date>(case_index_date + 85) & dereg_date<=(case_index_date + 180)
 la var deregDuringFUP2 "died during FUP period 2"
 generate deregDuringFUP3=0
-replace deregDuringFUP3=1 if dereg_date>(case_index_date + 180) & dereg_date<=(case_index_date + 365)
+replace deregDuringFUP3=1 if dereg_date>(case_index_date + 180) & dereg_date<=(date("31mar2023","DMY")
 la var deregDuringFUP3 "died during FUP period 3"
 
 
