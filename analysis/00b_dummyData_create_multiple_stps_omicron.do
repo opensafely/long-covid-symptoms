@@ -76,7 +76,7 @@ replaceSTPs
 *tabulate after changes
 tab stp
 *export output
-export delimited using "./output/input_controls_contemporary_omicron.csv", replace
+export delimited using "./output/input_controls_contemporaryCorrectedDeathDate_omicron.csv", replace
 
 
 
