@@ -2369,13 +2369,191 @@ actions:
 
 # 10. CHECK DATA FOR COMBINED CASE AND CONTROL FILE
   data_checks_contemporary_omicron:
-    run: stata-mp:latest analysis/10_longCovidSymp_data_checks_omicron.do contemporary
+    run: stata-mp:latest analysis/10_longCovidSymp_data_checks_omicron.do
     needs: [create_contemporary_analysis_file_omicron]
     outputs:
       moderately_sensitive:
         log: logs/10_longCovidSymp_data_checks_contemporary_omicron.log
 
 
+
+# 11. DESCRIPTIVE TABLE CONTEMPORARY
+  table_1_contemporary_omicron:
+    run: stata-mp:latest analysis/11_longCovidSymp_table1_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/11_longCovidSymp_table1contemporary_omicron.log
+        table1contemporary: output/table1_longCovidSymp_contemporary_omicron.txt
+
+
+# 12a. FIGURE 1A - SYMPTOMS AT ANY TIME (CONTEMPORARY - GOING TO RUN THIS NEXT WHEN ALL SYMPS ARE READY)
+  figure_1panelA_contemporary_omicron:
+    run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelA_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/12a_longCovidSympAnyTime_figure1PanelAcontemporary_omicron.log
+        figure1Acontemporary: output/figure1PanelA_longCovidSympAnyTime_contemporary_omicron.txt
+
+
+  figure_1panelA_contemporaryCounts_omicron:
+    run: stata-mp:latest analysis/12aa_longCovidSympAnyTime_countsPerGroup_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/12aa_longCovidSympAnyTime_countsPerGroupcontemporary_omicron.log
+        figure1AcontemporaryCounts: output/figure1PanelA_countsPerGroup_contemporary_omicron.txt
+
+
+# 12b. FIGURE 1B - DIAGNOSES AT ANY TIME (CONTEMPORARY)
+  figure_1panelB_contemporary_omicron:
+    run: stata-mp:latest analysis/12b_longCovidDiagAnyTime_figure1PanelB_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/12b_longCovidDiagAnyTime_figure1PanelBcontemporary_omicron.log
+        figure1Bcontemporary: output/figure1PanelB_longCovidDiagAnyTime_contemporary_omicron.txt
+
+
+  figure_1panelB_contemporaryCounts_omicron:
+    run: stata-mp:latest analysis/12bb_longCovidDiagAnyTime_countsPerGroup_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/12bb_longCovidDiagAnyTime_countsPerGroupcontemporary_omicron.log
+        figure1BcontemporaryCounts: output/figure1PanelB_countsPerGroup_contemporary_omicron.txt
+
+
+
+# 12c. FIGURE 1C - PRESCRIPTIONS AT ANY TIME (CONTEMPORARY)
+  figure_1panelC_contemporary_omicron:
+    run: stata-mp:latest analysis/12c_longCovidBNFAnyTime_figure1PanelC_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/12c_longCovidPrescrAnyTime_figure1PanelCcontemporary_omicron.log
+        figure1Ccontemporary: output/figure1PanelC_longCovidPrescrAnyTime_contemporary_omicron.txt
+
+
+  figure_1panelC_contemporaryCounts_omicron:
+    run: stata-mp:latest analysis/12cc_longCovidBNFAnyTime_countsPerGroup_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/12cc_longCovidBNFAnyTime_countsPerGroupcontemporary_omicron.log
+        figure1CcontemporaryCounts: output/figure1PanelC_countsPerGroup_contemporary_omicron.txt
+
+
+# 13a. FIGURE 2A - SYMPTOMS OVER THREE TIME PERIODS (CONTEMPORARY - GOING TO RUN THIS NEXT WHEN ALL SYMPS ARE READY)
+  figure_2panelA_contemporary_omicron:
+    run: stata-mp:latest analysis/13a_longCovidSympTimePeriods_figure2PanelA_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/13a_longCovidSympTimePeriods_figure2PanelAcontemporary_omicron.log
+        figure2Acontemporary: output/figure2PanelA_longCovidSympTimePeriods_contemporary_omicron.txt
+
+  figure_2panelA_contemporaryCounts_omicron:
+    run: stata-mp:latest analysis/13aa_longCovidSympTimePeriods_countsPerGroup_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/13aa_longCovidSympTimePeriods_countsPerGroupcontemporary_omicron.log
+        figure2AcontemporaryAccounts: output/figure2PanelA_countsPerGroup_contemporary_omicron.txt
+
+
+# 13b. FIGURE 2B - DIAGNOSES OVER THREE TIME PERIODS (CONTEMPORARY)
+  figure_2panelB_contemporary_omicron:
+    run: stata-mp:latest analysis/13b_longCovidDiagTimePeriods_figure2PanelB_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/13b_longCovidDiagTimePeriods_figure2PanelBcontemporary_omicron.log
+        figure2Bcontemporary: output/figure2PanelB_longCovidDiagTimePeriods_contemporary_omicron.txt
+
+  figure_2panelB_contemporaryCounts_omicron:
+    run: stata-mp:latest analysis/13bb_longCovidDiagTimePeriods_countsPerGroup_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/13bb_longCovidDiagTimePeriods_countsPerGroupcontemporary_omicron.log
+        figure1Ahistorical: output/figure2PanelB_countsPerGroup_contemporary_omicron.txt
+
+
+  # 13c. FIGURE 2C - PRESCRIPTIONS OVER THREE TIME PERIODS (CONTEMPORARY)
+  figure_2panelC_contemporary_omicron:
+    run: stata-mp:latest analysis/13c_longCovidBNFTimePeriods_figure2PanelC_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/13c_longCovidPrescrTimePeriods_figure2PanelCcontemporary_omicron.log
+        figure2Ccontemporary: output/figure2PanelC_longCovidPrescrTimePeriods_contemporary_omicron.txt
+
+  figure_2panelC_contemporaryCounts_omicron:
+    run: stata-mp:latest analysis/13cc_longCovidBNFTimePeriods_countsPerGroup_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/13cc_longCovidBNFTimePeriods_countsPerGroupcontemporary_omicron.log
+        figure1Ahistorical: output/figure2PanelC_countsPerGroup_contemporary_omicron.txt
+
+
+  # 14. FIGURE 3 - COMPARISON OF MEDIAN CONSULTATION RATE (CONTEMPORARY)
+  figure_3_contemporary_omicron:
+    run: stata-mp:latest analysis/14_longCovidConsultations_figure3_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/14_longCovidConsultationRate_figure3contemporary_omicron.log
+        figure3contemporary: output/figure3_longCovidConsultations_contemporary_omicron.txt
+
+
+# 15. FIGURE 4 - SYMPTOMS AT ANY TIME WITH INTERACTION WITH PREV GPCONS
+  figure_4_contemporary_omicron:
+    run: stata-mp:latest analysis/15_longCovidSympAnyTime_gpConsInteraction_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/15_longCovidSympAnyTime_gpConsInteractioncontemporary_omicron.log
+        figure1Ahistorical: output/Figure4_gpConsInteraction_contemporary_omicron.txt
+
+
+  # 15. FIGURE 4 - P-VALUES FOR INTERACTION FOR FIGURE 4
+  figure_4_p_values_contemporary_omicron:
+    run: stata-mp:latest analysis/15a_longCovidSympAnyTime_gpConsInteraction_pvalues_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/15a_longCovidSympAnyTime_gpConsInt_pvalscontemporary_omicron.log
+
+
+# 16. FIGURE 5 - DIAGNOSES AT ANY TIME WITH INTERACTION WITH PREV GPCONS
+  figure_5_contemporary_omicron:
+    run: stata-mp:latest analysis/16_longCovidDiagAnyTime_gpConsInteraction_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/16_longCovidDiagAnyTime_gpConsInteractioncontemporary_omicron.log
+        figure1Ahistorical: output/Figure5_gpConsInteraction_contemporary_omicron.txt
+
+   # 16. FIGURE 5 - COUNTS FOR PREV CONS FOR SYMP, DIAGNOSIS AND MEDICINES (INCL SENSITIVITY ANALYSIS)
+  figure_5Counts_contemporary_omicron:
+    run: stata-mp:latest analysis/16aa_longCovidDiagConsultationGroups_countsPerGroup_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/16aa_longCovidDiagConsultationGroups_countsPerGroupcontemporary_omicron.log
+        figure1Ahistorical: output/Figure5_gpConsInteractionCounts_contemporary_omicron.txt
+
+
+  # 16. FIGURE 5 - P-VALUES FOR INTERACTION FOR FIGURE 5
+  figure_5_p_values_contemporary_omicron:
+    run: stata-mp:latest analysis/16a_longCovidDiagAnyTime_gpConsInteraction_pvalues_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/16a_longCovidDiagAnyTime_gpConsInt_pvalscontemporary_omicron.log
  
 
 
