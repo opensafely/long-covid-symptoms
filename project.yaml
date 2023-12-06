@@ -1232,13 +1232,22 @@ actions:
       moderately_sensitive:
         log: logs/10_longCovidSymp_data_checks_contemporary.log
 
-
   data_checks_historical:
     run: stata-mp:latest analysis/10_longCovidSymp_data_checks.do historical
     needs: [create_historical_analysis_file]
     outputs:
       moderately_sensitive:
         log: logs/10_longCovidSymp_data_checks_historical.log
+
+
+# 10b. CHECK DATES AND TIMES FOR COMBINED CASE AND CONTROL FILE
+  time_checks_contemporary:
+    run: stata-mp:latest analysis/10b_longCovidSymp_time_checks.do
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/10b_longCovidSymp_time_checks_contemporary.log
+
 
 # 11. DESCRIPTIVE TABLE CONTEMPORARY
   table_1_contemporary:
@@ -2374,6 +2383,15 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/10_longCovidSymp_data_checks_contemporary_omicron.log
+
+
+# 10b. CHECK DATES AND TIMES FOR COMBINED CASE AND CONTROL FILE
+  time_checks_contemporary_omicron:
+    run: stata-mp:latest analysis/10b_longCovidSymp_time_checks_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/10b_longCovidSymp_time_checks_contemporary_omicron.log
 
 
 
