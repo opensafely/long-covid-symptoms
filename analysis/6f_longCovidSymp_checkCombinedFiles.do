@@ -27,13 +27,13 @@ pwd
 
 * Open a log file
 cap log close
-log using ./logs/6f_longCovidSymp_contemporary_checkCombinedFiles_omicron.log, replace t
+log using ./logs/6f_longCovidSymp_contemporary_checkCombinedFiles.log, replace t
 
 
 
 
 *(0)=========Cases============
-import delimited ./output/input_covid_matched_cases_contemporary_allSTPs_omicron.csv, clear
+import delimited ./output/input_covid_matched_cases_contemporary_allSTPs.csv, clear
 
 *eyeball all variables
 safecount
@@ -41,7 +41,7 @@ codebook
 
 
 *(0)=========Controls============
-import delimited ./output/input_covid_matched_matches_contemporary_allSTPs_omicron.csv, clear
+import delimited ./output/input_covid_matched_matches_contemporary_allSTPs.csv, clear
 
 *eyeball all variables
 safecount
