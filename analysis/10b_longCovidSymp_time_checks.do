@@ -39,7 +39,7 @@ log using ./logs/10b_longCovidSymp_time_checks_contemporary.log, replace t
 *(0)=========Load file and check total numbers and cases and controls============
 use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
 
-
+codebook case_index_date
 
 
 

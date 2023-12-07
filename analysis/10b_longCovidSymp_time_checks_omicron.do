@@ -40,7 +40,7 @@ log using ./logs/10b_longCovidSymp_time_checks_contemporary_omicron.log, replace
 use ./output/longCovidSymp_analysis_dataset_contemporary_omicron.dta, clear
 
 
-
+codebook case_index_date
 
 
 *(1)==========check earliest, latest and median case_index_date (overall and by case status)================
