@@ -66,24 +66,24 @@ restore
 
 *(B) LATEST CASE INDEX DATE
 *Latest case index date overall:
-display string(case_index_date[_n==_N], "%tdDDmonYY")
+display string(case_index_date[_N], "%tdDDmonYY")
 
 *Latest case index date for those with COVID during omicron wave
 preserve
 	drop if case==0
 	sort case_index_date
-	display string(case_index_date[_n==_N], "%tdDDmonYY")
+	display string(case_index_date[_N], "%tdDDmonYY")
 restore
 *Latest case index date for those without COVID
 preserve
 	drop if case==1
 	sort case_index_date
-	display string(case_index_date[_n==_N], "%tdDDmonYY")
+	display string(case_index_date[_N], "%tdDDmonYY")
 restore
 
 
 
-*(C) LATEST CASE INDEX DATE
+*(C) MEDIAN CASE INDEX DATE
 *median case indexdate overall
 sum case_index_date, detail
 local 25percentile=string(r(p25), "%tdDDmonYY")
