@@ -15,7 +15,7 @@ def generate_covid19_variables_omicron(index_date_variable):
         returning="date",
         date_format="YYYY-MM-DD",
         return_expectations={"date": {
-                "earliest": "2020-02-01",  # wave 1 start and wave 4 end (wave 4 end was actually 29 April 2022 but mass testing finished 1 April 2022)
+                "earliest": "2020-02-01",  # wave 1 start and wave 3 end (wave 3 end was actually 29 April 2022 but mass testing finished 1 April 2022)
                 "latest": "2022-03-31",
             }, 
             "rate": "exponential_increase"
@@ -29,22 +29,22 @@ def generate_covid19_variables_omicron(index_date_variable):
         returning="date",
         date_format="YYYY-MM-DD",
         return_expectations={"date": {
-                "earliest": "2020-02-01",  # wave 1 start and wave 4 end (wave 4 end was actually 29 April 2022 but mass testing finished 1 April 2022)
+                "earliest": "2020-02-01",  # wave 1 start and wave 3 end (wave 3 end was actually 29 April 2022 but mass testing finished 1 April 2022)
                 "latest": "2022-03-31",
             }, 
             "rate": "exponential_increase"
         },
     ),
-    # this one is specifically for selecting cases, which I only want to do between the beginning and end of my wave 4 dates 
+    # this one is specifically for selecting cases, which I only want to do between the beginning and end of my wave 3 dates 
     first_pos_testW4=patients.with_test_result_in_sgss(
         pathogen="SARS-CoV-2",
         test_result="positive",
-        between=("2021-12-10", "2022-03-31"),
+        between=("2021-12-15", "2022-03-31"),
         find_first_match_in_period=True,
         returning="date",
         date_format="YYYY-MM-DD",
         return_expectations={"date": {
-                "earliest": "2021-12-10",  # wave 4 start and wave 4 end (or at least end of mass testing) i.e. Dec 10 2021 to March 31 2022
+                "earliest": "2021-12-15",  # wave 4 start and wave 4 end (or at least end of mass testing) i.e. Dec 10 2021 to March 31 2022
                 "latest": "2022-03-31",
             }, 
             "rate": "exponential_increase"
@@ -69,18 +69,18 @@ def generate_covid19_variables_omicron(index_date_variable):
             "rate": "exponential_increase"
         },
     ),
-    # this one is specifically for selecting cases, which I only want to do between the beginning and end of my W4 dates
+    # this one is specifically for selecting cases, which I only want to do between the beginning and end of my W3 dates - WAS A MISTAKE HERE!!!!
     covid_tpp_probW4=patients.with_these_clinical_events(
         combine_codelists(
             covid_identification_in_primary_care_case_codes_clinical,
             covid_identification_in_primary_care_case_codes_test,
             covid_identification_in_primary_care_case_codes_seq,
         ),
-        between=("2020-02-01", "2022-03-31"),
+        between=("2021-12-15", "2022-03-31"),
         return_first_date_in_period=True,
         include_day=True,
         return_expectations={"date": {
-                "earliest": "2020-02-01",  # wave 1 start and wave 4 end (wave 4 end was actually 29 April 2022 but mass testing finished 1 April 2022)
+                "earliest": "2021-12-15",  # wave 3 start and wave 3 end (wave 3 end was actually 29 April 2022 but mass testing finished 1 April 2022)
                 "latest": "2022-03-31",
             }, 
             "rate": "exponential_increase"
