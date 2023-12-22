@@ -135,14 +135,17 @@ study = StudyDefinition(
         on_or_before="case_index_date + 28 days",
     ),
 
-    ### died after temp case index date (extracted as used as a matching variable, so needs to exist) between start of wave 1 and end of wave 4
+    ### died after temp case index date (extracted as used as a matching variable, so needs to exist) between start of wave 3 omicron and end of wave 3 omicron
+    ### see https://docs.google.com/document/d/1Xsh7Egrbs9PmpMjC8r6K1Bzc1JXWh5GNfgx8srB-qlo/edit#heading=h.63zfwvh3rzcv 
+    ### wave 3 omicron was 15 December 2021 - 29 April 2022, but only going to cover up to 1 April 2022 as that was when mass testing finished
+    ### NOTE THAT IN VARIABES W4 IS USED BUT THE OMICRON ANALYSIS IS ACTUALLY WAVE 3
     death_date=patients.died_from_any_cause(
         on_or_after="case_index_date",
         returning="date_of_death",
         date_format="YYYY-MM-DD", 
         return_expectations={
             "date": {
-                "earliest": "2020-02-01",  # wave 1 start and wave 4 end (wave 4 end was actually 29 April 2022 but mass testing finished 1 April 2022)
+                "earliest": "2020-02-01",  # wave 1 start and wave 3 end (wave 3 end was actually 29 April 2022 but mass testing finished 1 April 2022)
                 "latest": "2022-03-31", }, 
                 "incidence": 0.01 },
     ),

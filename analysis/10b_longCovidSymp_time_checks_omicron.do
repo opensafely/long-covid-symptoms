@@ -32,6 +32,30 @@ log using ./logs/10b_longCovidSymp_time_checks_contemporary_omicron.log, replace
 *setup so that the code in this file can be used to output analyses for both contemporary and historical comparators (and is called twice by separate .yaml actions)
 *local dataset `1'
 
+*extra code to check earliest date in various files preceding the main analysis one
+*(A) RAW EXTRACTED DATA
+import delimited "./output/input_covid_communitycases_omicron.csv", clear
+*destring case_index_date
+confirm string variable case_index_date
+generate case_index_dateORIG=case_index_date
+rename case_index_date case_index_date_dstr
+gen case_index_date = date(case_index_date_dstr, "YMD")
+format case_index_date %td 
+*Earliest case index date
+sort case_index_date
+display string(case_index_date[_n==1], "%tdDDmonYY")
+
+*(B) COHORT AFTER SETTING INDEX DATE
+import delimited "./output/input_covid_communitycases_correctedCaseIndex_omicron.csv", clear
+*destring case_index_date
+confirm string variable case_index_date
+generate case_index_dateORIG=case_index_date
+rename case_index_date case_index_date_dstr
+gen case_index_date = date(case_index_date_dstr, "YMD")
+format case_index_date %td 
+*Earliest case index date
+sort case_index_date
+display string(case_index_date[_n==1], "%tdDDmonYY")
 
 
 
