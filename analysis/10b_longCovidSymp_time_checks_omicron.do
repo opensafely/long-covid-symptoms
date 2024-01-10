@@ -33,7 +33,7 @@ log using ./logs/10b_longCovidSymp_time_checks_contemporary_omicron.log, replace
 *local dataset `1'
 
 *extra code to check earliest date in various files preceding the main analysis one
-*(A) RAW EXTRACTED DATA
+*(A) RAW EXTRACTED DATA ON CASES
 import delimited "./output/input_covid_communitycases_omicron.csv", clear
 *destring case_index_date
 confirm string variable case_index_date
@@ -45,7 +45,20 @@ format case_index_date %td
 sort case_index_date
 display string(case_index_date[_n==1], "%tdDDmonYY")
 
-*(B) COHORT AFTER SETTING INDEX DATE
+*(B) COHORT OF CASES AFTER SETTING DEATH DATE
+import delimited "./output/input_covidcommunitycasesCorrectedDeathDate_omicron.csv", clear
+*destring case_index_date
+confirm string variable case_index_date
+generate case_index_dateORIG=case_index_date
+rename case_index_date case_index_date_dstr
+gen case_index_date = date(case_index_date_dstr, "YMD")
+format case_index_date %td 
+*Earliest case index date
+sort case_index_date
+display string(case_index_date[_n==1], "%tdDDmonYY")
+
+
+*(C) COHORT OF CASES AFTER SETTING INDEX DATE
 import delimited "./output/input_covid_communitycases_correctedCaseIndex_omicron.csv", clear
 *destring case_index_date
 confirm string variable case_index_date

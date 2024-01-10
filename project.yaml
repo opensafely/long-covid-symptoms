@@ -2388,7 +2388,7 @@ actions:
 # 10b. CHECK DATES AND TIMES FOR COMBINED CASE AND CONTROL FILE
   time_checks_contemporary_omicron:
     run: stata-mp:latest analysis/10b_longCovidSymp_time_checks_omicron.do
-    needs: [generate_community_cases_cohort_omicron, set_case_index_date_omicron, create_contemporary_analysis_file_omicron]
+    needs: [generate_community_cases_cohort_omicron, set_case_index_date_omicron, create_contemporary_analysis_file_omicron, correct_case_death_dates_omicron]
     outputs:
       moderately_sensitive:
         log: logs/10b_longCovidSymp_time_checks_contemporary_omicron.log
