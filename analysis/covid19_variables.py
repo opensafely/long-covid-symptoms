@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 
 
 def generate_covid19_variables(index_date_variable):
-    covid19_variables = dict(
+    covid19_variables_omicron = dict(
     # COVID19 STATUS VARIABLES  
     # sgss test results
     first_test_covid=patients.with_test_result_in_sgss(
@@ -164,7 +164,7 @@ def generate_covid19_variables(index_date_variable):
     first_known_covid19=patients.minimum_of("first_pos_test", "covid_tpp_prob", "covid_hosp"), 
      
     )
-    return covid19_variables
+    return covid19_variables_omicron
 
 
 
