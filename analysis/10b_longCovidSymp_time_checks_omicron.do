@@ -45,6 +45,7 @@ format case_index_date %td
 sort case_index_date
 display string(case_index_date[_n==1], "%tdDDmonYY")
 
+
 *(B) COHORT OF CASES AFTER SETTING DEATH DATE
 import delimited "./output/input_covidcommunitycasesCorrectedDeathDate_omicron.csv", clear
 *destring case_index_date
@@ -58,7 +59,35 @@ sort case_index_date
 display string(case_index_date[_n==1], "%tdDDmonYY")
 
 
-*(C) COHORT OF CASES AFTER SETTING INDEX DATE
+*(C) CASES AND CONTROLS AFTER MATCHING (ONE EXAMPLE)
+*CASES
+import delimited ./output/input_covid_matched_cases_contemporary_allSTPs_omicron.csv, clear
+*destring case_index_date
+confirm string variable case_index_date
+generate case_index_dateORIG=case_index_date
+rename case_index_date case_index_date_dstr
+gen case_index_date = date(case_index_date_dstr, "YMD")
+format case_index_date %td 
+*Earliest case index date for matched cases
+sort case_index_date
+display string(case_index_date[_n==1], "%tdDDmonYY")
+
+*CONTROLS
+import delimited ./output/input_covid_matched_matches_contemporary_allSTPs_omicron.csv, clear
+*destring case_index_date
+confirm string variable case_index_date
+generate case_index_dateORIG=case_index_date
+rename case_index_date case_index_date_dstr
+gen case_index_date = date(case_index_date_dstr, "YMD")
+format case_index_date %td 
+*Earliest case index for matched controls
+sort case_index_date
+display string(case_index_date[_n==1], "%tdDDmonYY")
+
+
+
+
+*(D) COHORT OF CASES AFTER SETTING INDEX DATE
 import delimited "./output/input_covid_communitycases_correctedCaseIndex_omicron.csv", clear
 *destring case_index_date
 confirm string variable case_index_date
