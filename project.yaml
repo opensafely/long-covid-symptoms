@@ -2574,8 +2574,23 @@ actions:
         log: logs/16a_longCovidDiagAnyTime_gpConsInt_pvalscontemporary_omicron.log
  
 
+# 17. FIGURE 6 - BNF AT ANY TIME WITH INTERACTION WITH PREV GPCONS
+  figure_6_contemporary_omicron:
+    run: stata-mp:latest analysis/17_longCovidBNFAnyTime_gpConsInteraction_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/17_longCovidBNFAnyTime_gpConsInteractioncontemporary_omicron.log
+        figure1Ahistorical: output/Figure6_gpConsInteraction_contemporary_omicron.txt
 
 
+# 17. FIGURE 6 - P-VALUES FOR INTERACTION FOR FIGURE 6
+  figure_6_p_values_contemporary_omicron:
+    run: stata-mp:latest analysis/17a_longCovidBNFAnyTime_gpConsInteraction_pvalues_omicron.do
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/17a_longCovidBNFAnyTime_gpConsInt_pvalscontemporary_omicron.log
 
 
 
