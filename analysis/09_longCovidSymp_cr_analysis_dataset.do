@@ -691,14 +691,6 @@ else if "`1'"=="contemporary" {
 
 
 *(h)Flag comparators who have a known covid date that is within the follow up period
-generate compBecameCaseEver=0 if case==0
-if "`1'"=="historical" {
-	replace compBecameCaseEver=1 if first_known_covid19>(case_index_date) & first_known_covid19<=(date("31jan2019","DMY")) & case==0
-}
-else if "`1'"=="contemporary" {
-	replace compBecameCaseEver=1 if first_known_covid19>(case_index_date) & first_known_covid19<=(date("31jan2022","DMY")) & case==0
-}
-la var compBecameCaseEver "comparator who had COVID anytime during follow-up"
 generate compBecameCaseDurFUP1=0 if case==0
 replace compBecameCaseDurFUP1=1 if first_known_covid19>(case_index_date) & first_known_covid19<=(case_index_date + 85) & case==0
 la var compBecameCaseDurFUP1 "comparator who had COVID during FUP period 1"
@@ -713,17 +705,13 @@ else if "`1'"=="contemporary" {
 		replace  compBecameCaseDurFUP3=1 if first_known_covid19>(case_index_date + 180) & first_known_covid19<=(date("31jan2022","DMY")) & case==0 & first_known_covid19!=.
 }
 la var compBecameCaseDurFUP3 "comparator who had COVID during FUP period 3"
+*now do ever
+generate compBecameCaseEver=0
+la var compBecameCaseEver "comparator who had COVID anytime during follow-up"
+replace compBecameCaseEver=1 if compBecameCaseDurFUP1==1|compBecameCaseDurFUP2==1|compBecameCaseDurFUP3==1
 
 
 *(i)Flag cases who are hospitalised with COVID after the start of follow-up, and which period this was in
-generate caseHospForCOVIDEver=0 if case==1
-if "`1'"=="historical" {
-	replace caseHospForCOVIDEver=1 if covid_hosp>(case_index_date) & covid_hosp<=(date("31jan2019","DMY")) & case==1
-}
-else if "`1'"=="contemporary" {
-	replace caseHospForCOVIDEver=1 if covid_hosp>(case_index_date) & covid_hosp<=(date("31jan2022","DMY")) & case==1
-}
-la var caseHospForCOVIDEver "case who was hospitalised for COVID anytime during follow-up"
 generate caseHospForCOVIDDurFUP1=0 if case==1
 replace caseHospForCOVIDDurFUP1=1 if covid_hosp>(case_index_date) & covid_hosp<=(case_index_date + 85) & case==1
 la var caseHospForCOVIDDurFUP1 "case who was hospitalised for COVID during FUP period 1"
@@ -738,17 +726,14 @@ else if "`1'"=="contemporary" {
 	replace caseHospForCOVIDDurFUP3=1 if covid_hosp>(case_index_date + 180) & covid_hosp<=(date("31jan2022","DMY")) & case==1
 }
 la var caseHospForCOVIDDurFUP3 "case who was hospitalised for COVID during FUP period 3"
+*now do ever
+generate caseHospForCOVIDEver=0 if case==1
+la var caseHospForCOVIDEver "case who was hospitalised for COVID anytime during follow-up"
+replace caseHospForCOVIDEver=1 if caseHospForCOVIDDurFUP1==1|caseHospForCOVIDDurFUP2==1|caseHospForCOVIDDurFUP3==1
+
 
 
 *(j)Flag anyone who died during follow-up, and which period this was in
-generate diedEver=0
-if "`1'"=="historical" {
-	replace diedEver=1 if death_date>(case_index_date) & death_date<=(date("31jan2019","DMY")) & case==1
-}
-else if "`1'"=="contemporary" {
-	replace diedEver=1 if death_date>(case_index_date) & death_date<=(date("31jan2022","DMY")) & case==1
-}
-la var diedEver "died anytime during follow-up"
 generate diedDuringFUP1=0
 replace diedDuringFUP1=1 if death_date>(case_index_date) & death_date<=(case_index_date + 85)
 la var diedDuringFUP1 "died during FUP period 1"
@@ -763,17 +748,14 @@ else if "`1'"=="contemporary" {
 	replace diedDuringFUP3=1 if death_date>(case_index_date + 180) & death_date<=(date("31jan2022","DMY"))
 }
 la var caseHospForCOVIDDurFUP3 "died during FUP period 3"
+*now do ever
+generate diedEver=0
+replace diedEver=1 if diedDuringFUP1==1|diedDuringFUP2==1|diedDuringFUP3==1
+la var diedEver "died anytime during follow-up"
+
 
 
 *(k)Flag anyone who deregistered during follow-up, and which period this was in
-generate deregEver=0
-if "`1'"=="historical" {
-	replace deregEver=1 if dereg_date>(case_index_date) & dereg_date<=(date("31jan2019","DMY")) & case==1
-}
-else if "`1'"=="contemporary" {
-	replace deregEver=1 if dereg_date>(case_index_date) & dereg_date<=(date("31jan2022","DMY")) & case==1
-}
-la var deregEver "dereg anytime during follow-up"
 generate deregDuringFUP1=0
 replace deregDuringFUP1=1 if dereg_date>(case_index_date) & dereg_date<=(case_index_date + 85)
 la var deregDuringFUP1 "dereg during FUP period 1"
@@ -788,6 +770,11 @@ else if "`1'"=="contemporary" {
 	replace deregDuringFUP3=1 if dereg_date>(case_index_date + 180) & dereg_date<=(date("31jan2022","DMY"))
 }
 la var deregDuringFUP3 "died during FUP period 3"
+*now do ever
+generate deregEver=0
+replace deregEver=1 if deregDuringFUP1==1|deregDuringFUP2==1|deregDuringFUP3==1
+la var deregEver "dereg anytime during follow-up"
+
 
 
 *(l)Flag individuals who became ineligible in a specific time period due to any of the above being coded as 1
