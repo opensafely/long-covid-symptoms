@@ -719,12 +719,7 @@ generate caseHospForCOVIDDurFUP2=0 if case==1
 replace caseHospForCOVIDDurFUP2=1 if covid_hosp>(case_index_date + 85) & covid_hosp<=(case_index_date + 180) & case==1
 la var caseHospForCOVIDDurFUP2 "case who was hospitalised for COVID during FUP period 2"
 generate caseHospForCOVIDDurFUP3=0 if case==1
-if "`1'"=="historical" {
-	replace caseHospForCOVIDDurFUP3=1 if covid_hosp>(case_index_date + 180) & covid_hosp<=(date("31jan2019","DMY")) & case==1
-}
-else if "`1'"=="contemporary" {
-	replace caseHospForCOVIDDurFUP3=1 if covid_hosp>(case_index_date + 180) & covid_hosp<=(date("31jan2022","DMY")) & case==1
-}
+replace caseHospForCOVIDDurFUP3=1 if covid_hosp>(case_index_date + 180) & covid_hosp<=(date("31jan2022","DMY")) & case==1
 la var caseHospForCOVIDDurFUP3 "case who was hospitalised for COVID during FUP period 3"
 *now do ever
 generate caseHospForCOVIDEver=0 if case==1
@@ -740,11 +735,12 @@ la var diedDuringFUP1 "died during FUP period 1"
 generate diedDuringFUP2=0
 replace diedDuringFUP2=1 if death_date>(case_index_date + 85) & death_date<=(case_index_date + 180)
 la var diedDuringFUP2 "died during FUP period 2"
+*this has to be different for historical comparators only (as they have a different end date)
 generate diedDuringFUP3=0
-if "`1'"=="historical" {
+if "`1'"=="historical" & case==0 {
 	replace diedDuringFUP3=1 if death_date>(case_index_date + 180) & death_date<=(date("31jan2019","DMY"))
 }
-else if "`1'"=="contemporary" {
+else {
 	replace diedDuringFUP3=1 if death_date>(case_index_date + 180) & death_date<=(date("31jan2022","DMY"))
 }
 la var caseHospForCOVIDDurFUP3 "died during FUP period 3"
@@ -762,11 +758,12 @@ la var deregDuringFUP1 "dereg during FUP period 1"
 generate deregDuringFUP2=0
 replace deregDuringFUP2=1 if dereg_date>(case_index_date + 85) & dereg_date<=(case_index_date + 180)
 la var deregDuringFUP2 "died during FUP period 2"
+*this has to be different for historical comparators only (as they have a different end date)
 generate deregDuringFUP3=0
-if "`1'"=="historical" {
+if "`1'"=="historical" & case==0 {
 	replace deregDuringFUP3=1 if dereg_date>(case_index_date + 180) & dereg_date<=(date("31jan2019","DMY"))
 }
-else if "`1'"=="contemporary" {
+else {
 	replace deregDuringFUP3=1 if dereg_date>(case_index_date + 180) & dereg_date<=(date("31jan2022","DMY"))
 }
 la var deregDuringFUP3 "died during FUP period 3"
