@@ -28,7 +28,8 @@ use ./output/longCovidSymp_analysis_dataset_contemporary_omicron.dta, clear
 rename case expStatus
 
 
-*loop through each outcome
+*loop through each outcome - GP consulation category with 0 as baseline
+/*
 foreach outcome in $symp {
 	capture quietly clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	est store A
@@ -59,21 +60,38 @@ lrtest A B, force
 display "LRtest p-value for anySymptomsEver (test for trend):"
 display r(p)
 
+*/
 
-*run through for SENSITIVITY ANALYSIS p-value for each outcome
+*run through for p-value for each outcome - GP consultation category with 1 as the baseline
 foreach outcome in $symp {
 	capture quietly clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	est store A
 	capture quietly clogit tEver_`outcome' i.expStatus i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	est store B
 	lrtest A B, force
-	display "LRtest p-value for tEver_`outcome' (sensitivity analysis):"
+	display "LRtest p-value for tEver_`outcome':"
 	display r(p)
 }
 
+*do any symptom ever - 1 as baseline
+capture quietly clogit anySymptomsEver i.expStatus##i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+est store A
+capture quietly clogit anySymptomsEver i.expStatus i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+est store B
+lrtest A B, force
+display "LRtest p-value for anySymptomsEver:"
+display r(p)
+
+*do any symptom ever - test for trend (1 as baseline)
+capture quietly clogit anySymptomsEver i.expStatus##i.gpCountPrevYearCatSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+est store A
+capture quietly clogit anySymptomsEver i.expStatus##c.gpCountPrevYearCatSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+est store B
+lrtest A B, force
+display "LRtest p-value for anySymptomsEver (test for trend):"
+display r(p)
 
 
-cap file close tablecontents 
 cap log close
 
 

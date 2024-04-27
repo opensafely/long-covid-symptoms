@@ -27,8 +27,8 @@ log using ./logs/17a_longCovidBNFAnyTime_gpConsInt_pvalscontemporary_omicron.log
 use ./output/longCovidSymp_analysis_dataset_contemporary_omicron.dta, clear
 rename case expStatus
 
-
-*loop through each outcome
+/*
+*loop through each outcome for GP count baseline=0 (not needed)
 foreach outcome in $medicines {
 	capture quietly clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	est store A
@@ -48,21 +48,30 @@ est store B
 lrtest A B, force
 display "LRtest p-value for NSAIDs (test for trend):"
 display r(p)
+*/
 
 
-*loop through each outcome - sensitivity analysis
+*loop through each outcome - main analysis (baseline GP count=1)
 foreach outcome in $medicines {
 	capture quietly clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	est store A
 	capture quietly clogit tEver_`outcome' i.expStatus i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	est store B
 	lrtest A B, force
-	display "LRtest p-value for tEver_`outcome' (sensitivity analysis):"
+	display "LRtest p-value for tEver_`outcome':"
 	display r(p)
 }
 
+*test for trend by increasing gp count for NSAIDs 
+capture quietly clogit bnf_nsaids_spec i.expStatus##i.gpCountPrevYearCatSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+est store A
+capture quietly clogit bnf_nsaids_spec i.expStatus##c.gpCountPrevYearCatSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
+est store B
+lrtest A B, force
+display "LRtest p-value for NSAIDs (test for trend):"
+display r(p)
 
-cap file close tablecontents 
+
 cap log close
 
 
