@@ -28,7 +28,7 @@ use ./output/longCovidSymp_analysis_dataset_contemporary_omicron.dta, clear
 rename case expStatus
 
 
-
+/*NOT NEEDED
 foreach outcome in $diag {
 	capture quietly clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearCat i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	est store A
@@ -47,18 +47,18 @@ est store B
 lrtest A B, force
 display "LRtest p-value for infectious diseases outcome (test for trend):"
 display r(p)
+*/
 
 
 
-
-*repeat for sensitivity analysis
+*Main analysis - baseline GP count=1
 foreach outcome in $diag {
 	capture quietly clogit tEver_`outcome' i.expStatus##i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	est store A
 	capture quietly clogit tEver_`outcome' i.expStatus i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 	est store B
 	lrtest A B, force
-	display "LRtest p-value for tEver_`outcome' (sensitivity analysis):"
+	display "LRtest p-value for tEver_`outcome':"
 	display r(p)
 }
 
@@ -69,7 +69,7 @@ est store A
 capture quietly clogit tEver_pregnancy_compl i.expStatus i.gpCountPrevYearSENS i.imd i.ethnicity i.rural_urban i.numPreExistingComorbs, strata(set_id) or
 est store B
 lrtest A B, force
-display "LRtest p-value for tEver_pregnancy_compl (sensitivity analysis):"
+display "LRtest p-value for tEver_pregnancy_compl:"
 display r(p)
 
 
