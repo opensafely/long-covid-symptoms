@@ -2343,6 +2343,7 @@ actions:
         unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_contemporary_analysis_dataset_omicron.dta
       moderately_sensitive: 
         log: logs/09_longCovidSymp_cr_contemporary_analysis_dataset_omicron.log
+        flowchart: output/flowchart_longCovidSymp_contemporary_omicron.txt
 
 
   flowCheck_contemporary_omicron:

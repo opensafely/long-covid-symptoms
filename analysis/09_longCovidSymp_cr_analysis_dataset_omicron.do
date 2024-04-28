@@ -41,12 +41,16 @@ log using ./logs/09_longCovidSymp_cr_`dataset'_analysis_dataset_omicron.log, rep
 capture noisily import delimited ./output/input_covid_communitycases_correctedCaseIndex_omicron.csv, clear
 di "***********************FLOWCHART 1. NUMBER OF POTENTIAL CASES AND CONTROLS (WAVE 2)********************:"
 di "**Potential cases:**"
-safecount
+count
+*macro for flowhart output
+local flow_1_cases=round(r(N),5) 
 
 *comparator
 capture noisily import delimited ./output/input_controls_`dataset'CorrectedDeathDate_omicron.csv, clear
 di "**Potential comparators:**"
-safecount
+count
+*macro for flowchart output
+local flow_1_comparators=round(r(N),5) 
 
 *Code to fix bug due to de_reg date error (eventually needs fixed by re-extraction)
 *replace dereg_date=dereg_date + "-01" if dereg_date!=""
@@ -66,7 +70,9 @@ drop if dereg_date<date("01sep2020","DMY")
 drop if death_date<date("01sep2020","DMY")
 
 di "**Potential comparators who were alive and hadn't deregistered at the start of WAVE 1:**"
-safecount
+count
+*macro for flowchart output
+local flow_1_compReg=round(r(N),5)
 
 
 
@@ -164,7 +170,9 @@ tempfile cases_wVars_omicron
 save `cases_wVars_omicron', replace
 di "***********************FLOWCHART 2. NUMBER OF MATCHED CASES AND MATCHED COMPARATORS BEFORE DROPPING CONTROLS INELIGIBLE DUE TO HAS_FOLLOW_UP AND DEATH_DATE VARS********************:"
 di "**Matched cases:**"
-safecount
+count
+*macro for flowchart
+local flow_2_matchedCases=round(r(N),5) 
 
 *historical needed death dates fixed as some of the deaths post-follow-up could be before 01Feb2019, comtemporary didn't need this fixed again here as no deathdates were before this date
 if "`1'"=="historical" {
@@ -194,7 +202,9 @@ drop _merge
 tempfile comp_withVars_omicron
 save `comp_withVars_omicron', replace
 di "**Matched comparators:**"
-safecount
+count
+*macro for flowchart
+local flow_2_matchedComparators=round(r(N),5)
 
 
 *NOTE: Flowchart re: who was dropped here due date exclusions can be obtained from the STP matching logs (if needed)
@@ -224,9 +234,15 @@ count if match_counts==0
 drop if match_counts==0
 tab case
 tab match_counts
-di "***********************FLOWCHART 1. NUMBER OF MATCHED CASES AND MATCHED COMPARATORS: COMBINED FILE, AFTER DROPPING INELGIIBLE CONTROLS (AS ABOVE) AND CASES WITH MATCH_COUNTS==0********************:"
-safecount
-tab case
+di "***********************FLOWCHART 3. NUMBER OF MATCHED CASES AND MATCHED COMPARATORS: COMBINED FILE, AFTER DROPPING INELGIIBLE CONTROLS (AS ABOVE) AND CASES WITH MATCH_COUNTS==0********************:"
+count
+*macros for flowchart
+local flow_3_totMatch=round(r(N),5)
+count if case==1
+local flow_3_totMatchCase=round(r(N),5)
+count if case==0
+local flow_3_totMatchComp=round(r(N),5)
+
 *save a list of final cases for analysis unmatched cases in next bit
 preserve
 	keep if case==1
@@ -253,10 +269,28 @@ preserve
 	*save file for descriptive analysis
 	save output/longCovidSymp_UnmatchedCases_`dataset'_analysis_dataset_omicron.dta, replace
 	di "***********************FLOWCHART 4. NUMBER OF UMATCHED CASES FROM UNMATCHED CASES FILE (TO CONFIRM IT ALIGNS WITH THE ABOVE FLOWCHART POINTS)********************:"
-	safecount
+	count
+	*for flowchart macro
+	local flow_4_unMatchedCases=round(r(N),5)
 restore
 
+*output flowchart table
 
+cap file close tablecontent
+file open tablecontent using ./output/flowchart_longCovidSymp_contemporary_omicron.txt, write text replace
+
+file write tablecontent ("FLOWCHART `1'") _n _n
+file write tablecontent ("Number of potential cases:") _tab ("`flow_1_cases'") _n
+file write tablecontent ("Number of potential comparators:") _tab ("`flow_1_comparators'") _n
+file write tablecontent ("Number of potential comparators who were alive and hadn't deregistered and start of wave 2:") _tab ("`flow_1_compReg'") _n
+file write tablecontent ("Number of matched cases before dropping comparators ineligible due to has_follow_up and death_date_vars:") _tab ("`flow_2_matchedCases'") _n
+file write tablecontent ("Number of matched comparators before dropping comparators ineligible due to has_follow_up and death_date_vars:") _tab ("`flow_2_matchedComparators'") _n
+file write tablecontent ("Number of people after dropping ineligible comparators (as above) and cases with no matches:") _tab ("`flow_3_totMatch'") _n
+file write tablecontent ("Number of cases after dropping ineligible comparators (as above) and cases with no matches:") _tab ("`flow_3_totMatchCase'") _n
+file write tablecontent ("Number of comparators after dropping ineligible comparators (as above) and cases with no matches:") _tab ("`flow_3_totMatchComp'") _n
+file write tablecontent ("Number of unmatched cases from unmatched cases file (to check with above):") _tab ("`flow_4_unMatchedCases'") _n
+
+file close tablecontent
 
 
 
