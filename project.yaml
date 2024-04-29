@@ -1181,7 +1181,7 @@ actions:
         unmatchedCasesAnalysisFile: output/longCovidSymp_UnmatchedCases_historical_analysis_dataset.dta
       moderately_sensitive: 
         log: logs/09_longCovidSymp_cr_historical_analysis_dataset.log
-        flowchart: output/flowchart_historical.txt
+        flowchart: output/flowchart_longCovidSymp_historical.txt
 
   flowCheck_contemporary:
     run: stata-mp:latest analysis/09b_FlowCheck.do contemporary
