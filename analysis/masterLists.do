@@ -28,6 +28,9 @@ global sympDerm symp_rashes symp_hairloss
 global highLevelSymp sympResp sympCardio sympGeneral sympNeuro sympGastro sympMusculo sympPsych sympENT sympDerm
 *list of all highlevel categories + noSymptoms category
 global highLevelSympAndNone sympResp sympCardio sympGeneral sympNeuro sympGastro sympMusculo sympPsych sympENT sympDerm noSymptoms
+*list of symptoms that I imputed
+global imputedSymptoms anySymptomsEver symp_cogimpair symp_mobilityimpair symp_hairloss symp_visualdisturbance
+
 
 *master list of medicine group outcomes
 global medicines bnf_gastro_broad bnf_cardio_broad bnf_respiratory_broad bnf_cns_broad bnf_infect_broad bnf_endo_broad bnf_obstet_broad bnf_malign_broad bnf_nutr_broad bnf_musculo_broad bnf_eye_broad bnf_ear_broad bnf_skin_broad bnf_broncho_spec bnf_cough_spec bnf_antiarrhth_spec bnf_analgesics_spec bnf_hypnotics_spec bnf_nausea_spec bnf_diarrhoea_spec bnf_nsaids_spec bnf_topicalpain_spec bnf_antidepr_spec bnf_anxiolytic_spec
