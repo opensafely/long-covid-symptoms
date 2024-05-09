@@ -1165,7 +1165,7 @@ actions:
         flowchart: output/flowchart_longCovidSymp_contemporary.txt
 
 
-# 9b. CREATE HISTORICAL ANALYSIS FILE (ALSO COMBINES CASES AND HISTORICAL CONTROLS)
+# 9. CREATE HISTORICAL ANALYSIS FILE (ALSO COMBINES CASES AND HISTORICAL CONTROLS)
   create_historical_analysis_file:
     run: stata-mp:latest analysis/09_longCovidSymp_cr_analysis_dataset.do historical
     needs: [set_case_index_date, generate_potential_controls_historical, 
@@ -1182,6 +1182,20 @@ actions:
       moderately_sensitive: 
         log: logs/09_longCovidSymp_cr_historical_analysis_dataset.log
         flowchart: output/flowchart_longCovidSymp_historical.txt
+
+
+# 9a. CREATE CONTEMPORARY ANALYSIS FILE WITH ETH5 IMPUTED (READY FOR SYMPTOMS ANALYSES)
+  create_contemporary_eth5_imputed_analysis_file:
+    run: stata-mp:latest analysis/09a_longCovidSymp_cr_imputed_datasets.do
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      highly_sensitive:
+        # casesContemporary: output/cases_contemporary.dta 
+        # controlsContemporary: output/controls_contemporary.dta 
+        imputedAnalysisFile: output/longCovidSymp_analysis_dataset_contemporary_eth5_mi.dta
+      moderately_sensitive: 
+        log: logs/09a_hhClassif_imputed_datasets_contemporary.log
+
 
   flowCheck_contemporary:
     run: stata-mp:latest analysis/09b_FlowCheck.do contemporary
