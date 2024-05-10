@@ -1192,9 +1192,9 @@ actions:
       highly_sensitive:
         # casesContemporary: output/cases_contemporary.dta 
         # controlsContemporary: output/controls_contemporary.dta 
-        imputedAnalysisFile: output/longCovidSymp_analysis_dataset_contemporary_eth5_mi.dta
+        imputedAnalysisFile: output/longCovidSymp_analysis_dataset_contemporary_eth5_miCOMPONENTSYMPTOMS.dta
       moderately_sensitive: 
-        log: logs/09a_hhClassif_imputed_datasets_contemporary.log
+        log: logs/09a_hhClassif_imputed_datasets_contemporaryCOMPONENTSYMPTOMS.log
 
 
   flowCheck_contemporary:
