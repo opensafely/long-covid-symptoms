@@ -19,7 +19,7 @@ do ./analysis/masterLists.do
 
 *log file
 cap log close
-log using "./logs/09a_hhClassif_imputed_datasets_contemporary", text replace
+log using "./logs/09a_hhClassif_imputed_datasets_contemporaryCOMPONENTSYMPTOMS", text replace
 
 *test code for longCovid symptoms, loking just at anySymptomEver as the outcome, trying one imputation first (eventually will be 10)
 *going to include anySymptomsEver and all component outcome symptoms but if problems with this will remove anySymptoms ever initially and if still problems will remove all of the component symptoms and only include anySymptomsEver (this article by Sterne et al includes why outcome is needed in MI: https://www.bmj.com/content/338/bmj.b2393)
@@ -33,7 +33,8 @@ log using "./logs/09a_hhClassif_imputed_datasets_contemporary", text replace
 use ./output/longCovidSymp_analysis_dataset_contemporary.dta, clear
 rename case expStatus
 *keep just the variables I need
-keep anySymptomsEver patient_id ethnicity expStatus imd rural_urban numPreExistingComorbs ageCat gpCountPrevYearCat sex numPrescTypesPrevYearCat
+*keep anySymptomsEver patient_id ethnicity expStatus imd rural_urban numPreExistingComorbs ageCat gpCountPrevYearCat sex numPrescTypesPrevYearCat
+keep symp_breathless symp_cough symp_chesttight symp_chestpain symp_palp symp_fatigue symp_fever symp_cogimpair symp_headache symp_sleepdisturb symp_periphneuro symp_dizzy symp_mobilityimpair symp_visualdisturbance symp_abdominalpain symp_nauseavomiting symp_diarrhoea symp_weightloss symp_pain symp_depression symp_anxiety symp_ptsd symp_tinnitus symp_earache symp_sorethroat symp_taste_smell symp_nasal_congestion symp_rashes symp_hairloss patient_id ethnicity expStatus imd rural_urban numPreExistingComorbs ageCat gpCountPrevYearCat sex numPrescTypesPrevYearCat
 
 *mi set the data
 mi set mlong
@@ -49,11 +50,13 @@ display "`outcome'"
 *noisily mi impute mlogit eth5 i.anySymptomsEver, add(1) rseed(86542) augment force
 
 *one loop with demographic data too
-noisily mi impute mlogit ethnicity i.anySymptomsEver i.expStatus i.imd i.rural_urban i.numPreExistingComorbs i.ageCat i.gpCountPrevYearCat i.sex i.numPrescTypesPrevYearCat, add(10) rseed(86542) augment force 
+*noisily mi impute mlogit ethnicity i.anySymptomsEver i.expStatus i.imd i.rural_urban i.numPreExistingComorbs i.ageCat i.gpCountPrevYearCat i.sex i.numPrescTypesPrevYearCat, add(10) rseed(86542) augment force 
 
+*include all the symptoms apart from anySymptomsEver
+noisily mi impute mlogit ethnicity symp_breathless symp_cough symp_chesttight symp_chestpain symp_palp symp_fatigue symp_fever symp_cogimpair symp_headache symp_sleepdisturb symp_periphneuro symp_dizzy symp_mobilityimpair symp_visualdisturbance symp_abdominalpain symp_nauseavomiting symp_diarrhoea symp_weightloss symp_pain symp_depression symp_anxiety symp_ptsd symp_tinnitus symp_earache symp_sorethroat symp_taste_smell symp_nasal_congestion symp_rashes symp_hairloss i.expStatus i.imd i.rural_urban i.numPreExistingComorbs i.ageCat i.gpCountPrevYearCat i.sex i.numPrescTypesPrevYearCat, add(10) rseed(86542) augment force 
 
 *save imputed raw data
-save ./output/longCovidSymp_analysis_dataset_contemporary_eth5_mi.dta, replace	
+save ./output/longCovidSymp_analysis_dataset_contemporary_eth5_miCOMPONENTSYMPTOMS.dta, replace	
 *}
 
 			
