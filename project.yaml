@@ -1192,9 +1192,12 @@ actions:
       highly_sensitive:
         # casesContemporary: output/cases_contemporary.dta 
         # controlsContemporary: output/controls_contemporary.dta 
-        imputedAnalysisFile: output/longCovidSymp_analysis_dataset_contemporary_eth5_miCOMPONENTSYMPTOMS.dta
+        imputedAnalysisFileOne: output/longCovidSymp_analysis_dataset_contemporary_eth5_misymp_cogimpair.dta
+        imputedAnalysisFileTwo: output/longCovidSymp_analysis_dataset_contemporary_eth5_misymp_mobilityimpair.dta
+        imputedAnalysisFileThree: output/longCovidSymp_analysis_dataset_contemporary_eth5_misymp_hairloss.dta
+        imputedAnalysisFileFour: output/longCovidSymp_analysis_dataset_contemporary_eth5_misymp_visualdisturbance.dta
       moderately_sensitive: 
-        log: logs/09a_hhClassif_imputed_datasets_contemporaryCOMPONENTSYMPTOMS.log
+        log: logs/09a_hhClassif_imputed_datasets_contemporaryFOURCOMPONENTSYMPTOMS.log
 
 
   flowCheck_contemporary:
