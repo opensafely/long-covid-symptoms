@@ -28,8 +28,8 @@ global sympDerm symp_rashes symp_hairloss
 global highLevelSymp sympResp sympCardio sympGeneral sympNeuro sympGastro sympMusculo sympPsych sympENT sympDerm
 *list of all highlevel categories + noSymptoms category
 global highLevelSympAndNone sympResp sympCardio sympGeneral sympNeuro sympGastro sympMusculo sympPsych sympENT sympDerm noSymptoms
-*list of symptoms that I imputed - basically all symptoms apart from anySymptomsEver which I imputed separately as was worried could be too similar with some of these
-global imputedSymptoms symp_breathless symp_cough symp_chesttight symp_chestpain symp_palp symp_fatigue symp_fever symp_cogimpair symp_headache symp_sleepdisturb symp_periphneuro symp_dizzy symp_mobilityimpair symp_visualdisturbance symp_abdominalpain symp_nauseavomiting symp_diarrhoea symp_weightloss symp_pain symp_depression symp_anxiety symp_ptsd symp_tinnitus symp_earache symp_sorethroat symp_taste_smell symp_nasal_congestion symp_rashes symp_hairloss
+*list of symptoms that I imputed - four selected to illustrate headline ones, large one, null one (cognitive impairment, mobility impairment, hairloss, visual disturbance)
+global imputedSymptoms symp_cogimpair symp_mobilityimpair symp_hairloss symp_visualdisturbance
 
 
 *master list of medicine group outcomes
