@@ -29,7 +29,7 @@ global highLevelSymp sympResp sympCardio sympGeneral sympNeuro sympGastro sympMu
 *list of all highlevel categories + noSymptoms category
 global highLevelSympAndNone sympResp sympCardio sympGeneral sympNeuro sympGastro sympMusculo sympPsych sympENT sympDerm noSymptoms
 *list of symptoms that I imputed - four selected to illustrate headline ones, large one, null one (cognitive impairment, mobility impairment, hairloss, visual disturbance)
-global imputedSymptoms symp_cogimpair symp_mobilityimpair symp_hairloss symp_visualdisturbance
+global imputedSymptoms symp_cogimpair symp_mobilityimpair symp_hairloss symp_visualdisturbance anySymptomsEver
 
 
 *master list of medicine group outcomes
