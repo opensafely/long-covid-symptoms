@@ -1186,7 +1186,7 @@ actions:
 
 # 9a. CREATE CONTEMPORARY ANALYSIS FILE WITH ETH5 IMPUTED (READY FOR SYMPTOMS ANALYSES)
   create_contemporary_eth5_imputed_analysis_file:
-    run: stata-mp:latest analysis/09a_longCovidSymp_cr_imputed_datasets.do
+    run: stata-mp:latest analysis/09a_longCovidSymp_cr_imputed_datasets_contemporary.do
     needs: [create_contemporary_analysis_file]
     outputs:
       highly_sensitive:
@@ -1210,6 +1210,7 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/09b_FlowCheck_contemporary.log
+        flowCheck_table: output/flowcheck_longCovidSymp_contemporary.csv
 
 
   flowCheck_historical:
@@ -1221,7 +1222,7 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/09b_FlowCheck_historical.log
-
+        flowCheck_table: output/flowcheck_longCovidSymp_historical.csv
 
 
 # 10a. IMD CORRECTION (ONLY NEEDED IF ACTION 1 NOT BEING RUN)
@@ -2374,6 +2375,7 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/09b_FlowCheck_contemporary_omicron.log
+        flowCheck_table: output/flowcheck_longCovidSymp_omicron.csv
 
 
 
