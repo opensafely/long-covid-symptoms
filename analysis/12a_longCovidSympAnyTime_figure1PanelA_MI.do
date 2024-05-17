@@ -84,20 +84,18 @@ file write tablecontents _n
 *cap noisily outputORsforOutcome, outcome(tEver_symp_weightloss)
 *file write tablecontents _n
 
-/*
+
 *loop through each outcome
 foreach outcome in $symp {
 	cap noisily outputORsforOutcome, outcome(tEver_`outcome')
 	file write tablecontents _n
 }
-*/
+
 
 *JUST FOR DELIRIUM
-/*
 keep if age>=67
 cap noisily outputORsforOutcome, outcome(tEver_symp_delirium)
 file write tablecontents _n
-*/
 
 cap file close tablecontents 
 cap log close
