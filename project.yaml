@@ -1308,6 +1308,17 @@ actions:
         log: logs/12aa_longCovidSympAnyTime_countsPerGroupcontemporary.log
         figure1Ahistorical: output/figure1PanelA_countsPerGroup_contemporary.txt
 
+
+  figure_1panelA_contemporary_MI:
+    run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelA_MI.do
+    needs: [create_contemporary_eth5_imputed_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/12a_longCovidSympAnyTime_figure1PanelAcontemporary_MI.log
+        figure1AMI: output/figure1PanelA_longCovidSympAnyTime_contemporaryMI.csv
+
+
+
 # 12a. FIGURE 1A - SYMPTOMS AT ANY TIME (HISTORICAL - AS ABOVE)
   figure_1panelA_historical:
     run: stata-mp:latest analysis/12a_longCovidSympAnyTime_figure1PanelA.do historical
