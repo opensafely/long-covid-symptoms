@@ -1691,6 +1691,25 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/19_additional_pvalueshistorical.log
+
+
+ # 20. POST-COVID GPCOUNTS
+  postCOVIDGPcounts_contemporary:
+    run: stata-mp:latest analysis/20_GP_consultationsPostCOVID.do contemporary
+    needs: [create_contemporary_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/20_GP_consultationsPostCOVID_contemporary.log
+        postCOVID_gpCounts_table: output/consultationsPostCOVID_longCovidSymp_contemporary.csv
+
+
+  postCOVIDGPcounts_historical:
+    run: stata-mp:latest analysis/20_GP_consultationsPostCOVID.do historical
+    needs: [create_historical_analysis_file]
+    outputs:
+      moderately_sensitive:
+        log: logs/20_GP_consultationsPostCOVID_historical.log
+        postCOVID_gpCounts_table: output/consultationsPostCOVID_longCovidSymp_historical.csv
    
 
 
@@ -2625,6 +2644,17 @@ actions:
     outputs:
       moderately_sensitive:
         log: logs/17a_longCovidBNFAnyTime_gpConsInt_pvalscontemporary_omicron.log
+
+
+ # 20. POST-COVID GPCOUNTS
+  postCOVIDGPcounts_contemporary_omicron:
+    run: stata-mp:latest analysis/20_GP_consultationsPostCOVID_omicron.do 
+    needs: [create_contemporary_analysis_file_omicron]
+    outputs:
+      moderately_sensitive:
+        log: logs/20_GP_consultationsPostCOVID_omicron.log
+        postCOVID_gpCounts_table: output/consultationsPostCOVID_longCovidSymp_omicron.csv
+
 
 
 
