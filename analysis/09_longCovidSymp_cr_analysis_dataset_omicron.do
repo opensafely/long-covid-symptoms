@@ -66,10 +66,10 @@ foreach var of varlist dereg_date death_date {
 }
 
 
-drop if dereg_date<date("01sep2020","DMY")
-drop if death_date<date("01sep2020","DMY")
+drop if dereg_date<date("15dec2021","DMY")
+drop if death_date<date("15dec2021","DMY")
 
-di "**Potential comparators who were alive and hadn't deregistered at the start of WAVE 1:**"
+di "**Potential comparators who were alive and hadn't deregistered at the start of WAVE 4:**"
 count
 *macro for flowchart output
 local flow_1_compReg=round(r(N),5)
@@ -282,7 +282,7 @@ file open tablecontent using ./output/flowchart_longCovidSymp_contemporary_omicr
 file write tablecontent ("FLOWCHART `1'") _n _n
 file write tablecontent ("Number of potential cases:") _tab ("`flow_1_cases'") _n
 file write tablecontent ("Number of potential comparators:") _tab ("`flow_1_comparators'") _n
-file write tablecontent ("Number of potential comparators who were alive and hadn't deregistered and start of wave 2:") _tab ("`flow_1_compReg'") _n
+file write tablecontent ("Number of potential comparators who were alive and hadn't deregistered at start of wave 4:") _tab ("`flow_1_compReg'") _n
 file write tablecontent ("Number of matched cases before dropping comparators ineligible due to has_follow_up and death_date_vars:") _tab ("`flow_2_matchedCases'") _n
 file write tablecontent ("Number of matched comparators before dropping comparators ineligible due to has_follow_up and death_date_vars:") _tab ("`flow_2_matchedComparators'") _n
 file write tablecontent ("Number of people after dropping ineligible comparators (as above) and cases with no matches:") _tab ("`flow_3_totMatch'") _n

@@ -80,7 +80,7 @@ def generate_covid19_variables_omicron(index_date_variable):
         return_first_date_in_period=True,
         include_day=True,
         return_expectations={"date": {
-                "earliest": "2021-12-15",  # wave 3 start and wave 3 end (wave 3 end was actually 29 April 2022 but mass testing finished 1 April 2022)
+                "earliest": "2021-12-15",  # wave 4 start and wave 4 end (wave 3 end was actually 29 April 2022 but mass testing finished 1 April 2022)
                 "latest": "2022-03-31",
             }, 
             "rate": "exponential_increase"
